@@ -8310,6 +8310,7 @@ secepat mungkin, Jika sudah di fix
 Kami akan menghubungimu kembali
 
 ${calender}`
+xdev.updatePresence(from, Presence.composing)
 await sendButMessage (q, teks, `©Developer`, mok)
 await xdev.modifyChat(Ownerin, ChatModification.delete)
 }
@@ -8331,8 +8332,8 @@ Tanggal: ${calender}
 Total Banned : ${JSON.parse(fs.readFileSync('./database/banned.json')).length}
 
 ${copyright}`
+xdev.updatePresence(from, Presence.composing)
 await xdev.sendMessage(q, teks, text)
-await setReply( `Sukses Banned user ${q.split("@")[0]}`);
 await xdev.modifyChat(Ownerin, ChatModification.delete)
 break
 						
