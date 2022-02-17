@@ -8310,7 +8310,6 @@ secepat mungkin, Jika sudah di fix
 Kami akan menghubungimu kembali
 
 ${calender}`
-await setReply("Sukses")
 await sendButMessage (q, teks, `©Developer`, mok)
 await xdev.modifyChat(Ownerin, ChatModification.delete)
 }
