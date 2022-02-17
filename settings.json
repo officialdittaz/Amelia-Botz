@@ -1,0 +1,79 @@
+{    
+     "Version": "3.5.0",
+     "namalu" : "DITTAZ",
+     "nomerlu": "6285156137901",
+     "namabot": "Amelia Botz",
+     "nomerbot": "6285859108597",
+     "gender" : "Female",
+     "copyright" : "Extream",
+     "namaDocument": "Amelia Botz",
+     "joinGcExtream": false,
+
+     "Anticall": true,
+     "publik": true,
+     "forwarding": false,
+     "Loading": false,
+     "antitroli" : false,
+     
+     "autovn" : false,
+     "autosticker" : false,
+     "autorespon" : false,
+     "autotyping" : false,
+     "autoread" : true,
+     "autoblockcmd" : false, 
+     "autobio" : true,
+     "autoLevel" : true,
+     "AutoClearChat": true,
+
+     "totalForward" : 1000000,
+     "explain": false,
+     "jumlahTroli": 2022,
+     
+     "SetFunction": {
+     "Daftar_Font": "block, slick, tiny, grid, pallet, shade, chrome, simple, simpleBlock, 3d, simple3d, huge, console",        
+     "font": "simple",                      
+     "self": "SELF",
+     "bot": "BOT",
+     "ext": "REVOLUTION"
+     },
+     
+     "antiPrivateChat": {
+     "chatBot" : false,
+     "teksChat" : "Gada menu"
+     },
+     
+     "setPayment": {
+     "Shopee" : "085156137901",
+     "Gopay" : "085156137901",
+     "Dana" : "085156137901",
+     "Ovo" : "085156137901"
+     },
+     
+     "setPrefix": {
+     "prefix": "!",
+     "multi": true,
+     "onepref" : false,
+     "nopref" : false
+     },
+                                                                                                                                                                                                                                   
+     "setWelcome": {
+     "autoWelcome": true,
+     "welcomeType": "type3",
+     "background": "https://tinyurl.com/yxvl8h3a"
+     },    
+     "setMenu": "document",    
+      "setBc":  "lokasi",  
+     "setReply": "web",  
+     "setQuoted": "ftoko",
+     
+     "gamewaktu": 60,
+	 "limitCount": 30,
+	 "gcount": {
+	 "prem": 60,
+	 "user": 20
+}
+    
+}
+
+   
+   
