@@ -37,6 +37,7 @@
     "insta-fetcher": "^1.2.3",
     "insta-reel": "^2.0.1",
     "jsdom": "^18.0.0",
+    "mathjs": "^9.4.3",
     "moment-timezone": "^0.5.33",
     "multistream": "^4.1.0",
     "ms": "^2.1.3",
