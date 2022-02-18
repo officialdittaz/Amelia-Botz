@@ -2648,6 +2648,10 @@ break
 case 'playmptri':
 downloadMp3(q) 
 break
+
+case 'plaympfor':
+downloadMp4 (q) 
+break
 	
 	
 	
