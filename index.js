@@ -55,7 +55,7 @@ const acr = new acrcloud({
   access_key: "c9f2fca5e16a7986b0a6c8ff70ed0a06",
   access_secret: "PQR9E04ZD60wQPgTSRRqwkBFIWEZldj0G3q7NJuR"
 });
-const {youtubeSearch,googleIt, youtubedl, wallpaperv2, googleImage, alquran, jadwalTVNow, gempa, gempaNow} = require('@bochilteam/scraper')
+const {youtubeSearch,googleIt, youtubedl, youtubedlv2, wallpaperv2, googleImage, alquran, jadwalTVNow, gempa, gempaNow} = require('@bochilteam/scraper')
 
 // stickwm
 const Exif = require('./lib/exif');
@@ -1733,8 +1733,11 @@ const bully3 = b3[Math.floor(Math.random() * b3.length)]
  
 try{ 
 switch (command) {
+	
 
 
+	
+	
 
 	
 case 'backup':
@@ -2640,10 +2643,11 @@ sendFileFromUrl (audioFormats[0].url, audio, {quoted: dev})
 } catch(err){
 setReply(`${err}`)
 }
-	break
+break
 	
-	
-	
+case 'playmptri':
+downloadMp3(q) 
+break
 	
 	
 	
@@ -5454,18 +5458,18 @@ if (!isPremium && !isOwner && !dev.key.fromMe) return setReply(`Kamu bukan user 
 */
 
 case 'igstalk':
-		try{
-		            if (!q) return setReply('Usernamenya?')
-		            ig.fetchUser(`${q}`).then(Y => {
-		            console.log(Y)
-		           ten = `${Y.hd_profile_pic_url_info.url}`
-		           teks = `*ID* : ${Y.id}\n*Username* : ${args.join('')}\n*Full Name* : ${Y.fullname}\n*Bio* : ${Y.biography}\n*Followers* : ${Y.followers}\n*Following* : ${Y.following}\n*Private* : ${Y.is_private}\n*Verified* : ${Y.is_verified}\n\n*Link* : https://instagram.com/${args.join('')}`
-		         sendMediaURL(from,ten,teks) 
-		            })} catch (err){
-			console.log(err)
-			setReply("Aduh error om")
-			}
-        break;      
+try{
+if (!q) return setReply('Usernamenya?')
+ig.fetchUser(`${q}`).then(Y => {
+console.log(Y)
+ten = `${Y.hd_profile_pic_url_info.url}`
+teks = `*ID* : ${Y.id}\n*Username* : ${args.join('')}\n*Full Name* : ${Y.fullname}\n*Bio* : ${Y.biography}\n*Followers* : ${Y.followers}\n*Following* : ${Y.following}\n*Private* : ${Y.is_private}\n*Verified* : ${Y.is_verified}\n\n*Link* : https://instagram.com/${args.join('')}`
+sendMediaURL(from,ten,teks) 
+})} catch (err){
+console.log(err)
+setReply("Aduh error om")
+}
+break;      
 
 
 
@@ -5529,6 +5533,34 @@ foto = data[Math.floor(Math.random() * data.length)]
 })
 break
 	
+case 'gimage':
+case 'googleimage':
+case 'image':
+if (isLimit(senderNumber, isPremium, isOwner, limitCount, user)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
+if (args.length < 1) return setReply('Apa Yang Mau Dicari?')
+try{
+googleImage(q).then(async (data) => {
+//console.log(data)
+foto = data[Math.floor(Math.random() * data.length)]
+if(data.length == "0") return setReply("Image tidak di temukan")
+setReply(mess.wait)
+await sendFileFromUrl(foto, image, {quoted: dev, caption: "Nih"})
+})
+} catch(err){
+teks = args.join(' ')
+res = await gis(teks, google)
+function google(error, result){
+if (error){ return setReply('_[ ! ] Error Terjari Kesalahan Atau Hasil Tidak Ditemukan_')}
+else {
+var gugIm = result
+var random =  gugIm[Math.floor(Math.random() * gugIm.length)].url
+sendFileFromUrl(random, image, {quoted: dev, caption: `*Hasil Pencarian Dari :* ${teks}`})
+}
+}
+}
+limitAdd(senderNumber, user)
+break
+
 
 
 case 'igstory': 
@@ -9367,24 +9399,7 @@ break
     
 	
             
- case 'gimage':
-case 'googleimage':
-case 'image':
-if (isLimit(senderNumber, isPremium, isOwner, limitCount, user)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
-if (args.length < 1) return setReply('Apa Yang Mau Dicari?')
-setReply(mess.wait)
-teks = args.join(' ')
-res = await gis(teks, google)
-function google(error, result){
-if (error){ return setReply('_[ ! ] Error Terjari Kesalahan Atau Hasil Tidak Ditemukan_')}
-else {
-var gugIm = result
-var random =  gugIm[Math.floor(Math.random() * gugIm.length)].url
-sendFileFromUrl(random, image, {quoted: dev, caption: `*Hasil Pencarian Dari :* ${teks}`})
-}
-}
-limitAdd(senderNumber, user)
-break
+
 
 
 
@@ -10027,7 +10042,7 @@ addSpam("NotCase",senderNumber, "10s", AntiSpam)
 if(autovn){
 sendvn(lopyoutoo)
 } else {
-setReply("😚")
+setReply("??")
 }
 }
 				
