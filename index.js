@@ -49,6 +49,7 @@ const { removeBackgroundFromImageFile } = require('remove.bg')
 const convert = require('imagemagick')
 const ytdl = require('ytdl-core');
 const acrcloud = require("acrcloud");
+const Download = require("@phaticusthiccy/open-apis");
 const acr = new acrcloud({
   host: "identify-eu-west-1.acrcloud.com",
   access_key: "c9f2fca5e16a7986b0a6c8ff70ed0a06",
@@ -3134,7 +3135,7 @@ if(replyType === 'quoted') return setReply("Udah aktif")
 replyType = "quoted"
 setReply(`Berhasil mengubah set reply ke ${q}`)
 } else if (!q) {
-sendButMessage(from, `SETTING REPLY`, `Silahkan pilih salah satu`, [
+sendButMessage(from, `SETTING REPLY\n1. web\n2. troli\n3. mess\n4. vidio\n5. quoted\n`, `Silahkan pilih salah satu`, [
 {buttonId: `${prefix}setreply web`, buttonText: {displayText: `ᴡᴇʙ`},type: 1},
 {buttonId: `${prefix}setreply troli`, buttonText: {displayText: `ᴛʀᴏʟɪ`},type: 1},
 {buttonId: `${prefix}setreply mess`, buttonText: { displayText: `ᴍᴇss`},type: 1}]);
@@ -5507,32 +5508,6 @@ break
             
             
 
-case 'lirik':
-case 'lyrics':
-try{
-            if(!q) return setReply('lagu apa?')
-            let song = await hx.lirik(q)
-            console.log(song)
-            musik = song.lirik
-            if(`${musik}` === "undefined" ) return setReply("Gak ketemu om")
-            foto = await getBuffer(song.thumb)
-            liriknya = song.lirik
-            let oket = [{
-										"buttonId": `${prefix}play ${q}`,
-										"buttonText": {
-											"displayText": `🌐 ʏᴏᴜᴛᴜʙᴇ`
-											},
-										"type": "RESPONSE"
-										}]
-										sendButLocation(from, liriknya, `\n© ${fake1}`, foto, oket, {contextInfo: forward})
-										
-            } catch (err){
-            	console.log(err)
-            	setReply("Wuanjir error, coba lirik lain")
-   
-            }
-            break
-
 
 
 
@@ -5597,37 +5572,7 @@ try{
             setReply(res)
             });
             break
-    
-	
-	
-
-	
-	
-	
-	
-	
-	
-	
-	case 'chara':
-	case 'wallpaperflare':
-	try{
-            if(!q) return setReply(`gambar apa?\n${prefix}chara nino`)
-            let im = await hx.chara(q)
-            let acak = im[Math.floor(Math.random() * im.length)]
-            let li = await getBuffer(acak)
-            await xdev.sendMessage(from,li,image,{quoted: dev})
-                  } catch (err){
-					      console.log(err)
-					        setReply("Yah ga ketemu, coba lagi dong ^_^ ")
-					       }
-            break
-	
-	
-	
-	
-            
-            
-            
+  
             
             
             
@@ -5690,13 +5635,11 @@ if (!q) return setReply('Linknya?')
 igreel = q.includes("https://www.instagram.com/reel/")
 
 if(igreel){
-ig.fetchPost(q).then((res) => {
-teks =`*${res.username}*\n\n${res.caption}`
-for (let i of res.links){
-let Nih = i.url
-sendFileFromUrl(Nih, video, {quoted: dev, caption: teks})
-}
-});
+Download.insta_reel(q).then(async (data) => {
+sendFileFromUrl(`${data.url}`, video, {quoted: dev, caption: `Nih`})
+console.log(data)
+console.log(data.url)
+})
 } else {
 var { igDownloader } = require('./lib/igdown')
 res = await igDownloader(`${q}`).catch(e => {
@@ -5710,7 +5653,7 @@ break
                    
 
    
-   
+  
 
         
 	

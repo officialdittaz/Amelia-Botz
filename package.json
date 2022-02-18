@@ -9,6 +9,7 @@
    "dependencies": {
     "@adiwajshing/baileys": "^3.5.2",
     "@bochilteam/scraper": "latest" ,
+   "@phaticusthiccy/open-apis": "latest",
     "@vitalets/google-translate-api": "^7.0.0",
     "acrcloud": "^1.4.0",
     "async": "^2.4.1",
