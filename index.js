@@ -5545,7 +5545,7 @@ try{
 	
 	case 'igstory': 
             if(!q) return setReply('Usernamenya?')      
-            instagram.insta_story(q).then(async (data) => {
+            Download.insta_story(q).then(async (data) => {
     console.log(data)
                 for(let i of data.stories){
            await sendMediaURL (from, i.url, "Nih") 
