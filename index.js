@@ -86,7 +86,7 @@ const game = require("./lib/game");
 const { isTicTacToe, getPosTic } = require("./lib/tictactoe");
 const tictac = require("./lib/tictac");
 const { addAutoClear,autoClearChat,checkAutoClear, checkDataName, createDataId, getDataId, addDataId, removeDataId, checkDataId, checkClaim, getClaim, expiredClaim, addUserClaim, getHit, cmdAdd, expiredCmd } = require("./lib/totalcmd");
-
+const { pinterest, wallpaper, wikimedia, quotesAnime } = require('./lib/scraper') 
 
 const { bad, menu, tekssalah, katahai, katamalem, katasiang, katasore, katalopyou, tekscmd, teksspam, ilhamberkata, ngebucin, badud, ohayo, salam, thanks, anime} = require("./message/messages.js");
 const translate = require('./lib/translate')
@@ -1737,7 +1737,13 @@ switch (command) {
 
 
 	
-	
+case 'well':
+nana = await wallpaper(q)
+for (let i of nana.image[0]){
+foto = i[Math.floor(Math.random() * i.length)]
+sendFileFromUrl(foto, image, {quoted: dev, caption: "Nih"})
+}
+break
 
 	
 case 'backup':
@@ -2639,20 +2645,16 @@ low = audioFormats[2].contentLength
 medium = audioFormats[0].contentLength
 if(Number(low) > 15000000 ) return setReply(`Bjir sizenya ${FileSize(low)}\nAu ah ga mao download 😤`)
 setReply("*Downloading...*")
-sendFileFromUrl (audioFormats[0].url, audio, {quoted: dev}) 
+downloadMp3(q) 
+//sendFileFromUrl (audioFormats[0].url, audio, {quoted: dev}) 
 } catch(err){
 setReply(`${err}`)
 }
 break
 	
-case 'playmptri':
-downloadMp3(q) 
-break
 
-case 'plaympfor':
-downloadMp4 (q) 
-break
-	
+
+
 	
 	
 case 'ytmp3':
@@ -2710,7 +2712,8 @@ setReply("*Downloading...*")
 let info = await ytdl.getInfo(q);
 let format = ytdl.chooseFormat(info.formats, { quality: '18' });
 if(Number(format.contentLength) > 40000000 ) return setReply(`Bjir sizenya ${FileSize(format.contentLength)}\nAu ah ga mao download 😤`)
-sendMediaURL (from, format.url, "Nih")
+downloadMp4 (q) 
+//sendMediaURL (from, format.url, "Nih")
   } catch(err){
 setReply(`${err}`)
 }
