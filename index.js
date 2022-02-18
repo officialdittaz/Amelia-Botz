@@ -5546,20 +5546,15 @@ try{
 	case 'igstory': 
             if(!q) return setReply('Usernamenya?')
             pape = q
-            hx.igstory(pape)
+            Download.insta_profile(pape)
            .then(async result => {
-            for(let i of result.medias){
-            if(i.url.includes('mp4')){
-            let link = await getBuffer(i.url)
-            xdev.sendMessage(from,link,video,{quoted: dev,caption: `${i.type}`})
-            } else {
-            let link = await getBuffer(i.url)
-            xdev.sendMessage(from, link, image,{quoted: dev,caption: `${i.type}`})                  
-            }
+            for(let i of result.stories){
+            sendMediaURL (from, i.url, "Nih") 
             }
             });
             break
            
+
 	
 	case 'linkwa':
             if(!q) return setReply('cari group apa?')
