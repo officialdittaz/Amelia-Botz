@@ -5543,13 +5543,17 @@ try{
 	
 	
 	
-	case 'igstory': 
-            if(!q) return setReply('Usernamenya?')      
-            Download.insta_story(q).then(async (data) => {
-    console.log(data)
-                for(let i of data.stories){
-           await sendMediaURL (from, i.url, "Nih") 
-            }
+case 'igstory': 
+if(!q) return setReply('Usernamenya?')      
+Download.insta_story(q).then(async (data) => {
+console.log(data)
+for(let i of data.stories){
+if(i.type == 'photo'){
+await sendFileFromUrl(i.url, image, {quoted: dev, caption: "Nih"})
+} else {
+await sendFileFromUrl(i.url, video, {quoted: dev, caption: "Nih"})
+ }
+ }
 })
      break
            
