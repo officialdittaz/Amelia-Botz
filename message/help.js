@@ -384,9 +384,6 @@ ${week}, ${calender}
 *│▸* ${prefix}brainly    ${explain ? "[ _Teks_ ]":""} 
 *│▸* ${prefix}whatanime    ${explain ? "[_Reply Image_]":""} 
 *│▸* ${prefix}whatmusic     ${explain ? "[ _Reply Audio_ ]":""} 
-*│▸* ${prefix}chara    ${explain ? "[ _Teks_ ]":""} 
-*│▸* ${prefix}lirik     ${explain ? "[ _Teks_ ]":""} 
-*│▸* ${prefix}npmsearch     ${explain ? "[ _Teks_ ]":""} 
 *│*
 *╰────────────⦁*
 
