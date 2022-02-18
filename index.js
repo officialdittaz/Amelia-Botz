@@ -55,7 +55,7 @@ const acr = new acrcloud({
   access_key: "c9f2fca5e16a7986b0a6c8ff70ed0a06",
   access_secret: "PQR9E04ZD60wQPgTSRRqwkBFIWEZldj0G3q7NJuR"
 });
-const { googleImage, alquran, jadwalTVNow, gempa, gempaNow} = require('@bochilteam/scraper')
+const {youtubeSearch,googleIt, youtubedl, wallpaperv2, googleImage, alquran, jadwalTVNow, gempa, gempaNow} = require('@bochilteam/scraper')
 
 // stickwm
 const Exif = require('./lib/exif');
@@ -5502,47 +5502,35 @@ break
 
 
 
-            
- 
-            
-            
-            
-
-
-
-
-
-
-
-           
-
+          
 
 
 case 'pinterest':
 try{
-        if (!isPremium && !isOwner) return setReply(mess.only.prem)
-            if(!q) return setReply('gambar apa?')
-            setReply(mess.wait)
-            let pin = await hx.pinterest(q)
-            let ac = pin[Math.floor(Math.random() * pin.length)]
-            
-            let di = await getBuffer(ac)
-            await xdev.sendMessage(from,di,image,{quoted: dev})
-               } catch (err){
-					      console.log(err)
-					       return setReply("Yah ga ketemu, coba lagi dong ^_^ ")
-					       }
-            break
+if (!isPremium && !isOwner) return setReply(mess.only.prem)
+if(!q) return setReply('gambar apa?')
+setReply(mess.wait)
+let pin = await hx.pinterest(q)
+let ac = pin[Math.floor(Math.random() * pin.length)]
+let di = await getBuffer(ac)
+await xdev.sendMessage(from,di,image,{quoted: dev})
+ } catch (err){
+console.log(err)
+return setReply("Yah ga ketemu, coba lagi dong ^_^ ")
+}
+break
 	
+	
+case 'wallpaper':
+wallpaperv2(q).then(async (data) => {
+console.log(data)
+foto = data[Math.floor(Math.random() * data.length)]
+ await sendFileFromUrl(foto, image, {quoted: dev, caption: "Nih"})
+})
+break
 	
 
 
-
-
-	
-	
-	
-	
 case 'igstory': 
 if(!q) return setReply('Usernamenya?')      
 Download.insta_story(q).then(async (data) => {
@@ -5550,12 +5538,12 @@ console.log(data)
 for(let i of data.stories){
 if(i.type == 'photo'){
 await sendFileFromUrl(i.url, image, {quoted: dev, caption: "Nih"})
-} else {
+} else if(i.type == 'video'){
 await sendFileFromUrl(i.url, video, {quoted: dev, caption: "Nih"})
  }
  }
 })
-     break
+break
            
 
 	
@@ -7530,7 +7518,7 @@ akan menjawab : ${q}`)
            
            
            
-           case 'kodebahasa':
+case 'kodebahasa':
 let LANGUAGES = `
 *╭─❲ KODE BAHASA ❳*
 *│*
@@ -7622,22 +7610,22 @@ break
            
            
            
-           case 'translate': case 'tr':
-									try {
-										if (args.length < 1)return setReply(`Usage : #translate kode bahasa teks/reply pesan\nExample : #translate id why`)
-										if (dev.message.extendedTextMessage === undefined || dev.message.extendedTextMessage === null) {
-											translate(`${body.slice(10+args[0].length+1)}`, args[0])
-											.then((res) => { setReply(`${res}`) })
-											} else {
-												tolang = args[0]
-												entah = dev.message.extendedTextMessage.contextInfo.quotedMessage.conversation
-												translate(entah, tolang)
-												.then((res) => { setReply(`${res}`) })
-												}
-											} catch (e) {
-												setReply(`${e}`)
-												}
-											break
+case 'translate': case 'tr':
+try {
+if (args.length < 1)return setReply(`Usage : #translate kode bahasa teks/reply pesan\nExample : #translate id why`)
+if (isQuotedextendedText) {
+translate(`${body.slice(10+args[0].length+1)}`, args[0])
+.then((res) => { setReply(`${res}`) })
+} else {
+tolang = args[0]
+entah = dev.message.extendedTextMessage.contextInfo.quotedMessage.conversation
+translate(entah, tolang)
+.then((res) => { setReply(`${res}`) })
+}
+} catch (e) {
+setReply(`${e}`)
+}
+break
            
            
            
@@ -7657,7 +7645,8 @@ break
           
            
            
-           case 'wiki':
+case 'wiki':
+case 'wikipedia':
 if (args.length < 1) return setReply(' Yang Mau Di Cari Apa? ')
 teks = args.join(' ')
 res = await wikiSearch(teks).catch(e => {
