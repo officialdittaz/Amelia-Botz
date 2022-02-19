@@ -48,14 +48,35 @@ const primbon = require('primbon-scraper')
 const { removeBackgroundFromImageFile } = require('remove.bg')
 const convert = require('imagemagick')
 const ytdl = require('ytdl-core');
-const acrcloud = require("acrcloud");
 const Download = require("@phaticusthiccy/open-apis");
+const acrcloud = require("acrcloud");
 const acr = new acrcloud({
   host: "identify-eu-west-1.acrcloud.com",
   access_key: "c9f2fca5e16a7986b0a6c8ff70ed0a06",
   access_secret: "PQR9E04ZD60wQPgTSRRqwkBFIWEZldj0G3q7NJuR"
 });
-const {youtubeSearch,googleIt, youtubedl, youtubedlv2, wallpaperv2, googleImage, alquran, jadwalTVNow, gempa, gempaNow} = require('@bochilteam/scraper')
+const {
+youtubeSearch,
+mediafiredl, 
+lyricsv2, 
+lyrics, 
+facebookdl, 
+facebookdlv2,
+tiktokdl, 
+tiktokdlv2, 
+twitterdl, 
+twitterdlv2,
+getZodiac,
+liputan6,
+googleIt, 
+youtubedl, 
+youtubedlv2, 
+wallpaperv2, 
+googleImage, 
+alquran, 
+jadwalTVNow, 
+gempa, 
+gempaNow} = require('@bochilteam/scraper')
 
 // stickwm
 const Exif = require('./lib/exif');
@@ -319,6 +340,7 @@ module.exports = xdev = async (xdev, dev, baterai) => {
 		const sender = dev.key.fromMe ? xdev.user.jid : isGroup ? dev.participant : dev.key.remoteJid
 		const senderNumber = sender.split("@")[0] 
 		const isOwner = ownerNumber.includes(sender)
+		const theOwner = sender == Ownerin
 		const totalchat = await xdev.chats.all()
 		const groupMetadata = isGroup ? await xdev.groupMetadata(from) : ''
 		const groupName = isGroup ? groupMetadata.subject : ''
@@ -599,6 +621,8 @@ xdev.sendMessage(from, { displayname: nama, vcard: vcard }, MessageType.contact,
    
 ///Button Text
 const sendButMessage = (id, text1, desc1, but = []) => {
+	
+
 const buttonMessage = {
 contentText: text1,
 footerText: desc1,
@@ -652,6 +676,7 @@ headerType: 'LOCATION',
 }
 xdev.sendMessage(id, buttonMessages, MessageType.buttonsMessage, options)
 }
+					
 					
 //Button document
 const Sendbutdocument = async(id, text1, desc1, gam1, but = [], options = {}) => {	
@@ -865,15 +890,19 @@ console.log('done');
 let media = fs.readFileSync(filename)
 let type = mime.split("/")[0]+"Message"
 if(mime === "image/gif"){
-type = MessageType.video
-mime = Mimetype.gif
-}
-if(mime === "application/pdf"){
-type = MessageType.document
-mime = Mimetype.pdf
-}
-if(mime.split("/")[0] === "audio"){
-mime = Mimetype.mp4Audio
+ type = MessageType.video
+ mime = Mimetype.gif
+} else if(mime === "application/pdf"){
+ type = MessageType.document
+ mime = Mimetype.pdf
+} else if(mime === "application/zip"){
+ type = MessageType.document
+ mime = "application/zip"
+} else if(mime.split("/")[0] === "audio"){
+ type = MessageType.audio
+ mime = Mimetype.mp4Audio
+} else {
+return setReply("Tidak bisa mengirim file karena MimeType tidak di temukan")
 }
 xdev.sendMessage(to, media, type, { quoted: dev, mimetype: mime, caption: text,contextInfo: {"mentionedJid": mids}})
 fs.unlinkSync(filename)
@@ -895,6 +924,8 @@ console.log(e)
 }
 
             
+
+         
 //******************* 》SECURITY《 ********************\\
             
 //ANTI VIO 
@@ -1000,7 +1031,7 @@ xdev.groupRemove(from, [kic]).catch((e) => { setReply(`BOT HARUS JADI ADMIN`) })
 }
 
  //ANTI ASING/BULE OK
-if (isGroup && isKickarea && !dev.key.fromMe) {    
+if (isGroup && isBotGroupAdmins && isKickarea && !dev.key.fromMe) {    
 member = await groupMembers.map(u => u.jid)
 for ( let i = 0; i <member.length; i++){  
 if (member[i].slice(0,2) !== "62" ){     	
@@ -1736,6 +1767,55 @@ switch (command) {
 	
 
 
+case 'liputan6':
+nana = await liputan6()
+console.log(nana)
+break
+
+
+case 'fb':
+nana = await facebookdl(q)
+console.log(nana)
+break
+
+
+case 'fbdl':
+nana = await facebookdlv2(q)
+console.log(nana)
+break
+
+case 'mediafire':
+if (isLimit(senderNumber, isPremium, isOwner, limitCount, user)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
+if(q.startsWith("https://www.mediafire.com")){
+nana = await mediafiredl(q)
+console.log(nana)
+var teks =`
+Data succesfull obtained
+
+File Name : ${nana.filename}
+File Size : ${nana.filesizeH}
+Upload : ${nana.aploud}
+`
+await setReply(teks)
+if(nana.filesize > 30000){
+if(sender.startsWith("62")){
+var teks = "Kamu telah di banned\nkarena menyalah gunakan\nfitur mediafire!"
+} else {
+var teks = "You have been banned\nfor abusing the mediafire feature"
+}
+
+addBanned(pushname,calender, senderNumber, ban) 
+await setReply("File size melebihi batas,\nbatas yang di tentukan adalah 30mb")              
+await setReply(teks)
+return
+}
+await sendMediaURL (from, nana.url, "Nih")
+limitAdd(senderNumber, user)
+} else{
+setReply("Link Invalid")
+	}
+break
+	
 	
 case 'well':
 nana = await wallpaper(q)
@@ -5569,7 +5649,6 @@ limitAdd(senderNumber, user)
 break
 
 
-
 case 'igstory': 
 if(!q) return setReply('Usernamenya?')      
 Download.insta_story(q).then(async (data) => {
@@ -7652,10 +7731,10 @@ break
 case 'translate': case 'tr':
 try {
 if (args.length < 1)return setReply(`Usage : #translate kode bahasa teks/reply pesan\nExample : #translate id why`)
-if (isQuotedextendedText) {
+if (args.length > 1) {
 translate(`${body.slice(10+args[0].length+1)}`, args[0])
 .then((res) => { setReply(`${res}`) })
-} else {
+} else if(dev.message.extendedTextMessage.contextInfo.quotedMessage.conversation) {
 tolang = args[0]
 entah = dev.message.extendedTextMessage.contextInfo.quotedMessage.conversation
 translate(entah, tolang)
@@ -7679,9 +7758,6 @@ break
            
            
                    
-           
-           
-          
            
            
 case 'wiki':
@@ -7965,8 +8041,8 @@ a += `
 b = a.trim()
 //sendFileFromUrl(res.all[0].image, image, {quoted: dev, thumbnail: Buffer.alloc(0), caption: b, contextInfo: forward})
 imag = await getBuffer(res.all[0].image)
-let mok = [{"buttonId": `INFO BOTZ`,"buttonText": {"displayText": `ɪɴғᴏ ʙᴏᴛᴢ`},"type": "RESPONSE"},
-                    {"buttonId": `SEWA BOTZ`,"buttonText": {"displayText": `sᴇᴡᴀ ʙᴏᴛᴢ`},"type": "RESPONSE"}]
+let mok = [{"buttonId": `${prefix}playmp3 ${res.all[0].url}`,"buttonText": {"displayText": `ᴀᴜᴅɪᴏ`},"type": "RESPONSE"},
+                    {"buttonId": `${prefix}playmp4 ${res.all[0].url}`,"buttonText": {"displayText": `ᴠɪᴅᴇᴏ`},"type": "RESPONSE"}]
 sendButLocation(from, b, `Baterai : ${baterai.battery}\n© ${fake1}`, imag, mok, {contextInfo: forward})
  } catch (e) {
  console.log(e)
@@ -9448,11 +9524,10 @@ case 'listgc':
     
      
      
-    case 'brainly':
+case 'brainly':
     if (isLimit(senderNumber, isPremium, isOwner, limitCount, user)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
-			if (args.length < 1) return setReply('Pertanyaan apa')
-          	brien = args.join(' ')
-			brainly(`${brien}`).then(res => {
+			if (!q) return setReply('Pertanyaan apa')
+			brainly(`${q}`).then(res => {
 			teks = '❉───────────────────────❉\n'
 			for (let Y of res.data) {
 			teks += `\n*「 _BRAINLY_ 」*\n\n*➸ Pertanyaan:* ${Y.pertanyaan}\n\n*➸ Jawaban:* ${Y.jawaban[0].text}\n❉──────────────────❉\n`
@@ -9464,7 +9539,7 @@ case 'listgc':
 			
 			
     
-            
+           
             
     
 
@@ -10203,10 +10278,9 @@ Syarat dan Ketentuan menggunakan *${fake}*
      melakukan spam, maka Bot tidak
      akan menanggapi kamu selama 20 detik
     
-9. User dilarang keras menelpon bot 
+9. User dilarang keras menelpon bot!
      jika melanggar maka kamu akan terkena 
-     banned & block, dan kamu tidak akan 
-     bisa menggunakan fitur bot lagi
+     banned,block dan dikirim bug
 
 10. Bot tidak akan menanggapi user yang
        meminta untuk di save nomernya`
