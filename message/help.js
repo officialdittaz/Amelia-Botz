@@ -97,6 +97,7 @@ ${week}, ${calender}
 *│▸* ${prefix}cosplay 
 *│▸* ${prefix}wallml     
 *│▸* ${prefix}katailham
+*│▸* ${prefix}bucin
 *│▸* ${prefix}anime
 *│▸* ${prefix}memeindo
 *│*
@@ -321,6 +322,7 @@ ${week}, ${calender}
 *│▸* ${prefix}igstory     ${explain ? "Link":""} 
 *│▸* ${prefix}twitter          ${explain ? "Link":""} 
 *│▸* ${prefix}gitclone          ${explain ? "Link":""} 
+*│▸* ${prefix}mediafire          ${explain ? "Link":""} 
 *│*
 *╰────────────⦁* 
 
