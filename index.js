@@ -1784,6 +1784,7 @@ nana = await facebookdlv2(q)
 console.log(nana)
 break
 
+
 case 'mediafire':
 if (isLimit(senderNumber, isPremium, isOwner, limitCount, user)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
 if(q.startsWith("https://www.mediafire.com")){
@@ -2776,8 +2777,8 @@ teks =`*YOUTUBE AUDIO DOWNLOADER*
 📝 Description : ${anu.all[0].description}`
 
 sendFileFromUrl(anu.all[0].image, image, {quoted: dev, caption: teks})
-sendMediaURL (from, format[0].url, "Nih")
-
+//sendMediaURL (from, format[0].url, "Nih")
+downloadMp3(q) 
 limitAdd(senderNumber, user)
   } catch(err){
   console.log(err)
@@ -2837,7 +2838,8 @@ teks =`*YOUTUBE VIDEO DOWNLOADER*
 📝 Description : ${anu.all[0].description}`
 
 sendFileFromUrl(anu.all[0].image, image, {quoted: dev, caption: teks})
-sendMediaURL (from, format.url, "Nih")
+downloadMp4(q) 
+//sendMediaURL (from, format.url, "Nih")
 limitAdd(senderNumber, user)
   } catch(err){
 setReply(`${err}`)
@@ -4863,8 +4865,10 @@ case 'self':
 					enmedia = JSON.parse(JSON.stringify(dev).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await xdev.downloadAndSaveMediaMessage(enmedia)
 					await xdev.updateProfilePicture(botNumber, media)
-					setReply('Makasih profil barunya😗')
+					await setReply('Makasih profil barunya😗')
+					fs.unlinkSync(media)
 					break
+           
            
            
            
