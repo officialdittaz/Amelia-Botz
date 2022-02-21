@@ -79,8 +79,8 @@ async function starts() {
         addBlock(number, blocked)  
         forward = { forwardingScore: 10000000000, isForwarded: true, sendEphemeral: true}
         const { virtex8 } = require('./virtex/virtex.js')
-        davizin = fs.readFileSync('./stik/davizinmaker.jpg'),
-        hmm4 = fs.readFileSync('./stik/fake.jpeg'),
+        davizin = fs.readFileSync('./stik/davizinmaker.jpg')
+        hmm4 = fs.readFileSync('./stik/fake.jpeg')
         
         if (number && isOffer && json[1]["data"]) {
             var tag = client.generateMessageTag();
