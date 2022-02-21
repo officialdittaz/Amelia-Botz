@@ -49,7 +49,8 @@ const convert = require('imagemagick')
 const ytdl = require('ytdl-core');
 const Download = require("@phaticusthiccy/open-apis");
 const acrcloud = require("acrcloud");
-const brainly = require('brainly-scraper-v2')
+const { Brainly } = require("brainly-scraper-v2");
+const brainly = new Brainly("id"); 
 const acr = new acrcloud({
   host: "identify-eu-west-1.acrcloud.com",
   access_key: "c9f2fca5e16a7986b0a6c8ff70ed0a06",
@@ -2658,7 +2659,7 @@ break
 	try{
 if(!q) return setReply("Teksnya mana om")
 setReply(mess.wait)
-res = await yts(q)
+let res = await yts(q)
 let info = await ytdl.getInfo(res.all[0].url);
 let audio = ytdl.filterFormats(info.formats, 'audioonly');
 let format = ytdl.chooseFormat(info.formats, { quality: '18' });
@@ -9537,17 +9538,26 @@ case 'listgc':
 case 'brainly':
 if (isLimit(senderNumber, isPremium, isOwner, limitCount, user)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
 if (!q) setReply( 'Soalnya?')
-  let res = await brainly(q)
-  let answer = res.data.map((v, i) => `_*PERTANYAAN KE ${i + 1}*_\n${v.pertanyaan}\n${v.jawaban.map((v,i) => `*JAWABAN KE ${i + 1}*\n${v.text}`).join('\n')}`).join('\n\n•------------•\n\n')
-  setReply(answer)
+nana =`https://www.logosvgpng.com/wp-content/uploads/2018/04/brainly-logo-vector.png`
+foto = await getBuffer(nana)   
+  let res = await brainly.searchWithMT("id", q).
+  console.log(res)
+  teks =`_*BRAINLY*_
+      for (let i of res.answers){
+    	teks +=`Pertanyaan: ${res.question.content}\nJawaban: ${i.content}\nRating: ${i.rating}\n\n`
+   }
+await xdev.sendMessage(from, foto, image, {quoted: dev, caption, teks})
+ // setReply(answer)
   limitAdd(senderNumber, user)
 break
 			
 			
-    
+
            
-            
-    
+        
+        
+           
+
 
   
 	case 'term':
