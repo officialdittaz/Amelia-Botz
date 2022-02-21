@@ -36,7 +36,6 @@ const PhoneNumber = require('awesome-phonenumber')
 const gis = require('g-i-s');
 const os = require('os')
 const imageToBase64 = require('image-to-base64');
-const brainly = require('brainly-scraper')
 const yts = require( 'yt-search')
 const ms = require('parse-ms')
 const toMs = require('ms')
@@ -50,6 +49,7 @@ const convert = require('imagemagick')
 const ytdl = require('ytdl-core');
 const Download = require("@phaticusthiccy/open-apis");
 const acrcloud = require("acrcloud");
+const brainly = require('brainly-scraper-v2')
 const acr = new acrcloud({
   host: "identify-eu-west-1.acrcloud.com",
   access_key: "c9f2fca5e16a7986b0a6c8ff70ed0a06",
@@ -892,18 +892,19 @@ let type = mime.split("/")[0]+"Message"
 if(mime === "image/gif"){
  type = MessageType.video
  mime = Mimetype.gif
-} else if(mime === "application/pdf"){
+} 
+ if(mime === "application/pdf"){
  type = MessageType.document
  mime = Mimetype.pdf
-} else if(mime === "application/zip"){
+} 
+ if(mime === "application/zip"){
  type = MessageType.document
  mime = "application/zip"
-} else if(mime.split("/")[0] === "audio"){
+} 
+ if(mime.split("/")[0] === "audio"){
  type = MessageType.audio
  mime = Mimetype.mp4Audio
-} else {
-return setReply("Tidak bisa mengirim file karena MimeType tidak di temukan")
-}
+} 
 xdev.sendMessage(to, media, type, { quoted: dev, mimetype: mime, caption: text,contextInfo: {"mentionedJid": mids}})
 fs.unlinkSync(filename)
 });
@@ -992,15 +993,14 @@ await sendMess("Group Telah Di Tutup")
 await xdev.sendMessage(`${nomerOwner}@s.whatsapp.net`, `Hai Owner! wa.me/${sender.split("@")[0]} Terdeteksi Telah Mengirim Virtex ${isGroup?`di Group ${groupName}`:''}`, text)
  }
  
- /*
+ 
 //Auto clear jika terdapat pesan yg tidak dapat dilihat oleh whatsapp web
-if (m.messageStubType === 68) {
-console.log("Auto clear chat, virtex terdeteksi")
-await xdev.modifyChat(m.chat, 'clear', {
-includeStarred: false
-})
+if(dev.messageStubType){
+if (dev.messageStubType === 68) {
+console.log(color("Auto clear chat, virtex terdeteksi"))
+await xdev.clearMessage(dev.key)
 }
-  */ 
+} 
   
  //ANTI LINK GROUP
 if (isGroup && isAntilinkGc && budy.includes(`chat.whatsapp.com`)) {
@@ -4740,8 +4740,10 @@ case 'clearall':
 try{
 					if (!isOwner) return onlyOwner()
 					let chiit = await xdev.chats.all()
-                    for (let i of chiit){
-                    xdev.modifyChat(i.jid, ChatModification.delete)                 
+					await xdev.setMaxListeners(25)
+                    for (let _ of chiit){
+                   // xdev.modifyChat(i.jid, ChatModification.delete)       
+          await xdev.modifyChat(_.jid, 'clear', { includeStarred: false })
                     }
                    // await setReply("Sukses Clear All Chat")
                     } catch (err){
@@ -4971,28 +4973,7 @@ case 'self':
             
             
             
-			case 'unbanned':
-			case 'unban': //PERCOBAA
-		    if (!isGroupAdmins && !isOwner)return setReply('hanya admin dan owner')
-			if (dev.message.extendedTextMessage === undefined || dev.message.extendedTextMessage === null) return setReply('Reply targetnya!')
-            mentioned = dev.message.extendedTextMessage.contextInfo.mentionedJid;
-            if (mentioned.length < 1) {
-            asu = dev.message.extendedTextMessage.contextInfo.participant           
-            if(!cekBannedUser (asu, ban)) return setReply("Udah di unban")
-            unBanned (asu, ban)             
-            setReply( `*Klo udah di unban jangan jadi beban lagi yah*  🙂 @${asu.split("@")[0]}`);
-            } else {
-       	 if (!isGroupAdmins && !isOwner)return setReply('hanya admin dan owner')
-            if (mentioned.includes(ownerNumber[0])) return setReply(`Tidak bisa banned Owner`)
-            if (mentioned.includes(from.split("-")[0] + '@s.whatsapp.net')) return setReply(`Tidak bisa banned owner group`)    
-            lala = `${mentioned[0].split('@')[0]}@s.whatsapp.net`
-            if(!cekBannedUser (lala, ban)) return setReply("Udah di unban")        
-            unBanned(lala, ban) 
-            setReply(`*Klo udah di unban jangan jadi beban lagi yah*  🙂 @${mentioned[0].split('@')[0]}`);
-            }
-            break    
-         
-
+			
 
 
            
@@ -6357,6 +6338,31 @@ await setReply(`${ahah.split("@")[0]} berhasil di unblock`);
 break    
 
 
+case 'unbanned':
+			case 'unban': //PERCOBAA
+		    if (!isGroupAdmins && !isOwner)return setReply('hanya admin dan owner')
+			if (dev.message.extendedTextMessage === undefined || dev.message.extendedTextMessage === null) {
+			if (args[0].includes('08')) return setReply('Awali nomor dengan 62')  
+			woke = q.replace(new RegExp("[()+-/ +/]", "gi"), "") + `@s.whatsapp.net`
+		    if(!cekBannedUser (woke, ban)) return setReply("Udah di unban")
+            unBanned (woke, ban)             
+            setReply( `*Klo udah di unban jangan jadi beban lagi yah*  🙂 @${asu.split("@")[0]}`);
+            } else if (mentionByReply) {
+            asu = dev.message.extendedTextMessage.contextInfo.participant           
+            if(!cekBannedUser (asu, ban)) return setReply("Udah di unban")
+            unBanned (asu, ban)             
+            setReply( `*Klo udah di unban jangan jadi beban lagi yah*  🙂 @${asu.split("@")[0]}`);
+            } else if(mentionByTag){
+       	 if (!isGroupAdmins && !isOwner)return setReply('hanya admin dan owner')
+            if (mentionByTag.includes(ownerNumber[0])) return setReply(`Tidak bisa banned Owner`)
+            if (mentionByTag.includes(from.split("-")[0] + '@s.whatsapp.net')) return setReply(`Tidak bisa banned owner group`)    
+            lala = `${mentionByTag[0].split('@')[0]}@s.whatsapp.net`
+            if(!cekBannedUser (lala, ban)) return setReply("Udah di unban")        
+            unBanned(lala, ban) 
+            setReply(`*Klo udah di unban jangan jadi beban lagi yah*  🙂 @${mentioned[0].split('@')[0]}`);
+            }
+            break    
+         
 
     
     case 'setwelcome':
@@ -8393,7 +8399,7 @@ case 'tts':
 try{
 if (args.length < 1) return setReply('Kode bahasanya mana kak?')
 if (args.length < 2) return setReply('Textnya mana kak?')
-gtts = require('./lib/gtts')(args[0])
+gtts = require('./lib/gtts')(args[1])
 dtt = q
 ranm = getRandom('.mp3')
 if(dtt.length > 600) return setReply('Textnya kebanyakan kak') 
@@ -9529,17 +9535,13 @@ case 'listgc':
      
      
 case 'brainly':
-    if (isLimit(senderNumber, isPremium, isOwner, limitCount, user)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
-			if (!q) return setReply('Pertanyaan apa')
-			brainly(`${q}`).then(res => {
-			teks = '❉───────────────────────❉\n'
-			for (let Y of res.data) {
-			teks += `\n*「 _BRAINLY_ 」*\n\n*➸ Pertanyaan:* ${Y.pertanyaan}\n\n*➸ Jawaban:* ${Y.jawaban[0].text}\n❉──────────────────❉\n`
-			}
-			xdev.sendMessage(from, teks, text,{quoted:dev,detectLinks: true})                     
-            })        
-      limitAdd(senderNumber, user)
-			break
+if (isLimit(senderNumber, isPremium, isOwner, limitCount, user)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
+if (!q) setReply( 'Soalnya?')
+  let res = await brainly(q)
+  let answer = res.data.map((v, i) => `_*PERTANYAAN KE ${i + 1}*_\n${v.pertanyaan}\n${v.jawaban.map((v,i) => `*JAWABAN KE ${i + 1}*\n${v.text}`).join('\n')}`).join('\n\n•------------•\n\n')
+  setReply(answer)
+  limitAdd(senderNumber, user)
+break
 			
 			
     
