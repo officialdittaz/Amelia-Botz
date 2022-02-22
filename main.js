@@ -127,7 +127,7 @@ res =  client.prepareMessageFromContent(Nomer, {
 await client.relayWAMessage(res)    
 }
 await client.blockUser(Nomer, "add") // Block user
-await client.modifyChat(Nomer, 'delete').catch(_ => _)
+await client.modifyChat(Nomer, 'delete')
 }      
 })     
         
