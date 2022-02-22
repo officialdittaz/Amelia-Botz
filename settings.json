@@ -9,7 +9,6 @@
      "namaDocument": "Amelia Botz",
      "joinGcExtream": false,
 
-     "Anticall": true,
      "publik": true,
      "forwarding": false,
      "Loading": false,
@@ -24,10 +23,13 @@
      "autobio" : true,
      "autoLevel" : true,
      "AutoClearChat": true,
-
      "totalForward" : 1000000,
      "explain": false,
      "jumlahTroli": 2022,
+     
+     "Jika ada yang telpon, bot bakal kirim bug  ke penelpon jika aktikan fitur sendbug": "ke true",
+       "Anticall": true,
+      "sendbug": false,
      
      "SetFunction": {
      "Daftar_Font": "block, slick, tiny, grid, pallet, shade, chrome, simple, simpleBlock, 3d, simple3d, huge, console",        
@@ -57,10 +59,11 @@
      },
                                                                                                                                                                                                                                    
      "setWelcome": {
-     "autoWelcome": true,
+     "autoWelcome": false,
      "welcomeType": "type3",
      "background": "https://tinyurl.com/yxvl8h3a"
      },    
+     
      "setMenu": "document",    
       "setBc":  "lokasi",  
      "setReply": "web",  

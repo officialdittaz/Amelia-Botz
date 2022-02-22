@@ -51,11 +51,17 @@ const Download = require("@phaticusthiccy/open-apis");
 const acrcloud = require("acrcloud");
 const { Brainly } = require("brainly-scraper-v2");
 const brainly = new Brainly("id"); 
+const Jimp = require('jimp') ;
 const acr = new acrcloud({
   host: "identify-eu-west-1.acrcloud.com",
   access_key: "c9f2fca5e16a7986b0a6c8ff70ed0a06",
   access_secret: "PQR9E04ZD60wQPgTSRRqwkBFIWEZldj0G3q7NJuR"
 });
+const Spotify = require('spotifydl-core').default
+const spotify = new Spotify({
+    clientId: 'acc6302297e040aeb6e4ac1fbdfd62c3',
+    clientSecret: '0e8439a1280a43aba9a5bc0a16f3f009'
+})
 const {
 youtubeSearch,
 mediafiredl, 
@@ -450,7 +456,7 @@ const gcount = isPremium ? gcounti.prem : gcounti.user
 
 //Auto READ   
 if(autoread){
-xdev.chatRead(from, "read")
+xdev.chatRead(from, "read").catch(_ => _)
 }
 
 //-------------------- 》MESSGAGE RESPON《 --------------------\\
@@ -904,7 +910,7 @@ if(mime === "image/gif"){
 } 
  if(mime.split("/")[0] === "audio"){
  type = MessageType.audio
- mime = Mimetype.mp4Audio
+ mime = Mimetype.mp4Audio        
 } 
 xdev.sendMessage(to, media, type, { quoted: dev, mimetype: mime, caption: text,contextInfo: {"mentionedJid": mids}})
 fs.unlinkSync(filename)
@@ -1467,8 +1473,19 @@ xdev.prepareDisappearingMessageSettingContent(0),
 ),{ waitForAck: true }) 
 }
  
- 
- 
+ //Crop Image
+async function crop(input,output) {
+   const image = await Jimp.read
+   (`./${input}.jpg`);
+   // Checking if any error occurs while cropping
+   image.crop(150, 0, 1000, 1800, function(err){
+      if (err) throw err;
+   })
+   .write(`output.jpg`);
+   console.log(color("Image is processed successfully"))
+}
+
+
  
  
 //========================================================================================================================//
@@ -1766,12 +1783,27 @@ const bully3 = b3[Math.floor(Math.random() * b3.length)]
 try{ 
 switch (command) {
 	
+	
+	
+case 'spotify':
+if(!q) return setReply("Masukan link tiktok")
+data = await spotify.getTrack(q) 
+teks =`
+Nama: ${data.name}
+Artists: ${data.artists.join(' ')}
+Album : ${data.album_name}
+Release: ${data.release_date}
 
-
-case 'liputan6':
-nana = await liputan6()
-console.log(nana)
+Mohon tunggu, sedang mengirim
+File audio ${data.name}
+`
+sendFileFromUrl (data.cover_url, image, {quoted: dev, caption: teks})      
+song = await spotify.downloadTrack(q)
+console.log(song)
+await xdev.sendMessage(from, song, audio, {mimetype: Mimetype.mp4Audio, quoted: dev})        
 break
+
+
 
 
 case 'fb':
@@ -1785,7 +1817,7 @@ nana = await facebookdlv2(q)
 console.log(nana)
 break
 
-
+/*
 case 'mediafire':
 if (isLimit(senderNumber, isPremium, isOwner, limitCount, user)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
 if(q.startsWith("https://www.mediafire.com")){
@@ -1817,16 +1849,35 @@ limitAdd(senderNumber, user)
 setReply("Link Invalid")
 	}
 break
+*/
 	
-	
-case 'well':
+case 'well':{
 nana = await wallpaper(q)
-for (let i of nana.image[0]){
-foto = i[Math.floor(Math.random() * i.length)]
-sendFileFromUrl(foto, image, {quoted: dev, caption: "Nih"})
+
+
+for (let i of nana){
+//foto = i[Math.floor(Math.random() * i.length)]
+//sendFileFromUrl(foto, image, {quoted: dev, caption: "Nih"})
+
+}
+
 }
 break
 
+	
+case 'loc':
+                     if(isExtream) return
+            if (!isOwner) return onlyOwner()
+                                       //  jpegThumbnail: virgam,
+                             xdev.sendMessage(from, {
+                            degreesLatitude: 36.036105801662316,
+                              degreesLongitude: 138.09072320256624,
+                            name: "tes",
+                               address: "ahah"
+                              }, location,
+                              {contextInfo:forward})
+                            break
+                
 	
 case 'backup':
 await xdev.sendMessage(from,fs.readFileSync(`./database/user.json`), document, {quoted: dev, filename: "user", mimetype: 'application/json'})
@@ -1914,10 +1965,13 @@ break
 	
 case 'gempanow':
 ano = await gempaNow()
+console.log(ano)
+if(ano.length == 0) return setReply("Tidak ada info terjadi gempa hari ini")
 for(let e of ano){
  teks =`Lokasi: ${e.location}\nTanggal: ${e.date}\nKedalaman: ${e.depth}\nMagnitude: ${e.magnitude}\nLatitude: ${e.latitude}\nLongitude:${e.longitude}\n`
 }
 setReply(teks)
+
 break
 
 
@@ -2038,7 +2092,6 @@ setReply(teks)
 });
 fs.unlinkSync(ran)
 })
-
 break
 
 	
@@ -5007,6 +5060,31 @@ case 'setimgdoc':
           	}
 			break	
 			
+case 'rotate':{
+if (!dev.key.fromMe && !isOwner) return setReply(mess.only.ownerB)
+if (!isQuotedImage) return setReply(`Kirim gambar dengan caption ${prefix+command}`);
+boij = isQuotedImage ? JSON.parse(JSON.stringify(dev).replace("quotedM", "m")).message.extendedTextMessage.contextInfo : dev;
+delb = await xdev.downloadMediaMessage(boij);
+input =  getRandom('.jpg')
+output =  getRandom('.jpg') 
+fs.writeFileSync(`./${input}`, delb);         
+let image = await Jimp.read(`./${input}`)
+   // Checking if any error occurs while rotating image
+await image.rotate(450, function(err){
+    if (err) return setReply(err)
+   })
+   .write(`./${output}`)
+await xdev.sendMessage(from, fs.readFileSync(`./${output}`), image, {quoted: dev, caption: "Nih"})
+await fs.unlinkSync(`./${output}`)
+await fs.unlinkSync(`./${input}`)
+}
+break
+			
+			
+		
+
+			
+			
 			
 			
 		case 'setthumb':
@@ -5103,6 +5181,7 @@ case 'setovo':
 				fs.writeFileSync('./temp/stick.json', JSON.stringify(setiker))
 				xdev.sendMessage(from, `Sukses Menambahkan Sticker\nCek dengan cara ${prefix}liststik`, MessageType.text, { quoted: dev})
 				break
+				
 					case 'dellstik':
 					case 'delstik':
 					if(!dev.key.fromMe & !isOwner) return setReply('Only owner')
@@ -5651,7 +5730,7 @@ break
            
 
 	
-	case 'linkwa':
+	case 'linkwa':{
             if(!q) return setReply('cari group apa?')
             hx.linkwa(q)
             .then(result => {
@@ -5661,6 +5740,7 @@ break
             }
             setReply(res)
             });
+            }
             break
   
             
@@ -9530,29 +9610,41 @@ case 'listgc':
            
            
             
-            
+        case 'tesom':
+   nana =`https://www.logosvgpng.com/wp-content/uploads/2018/04/brainly-logo-vector.png`
+foto = await getBuffer(nana)   
+fs.writeFileSync(`./mama.jpeg`, foto);
+break    
  	
-    
+case 'kuy':
+await brainly.search('id', "Pythagoras").then(console.log).catch(console.error);
+break 
      
-     
-case 'brainly':
+case 'brainly':{
 if (isLimit(senderNumber, isPremium, isOwner, limitCount, user)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
 if (!q) setReply( 'Soalnya?')
 nana =`https://www.logosvgpng.com/wp-content/uploads/2018/04/brainly-logo-vector.png`
 foto = await getBuffer(nana)   
-  let res = await brainly.searchWithMT("id", q).
-  console.log(res)
-  teks =`_*BRAINLY*_
-      for (let i of res.answers){
-    	teks +=`Pertanyaan: ${res.question.content}\nJawaban: ${i.content}\nRating: ${i.rating}\n\n`
-   }
-await xdev.sendMessage(from, foto, image, {quoted: dev, caption, teks})
- // setReply(answer)
-  limitAdd(senderNumber, user)
+let res = await brainly.search('id', `${q}`)
+teks =`_*BRAINLY*_\n\n`
+//let toks = res.map((v, i) => `${v.question.content}\n${e.answers.map((v,i) => `*JAWABAN KE ${i + 1}*\n${v}\n`)}\n\n═════════════════\n\n`)\n*Jurusan*: ${e.question.education}
+//teks +=`${toks}`
+
+res.map(function(e, i){
+teks +=`_*PERTANYAAN KE ${i + 1}*_\n${e.question.content}\n${e.answers.map((v,i) => `*JAWABAN KE ${i + 1}*\n${v}\n`)}\n\n═════════════════\n\n`
+ });
+ 
+ teks +=`_Thanks for choosing Brainly_`
+ 
+let mok = [{"buttonId": `Thanks`,"buttonText": {"displayText": `ᴛʜᴀɴᴋs`},"type": "RESPONSE"},
+                    {"buttonId": `${prefix}donasi`,"buttonText": {"displayText": `ᴅᴏɴᴀsɪ`},"type": "RESPONSE"}]
+sendButLocation(from, teks, `© ${fake1}`, foto, mok, {contextInfo: forward})             
+limitAdd(senderNumber, user)
+}
 break
 			
 			
-
+			
            
         
         
@@ -10186,6 +10278,12 @@ gbutsan = [{buttonId: `${prefix}owner`, buttonText: {displayText: `ᴏᴡɴᴇʀ
 sendButLocation(from, teks, `© ${fake1}`, thumb, gbutsan) 
 }
 }
+
+//Ketika ada yang minta save
+if(!isGroup && budy.startsWith("sv")){
+setReply("Pahami dan baca peraturan bot,\nBot tidak menerima save nomer")
+}
+	
 	
 //Bullying member bamru
 if (body.startsWith(`${prefix}bullyuk`)){

