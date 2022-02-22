@@ -322,7 +322,7 @@ ${week}, ${calender}
 *│▸* ${prefix}igstory     ${explain ? "Link":""} 
 *│▸* ${prefix}twitter          ${explain ? "Link":""} 
 *│▸* ${prefix}gitclone          ${explain ? "Link":""} 
-*│▸* ${prefix}mediafire          ${explain ? "Link":""} 
+*│▸* ${prefix}spotify          ${explain ? "Link":""} 
 *│*
 *╰────────────⦁* 
 
