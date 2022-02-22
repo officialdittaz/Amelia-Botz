@@ -54,6 +54,7 @@
     "remove.bg": "^1.3.0",
     "request": "^2.88.2",
     "spinnies": "^0.5.1",
+   "spotifydl-core": "latest",
     "yt-search": "^2.7.6", 
     "ytdl-core":"latest"
   },
