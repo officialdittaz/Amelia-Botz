@@ -28,12 +28,7 @@ exports.teksspam =["Jangan spam om",
 "Jangan spam",
 "Jangan spam ya",
 "Woy jangan spam",
-"Satu satu dong kak jangan kroyokan ☹️",
-"Bentar dulu kak gantian ☹️",
-"Tunggu yang laen selesai dulu kak 🙄",
-"Satu satu kak jangan kroyokan aku bukan babu disini 😥","Bentar bentar 🤧",
-"Nyenyenye  😜🤣",
-"Sabar dulu ya kak, yang sabar di sayang janda 🤤"]
+"Ups kamu terdeteksi spam, tolong beri jeda 5 detik"]
 
 
 
