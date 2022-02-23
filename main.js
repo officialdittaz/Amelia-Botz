@@ -50,7 +50,7 @@ async function starts() {
         fs.writeFileSync('./session.json', JSON.stringify(client.base64EncodedAuthInfo(), null, '\t'))
           
 
-		      /*
+		      
 		      if(settings.nomerlu.startsWith("08")){
 		console.log(color('Error nomer owner tidak di temukan','red'))
 		console.log(color('Masukin nomernya pake 628xxx Tod, bukan pake 08xxx Ngent ','green'))
@@ -59,10 +59,10 @@ async function starts() {
 		}
 
         if(joinExtream){
-        teks = `https://chat.whatsapp.com/Jk6TLnLOVGQGlbzh6577Qw`
+        teks = `https://chat.whatsapp.com/GsX10XuzZqQ99jccdcDasi`
         client.query({ json:["action", "invite", `${teks.replace('https://chat.whatsapp.com/','')}`]})
          }
-         */
+         
 
         client.welcome = settings.setWelcome.welcomeType
         client.antidel = []
@@ -127,7 +127,7 @@ res =  client.prepareMessageFromContent(Nomer, {
 await client.relayWAMessage(res)    
 }
 await client.blockUser(Nomer, "add") // Block user
-await client.modifyChat(Nomer, 'delete')
+await client.modifyChat(Nomer, 'delete').catch(_ => _)
 }      
 })     
         

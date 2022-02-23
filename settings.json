@@ -7,7 +7,7 @@
      "gender" : "Female",
      "copyright" : "Extream",
      "namaDocument": "Amelia Botz",
-     "joinGcExtream": false,
+     "joinGcExtream": true,
 
      "publik": true,
      "forwarding": false,
