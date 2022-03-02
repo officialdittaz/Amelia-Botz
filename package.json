@@ -53,6 +53,7 @@
     "qs": "^6.10.1",
     "remove.bg": "^1.3.0",
     "request": "^2.88.2",
+    "scdl-core": "latest",
     "spinnies": "^0.5.1",
    "spotifydl-core": "latest",
     "yt-search": "^2.7.6", 
