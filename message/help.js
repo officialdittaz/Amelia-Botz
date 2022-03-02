@@ -311,21 +311,6 @@ ${week}, ${calender}
 *│*
 *╰────────────⦁*
 
-*╭─❲ DOWNLOAD ❳*
-*│*
-*│▸* ${prefix}ytmp4     ${explain ? "Link":""} 
-*│▸* ${prefix}ytmp3     ${explain ? "Link":""} 
-*│▸* ${prefix}play      ${explain ? "[ _Teks_ ]":""} 
-*│▸* ${prefix}tiktok     ${explain ? "Link":""} 
-*│▸* ${prefix}tiktoknowm     ${explain ? "Link":""} 
-*│▸* ${prefix}ig     ${explain ? "Link":""} 
-*│▸* ${prefix}igstory     ${explain ? "Link":""} 
-*│▸* ${prefix}twitter          ${explain ? "Link":""} 
-*│▸* ${prefix}gitclone          ${explain ? "Link":""} 
-*│▸* ${prefix}spotify          ${explain ? "Link":""} 
-*│*
-*╰────────────⦁* 
-
 *╭─❲ TEXT PROME ❳*
 *│*
 *│▸* ${prefix}blackping     ${explain ? "[ _Teks_ ]":""} 
@@ -375,6 +360,23 @@ ${week}, ${calender}
 *│*
 *╰────────────⦁* 
 
+*╭─❲ DOWNLOAD ❳*
+*│*
+*│▸* ${prefix}ytmp4     ${explain ? "Link":""} 
+*│▸* ${prefix}ytmp3     ${explain ? "Link":""} 
+*│▸* ${prefix}play      ${explain ? "[ _Teks_ ]":""} 
+*│▸* ${prefix}playmusic      ${explain ? "[ _Teks_ ]":""} 
+*│▸* ${prefix}soundcloud     ${explain ? "[ _Teks_ ]":""} 
+*│▸* ${prefix}tiktok     ${explain ? "Link":""} 
+*│▸* ${prefix}tiktoknowm     ${explain ? "Link":""} 
+*│▸* ${prefix}ig     ${explain ? "Link":""} 
+*│▸* ${prefix}igstory     ${explain ? "Link":""} 
+*│▸* ${prefix}twitter          ${explain ? "Link":""} 
+*│▸* ${prefix}gitclone          ${explain ? "Link":""} 
+*│▸* ${prefix}spotify          ${explain ? "Link":""} 
+*│*
+*╰────────────⦁* 
+
 *╭─❲ SEARCH ❳*
 *│*
 *│▸* ${prefix}ytsearch     ${explain ? "[ _Teks_ ]":""} 
@@ -384,6 +386,8 @@ ${week}, ${calender}
 *│▸* ${prefix}wiki     ${explain ? "[ _Teks_ ]":""} 
 *│▸* ${prefix}kbbi     ${explain ? "[ _Teks_ ]":""} 
 *│▸* ${prefix}brainly    ${explain ? "[ _Teks_ ]":""} 
+*│▸* ${prefix}gstalk    ${explain ? "[ _Teks_ ]":""} 
+*│▸* ${prefix}soundcloudsearch    ${explain ? "[ _Teks_ ]":""} 
 *│▸* ${prefix}whatanime    ${explain ? "[_Reply Image_]":""} 
 *│▸* ${prefix}whatmusic     ${explain ? "[ _Reply Audio_ ]":""} 
 *│*
@@ -405,7 +409,6 @@ ${week}, ${calender}
 *│▸* ${prefix}kodebahasa 
 *│▸* ${prefix}listvn
 *│▸* ${prefix}ssweb
-*│▸* ${prefix}cerpen     
 *│▸* ${prefix}listgc
 *│▸* ${prefix}translate     ${explain ? "[ _teks/reply teks_ ]":""}   
 *│▸* ${prefix}kalkulator [ _angka_ ]
@@ -483,10 +486,9 @@ ${week}, ${calender}
 *│▸* ${prefix}autoblockcmd     ${explain ? "[ _On/Off_ ]":""} 
 *│▸* ${prefix}antichatbot     ${explain ? "[ _On/Off_ ]":""} 
 *│▸* ${prefix}anticall     ${explain ? "[ _On/Off_ ]":""}  
-*│▸* ${prefix}listbot
 *│▸* ${prefix}setwelcome
 *│▸* ${prefix}forward     ${explain ? "[ _On/Off_ ]":""} 
-*│▸* ${prefix}forwardtotal     ${explain ? "[ _angka_ ]":""} 
+*│▸* ${prefix}forwardtotal     ${explain ? "[ _Angka_ ]":""} 
 *│▸* ${prefix}join    ${explain ? "[ _Linkgc_ ]":""} 
 *│*
 *╰────────────⦁*
