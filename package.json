@@ -7,7 +7,7 @@
     "lib": "lib"
   },
    "dependencies": {
-    "@adiwajshing/baileys": "^3.5.2",
+    "@adiwajshing/baileys": "github:melcanz/baileys",
     "@bochilteam/scraper": "latest" ,
    "@phaticusthiccy/open-apis": "latest",
     "@vitalets/google-translate-api": "^7.0.0",
