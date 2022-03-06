@@ -51,6 +51,7 @@ const outro = `Asik beban grup keluar \nKena mental dia :v`
 const teksPromote = `Cie jadi admin :v\n@${memNumber}`;
 const teksDemote = `Yahaha kena demote\n@${memNumber}`
   
+  
 try {
 var pp_user = await client.getProfilePicture(mem)
 } catch (e) {
@@ -86,7 +87,7 @@ type: 1 }
  
 //Button imge2         
 const sendButImage2 = async(id, text1, desc1, gam1, but = []) => {
-mhan = await xdev.prepareMessage(from, gam1, image, {contextInfo: { mentionedJid: [mem] }, thumbnail: gam1})
+mhan = await clent.prepareMessage(from, gam1, image, {thumbnail: gam1, contextInfo: { mentionedJid: [mem] }})
 //imageMsg = ( await client.prepareMessageMedia(gam1, "imageMessage", { contextInfo: { mentionedJid: [mem] }, thumbnail: gam1})).imageMessage;
 buttonsMessage = {
 contentText: text1,
