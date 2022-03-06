@@ -16,6 +16,7 @@ Background = JSON.parse(fs.readFileSync('./settings.json')).setWelcome.backgroun
 
 
 
+
 module.exports = async(client, anu) => {
 try{
 const fake1 = settings.copyright
@@ -85,7 +86,7 @@ type: 1 }
  
 //Button imge2         
 const sendButImage2 = async(id, text1, desc1, gam1, but = []) => {
-mhan = await xdev.prepareMessage(from, gam1, image, {contextInfo: { mentionedJid: [mem] }, thumbnail: thumb})
+mhan = await xdev.prepareMessage(from, gam1, image, {contextInfo: { mentionedJid: [mem] }, thumbnail: gam1})
 //imageMsg = ( await client.prepareMessageMedia(gam1, "imageMessage", { contextInfo: { mentionedJid: [mem] }, thumbnail: gam1})).imageMessage;
 buttonsMessage = {
 contentText: text1,
@@ -159,7 +160,7 @@ buff = await getBuffer(`http://hadi-api.herokuapp.com/api/card/welcome?nama=${pu
 sendButImage2(from, intro, copyright, buff, butIn)
 } else if (Remove && Type1 && onMe) {    	
 buff = await getBuffer(`http://hadi-api.herokuapp.com/api/card/goodbye?nama=${pushname}&descriminator=${groupMembers.length}&memcount=${allmem}&gcname=${encodeURI(groupName)}&pp=${pp_user}&bg=${Background}`)       
-sendButImage(from, outro, copyright, buff, butOut)
+sendButImage2(from, outro, copyright, buff, butOut)
 }
 
 //welcome Type2          
@@ -168,11 +169,9 @@ buff = await getBuffer(`http://hadi-api.herokuapp.com/api/card/welcome2?nama=${p
 sendButImage2(from, intro, copyright, buff, butIn)
 } else if (Remove && Type2 && onMe) {       
 buff = await getBuffer(`http://hadi-api.herokuapp.com/api/card/goodbye2?nama=${pushname}&descriminator=${groupMembers.length}&memcount=${allmem}&gcname=${encodeURI(groupName)}&gcicon=${pp_grup}&pp=${pp_user}&bg=${Background}`)
-sendButImage(from, outro, copyright, buff, butOut)
+sendButImage2(from, outro, copyright, buff, butOut)
 }
  
-
-
 //Welcome Type3
 if(Add && Type3 && OneMem && onMe){ 
 ppUser = await getBuffer(pp_user)  
