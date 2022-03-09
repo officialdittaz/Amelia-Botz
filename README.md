@@ -33,6 +33,17 @@
 > cd /sdcard && cd SelfBot && npm start
 ```
 
+## For Heroku
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Kangsad01/Wabot-Tsb01)
+
+### Instal Buildpack
+* heroku/nodejs
+* https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git
+* https://github.com/DuckyTeam/heroku-buildpack-imagemagick.git
+* https://github.com/anthonykarapetrides/heroku-buildpack-wget.git
+* https://github.com/clhuang/heroku-buildpack-webp-binaries.git
+---
 
 ## Connect With Me
 <p align="center">
