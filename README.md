@@ -1,5 +1,5 @@
 <div align="center">
-<img src="https://k.top4top.io/p_22589xjh10.jpg" alt="YOGI" width="170" />
+<img src="https://k.top4top.io/p_22589xjh10.jpg" alt="YOGI" width="360" />
 
 ## Amelia-Botz
 ## yah gua ga punya api
