@@ -14,6 +14,22 @@
 <a href="#"><img title="mengapi" src="https://img.shields.io/static/v1?label=FREE&message=Amelia-Botz&color=green"></a>
 </p>
 
+<p align="center">
+  <img src="https://img.shields.io/badge/-JavaScript-black?style=flat-square&logo=javascript" />
+
+</p>
+
+![github stats](https://github-readme-stats.vercel.app/api?username=officialdittaz&show_icons=true&theme=tokyonight)
+![github toplang](https://github-readme-stats.vercel.app/api/top-langs/?username=officialdittaz&layout=compact&theme=nightowl)
+<a href="https://github.com/officialdittaz"><img src="https://github-readme-streak-stats.herokuapp.com?user=officialdittaz&theme=tokyonight&hide_border=false&properties=background&border=%239611C5FF" /><a>
+![](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=officialdittaz&theme=monokai)
+
+</p>
+
+<p align="center">
+  <img src="https://komarev.com/ghpvc/?username=officialdittaz&label=VIEWS&style=flat-square&color=orange" />
+</p>
+
 ## For Windows/Vps/Rdp
 
 * Unduh & Instal Git [`Klik Disini`](https://git-scm.com/downloads)
