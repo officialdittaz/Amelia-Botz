@@ -39,7 +39,8 @@
  <a href="https://instagram.com/officialdittaz"><img alt="Instagram" src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=black"/></a><a href="https://wa.me/+6285156137901"><img alt="WhatsApp" src="https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=black"/></a>
 </p>
 
+
 # Thanks To
 * [`Baileys`](https://github.com/adiwajshing/Baileys)
 * [`Hexagonz`](https://github.com/hexagonz)
-
+* [`Yogipw`](https://github.com/yogipw)
