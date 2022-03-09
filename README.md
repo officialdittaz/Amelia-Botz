@@ -6,10 +6,10 @@
 </div>
 
 <p align="center">
-  <a href="https://github.com/yogipw"><img title="Author" src="https://img.shields.io/badge/Author-yogipw-red.svg?style=for-the-badge&logo=github" /></a>
+  <a href="https://github.com/officialdittaz"><img title="Author" src="https://img.shields.io/badge/Author-officialdittaz-blue.svg?style=for-the-badge&logo=github" /></a>
 </p>
 <p align="center">
-<a href="#"><img title="mengapi" src="https://img.shields.io/static/v1?label=FREE&message=SELF_BOT&color=red"></a>
+<a href="#"><img title="mengapi" src="https://img.shields.io/static/v1?label=FREE&message=Amelia-Botz&color=green"></a>
 </p>
 
 # Requirements
@@ -29,6 +29,7 @@
 > pkg install libwebp 
 > pkg install bash
 > pkg install ffmpeg
+> Pkg install wget
 > cd /sdcard && cd SelfBot && npm start
 ```
 
