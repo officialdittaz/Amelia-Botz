@@ -16,6 +16,7 @@
     "amethyste-api": "^1.1.5",
     "awesome-phonenumber": "^2.48.0",
     "axios": "latest",
+    "bitly": "latest",
     "brainly-scraper-v2": "^2.0.4-1",
     "browser-id3-writer": "^4.4.0",
     "cfonts": "^2.9.0",
