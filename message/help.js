@@ -172,6 +172,14 @@ ${week}, ${calender}
 *│*
 *╰────────────⦁*
 
+*╭─❲ STICKER ❳*
+*│*
+*│▸* ${prefix}doge    
+*│▸* ${prefix}gura    
+*│▸* ${prefix}patrick     
+*│*
+*╰────────────⦁*
+
 *╭─❲ STICK MAKER ❳*
 *│*
 *│▸* ${prefix}triggered    ${explain ? "[ _Tag/Reply_ ]":""} 
@@ -367,7 +375,7 @@ ${week}, ${calender}
 *│▸* ${prefix}twitter          ${explain ? "Link":""} 
 *│▸* ${prefix}tiktok     ${explain ? "Link":""} 
 *│▸* ${prefix}soundcloud     ${explain ? "[ _Teks_ ]":""} 
-*│▸* ${prefix}ig     ${explain ? "[ _Teks_ ]":""} 
+*│▸* ${prefix}instagram     ${explain ? "[ _Link_ ]":""} 
 *│▸* ${prefix}ytmp4     ${explain ? "Link":""} 
 *│▸* ${prefix}ytmp3     ${explain ? "Link":""} 
 *│▸* ${prefix}play      ${explain ? "[ _Teks_ ]":""} 
@@ -418,6 +426,8 @@ ${week}, ${calender}
 *│▸* ${prefix}listvn
 *│▸* ${prefix}ssweb
 *│▸* ${prefix}listgc
+*│▸* ${prefix}toaksara
+*│▸* ${prefix}tolatin
 *│▸* ${prefix}translate     ${explain ? "[ _teks/reply teks_ ]":""}   
 *│▸* ${prefix}kalkulator [ _angka_ ]
 *│*
