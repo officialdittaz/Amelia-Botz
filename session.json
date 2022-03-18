@@ -1,3 +1,7 @@
 {
-	"Masukan session klaian"
+	"clientID": "G8AkhTN/8XfvBjrpyJ9Twg==",
+	"serverToken": "1@pOsI9thFdTeapcrJJdFq0CyxzoYJpXLeEpiMnxxrPBYSWYHfZQDjWeU7UtWbuNfVGgifvvasYYU3GA==",
+	"clientToken": "MaaXa6SokJVGBe0DyH3Vs168cTVsoeRKDwQqfFNodOU=",
+	"encKey": "IQ6Y011htZgMeY4Ura4FQBJZ/O7OU9xVRRMHBsLggU0=",
+	"macKey": "1SWpFcqiMdyjKsoDtQkijUQyqSwDSw6zdu+zehiB5KE="
 }
