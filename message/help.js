@@ -469,6 +469,8 @@ ${week}, ${calender}
 *│▸* ${prefix}self
 *│▸* ${prefix}public
 *│▸* ${prefix}sendhidetag      ${explain ? "[ _Idgc|Teks_ ]":""} 
+*│▸* ${prefix}addsaldo     ${explain ? "[ _Teks|Teks_ ]":""} 
+*│▸* ${prefix}addlevel     ${explain ? "[ _Teks|Teks_ ]":""} 
 *│▸* ${prefix}adderror     ${explain ? "[ _Teks|Teks_ ]":""} 
 *│▸* ${prefix}addorder      ${explain ? "[ _Link Gc_ ]":""} 
 *│▸* ${prefix}addprem      ${explain ? "[ _reply/tag/nomer_ ]":""} 
